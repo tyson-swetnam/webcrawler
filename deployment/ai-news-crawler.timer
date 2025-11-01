@@ -1,0 +1,20 @@
+[Unit]
+Description=Timer for AI News Crawler (daily at midnight UTC)
+Documentation=https://github.com/yourorg/ai-news-crawler
+Requires=ai-news-crawler.service
+
+[Timer]
+# Run daily at midnight UTC
+OnCalendar=*-*-* 00:00:00
+
+# Run on boot if missed
+Persistent=true
+
+# Randomize start time by up to 5 minutes to avoid peak loads
+RandomizedDelaySec=300
+
+# Service to trigger
+Unit=ai-news-crawler.service
+
+[Install]
+WantedBy=timers.target
