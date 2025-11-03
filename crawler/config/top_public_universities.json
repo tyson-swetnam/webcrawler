@@ -1,0 +1,418 @@
+{
+  "metadata": {
+    "title": "Top Public Research Universities News Monitoring",
+    "description": "Leading public research universities with R1 Carnegie Classification",
+    "classification": "R1 Public Universities",
+    "total_institutions": 20,
+    "date_compiled": "November 2025",
+    "notes": "Subset of R1 universities focusing on top public research institutions"
+  },
+  "universities": [
+    {
+      "id": 1,
+      "name": "Arizona State University",
+      "abbreviation": "ASU",
+      "location": {
+        "city": "Tempe",
+        "state": "AZ"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news": {
+        "main_url": "https://newsroom.asu.edu",
+        "ai_tag_url": "https://newsroom.asu.edu/topics/artificial-intelligence",
+        "rss_feed": null,
+        "press_releases": "https://newsroom.asu.edu"
+      },
+      "media_relations": {
+        "page": "https://newsroom.asu.edu/contact",
+        "email": "mediarelations@asu.edu",
+        "phone": "(480) 965-3502"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Georgia Institute of Technology",
+      "abbreviation": "Georgia Tech",
+      "location": {
+        "city": "Atlanta",
+        "state": "GA"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news": {
+        "main_url": "https://news.gatech.edu/",
+        "ai_tag_url": "https://news.gatech.edu/topics/artificial-intelligence",
+        "rss_feed": null,
+        "press_releases": null
+      },
+      "ai_research": {
+        "focus_areas": ["Machine Learning", "Robotics", "Human-AI Interaction"]
+      }
+    },
+    {
+      "id": 3,
+      "name": "University of Arizona",
+      "abbreviation": "Arizona",
+      "location": {
+        "city": "Tucson",
+        "state": "AZ"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news": {
+        "main_url": "https://news.arizona.edu",
+        "ai_tag_url": "https://news.arizona.edu/tags/artificial-intelligence",
+        "rss_feed": "https://news.arizona.edu/rss",
+        "press_releases": "https://news.arizona.edu/news-releases"
+      },
+      "media_relations": {
+        "page": "https://news.arizona.edu/media-information"
+      }
+    },
+    {
+      "id": 4,
+      "name": "University of California, Berkeley",
+      "abbreviation": "UC Berkeley",
+      "location": {
+        "city": "Berkeley",
+        "state": "CA"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news": {
+        "main_url": "https://news.berkeley.edu/",
+        "ai_tag_url": "https://news.berkeley.edu/topic/artificial-intelligence/",
+        "rss_feed": null,
+        "press_releases": null
+      },
+      "ai_research": {
+        "focus_areas": ["AI Safety", "Machine Learning", "Computer Vision"]
+      }
+    },
+    {
+      "id": 5,
+      "name": "University of California, Los Angeles",
+      "abbreviation": "UCLA",
+      "location": {
+        "city": "Los Angeles",
+        "state": "CA"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news": {
+        "main_url": "https://newsroom.ucla.edu/",
+        "ai_tag_url": "https://newsroom.ucla.edu/topics/artificial-intelligence",
+        "rss_feed": null,
+        "press_releases": null
+      }
+    },
+    {
+      "id": 6,
+      "name": "University of California, San Diego",
+      "abbreviation": "UC San Diego",
+      "location": {
+        "city": "San Diego",
+        "state": "CA"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news": {
+        "main_url": "https://today.ucsd.edu/",
+        "ai_tag_url": "https://today.ucsd.edu/topic/artificial-intelligence",
+        "rss_feed": null,
+        "press_releases": null
+      }
+    },
+    {
+      "id": 7,
+      "name": "University of Illinois Urbana-Champaign",
+      "abbreviation": "UIUC",
+      "location": {
+        "city": "Urbana-Champaign",
+        "state": "IL"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news": {
+        "main_url": "https://news.illinois.edu/",
+        "ai_tag_url": "https://cs.illinois.edu/news?field_news_topics_target_id=87",
+        "rss_feed": null,
+        "press_releases": null
+      },
+      "ai_research": {
+        "focus_areas": ["Machine Learning", "AI Systems", "Data Science"]
+      }
+    },
+    {
+      "id": 8,
+      "name": "University of Maryland, College Park",
+      "abbreviation": "UMD",
+      "location": {
+        "city": "College Park",
+        "state": "MD"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news": {
+        "main_url": "https://umdrightnow.umd.edu/",
+        "ai_tag_url": "https://umdrightnow.umd.edu/topics/artificial-intelligence",
+        "rss_feed": null,
+        "press_releases": null
+      }
+    },
+    {
+      "id": 9,
+      "name": "University of Michigan",
+      "abbreviation": "Michigan",
+      "location": {
+        "city": "Ann Arbor",
+        "state": "MI"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news": {
+        "main_url": "https://news.umich.edu/",
+        "ai_tag_url": "https://news.umich.edu/ai-news/",
+        "rss_feed": null,
+        "press_releases": null
+      },
+      "ai_research": {
+        "focus_areas": ["AI", "Robotics", "Machine Learning"]
+      }
+    },
+    {
+      "id": 10,
+      "name": "University of North Carolina at Chapel Hill",
+      "abbreviation": "UNC",
+      "location": {
+        "city": "Chapel Hill",
+        "state": "NC"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news": {
+        "main_url": "https://www.unc.edu/posts/",
+        "ai_tag_url": "https://www.unc.edu/discover/tag/artificial-intelligence/",
+        "rss_feed": null,
+        "press_releases": null
+      }
+    },
+    {
+      "id": 11,
+      "name": "University of Texas at Austin",
+      "abbreviation": "UT Austin",
+      "location": {
+        "city": "Austin",
+        "state": "TX"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news": {
+        "main_url": "https://www.utexas.edu/news/",
+        "ai_tag_url": "https://www.utexas.edu/news/tags/artificial-intelligence",
+        "rss_feed": null,
+        "press_releases": null
+      },
+      "ai_research": {
+        "focus_areas": ["Machine Learning", "AI Systems", "Robotics"]
+      }
+    },
+    {
+      "id": 12,
+      "name": "University of Virginia",
+      "abbreviation": "UVA",
+      "location": {
+        "city": "Charlottesville",
+        "state": "VA"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news": {
+        "main_url": "https://news.virginia.edu/",
+        "ai_tag_url": "https://news.virginia.edu/artificial-intelligence",
+        "rss_feed": null,
+        "press_releases": null
+      }
+    },
+    {
+      "id": 13,
+      "name": "University of Washington",
+      "abbreviation": "UW",
+      "location": {
+        "city": "Seattle",
+        "state": "WA"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news": {
+        "main_url": "https://www.washington.edu/news/",
+        "ai_tag_url": "https://www.washington.edu/news/tag/artificial-intelligence/",
+        "rss_feed": null,
+        "press_releases": null
+      },
+      "ai_research": {
+        "focus_areas": ["NLP", "Machine Learning", "AI Applications"]
+      }
+    },
+    {
+      "id": 14,
+      "name": "University of Wisconsin-Madison",
+      "abbreviation": "UW-Madison",
+      "location": {
+        "city": "Madison",
+        "state": "WI"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news": {
+        "main_url": "https://news.wisc.edu/",
+        "ai_tag_url": "https://news.wisc.edu/tag/artificial-intelligence/",
+        "rss_feed": null,
+        "press_releases": null
+      }
+    },
+    {
+      "id": 15,
+      "name": "Ohio State University",
+      "abbreviation": "OSU",
+      "location": {
+        "city": "Columbus",
+        "state": "OH"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news": {
+        "main_url": "https://news.osu.edu/",
+        "ai_tag_url": "https://news.osu.edu/tag/artificial-intelligence/",
+        "rss_feed": null,
+        "press_releases": null
+      }
+    },
+    {
+      "id": 16,
+      "name": "Pennsylvania State University",
+      "abbreviation": "Penn State",
+      "location": {
+        "city": "University Park",
+        "state": "PA"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news": {
+        "main_url": "https://www.psu.edu/news/",
+        "ai_tag_url": "https://www.psu.edu/news/tag/artificial-intelligence/",
+        "rss_feed": null,
+        "press_releases": null
+      }
+    },
+    {
+      "id": 17,
+      "name": "Purdue University",
+      "abbreviation": "Purdue",
+      "location": {
+        "city": "West Lafayette",
+        "state": "IN"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news": {
+        "main_url": "https://www.purdue.edu/newsroom/",
+        "ai_tag_url": "https://www.purdue.edu/newsroom/tag/artificial-intelligence/",
+        "rss_feed": null,
+        "press_releases": null
+      }
+    },
+    {
+      "id": 18,
+      "name": "Rutgers University",
+      "abbreviation": "Rutgers",
+      "location": {
+        "city": "New Brunswick",
+        "state": "NJ"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news": {
+        "main_url": "https://www.rutgers.edu/news/",
+        "ai_tag_url": "https://www.rutgers.edu/news/tags/artificial-intelligence",
+        "rss_feed": null,
+        "press_releases": null
+      }
+    },
+    {
+      "id": 19,
+      "name": "Texas A&M University",
+      "abbreviation": "TAMU",
+      "location": {
+        "city": "College Station",
+        "state": "TX"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news": {
+        "main_url": "https://today.tamu.edu/",
+        "ai_tag_url": "https://today.tamu.edu/tag/artificial-intelligence/",
+        "rss_feed": null,
+        "press_releases": null
+      }
+    },
+    {
+      "id": 20,
+      "name": "Virginia Tech",
+      "abbreviation": "VT",
+      "location": {
+        "city": "Blacksburg",
+        "state": "VA"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news": {
+        "main_url": "https://vtnews.vt.edu/",
+        "ai_tag_url": "https://vtnews.vt.edu/tags/artificial-intelligence.html",
+        "rss_feed": null,
+        "press_releases": null
+      }
+    }
+  ]
+}

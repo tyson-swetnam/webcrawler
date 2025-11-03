@@ -5,7 +5,7 @@ This module defines the database schema using SQLAlchemy ORM models.
 Models include URLs, Articles, AI Analyses, Notifications, and Host Crawl State.
 """
 
-from datetime import datetime
+from datetime import datetime, timezone
 from sqlalchemy import (
     Column, BigInteger, Integer, SmallInteger, String, Text, Boolean,
     Float, Date, DateTime, CHAR, Interval, ARRAY, CheckConstraint,
@@ -33,7 +33,7 @@ class URL(Base):
     hostname = Column(String(255), nullable=False, index=True)
 
     # Crawl tracking
-    first_seen = Column(DateTime, nullable=False, default=datetime.utcnow)
+    first_seen = Column(DateTime, nullable=False, default=lambda: datetime.now(timezone.utc))
     last_checked = Column(DateTime)
     status = Column(String(20), nullable=False, default='pending', index=True)
     http_status_code = Column(SmallInteger)
@@ -91,10 +91,10 @@ class Article(Base):
     university_name = Column(String(255))
     language = Column(CHAR(2), default='en')
     word_count = Column(Integer)
-    metadata = Column(JSONB)  # Flexible metadata storage
+    article_metadata = Column(JSONB)  # Flexible metadata storage
 
     # Timestamps
-    first_scraped = Column(DateTime, nullable=False, default=datetime.utcnow, index=True)
+    first_scraped = Column(DateTime, nullable=False, default=lambda: datetime.now(timezone.utc), index=True)
     last_analyzed = Column(DateTime)
 
     # Relationships
@@ -139,7 +139,7 @@ class AIAnalysis(Base):
     relevance_score = Column(Float)
 
     # Processing metadata
-    analyzed_at = Column(DateTime, nullable=False, default=datetime.utcnow)
+    analyzed_at = Column(DateTime, nullable=False, default=lambda: datetime.now(timezone.utc))
     processing_time_ms = Column(Integer)
 
     # Relationships
@@ -162,7 +162,7 @@ class NotificationSent(Base):
     channel = Column(String(20), nullable=False)  # 'slack' or 'email'
     articles_count = Column(Integer, nullable=False)
     recipients = Column(ARRAY(Text))
-    sent_at = Column(DateTime, nullable=False, default=datetime.utcnow)
+    sent_at = Column(DateTime, nullable=False, default=lambda: datetime.now(timezone.utc))
     status = Column(String(20), nullable=False)  # 'success', 'failed', 'partial'
     error_message = Column(Text)
 
@@ -180,7 +180,7 @@ class HostCrawlState(Base):
     __tablename__ = 'host_crawl_state'
 
     hostname = Column(String(255), primary_key=True)
-    last_crawl_time = Column(DateTime, nullable=False, default=datetime.utcnow)
+    last_crawl_time = Column(DateTime, nullable=False, default=lambda: datetime.now(timezone.utc))
     crawl_delay = Column(Interval, default='1 second')
     robots_txt_delay = Column(Interval)
     blocked_until = Column(DateTime)

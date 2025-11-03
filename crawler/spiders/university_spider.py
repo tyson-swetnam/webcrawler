@@ -7,13 +7,12 @@ AI-related articles with ethical rate limiting and politeness.
 
 import scrapy
 from scrapy.linkextractors import LinkExtractor
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Dict, Any
 import hashlib
 import logging
 
 from crawler.config.settings import settings
-from crawler.db.session import SessionLocal
 from crawler.db.models import URL, Article
 from crawler.extractors.content import ContentExtractor
 from crawler.utils.deduplication import (
@@ -23,6 +22,7 @@ from crawler.utils.deduplication import (
     get_or_create_url,
     normalize_url
 )
+from crawler.utils.mcp_fetcher import MCPFetcher
 
 logger = logging.getLogger(__name__)
 
@@ -55,6 +55,10 @@ class UniversityNewsSpider(scrapy.Spider):
         'RETRY_TIMES': 3,
         'RETRY_HTTP_CODES': [500, 502, 503, 504, 408, 429],
 
+        # Depth limiting - prevent crawling too deep into pagination
+        'DEPTH_LIMIT': 10,  # Maximum 10 levels of pagination per domain
+        'DEPTH_PRIORITY': 1,
+
         # Compression
         'COMPRESSION_ENABLED': True,
 
@@ -79,11 +83,14 @@ class UniversityNewsSpider(scrapy.Spider):
         """Initialize spider with configuration."""
         super().__init__(*args, **kwargs)
 
-        # Initialize database session
-        self.db = SessionLocal()
+        # Lazy database session initialization (initialized on first access)
+        self._db = None
 
         # Initialize content extractor
         self.content_extractor = ContentExtractor()
+
+        # Initialize MCP fetcher for fallback
+        self.mcp_fetcher = MCPFetcher()
 
         # Link extractor for news pages
         self.link_extractor = LinkExtractor(
@@ -96,7 +103,9 @@ class UniversityNewsSpider(scrapy.Spider):
                 r'/articles/'
             ),
             deny=(
-                r'/(tag|category|author|archive|search|login|admin)/',
+                r'/(tag|category|author|archive|search|login|admin|calendar|events|galleries)/',
+                r'/archives/\d{4}/',  # Exclude year-based archives (e.g., /archives/2021/)
+                r'/stories/archives/',  # Exclude CMU-style archive directories
                 r'\.(pdf|jpg|jpeg|png|gif|zip|rar|exe)$'
             ),
             unique=True,
@@ -112,10 +121,39 @@ class UniversityNewsSpider(scrapy.Spider):
             'urls_crawled': 0,
             'articles_extracted': 0,
             'duplicates_skipped': 0,
-            'errors': 0
+            'errors': 0,
+            'mcp_fallback_attempts': 0,
+            'mcp_fallback_successes': 0
         }
 
         logger.info(f"Initialized {self.name} spider with {len(self.start_urls)} start URLs")
+
+    @property
+    def db(self):
+        """
+        Lazy-load database session.
+
+        This property initializes the database connection on first access,
+        which is important when running in a subprocess context where
+        the database manager may not be initialized during __init__.
+        """
+        if self._db is None:
+            from crawler.db.session import init_db, SessionLocal
+            # Initialize database in subprocess if not already done
+            try:
+                init_db(
+                    settings.database_url,
+                    pool_size=settings.database_pool_size,
+                    echo=settings.database_echo
+                )
+            except Exception as e:
+                # If already initialized, this will fail silently
+                logger.debug(f"Database already initialized or init failed: {e}")
+
+            # Create session
+            self._db = SessionLocal()
+            logger.info("Database session created for spider")
+        return self._db
 
     def load_university_sources(self) -> list:
         """
@@ -197,11 +235,17 @@ class UniversityNewsSpider(scrapy.Spider):
         Extract article content from article page.
 
         Uses Trafilatura for high-quality content extraction.
+        Supports both Scrapy-fetched and MCP-fetched content.
         """
         url_hash = response.meta['url_hash']
         normalized_url = response.meta['normalized_url']
+        is_mcp_fetched = response.meta.get('mcp_fetched', False)
 
-        self.logger.info(f"Extracting article: {response.url}")
+        if is_mcp_fetched:
+            self.logger.info(f"Extracting article (MCP-fetched): {response.url}")
+        else:
+            self.logger.info(f"Extracting article: {response.url}")
+
         self.stats['urls_crawled'] += 1
 
         try:
@@ -224,6 +268,25 @@ class UniversityNewsSpider(scrapy.Spider):
                 self.logger.info(f"Content quality check failed for {response.url}")
                 self._update_url_status(url_hash, 'excluded')
                 return
+
+            # Check article age - only process recent articles
+            if extracted.get('date'):
+                try:
+                    from datetime import timedelta, timezone
+                    article_date = datetime.fromisoformat(
+                        extracted['date'].replace('Z', '+00:00')
+                    )
+                    age_limit = datetime.now(timezone.utc) - timedelta(days=settings.max_article_age_days)
+
+                    if article_date < age_limit:
+                        self.logger.info(
+                            f"Skipping old article ({article_date.date()}): {extracted.get('title', response.url)}"
+                        )
+                        self._update_url_status(url_hash, 'excluded')
+                        return
+                except (ValueError, AttributeError, TypeError) as e:
+                    # If date parsing fails, log but continue processing
+                    self.logger.debug(f"Could not parse article date: {e}")
 
             # Compute content hash for deduplication
             content_hash = compute_content_hash(extracted['text'])
@@ -249,7 +312,7 @@ class UniversityNewsSpider(scrapy.Spider):
                 'word_count': extracted.get('word_count'),
                 'categories': extracted.get('categories', []),
                 'tags': extracted.get('tags', []),
-                'extracted_at': datetime.utcnow().isoformat()
+                'extracted_at': datetime.now(timezone.utc).isoformat()
             }
 
             # Store in database
@@ -291,7 +354,7 @@ class UniversityNewsSpider(scrapy.Spider):
             if existing_article:
                 self.logger.debug(f"Duplicate content detected for {article_data['url']}")
                 url_obj.status = 'crawled'
-                url_obj.last_checked = datetime.utcnow()
+                url_obj.last_checked = datetime.now(timezone.utc)
                 self.db.commit()
                 return
 
@@ -322,12 +385,12 @@ class UniversityNewsSpider(scrapy.Spider):
                     'tags': article_data.get('tags', []),
                     'hostname': article_data['hostname']
                 },
-                first_scraped=datetime.utcnow()
+                first_scraped=datetime.now(timezone.utc)
             )
 
             # Update URL status
             url_obj.status = 'crawled'
-            url_obj.last_checked = datetime.utcnow()
+            url_obj.last_checked = datetime.now(timezone.utc)
             url_obj.content_hash = article_data['content_hash']
 
             self.db.add(article)
@@ -352,7 +415,7 @@ class UniversityNewsSpider(scrapy.Spider):
             url_obj = self.db.query(URL).filter(URL.url_hash == url_hash).first()
             if url_obj:
                 url_obj.status = status
-                url_obj.last_checked = datetime.utcnow()
+                url_obj.last_checked = datetime.now(timezone.utc)
                 self.db.commit()
         except Exception as e:
             self.logger.error(f"Failed to update URL status: {e}")
@@ -360,14 +423,65 @@ class UniversityNewsSpider(scrapy.Spider):
 
     def handle_error(self, failure):
         """
-        Handle request errors.
+        Handle request errors with MCP fallback for 403/404 errors.
 
         Args:
             failure: Twisted Failure object
         """
-        self.logger.error(f"Request failed: {failure.request.url}")
+        url = failure.request.url
+        self.logger.error(f"Request failed: {url}")
         self.logger.error(f"Error: {failure.value}")
         self.stats['errors'] += 1
+
+        # Check if we should attempt MCP fallback
+        status_code = None
+        if hasattr(failure.value, 'response') and failure.value.response:
+            status_code = failure.value.response.status
+
+        # Try MCP fallback for 403/404 errors
+        if self.mcp_fetcher.should_use_mcp_fallback(status_code, url):
+            self.logger.info(f"Attempting MCP fallback for {url}")
+            self.stats['mcp_fallback_attempts'] += 1
+
+            try:
+                # Fetch content using MCP
+                html_content = self.mcp_fetcher.fetch_with_mcp(url)
+
+                if html_content:
+                    # Create a fake response object for processing
+                    from scrapy.http import TextResponse
+
+                    mcp_response = TextResponse(
+                        url=url,
+                        body=html_content.encode('utf-8'),
+                        encoding='utf-8',
+                        request=failure.request
+                    )
+
+                    # Copy metadata from original request
+                    if 'url_hash' in failure.request.meta:
+                        mcp_response.meta['url_hash'] = failure.request.meta['url_hash']
+                        mcp_response.meta['normalized_url'] = failure.request.meta['normalized_url']
+                    else:
+                        # Generate metadata if not present
+                        from crawler.utils.deduplication import compute_url_hash, normalize_url
+                        normalized = normalize_url(url)
+                        mcp_response.meta['url_hash'] = compute_url_hash(normalized)
+                        mcp_response.meta['normalized_url'] = normalized
+
+                    # Mark as MCP-fetched for logging
+                    mcp_response.meta['mcp_fetched'] = True
+
+                    self.stats['mcp_fallback_successes'] += 1
+                    self.logger.info(f"MCP fallback successful for {url}")
+
+                    # Process the article using normal pipeline
+                    # We need to manually call parse_article since we're in error handler
+                    # Use Scrapy's callback mechanism properly
+                    return self.parse_article(mcp_response)
+
+            except Exception as e:
+                self.logger.error(f"MCP fallback failed for {url}: {e}")
 
     def closed(self, reason):
         """
@@ -390,4 +504,6 @@ Spider Statistics:
   Articles Extracted: {self.stats['articles_extracted']}
   Duplicates Skipped: {self.stats['duplicates_skipped']}
   Errors: {self.stats['errors']}
+  MCP Fallback Attempts: {self.stats['mcp_fallback_attempts']}
+  MCP Fallback Successes: {self.stats['mcp_fallback_successes']}
 """)

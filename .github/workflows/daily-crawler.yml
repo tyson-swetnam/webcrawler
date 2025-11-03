@@ -1,0 +1,148 @@
+name: Daily AI News Crawler
+
+on:
+  # Run daily at 07:00 PST (15:00 UTC)
+  schedule:
+    - cron: '0 15 * * *'
+
+  # Allow manual triggering
+  workflow_dispatch:
+
+jobs:
+  crawl-and-deploy:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_DB: ai_news_crawler
+          POSTGRES_USER: crawler
+          POSTGRES_PASSWORD: github_actions_temp
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Set up database
+        env:
+          DATABASE_URL: postgresql://crawler:github_actions_temp@localhost:5432/ai_news_crawler
+        run: |
+          # Database tables are created automatically by SQLAlchemy
+          echo "Database ready at $DATABASE_URL"
+
+      - name: Run crawler
+        env:
+          DATABASE_URL: postgresql://crawler:github_actions_temp@localhost:5432/ai_news_crawler
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          EMAIL_FROM: crawler@github-actions.local
+          EMAIL_TO: '["noreply@github.com"]'
+          SMTP_HOST: smtp.gmail.com
+          SMTP_PORT: 465
+          SMTP_PASSWORD: placeholder
+          SMTP_USE_SSL: true
+          ENABLE_SLACK_NOTIFICATIONS: false
+          ENABLE_EMAIL_NOTIFICATIONS: false
+          ENABLE_AI_ANALYSIS: true
+          SAVE_RESULTS_TO_FILE: true
+          LOCAL_OUTPUT_DIR: ./output
+          DEBUG: false
+          LOG_LEVEL: INFO
+          MAX_CONCURRENT_REQUESTS: 50
+          CRAWL_DELAY: 1.0
+          MAX_ARTICLE_AGE_DAYS: 30
+          DATABASE_POOL_SIZE: 100
+        run: |
+          python run_crawler_simple.py
+
+      - name: Checkout website branch
+        uses: actions/checkout@v4
+        with:
+          ref: website
+          path: website-deploy
+
+      - name: Copy HTML output to website branch
+        run: |
+          # Copy all HTML files and assets
+          cp -r output/* website-deploy/
+
+          # Create a simple README for the website branch
+          cat > website-deploy/README.md << 'EOF'
+          # AI University News Aggregator
+
+          Automated daily news aggregator tracking AI research and developments from 52 US universities and research facilities.
+
+          **Live Site:** https://tyson-swetnam.github.io/webcrawler
+
+          **Last Updated:** $(date -u +"%Y-%m-%d %H:%M UTC")
+
+          ## About
+
+          This site automatically crawls university news sites daily and aggregates AI-related research news in a Drudge Report-style format.
+
+          ## Sources
+
+          - 27 Peer Institutions (Top R1 universities)
+          - 187 R1 Research Universities
+          - 27 Major Research Facilities (National Labs, Supercomputing Centers)
+
+          ## Technology
+
+          - **Crawler:** Python + Scrapy
+          - **AI Analysis:** Claude (Anthropic), GPT (OpenAI)
+          - **Deployment:** GitHub Actions + GitHub Pages
+          - **Update Schedule:** Daily at 07:00 PST
+          EOF
+
+      - name: Commit and push to website branch
+        working-directory: ./website-deploy
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+
+          git add .
+
+          # Only commit if there are changes
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update AI news aggregator - $(date -u +"%Y-%m-%d %H:%M UTC")
+
+            Automated daily crawler run
+            - Articles scraped: $(find . -name '*.html' | wc -l) pages
+            - Generated: $(date -u +"%Y-%m-%d %H:%M:%S UTC")
+
+            Generated with Claude Code
+            Co-Authored-By: GitHub Actions <actions@github.com>"
+
+            git push origin website
+          fi
+
+      - name: Summary
+        run: |
+          echo "✅ Crawler completed successfully"
+          echo "📊 HTML files generated in output/"
+          echo "🌐 Website branch updated"
+          echo "🔗 Live at: https://tyson-swetnam.github.io/webcrawler"
