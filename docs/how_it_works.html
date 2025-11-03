@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works - AI University News</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #ffffff;
+            color: #000000;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #000;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            font-weight: bold;
+            letter-spacing: -1px;
+            margin-bottom: 5px;
+        }
+
+        .header .tagline {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .nav {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+        }
+
+        .nav a {
+            color: #cc0000;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            font-size: 14px;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            padding: 20px 0;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #cc0000;
+            margin: 30px 0 15px 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #cc0000;
+        }
+
+        h3 {
+            font-size: 20px;
+            color: #000;
+            margin: 20px 0 10px 0;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .highlight-box {
+            background-color: #fffbf0;
+            border: 2px solid #cc0000;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #000;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .footer a {
+            color: #0000cc;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI UNIVERSITY NEWS</h1>
+        <div class="tagline">How It Works</div>
+    </div>
+
+    <div class="nav">
+        <a href="index.html">TODAY</a>
+        <a href="archive/index.html">ARCHIVE</a>
+        <a href="how_it_works.html">HOW IT WORKS</a>
+    </div>
+
+    <div class="content">
+        <h2>Overview</h2>
+        <p>
+            AI University News is an automated web crawler that monitors press releases and news articles from
+            top US universities and major research facilities, focusing specifically on AI-related research and
+            developments. The system runs daily to discover, analyze, and report the latest AI breakthroughs
+            from the academic world.
+        </p>
+
+        <div class="highlight-box">
+            <strong>What makes this unique:</strong> Unlike general news aggregators, this crawler specifically
+            targets university press offices and applies multi-AI analysis to identify truly significant AI research,
+            filtering out noise and delivering high-quality, relevant content.
+        </div>
+
+        <h2>How the Crawler Works</h2>
+
+        <h3>Phase 1: Discovery & Crawling</h3>
+        <p>
+            The crawler visits official news and press release pages from:
+        </p>
+        <ul>
+            <li><strong>Peer Institutions:</strong> Top-tier research universities (MIT, Stanford, Carnegie Mellon, etc.)</li>
+            <li><strong>R1 Universities:</strong> All Carnegie R1 research universities across the United States</li>
+            <li><strong>Major Facilities:</strong> National labs and research centers (Argonne, Los Alamos, NIST, etc.)</li>
+        </ul>
+        <p>
+            Using the Scrapy framework, the system respectfully crawls these sites following robots.txt rules,
+            implementing politeness delays between requests, and using proper identification.
+        </p>
+
+        <h3>Phase 2: Content Extraction</h3>
+        <p>
+            When new articles are discovered, the crawler uses Trafilatura (a state-of-the-art content extraction
+            library) to extract clean article text, metadata, publication dates, and author information with
+            95%+ accuracy.
+        </p>
+
+        <h3>Phase 3: Deduplication</h3>
+        <p>
+            The system maintains a PostgreSQL database tracking every URL and content hash to ensure:
+        </p>
+        <ul>
+            <li>No duplicate URLs are processed</li>
+            <li>Updated articles are detected through content hash comparison</li>
+            <li>Fast O(1) lookups using SHA-256 hashing</li>
+        </ul>
+
+        <h3>Phase 4: AI Analysis</h3>
+        <p>
+            This is where the magic happens. Each new article is analyzed by three different AI systems:
+        </p>
+        <ul>
+            <li><strong>Claude (Sonnet-4-5):</strong> Primary analysis for deep research understanding</li>
+            <li><strong>OpenAI (GPT-4):</strong> Secondary analysis for categorization and validation</li>
+            <li><strong>Google Gemini (2.5 Flash):</strong> Fast initial filtering and topic extraction</li>
+        </ul>
+        <p>
+            The system builds a consensus summary from all three AI engines, with Claude's analysis taking priority
+            due to its superior research comprehension. Articles are classified by relevance, key topics are extracted,
+            and confidence scores are assigned.
+        </p>
+
+        <h3>Phase 5: Categorization & Organization</h3>
+        <p>
+            Articles are automatically organized into three categories:
+        </p>
+        <ul>
+            <li><strong>Peer Institutions:</strong> Elite research universities with the highest AI research output</li>
+            <li><strong>R1 Institutions:</strong> Other top-tier research universities</li>
+            <li><strong>Major Facilities:</strong> Government labs and national research centers</li>
+        </ul>
+
+        <h3>Phase 6: Publishing</h3>
+        <p>
+            The crawler automatically generates this website with:
+        </p>
+        <ul>
+            <li><strong>Today's Page:</strong> Latest articles from the past 3 days</li>
+            <li><strong>Archive:</strong> Historical daily reports accessible by date</li>
+            <li><strong>Three-Column Layout:</strong> Easy browsing by institution category</li>
+        </ul>
+        <p>
+            Results can also be delivered via Slack webhooks and email notifications for real-time updates.
+        </p>
+
+        <h2>Technical Architecture</h2>
+
+        <h3>Technology Stack</h3>
+        <ul>
+            <li><strong>Language:</strong> Python 3.11+</li>
+            <li><strong>Crawling:</strong> Scrapy 2.11+ with custom spiders</li>
+            <li><strong>Content Extraction:</strong> Trafilatura 2.0+ with htmldate</li>
+            <li><strong>Database:</strong> PostgreSQL 15+ for metadata and tracking</li>
+            <li><strong>AI APIs:</strong> Anthropic Claude, OpenAI GPT, Google Gemini</li>
+            <li><strong>Deployment:</strong> Systemd service with daily automated runs</li>
+        </ul>
+
+        <h3>Ethical Crawling</h3>
+        <p>
+            This crawler follows web crawling best practices:
+        </p>
+        <ul>
+            <li>Always respects robots.txt directives</li>
+            <li>Implements per-domain rate limiting (1 request/second default)</li>
+            <li>Uses descriptive User-Agent with contact information</li>
+            <li>Implements exponential backoff for failed requests</li>
+            <li>Never attempts to bypass access controls or paywalls</li>
+        </ul>
+
+        <h2>Cost & Efficiency</h2>
+        <p>
+            The system is designed to be cost-effective:
+        </p>
+        <ul>
+            <li><strong>Estimated monthly cost:</strong> ~$36/month for AI API usage (100 articles/day)</li>
+            <li><strong>Optimization:</strong> Uses fast Gemini Flash for initial filtering before expensive Claude/GPT-4 calls</li>
+            <li><strong>Caching:</strong> All AI responses stored to avoid reprocessing</li>
+            <li><strong>Smart limits:</strong> Token limits and max articles per run prevent runaway costs</li>
+        </ul>
+
+        <h2>Source Code</h2>
+        <p>
+            This is an open-source project. The complete source code, documentation, and deployment guides
+            are available on GitHub. The system is designed as a standalone Linux application that can be
+            deployed on any server with Python 3.11+ and PostgreSQL.
+        </p>
+
+        <h2>Updates & Schedule</h2>
+        <p>
+            The crawler runs automatically once per day (typically early morning UTC) and this website updates
+            immediately after each run completes. The archive preserves all historical daily reports for
+            research and trend analysis.
+        </p>
+    </div>
+
+    <div class="footer">
+        <p>Powered by AI University News Crawler</p>
+        <p>Open source project - Built with Scrapy, PostgreSQL, and multi-AI analysis</p>
+    </div>
+</body>
+</html>
