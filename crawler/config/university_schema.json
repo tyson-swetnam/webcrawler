@@ -1,0 +1,607 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/university-news-sources.schema.json",
+  "title": "R1 Universities News Sources",
+  "description": "JSON schema for R1 universities news monitoring configuration",
+  "type": "object",
+  "required": ["metadata", "universities"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["schema_version", "title", "total_institutions", "last_updated"],
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "description": "Semantic version of this schema"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "classification": {
+          "type": "string"
+        },
+        "total_institutions": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "institutions_included": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "coverage_percentage": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "date_compiled": {
+          "type": "string"
+        },
+        "last_updated": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "data_sources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "quality_notes": {
+          "type": "string"
+        }
+      }
+    },
+    "universities": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/definitions/university"
+      }
+    }
+  },
+  "definitions": {
+    "university": {
+      "type": "object",
+      "required": ["id", "name", "location", "news_sources"],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Unique sequential identifier"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Official university name"
+        },
+        "abbreviation": {
+          "type": "string",
+          "description": "Common abbreviation (e.g., MIT, Stanford)"
+        },
+        "canonical_name": {
+          "type": "string",
+          "description": "Full official name for deduplication"
+        },
+        "location": {
+          "type": "object",
+          "required": ["city", "state", "country"],
+          "properties": {
+            "city": {
+              "type": "string",
+              "minLength": 1
+            },
+            "state": {
+              "type": "string",
+              "pattern": "^[A-Z]{2}$",
+              "description": "Two-letter state code"
+            },
+            "state_full": {
+              "type": "string",
+              "description": "Full state name"
+            },
+            "region": {
+              "type": "string",
+              "enum": ["Northeast", "South", "Midwest", "West"],
+              "description": "US Census region"
+            },
+            "country": {
+              "type": "string",
+              "pattern": "^[A-Z]{2}$",
+              "description": "ISO 3166-1 alpha-2 country code"
+            },
+            "timezone": {
+              "type": "string",
+              "description": "IANA timezone identifier"
+            }
+          }
+        },
+        "classification": {
+          "type": "object",
+          "properties": {
+            "carnegie_r1": {
+              "type": "boolean"
+            },
+            "institution_type": {
+              "type": "string",
+              "enum": ["public", "private"]
+            },
+            "tier": {
+              "type": "string",
+              "enum": ["elite", "flagship", "specialized", "comprehensive"]
+            },
+            "aau_member": {
+              "type": "boolean"
+            },
+            "land_grant": {
+              "type": "boolean"
+            }
+          }
+        },
+        "domains": {
+          "type": "object",
+          "properties": {
+            "primary": {
+              "type": "string",
+              "pattern": "^[a-z0-9.-]+\\.[a-z]{2,}$"
+            },
+            "news_domains": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "aliases": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "news_sources": {
+          "type": "object",
+          "required": ["primary"],
+          "properties": {
+            "primary": {
+              "$ref": "#/definitions/primary_news_source"
+            },
+            "rss_feeds": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/rss_feed"
+              }
+            },
+            "press_releases": {
+              "$ref": "#/definitions/press_releases"
+            },
+            "research_news": {
+              "$ref": "#/definitions/research_news"
+            },
+            "sitemaps": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/sitemap"
+              }
+            },
+            "additional_sources": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "media_relations": {
+          "type": "object",
+          "properties": {
+            "page_url": {
+              "type": ["string", "null"],
+              "format": "uri"
+            },
+            "email": {
+              "type": ["string", "null"],
+              "format": "email"
+            },
+            "phone": {
+              "type": ["string", "null"]
+            },
+            "hours": {
+              "type": ["string", "null"]
+            },
+            "contacts": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "social_media": {
+          "type": "object",
+          "properties": {
+            "twitter": {
+              "$ref": "#/definitions/social_media_account"
+            },
+            "linkedin": {
+              "$ref": "#/definitions/social_media_account"
+            },
+            "facebook": {
+              "$ref": "#/definitions/social_media_account"
+            },
+            "instagram": {
+              "$ref": "#/definitions/social_media_account"
+            },
+            "youtube": {
+              "$ref": "#/definitions/social_media_account"
+            }
+          }
+        },
+        "ai_research": {
+          "type": "object",
+          "properties": {
+            "has_ai_institute": {
+              "type": "boolean"
+            },
+            "ai_centers": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "ai_focus_areas": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "known_ai_faculty_count": {
+              "type": ["integer", "null"],
+              "minimum": 0
+            },
+            "major_ai_grants": {
+              "type": "boolean"
+            },
+            "ai_ranking": {
+              "type": ["integer", "null"],
+              "minimum": 1
+            }
+          }
+        },
+        "crawling_config": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "default": true
+            },
+            "crawl_frequency": {
+              "type": "string",
+              "enum": ["hourly", "daily", "weekly", "monthly"]
+            },
+            "max_depth": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10
+            },
+            "respect_robots_txt": {
+              "type": "boolean",
+              "default": true
+            },
+            "custom_delay_seconds": {
+              "type": "number",
+              "minimum": 0.1,
+              "maximum": 60.0
+            },
+            "use_javascript_rendering": {
+              "type": "boolean"
+            },
+            "authentication_required": {
+              "type": "boolean"
+            },
+            "rate_limit_strict": {
+              "type": "boolean"
+            },
+            "exclude_patterns": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "include_patterns": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "data_quality": {
+          "type": "object",
+          "properties": {
+            "completeness_score": {
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 1.0
+            },
+            "completeness_breakdown": {
+              "type": "object",
+              "properties": {
+                "basic_info": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "news_sources": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "rss_feeds": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "social_media": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "media_relations": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                },
+                "ai_research": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                }
+              }
+            },
+            "last_updated": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "verified_by": {
+              "type": "string",
+              "enum": ["automated_check", "manual_verification", "ai_extraction"]
+            },
+            "verification_status": {
+              "type": "string",
+              "enum": ["verified", "unverified", "needs_review", "stale"]
+            },
+            "needs_manual_review": {
+              "type": "boolean"
+            },
+            "issues": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "metadata": {
+          "type": "object",
+          "properties": {
+            "created_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "updated_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "source": {
+              "type": "string"
+            },
+            "notes": {
+              "type": "string"
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "primary_news_source": {
+      "type": "object",
+      "required": ["url", "verified"],
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["dedicated_site", "integrated_portal", "department_page", "news_section"]
+        },
+        "ai_tag_url": {
+          "type": ["string", "null"],
+          "format": "uri"
+        },
+        "verified": {
+          "type": "boolean"
+        },
+        "last_verified": {
+          "type": "string",
+          "format": "date"
+        },
+        "crawl_priority": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 200
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "rss_feed": {
+      "type": "object",
+      "required": ["url", "active"],
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["main", "category", "topic", "department"]
+        },
+        "category": {
+          "type": "string"
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "format": {
+          "type": "string",
+          "enum": ["rss2", "rss1", "atom", "rdf"]
+        },
+        "verified": {
+          "type": "boolean"
+        },
+        "last_verified": {
+          "type": "string",
+          "format": "date"
+        },
+        "crawl_priority": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 200
+        },
+        "update_frequency": {
+          "type": "string",
+          "enum": ["hourly", "daily", "weekly"]
+        },
+        "includes_full_content": {
+          "type": "boolean"
+        }
+      }
+    },
+    "press_releases": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "has_rss": {
+          "type": "boolean"
+        },
+        "archive_url": {
+          "type": ["string", "null"],
+          "format": "uri"
+        },
+        "verified": {
+          "type": "boolean"
+        },
+        "last_verified": {
+          "type": "string",
+          "format": "date"
+        },
+        "crawl_priority": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 200
+        }
+      }
+    },
+    "research_news": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "has_rss": {
+          "type": "boolean"
+        },
+        "verified": {
+          "type": "boolean"
+        },
+        "last_verified": {
+          "type": "string",
+          "format": "date"
+        },
+        "crawl_priority": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 200
+        }
+      }
+    },
+    "sitemap": {
+      "type": "object",
+      "required": ["url"],
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["news", "index", "normal"]
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "verified": {
+          "type": "boolean"
+        },
+        "crawl_priority": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 200
+        }
+      }
+    },
+    "social_media_account": {
+      "type": "object",
+      "properties": {
+        "handle": {
+          "type": ["string", "null"]
+        },
+        "url": {
+          "type": ["string", "null"],
+          "format": "uri"
+        },
+        "verified": {
+          "type": "boolean"
+        },
+        "followers_approx": {
+          "type": ["integer", "null"],
+          "minimum": 0
+        },
+        "focus": {
+          "type": "string",
+          "enum": ["general", "news", "research", "ai"]
+        },
+        "crawl_priority": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 200
+        },
+        "api_access": {
+          "type": "boolean"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,532 @@
+{
+  "metadata": {
+    "title": "Higher Education News Services and Outlets",
+    "total_services": 18,
+    "date_compiled": "November 2025",
+    "coverage_scope": "US-focused and global higher education news"
+  },
+  "news_services": [
+    {
+      "id": 1,
+      "name": "Chronicle of Higher Education",
+      "url": "https://www.chronicle.com/",
+      "description": "Largest newsroom dedicated to colleges and universities",
+      "founded": 1966,
+      "coverage": "US higher education, comprehensive",
+      "access": "Subscription required (paywall)",
+      "rss_feeds": {
+        "available": true,
+        "type": "Tag-based RSS feeds",
+        "note": "Enter tag page URL into RSS reader"
+      },
+      "newsletters": [
+        "Academe Today",
+        "The Weekly Briefing"
+      ],
+      "social_media": {
+        "twitter": {
+          "handle": "@chronicle",
+          "url": "https://x.com/chronicle"
+        },
+        "facebook": {
+          "url": "https://www.facebook.com/chronicle",
+          "followers": "191K+"
+        },
+        "linkedin": "The Chronicle of Higher Education",
+        "instagram": {
+          "handle": "@chronicle",
+          "followers": "13.5K"
+        }
+      },
+      "publishing_frequency": "Daily online, weekly print"
+    },
+    {
+      "id": 2,
+      "name": "Inside Higher Ed",
+      "url": "https://www.insidehighered.com/",
+      "description": "Free daily news on higher education",
+      "founded": 2004,
+      "owned_by": "Times Higher Education (acquired 2022)",
+      "coverage": "US higher education, policy, management",
+      "access": "Free (no paywall)",
+      "rss_feeds": {
+        "available": true,
+        "main_feed": "https://www.insidehighered.com/rss.xml"
+      },
+      "newsletters": {
+        "signup": "https://www.insidehighered.com/newsletter/signup"
+      },
+      "podcasts": [
+        "The Key with Inside Higher Ed"
+      ],
+      "social_media": {
+        "twitter": "@IHENews",
+        "facebook": {
+          "url": "https://www.facebook.com/InsideHigherEdDC/",
+          "likes": "117K+"
+        },
+        "linkedin": "https://www.linkedin.com/company/inside-higher-ed"
+      },
+      "publishing_frequency": "Daily"
+    },
+    {
+      "id": 3,
+      "name": "Times Higher Education",
+      "abbreviation": "THE",
+      "url": "https://www.timeshighereducation.com/",
+      "news_url": "https://www.timeshighereducation.com/news",
+      "description": "UK-based global higher education news and rankings",
+      "founded": 1971,
+      "coverage": "Global higher education",
+      "owned_by": "Inflexion Private Equity",
+      "specialty": "World University Rankings",
+      "rss_feeds": {
+        "note": "Check website for feeds"
+      },
+      "social_media": {
+        "twitter": {
+          "handle": "@timeshighered",
+          "url": "https://x.com/timeshighered",
+          "followers": "294.7K"
+        },
+        "facebook": {
+          "url": "https://www.facebook.com/timeshighereducation/",
+          "likes": "80.9K"
+        },
+        "linkedin": "Times Higher Education"
+      },
+      "publishing_frequency": "Daily online, weekly magazine"
+    },
+    {
+      "id": 4,
+      "name": "QS World University Rankings",
+      "parent": "QS Quacquarelli Symonds",
+      "url": "https://www.topuniversities.com/",
+      "insights_url": "https://www.qs.com/insights/",
+      "description": "Global university rankings and insights",
+      "founded": 2004,
+      "coverage": "Global higher education, international rankings",
+      "specialty": "QS World University Rankings",
+      "social_media": {
+        "twitter": {
+          "handle": "@worlduniranking",
+          "url": "https://x.com/worlduniranking",
+          "followers": "30.8K"
+        },
+        "linkedin": "QS Quacquarelli Symonds",
+        "facebook": "QS World University Rankings"
+      }
+    },
+    {
+      "id": 5,
+      "name": "University World News",
+      "url": "https://www.universityworldnews.com/",
+      "description": "Global higher education news with regional editions",
+      "founded": 2007,
+      "coverage": "International, multi-regional",
+      "regional_editions": [
+        "Global Edition",
+        "Africa Edition",
+        "Asia Edition"
+      ],
+      "newsletters": {
+        "frequency": "Weekly",
+        "access": "Free"
+      },
+      "special_sections": [
+        "SDGs Hub (sustainability)"
+      ],
+      "social_media": {
+        "twitter": {
+          "handle": "@uniworldnews",
+          "url": "https://x.com/uniworldnews",
+          "followers": "22.2K"
+        },
+        "facebook": "https://www.facebook.com/UniversityWorldNews/",
+        "linkedin": {
+          "url": "https://uk.linkedin.com/company/universityworldnews",
+          "followers": "3.1K"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "name": "Higher Ed Dive",
+      "url": "https://www.highereddive.com/",
+      "parent": "Education Dive / Industry Dive (Informa TechTarget)",
+      "founded": 2018,
+      "coverage": "US higher education policy, operations, technology",
+      "access": "Free",
+      "rss_feeds": {
+        "available": true,
+        "main_feed": "https://www.highereddive.com/feeds/news"
+      },
+      "newsletters": {
+        "frequency": "Daily",
+        "access": "Free"
+      },
+      "focus_areas": [
+        "Policy",
+        "Legal",
+        "Leadership",
+        "Enrollment",
+        "Online learning",
+        "EdTech",
+        "Financial health"
+      ],
+      "social_media": {
+        "twitter": {
+          "handle": "@HigherEdDive",
+          "url": "https://x.com/highereddive",
+          "followers": "3.5K"
+        },
+        "facebook": {
+          "url": "https://www.facebook.com/highereddive/",
+          "likes": "2.8K"
+        },
+        "linkedin": "https://www.linkedin.com/showcase/higher-ed-dive/"
+      }
+    },
+    {
+      "id": 7,
+      "name": "The Hechinger Report",
+      "url": "https://hechingerreport.org/",
+      "higher_ed_section": "https://hechingerreport.org/special-reports/higher-education/",
+      "description": "Nonprofit newsroom covering education inequality and innovation",
+      "founded": 1995,
+      "type": "Nonprofit",
+      "affiliation": "Teachers College, Columbia University",
+      "coverage": "PreK through higher education",
+      "access": "Free (no paywall)",
+      "rss_feeds": {
+        "available": true,
+        "main_feed": "https://hechingerreport.org/feed"
+      },
+      "newsletters": [
+        "Higher Education (biweekly)",
+        "Weekly main newsletter",
+        "Proof Points (education research)",
+        "Early Learning newsletter"
+      ],
+      "social_media": {
+        "twitter": {
+          "handle": "@hechingerreport",
+          "url": "https://x.com/hechingerreport",
+          "followers": "45.1K"
+        },
+        "facebook": {
+          "followers": "11.7K"
+        },
+        "linkedin": "The Hechinger Report",
+        "instagram": {
+          "handle": "@hechingerreport",
+          "followers": "3.6K"
+        }
+      }
+    },
+    {
+      "id": 8,
+      "name": "Diverse: Issues in Higher Education",
+      "url": "https://www.diverseeducation.com/",
+      "new_name": "The EDU Ledger",
+      "new_url": "https://www.theeduledger.com/",
+      "description": "Focus on diversity, equity, and inclusion in higher education",
+      "founded": 1984,
+      "coverage": "DEI in higher education",
+      "format": "Magazine + digital",
+      "podcasts": [
+        "In The Margins"
+      ],
+      "special_features": [
+        "Top 100 Degree Producers rankings"
+      ],
+      "social_media": {
+        "twitter": "@DiverseIssues",
+        "facebook": "https://www.facebook.com/DiverseIssuesInHigherEducation/",
+        "linkedin": {
+          "url": "https://www.linkedin.com/company/diverse-issues-in-higher-education",
+          "followers": "76K+"
+        },
+        "instagram": "@diverseissuesinhighereducation"
+      },
+      "note": "Recently rebranded to The EDU Ledger"
+    },
+    {
+      "id": 9,
+      "name": "Campus Technology",
+      "url": "https://campustechnology.com/",
+      "description": "Higher education IT and technology",
+      "publisher": "1105 Media",
+      "coverage": "Higher ed technology, IT infrastructure",
+      "format": "Digital magazine (monthly)",
+      "focus_areas": [
+        "Networking",
+        "Security",
+        "ERP",
+        "EdTech"
+      ],
+      "content_types": [
+        "Newsletter",
+        "Webinars",
+        "Podcast"
+      ],
+      "social_media": {
+        "twitter": {
+          "handle": "@Campus_Tech",
+          "url": "https://x.com/campus_tech"
+        },
+        "facebook": "https://www.facebook.com/CampusTechnology/",
+        "linkedin": "https://www.linkedin.com/company/campus-technology-magazine"
+      }
+    },
+    {
+      "id": 10,
+      "name": "University Business",
+      "url": "https://universitybusiness.com/",
+      "description": "For college and university senior management",
+      "publisher": "LRP Media Group",
+      "coverage": "Management, operations, finance",
+      "circulation": {
+        "print": "45K",
+        "digital": "41K"
+      },
+      "focus_areas": [
+        "Enrollment",
+        "IT",
+        "Facilities",
+        "Academics",
+        "Financial services"
+      ],
+      "events": [
+        "UBTech Conference (annual higher ed technology)"
+      ],
+      "social_media": {
+        "twitter": "@UnivBusiness",
+        "facebook": "https://www.facebook.com/universitybusiness/",
+        "linkedin": "https://www.linkedin.com/company/university-business-magazine"
+      },
+      "note": "Separate UK publication exists at universitybusiness.co.uk"
+    },
+    {
+      "id": 11,
+      "name": "Academic Matters",
+      "url": "https://academicmatters.ca/",
+      "description": "Canadian higher education journal",
+      "founded": 2005,
+      "publisher": "Ontario Confederation of University Faculty Associations (OCUFA)",
+      "coverage": "Canadian higher education",
+      "frequency": "Bi-annual",
+      "circulation": "17,000",
+      "access": "Free online",
+      "focus_areas": [
+        "Academic freedom",
+        "Governance",
+        "Equity",
+        "Teaching and learning"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "The PIE News",
+      "abbreviation": "PIE",
+      "full_name": "Professionals in International Education",
+      "url": "https://thepienews.com/",
+      "news_url": "https://thepienews.com/news/",
+      "description": "International education and global student mobility",
+      "founded": 2011,
+      "headquarters": "UK",
+      "coverage": "Global international education",
+      "newsletters": [
+        "PIE Weekly"
+      ],
+      "events": [
+        "PIE Live (UK, USA, Australia)",
+        "PIEoneer Awards"
+      ],
+      "additional_services": [
+        "Jobs board"
+      ],
+      "social_media": {
+        "facebook": {
+          "url": "https://www.facebook.com/ThePIENews/",
+          "likes": "11.7K"
+        },
+        "linkedin": "https://uk.linkedin.com/company/thepie"
+      }
+    },
+    {
+      "id": 13,
+      "name": "EDUCAUSE Review",
+      "url": "https://er.educause.edu/",
+      "parent_org": "EDUCAUSE",
+      "parent_url": "https://www.educause.edu/",
+      "description": "Open access digital publication on higher education IT",
+      "parent_founded": 1998,
+      "review_online": "Since 2012",
+      "type": "Nonprofit association",
+      "coverage": "Higher education technology",
+      "access": "Open access",
+      "focus_areas": [
+        "Technology",
+        "Cybersecurity",
+        "AI in higher ed"
+      ],
+      "special_features": [
+        "Annual Top 10 Issues report",
+        "Webinars",
+        "Multimedia content"
+      ],
+      "newsletters": {
+        "frequency": "Weekly",
+        "access": "Free"
+      },
+      "library": "https://library.educause.edu/",
+      "social_media": {
+        "twitter": "@educause or @educausereview"
+      }
+    },
+    {
+      "id": 14,
+      "name": "EdSurge",
+      "url": "https://www.edsurge.com/",
+      "higher_ed_section": "Filter by higher ed on main site",
+      "description": "Nonprofit newsroom covering edtech and innovation",
+      "type": "Nonprofit",
+      "coverage": "K-12 and higher education, edtech focus",
+      "access": "Free",
+      "rss_feeds": {
+        "available": true,
+        "main_feed": "https://www.edsurge.com/articles_rss"
+      },
+      "podcasts": [
+        "EdSurge Podcast"
+      ],
+      "additional_services": [
+        "Jobs board"
+      ],
+      "social_media": {
+        "twitter": {
+          "handle": "@EdSurge",
+          "url": "https://x.com/edsurge"
+        },
+        "facebook": "https://www.facebook.com/higheredsurge",
+        "linkedin": "https://www.linkedin.com/company/edsurge",
+        "instagram": "@edsurge"
+      }
+    },
+    {
+      "id": 15,
+      "name": "American Society for Engineering Education",
+      "abbreviation": "ASEE",
+      "url": "https://www.asee.org/",
+      "description": "Engineering education society and publications",
+      "founded": 1893,
+      "members": "12,000+ globally",
+      "coverage": "Engineering education",
+      "publications": [
+        "Prism magazine (monthly)",
+        "Conference papers (PEER system)",
+        "Journal of Engineering Education",
+        "Advances in Engineering Education"
+      ],
+      "newsletters": [
+        "Connections",
+        "First Bell",
+        "ASEE News"
+      ],
+      "events": [
+        "Annual conference"
+      ],
+      "social_media": {
+        "twitter": "@ASEE",
+        "facebook": {
+          "url": "https://www.facebook.com/ASEEHQ/",
+          "likes": "5.7K"
+        },
+        "linkedin": "https://www.linkedin.com/company/american-society-for-engineering-education"
+      }
+    },
+    {
+      "id": 16,
+      "name": "American Association of University Professors",
+      "abbreviation": "AAUP",
+      "url": "https://www.aaup.org/",
+      "description": "Faculty rights, academic freedom, shared governance",
+      "founded": 1915,
+      "members": "500+ local chapters, 39 state organizations",
+      "affiliation": "American Federation of Teachers (AFT) since 2022",
+      "coverage": "Faculty issues, academic freedom",
+      "publications": [
+        "Academe magazine",
+        "Journal of Academic Freedom (open access)"
+      ],
+      "social_media": {
+        "twitter": {
+          "handle": "@AAUP",
+          "url": "https://x.com/aaup",
+          "followers": "16.9K"
+        },
+        "facebook": "https://www.facebook.com/AAUPNational/",
+        "linkedin": "AAUP pages",
+        "bluesky": "aaup.bsky.social"
+      }
+    },
+    {
+      "id": 17,
+      "name": "National Association of College and University Business Officers",
+      "abbreviation": "NACUBO",
+      "url": "https://www.nacubo.org/",
+      "magazine": "Business Officer Magazine",
+      "magazine_url": "https://www.businessofficermagazine.com/",
+      "press_room": "https://www.nacubo.org/Press-Room",
+      "description": "College and university business and financial officers",
+      "founded": 1962,
+      "members": "1,700+ institutions",
+      "coverage": "Higher ed finance and operations",
+      "focus_areas": [
+        "Finance",
+        "Facilities",
+        "HR",
+        "Endowments",
+        "Student aid"
+      ],
+      "research_reports": [
+        "Endowment Study (annual)",
+        "Tuition Discounting Study"
+      ],
+      "podcasts": [
+        "NACUBO In Brief"
+      ],
+      "events": [
+        "Annual conference"
+      ],
+      "social_media": {
+        "twitter": "@NACUBO",
+        "linkedin": "https://www.linkedin.com/company/nacubo",
+        "facebook": "NACUBO pages"
+      }
+    },
+    {
+      "id": 18,
+      "name": "Community College Daily",
+      "parent": "American Association of Community Colleges (AACC)",
+      "description": "Community college news and updates",
+      "coverage": "Two-year colleges, community colleges",
+      "note": "Sector-specific coverage"
+    }
+  ],
+  "additional_sources": {
+    "sector_specific": [
+      "EdScoop - Higher ed technology news",
+      "University Affairs (Canada) - Canadian higher ed",
+      "Al-Fanar Media - Arab region higher education",
+      "WENR - World Education News & Reviews - International education"
+    ],
+    "associations": [
+      "Association for the Study of Higher Education (ASHE)",
+      "American Council on Education (ACE)",
+      "Council of Graduate Schools",
+      "Association of American Universities (AAU)"
+    ]
+  }
+}

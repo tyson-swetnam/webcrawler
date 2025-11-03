@@ -8,6 +8,7 @@ with consistent styling and presentation.
 from typing import List, Dict, Any
 from datetime import datetime
 import logging
+import re
 
 logger = logging.getLogger(__name__)
 
@@ -28,6 +29,37 @@ class ReportGenerator:
             max_summary_length: Maximum characters for summary truncation
         """
         self.max_summary_length = max_summary_length
+
+    @staticmethod
+    def strip_markdown(text: str) -> str:
+        """Strip markdown formatting from text, returning plain text only"""
+        if not text:
+            return ""
+
+        # Remove markdown links [text](url) -> text
+        text = re.sub(r'\[([^\]]+)\]\([^\)]+\)', r'\1', text)
+
+        # Remove bold **text** or __text__ -> text
+        text = re.sub(r'\*\*([^\*]+)\*\*', r'\1', text)
+        text = re.sub(r'__([^_]+)__', r'\1', text)
+
+        # Remove italics *text* or _text_ -> text
+        text = re.sub(r'\*([^\*]+)\*', r'\1', text)
+        text = re.sub(r'_([^_]+)_', r'\1', text)
+
+        # Remove inline code `text` -> text
+        text = re.sub(r'`([^`]+)`', r'\1', text)
+
+        # Remove headers ### text -> text
+        text = re.sub(r'^#{1,6}\s+', '', text, flags=re.MULTILINE)
+
+        # Remove horizontal rules
+        text = re.sub(r'^[-*_]{3,}$', '', text, flags=re.MULTILINE)
+
+        # Remove HTML tags
+        text = re.sub(r'<[^>]+>', '', text)
+
+        return text.strip()
 
     def truncate_summary(self, summary: str, max_length: int = None) -> str:
         """
@@ -64,11 +96,15 @@ class ReportGenerator:
         Returns:
             Formatted article dictionary
         """
+        # Strip markdown from summary before truncating
+        raw_summary = article.get('summary', 'No summary available')
+        plain_summary = self.strip_markdown(raw_summary)
+
         return {
             'title': article.get('title', 'Untitled'),
             'university': article.get('university_name', 'Unknown University'),
             'date': self._format_date(article.get('published_date')),
-            'summary': self.truncate_summary(article.get('summary', 'No summary available')),
+            'summary': self.truncate_summary(plain_summary),
             'url': article.get('url', ''),
             'author': article.get('author', ''),
             'word_count': article.get('word_count', 0)
@@ -188,7 +224,7 @@ class ReportGenerator:
     <title>{title}</title>
     <style>
         body {{
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Courier New', Courier, monospace;
             line-height: 1.6;
             color: #333;
             max-width: 800px;
@@ -329,7 +365,7 @@ class ReportGenerator:
     <title>{title}</title>
     <style>
         body {{
-            font-family: Arial, sans-serif;
+            font-family: 'Courier New', Courier, monospace;
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
