@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI University News - Monday, November 03, 2025</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #ffffff;
+            color: #000000;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.5;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #000;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            font-weight: bold;
+            letter-spacing: -1px;
+            margin-bottom: 5px;
+        }
+
+        .header .tagline {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .header .date {
+            font-size: 16px;
+            color: #000;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .nav {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+        }
+
+        .nav a {
+            color: #cc0000;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            font-size: 14px;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        .top-headline {
+            text-align: center;
+            border: 2px solid #000;
+            padding: 20px;
+            margin-bottom: 30px;
+            background-color: #fffbf0;
+        }
+
+        .top-headline h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .top-headline h2 a {
+            color: #cc0000;
+            text-decoration: none;
+        }
+
+        .top-headline h2 a:hover {
+            text-decoration: underline;
+        }
+
+        .top-headline .summary {
+            margin-top: 15px;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .university-section {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+        }
+
+        .university-section h3 {
+            font-size: 18px;
+            color: #000;
+            margin-bottom: 12px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #cc0000;
+        }
+
+        .article {
+            margin-bottom: 15px;
+            padding-left: 10px;
+        }
+
+        .headline {
+            margin-bottom: 3px;
+        }
+
+        .headline a {
+            color: #0000cc;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .headline a:hover {
+            text-decoration: underline;
+        }
+
+        .headline a:visited {
+            color: #551a8b;
+        }
+
+        .topics {
+            font-size: 12px;
+            color: #666;
+            font-style: italic;
+            margin-left: 8px;
+        }
+
+        .meta {
+            font-size: 12px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .summary {
+            font-size: 13px;
+            color: #333;
+            margin-top: 5px;
+            padding-left: 10px;
+            line-height: 1.5;
+        }
+
+        .no-results {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin: 40px 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #000;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .footer a {
+            color: #0000cc;
+            text-decoration: none;
+        }
+
+        .stats {
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+
+        /* Three-column layout */
+        .three-column-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .column {
+            border: 2px solid #ddd;
+            padding: 15px;
+            background-color: #fafafa;
+            min-height: 200px;
+        }
+
+        .column-title {
+            font-size: 22px;
+            color: #cc0000;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #cc0000;
+            text-align: center;
+        }
+
+        .no-articles {
+            text-align: center;
+            color: #999;
+            font-style: italic;
+            padding: 20px;
+        }
+
+        @media (max-width: 1024px) {
+            .three-column-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .header h1 { font-size: 28px; }
+            .headline a { font-size: 16px; }
+            .column { padding: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI UNIVERSITY NEWS</h1>
+        <div class="tagline">Latest AI Research & Developments from Top Universities (Last 3 Days)</div>
+        <div class="date">Updated: Monday, November 03, 2025</div>
+    </div>
+
+    <div class="nav">
+        <a href="index.html">TODAY</a>
+        <a href="archive/index.html">ARCHIVE</a>
+    </div>
+
+    
+            <div class="stats">
+                <strong>Total Articles:</strong> 22 |
+                <strong>Peer:</strong> 0 |
+                <strong>R1:</strong> 8 |
+                <strong>Facilities:</strong> 14
+            </div>
+        
+            <div class="three-column-layout">
+                <div class="column"><h2 class="column-title">Peer Institutions</h2><p class="no-articles">No articles</p></div>
+                <div class="column"><h2 class="column-title">R1 Institutions</h2>
+<div class="university-section"><h3>Stanford</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.stanford.edu/stories/2025/10/academic-integrity-working-group-generative-ai-exam-policies" target="_blank">Academic Integrity Working Group addresses generative AI and exam policies</a>
+                                
+                            </div>
+                            <div class="meta">November 02, 2025</div>
+                            <div class="summary">Stanford University's Academic Integrity Working Group has developed updated guidance for faculty on managing generative AI use and exam administration, based on a multi-year proctoring pilot now...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.stanford.edu/stories/2025/10/stanford-educators-ai-coursework-classroom-ideas" target="_blank">How Stanford educators are bringing AI into the classroom</a>
+                                
+                            </div>
+                            <div class="meta">November 02, 2025</div>
+                            <div class="summary">Stanford University has launched AIMES (AI Meets Education at Stanford), an initiative to help faculty navigate the integration of generative AI tools into coursework while maintaining educational...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.stanford.edu/stories/2025/10/ai-medical-care-doctor-visits-patient-questions-advice" target="_blank">Essential questions for patients in the age of AI doctor visits</a>
+                                
+                            </div>
+                            <div class="meta">November 02, 2025</div>
+                            <div class="summary">This article examines how AI is transforming the patient experience in healthcare, from administrative tasks like intake forms and appointment scheduling to clinical applications like ambient scribes...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.stanford.edu/stories/2025/10/ai-llms-age-bias-older-working-women-research" target="_blank">Researchers uncover AI bias against older working women</a>
+                                
+                            </div>
+                            <div class="meta">November 02, 2025</div>
+                            <div class="summary">Researchers at Stanford discovered that generative AI models like ChatGPT perpetuate pervasive biases against older women, systematically portraying women as younger than men—particularly in...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.stanford.edu/stories/2025/10/ai-chatbot-privacy-concerns-risks-research" target="_blank">Study exposes privacy risks of AI chatbot conversations</a>
+                                
+                            </div>
+                            <div class="meta">November 02, 2025</div>
+                            <div class="summary">A Stanford study examining privacy policies of six leading AI chatbot developers (Amazon, Anthropic, Google, Meta, Microsoft, and OpenAI) found that these companies routinely feed user inputs back...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.stanford.edu/stories/2025/10/jama-report-michelle-mello-health-care-ai-oversight" target="_blank">A roadmap for safer and more effective AI in health care</a>
+                                
+                            </div>
+                            <div class="meta">November 02, 2025</div>
+                            <div class="summary">A Stanford-led report published in JAMA outlines a comprehensive roadmap for responsible AI integration in healthcare, emphasizing that while AI adoption is accelerating rapidly, regulatory and...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.stanford.edu/stories/2025/10/ai-model-functional-correspondence-tools-robot-autonomy" target="_blank">AI model could boost robot intelligence via object recognition</a>
+                                
+                            </div>
+                            <div class="meta">November 02, 2025</div>
+                            <div class="summary">Stanford researchers developed an AI model that achieves "dense functional correspondence," enabling robots to recognize not just object parts but understand their functions at pixel-level...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.stanford.edu/stories/2025/10/generative-ai-brain-diseases-synthetic-mris" target="_blank">GenAI helps Stanford researchers better understand brain diseases</a>
+                                
+                            </div>
+                            <div class="meta">November 02, 2025</div>
+                            <div class="summary">Stanford researchers developed BrainSynth, a generative AI model that creates synthetic brain MRIs to significantly expand training datasets for brain disorder research. By augmenting datasets from...</div>
+                        </div>
+                    
+</div>
+</div>
+                <div class="column"><h2 class="column-title">Major Facilities</h2>
+<div class="university-section"><h3>AuburnEngineers</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://eng.auburn.edu/news/2025/11/students-compete-in-ausome-science-research-video-competition.html" target="_blank">Students' awesome research ideas celebrated at college's third AUSome Science in 60 Seconds</a>
+                                
+                            </div>
+                            <div class="meta">November 03, 2025</div>
+                            <div class="summary">Auburn University's "AUSome Science in 60 Seconds" competition showcased graduate and undergraduate engineering research through concise video presentations. Winning projects included a VR-based...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>ORNL</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.ornl.gov/news/releases" target="_blank">News Desk - News Releases | ORNL</a>
+                                
+                            </div>
+                            <div class="meta">November 02, 2025</div>
+                            <div class="summary">Oak Ridge National Laboratory announced multiple technological breakthroughs including new supercomputers (Discovery and Lux) designed to advance AI for scientific computing, alongside innovations in...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.ornl.gov/news/ornl-amd-and-hpe-deliver-does-newest-ai-supercomputers-discovery-and-lux" target="_blank">ORNL, AMD and HPE to deliver DOE’s newest AI supercomputers: Discovery and Lux | ORNL</a>
+                                
+                            </div>
+                            <div class="meta">November 02, 2025</div>
+                            <div class="summary">The U.S. Department of Energy announced two new leadership-class supercomputers—Discovery and Lux—to be deployed at Oak Ridge National Laboratory in 2028 and 2026 respectively, built by HPE and...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>RCAC</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.rcac.purdue.edu/news/events" target="_blank">News: Events (Upcoming): Page 1</a>
+                                
+                            </div>
+                            <div class="meta">November 02, 2025</div>
+                            <div class="summary">This is not a research article but rather an events listing page featuring upcoming workshops offered by RCAC (Research Computing and Cyberinfrastructure) in November-December 2025. The workshops...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.rcac.purdue.edu/news/7422" target="_blank">Scheduled Gautschi Cluster Downtime</a>
+                                
+                            </div>
+                            <div class="meta">November 02, 2025</div>
+                            <div class="summary">This is a maintenance notice for the Gautschi computing cluster, announcing scheduled downtime on October 29th, 2025 for performance benchmarking of filesystems and AI partition resources. The...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.rcac.purdue.edu/news/7437" target="_blank">Anvil supports BigCARE 2025 Summer Works...</a>
+                                
+                            </div>
+                            <div class="meta">November 02, 2025</div>
+                            <div class="summary">Purdue University's Anvil supercomputer supported the 2025 BigCARE Summer Workshop, a National Cancer Institute-funded program that trains cancer researchers in big data analysis skills. The workshop...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.rcac.purdue.edu/news/7433" target="_blank">Third generation of Data Depot Filesyste...</a>
+                                
+                            </div>
+                            <div class="meta">November 02, 2025</div>
+                            <div class="summary">Purdue University's RCAC announced the third generation of its Data Depot filesystem storage service, featuring 10 petabytes of capacity with significantly improved performance (500 GB/sec, a 25x...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>UNLV</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.unlv.edu/news/article/ai-and-you-match-made-binary-code" target="_blank">AI and You: A Match Made in Binary Code</a>
+                                
+                            </div>
+                            <div class="meta">November 03, 2025</div>
+                            <div class="summary">This research examines how people form emotional relationships with AI chatbots and the psychological implications of this interaction. Researcher Soon Cho from UNLV studies both the benefits...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>UNM UCAM Newsroom</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.unm.edu/news/r-d-week-includes-highlight-of-unm-grand-challenges-teams" target="_blank">R&D Week includes highlight of UNM Grand Challenges teams</a>
+                                
+                            </div>
+                            <div class="meta">November 03, 2025</div>
+                            <div class="summary">This article announces UNM's 2025 Research and Discovery Week events featuring five Grand Challenges teams hosting symposiums and panel discussions across campus. One team specifically focuses on...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>ou.edu</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.ou.edu/content/news/articles/2025/october/research-to-develop-defenses-against-wireless-inference-threats" target="_blank">Newly Funded Research to Develop Defenses Against Wireless Inference Threats</a>
+                                
+                            </div>
+                            <div class="meta">November 03, 2025</div>
+                            <div class="summary">Researcher Song Fang at the University of Oklahoma has received NSF funding to develop training-free methods for detecting and defending against wireless eavesdropping attacks that can infer...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.ou.edu/content/news/articles/2025/october/harvard-librarian-to-discuss-open-access-in-age-of-ai" target="_blank">OU Hosts Harvard Librarian to Discuss Open Access in the Age of AI</a>
+                                
+                            </div>
+                            <div class="meta">November 03, 2025</div>
+                            <div class="summary">The University of Oklahoma is hosting Harvard librarian Colleen Cressman to discuss how open access policies can help faculty retain control over their scholarly work in an era where AI systems train...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.ou.edu/content/news/articles/2025/november/new-study-reveals-not-all-bats-carry-equal-viral-risk" target="_blank">New Study Reveals Not All Bats Carry Equal Viral Risk</a>
+                                
+                            </div>
+                            <div class="meta">November 03, 2025</div>
+                            <div class="summary">A University of Oklahoma study using machine learning identified that only specific bat species groups—not all bats—carry highly virulent and transmissible viruses, challenging widespread assumptions...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>psu.edu</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.psu.edu/news/research/story/penn-state-research-enterprise-continues-grow-produce-positive-impacts" target="_blank">Penn State research enterprise continues to grow, produce positive impacts | Penn State University</a>
+                                
+                            </div>
+                            <div class="meta">November 02, 2025</div>
+                            <div class="summary">Penn State University reached a record $1.44 billion in research expenditures in fiscal year 2024-25, representing an 8% increase and reflecting strategic investments across critical areas including...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.psu.edu/news/research/story/ai-powered-model-predicts-floods-improves-water-management-worldwide" target="_blank">AI-powered model predicts floods, improves water management worldwide | Penn State University</a>
+                                
+                            </div>
+                            <div class="meta">November 02, 2025</div>
+                            <div class="summary">Researchers at Penn State developed a hybrid AI-physics model that forecasts flooding and manages water resources globally at high resolution (down to 6 square kilometers). The model combines neural...</div>
+                        </div>
+                    
+</div>
+</div>
+            </div>
+        
+
+    <div class="footer">
+        <p>Powered by AI University News Crawler</p>
+        <p>Last updated: 03:55 PM </p>
+    </div>
+</body>
+</html>
