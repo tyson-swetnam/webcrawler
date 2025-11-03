@@ -1,89 +1,19 @@
 # Python
+*.log
+*.pyc
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-pip-wheel-metadata/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-
-# Virtual Environment
-venv/
-ENV/
-env/
-.venv
-
-# Environment Variables
 .env
-.env.local
-.env.*.local
+venv/
 
 # IDEs
 .vscode/
 .idea/
-*.swp
-*.swo
-*~
-.DS_Store
 
-# Logs
-*.log
-logs/
-crawler.log
-
-# Database
-*.db
-*.sqlite
-*.sqlite3
-
-# Scrapy
-.scrapy/
-
-# Local output files (crawler results)
-output/
+# Output directories (except docs/)
 html_output/
+output/
 examples/
 
-# Testing
-.pytest_cache/
-.coverage
-htmlcov/
-.tox/
-.hypothesis/
-
-# Alembic
-alembic/versions/*.py
-!alembic/versions/__init__.py
-
-# Backups
-*.bak
-*.backup
-backup/
-
-# Temporary files
-*.tmp
-*.temp
-tmp/
-temp/
-
-# OS
-Thumbs.db
-.DS_Store
-.Spotlight-V100
-.Trashes
+# Keep GitHub Pages directory for commit
+!docs/
+!docs/**
