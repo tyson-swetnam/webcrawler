@@ -397,13 +397,21 @@ async def send_notifications(articles, analyses, db):
     # Generate HTML report (Drudge Report-style website)
     try:
         logger.info("Generating HTML report website...")
-        html_gen = HTMLReportGenerator(output_dir=settings.local_output_dir)
+        # Generate to both html_output/ (for local viewing) and docs/ (for GitHub Pages)
+        html_gen = HTMLReportGenerator(
+            output_dir=settings.local_output_dir,
+            github_pages_dir="docs"
+        )
         today_file = html_gen.generate_daily_report()
         archive_file = html_gen.generate_archive_index()
+        how_it_works_file = html_gen.generate_how_it_works()
         logger.info(f"✅ HTML report generated: {today_file}")
         logger.info(f"✅ Archive index generated: {archive_file}")
+        logger.info(f"✅ How It Works page generated: {how_it_works_file}")
+        logger.info(f"✅ GitHub Pages output: docs/")
         exported_files['html'] = today_file
         exported_files['html_archive'] = archive_file
+        exported_files['html_how_it_works'] = how_it_works_file
     except Exception as e:
         logger.error(f"HTML generation error: {e}", exc_info=True)
 
