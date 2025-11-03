@@ -54,8 +54,11 @@ crawler.log
 
 # Scrapy
 .scrapy/
+
+# Local output files (crawler results)
 output/
-*.json
+html_output/
+examples/
 
 # Testing
 .pytest_cache/
@@ -84,7 +87,3 @@ Thumbs.db
 .DS_Store
 .Spotlight-V100
 .Trashes
-
-# Project-specific
-output/*.json
-output/*.csv

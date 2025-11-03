@@ -1,7 +1,7 @@
 """
 Multi-AI analysis engine for article classification and summarization.
 
-This module orchestrates parallel AI analysis using Claude, OpenAI, and Gemini
+This module orchestrates parallel AI analysis using Claude (Sonnet and Haiku) and OpenAI
 to provide high-quality, consensus-based article summaries and relevance scoring.
 """
 
@@ -12,7 +12,6 @@ import logging
 
 from anthropic import AsyncAnthropic
 from openai import AsyncOpenAI
-from google import genai
 
 from crawler.config.settings import settings
 
@@ -23,23 +22,20 @@ class MultiAIAnalyzer:
     """
     Orchestrate parallel AI analysis across multiple providers.
 
-    Uses Claude Sonnet-4-5 as primary analyzer with OpenAI and Gemini
+    Uses Claude Sonnet-4-5 as primary analyzer with Claude Haiku and OpenAI
     for additional validation and consensus building.
     """
 
     def __init__(self):
         """Initialize AI API clients."""
         try:
-            # Initialize Anthropic Claude
+            # Initialize Anthropic Claude (single client for both Sonnet and Haiku)
             self.claude = AsyncAnthropic(api_key=settings.anthropic_api_key)
 
             # Initialize OpenAI
             self.openai = AsyncOpenAI(api_key=settings.openai_api_key)
 
-            # Initialize Gemini
-            self.gemini_client = genai.Client(api_key=settings.gemini_api_key)
-
-            logger.info("Initialized MultiAIAnalyzer with all three providers")
+            logger.info("Initialized MultiAIAnalyzer with Claude (Sonnet + Haiku) and OpenAI")
 
         except Exception as e:
             logger.error(f"Failed to initialize AI clients: {e}")
@@ -61,14 +57,14 @@ class MultiAIAnalyzer:
         tasks = [
             self._safe_claude_analyze(article),
             self._safe_openai_analyze(article),
-            self._safe_gemini_analyze(article)
+            self._safe_haiku_analyze(article)
         ]
 
         # Execute in parallel
-        claude_result, openai_result, gemini_result = await asyncio.gather(*tasks)
+        claude_result, openai_result, haiku_result = await asyncio.gather(*tasks)
 
         # Build consensus
-        consensus = self.build_consensus(claude_result, openai_result, gemini_result)
+        consensus = self.build_consensus(claude_result, openai_result, haiku_result)
 
         # Calculate processing time
         processing_time = (datetime.utcnow() - start_time).total_seconds() * 1000
@@ -77,7 +73,7 @@ class MultiAIAnalyzer:
             'article_id': article.get('article_id'),
             'claude': claude_result,
             'openai': openai_result,
-            'gemini': gemini_result,
+            'haiku': haiku_result,
             'consensus': consensus,
             'processing_time_ms': int(processing_time)
         }
@@ -105,12 +101,12 @@ class MultiAIAnalyzer:
             logger.error(f"OpenAI analysis failed: {e}")
             return None
 
-    async def _safe_gemini_analyze(self, article: Dict[str, Any]) -> Optional[Dict[str, Any]]:
-        """Safely execute Gemini analysis with error handling."""
+    async def _safe_haiku_analyze(self, article: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+        """Safely execute Claude Haiku analysis with error handling."""
         try:
-            return await self.gemini_analyze(article)
+            return await self.haiku_analyze(article)
         except Exception as e:
-            logger.error(f"Gemini analysis failed: {e}")
+            logger.error(f"Claude Haiku analysis failed: {e}")
             return None
 
     async def claude_analyze(self, article: Dict[str, Any]) -> Dict[str, Any]:
@@ -216,9 +212,10 @@ AI_RELATED: [yes/no]"""
         """
         content = article.get('content', '')[:4000]
 
-        response = await self.openai.chat.completions.create(
-            model=settings.openai_model,
-            messages=[
+        # Build request parameters (some models like GPT-5 don't support temperature)
+        request_params = {
+            "model": settings.openai_model,
+            "messages": [
                 {
                     "role": "system",
                     "content": "You are an AI research analyst. Categorize articles and provide concise summaries."
@@ -236,9 +233,14 @@ Provide:
 3. Is this AI-related? (yes/no)"""
                 }
             ],
-            temperature=0.3,
-            max_tokens=500
-        )
+            "max_tokens": 500
+        }
+
+        # Only add temperature for models that support it (not GPT-5)
+        if not settings.openai_model.startswith("gpt-5"):
+            request_params["temperature"] = 0.3
+
+        response = await self.openai.chat.completions.create(**request_params)
 
         response_text = response.choices[0].message.content
 
@@ -270,15 +272,15 @@ Provide:
 
         return 'Other'
 
-    async def gemini_analyze(self, article: Dict[str, Any]) -> Dict[str, Any]:
+    async def haiku_analyze(self, article: Dict[str, Any]) -> Dict[str, Any]:
         """
-        Fast processing with Gemini Flash.
+        Fast processing with Claude Haiku.
 
         Args:
             article: Article data
 
         Returns:
-            Analysis results from Gemini
+            Analysis results from Claude Haiku
         """
         content = article.get('content', '')[:3000]
 
@@ -291,17 +293,14 @@ Format:
 SUMMARY: [your summary]
 AI_RELATED: [yes/no]"""
 
-        # Note: Gemini API is synchronous in current version
-        loop = asyncio.get_event_loop()
-        response = await loop.run_in_executor(
-            None,
-            lambda: self.gemini_client.models.generate_content(
-                model=settings.gemini_model,
-                contents=prompt
-            )
+        message = await self.claude.messages.create(
+            model=settings.claude_haiku_model,
+            max_tokens=settings.max_haiku_tokens,
+            temperature=0.3,
+            messages=[{"role": "user", "content": prompt}]
         )
 
-        response_text = response.text
+        response_text = message.content[0].text
 
         # Parse response
         is_ai_related = True
@@ -317,22 +316,22 @@ AI_RELATED: [yes/no]"""
         return {
             'summary': summary,
             'is_ai_related': is_ai_related,
-            'model': settings.gemini_model
+            'model': settings.claude_haiku_model
         }
 
     def build_consensus(
         self,
         claude_result: Optional[Dict],
         openai_result: Optional[Dict],
-        gemini_result: Optional[Dict]
+        haiku_result: Optional[Dict]
     ) -> Dict[str, Any]:
         """
         Synthesize results from multiple AI providers.
 
         Args:
-            claude_result: Claude analysis results
+            claude_result: Claude Sonnet analysis results
             openai_result: OpenAI analysis results
-            gemini_result: Gemini analysis results
+            haiku_result: Claude Haiku analysis results
 
         Returns:
             Consensus summary and metadata
@@ -351,9 +350,9 @@ AI_RELATED: [yes/no]"""
             summaries.append(('openai', openai_result.get('summary', '')))
             is_ai_votes.append(openai_result.get('is_ai_related', True))
 
-        if gemini_result:
-            summaries.append(('gemini', gemini_result.get('summary', '')))
-            is_ai_votes.append(gemini_result.get('is_ai_related', True))
+        if haiku_result:
+            summaries.append(('haiku', haiku_result.get('summary', '')))
+            is_ai_votes.append(haiku_result.get('is_ai_related', True))
 
         # Determine consensus summary (prefer Claude)
         consensus_summary = "Analysis unavailable"
@@ -409,7 +408,7 @@ AI_RELATED: [yes/no]"""
 
     async def is_ai_related(self, article: Dict[str, Any]) -> bool:
         """
-        Quick check if article is AI-related using Gemini (fastest/cheapest).
+        Quick check if article is AI-related using Claude Haiku (fast and cost-effective).
 
         Args:
             article: Article data
@@ -418,7 +417,7 @@ AI_RELATED: [yes/no]"""
             True if AI-related, False otherwise
         """
         try:
-            result = await self.gemini_analyze(article)
+            result = await self.haiku_analyze(article)
             return result.get('is_ai_related', False)
         except Exception as e:
             logger.error(f"AI relevance check failed: {e}")

@@ -155,9 +155,15 @@ def get_or_create_url(
 
     db.add(new_url)
 
+    # Always flush to get the url_id from the database
+    # This doesn't commit the transaction but does assign auto-increment IDs
+    db.flush()
+
     if commit:
         db.commit()
-        db.refresh(new_url)
+
+    # Refresh to ensure we have the latest state
+    db.refresh(new_url)
 
     logger.debug(f"Created new URL entry: {hostname}")
     return new_url, True

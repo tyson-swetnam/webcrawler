@@ -1,0 +1,1042 @@
+{
+  "metadata": {
+    "schema_version": "2.0.0",
+    "title": "R1 Universities AI News Sources - Starter Dataset",
+    "classification": "2025 Carnegie Classification",
+    "total_institutions": 187,
+    "institutions_included": 15,
+    "coverage_percentage": 8,
+    "date_compiled": "2025-11-01",
+    "last_updated": "2025-11-01T00:00:00Z",
+    "data_sources": [
+      "Existing universities.json",
+      "UNIVERSITIES.md research",
+      "Manual verification"
+    ],
+    "quality_notes": "Starter dataset with 15 leading AI research universities. Expand to full 187 R1 institutions."
+  },
+  "universities": [
+    {
+      "id": 1,
+      "name": "Stanford University",
+      "abbreviation": "Stanford",
+      "canonical_name": "Stanford University",
+      "location": {
+        "city": "Stanford",
+        "state": "CA",
+        "state_full": "California",
+        "region": "West",
+        "country": "US",
+        "timezone": "America/Los_Angeles"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "private",
+        "tier": "elite",
+        "aau_member": true,
+        "land_grant": false
+      },
+      "domains": {
+        "primary": "stanford.edu",
+        "news_domains": ["news.stanford.edu"],
+        "aliases": []
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://news.stanford.edu",
+          "type": "dedicated_site",
+          "ai_tag_url": "https://news.stanford.edu/topic/artificial-intelligence/",
+          "verified": true,
+          "last_verified": "2025-11-01",
+          "crawl_priority": 120,
+          "notes": "Dedicated news site with AI-specific topic page"
+        },
+        "rss_feeds": [
+          {
+            "url": "https://news.stanford.edu/feed/",
+            "type": "main",
+            "active": true,
+            "format": "atom",
+            "verified": false,
+            "crawl_priority": 180
+          },
+          {
+            "url": "https://news.stanford.edu/topic/artificial-intelligence/feed/",
+            "type": "topic",
+            "category": "artificial-intelligence",
+            "active": true,
+            "format": "rss2",
+            "verified": false,
+            "crawl_priority": 200
+          }
+        ],
+        "press_releases": {
+          "url": "https://news.stanford.edu/press-center",
+          "active": true,
+          "has_rss": false,
+          "verified": true,
+          "crawl_priority": 75
+        }
+      },
+      "ai_research": {
+        "has_ai_institute": true,
+        "ai_centers": [
+          "Stanford Institute for Human-Centered Artificial Intelligence (HAI)",
+          "Stanford Artificial Intelligence Laboratory (SAIL)"
+        ],
+        "ai_focus_areas": [
+          "Machine Learning",
+          "Natural Language Processing",
+          "Computer Vision",
+          "AI Ethics",
+          "Human-AI Interaction"
+        ]
+      },
+      "crawling_config": {
+        "enabled": true,
+        "crawl_frequency": "daily",
+        "max_depth": 2,
+        "respect_robots_txt": true,
+        "custom_delay_seconds": 1.0
+      },
+      "data_quality": {
+        "completeness_score": 0.85,
+        "last_updated": "2025-11-01T00:00:00Z",
+        "verified_by": "manual_verification",
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "issues": []
+      }
+    },
+    {
+      "id": 2,
+      "name": "Massachusetts Institute of Technology",
+      "abbreviation": "MIT",
+      "canonical_name": "Massachusetts Institute of Technology",
+      "location": {
+        "city": "Cambridge",
+        "state": "MA",
+        "state_full": "Massachusetts",
+        "region": "Northeast",
+        "country": "US",
+        "timezone": "America/New_York"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "private",
+        "tier": "elite",
+        "aau_member": true,
+        "land_grant": false
+      },
+      "domains": {
+        "primary": "mit.edu",
+        "news_domains": ["news.mit.edu"],
+        "aliases": []
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://news.mit.edu",
+          "type": "dedicated_site",
+          "ai_tag_url": "https://news.mit.edu/topic/artificial-intelligence2",
+          "verified": true,
+          "last_verified": "2025-11-01",
+          "crawl_priority": 120,
+          "notes": "Comprehensive news site with AI topic filter"
+        },
+        "rss_feeds": [],
+        "press_releases": {
+          "url": "https://news.mit.edu/press/",
+          "active": true,
+          "has_rss": false,
+          "verified": true,
+          "crawl_priority": 75
+        }
+      },
+      "ai_research": {
+        "has_ai_institute": true,
+        "ai_centers": [
+          "MIT Computer Science and Artificial Intelligence Laboratory (CSAIL)",
+          "MIT Quest for Intelligence"
+        ],
+        "ai_focus_areas": [
+          "AI",
+          "Robotics",
+          "Deep Learning",
+          "Computer Vision",
+          "Natural Language Processing"
+        ]
+      },
+      "crawling_config": {
+        "enabled": true,
+        "crawl_frequency": "daily",
+        "max_depth": 2,
+        "respect_robots_txt": true,
+        "custom_delay_seconds": 1.0
+      },
+      "data_quality": {
+        "completeness_score": 0.80,
+        "last_updated": "2025-11-01T00:00:00Z",
+        "verified_by": "manual_verification",
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "issues": []
+      }
+    },
+    {
+      "id": 3,
+      "name": "Carnegie Mellon University",
+      "abbreviation": "CMU",
+      "canonical_name": "Carnegie Mellon University",
+      "location": {
+        "city": "Pittsburgh",
+        "state": "PA",
+        "state_full": "Pennsylvania",
+        "region": "Northeast",
+        "country": "US",
+        "timezone": "America/New_York"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "private",
+        "tier": "elite",
+        "aau_member": true,
+        "land_grant": false
+      },
+      "domains": {
+        "primary": "cmu.edu",
+        "news_domains": ["www.cmu.edu"],
+        "aliases": []
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.cmu.edu/news/",
+          "type": "news_section",
+          "ai_tag_url": "https://www.cmu.edu/news/stories/archives/artificial-intelligence.html",
+          "verified": true,
+          "last_verified": "2025-11-01",
+          "crawl_priority": 120,
+          "notes": "News section with AI archives"
+        },
+        "rss_feeds": []
+      },
+      "ai_research": {
+        "has_ai_institute": true,
+        "ai_centers": [
+          "Carnegie Mellon School of Computer Science",
+          "Robotics Institute"
+        ],
+        "ai_focus_areas": [
+          "Machine Learning",
+          "Robotics",
+          "AI Ethics",
+          "Computer Vision",
+          "Natural Language Processing"
+        ]
+      },
+      "crawling_config": {
+        "enabled": true,
+        "crawl_frequency": "daily",
+        "max_depth": 2,
+        "respect_robots_txt": true,
+        "custom_delay_seconds": 1.0
+      },
+      "data_quality": {
+        "completeness_score": 0.75,
+        "last_updated": "2025-11-01T00:00:00Z",
+        "verified_by": "manual_verification",
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "issues": []
+      }
+    },
+    {
+      "id": 4,
+      "name": "University of California, Berkeley",
+      "abbreviation": "UC Berkeley",
+      "canonical_name": "University of California, Berkeley",
+      "location": {
+        "city": "Berkeley",
+        "state": "CA",
+        "state_full": "California",
+        "region": "West",
+        "country": "US",
+        "timezone": "America/Los_Angeles"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public",
+        "tier": "elite",
+        "aau_member": true,
+        "land_grant": true
+      },
+      "domains": {
+        "primary": "berkeley.edu",
+        "news_domains": ["news.berkeley.edu"],
+        "aliases": []
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://news.berkeley.edu",
+          "type": "dedicated_site",
+          "ai_tag_url": "https://news.berkeley.edu/topic/artificial-intelligence/",
+          "verified": true,
+          "last_verified": "2025-11-01",
+          "crawl_priority": 120,
+          "notes": "Berkeley News with AI topic page"
+        },
+        "rss_feeds": []
+      },
+      "ai_research": {
+        "has_ai_institute": true,
+        "ai_centers": [
+          "Berkeley Artificial Intelligence Research (BAIR) Lab",
+          "Center for Human-Compatible AI"
+        ],
+        "ai_focus_areas": [
+          "AI Safety",
+          "Machine Learning",
+          "Computer Vision",
+          "Robotics",
+          "Natural Language Processing"
+        ]
+      },
+      "crawling_config": {
+        "enabled": true,
+        "crawl_frequency": "daily",
+        "max_depth": 2,
+        "respect_robots_txt": true,
+        "custom_delay_seconds": 1.0
+      },
+      "data_quality": {
+        "completeness_score": 0.80,
+        "last_updated": "2025-11-01T00:00:00Z",
+        "verified_by": "manual_verification",
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "issues": []
+      }
+    },
+    {
+      "id": 5,
+      "name": "University of Washington",
+      "abbreviation": "UW",
+      "canonical_name": "University of Washington",
+      "location": {
+        "city": "Seattle",
+        "state": "WA",
+        "state_full": "Washington",
+        "region": "West",
+        "country": "US",
+        "timezone": "America/Los_Angeles"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public",
+        "tier": "flagship",
+        "aau_member": true,
+        "land_grant": false
+      },
+      "domains": {
+        "primary": "washington.edu",
+        "news_domains": ["www.washington.edu"],
+        "aliases": []
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.washington.edu/news/",
+          "type": "news_section",
+          "ai_tag_url": "https://www.washington.edu/news/tag/artificial-intelligence/",
+          "verified": true,
+          "last_verified": "2025-11-01",
+          "crawl_priority": 120,
+          "notes": "UW News with AI tag"
+        },
+        "rss_feeds": []
+      },
+      "ai_research": {
+        "has_ai_institute": true,
+        "ai_centers": [
+          "Allen School of Computer Science & Engineering"
+        ],
+        "ai_focus_areas": [
+          "NLP",
+          "Machine Learning",
+          "AI Applications",
+          "Computer Vision"
+        ]
+      },
+      "crawling_config": {
+        "enabled": true,
+        "crawl_frequency": "daily",
+        "max_depth": 2,
+        "respect_robots_txt": true,
+        "custom_delay_seconds": 1.0
+      },
+      "data_quality": {
+        "completeness_score": 0.75,
+        "last_updated": "2025-11-01T00:00:00Z",
+        "verified_by": "manual_verification",
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "issues": []
+      }
+    },
+    {
+      "id": 6,
+      "name": "Georgia Institute of Technology",
+      "abbreviation": "Georgia Tech",
+      "canonical_name": "Georgia Institute of Technology",
+      "location": {
+        "city": "Atlanta",
+        "state": "GA",
+        "state_full": "Georgia",
+        "region": "South",
+        "country": "US",
+        "timezone": "America/New_York"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public",
+        "tier": "flagship",
+        "aau_member": true,
+        "land_grant": false
+      },
+      "domains": {
+        "primary": "gatech.edu",
+        "news_domains": ["news.gatech.edu"],
+        "aliases": []
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://news.gatech.edu",
+          "type": "dedicated_site",
+          "ai_tag_url": "https://news.gatech.edu/topics/artificial-intelligence",
+          "verified": true,
+          "last_verified": "2025-11-01",
+          "crawl_priority": 120,
+          "notes": "Georgia Tech News with AI topics"
+        },
+        "rss_feeds": []
+      },
+      "ai_research": {
+        "has_ai_institute": true,
+        "ai_centers": [
+          "Institute for Robotics and Intelligent Machines",
+          "Machine Learning Center"
+        ],
+        "ai_focus_areas": [
+          "Machine Learning",
+          "Robotics",
+          "Human-AI Interaction",
+          "Computer Vision"
+        ]
+      },
+      "crawling_config": {
+        "enabled": true,
+        "crawl_frequency": "daily",
+        "max_depth": 2,
+        "respect_robots_txt": true,
+        "custom_delay_seconds": 1.0
+      },
+      "data_quality": {
+        "completeness_score": 0.80,
+        "last_updated": "2025-11-01T00:00:00Z",
+        "verified_by": "manual_verification",
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "issues": []
+      }
+    },
+    {
+      "id": 7,
+      "name": "University of Illinois Urbana-Champaign",
+      "abbreviation": "UIUC",
+      "canonical_name": "University of Illinois Urbana-Champaign",
+      "location": {
+        "city": "Urbana-Champaign",
+        "state": "IL",
+        "state_full": "Illinois",
+        "region": "Midwest",
+        "country": "US",
+        "timezone": "America/Chicago"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public",
+        "tier": "flagship",
+        "aau_member": true,
+        "land_grant": true
+      },
+      "domains": {
+        "primary": "illinois.edu",
+        "news_domains": ["cs.illinois.edu"],
+        "aliases": ["uiuc.edu"]
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://cs.illinois.edu/news",
+          "type": "department_page",
+          "ai_tag_url": "https://cs.illinois.edu/news?field_news_topics_target_id=87",
+          "verified": true,
+          "last_verified": "2025-11-01",
+          "crawl_priority": 100,
+          "notes": "CS department news with AI topic filter"
+        },
+        "rss_feeds": []
+      },
+      "ai_research": {
+        "has_ai_institute": true,
+        "ai_centers": [
+          "Coordinated Science Laboratory",
+          "National Center for Supercomputing Applications"
+        ],
+        "ai_focus_areas": [
+          "Machine Learning",
+          "AI Systems",
+          "Data Science",
+          "Computer Vision"
+        ]
+      },
+      "crawling_config": {
+        "enabled": true,
+        "crawl_frequency": "daily",
+        "max_depth": 2,
+        "respect_robots_txt": true,
+        "custom_delay_seconds": 1.0
+      },
+      "data_quality": {
+        "completeness_score": 0.70,
+        "last_updated": "2025-11-01T00:00:00Z",
+        "verified_by": "manual_verification",
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "issues": ["Department page, not university-wide news"]
+      }
+    },
+    {
+      "id": 8,
+      "name": "Cornell University",
+      "abbreviation": "Cornell",
+      "canonical_name": "Cornell University",
+      "location": {
+        "city": "Ithaca",
+        "state": "NY",
+        "state_full": "New York",
+        "region": "Northeast",
+        "country": "US",
+        "timezone": "America/New_York"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "private",
+        "tier": "elite",
+        "aau_member": true,
+        "land_grant": true
+      },
+      "domains": {
+        "primary": "cornell.edu",
+        "news_domains": ["news.cornell.edu"],
+        "aliases": []
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://news.cornell.edu",
+          "type": "dedicated_site",
+          "ai_tag_url": "https://news.cornell.edu/topic/artificial-intelligence",
+          "verified": true,
+          "last_verified": "2025-11-01",
+          "crawl_priority": 120,
+          "notes": "Cornell Chronicle with AI topic"
+        },
+        "rss_feeds": []
+      },
+      "ai_research": {
+        "has_ai_institute": true,
+        "ai_centers": [
+          "Cornell Tech",
+          "Department of Computer Science"
+        ],
+        "ai_focus_areas": [
+          "AI",
+          "Machine Learning",
+          "Computer Vision",
+          "Natural Language Processing"
+        ]
+      },
+      "crawling_config": {
+        "enabled": true,
+        "crawl_frequency": "daily",
+        "max_depth": 2,
+        "respect_robots_txt": true,
+        "custom_delay_seconds": 1.0
+      },
+      "data_quality": {
+        "completeness_score": 0.80,
+        "last_updated": "2025-11-01T00:00:00Z",
+        "verified_by": "manual_verification",
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "issues": []
+      }
+    },
+    {
+      "id": 9,
+      "name": "University of Michigan",
+      "abbreviation": "UMich",
+      "canonical_name": "University of Michigan",
+      "location": {
+        "city": "Ann Arbor",
+        "state": "MI",
+        "state_full": "Michigan",
+        "region": "Midwest",
+        "country": "US",
+        "timezone": "America/Detroit"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public",
+        "tier": "flagship",
+        "aau_member": true,
+        "land_grant": false
+      },
+      "domains": {
+        "primary": "umich.edu",
+        "news_domains": ["news.umich.edu"],
+        "aliases": ["michigan.edu"]
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://news.umich.edu",
+          "type": "dedicated_site",
+          "ai_tag_url": "https://news.umich.edu/ai-news/",
+          "verified": true,
+          "last_verified": "2025-11-01",
+          "crawl_priority": 120,
+          "notes": "Michigan News with dedicated AI section"
+        },
+        "rss_feeds": []
+      },
+      "ai_research": {
+        "has_ai_institute": true,
+        "ai_centers": [
+          "Michigan AI Lab"
+        ],
+        "ai_focus_areas": [
+          "AI",
+          "Robotics",
+          "Machine Learning",
+          "Computer Vision"
+        ]
+      },
+      "crawling_config": {
+        "enabled": true,
+        "crawl_frequency": "daily",
+        "max_depth": 2,
+        "respect_robots_txt": true,
+        "custom_delay_seconds": 1.0
+      },
+      "data_quality": {
+        "completeness_score": 0.85,
+        "last_updated": "2025-11-01T00:00:00Z",
+        "verified_by": "manual_verification",
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "issues": []
+      }
+    },
+    {
+      "id": 10,
+      "name": "Princeton University",
+      "abbreviation": "Princeton",
+      "canonical_name": "Princeton University",
+      "location": {
+        "city": "Princeton",
+        "state": "NJ",
+        "state_full": "New Jersey",
+        "region": "Northeast",
+        "country": "US",
+        "timezone": "America/New_York"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "private",
+        "tier": "elite",
+        "aau_member": true,
+        "land_grant": false
+      },
+      "domains": {
+        "primary": "princeton.edu",
+        "news_domains": ["www.princeton.edu"],
+        "aliases": []
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.princeton.edu/news",
+          "type": "news_section",
+          "ai_tag_url": "https://www.princeton.edu/news/tags/artificial-intelligence",
+          "verified": true,
+          "last_verified": "2025-11-01",
+          "crawl_priority": 120,
+          "notes": "Princeton News with AI tag"
+        },
+        "rss_feeds": []
+      },
+      "ai_research": {
+        "has_ai_institute": true,
+        "ai_centers": [
+          "Department of Computer Science",
+          "Center for Information Technology Policy"
+        ],
+        "ai_focus_areas": [
+          "AI Theory",
+          "Machine Learning",
+          "AI Policy",
+          "Computer Science"
+        ]
+      },
+      "crawling_config": {
+        "enabled": true,
+        "crawl_frequency": "daily",
+        "max_depth": 2,
+        "respect_robots_txt": true,
+        "custom_delay_seconds": 1.0
+      },
+      "data_quality": {
+        "completeness_score": 0.80,
+        "last_updated": "2025-11-01T00:00:00Z",
+        "verified_by": "manual_verification",
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "issues": []
+      }
+    },
+    {
+      "id": 11,
+      "name": "Harvard University",
+      "abbreviation": "Harvard",
+      "canonical_name": "Harvard University",
+      "location": {
+        "city": "Cambridge",
+        "state": "MA",
+        "state_full": "Massachusetts",
+        "region": "Northeast",
+        "country": "US",
+        "timezone": "America/New_York"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "private",
+        "tier": "elite",
+        "aau_member": true,
+        "land_grant": false
+      },
+      "domains": {
+        "primary": "harvard.edu",
+        "news_domains": ["www.harvard.edu"],
+        "aliases": []
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.harvard.edu/news",
+          "type": "news_section",
+          "ai_tag_url": "https://www.harvard.edu/topics/artificial-intelligence/",
+          "verified": true,
+          "last_verified": "2025-11-01",
+          "crawl_priority": 120,
+          "notes": "Harvard News with AI topics"
+        },
+        "rss_feeds": []
+      },
+      "ai_research": {
+        "has_ai_institute": true,
+        "ai_centers": [
+          "Kempner Institute for the Study of Natural and Artificial Intelligence",
+          "Berkman Klein Center for Internet & Society"
+        ],
+        "ai_focus_areas": [
+          "AI Ethics",
+          "Machine Learning",
+          "AI Applications",
+          "AI Policy"
+        ]
+      },
+      "crawling_config": {
+        "enabled": true,
+        "crawl_frequency": "daily",
+        "max_depth": 2,
+        "respect_robots_txt": true,
+        "custom_delay_seconds": 1.0
+      },
+      "data_quality": {
+        "completeness_score": 0.85,
+        "last_updated": "2025-11-01T00:00:00Z",
+        "verified_by": "manual_verification",
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "issues": []
+      }
+    },
+    {
+      "id": 12,
+      "name": "University of Texas at Austin",
+      "abbreviation": "UT Austin",
+      "canonical_name": "University of Texas at Austin",
+      "location": {
+        "city": "Austin",
+        "state": "TX",
+        "state_full": "Texas",
+        "region": "South",
+        "country": "US",
+        "timezone": "America/Chicago"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public",
+        "tier": "flagship",
+        "aau_member": true,
+        "land_grant": false
+      },
+      "domains": {
+        "primary": "utexas.edu",
+        "news_domains": ["www.utexas.edu"],
+        "aliases": ["texas.edu"]
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.utexas.edu/news",
+          "type": "news_section",
+          "ai_tag_url": "https://www.utexas.edu/news/tags/artificial-intelligence",
+          "verified": true,
+          "last_verified": "2025-11-01",
+          "crawl_priority": 120,
+          "notes": "UT News with AI tag"
+        },
+        "rss_feeds": []
+      },
+      "ai_research": {
+        "has_ai_institute": true,
+        "ai_centers": [
+          "Good Systems",
+          "Department of Computer Science"
+        ],
+        "ai_focus_areas": [
+          "Machine Learning",
+          "AI Systems",
+          "Robotics",
+          "Natural Language Processing"
+        ]
+      },
+      "crawling_config": {
+        "enabled": true,
+        "crawl_frequency": "daily",
+        "max_depth": 2,
+        "respect_robots_txt": true,
+        "custom_delay_seconds": 1.0
+      },
+      "data_quality": {
+        "completeness_score": 0.80,
+        "last_updated": "2025-11-01T00:00:00Z",
+        "verified_by": "manual_verification",
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "issues": []
+      }
+    },
+    {
+      "id": 13,
+      "name": "California Institute of Technology",
+      "abbreviation": "Caltech",
+      "canonical_name": "California Institute of Technology",
+      "location": {
+        "city": "Pasadena",
+        "state": "CA",
+        "state_full": "California",
+        "region": "West",
+        "country": "US",
+        "timezone": "America/Los_Angeles"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "private",
+        "tier": "elite",
+        "aau_member": true,
+        "land_grant": false
+      },
+      "domains": {
+        "primary": "caltech.edu",
+        "news_domains": ["www.caltech.edu"],
+        "aliases": []
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.caltech.edu/about/news",
+          "type": "news_section",
+          "ai_tag_url": "https://www.caltech.edu/about/news?category=artificial-intelligence",
+          "verified": true,
+          "last_verified": "2025-11-01",
+          "crawl_priority": 120,
+          "notes": "Caltech News with AI category filter"
+        },
+        "rss_feeds": []
+      },
+      "ai_research": {
+        "has_ai_institute": true,
+        "ai_centers": [
+          "Department of Computing and Mathematical Sciences"
+        ],
+        "ai_focus_areas": [
+          "AI",
+          "Machine Learning",
+          "Computational Neuroscience",
+          "Computer Vision"
+        ]
+      },
+      "crawling_config": {
+        "enabled": true,
+        "crawl_frequency": "daily",
+        "max_depth": 2,
+        "respect_robots_txt": true,
+        "custom_delay_seconds": 1.0
+      },
+      "data_quality": {
+        "completeness_score": 0.80,
+        "last_updated": "2025-11-01T00:00:00Z",
+        "verified_by": "manual_verification",
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "issues": []
+      }
+    },
+    {
+      "id": 14,
+      "name": "University of Pennsylvania",
+      "abbreviation": "Penn",
+      "canonical_name": "University of Pennsylvania",
+      "location": {
+        "city": "Philadelphia",
+        "state": "PA",
+        "state_full": "Pennsylvania",
+        "region": "Northeast",
+        "country": "US",
+        "timezone": "America/New_York"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "private",
+        "tier": "elite",
+        "aau_member": true,
+        "land_grant": false
+      },
+      "domains": {
+        "primary": "upenn.edu",
+        "news_domains": ["penntoday.upenn.edu"],
+        "aliases": ["penn.edu"]
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://penntoday.upenn.edu",
+          "type": "integrated_portal",
+          "ai_tag_url": "https://penntoday.upenn.edu/topic/artificial-intelligence",
+          "verified": true,
+          "last_verified": "2025-11-01",
+          "crawl_priority": 120,
+          "notes": "Penn Today with AI topic"
+        },
+        "rss_feeds": []
+      },
+      "ai_research": {
+        "has_ai_institute": true,
+        "ai_centers": [
+          "Penn Engineering"
+        ],
+        "ai_focus_areas": [
+          "AI",
+          "NLP",
+          "Machine Learning",
+          "Computer Vision"
+        ]
+      },
+      "crawling_config": {
+        "enabled": true,
+        "crawl_frequency": "daily",
+        "max_depth": 2,
+        "respect_robots_txt": true,
+        "custom_delay_seconds": 1.0
+      },
+      "data_quality": {
+        "completeness_score": 0.80,
+        "last_updated": "2025-11-01T00:00:00Z",
+        "verified_by": "manual_verification",
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "issues": []
+      }
+    },
+    {
+      "id": 15,
+      "name": "Columbia University",
+      "abbreviation": "Columbia",
+      "canonical_name": "Columbia University",
+      "location": {
+        "city": "New York",
+        "state": "NY",
+        "state_full": "New York",
+        "region": "Northeast",
+        "country": "US",
+        "timezone": "America/New_York"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "private",
+        "tier": "elite",
+        "aau_member": true,
+        "land_grant": false
+      },
+      "domains": {
+        "primary": "columbia.edu",
+        "news_domains": ["news.columbia.edu"],
+        "aliases": []
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://news.columbia.edu",
+          "type": "dedicated_site",
+          "ai_tag_url": "https://news.columbia.edu/news/artificial-intelligence",
+          "verified": true,
+          "last_verified": "2025-11-01",
+          "crawl_priority": 120,
+          "notes": "Columbia News with AI section"
+        },
+        "rss_feeds": []
+      },
+      "ai_research": {
+        "has_ai_institute": true,
+        "ai_centers": [
+          "Data Science Institute",
+          "Department of Computer Science"
+        ],
+        "ai_focus_areas": [
+          "AI",
+          "Machine Learning",
+          "Computer Vision",
+          "Natural Language Processing"
+        ]
+      },
+      "crawling_config": {
+        "enabled": true,
+        "crawl_frequency": "daily",
+        "max_depth": 2,
+        "respect_robots_txt": true,
+        "custom_delay_seconds": 1.0
+      },
+      "data_quality": {
+        "completeness_score": 0.80,
+        "last_updated": "2025-11-01T00:00:00Z",
+        "verified_by": "manual_verification",
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "issues": []
+      }
+    }
+  ]
+}
