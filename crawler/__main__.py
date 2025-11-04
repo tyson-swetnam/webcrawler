@@ -88,7 +88,10 @@ async def main():
             logger.info(f"Found {len(new_articles)} new articles to analyze")
 
             if not new_articles:
-                logger.info("No new articles found. Exiting.")
+                logger.info("No new articles found to analyze.")
+                # Still generate HTML reports for docs/ folder
+                logger.info("\n📬 Phase 4: Generating HTML reports")
+                await send_notifications([], [], db)
                 return 0
 
             # Phase 3: AI Analysis (if enabled)
