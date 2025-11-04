@@ -11,9 +11,9 @@
             font-family: 'Courier New', Courier, monospace;
             background-color: #ffffff;
             color: #000000;
-            max-width: 900px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 20px 40px;
             line-height: 1.6;
         }
 
@@ -115,6 +115,69 @@
         .footer a {
             color: #0000cc;
             text-decoration: none;
+        }
+
+        .sources-section {
+            margin: 20px 0;
+        }
+
+        details {
+            margin: 15px 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-size: 18px;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border-radius: 3px;
+            user-select: none;
+        }
+
+        summary:hover {
+            background-color: #e8e8e8;
+        }
+
+        .source-list {
+            margin: 15px 0 0 20px;
+            list-style-type: disc;
+            column-count: 3;
+            column-gap: 20px;
+        }
+
+        .source-list li {
+            margin-bottom: 8px;
+            break-inside: avoid;
+        }
+
+        .source-list a {
+            color: #0000cc;
+            text-decoration: none;
+        }
+
+        .source-list a:hover {
+            text-decoration: underline;
+            color: #cc0000;
+        }
+
+        .source-list a:visited {
+            color: #551a8b;
+        }
+
+        @media (max-width: 1200px) {
+            .source-list {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .source-list {
+                column-count: 1;
+            }
         }
     </style>
 </head>
@@ -257,6 +320,40 @@
             are available on GitHub. The system is designed as a standalone Linux application that can be
             deployed on any server with Python 3.11+ and PostgreSQL.
         </p>
+
+        
+        <h2>Complete Source List</h2>
+        <p>
+            This crawler monitors 210 sources across three categories:
+        </p>
+
+        <div class="sources-section">
+            
+                <details>
+                    <summary><strong>Peer Institutions</strong> (23 sources)</summary>
+                    <ul class="source-list">
+                        <li><a href="https://newsroom.asu.edu/" target="_blank">Arizona State University</a></li><li><a href="https://news.arizonastate.edu" target="_blank">Arizona State University Campus Immersion</a></li><li><a href="https://news.iu.edu/" target="_blank">Indiana University</a></li><li><a href="https://news.indianauniversity-bloomington.edu" target="_blank">Indiana University-Bloomington</a></li><li><a href="https://news.indianauniversity–purdue.edu" target="_blank">Indiana University–Purdue University-Indianapolis</a></li><li><a href="https://news.medicaluniversity.edu" target="_blank">Medical University of South Carolina</a></li><li><a href="https://news.ncsu.edu/" target="_blank">North Carolina State University</a></li><li><a href="https://news.northcarolina.edu" target="_blank">North Carolina State University at Raleigh</a></li><li><a href="https://www.psu.edu/news/" target="_blank">Penn State University</a></li><li><a href="https://news.rutgers.edu/" target="_blank">Rutgers University</a></li><li><a href="https://news.rutgersuniversity-new.edu" target="_blank">Rutgers University-New Brunswick</a></li><li><a href="https://news.arizona.edu" target="_blank">University of Arizona</a></li><li><a href="https://umdrightnow.umd.edu/" target="_blank">University of Maryland</a></li><li><a href="https://www.umass.edu/news/" target="_blank">University of Massachusetts Amherst</a></li><li><a href="https://twin-cities.umn.edu/news" target="_blank">University of Minnesota</a></li><li><a href="https://munews.missouri.edu/" target="_blank">University of Missouri</a></li><li><a href="https://www.unlv.edu/news/" target="_blank">University of Nevada, Las Vegas</a></li><li><a href="https://news.unm.edu/" target="_blank">University of New Mexico</a></li><li><a href="https://www.ou.edu/web/news" target="_blank">University of Oklahoma</a></li><li><a href="https://www.pittwire.pitt.edu/" target="_blank">University of Pittsburgh</a></li><li><a href="https://sc.edu/about/offices_and_divisions/university_communications/newsroom/" target="_blank">University of South Carolina</a></li><li><a href="https://news.utk.edu/" target="_blank">University of Tennessee</a></li><li><a href="https://www.washington.edu/news/" target="_blank">University of Washington</a></li>
+                    </ul>
+                </details>
+            
+            
+                <details>
+                    <summary><strong>R1 Universities</strong> (160 sources)</summary>
+                    <ul class="source-list">
+                        <li><a href="https://news.americanuniversity.edu" target="_blank">American University</a></li><li><a href="https://news.auburnuniversity.edu" target="_blank">Auburn University</a></li><li><a href="https://news.baylorcollege.edu" target="_blank">Baylor College of Medicine</a></li><li><a href="https://news.bayloruniversity.edu" target="_blank">Baylor University</a></li><li><a href="https://news.binghamtonuniversity.edu" target="_blank">Binghamton University</a></li><li><a href="https://news.bostoncollege.edu" target="_blank">Boston College</a></li><li><a href="https://news.bu.edu" target="_blank">Boston University</a></li><li><a href="https://news.brandeis.edu" target="_blank">Brandeis University</a></li><li><a href="https://news.brighamyoung.edu" target="_blank">Brigham Young University</a></li><li><a href="https://news.brown.edu" target="_blank">Brown University</a></li><li><a href="https://news.cunygraduate.edu" target="_blank">CUNY Graduate School and University Center</a></li><li><a href="https://www.caltech.edu/about/news" target="_blank">California Institute of Technology</a></li><li><a href="https://www.cmu.edu/news/" target="_blank">Carnegie Mellon University</a></li><li><a href="https://news.case.edu" target="_blank">Case Western Reserve University</a></li><li><a href="https://news.clemsonuniversity.edu" target="_blank">Clemson University</a></li><li><a href="https://news.coloradoschool.edu" target="_blank">Colorado School of Mines</a></li><li><a href="https://news.colostate.edu" target="_blank">Colorado State University-Fort Collins</a></li><li><a href="https://news.columbia.edu" target="_blank">Columbia University in the City of New York</a></li><li><a href="https://news.cornell.edu" target="_blank">Cornell University</a></li><li><a href="https://news.dartmouth.edu" target="_blank">Dartmouth College</a></li><li><a href="https://news.drexeluniversity.edu" target="_blank">Drexel University</a></li><li><a href="https://today.duke.edu" target="_blank">Duke University</a></li><li><a href="https://news.eastcarolina.edu" target="_blank">East Carolina University</a></li><li><a href="https://news.emory.edu" target="_blank">Emory University</a></li><li><a href="https://news.floridaatlantic.edu" target="_blank">Florida Atlantic University</a></li><li><a href="https://news.floridainternational.edu" target="_blank">Florida International University</a></li><li><a href="https://news.floridastate.edu" target="_blank">Florida State University</a></li><li><a href="https://news.georgemason.edu" target="_blank">George Mason University</a></li><li><a href="https://news.georgewashington.edu" target="_blank">George Washington University</a></li><li><a href="https://news.georgetown.edu" target="_blank">Georgetown University</a></li><li><a href="https://news.gatech.edu" target="_blank">Georgia Institute of Technology-Main Campus</a></li><li><a href="https://news.georgiastate.edu" target="_blank">Georgia State University</a></li><li><a href="https://www.harvard.edu/news" target="_blank">Harvard University</a></li><li><a href="https://news.howarduniversity.edu" target="_blank">Howard University</a></li><li><a href="https://news.iowastate.edu" target="_blank">Iowa State University</a></li><li><a href="https://news.jhu.edu" target="_blank">Johns Hopkins University</a></li><li><a href="https://news.kansasstate.edu" target="_blank">Kansas State University</a></li><li><a href="https://news.kentstate.edu" target="_blank">Kent State University at Kent</a></li><li><a href="https://news.lehighuniversity.edu" target="_blank">Lehigh University</a></li><li><a href="https://news.lsu.edu" target="_blank">Louisiana State University and Agricultural & Mechanical College</a></li><li><a href="https://news.loyolauniversity.edu" target="_blank">Loyola University Chicago</a></li><li><a href="https://news.mit.edu" target="_blank">Massachusetts Institute of Technology</a></li><li><a href="https://news.michiganstate.edu" target="_blank">Michigan State University</a></li><li><a href="https://news.michigantechnological.edu" target="_blank">Michigan Technological University</a></li><li><a href="https://news.msstate.edu" target="_blank">Mississippi State University</a></li><li><a href="https://news.missouriuniversity.edu" target="_blank">Missouri University of Science and Technology</a></li><li><a href="https://news.montanastate.edu" target="_blank">Montana State University</a></li><li><a href="https://news.njit.edu" target="_blank">New Jersey Institute of Technology</a></li><li><a href="https://news.newmexico.edu" target="_blank">New Mexico State University-Main Campus</a></li><li><a href="https://news.nyu.edu" target="_blank">New York University</a></li><li><a href="https://news.northdakota.edu" target="_blank">North Dakota State University-Main Campus</a></li><li><a href="https://news.northeasternuniversity.edu" target="_blank">Northeastern University</a></li><li><a href="https://news.northernarizona.edu" target="_blank">Northern Arizona University</a></li><li><a href="https://news.northwestern.edu" target="_blank">Northwestern University</a></li><li><a href="https://news.novasoutheastern.edu" target="_blank">Nova Southeastern University</a></li><li><a href="https://news.ohiostate.edu" target="_blank">Ohio State University-Main Campus</a></li><li><a href="https://news.ohiouniversity-main.edu" target="_blank">Ohio University-Main Campus</a></li><li><a href="https://news.oklahomastate.edu" target="_blank">Oklahoma State University-Main Campus</a></li><li><a href="https://news.olddominion.edu" target="_blank">Old Dominion University</a></li><li><a href="https://news.oregonstate.edu" target="_blank">Oregon State University</a></li><li><a href="https://news.pennsylvaniastate.edu" target="_blank">Pennsylvania State University-Main Campus</a></li><li><a href="https://www.princeton.edu/news" target="_blank">Princeton University</a></li><li><a href="https://news.purdueuniversity-main.edu" target="_blank">Purdue University-Main Campus</a></li><li><a href="https://news.rpi.edu" target="_blank">Rensselaer Polytechnic Institute</a></li><li><a href="https://news.rice.edu" target="_blank">Rice University</a></li><li><a href="https://news.saintlouis.edu" target="_blank">Saint Louis University</a></li><li><a href="https://news.sandiego.edu" target="_blank">San Diego State University</a></li><li><a href="https://news.southernillinois.edu" target="_blank">Southern Illinois University-Carbondale</a></li><li><a href="https://news.southernmethodist.edu" target="_blank">Southern Methodist University</a></li><li><a href="https://news.stanford.edu" target="_blank">Stanford University</a></li><li><a href="https://news.stonybrook.edu" target="_blank">Stony Brook University</a></li><li><a href="https://news.syracuseuniversity.edu" target="_blank">Syracuse University</a></li><li><a href="https://news.templeuniversity.edu" target="_blank">Temple University</a></li><li><a href="https://news.texasa.edu" target="_blank">Texas A & M University-College Station</a></li><li><a href="https://news.texastech.edu" target="_blank">Texas Tech University</a></li><li><a href="https://news.thecatholic.edu" target="_blank">The Catholic University of America</a></li><li><a href="https://news.alabama.edu" target="_blank">The University of Alabama</a></li><li><a href="https://news.montana.edu" target="_blank">The University of Montana</a></li><li><a href="https://news.theuniversity.edu" target="_blank">The University of Tennessee Health Science Center</a></li><li><a href="https://news.theuniversity.edu" target="_blank">The University of Tennessee-Knoxville</a></li><li><a href="https://news.theuniversity.edu" target="_blank">The University of Texas Health Science Center at Houston</a></li><li><a href="https://news.utsa.edu" target="_blank">The University of Texas Health Science Center at San Antonio</a></li><li><a href="https://news.uta.edu" target="_blank">The University of Texas at Arlington</a></li><li><a href="https://www.utexas.edu/news" target="_blank">The University of Texas at Austin</a></li><li><a href="https://news.utdallas.edu" target="_blank">The University of Texas at Dallas</a></li><li><a href="https://news.utep.edu" target="_blank">The University of Texas at El Paso</a></li><li><a href="https://news.utsa.edu" target="_blank">The University of Texas at San Antonio</a></li><li><a href="https://news.tufts.edu" target="_blank">Tufts University</a></li><li><a href="https://news.tulane.edu" target="_blank">Tulane University of Louisiana</a></li><li><a href="https://news.universityat.edu" target="_blank">University at Albany</a></li><li><a href="https://news.universityat.edu" target="_blank">University at Buffalo</a></li><li><a href="https://news.alabama.edu" target="_blank">University of Alabama at Birmingham</a></li><li><a href="https://news.arkansas.edu" target="_blank">University of Arkansas</a></li><li><a href="https://news.berkeley.edu" target="_blank">University of California-Berkeley</a></li><li><a href="https://news.ucdavis.edu" target="_blank">University of California-Davis</a></li><li><a href="https://news.uci.edu" target="_blank">University of California-Irvine</a></li><li><a href="https://news.ucla.edu" target="_blank">University of California-Los Angeles</a></li><li><a href="https://news.ucmerced.edu" target="_blank">University of California-Merced</a></li><li><a href="https://news.ucr.edu" target="_blank">University of California-Riverside</a></li><li><a href="https://news.ucsd.edu" target="_blank">University of California-San Diego</a></li><li><a href="https://news.ucsf.edu" target="_blank">University of California-San Francisco</a></li><li><a href="https://news.ucsb.edu" target="_blank">University of California-Santa Barbara</a></li><li><a href="https://news.ucsc.edu" target="_blank">University of California-Santa Cruz</a></li><li><a href="https://news.uchicago.edu" target="_blank">University of Chicago</a></li><li><a href="https://news.colorado.edu" target="_blank">University of Colorado Boulder</a></li><li><a href="https://news.ucdenver.edu" target="_blank">University of Colorado Denver/Anschutz Medical Campus</a></li><li><a href="https://news.uconn.edu" target="_blank">University of Connecticut</a></li><li><a href="https://news.delaware.edu" target="_blank">University of Delaware</a></li><li><a href="https://news.florida.edu" target="_blank">University of Florida</a></li><li><a href="https://news.georgia.edu" target="_blank">University of Georgia</a></li><li><a href="https://news.hawaii.edu" target="_blank">University of Hawaii at Manoa</a></li><li><a href="https://news.idaho.edu" target="_blank">University of Idaho</a></li><li><a href="https://news.uic.edu" target="_blank">University of Illinois Chicago</a></li><li><a href="https://news.illinois.edu" target="_blank">University of Illinois Urbana-Champaign</a></li><li><a href="https://news.iowa.edu" target="_blank">University of Iowa</a></li><li><a href="https://news.kansas.edu" target="_blank">University of Kansas</a></li><li><a href="https://news.kentucky.edu" target="_blank">University of Kentucky</a></li><li><a href="https://news.maine.edu" target="_blank">University of Maine</a></li><li><a href="https://news.maryland.edu" target="_blank">University of Maryland - Baltimore</a></li><li><a href="https://news.maryland.edu" target="_blank">University of Maryland - College Park</a></li><li><a href="https://news.maryland.edu" target="_blank">University of Maryland-Baltimore County</a></li><li><a href="https://news.umass.edu" target="_blank">University of Massachusetts-Amherst</a></li><li><a href="https://news.umb.edu" target="_blank">University of Massachusetts-Boston</a></li><li><a href="https://news.uml.edu" target="_blank">University of Massachusetts-Lowell</a></li><li><a href="https://news.umich.edu" target="_blank">University of Michigan-Ann Arbor</a></li><li><a href="https://news.minnesota.edu" target="_blank">University of Minnesota-Twin Cities</a></li><li><a href="https://news.missouri.edu" target="_blank">University of Missouri-Columbia</a></li><li><a href="https://news.missouri.edu" target="_blank">University of Missouri-Kansas City</a></li><li><a href="https://news.nebraska.edu" target="_blank">University of Nebraska Medical Center</a></li><li><a href="https://news.nebraska.edu" target="_blank">University of Nebraska-Lincoln</a></li><li><a href="https://news.nevada.edu" target="_blank">University of Nevada-Las Vegas</a></li><li><a href="https://news.nevada.edu" target="_blank">University of Nevada-Reno</a></li><li><a href="https://news.unh.edu" target="_blank">University of New Hampshire-Main Campus</a></li><li><a href="https://news.unm.edu" target="_blank">University of New Mexico-Main Campus</a></li><li><a href="https://news.nd.edu" target="_blank">University of Notre Dame</a></li><li><a href="https://news.universityof.edu" target="_blank">University of Oklahoma-Norman Campus</a></li><li><a href="https://news.oregon.edu" target="_blank">University of Oregon</a></li><li><a href="https://penntoday.upenn.edu" target="_blank">University of Pennsylvania</a></li><li><a href="https://news.universityof.edu" target="_blank">University of Pittsburgh-Pittsburgh Campus</a></li><li><a href="https://news.universityof.edu" target="_blank">University of South Carolina-Columbia</a></li><li><a href="https://news.usc.edu" target="_blank">University of Southern California</a></li><li><a href="https://news.utah.edu" target="_blank">University of Utah</a></li><li><a href="https://news.vermont.edu" target="_blank">University of Vermont</a></li><li><a href="https://news.virginia.edu" target="_blank">University of Virginia-Main Campus</a></li><li><a href="https://www.washington.edu/news/" target="_blank">University of Washington-Seattle Campus</a></li><li><a href="https://news.wisconsin.edu" target="_blank">University of Wisconsin-Madison</a></li><li><a href="https://news.wisconsin.edu" target="_blank">University of Wisconsin-Milwaukee</a></li><li><a href="https://news.wyoming.edu" target="_blank">University of Wyoming</a></li><li><a href="https://news.usu.edu" target="_blank">Utah State University</a></li><li><a href="https://news.vanderbilt.edu" target="_blank">Vanderbilt University</a></li><li><a href="https://news.virginiacommonwealth.edu" target="_blank">Virginia Commonwealth University</a></li><li><a href="https://news.vt.edu" target="_blank">Virginia Polytechnic Institute and State University</a></li><li><a href="https://news.washingtonstate.edu" target="_blank">Washington State University</a></li><li><a href="https://news.wustl.edu" target="_blank">Washington University in St Louis</a></li><li><a href="https://news.waynestate.edu" target="_blank">Wayne State University</a></li><li><a href="https://news.weillmedical.edu" target="_blank">Weill Medical College of Cornell University</a></li><li><a href="https://news.westvirginia.edu" target="_blank">West Virginia University</a></li><li><a href="https://news.william&.edu" target="_blank">William & Mary</a></li><li><a href="https://news.wpi.edu" target="_blank">Worcester Polytechnic Institute</a></li><li><a href="https://news.yale.edu" target="_blank">Yale University</a></li>
+                    </ul>
+                </details>
+            
+            
+                <details>
+                    <summary><strong>Major Research Facilities</strong> (27 sources)</summary>
+                    <ul class="source-list">
+                        <li><a href="https://www.ameslab.gov/news" target="_blank">Ames Laboratory</a></li><li><a href="https://www.anl.gov/news" target="_blank">Argonne National Laboratory</a></li><li><a href="https://www.bnl.gov/newsroom/" target="_blank">Brookhaven National Laboratory</a></li><li><a href="https://news.fnal.gov/" target="_blank">Fermi National Accelerator Laboratory</a></li><li><a href="https://inl.gov/news/" target="_blank">Idaho National Laboratory</a></li><li><a href="https://pti.iu.edu/news/" target="_blank">Indiana University Pervasive Technology Institute</a></li><li><a href="https://newscenter.lbl.gov/" target="_blank">Lawrence Berkeley National Laboratory</a></li><li><a href="https://www.llnl.gov/news" target="_blank">Lawrence Livermore National Laboratory</a></li><li><a href="https://www.lanl.gov/news" target="_blank">Los Alamos National Laboratory</a></li><li><a href="https://www.nersc.gov/news/" target="_blank">NERSC</a></li><li><a href="https://news.ucar.edu/" target="_blank">National Center for Atmospheric Research</a></li><li><a href="https://www.olcf.ornl.gov/news/" target="_blank">National Center for Computational Sciences</a></li><li><a href="https://www.ncsa.illinois.edu/news/" target="_blank">National Center for Supercomputing Applications</a></li><li><a href="https://www.neonscience.org/news" target="_blank">National Ecological Observatory Network</a></li><li><a href="https://www.netl.doe.gov/newsroom" target="_blank">National Energy Technology Laboratory</a></li><li><a href="https://www.nrel.gov/news/" target="_blank">National Renewable Energy Laboratory</a></li><li><a href="https://www.ornl.gov/news" target="_blank">Oak Ridge National Laboratory</a></li><li><a href="https://www.pnnl.gov/news" target="_blank">Pacific Northwest National Laboratory</a></li><li><a href="https://www.psc.edu/news/" target="_blank">Pittsburgh Supercomputing Center</a></li><li><a href="https://www.pppl.gov/news" target="_blank">Princeton Plasma Physics Laboratory</a></li><li><a href="https://www.rcac.purdue.edu/news" target="_blank">Purdue Rosen Center for Advanced Computing</a></li><li><a href="https://www6.slac.stanford.edu/news" target="_blank">SLAC National Accelerator Laboratory</a></li><li><a href="https://www.sdsc.edu/News/" target="_blank">San Diego Supercomputer Center</a></li><li><a href="https://www.sandia.gov/labnews/" target="_blank">Sandia National Laboratories</a></li><li><a href="https://www.srnl.gov/news" target="_blank">Savannah River National Laboratory</a></li><li><a href="https://www.tacc.utexas.edu/news" target="_blank">Texas Advanced Computing Center</a></li><li><a href="https://www.jlab.org/news" target="_blank">Thomas Jefferson National Accelerator Facility</a></li>
+                    </ul>
+                </details>
+            
+        </div>
+        
 
         <h2>Updates & Schedule</h2>
         <p>
