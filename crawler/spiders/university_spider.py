@@ -112,6 +112,9 @@ class UniversityNewsSpider(scrapy.Spider):
             deny_domains=[]
         )
 
+        # Build domain-to-canonical-name mapping for accurate university classification
+        self.domain_to_canonical = self._build_domain_mapping()
+
         # Load university sources
         self.start_urls = self.load_university_sources()
 
@@ -127,6 +130,7 @@ class UniversityNewsSpider(scrapy.Spider):
         }
 
         logger.info(f"Initialized {self.name} spider with {len(self.start_urls)} start URLs")
+        logger.info(f"Built domain mapping for {len(self.domain_to_canonical)} domains")
 
     @property
     def db(self):
@@ -154,6 +158,109 @@ class UniversityNewsSpider(scrapy.Spider):
             self._db = SessionLocal()
             logger.info("Database session created for spider")
         return self._db
+
+    def _build_domain_mapping(self) -> Dict[str, str]:
+        """
+        Build a mapping from news domains to canonical university/facility names.
+
+        This mapping is used to ensure that articles are classified with the
+        canonical name from config files rather than Trafilatura's extracted sitename.
+
+        Returns:
+            Dictionary mapping domain (e.g., 'eng.auburn.edu') to canonical name
+            (e.g., 'Auburn University')
+        """
+        import json
+        from pathlib import Path
+        from urllib.parse import urlparse
+
+        domain_map = {}
+
+        # Load R1 universities
+        r1_path = Path("crawler/config/r1_universities.json")
+        if r1_path.exists():
+            try:
+                with open(r1_path, 'r') as f:
+                    data = json.load(f)
+                    for univ in data.get('universities', []):
+                        canonical = univ.get('canonical_name', univ.get('name'))
+
+                        # Add primary domain
+                        if 'domains' in univ and 'primary' in univ['domains']:
+                            domain_map[univ['domains']['primary']] = canonical
+
+                        # Add news domains
+                        if 'domains' in univ and 'news_domains' in univ['domains']:
+                            for domain in univ['domains']['news_domains']:
+                                domain_map[domain] = canonical
+
+                        # Add domains from news URLs
+                        if 'news_sources' in univ and 'primary' in univ['news_sources']:
+                            url = univ['news_sources']['primary'].get('url')
+                            if url:
+                                parsed = urlparse(url)
+                                domain_map[parsed.netloc] = canonical
+
+                            ai_url = univ['news_sources']['primary'].get('ai_tag_url')
+                            if ai_url:
+                                parsed = urlparse(ai_url)
+                                domain_map[parsed.netloc] = canonical
+
+                logger.info(f"Loaded {len([k for k, v in domain_map.items()])} domains from R1 universities")
+            except Exception as e:
+                logger.error(f"Failed to load R1 universities: {e}")
+
+        # Load peer institutions
+        peer_path = Path("crawler/config/peer_institutions.json")
+        if peer_path.exists():
+            try:
+                with open(peer_path, 'r') as f:
+                    data = json.load(f)
+                    for univ in data.get('universities', []):
+                        canonical = univ.get('canonical_name', univ.get('name'))
+
+                        # Add domains from news URLs
+                        if 'news_sources' in univ and 'primary' in univ['news_sources']:
+                            url = univ['news_sources']['primary'].get('url')
+                            if url:
+                                parsed = urlparse(url)
+                                domain_map[parsed.netloc] = canonical
+
+                            ai_url = univ['news_sources']['primary'].get('ai_tag_url')
+                            if ai_url:
+                                parsed = urlparse(ai_url)
+                                domain_map[parsed.netloc] = canonical
+
+                logger.info(f"Loaded domains from {len(data.get('universities', []))} peer institutions")
+            except Exception as e:
+                logger.error(f"Failed to load peer institutions: {e}")
+
+        # Load major facilities
+        facilities_path = Path("crawler/config/major_facilities.json")
+        if facilities_path.exists():
+            try:
+                with open(facilities_path, 'r') as f:
+                    data = json.load(f)
+                    for facility in data.get('facilities', []):
+                        canonical = facility.get('name')
+
+                        # Add domains from news URLs
+                        if 'news_sources' in facility and 'primary' in facility['news_sources']:
+                            url = facility['news_sources']['primary'].get('url')
+                            if url:
+                                parsed = urlparse(url)
+                                domain_map[parsed.netloc] = canonical
+
+                            ai_url = facility['news_sources']['primary'].get('ai_tag_url')
+                            if ai_url:
+                                parsed = urlparse(ai_url)
+                                domain_map[parsed.netloc] = canonical
+
+                logger.info(f"Loaded domains from {len(data.get('facilities', []))} major facilities")
+            except Exception as e:
+                logger.error(f"Failed to load major facilities: {e}")
+
+        return domain_map
 
     def load_university_sources(self) -> list:
         """
@@ -368,6 +475,13 @@ class UniversityNewsSpider(scrapy.Spider):
                 except (ValueError, AttributeError):
                     pass
 
+            # Determine canonical university name
+            # Priority: domain mapping lookup -> sitename from Trafilatura
+            canonical_name = self._get_canonical_name(
+                article_data['hostname'],
+                article_data.get('sitename')
+            )
+
             # Create article entry
             article = Article(
                 url_id=url_obj.url_id,
@@ -377,13 +491,14 @@ class UniversityNewsSpider(scrapy.Spider):
                 content=article_data['content'],
                 content_hash=article_data['content_hash'],
                 summary=article_data.get('description'),
-                university_name=article_data.get('sitename'),
+                university_name=canonical_name,
                 language=article_data.get('language', 'en'),
                 word_count=article_data.get('word_count'),
                 metadata={
                     'categories': article_data.get('categories', []),
                     'tags': article_data.get('tags', []),
-                    'hostname': article_data['hostname']
+                    'hostname': article_data['hostname'],
+                    'original_sitename': article_data.get('sitename')  # Preserve original for debugging
                 },
                 first_scraped=datetime.now(timezone.utc)
             )
@@ -396,12 +511,65 @@ class UniversityNewsSpider(scrapy.Spider):
             self.db.add(article)
             self.db.commit()
 
-            self.logger.debug(f"Stored article in database: {article.article_id}")
+            self.logger.debug(f"Stored article in database: {article.article_id} (university: {canonical_name})")
 
         except Exception as e:
             self.logger.error(f"Failed to store article in database: {e}")
             self.db.rollback()
             raise
+
+    def _get_canonical_name(self, hostname: str, sitename: str = None) -> str:
+        """
+        Get canonical university/facility name from domain mapping.
+
+        This method looks up the hostname in the domain-to-canonical mapping
+        built from config files. If not found, falls back to sitename.
+
+        Args:
+            hostname: The domain from the article URL (e.g., 'eng.auburn.edu')
+            sitename: The sitename extracted by Trafilatura (fallback)
+
+        Returns:
+            Canonical name from config, or sitename if no mapping exists
+        """
+        # Direct lookup
+        if hostname in self.domain_to_canonical:
+            canonical = self.domain_to_canonical[hostname]
+            if sitename and canonical != sitename:
+                self.logger.debug(
+                    f"Mapped '{sitename}' -> '{canonical}' for domain {hostname}"
+                )
+            return canonical
+
+        # Try removing 'www.' prefix
+        if hostname.startswith('www.'):
+            without_www = hostname[4:]
+            if without_www in self.domain_to_canonical:
+                canonical = self.domain_to_canonical[without_www]
+                self.logger.debug(
+                    f"Mapped '{sitename}' -> '{canonical}' for domain {hostname} (without www)"
+                )
+                return canonical
+
+        # Try parent domain (e.g., 'eng.auburn.edu' -> 'auburn.edu')
+        parts = hostname.split('.')
+        if len(parts) > 2:
+            parent_domain = '.'.join(parts[-2:])
+            if parent_domain in self.domain_to_canonical:
+                canonical = self.domain_to_canonical[parent_domain]
+                self.logger.debug(
+                    f"Mapped '{sitename}' -> '{canonical}' for domain {hostname} (parent domain)"
+                )
+                return canonical
+
+        # No mapping found, use sitename as fallback
+        if sitename:
+            self.logger.debug(f"No canonical mapping found for {hostname}, using sitename: {sitename}")
+            return sitename
+
+        # Last resort: use hostname
+        self.logger.warning(f"No canonical name or sitename found for {hostname}")
+        return hostname
 
     def _update_url_status(self, url_hash: str, status: str):
         """

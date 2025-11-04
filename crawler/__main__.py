@@ -88,7 +88,10 @@ async def main():
             logger.info(f"Found {len(new_articles)} new articles to analyze")
 
             if not new_articles:
-                logger.info("No new articles found. Exiting.")
+                logger.info("No new articles found to analyze.")
+                # Still generate HTML reports for docs/ folder
+                logger.info("\n📬 Phase 4: Generating HTML reports")
+                await send_notifications([], [], db)
                 return 0
 
             # Phase 3: AI Analysis (if enabled)
@@ -358,6 +361,27 @@ async def send_notifications(articles, analyses, db):
                 logger.info("Exported empty results to local files")
             except Exception as e:
                 logger.error(f"Failed to export empty results: {e}")
+
+        # Generate HTML report even with no AI articles (for docs/ folder)
+        try:
+            logger.info("Generating HTML report website (empty results)...")
+            html_gen = HTMLReportGenerator(
+                output_dir=settings.local_output_dir,
+                github_pages_dir="docs"
+            )
+            today_file = html_gen.generate_daily_report()
+            archive_file = html_gen.generate_archive_index()
+            how_it_works_file = html_gen.generate_how_it_works()
+            logger.info(f"✅ HTML report generated: {today_file}")
+            logger.info(f"✅ Archive index generated: {archive_file}")
+            logger.info(f"✅ How It Works page generated: {how_it_works_file}")
+            logger.info(f"✅ GitHub Pages output: docs/")
+            exported_files['html'] = today_file
+            exported_files['html_archive'] = archive_file
+            exported_files['html_how_it_works'] = how_it_works_file
+        except Exception as e:
+            logger.error(f"HTML generation error: {e}", exc_info=True)
+
         return exported_files
 
     logger.info(f"Processing {len(ai_articles)} AI-related articles")

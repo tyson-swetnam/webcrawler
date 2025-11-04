@@ -11,9 +11,9 @@
             font-family: 'Courier New', Courier, monospace;
             background-color: #ffffff;
             color: #000000;
-            max-width: 900px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 20px 40px;
             line-height: 1.6;
         }
 
@@ -115,6 +115,69 @@
         .footer a {
             color: #0000cc;
             text-decoration: none;
+        }
+
+        .sources-section {
+            margin: 20px 0;
+        }
+
+        details {
+            margin: 15px 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-size: 18px;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border-radius: 3px;
+            user-select: none;
+        }
+
+        summary:hover {
+            background-color: #e8e8e8;
+        }
+
+        .source-list {
+            margin: 15px 0 0 20px;
+            list-style-type: disc;
+            column-count: 3;
+            column-gap: 20px;
+        }
+
+        .source-list li {
+            margin-bottom: 8px;
+            break-inside: avoid;
+        }
+
+        .source-list a {
+            color: #0000cc;
+            text-decoration: none;
+        }
+
+        .source-list a:hover {
+            text-decoration: underline;
+            color: #cc0000;
+        }
+
+        .source-list a:visited {
+            color: #551a8b;
+        }
+
+        @media (max-width: 1200px) {
+            .source-list {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .source-list {
+                column-count: 1;
+            }
         }
     </style>
 </head>
@@ -257,6 +320,40 @@
             are available on GitHub. The system is designed as a standalone Linux application that can be
             deployed on any server with Python 3.11+ and PostgreSQL.
         </p>
+
+        
+        <h2>Complete Source List</h2>
+        <p>
+            This crawler monitors 52 sources across three categories:
+        </p>
+
+        <div class="sources-section">
+            
+                <details>
+                    <summary><strong>Peer Institutions</strong> (13 sources)</summary>
+                    <ul class="source-list">
+                        <li><a href="https://newsroom.asu.edu/topics/artificial-intelligence" target="_blank">Arizona State University</a></li><li><a href="https://news.asu.edu/" target="_blank">Arizona State University Campus Immersion</a></li><li><a href="https://eng.auburn.edu/news/" target="_blank">Auburn University</a></li><li><a href="https://news.iu.edu/live/channels/158-information-technology" target="_blank">Indiana University-Bloomington</a></li><li><a href="https://news.las.iastate.edu/" target="_blank">Iowa State University</a></li><li><a href="https://msutoday.msu.edu/" target="_blank">Michigan State University</a></li><li><a href="https://www.ttu.edu/now/" target="_blank">Texas Tech University</a></li><li><a href="https://news.arizona.edu/tags/artificial-intelligence" target="_blank">The University of Arizona</a></li><li><a href="https://artificialintelligence.arizona.edu/news" target="_blank">University of Arizona</a></li><li><a href="https://www.colorado.edu/today/" target="_blank">University of Colorado Boulder</a></li><li><a href="https://today.uconn.edu/" target="_blank">University of Connecticut</a></li><li><a href="https://news.ku.edu/" target="_blank">University of Kansas</a></li><li><a href="https://uknow.uky.edu/campus-news" target="_blank">University of Kentucky</a></li>
+                    </ul>
+                </details>
+            
+            
+                <details>
+                    <summary><strong>R1 Universities</strong> (12 sources)</summary>
+                    <ul class="source-list">
+                        <li><a href="https://news.berkeley.edu/topics/artificial-intelligence/" target="_blank">University of California-Berkeley</a></li><li><a href="https://news.uci.edu/" target="_blank">University of California-Irvine</a></li><li><a href="https://today.ucsd.edu/" target="_blank">University of California-San Diego</a></li><li><a href="https://news.ucsb.edu/topics/artificial-intelligence" target="_blank">University of California-Santa Barbara</a></li><li><a href="https://news.ucdenver.edu/" target="_blank">University of Colorado Denver/Anschutz Medical Campus</a></li><li><a href="https://today.umd.edu/" target="_blank">University of Maryland - College Park</a></li><li><a href="https://www.umass.edu/ai/news" target="_blank">University of Massachusetts-Amherst</a></li><li><a href="https://www.unlv.edu/news" target="_blank">University of Nevada-Las Vegas</a></li><li><a href="https://news.unm.edu/" target="_blank">University of New Mexico-Main Campus</a></li><li><a href="https://www.ou.edu/news" target="_blank">University of Oklahoma-Norman Campus</a></li><li><a href="https://www.utimes.pitt.edu/" target="_blank">University of Pittsburgh-Pittsburgh Campus</a></li><li><a href="https://sc.edu/uofsc/posts/" target="_blank">University of South Carolina-Columbia</a></li>
+                    </ul>
+                </details>
+            
+            
+                <details>
+                    <summary><strong>Major Research Facilities</strong> (27 sources)</summary>
+                    <ul class="source-list">
+                        <li><a href="https://www.ameslab.gov/news" target="_blank">Ames Laboratory</a></li><li><a href="https://www.anl.gov/news" target="_blank">Argonne National Laboratory</a></li><li><a href="https://www.bnl.gov/newsroom/" target="_blank">Brookhaven National Laboratory</a></li><li><a href="https://news.fnal.gov/" target="_blank">Fermi National Accelerator Laboratory</a></li><li><a href="https://inl.gov/news/" target="_blank">Idaho National Laboratory</a></li><li><a href="https://pti.iu.edu/news/" target="_blank">Indiana University Pervasive Technology Institute</a></li><li><a href="https://newscenter.lbl.gov/" target="_blank">Lawrence Berkeley National Laboratory</a></li><li><a href="https://www.llnl.gov/news" target="_blank">Lawrence Livermore National Laboratory</a></li><li><a href="https://www.lanl.gov/news" target="_blank">Los Alamos National Laboratory</a></li><li><a href="https://www.nersc.gov/news/" target="_blank">NERSC</a></li><li><a href="https://news.ucar.edu/" target="_blank">National Center for Atmospheric Research</a></li><li><a href="https://www.olcf.ornl.gov/news/" target="_blank">National Center for Computational Sciences</a></li><li><a href="https://www.ncsa.illinois.edu/news/" target="_blank">National Center for Supercomputing Applications</a></li><li><a href="https://www.neonscience.org/news" target="_blank">National Ecological Observatory Network</a></li><li><a href="https://www.netl.doe.gov/newsroom" target="_blank">National Energy Technology Laboratory</a></li><li><a href="https://www.nrel.gov/news/" target="_blank">National Renewable Energy Laboratory</a></li><li><a href="https://www.ornl.gov/news" target="_blank">Oak Ridge National Laboratory</a></li><li><a href="https://www.pnnl.gov/news" target="_blank">Pacific Northwest National Laboratory</a></li><li><a href="https://www.psc.edu/news/" target="_blank">Pittsburgh Supercomputing Center</a></li><li><a href="https://www.pppl.gov/news" target="_blank">Princeton Plasma Physics Laboratory</a></li><li><a href="https://www.rcac.purdue.edu/news" target="_blank">Purdue Rosen Center for Advanced Computing</a></li><li><a href="https://www6.slac.stanford.edu/news" target="_blank">SLAC National Accelerator Laboratory</a></li><li><a href="https://www.sdsc.edu/News/" target="_blank">San Diego Supercomputer Center</a></li><li><a href="https://www.sandia.gov/labnews/" target="_blank">Sandia National Laboratories</a></li><li><a href="https://www.srnl.gov/news" target="_blank">Savannah River National Laboratory</a></li><li><a href="https://www.tacc.utexas.edu/news" target="_blank">Texas Advanced Computing Center</a></li><li><a href="https://www.jlab.org/news" target="_blank">Thomas Jefferson National Accelerator Facility</a></li>
+                    </ul>
+                </details>
+            
+        </div>
+        
 
         <h2>Updates & Schedule</h2>
         <p>
