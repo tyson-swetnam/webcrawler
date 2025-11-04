@@ -90,6 +90,12 @@ class HTMLReportGenerator:
         # Write to index.html for current day
         if date.date() == datetime.now().date():
             output_file = self.output_dir / "index.html"
+
+            # ALSO save dated archive file for today
+            archive_dir = self.output_dir / "archive"
+            archive_dir.mkdir(exist_ok=True)
+            archive_file = archive_dir / f"{date.strftime('%Y-%m-%d')}.html"
+            archive_file.write_text(html, encoding='utf-8')
         else:
             # Archive files by date
             archive_dir = self.output_dir / "archive"
@@ -102,6 +108,12 @@ class HTMLReportGenerator:
         if self.github_pages_dir:
             if date.date() == datetime.now().date():
                 gh_output_file = self.github_pages_dir / "index.html"
+
+                # ALSO save dated archive file for today
+                gh_archive_dir = self.github_pages_dir / "archive"
+                gh_archive_dir.mkdir(exist_ok=True)
+                gh_archive_file = gh_archive_dir / f"{date.strftime('%Y-%m-%d')}.html"
+                gh_archive_file.write_text(html, encoding='utf-8')
             else:
                 gh_archive_dir = self.github_pages_dir / "archive"
                 gh_archive_dir.mkdir(exist_ok=True)
