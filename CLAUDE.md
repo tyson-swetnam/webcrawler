@@ -123,11 +123,21 @@ alembic upgrade head
 
 ### Running the Crawler
 
+**IMPORTANT:** There is only ONE production crawler entry point: `python -m crawler`
+
+This command runs the complete 6-phase pipeline:
+1. Crawl university news sites (Scrapy)
+2. Extract and deduplicate content
+3. Analyze with AI APIs (Claude + GPT + Gemini)
+4. Generate HTML reports (Drudge Report-style website)
+5. Send notifications (Slack + Email)
+6. Store results in database
+
 ```bash
-# Run the full pipeline
+# Run the full pipeline (production command)
 python -m crawler
 
-# Test single university crawl (Scrapy only)
+# Test single university crawl (Scrapy only - for debugging)
 scrapy crawl university_news -a start_urls='["https://news.stanford.edu"]'
 ```
 

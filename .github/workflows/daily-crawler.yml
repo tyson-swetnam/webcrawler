@@ -75,7 +75,7 @@ jobs:
           MAX_ARTICLE_AGE_DAYS: 30
           DATABASE_POOL_SIZE: 100
         run: |
-          python run_crawler_simple.py
+          python -m crawler
 
       - name: Checkout website branch
         uses: actions/checkout@v4
