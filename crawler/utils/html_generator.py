@@ -292,9 +292,9 @@ class HTMLReportGenerator:
             font-family: 'Courier New', Courier, monospace;
             background-color: #ffffff;
             color: #000000;
-            max-width: 900px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 20px 40px;
             line-height: 1.5;
         }}
 
@@ -565,9 +565,9 @@ class HTMLReportGenerator:
             font-family: 'Courier New', Courier, monospace;
             background-color: #ffffff;
             color: #000000;
-            max-width: 900px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 20px 40px;
             line-height: 1.5;
         }}
 
@@ -700,124 +700,234 @@ class HTMLReportGenerator:
 
     def _render_how_it_works_page(self) -> str:
         """Render 'How It Works' documentation page"""
-        return '''<!DOCTYPE html>
+        # Load source lists
+        import json
+        from pathlib import Path
+
+        config_dir = Path(__file__).parent.parent / 'config'
+
+        # Load peer institutions
+        peer_institutions = []
+        try:
+            with open(config_dir / 'peer_institutions.json', 'r') as f:
+                peer_data = json.load(f)
+                peer_institutions = [u['name'] for u in peer_data.get('universities', [])]
+        except Exception as e:
+            print(f"Error loading peer institutions: {e}")
+
+        # Load R1 universities
+        r1_universities = []
+        try:
+            with open(config_dir / 'r1_universities.json', 'r') as f:
+                r1_data = json.load(f)
+                r1_universities = [u['name'] for u in r1_data.get('universities', [])]
+        except Exception as e:
+            print(f"Error loading R1 universities: {e}")
+
+        # Load major facilities
+        major_facilities = []
+        try:
+            with open(config_dir / 'major_facilities.json', 'r') as f:
+                facilities_data = json.load(f)
+                major_facilities = [f['name'] for f in facilities_data.get('facilities', [])]
+        except Exception as e:
+            print(f"Error loading major facilities: {e}")
+
+        # Build source lists HTML
+        def build_collapsible_list(title, items, section_id):
+            if not items:
+                return f'<p><em>No {title.lower()} available</em></p>'
+
+            items_html = ''.join([f'<li>{item}</li>' for item in sorted(items)])
+            return f'''
+                <details>
+                    <summary><strong>{title}</strong> ({len(items)} sources)</summary>
+                    <ul class="source-list">
+                        {items_html}
+                    </ul>
+                </details>
+            '''
+
+        sources_section = f'''
+        <h2>Complete Source List</h2>
+        <p>
+            This crawler monitors {len(peer_institutions) + len(r1_universities) + len(major_facilities)} sources across three categories:
+        </p>
+
+        <div class="sources-section">
+            {build_collapsible_list("Peer Institutions", peer_institutions, "peer")}
+            {build_collapsible_list("R1 Universities", r1_universities, "r1")}
+            {build_collapsible_list("Major Research Facilities", major_facilities, "facilities")}
+        </div>
+        '''
+
+        return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How It Works - AI University News</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {{ margin: 0; padding: 0; box-sizing: border-box; }}
 
-        body {
+        body {{
             font-family: 'Courier New', Courier, monospace;
             background-color: #ffffff;
             color: #000000;
-            max-width: 900px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 20px 40px;
             line-height: 1.6;
-        }
+        }}
 
-        .header {
+        .header {{
             text-align: center;
             border-bottom: 3px solid #000;
             padding-bottom: 15px;
             margin-bottom: 25px;
-        }
+        }}
 
-        .header h1 {
+        .header h1 {{
             font-size: 42px;
             font-weight: bold;
             letter-spacing: -1px;
             margin-bottom: 5px;
-        }
+        }}
 
-        .header .tagline {
+        .header .tagline {{
             font-size: 14px;
             color: #666;
             font-style: italic;
-        }
+        }}
 
-        .nav {
+        .nav {{
             text-align: center;
             margin-bottom: 30px;
             padding: 10px;
             background-color: #f5f5f5;
             border: 1px solid #ddd;
-        }
+        }}
 
-        .nav a {
+        .nav a {{
             color: #cc0000;
             text-decoration: none;
             font-weight: bold;
             margin: 0 15px;
             font-size: 14px;
-        }
+        }}
 
-        .nav a:hover {
+        .nav a:hover {{
             text-decoration: underline;
-        }
+        }}
 
-        .content {
+        .content {{
             padding: 20px 0;
-        }
+        }}
 
-        h2 {
+        h2 {{
             font-size: 28px;
             color: #cc0000;
             margin: 30px 0 15px 0;
             padding-bottom: 8px;
             border-bottom: 2px solid #cc0000;
-        }
+        }}
 
-        h3 {
+        h3 {{
             font-size: 20px;
             color: #000;
             margin: 20px 0 10px 0;
-        }
+        }}
 
-        p {
+        p {{
             margin-bottom: 15px;
             font-size: 15px;
-        }
+        }}
 
-        ul, ol {
+        ul, ol {{
             margin: 15px 0 15px 30px;
-        }
+        }}
 
-        li {
+        li {{
             margin-bottom: 10px;
             font-size: 15px;
-        }
+        }}
 
-        code {
+        code {{
             background-color: #f5f5f5;
             padding: 2px 6px;
             border-radius: 3px;
             font-family: 'Courier New', Courier, monospace;
-        }
+        }}
 
-        .highlight-box {
+        .highlight-box {{
             background-color: #fffbf0;
             border: 2px solid #cc0000;
             padding: 20px;
             margin: 20px 0;
-        }
+        }}
 
-        .footer {
+        .footer {{
             text-align: center;
             margin-top: 40px;
             padding-top: 20px;
             border-top: 2px solid #000;
             font-size: 12px;
             color: #666;
-        }
+        }}
 
-        .footer a {
+        .footer a {{
             color: #0000cc;
             text-decoration: none;
-        }
+        }}
+
+        .sources-section {{
+            margin: 20px 0;
+        }}
+
+        details {{
+            margin: 15px 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }}
+
+        summary {{
+            cursor: pointer;
+            font-size: 18px;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border-radius: 3px;
+            user-select: none;
+        }}
+
+        summary:hover {{
+            background-color: #e8e8e8;
+        }}
+
+        .source-list {{
+            margin: 15px 0 0 20px;
+            list-style-type: disc;
+            column-count: 3;
+            column-gap: 20px;
+        }}
+
+        .source-list li {{
+            margin-bottom: 8px;
+            break-inside: avoid;
+        }}
+
+        @media (max-width: 1200px) {{
+            .source-list {{
+                column-count: 2;
+            }}
+        }}
+
+        @media (max-width: 768px) {{
+            .source-list {{
+                column-count: 1;
+            }}
+        }}
     </style>
 </head>
 <body>
@@ -959,6 +1069,8 @@ class HTMLReportGenerator:
             are available on GitHub. The system is designed as a standalone Linux application that can be
             deployed on any server with Python 3.11+ and PostgreSQL.
         </p>
+
+        {sources_section}
 
         <h2>Updates & Schedule</h2>
         <p>

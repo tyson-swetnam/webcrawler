@@ -57,6 +57,46 @@
             text-decoration: underline;
         }
 
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th {
+            background-color: #000;
+            color: #fff;
+            padding: 12px;
+            text-align: left;
+            font-size: 16px;
+        }
+
+        td {
+            border-bottom: 1px solid #ddd;
+            padding: 12px;
+        }
+
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        .date-cell a {
+            color: #0000cc;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .date-cell a:hover {
+            text-decoration: underline;
+        }
+
+        .count-cell {
+            text-align: right;
+            color: #666;
+            font-size: 14px;
+        }
+
         .no-results {
             text-align: center;
             padding: 40px;
@@ -85,9 +125,27 @@
         <a href="../how_it_works.html">HOW IT WORKS</a>
     </div>
 
-    <div class="no-results">
-        No archived reports available yet. Run the crawler to generate daily reports.
-    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th style="text-align: right;">Articles</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+                <tr>
+                    <td class="date-cell"><a href="2025-11-03.html">Monday, November 03, 2025</a></td>
+                    <td class="count-cell">9 articles</td>
+                </tr>
+            
+                <tr>
+                    <td class="date-cell"><a href="2025-11-02.html">Sunday, November 02, 2025</a></td>
+                    <td class="count-cell">16 articles</td>
+                </tr>
+            
+        </tbody>
+    </table>
 
     <div class="footer">
         <p>Powered by AI University News Crawler</p>
