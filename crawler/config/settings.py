@@ -95,6 +95,10 @@ class Settings(BaseSettings):
         default=True,
         description="Prefer RSS feeds over HTML crawling when available"
     )
+    include_unverified_sources: bool = Field(
+        default=True,
+        description="Include unverified sources in addition to verified ones (set to False to only crawl verified sources)"
+    )
 
     # Notification configuration
     slack_webhook_url: str = Field(
@@ -449,11 +453,15 @@ class Settings(BaseSettings):
                     "description": source.get("description")
                 }
 
-            # Only add if we have a valid URL, not a placeholder domain, and is verified
+            # Only add if we have a valid URL and not a placeholder domain
+            # Include verified sources, and unverified if setting allows
             news_url = entry.get("news_url", "")
             is_verified = entry.get("verified", True)  # Default to True for legacy sources without verification field
-            if news_url and "universityof.edu" not in news_url and is_verified:
-                normalized.append(entry)
+
+            # Include if: has URL, not placeholder, and (verified OR include_unverified setting is True)
+            if news_url and "universityof.edu" not in news_url:
+                if is_verified or self.include_unverified_sources:
+                    normalized.append(entry)
 
         return normalized
 

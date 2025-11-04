@@ -5,7 +5,7 @@
     "description": "NSF-funded supercomputing centers and DOE national laboratories operating major research infrastructure",
     "total_facilities": 27,
     "date_compiled": "2025-11-02",
-    "last_updated": "2025-11-02",
+    "last_updated": "2025-11-04T14:14:18.315331+00:00",
     "data_sources": [
       "NSF Advanced Cyberinfrastructure Coordination Ecosystem: Services & Support",
       "U.S. Department of Energy Office of Science National Laboratories",
@@ -29,14 +29,23 @@
       "news_sources": {
         "primary": {
           "url": "https://www.tacc.utexas.edu/news",
-          "ai_tag_url": "https://www.tacc.utexas.edu/news/tag/artificial-intelligence",
-          "verified": true,
+          "ai_tag_url": "https://www.tacc.utexas.edu/news",
+          "verified": false,
           "crawl_priority": 200,
-          "notes": "Major HPC facility, hosts Frontera supercomputer"
+          "notes": "Major HPC facility, hosts Frontera supercomputer | ai_tag_url replaced with base url due to error: HTTP 404"
         }
       },
-      "research_focus": ["High-performance computing", "AI/ML", "Data science", "Visualization"],
-      "major_systems": ["Frontera", "Stampede3", "Lonestar6"]
+      "research_focus": [
+        "High-performance computing",
+        "AI/ML",
+        "Data science",
+        "Visualization"
+      ],
+      "major_systems": [
+        "Frontera",
+        "Stampede3",
+        "Lonestar6"
+      ]
     },
     {
       "id": 2,
@@ -60,8 +69,16 @@
           "notes": "Leading data-intensive computing center"
         }
       },
-      "research_focus": ["Data-intensive computing", "AI/ML", "Cloud computing", "Data science"],
-      "major_systems": ["Expanse", "Voyager"]
+      "research_focus": [
+        "Data-intensive computing",
+        "AI/ML",
+        "Cloud computing",
+        "Data science"
+      ],
+      "major_systems": [
+        "Expanse",
+        "Voyager"
+      ]
     },
     {
       "id": 3,
@@ -80,13 +97,22 @@
         "primary": {
           "url": "https://www.psc.edu/news/",
           "ai_tag_url": "https://www.psc.edu/news/?topic=ai",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "notes": "Joint facility of CMU and Pitt"
+          "notes": "Joint facility of CMU and Pitt",
+          "last_verified": "2025-11-04T13:55:32.296891+00:00"
         }
       },
-      "research_focus": ["Scientific computing", "AI/ML", "Data analytics", "Biomedical computing"],
-      "major_systems": ["Bridges-2", "Neocortex"]
+      "research_focus": [
+        "Scientific computing",
+        "AI/ML",
+        "Data analytics",
+        "Biomedical computing"
+      ],
+      "major_systems": [
+        "Bridges-2",
+        "Neocortex"
+      ]
     },
     {
       "id": 4,
@@ -110,8 +136,16 @@
           "notes": "Historic HPC center, birthplace of NCSA Mosaic"
         }
       },
-      "research_focus": ["Supercomputing", "AI/ML", "Data science", "Visualization"],
-      "major_systems": ["Delta", "HAL"]
+      "research_focus": [
+        "Supercomputing",
+        "AI/ML",
+        "Data science",
+        "Visualization"
+      ],
+      "major_systems": [
+        "Delta",
+        "HAL"
+      ]
     },
     {
       "id": 5,
@@ -130,13 +164,21 @@
         "primary": {
           "url": "https://www.rcac.purdue.edu/news",
           "ai_tag_url": "https://www.rcac.purdue.edu/news?topic=ai",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 150,
-          "notes": "Major university research computing facility"
+          "notes": "Major university research computing facility",
+          "last_verified": "2025-11-04T13:55:33.414706+00:00"
         }
       },
-      "research_focus": ["Research computing", "AI/ML", "Data management"],
-      "major_systems": ["Anvil", "Bell"]
+      "research_focus": [
+        "Research computing",
+        "AI/ML",
+        "Data management"
+      ],
+      "major_systems": [
+        "Anvil",
+        "Bell"
+      ]
     },
     {
       "id": 6,
@@ -160,8 +202,15 @@
           "notes": "Advanced cyberinfrastructure"
         }
       },
-      "research_focus": ["Cyberinfrastructure", "Data science", "Networking"],
-      "major_systems": ["Jetstream2", "Big Red 200"]
+      "research_focus": [
+        "Cyberinfrastructure",
+        "Data science",
+        "Networking"
+      ],
+      "major_systems": [
+        "Jetstream2",
+        "Big Red 200"
+      ]
     },
     {
       "id": 7,
@@ -185,8 +234,16 @@
           "notes": "Hosts Aurora exascale system"
         }
       },
-      "research_focus": ["Exascale computing", "AI/ML", "Materials science", "Energy research"],
-      "major_systems": ["Aurora", "Polaris"]
+      "research_focus": [
+        "Exascale computing",
+        "AI/ML",
+        "Materials science",
+        "Energy research"
+      ],
+      "major_systems": [
+        "Aurora",
+        "Polaris"
+      ]
     },
     {
       "id": 8,
@@ -204,14 +261,22 @@
       "news_sources": {
         "primary": {
           "url": "https://www.llnl.gov/news",
-          "ai_tag_url": "https://www.llnl.gov/news/topic/artificial-intelligence",
-          "verified": true,
+          "ai_tag_url": "https://www.llnl.gov/news",
+          "verified": false,
           "crawl_priority": 250,
-          "notes": "Hosts El Capitan exascale system"
+          "notes": "Hosts El Capitan exascale system | ai_tag_url replaced with base url due to error: HTTP 404"
         }
       },
-      "research_focus": ["National security", "Exascale computing", "AI/ML", "Nuclear weapons"],
-      "major_systems": ["El Capitan", "Sierra"]
+      "research_focus": [
+        "National security",
+        "Exascale computing",
+        "AI/ML",
+        "Nuclear weapons"
+      ],
+      "major_systems": [
+        "El Capitan",
+        "Sierra"
+      ]
     },
     {
       "id": 9,
@@ -229,14 +294,22 @@
       "news_sources": {
         "primary": {
           "url": "https://www.lanl.gov/news",
-          "ai_tag_url": "https://www.lanl.gov/news/tag/artificial-intelligence",
-          "verified": true,
+          "ai_tag_url": "https://www.lanl.gov/news",
+          "verified": false,
           "crawl_priority": 250,
-          "notes": "Historic Manhattan Project site"
+          "notes": "Historic Manhattan Project site | ai_tag_url replaced with base url due to error: HTTP 404"
         }
       },
-      "research_focus": ["National security", "Nuclear science", "AI/ML", "Supercomputing"],
-      "major_systems": ["Venado", "Chicoma"]
+      "research_focus": [
+        "National security",
+        "Nuclear science",
+        "AI/ML",
+        "Supercomputing"
+      ],
+      "major_systems": [
+        "Venado",
+        "Chicoma"
+      ]
     },
     {
       "id": 10,
@@ -254,14 +327,22 @@
       "news_sources": {
         "primary": {
           "url": "https://www.ornl.gov/news",
-          "ai_tag_url": "https://www.ornl.gov/news/topic/artificial-intelligence",
-          "verified": true,
+          "ai_tag_url": "https://www.ornl.gov/news",
+          "verified": false,
           "crawl_priority": 250,
-          "notes": "Hosts Frontier exascale system"
+          "notes": "Hosts Frontier exascale system | ai_tag_url replaced with base url due to error: HTTP 404"
         }
       },
-      "research_focus": ["Exascale computing", "AI/ML", "Neutron science", "Materials research"],
-      "major_systems": ["Frontier", "Summit"]
+      "research_focus": [
+        "Exascale computing",
+        "AI/ML",
+        "Neutron science",
+        "Materials research"
+      ],
+      "major_systems": [
+        "Frontier",
+        "Summit"
+      ]
     },
     {
       "id": 11,
@@ -279,14 +360,22 @@
       "news_sources": {
         "primary": {
           "url": "https://newscenter.lbl.gov/",
-          "ai_tag_url": "https://newscenter.lbl.gov/tag/artificial-intelligence/",
-          "verified": true,
+          "ai_tag_url": "https://newscenter.lbl.gov/",
+          "verified": false,
           "crawl_priority": 250,
-          "notes": "Operates NERSC supercomputing facility"
+          "notes": "Operates NERSC supercomputing facility | ai_tag_url replaced with base url due to error: HTTP 404"
         }
       },
-      "research_focus": ["Scientific computing", "AI/ML", "Energy sciences", "Materials"],
-      "major_systems": ["Perlmutter (NERSC)", "Cori"]
+      "research_focus": [
+        "Scientific computing",
+        "AI/ML",
+        "Energy sciences",
+        "Materials"
+      ],
+      "major_systems": [
+        "Perlmutter (NERSC)",
+        "Cori"
+      ]
     },
     {
       "id": 12,
@@ -305,13 +394,22 @@
         "primary": {
           "url": "https://www.sandia.gov/labnews/",
           "ai_tag_url": "https://www.sandia.gov/labnews/?topic=artificial-intelligence",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "notes": "Engineering and national security research"
+          "notes": "Engineering and national security research",
+          "last_verified": "2025-11-04T13:55:35.113750+00:00"
         }
       },
-      "research_focus": ["National security", "Engineering", "Computing", "Materials science"],
-      "major_systems": ["Astra", "Vanguard"]
+      "research_focus": [
+        "National security",
+        "Engineering",
+        "Computing",
+        "Materials science"
+      ],
+      "major_systems": [
+        "Astra",
+        "Vanguard"
+      ]
     },
     {
       "id": 13,
@@ -335,8 +433,16 @@
           "notes": "Chemistry, biology, and computing"
         }
       },
-      "research_focus": ["Environmental science", "Energy", "National security", "Computing"],
-      "major_systems": ["Deception", "Constance"]
+      "research_focus": [
+        "Environmental science",
+        "Energy",
+        "National security",
+        "Computing"
+      ],
+      "major_systems": [
+        "Deception",
+        "Constance"
+      ]
     },
     {
       "id": 14,
@@ -355,13 +461,21 @@
         "primary": {
           "url": "https://www.bnl.gov/newsroom/",
           "ai_tag_url": "https://www.bnl.gov/newsroom/news.php?a=artificial-intelligence",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "notes": "High-energy physics and nuclear science"
+          "notes": "High-energy physics and nuclear science",
+          "last_verified": "2025-11-04T13:55:36.482099+00:00"
         }
       },
-      "research_focus": ["Nuclear physics", "Materials science", "Energy sciences", "Computing"],
-      "major_systems": ["RHIC Computing Facility"]
+      "research_focus": [
+        "Nuclear physics",
+        "Materials science",
+        "Energy sciences",
+        "Computing"
+      ],
+      "major_systems": [
+        "RHIC Computing Facility"
+      ]
     },
     {
       "id": 15,
@@ -379,14 +493,22 @@
       "news_sources": {
         "primary": {
           "url": "https://www6.slac.stanford.edu/news",
-          "ai_tag_url": "https://www6.slac.stanford.edu/news/topic/artificial-intelligence",
-          "verified": true,
+          "ai_tag_url": "https://www6.slac.stanford.edu/news",
+          "verified": false,
           "crawl_priority": 250,
-          "notes": "Particle physics and photon science"
+          "notes": "Particle physics and photon science | ai_tag_url replaced with base url due to error: HTTP 404"
         }
       },
-      "research_focus": ["Particle physics", "X-ray science", "AI/ML", "Accelerators"],
-      "major_systems": ["LCLS Computing", "S3DF"]
+      "research_focus": [
+        "Particle physics",
+        "X-ray science",
+        "AI/ML",
+        "Accelerators"
+      ],
+      "major_systems": [
+        "LCLS Computing",
+        "S3DF"
+      ]
     },
     {
       "id": 16,
@@ -404,14 +526,23 @@
       "news_sources": {
         "primary": {
           "url": "https://news.fnal.gov/",
-          "ai_tag_url": "https://news.fnal.gov/category/artificial-intelligence/",
+          "ai_tag_url": "https://news.fnal.gov/",
           "verified": false,
           "crawl_priority": 200,
-          "notes": "High-energy particle physics"
+          "notes": "High-energy particle physics | ai_tag_url replaced with base url due to error: HTTP 404",
+          "last_verified": "2025-11-04T13:55:37.366385+00:00"
         }
       },
-      "research_focus": ["Particle physics", "Neutrinos", "AI/ML for physics", "Accelerators"],
-      "major_systems": ["Wilson Cluster", "LHC Tier-1"]
+      "research_focus": [
+        "Particle physics",
+        "Neutrinos",
+        "AI/ML for physics",
+        "Accelerators"
+      ],
+      "major_systems": [
+        "Wilson Cluster",
+        "LHC Tier-1"
+      ]
     },
     {
       "id": 17,
@@ -430,13 +561,21 @@
         "primary": {
           "url": "https://inl.gov/news/",
           "ai_tag_url": "https://inl.gov/news/?topic=artificial-intelligence",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 150,
-          "notes": "Nuclear energy research"
+          "notes": "Nuclear energy research",
+          "last_verified": "2025-11-04T13:55:37.914079+00:00"
         }
       },
-      "research_focus": ["Nuclear energy", "Critical infrastructure", "National security"],
-      "major_systems": ["Sawtooth", "Lemhi"]
+      "research_focus": [
+        "Nuclear energy",
+        "Critical infrastructure",
+        "National security"
+      ],
+      "major_systems": [
+        "Sawtooth",
+        "Lemhi"
+      ]
     },
     {
       "id": 18,
@@ -455,13 +594,22 @@
         "primary": {
           "url": "https://www.nrel.gov/news/",
           "ai_tag_url": "https://www.nrel.gov/news/?topic=artificial-intelligence",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "notes": "Renewable energy and efficiency"
+          "notes": "Renewable energy and efficiency",
+          "last_verified": "2025-11-04T13:55:38.261488+00:00"
         }
       },
-      "research_focus": ["Renewable energy", "AI/ML for energy", "Solar", "Wind"],
-      "major_systems": ["Eagle", "Kestrel"]
+      "research_focus": [
+        "Renewable energy",
+        "AI/ML for energy",
+        "Solar",
+        "Wind"
+      ],
+      "major_systems": [
+        "Eagle",
+        "Kestrel"
+      ]
     },
     {
       "id": 19,
@@ -480,13 +628,21 @@
         "primary": {
           "url": "https://www.ameslab.gov/news",
           "ai_tag_url": "https://www.ameslab.gov/news?topic=artificial-intelligence",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 150,
-          "notes": "Materials science research"
+          "notes": "Materials science research",
+          "last_verified": "2025-11-04T13:55:38.629905+00:00"
         }
       },
-      "research_focus": ["Materials science", "Rare earth elements", "AI for materials"],
-      "major_systems": ["Condo", "Thunder"]
+      "research_focus": [
+        "Materials science",
+        "Rare earth elements",
+        "AI for materials"
+      ],
+      "major_systems": [
+        "Condo",
+        "Thunder"
+      ]
     },
     {
       "id": 20,
@@ -510,8 +666,14 @@
           "notes": "Fusion energy research"
         }
       },
-      "research_focus": ["Fusion energy", "Plasma physics", "AI for fusion control"],
-      "major_systems": ["NSTX-U Computing"]
+      "research_focus": [
+        "Fusion energy",
+        "Plasma physics",
+        "AI for fusion control"
+      ],
+      "major_systems": [
+        "NSTX-U Computing"
+      ]
     },
     {
       "id": 21,
@@ -535,8 +697,14 @@
           "notes": "Nuclear physics research"
         }
       },
-      "research_focus": ["Nuclear physics", "Accelerators", "Computing"],
-      "major_systems": ["SciComp Farm"]
+      "research_focus": [
+        "Nuclear physics",
+        "Accelerators",
+        "Computing"
+      ],
+      "major_systems": [
+        "SciComp Farm"
+      ]
     },
     {
       "id": 22,
@@ -560,7 +728,11 @@
           "notes": "Environmental management"
         }
       },
-      "research_focus": ["Environmental management", "National security", "Materials"],
+      "research_focus": [
+        "Environmental management",
+        "National security",
+        "Materials"
+      ],
       "major_systems": []
     },
     {
@@ -580,13 +752,20 @@
         "primary": {
           "url": "https://www.netl.doe.gov/newsroom",
           "ai_tag_url": "https://www.netl.doe.gov/newsroom?topic=artificial-intelligence",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "notes": "Fossil energy and carbon management"
+          "notes": "Fossil energy and carbon management",
+          "last_verified": "2025-11-04T13:55:41.261244+00:00"
         }
       },
-      "research_focus": ["Fossil energy", "Carbon capture", "Energy systems"],
-      "major_systems": ["Joule 2.0"]
+      "research_focus": [
+        "Fossil energy",
+        "Carbon capture",
+        "Energy systems"
+      ],
+      "major_systems": [
+        "Joule 2.0"
+      ]
     },
     {
       "id": 24,
@@ -610,8 +789,16 @@
           "notes": "Atmospheric and climate research"
         }
       },
-      "research_focus": ["Climate science", "Weather prediction", "AI/ML for climate", "Supercomputing"],
-      "major_systems": ["Derecho", "Casper"]
+      "research_focus": [
+        "Climate science",
+        "Weather prediction",
+        "AI/ML for climate",
+        "Supercomputing"
+      ],
+      "major_systems": [
+        "Derecho",
+        "Casper"
+      ]
     },
     {
       "id": 25,
@@ -635,7 +822,12 @@
           "notes": "Continental-scale ecological observation"
         }
       },
-      "research_focus": ["Ecology", "Environmental science", "Data science", "AI/ML"],
+      "research_focus": [
+        "Ecology",
+        "Environmental science",
+        "Data science",
+        "AI/ML"
+      ],
       "major_systems": []
     },
     {
@@ -660,8 +852,15 @@
           "notes": "Oak Ridge Leadership Computing Facility"
         }
       },
-      "research_focus": ["Leadership computing", "Exascale systems", "AI/ML"],
-      "major_systems": ["Frontier", "Summit"]
+      "research_focus": [
+        "Leadership computing",
+        "Exascale systems",
+        "AI/ML"
+      ],
+      "major_systems": [
+        "Frontier",
+        "Summit"
+      ]
     },
     {
       "id": 27,
@@ -685,8 +884,15 @@
           "notes": "National Energy Research Scientific Computing Center"
         }
       },
-      "research_focus": ["Scientific computing", "AI/ML for science", "Data management"],
-      "major_systems": ["Perlmutter", "Cori"]
+      "research_focus": [
+        "Scientific computing",
+        "AI/ML for science",
+        "Data management"
+      ],
+      "major_systems": [
+        "Perlmutter",
+        "Cori"
+      ]
     }
   ]
 }

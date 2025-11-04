@@ -7,7 +7,7 @@
     "institutions_included": 187,
     "coverage_percentage": 100.0,
     "date_compiled": "2025-11-02",
-    "last_updated": "2025-11-03T01:35:02.046528+00:00",
+    "last_updated": "2025-11-04T14:21:35.569621+00:00",
     "data_sources": [
       "Carnegie Classifications 2025 RAD Public Data File",
       "carnegieclassifications.acenet.edu"
@@ -46,7 +46,19 @@
           "verified": true,
           "crawl_priority": 100,
           "notes": "Manually verified - working URL"
-        }
+        },
+        "additional_sources": [
+          {
+            "url": "https://news.auburn.edu/",
+            "type": "alternate_news",
+            "verified": false
+          },
+          {
+            "url": "https://news.auburn.edu/topic/artificial-intelligence/",
+            "type": "ai_specific",
+            "verified": false
+          }
+        ]
       },
       "data_quality": {
         "completeness_score": 0.5,
@@ -82,11 +94,12 @@
       },
       "news_sources": {
         "primary": {
-          "url": "https://news.alabama.edu",
-          "ai_tag_url": "https://news.alabama.edu/topic/artificial-intelligence/",
-          "verified": false,
+          "url": "https://alabama.edu/news",
+          "ai_tag_url": "https://alabama.edu/news/topic/artificial-intelligence",
+          "verified": true,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification",
+          "last_verified": "2025-11-04T13:59:27.611979+00:00"
         }
       },
       "data_quality": {
@@ -122,11 +135,12 @@
       },
       "news_sources": {
         "primary": {
-          "url": "https://news.alabama.edu",
-          "ai_tag_url": "https://news.alabama.edu/topic/artificial-intelligence/",
-          "verified": false,
+          "url": "https://alabama.edu/news",
+          "ai_tag_url": "https://alabama.edu/news/topic/artificial-intelligence",
+          "verified": true,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification",
+          "last_verified": "2025-11-04T13:59:31.160659+00:00"
         }
       },
       "data_quality": {
@@ -162,11 +176,12 @@
       },
       "news_sources": {
         "primary": {
-          "url": "https://news.arkansas.edu",
-          "ai_tag_url": "https://news.arkansas.edu/topic/artificial-intelligence/",
-          "verified": false,
+          "url": "https://arkansas.edu/news",
+          "ai_tag_url": "https://arkansas.edu/news/topic/artificial-intelligence",
+          "verified": true,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification",
+          "last_verified": "2025-11-04T13:59:33.491641+00:00"
         }
       },
       "data_quality": {
@@ -288,7 +303,19 @@
           "verified": true,
           "crawl_priority": 100,
           "notes": "Manually verified - working URL"
-        }
+        },
+        "additional_sources": [
+          {
+            "url": "https://news.arizona.edu/",
+            "type": "alternate_news",
+            "verified": true
+          },
+          {
+            "url": "https://news.arizona.edu/tags/artificial-intelligence",
+            "type": "ai_specific",
+            "verified": true
+          }
+        ]
       },
       "data_quality": {
         "completeness_score": 0.5,
@@ -325,10 +352,11 @@
       "news_sources": {
         "primary": {
           "url": "https://www.caltech.edu/about/news",
-          "ai_tag_url": "https://www.caltech.edu/about/news/topic/artificial-intelligence/",
+          "ai_tag_url": "https://www.caltech.edu/about/news",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: HTTP 404",
+          "last_verified": "2025-11-04T13:53:44.587935+00:00"
         }
       },
       "data_quality": {
@@ -364,11 +392,12 @@
       },
       "news_sources": {
         "primary": {
-          "url": "https://news.sandiego.edu",
-          "ai_tag_url": "https://news.sandiego.edu/topic/artificial-intelligence/",
+          "url": "https://sandiego.edu/news",
+          "ai_tag_url": "https://sandiego.edu/news",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: Connection Error: HTTPSConnectionPool(host='news.sandiego.edu', port=443): Max retries exceeded with url: /topic/artif",
+          "last_verified": "2025-11-04T13:59:35.904110+00:00"
         }
       },
       "data_quality": {
@@ -406,9 +435,10 @@
         "primary": {
           "url": "https://news.stanford.edu",
           "ai_tag_url": "https://news.stanford.edu/topic/artificial-intelligence/",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification",
+          "last_verified": "2025-11-04T13:53:45.697295+00:00"
         }
       },
       "data_quality": {
@@ -487,9 +517,10 @@
         "primary": {
           "url": "https://news.ucdavis.edu",
           "ai_tag_url": "https://news.ucdavis.edu/topic/artificial-intelligence/",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification",
+          "last_verified": "2025-11-04T13:53:46.263591+00:00"
         }
       },
       "data_quality": {
@@ -607,10 +638,11 @@
       "news_sources": {
         "primary": {
           "url": "https://news.ucmerced.edu",
-          "ai_tag_url": "https://news.ucmerced.edu/topic/artificial-intelligence/",
+          "ai_tag_url": "https://news.ucmerced.edu",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: HTTP 404",
+          "last_verified": "2025-11-04T13:53:46.963383+00:00"
         }
       },
       "data_quality": {
@@ -648,9 +680,10 @@
         "primary": {
           "url": "https://news.ucr.edu",
           "ai_tag_url": "https://news.ucr.edu/topic/artificial-intelligence/",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification",
+          "last_verified": "2025-11-04T13:53:47.433826+00:00"
         }
       },
       "data_quality": {
@@ -729,9 +762,10 @@
         "primary": {
           "url": "https://news.ucsf.edu",
           "ai_tag_url": "https://news.ucsf.edu/topic/artificial-intelligence/",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification",
+          "last_verified": "2025-11-04T13:53:48.266074+00:00"
         }
       },
       "data_quality": {
@@ -809,10 +843,11 @@
       "news_sources": {
         "primary": {
           "url": "https://news.ucsc.edu",
-          "ai_tag_url": "https://news.ucsc.edu/topic/artificial-intelligence/",
+          "ai_tag_url": "https://news.ucsc.edu",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: HTTP 404",
+          "last_verified": "2025-11-04T13:53:48.810829+00:00"
         }
       },
       "data_quality": {
@@ -850,9 +885,10 @@
         "primary": {
           "url": "https://news.usc.edu",
           "ai_tag_url": "https://news.usc.edu/topic/artificial-intelligence/",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification",
+          "last_verified": "2025-11-04T13:53:49.505776+00:00"
         }
       },
       "data_quality": {
@@ -973,7 +1009,19 @@
           "verified": true,
           "crawl_priority": 100,
           "notes": "Manually verified - working URL"
-        }
+        },
+        "additional_sources": [
+          {
+            "url": "https://www.colorado.edu/today/",
+            "type": "alternate_news",
+            "verified": false
+          },
+          {
+            "url": "https://www.colorado.edu/today/topic/artificial-intelligence",
+            "type": "ai_specific",
+            "verified": false
+          }
+        ]
       },
       "data_quality": {
         "completeness_score": 0.5,
@@ -1095,7 +1143,19 @@
           "verified": true,
           "crawl_priority": 100,
           "notes": "Manually verified - working URL"
-        }
+        },
+        "additional_sources": [
+          {
+            "url": "https://today.uconn.edu/",
+            "type": "alternate_news",
+            "verified": false
+          },
+          {
+            "url": "https://today.uconn.edu/tag/artificial-intelligence/",
+            "type": "ai_specific",
+            "verified": false
+          }
+        ]
       },
       "data_quality": {
         "completeness_score": 0.5,
@@ -1132,10 +1192,11 @@
       "news_sources": {
         "primary": {
           "url": "https://news.yale.edu",
-          "ai_tag_url": "https://news.yale.edu/topic/artificial-intelligence/",
+          "ai_tag_url": "https://news.yale.edu",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: HTTP 404",
+          "last_verified": "2025-11-04T13:53:50.078646+00:00"
         }
       },
       "data_quality": {
@@ -1251,11 +1312,12 @@
       },
       "news_sources": {
         "primary": {
-          "url": "https://news.georgetown.edu",
-          "ai_tag_url": "https://news.georgetown.edu/topic/artificial-intelligence/",
-          "verified": false,
+          "url": "https://georgetown.edu/news",
+          "ai_tag_url": "https://georgetown.edu/news/tag/artificial-intelligence",
+          "verified": true,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification",
+          "last_verified": "2025-11-04T13:59:46.886911+00:00"
         }
       },
       "data_quality": {
@@ -1732,10 +1794,11 @@
       "news_sources": {
         "primary": {
           "url": "https://news.emory.edu",
-          "ai_tag_url": "https://news.emory.edu/topic/artificial-intelligence/",
+          "ai_tag_url": "https://news.emory.edu",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: HTTP 404",
+          "last_verified": "2025-11-04T13:53:58.314262+00:00"
         }
       },
       "data_quality": {
@@ -1772,10 +1835,11 @@
       "news_sources": {
         "primary": {
           "url": "https://news.gatech.edu",
-          "ai_tag_url": "https://news.gatech.edu/topic/artificial-intelligence/",
+          "ai_tag_url": "https://news.gatech.edu",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: HTTP 404",
+          "last_verified": "2025-11-04T13:53:58.848759+00:00"
         }
       },
       "data_quality": {
@@ -1891,11 +1955,12 @@
       },
       "news_sources": {
         "primary": {
-          "url": "https://news.hawaii.edu",
-          "ai_tag_url": "https://news.hawaii.edu/topic/artificial-intelligence/",
-          "verified": false,
+          "url": "https://hawaii.edu/news",
+          "ai_tag_url": "https://hawaii.edu/news/topic/artificial-intelligence",
+          "verified": true,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification",
+          "last_verified": "2025-11-04T14:00:40.788159+00:00"
         }
       },
       "data_quality": {
@@ -1936,7 +2001,19 @@
           "verified": true,
           "crawl_priority": 100,
           "notes": "Manually verified - working URL"
-        }
+        },
+        "additional_sources": [
+          {
+            "url": "https://www.news.iastate.edu/",
+            "type": "alternate_news",
+            "verified": false
+          },
+          {
+            "url": "https://www.news.iastate.edu/news/topic/artificial-intelligence",
+            "type": "ai_specific",
+            "verified": false
+          }
+        ]
       },
       "data_quality": {
         "completeness_score": 0.5,
@@ -2012,11 +2089,12 @@
       },
       "news_sources": {
         "primary": {
-          "url": "https://news.idaho.edu",
-          "ai_tag_url": "https://news.idaho.edu/topic/artificial-intelligence/",
-          "verified": false,
+          "url": "https://idaho.edu/news",
+          "ai_tag_url": "https://idaho.edu/news/topic/artificial-intelligence",
+          "verified": true,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification",
+          "last_verified": "2025-11-04T14:00:50.927767+00:00"
         }
       },
       "data_quality": {
@@ -2093,10 +2171,11 @@
       "news_sources": {
         "primary": {
           "url": "https://news.northwestern.edu",
-          "ai_tag_url": "https://news.northwestern.edu/topic/artificial-intelligence/",
+          "ai_tag_url": "https://news.northwestern.edu",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: HTTP 404",
+          "last_verified": "2025-11-04T13:54:10.054832+00:00"
         }
       },
       "data_quality": {
@@ -2173,10 +2252,11 @@
       "news_sources": {
         "primary": {
           "url": "https://news.uchicago.edu",
-          "ai_tag_url": "https://news.uchicago.edu/topic/artificial-intelligence/",
+          "ai_tag_url": "https://news.uchicago.edu",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: HTTP 404",
+          "last_verified": "2025-11-04T13:54:10.790179+00:00"
         }
       },
       "data_quality": {
@@ -2212,11 +2292,12 @@
       },
       "news_sources": {
         "primary": {
-          "url": "https://news.uic.edu",
-          "ai_tag_url": "https://news.uic.edu/topic/artificial-intelligence/",
-          "verified": false,
+          "url": "https://uic.edu/news",
+          "ai_tag_url": "https://uic.edu/news/topic/artificial-intelligence",
+          "verified": true,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification",
+          "last_verified": "2025-11-04T14:00:54.483785+00:00"
         }
       },
       "data_quality": {
@@ -2253,10 +2334,11 @@
       "news_sources": {
         "primary": {
           "url": "https://news.illinois.edu",
-          "ai_tag_url": "https://news.illinois.edu/topic/artificial-intelligence/",
+          "ai_tag_url": "https://news.illinois.edu",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: HTTP 404",
+          "last_verified": "2025-11-04T13:54:12.168573+00:00"
         }
       },
       "data_quality": {
@@ -2310,9 +2392,9 @@
     },
     {
       "id": 58,
-      "name": "Indiana University–Purdue University-Indianapolis",
+      "name": "Indiana University\u2013Purdue University-Indianapolis",
       "abbreviation": "IUU",
-      "canonical_name": "Indiana University–Purdue University-Indianapolis",
+      "canonical_name": "Indiana University\u2013Purdue University-Indianapolis",
       "location": {
         "city": "Indianapolis",
         "state": "IN",
@@ -2326,15 +2408,15 @@
         "year_classified": 2025
       },
       "domains": {
-        "primary": "indianauniversity–purdue.edu",
+        "primary": "indianauniversity\u2013purdue.edu",
         "news_domains": [
-          "news.indianauniversity–purdue.edu"
+          "news.indianauniversity\u2013purdue.edu"
         ]
       },
       "news_sources": {
         "primary": {
-          "url": "https://news.indianauniversity–purdue.edu",
-          "ai_tag_url": "https://news.indianauniversity–purdue.edu/topic/artificial-intelligence/",
+          "url": "https://news.indianauniversity\u2013purdue.edu",
+          "ai_tag_url": "https://news.indianauniversity\u2013purdue.edu/topic/artificial-intelligence/",
           "verified": false,
           "crawl_priority": 100,
           "notes": "Auto-generated - requires verification"
@@ -2414,10 +2496,11 @@
       "news_sources": {
         "primary": {
           "url": "https://news.nd.edu",
-          "ai_tag_url": "https://news.nd.edu/topic/artificial-intelligence/",
+          "ai_tag_url": "https://news.nd.edu",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: HTTP 404",
+          "last_verified": "2025-11-04T13:54:13.107464+00:00"
         }
       },
       "data_quality": {
@@ -2498,7 +2581,19 @@
           "verified": true,
           "crawl_priority": 100,
           "notes": "Manually verified - working URL"
-        }
+        },
+        "additional_sources": [
+          {
+            "url": "https://news.ku.edu/",
+            "type": "alternate_news",
+            "verified": false
+          },
+          {
+            "url": "https://news.ku.edu/tag/artificial-intelligence",
+            "type": "ai_specific",
+            "verified": false
+          }
+        ]
       },
       "data_quality": {
         "completeness_score": 0.5,
@@ -2539,7 +2634,19 @@
           "verified": true,
           "crawl_priority": 100,
           "notes": "Manually verified - working URL"
-        }
+        },
+        "additional_sources": [
+          {
+            "url": "https://uknow.uky.edu/",
+            "type": "alternate_news",
+            "verified": false
+          },
+          {
+            "url": "https://uknow.uky.edu/tags/artificial-intelligence",
+            "type": "ai_specific",
+            "verified": false
+          }
+        ]
       },
       "data_quality": {
         "completeness_score": 0.5,
@@ -2656,10 +2763,11 @@
       "news_sources": {
         "primary": {
           "url": "https://news.tulane.edu",
-          "ai_tag_url": "https://news.tulane.edu/topic/artificial-intelligence/",
+          "ai_tag_url": "https://news.tulane.edu",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: HTTP 404",
+          "last_verified": "2025-11-04T13:54:23.677774+00:00"
         }
       },
       "data_quality": {
@@ -2775,11 +2883,12 @@
       },
       "news_sources": {
         "primary": {
-          "url": "https://news.bu.edu",
-          "ai_tag_url": "https://news.bu.edu/topic/artificial-intelligence/",
-          "verified": false,
+          "url": "https://bu.edu/news",
+          "ai_tag_url": "https://bu.edu/news/topic/artificial-intelligence",
+          "verified": true,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification",
+          "last_verified": "2025-11-04T14:01:12.332523+00:00"
         }
       },
       "data_quality": {
@@ -2815,11 +2924,12 @@
       },
       "news_sources": {
         "primary": {
-          "url": "https://news.brandeis.edu",
-          "ai_tag_url": "https://news.brandeis.edu/topic/artificial-intelligence/",
+          "url": "https://brandeis.edu/news",
+          "ai_tag_url": "https://brandeis.edu/news",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: Connection Error: HTTPSConnectionPool(host='news.brandeis.edu', port=443): Max retries exceeded with url: /topic/artif",
+          "last_verified": "2025-11-04T14:01:15.662676+00:00"
         }
       },
       "data_quality": {
@@ -2855,11 +2965,12 @@
       },
       "news_sources": {
         "primary": {
-          "url": "https://www.harvard.edu/news",
-          "ai_tag_url": "https://www.harvard.edu/news/topic/artificial-intelligence/",
-          "verified": false,
+          "url": "https://news.harvard.edu",
+          "ai_tag_url": "https://news.harvard.edu/topic/artificial-intelligence",
+          "verified": true,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification",
+          "last_verified": "2025-11-04T14:01:20.741676+00:00"
         }
       },
       "data_quality": {
@@ -2896,10 +3007,11 @@
       "news_sources": {
         "primary": {
           "url": "https://news.mit.edu",
-          "ai_tag_url": "https://news.mit.edu/topic/artificial-intelligence/",
+          "ai_tag_url": "https://news.mit.edu",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: HTTP 404",
+          "last_verified": "2025-11-04T13:54:25.399717+00:00"
         }
       },
       "data_quality": {
@@ -2976,10 +3088,11 @@
       "news_sources": {
         "primary": {
           "url": "https://news.tufts.edu",
-          "ai_tag_url": "https://news.tufts.edu/topic/artificial-intelligence/",
+          "ai_tag_url": "https://news.tufts.edu",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: HTTP 404",
+          "last_verified": "2025-11-04T13:54:27.168695+00:00"
         }
       },
       "data_quality": {
@@ -3056,11 +3169,12 @@
       },
       "news_sources": {
         "primary": {
-          "url": "https://news.umb.edu",
-          "ai_tag_url": "https://news.umb.edu/topic/artificial-intelligence/",
+          "url": "https://umb.edu/news",
+          "ai_tag_url": "https://umb.edu/news",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: Connection Error: HTTPSConnectionPool(host='news.umb.edu', port=443): Max retries exceeded with url: /topic/artificial",
+          "last_verified": "2025-11-04T14:01:23.228963+00:00"
         }
       },
       "data_quality": {
@@ -3096,11 +3210,12 @@
       },
       "news_sources": {
         "primary": {
-          "url": "https://news.uml.edu",
-          "ai_tag_url": "https://news.uml.edu/topic/artificial-intelligence/",
+          "url": "https://uml.edu/news",
+          "ai_tag_url": "https://uml.edu/news",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: Connection Error: HTTPSConnectionPool(host='news.uml.edu', port=443): Max retries exceeded with url: /topic/artificial",
+          "last_verified": "2025-11-04T14:01:27.591118+00:00"
         }
       },
       "data_quality": {
@@ -3136,11 +3251,12 @@
       },
       "news_sources": {
         "primary": {
-          "url": "https://news.wpi.edu",
-          "ai_tag_url": "https://news.wpi.edu/topic/artificial-intelligence/",
+          "url": "https://www.wpi.edu/news",
+          "ai_tag_url": "https://www.wpi.edu/news",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: Connection Error: HTTPSConnectionPool(host='news.wpi.edu', port=443): Max retries exceeded with url: /topic/artificial",
+          "last_verified": "2025-11-04T14:01:35.220013+00:00"
         }
       },
       "data_quality": {
@@ -3176,11 +3292,12 @@
       },
       "news_sources": {
         "primary": {
-          "url": "https://news.jhu.edu",
-          "ai_tag_url": "https://news.jhu.edu/topic/artificial-intelligence/",
+          "url": "https://jhu.edu/news",
+          "ai_tag_url": "https://jhu.edu/news",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: Timeout",
+          "last_verified": "2025-11-04T14:01:38.695668+00:00"
         }
       },
       "data_quality": {
@@ -3216,11 +3333,12 @@
       },
       "news_sources": {
         "primary": {
-          "url": "https://news.maryland.edu",
-          "ai_tag_url": "https://news.maryland.edu/topic/artificial-intelligence/",
+          "url": "https://maryland.edu/news",
+          "ai_tag_url": "https://maryland.edu/news",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: Connection Error: HTTPSConnectionPool(host='news.maryland.edu', port=443): Max retries exceeded with url: /topic/artif",
+          "last_verified": "2025-11-04T14:01:45.077195+00:00"
         }
       },
       "data_quality": {
@@ -3297,11 +3415,12 @@
       },
       "news_sources": {
         "primary": {
-          "url": "https://news.maryland.edu",
-          "ai_tag_url": "https://news.maryland.edu/topic/artificial-intelligence/",
+          "url": "https://maryland.edu/news",
+          "ai_tag_url": "https://maryland.edu/news",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: Connection Error: HTTPSConnectionPool(host='news.maryland.edu', port=443): Max retries exceeded with url: /topic/artif",
+          "last_verified": "2025-11-04T14:01:53.443975+00:00"
         }
       },
       "data_quality": {
@@ -3337,11 +3456,12 @@
       },
       "news_sources": {
         "primary": {
-          "url": "https://news.maine.edu",
-          "ai_tag_url": "https://news.maine.edu/topic/artificial-intelligence/",
+          "url": "https://maine.edu/news",
+          "ai_tag_url": "https://maine.edu/news",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: Connection Error: HTTPSConnectionPool(host='news.maine.edu', port=443): Max retries exceeded with url: /topic/artifici",
+          "last_verified": "2025-11-04T14:02:00.496206+00:00"
         }
       },
       "data_quality": {
@@ -3382,7 +3502,19 @@
           "verified": true,
           "crawl_priority": 100,
           "notes": "Manually verified - working URL"
-        }
+        },
+        "additional_sources": [
+          {
+            "url": "https://msutoday.msu.edu/",
+            "type": "alternate_news",
+            "verified": false
+          },
+          {
+            "url": "https://msutoday.msu.edu/topic/artificial-intelligence/",
+            "type": "ai_specific",
+            "verified": false
+          }
+        ]
       },
       "data_quality": {
         "completeness_score": 0.5,
@@ -3538,11 +3670,12 @@
       },
       "news_sources": {
         "primary": {
-          "url": "https://news.minnesota.edu",
-          "ai_tag_url": "https://news.minnesota.edu/topic/artificial-intelligence/",
+          "url": "https://minnesota.edu/news",
+          "ai_tag_url": "https://minnesota.edu/news",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: Connection Error: HTTPSConnectionPool(host='news.minnesota.edu', port=443): Max retries exceeded with url: /topic/arti",
+          "last_verified": "2025-11-04T14:02:10.454122+00:00"
         }
       },
       "data_quality": {
@@ -3660,9 +3793,10 @@
         "primary": {
           "url": "https://news.missouri.edu",
           "ai_tag_url": "https://news.missouri.edu/topic/artificial-intelligence/",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification",
+          "last_verified": "2025-11-04T13:54:42.018015+00:00"
         }
       },
       "data_quality": {
@@ -3700,9 +3834,10 @@
         "primary": {
           "url": "https://news.missouri.edu",
           "ai_tag_url": "https://news.missouri.edu/topic/artificial-intelligence/",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification",
+          "last_verified": "2025-11-04T13:54:43.054090+00:00"
         }
       },
       "data_quality": {
@@ -3740,9 +3875,10 @@
         "primary": {
           "url": "https://news.wustl.edu",
           "ai_tag_url": "https://news.wustl.edu/topic/artificial-intelligence/",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification",
+          "last_verified": "2025-11-04T13:54:45.072737+00:00"
         }
       },
       "data_quality": {
@@ -3778,11 +3914,12 @@
       },
       "news_sources": {
         "primary": {
-          "url": "https://news.msstate.edu",
-          "ai_tag_url": "https://news.msstate.edu/topic/artificial-intelligence/",
+          "url": "https://www.msstate.edu/news",
+          "ai_tag_url": "https://www.msstate.edu/news",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: Connection Error: HTTPSConnectionPool(host='news.msstate.edu', port=443): Max retries exceeded with url: /topic/artifi",
+          "last_verified": "2025-11-04T14:02:17.360531+00:00"
         }
       },
       "data_quality": {
@@ -3980,9 +4117,10 @@
         "primary": {
           "url": "https://today.duke.edu",
           "ai_tag_url": "https://today.duke.edu/topic/artificial-intelligence/",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification",
+          "last_verified": "2025-11-04T13:54:46.642282+00:00"
         }
       },
       "data_quality": {
@@ -4260,9 +4398,10 @@
         "primary": {
           "url": "https://news.nebraska.edu",
           "ai_tag_url": "https://news.nebraska.edu/topic/artificial-intelligence/",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification",
+          "last_verified": "2025-11-04T13:54:47.729790+00:00"
         }
       },
       "data_quality": {
@@ -4300,9 +4439,10 @@
         "primary": {
           "url": "https://news.nebraska.edu",
           "ai_tag_url": "https://news.nebraska.edu/topic/artificial-intelligence/",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification",
+          "last_verified": "2025-11-04T13:54:48.499436+00:00"
         }
       },
       "data_quality": {
@@ -4339,10 +4479,11 @@
       "news_sources": {
         "primary": {
           "url": "https://news.dartmouth.edu",
-          "ai_tag_url": "https://news.dartmouth.edu/topic/artificial-intelligence/",
+          "ai_tag_url": "https://news.dartmouth.edu",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: HTTP 404",
+          "last_verified": "2025-11-04T13:54:49.685787+00:00"
         }
       },
       "data_quality": {
@@ -4419,10 +4560,11 @@
       "news_sources": {
         "primary": {
           "url": "https://news.njit.edu",
-          "ai_tag_url": "https://news.njit.edu/topic/artificial-intelligence/",
+          "ai_tag_url": "https://news.njit.edu",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: HTTP 404",
+          "last_verified": "2025-11-04T13:54:50.573475+00:00"
         }
       },
       "data_quality": {
@@ -4459,10 +4601,11 @@
       "news_sources": {
         "primary": {
           "url": "https://www.princeton.edu/news",
-          "ai_tag_url": "https://www.princeton.edu/news/topic/artificial-intelligence/",
+          "ai_tag_url": "https://www.princeton.edu/news",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: HTTP 404 (SSL issue)",
+          "last_verified": "2025-11-04T13:54:51.028749+00:00"
         }
       },
       "data_quality": {
@@ -4821,10 +4964,11 @@
       "news_sources": {
         "primary": {
           "url": "https://news.cornell.edu",
-          "ai_tag_url": "https://news.cornell.edu/topic/artificial-intelligence/",
+          "ai_tag_url": "https://news.cornell.edu",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: HTTP 404",
+          "last_verified": "2025-11-04T13:54:52.277851+00:00"
         }
       },
       "data_quality": {
@@ -4901,10 +5045,11 @@
       "news_sources": {
         "primary": {
           "url": "https://news.rpi.edu",
-          "ai_tag_url": "https://news.rpi.edu/topic/artificial-intelligence/",
+          "ai_tag_url": "https://news.rpi.edu",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: HTTP 404",
+          "last_verified": "2025-11-04T13:54:52.839204+00:00"
         }
       },
       "data_quality": {
@@ -4941,10 +5086,11 @@
       "news_sources": {
         "primary": {
           "url": "https://news.stonybrook.edu",
-          "ai_tag_url": "https://news.stonybrook.edu/topic/artificial-intelligence/",
+          "ai_tag_url": "https://news.stonybrook.edu",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: HTTP 404",
+          "last_verified": "2025-11-04T13:54:53.820245+00:00"
         }
       },
       "data_quality": {
@@ -5542,10 +5688,11 @@
       "news_sources": {
         "primary": {
           "url": "https://news.oregonstate.edu",
-          "ai_tag_url": "https://news.oregonstate.edu/topic/artificial-intelligence/",
+          "ai_tag_url": "https://news.oregonstate.edu",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: HTTP 404",
+          "last_verified": "2025-11-04T13:54:55.126742+00:00"
         }
       },
       "data_quality": {
@@ -5622,10 +5769,11 @@
       "news_sources": {
         "primary": {
           "url": "https://www.cmu.edu/news/",
-          "ai_tag_url": "https://www.cmu.edu/news/topic/artificial-intelligence/",
+          "ai_tag_url": "https://www.cmu.edu/news/",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: HTTP 404",
+          "last_verified": "2025-11-04T13:54:56.103237+00:00"
         }
       },
       "data_quality": {
@@ -5823,9 +5971,10 @@
         "primary": {
           "url": "https://penntoday.upenn.edu",
           "ai_tag_url": "https://penntoday.upenn.edu/topic/artificial-intelligence/",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification",
+          "last_verified": "2025-11-04T13:54:56.954757+00:00"
         }
       },
       "data_quality": {
@@ -5903,10 +6052,11 @@
       "news_sources": {
         "primary": {
           "url": "https://news.brown.edu",
-          "ai_tag_url": "https://news.brown.edu/topic/artificial-intelligence/",
+          "ai_tag_url": "https://news.brown.edu",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: HTTP 404",
+          "last_verified": "2025-11-04T13:54:57.558256+00:00"
         }
       },
       "data_quality": {
@@ -6224,10 +6374,11 @@
       "news_sources": {
         "primary": {
           "url": "https://news.vanderbilt.edu",
-          "ai_tag_url": "https://news.vanderbilt.edu/topic/artificial-intelligence/",
+          "ai_tag_url": "https://news.vanderbilt.edu",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: HTTP 404",
+          "last_verified": "2025-11-04T13:54:59.046762+00:00"
         }
       },
       "data_quality": {
@@ -6345,9 +6496,10 @@
         "primary": {
           "url": "https://news.rice.edu",
           "ai_tag_url": "https://news.rice.edu/topic/artificial-intelligence/",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification",
+          "last_verified": "2025-11-04T13:54:59.797609+00:00"
         }
       },
       "data_quality": {
@@ -6468,7 +6620,19 @@
           "verified": true,
           "crawl_priority": 100,
           "notes": "Manually verified - working URL"
-        }
+        },
+        "additional_sources": [
+          {
+            "url": "https://today.ttu.edu/",
+            "type": "alternate_news",
+            "verified": false
+          },
+          {
+            "url": "https://today.ttu.edu/tag/artificial-intelligence/",
+            "type": "ai_specific",
+            "verified": false
+          }
+        ]
       },
       "data_quality": {
         "completeness_score": 0.5,
@@ -6546,9 +6710,10 @@
         "primary": {
           "url": "https://news.utsa.edu",
           "ai_tag_url": "https://news.utsa.edu/topic/artificial-intelligence/",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification",
+          "last_verified": "2025-11-04T13:55:00.617137+00:00"
         }
       },
       "data_quality": {
@@ -6626,9 +6791,10 @@
         "primary": {
           "url": "https://www.utexas.edu/news",
           "ai_tag_url": "https://www.utexas.edu/news/topic/artificial-intelligence/",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification",
+          "last_verified": "2025-11-04T13:55:01.795688+00:00"
         }
       },
       "data_quality": {
@@ -6665,10 +6831,11 @@
       "news_sources": {
         "primary": {
           "url": "https://news.utdallas.edu",
-          "ai_tag_url": "https://news.utdallas.edu/topic/artificial-intelligence/",
+          "ai_tag_url": "https://news.utdallas.edu",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: HTTP 404",
+          "last_verified": "2025-11-04T13:55:02.747056+00:00"
         }
       },
       "data_quality": {
@@ -6746,9 +6913,10 @@
         "primary": {
           "url": "https://news.utsa.edu",
           "ai_tag_url": "https://news.utsa.edu/topic/artificial-intelligence/",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification",
+          "last_verified": "2025-11-04T13:55:13.272502+00:00"
         }
       },
       "data_quality": {
@@ -6949,7 +7117,19 @@
           "verified": false,
           "crawl_priority": 100,
           "notes": "Auto-generated - requires verification"
-        }
+        },
+        "additional_sources": [
+          {
+            "url": "https://attheu.utah.edu/",
+            "type": "alternate_news",
+            "verified": false
+          },
+          {
+            "url": "https://attheu.utah.edu/tag/artificial-intelligence/",
+            "type": "ai_specific",
+            "verified": false
+          }
+        ]
       },
       "data_quality": {
         "completeness_score": 0.5,
@@ -6985,10 +7165,11 @@
       "news_sources": {
         "primary": {
           "url": "https://news.usu.edu",
-          "ai_tag_url": "https://news.usu.edu/topic/artificial-intelligence/",
+          "ai_tag_url": "https://news.usu.edu",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: HTTP 404",
+          "last_verified": "2025-11-04T13:55:14.545020+00:00"
         }
       },
       "data_quality": {
@@ -7105,10 +7286,11 @@
       "news_sources": {
         "primary": {
           "url": "https://news.virginia.edu",
-          "ai_tag_url": "https://news.virginia.edu/topic/artificial-intelligence/",
+          "ai_tag_url": "https://news.virginia.edu",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: HTTP 404",
+          "last_verified": "2025-11-04T13:55:16.441169+00:00"
         }
       },
       "data_quality": {
@@ -7185,11 +7367,24 @@
       "news_sources": {
         "primary": {
           "url": "https://news.vt.edu",
-          "ai_tag_url": "https://news.vt.edu/topic/artificial-intelligence/",
+          "ai_tag_url": "https://news.vt.edu",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
-        }
+          "notes": "Auto-generated - requires verification | ai_tag_url replaced with base url due to error: HTTP 404",
+          "last_verified": "2025-11-04T13:55:16.943474+00:00"
+        },
+        "additional_sources": [
+          {
+            "url": "https://vtnews.vt.edu/",
+            "type": "alternate_news",
+            "verified": false
+          },
+          {
+            "url": "https://vtnews.vt.edu/tags/artificial-intelligence.html",
+            "type": "ai_specific",
+            "verified": false
+          }
+        ]
       },
       "data_quality": {
         "completeness_score": 0.5,
@@ -7306,9 +7501,10 @@
         "primary": {
           "url": "https://www.washington.edu/news/",
           "ai_tag_url": "https://www.washington.edu/news/topic/artificial-intelligence/",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "notes": "Auto-generated - requires verification"
+          "notes": "Auto-generated - requires verification",
+          "last_verified": "2025-11-04T13:55:17.700896+00:00"
         }
       },
       "data_quality": {
