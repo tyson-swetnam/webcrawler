@@ -700,50 +700,53 @@ class HTMLReportGenerator:
 
     def _render_how_it_works_page(self) -> str:
         """Render 'How It Works' documentation page"""
-        # Load source lists
-        import json
-        from pathlib import Path
+        # Load source lists using settings.get_university_sources()
+        from crawler.config.settings import settings
 
-        config_dir = Path(__file__).parent.parent / 'config'
+        # Get all sources
+        all_sources = settings.get_university_sources()
 
-        # Load peer institutions
-        peer_institutions = []
-        try:
-            with open(config_dir / 'peer_institutions.json', 'r') as f:
-                peer_data = json.load(f)
-                peer_institutions = [u['name'] for u in peer_data.get('universities', [])]
-        except Exception as e:
-            print(f"Error loading peer institutions: {e}")
+        # Categorize sources using the classifier
+        peer_sources = []
+        r1_sources = []
+        facility_sources = []
 
-        # Load R1 universities
-        r1_universities = []
-        try:
-            with open(config_dir / 'r1_universities.json', 'r') as f:
-                r1_data = json.load(f)
-                r1_universities = [u['name'] for u in r1_data.get('universities', [])]
-        except Exception as e:
-            print(f"Error loading R1 universities: {e}")
+        for source in all_sources:
+            name = source.get('name')
+            category = self.classifier.classify(name)
 
-        # Load major facilities
-        major_facilities = []
-        try:
-            with open(config_dir / 'major_facilities.json', 'r') as f:
-                facilities_data = json.load(f)
-                major_facilities = [f['name'] for f in facilities_data.get('facilities', [])]
-        except Exception as e:
-            print(f"Error loading major facilities: {e}")
+            if category == 'peer':
+                peer_sources.append(source)
+            elif category == 'r1':
+                r1_sources.append(source)
+            else:  # 'facility'
+                facility_sources.append(source)
 
-        # Build source lists HTML
-        def build_collapsible_list(title, items, section_id):
-            if not items:
+        # Build source lists HTML with hyperlinks
+        def build_collapsible_list(title, sources, section_id):
+            if not sources:
                 return f'<p><em>No {title.lower()} available</em></p>'
 
-            items_html = ''.join([f'<li>{item}</li>' for item in sorted(items)])
+            # Sort sources by name
+            sorted_sources = sorted(sources, key=lambda s: s.get('name', ''))
+
+            # Build hyperlinked list items
+            items_html = []
+            for source in sorted_sources:
+                name = source.get('name', 'Unknown')
+                url = source.get('news_url', '')
+
+                if url:
+                    items_html.append(f'<li><a href="{url}" target="_blank">{name}</a></li>')
+                else:
+                    items_html.append(f'<li>{name}</li>')
+
+            items_str = ''.join(items_html)
             return f'''
                 <details>
-                    <summary><strong>{title}</strong> ({len(items)} sources)</summary>
+                    <summary><strong>{title}</strong> ({len(sources)} sources)</summary>
                     <ul class="source-list">
-                        {items_html}
+                        {items_str}
                     </ul>
                 </details>
             '''
@@ -751,13 +754,13 @@ class HTMLReportGenerator:
         sources_section = f'''
         <h2>Complete Source List</h2>
         <p>
-            This crawler monitors {len(peer_institutions) + len(r1_universities) + len(major_facilities)} sources across three categories:
+            This crawler monitors {len(peer_sources) + len(r1_sources) + len(facility_sources)} sources across three categories:
         </p>
 
         <div class="sources-section">
-            {build_collapsible_list("Peer Institutions", peer_institutions, "peer")}
-            {build_collapsible_list("R1 Universities", r1_universities, "r1")}
-            {build_collapsible_list("Major Research Facilities", major_facilities, "facilities")}
+            {build_collapsible_list("Peer Institutions", peer_sources, "peer")}
+            {build_collapsible_list("R1 Universities", r1_sources, "r1")}
+            {build_collapsible_list("Major Research Facilities", facility_sources, "facilities")}
         </div>
         '''
 
@@ -915,6 +918,20 @@ class HTMLReportGenerator:
         .source-list li {{
             margin-bottom: 8px;
             break-inside: avoid;
+        }}
+
+        .source-list a {{
+            color: #0000cc;
+            text-decoration: none;
+        }}
+
+        .source-list a:hover {{
+            text-decoration: underline;
+            color: #cc0000;
+        }}
+
+        .source-list a:visited {{
+            color: #551a8b;
         }}
 
         @media (max-width: 1200px) {{
