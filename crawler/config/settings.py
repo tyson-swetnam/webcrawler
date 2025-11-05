@@ -360,10 +360,27 @@ class Settings(BaseSettings):
 
             elif source_format == "university":
                 # New university format with nested news structure
-                # Support both "news" and "news_sources" -> "primary" structures
-                news = source.get("news", {})
-                if not news and "news_sources" in source:
-                    news = source.get("news_sources", {}).get("primary", {})
+                # Schema v3.0.0: news_sources is an array of source objects
+                # Legacy: news_sources.primary or news object
+                news = {}
+
+                if "news_sources" in source:
+                    news_sources = source.get("news_sources", [])
+                    if isinstance(news_sources, list) and news_sources:
+                        # Schema v3.0.0: Find primary source in array
+                        for ns in news_sources:
+                            if ns.get("type") == "primary":
+                                news = ns
+                                break
+                        # If no primary found, use first source
+                        if not news:
+                            news = news_sources[0]
+                    elif isinstance(news_sources, dict):
+                        # Legacy format: news_sources.primary
+                        news = news_sources.get("primary", {})
+                elif "news" in source:
+                    # Legacy format: news object
+                    news = source.get("news", {})
 
                 # Determine which URL to use
                 if self.prefer_ai_tag_urls and news.get("ai_tag_url"):
@@ -406,7 +423,23 @@ class Settings(BaseSettings):
 
             elif source_format == "facility":
                 # Major research facilities format
-                news = source.get("news_sources", {}).get("primary", {})
+                # Schema v3.0.0: news_sources is an array of source objects
+                news = {}
+
+                if "news_sources" in source:
+                    news_sources = source.get("news_sources", [])
+                    if isinstance(news_sources, list) and news_sources:
+                        # Schema v3.0.0: Find primary source in array
+                        for ns in news_sources:
+                            if ns.get("type") == "primary":
+                                news = ns
+                                break
+                        # If no primary found, use first source
+                        if not news:
+                            news = news_sources[0]
+                    elif isinstance(news_sources, dict):
+                        # Legacy format: news_sources.primary
+                        news = news_sources.get("primary", {})
 
                 location_obj = source.get("location", {})
                 location = f"{location_obj.get('city', '')}, {location_obj.get('state', '')}".strip(", ")
@@ -422,7 +455,8 @@ class Settings(BaseSettings):
                     "source_type": "facility",
                     "facility_type": source.get("facility_type"),
                     "affiliated_institution": source.get("affiliated_institution"),
-                    "crawl_priority": news.get("crawl_priority", 100)
+                    "crawl_priority": news.get("crawl_priority", 100),
+                    "verified": news.get("verified", False)
                 }
 
             elif source_format == "meta_news":
