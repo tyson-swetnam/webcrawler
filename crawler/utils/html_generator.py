@@ -85,41 +85,48 @@ class HTMLReportGenerator:
         with get_db() as session:
             articles = self._fetch_articles_for_date(session, date)
 
-        html = self._render_main_page(articles, date)
-
         # Write to index.html for current day
         if date.date() == datetime.now().date():
+            # Main page (root level) - use relative paths without ../
+            html = self._render_main_page(articles, date, is_archive_page=False)
             output_file = self.output_dir / "index.html"
+            output_file.write_text(html, encoding='utf-8')
 
-            # ALSO save dated archive file for today
+            # ALSO save dated archive file for today (in archive/ dir)
+            html_archive = self._render_main_page(articles, date, is_archive_page=True)
             archive_dir = self.output_dir / "archive"
             archive_dir.mkdir(exist_ok=True)
             archive_file = archive_dir / f"{date.strftime('%Y-%m-%d')}.html"
-            archive_file.write_text(html, encoding='utf-8')
+            archive_file.write_text(html_archive, encoding='utf-8')
         else:
-            # Archive files by date
+            # Archive files by date (in archive/ dir)
+            html = self._render_main_page(articles, date, is_archive_page=True)
             archive_dir = self.output_dir / "archive"
             archive_dir.mkdir(exist_ok=True)
             output_file = archive_dir / f"{date.strftime('%Y-%m-%d')}.html"
-
-        output_file.write_text(html, encoding='utf-8')
+            output_file.write_text(html, encoding='utf-8')
 
         # Also write to GitHub Pages directory if configured
         if self.github_pages_dir:
             if date.date() == datetime.now().date():
+                # Main page for GitHub Pages
+                html_main = self._render_main_page(articles, date, is_archive_page=False)
                 gh_output_file = self.github_pages_dir / "index.html"
+                gh_output_file.write_text(html_main, encoding='utf-8')
 
-                # ALSO save dated archive file for today
+                # Archive file for today
+                html_archive = self._render_main_page(articles, date, is_archive_page=True)
                 gh_archive_dir = self.github_pages_dir / "archive"
                 gh_archive_dir.mkdir(exist_ok=True)
                 gh_archive_file = gh_archive_dir / f"{date.strftime('%Y-%m-%d')}.html"
-                gh_archive_file.write_text(html, encoding='utf-8')
+                gh_archive_file.write_text(html_archive, encoding='utf-8')
             else:
+                # Archive file for past date
+                html = self._render_main_page(articles, date, is_archive_page=True)
                 gh_archive_dir = self.github_pages_dir / "archive"
                 gh_archive_dir.mkdir(exist_ok=True)
                 gh_output_file = gh_archive_dir / f"{date.strftime('%Y-%m-%d')}.html"
-
-            gh_output_file.write_text(html, encoding='utf-8')
+                gh_output_file.write_text(html, encoding='utf-8')
 
         return str(output_file)
 
@@ -199,8 +206,14 @@ class HTMLReportGenerator:
 
         return articles
 
-    def _render_main_page(self, articles: List[Dict], date: datetime) -> str:
-        """Render main page with three-column layout: Peer Institutions, R1 Institutions, Major Facilities"""
+    def _render_main_page(self, articles: List[Dict], date: datetime, is_archive_page: bool = False) -> str:
+        """Render main page with three-column layout: Peer Institutions, R1 Institutions, Major Facilities
+
+        Args:
+            articles: List of article dictionaries
+            date: Date for the report
+            is_archive_page: If True, generates URLs for pages in archive/ folder (need ../ prefix)
+        """
         date_str = date.strftime('%A, %B %d, %Y')
 
         # Categorize articles by university/facility tier
@@ -290,6 +303,18 @@ class HTMLReportGenerator:
         '''
 
         articles_html = stats_html + columns_html if articles else '<p class="no-results">No AI-related articles found for this date.</p>'
+
+        # Set navigation URLs based on page location
+        if is_archive_page:
+            # Archive pages are in archive/ subfolder, need ../ to go up
+            nav_today_url = "../index.html"
+            nav_archive_url = "index.html"
+            nav_how_it_works_url = "../how_it_works.html"
+        else:
+            # Main index.html is at root level
+            nav_today_url = "index.html"
+            nav_archive_url = "archive/index.html"
+            nav_how_it_works_url = "how_it_works.html"
 
         return f'''<!DOCTYPE html>
 <html lang="en">
@@ -529,9 +554,9 @@ class HTMLReportGenerator:
     </div>
 
     <div class="nav">
-        <a href="index.html">TODAY</a>
-        <a href="archive/index.html">ARCHIVE</a>
-        <a href="how_it_works.html">HOW IT WORKS</a>
+        <a href="{nav_today_url}">TODAY</a>
+        <a href="{nav_archive_url}">ARCHIVE</a>
+        <a href="{nav_how_it_works_url}">HOW IT WORKS</a>
     </div>
 
     {articles_html}
