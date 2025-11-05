@@ -1,15 +1,18 @@
 {
   "metadata": {
-    "schema_version": "2.0.0",
+    "schema_version": "3.0.0",
     "title": "Major Research Facilities - NSF and DOE National Labs",
     "description": "NSF-funded supercomputing centers and DOE national laboratories operating major research infrastructure",
     "total_facilities": 27,
     "date_compiled": "2025-11-02",
-    "last_updated": "2025-11-02",
+    "last_updated": "2025-11-05T13:44:26.942273+00:00",
     "data_sources": [
       "NSF Advanced Cyberinfrastructure Coordination Ecosystem: Services & Support",
       "U.S. Department of Energy Office of Science National Laboratories",
       "NSF Major Facilities Directory"
+    ],
+    "migration_notes": [
+      "Migrated to schema v3.0.0 on 2025-11-04: Converted news_sources to array structure, removed broken ai_tag_url field, added multi-source support for AI research institutions"
     ]
   },
   "facilities": [
@@ -26,17 +29,27 @@
         "region": "South",
         "country": "US"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.tacc.utexas.edu/news",
-          "ai_tag_url": "https://www.tacc.utexas.edu/news/tag/artificial-intelligence",
+          "description": "Texas Advanced Computing Center - NSF Supercomputing Center news and updates",
           "verified": true,
           "crawl_priority": 200,
-          "notes": "Major HPC facility, hosts Frontera supercomputer"
+          "last_verified": "2025-11-05T13:44:26.942309+00:00"
         }
-      },
-      "research_focus": ["High-performance computing", "AI/ML", "Data science", "Visualization"],
-      "major_systems": ["Frontera", "Stampede3", "Lonestar6"]
+      ],
+      "research_focus": [
+        "High-performance computing",
+        "AI/ML",
+        "Data science",
+        "Visualization"
+      ],
+      "major_systems": [
+        "Frontera",
+        "Stampede3",
+        "Lonestar6"
+      ]
     },
     {
       "id": 2,
@@ -51,17 +64,26 @@
         "region": "West",
         "country": "US"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.sdsc.edu/News/",
-          "ai_tag_url": "https://www.sdsc.edu/News/?topic=artificial-intelligence",
+          "description": "San Diego Supercomputer Center - NSF Supercomputing Center news and updates",
           "verified": true,
           "crawl_priority": 200,
-          "notes": "Leading data-intensive computing center"
+          "last_verified": "2025-11-05T13:44:26.942332+00:00"
         }
-      },
-      "research_focus": ["Data-intensive computing", "AI/ML", "Cloud computing", "Data science"],
-      "major_systems": ["Expanse", "Voyager"]
+      ],
+      "research_focus": [
+        "Data-intensive computing",
+        "AI/ML",
+        "Cloud computing",
+        "Data science"
+      ],
+      "major_systems": [
+        "Expanse",
+        "Voyager"
+      ]
     },
     {
       "id": 3,
@@ -76,17 +98,26 @@
         "region": "Northeast",
         "country": "US"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.psc.edu/news/",
-          "ai_tag_url": "https://www.psc.edu/news/?topic=ai",
+          "description": "Pittsburgh Supercomputing Center - NSF Supercomputing Center news and updates",
           "verified": false,
           "crawl_priority": 200,
-          "notes": "Joint facility of CMU and Pitt"
+          "last_verified": "2025-11-05T13:44:26.942346+00:00"
         }
-      },
-      "research_focus": ["Scientific computing", "AI/ML", "Data analytics", "Biomedical computing"],
-      "major_systems": ["Bridges-2", "Neocortex"]
+      ],
+      "research_focus": [
+        "Scientific computing",
+        "AI/ML",
+        "Data analytics",
+        "Biomedical computing"
+      ],
+      "major_systems": [
+        "Bridges-2",
+        "Neocortex"
+      ]
     },
     {
       "id": 4,
@@ -101,17 +132,26 @@
         "region": "Midwest",
         "country": "US"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.ncsa.illinois.edu/news/",
-          "ai_tag_url": "https://www.ncsa.illinois.edu/news/tag/artificial-intelligence/",
+          "description": "National Center for Supercomputing Applications - NSF Supercomputing Center news and updates",
           "verified": true,
           "crawl_priority": 200,
-          "notes": "Historic HPC center, birthplace of NCSA Mosaic"
+          "last_verified": "2025-11-05T13:44:26.942357+00:00"
         }
-      },
-      "research_focus": ["Supercomputing", "AI/ML", "Data science", "Visualization"],
-      "major_systems": ["Delta", "HAL"]
+      ],
+      "research_focus": [
+        "Supercomputing",
+        "AI/ML",
+        "Data science",
+        "Visualization"
+      ],
+      "major_systems": [
+        "Delta",
+        "HAL"
+      ]
     },
     {
       "id": 5,
@@ -126,17 +166,25 @@
         "region": "Midwest",
         "country": "US"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.rcac.purdue.edu/news",
-          "ai_tag_url": "https://www.rcac.purdue.edu/news?topic=ai",
+          "description": "Purdue Rosen Center for Advanced Computing - University Research Computing news and updates",
           "verified": false,
           "crawl_priority": 150,
-          "notes": "Major university research computing facility"
+          "last_verified": "2025-11-05T13:44:26.942367+00:00"
         }
-      },
-      "research_focus": ["Research computing", "AI/ML", "Data management"],
-      "major_systems": ["Anvil", "Bell"]
+      ],
+      "research_focus": [
+        "Research computing",
+        "AI/ML",
+        "Data management"
+      ],
+      "major_systems": [
+        "Anvil",
+        "Bell"
+      ]
     },
     {
       "id": 6,
@@ -151,17 +199,25 @@
         "region": "Midwest",
         "country": "US"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://pti.iu.edu/news/",
-          "ai_tag_url": "https://pti.iu.edu/news/?topic=artificial-intelligence",
+          "description": "Indiana University Pervasive Technology Institute - University Research Computing news and updates",
           "verified": false,
           "crawl_priority": 150,
-          "notes": "Advanced cyberinfrastructure"
+          "last_verified": "2025-11-05T13:44:26.942376+00:00"
         }
-      },
-      "research_focus": ["Cyberinfrastructure", "Data science", "Networking"],
-      "major_systems": ["Jetstream2", "Big Red 200"]
+      ],
+      "research_focus": [
+        "Cyberinfrastructure",
+        "Data science",
+        "Networking"
+      ],
+      "major_systems": [
+        "Jetstream2",
+        "Big Red 200"
+      ]
     },
     {
       "id": 7,
@@ -176,17 +232,26 @@
         "region": "Midwest",
         "country": "US"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.anl.gov/news",
-          "ai_tag_url": "https://www.anl.gov/topic/artificial-intelligence",
+          "description": "Argonne National Laboratory - DOE National Laboratory news and updates",
           "verified": true,
           "crawl_priority": 250,
-          "notes": "Hosts Aurora exascale system"
+          "last_verified": "2025-11-05T13:44:26.942386+00:00"
         }
-      },
-      "research_focus": ["Exascale computing", "AI/ML", "Materials science", "Energy research"],
-      "major_systems": ["Aurora", "Polaris"]
+      ],
+      "research_focus": [
+        "Exascale computing",
+        "AI/ML",
+        "Materials science",
+        "Energy research"
+      ],
+      "major_systems": [
+        "Aurora",
+        "Polaris"
+      ]
     },
     {
       "id": 8,
@@ -201,17 +266,26 @@
         "region": "West",
         "country": "US"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.llnl.gov/news",
-          "ai_tag_url": "https://www.llnl.gov/news/topic/artificial-intelligence",
+          "description": "Lawrence Livermore National Laboratory - DOE National Laboratory news and updates",
           "verified": true,
           "crawl_priority": 250,
-          "notes": "Hosts El Capitan exascale system"
+          "last_verified": "2025-11-05T13:44:26.942398+00:00"
         }
-      },
-      "research_focus": ["National security", "Exascale computing", "AI/ML", "Nuclear weapons"],
-      "major_systems": ["El Capitan", "Sierra"]
+      ],
+      "research_focus": [
+        "National security",
+        "Exascale computing",
+        "AI/ML",
+        "Nuclear weapons"
+      ],
+      "major_systems": [
+        "El Capitan",
+        "Sierra"
+      ]
     },
     {
       "id": 9,
@@ -226,17 +300,26 @@
         "region": "West",
         "country": "US"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.lanl.gov/news",
-          "ai_tag_url": "https://www.lanl.gov/news/tag/artificial-intelligence",
+          "description": "Los Alamos National Laboratory - DOE National Laboratory news and updates",
           "verified": true,
           "crawl_priority": 250,
-          "notes": "Historic Manhattan Project site"
+          "last_verified": "2025-11-05T13:44:26.942413+00:00"
         }
-      },
-      "research_focus": ["National security", "Nuclear science", "AI/ML", "Supercomputing"],
-      "major_systems": ["Venado", "Chicoma"]
+      ],
+      "research_focus": [
+        "National security",
+        "Nuclear science",
+        "AI/ML",
+        "Supercomputing"
+      ],
+      "major_systems": [
+        "Venado",
+        "Chicoma"
+      ]
     },
     {
       "id": 10,
@@ -251,17 +334,26 @@
         "region": "South",
         "country": "US"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.ornl.gov/news",
-          "ai_tag_url": "https://www.ornl.gov/news/topic/artificial-intelligence",
+          "description": "Oak Ridge National Laboratory - DOE National Laboratory news and updates",
           "verified": true,
           "crawl_priority": 250,
-          "notes": "Hosts Frontier exascale system"
+          "last_verified": "2025-11-05T13:44:26.942433+00:00"
         }
-      },
-      "research_focus": ["Exascale computing", "AI/ML", "Neutron science", "Materials research"],
-      "major_systems": ["Frontier", "Summit"]
+      ],
+      "research_focus": [
+        "Exascale computing",
+        "AI/ML",
+        "Neutron science",
+        "Materials research"
+      ],
+      "major_systems": [
+        "Frontier",
+        "Summit"
+      ]
     },
     {
       "id": 11,
@@ -276,17 +368,26 @@
         "region": "West",
         "country": "US"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://newscenter.lbl.gov/",
-          "ai_tag_url": "https://newscenter.lbl.gov/tag/artificial-intelligence/",
+          "description": "Lawrence Berkeley National Laboratory - DOE National Laboratory news and updates",
           "verified": true,
           "crawl_priority": 250,
-          "notes": "Operates NERSC supercomputing facility"
+          "last_verified": "2025-11-05T13:44:26.942465+00:00"
         }
-      },
-      "research_focus": ["Scientific computing", "AI/ML", "Energy sciences", "Materials"],
-      "major_systems": ["Perlmutter (NERSC)", "Cori"]
+      ],
+      "research_focus": [
+        "Scientific computing",
+        "AI/ML",
+        "Energy sciences",
+        "Materials"
+      ],
+      "major_systems": [
+        "Perlmutter (NERSC)",
+        "Cori"
+      ]
     },
     {
       "id": 12,
@@ -301,17 +402,26 @@
         "region": "West",
         "country": "US"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.sandia.gov/labnews/",
-          "ai_tag_url": "https://www.sandia.gov/labnews/?topic=artificial-intelligence",
+          "description": "Sandia National Laboratories - DOE National Laboratory news and updates",
           "verified": false,
           "crawl_priority": 200,
-          "notes": "Engineering and national security research"
+          "last_verified": "2025-11-05T13:44:26.942493+00:00"
         }
-      },
-      "research_focus": ["National security", "Engineering", "Computing", "Materials science"],
-      "major_systems": ["Astra", "Vanguard"]
+      ],
+      "research_focus": [
+        "National security",
+        "Engineering",
+        "Computing",
+        "Materials science"
+      ],
+      "major_systems": [
+        "Astra",
+        "Vanguard"
+      ]
     },
     {
       "id": 13,
@@ -326,17 +436,26 @@
         "region": "West",
         "country": "US"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.pnnl.gov/news",
-          "ai_tag_url": "https://www.pnnl.gov/news?topic=artificial-intelligence",
+          "description": "Pacific Northwest National Laboratory - DOE National Laboratory news and updates",
           "verified": false,
           "crawl_priority": 200,
-          "notes": "Chemistry, biology, and computing"
+          "last_verified": "2025-11-05T13:44:26.942521+00:00"
         }
-      },
-      "research_focus": ["Environmental science", "Energy", "National security", "Computing"],
-      "major_systems": ["Deception", "Constance"]
+      ],
+      "research_focus": [
+        "Environmental science",
+        "Energy",
+        "National security",
+        "Computing"
+      ],
+      "major_systems": [
+        "Deception",
+        "Constance"
+      ]
     },
     {
       "id": 14,
@@ -351,17 +470,25 @@
         "region": "Northeast",
         "country": "US"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.bnl.gov/newsroom/",
-          "ai_tag_url": "https://www.bnl.gov/newsroom/news.php?a=artificial-intelligence",
+          "description": "Brookhaven National Laboratory - DOE National Laboratory news and updates",
           "verified": false,
           "crawl_priority": 200,
-          "notes": "High-energy physics and nuclear science"
+          "last_verified": "2025-11-05T13:44:26.942545+00:00"
         }
-      },
-      "research_focus": ["Nuclear physics", "Materials science", "Energy sciences", "Computing"],
-      "major_systems": ["RHIC Computing Facility"]
+      ],
+      "research_focus": [
+        "Nuclear physics",
+        "Materials science",
+        "Energy sciences",
+        "Computing"
+      ],
+      "major_systems": [
+        "RHIC Computing Facility"
+      ]
     },
     {
       "id": 15,
@@ -376,17 +503,26 @@
         "region": "West",
         "country": "US"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www6.slac.stanford.edu/news",
-          "ai_tag_url": "https://www6.slac.stanford.edu/news/topic/artificial-intelligence",
+          "description": "SLAC National Accelerator Laboratory - DOE National Laboratory news and updates",
           "verified": true,
           "crawl_priority": 250,
-          "notes": "Particle physics and photon science"
+          "last_verified": "2025-11-05T13:44:26.942580+00:00"
         }
-      },
-      "research_focus": ["Particle physics", "X-ray science", "AI/ML", "Accelerators"],
-      "major_systems": ["LCLS Computing", "S3DF"]
+      ],
+      "research_focus": [
+        "Particle physics",
+        "X-ray science",
+        "AI/ML",
+        "Accelerators"
+      ],
+      "major_systems": [
+        "LCLS Computing",
+        "S3DF"
+      ]
     },
     {
       "id": 16,
@@ -401,17 +537,26 @@
         "region": "Midwest",
         "country": "US"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://news.fnal.gov/",
-          "ai_tag_url": "https://news.fnal.gov/category/artificial-intelligence/",
+          "description": "Fermi National Accelerator Laboratory - DOE National Laboratory news and updates",
           "verified": false,
           "crawl_priority": 200,
-          "notes": "High-energy particle physics"
+          "last_verified": "2025-11-05T13:44:26.942600+00:00"
         }
-      },
-      "research_focus": ["Particle physics", "Neutrinos", "AI/ML for physics", "Accelerators"],
-      "major_systems": ["Wilson Cluster", "LHC Tier-1"]
+      ],
+      "research_focus": [
+        "Particle physics",
+        "Neutrinos",
+        "AI/ML for physics",
+        "Accelerators"
+      ],
+      "major_systems": [
+        "Wilson Cluster",
+        "LHC Tier-1"
+      ]
     },
     {
       "id": 17,
@@ -426,17 +571,25 @@
         "region": "West",
         "country": "US"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://inl.gov/news/",
-          "ai_tag_url": "https://inl.gov/news/?topic=artificial-intelligence",
+          "description": "Idaho National Laboratory - DOE National Laboratory news and updates",
           "verified": false,
           "crawl_priority": 150,
-          "notes": "Nuclear energy research"
+          "last_verified": "2025-11-05T13:44:26.942620+00:00"
         }
-      },
-      "research_focus": ["Nuclear energy", "Critical infrastructure", "National security"],
-      "major_systems": ["Sawtooth", "Lemhi"]
+      ],
+      "research_focus": [
+        "Nuclear energy",
+        "Critical infrastructure",
+        "National security"
+      ],
+      "major_systems": [
+        "Sawtooth",
+        "Lemhi"
+      ]
     },
     {
       "id": 18,
@@ -451,17 +604,26 @@
         "region": "West",
         "country": "US"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.nrel.gov/news/",
-          "ai_tag_url": "https://www.nrel.gov/news/?topic=artificial-intelligence",
+          "description": "National Renewable Energy Laboratory - DOE National Laboratory news and updates",
           "verified": false,
           "crawl_priority": 200,
-          "notes": "Renewable energy and efficiency"
+          "last_verified": "2025-11-05T13:44:26.942659+00:00"
         }
-      },
-      "research_focus": ["Renewable energy", "AI/ML for energy", "Solar", "Wind"],
-      "major_systems": ["Eagle", "Kestrel"]
+      ],
+      "research_focus": [
+        "Renewable energy",
+        "AI/ML for energy",
+        "Solar",
+        "Wind"
+      ],
+      "major_systems": [
+        "Eagle",
+        "Kestrel"
+      ]
     },
     {
       "id": 19,
@@ -476,17 +638,25 @@
         "region": "Midwest",
         "country": "US"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.ameslab.gov/news",
-          "ai_tag_url": "https://www.ameslab.gov/news?topic=artificial-intelligence",
+          "description": "Ames Laboratory - DOE National Laboratory news and updates",
           "verified": false,
           "crawl_priority": 150,
-          "notes": "Materials science research"
+          "last_verified": "2025-11-05T13:44:26.942688+00:00"
         }
-      },
-      "research_focus": ["Materials science", "Rare earth elements", "AI for materials"],
-      "major_systems": ["Condo", "Thunder"]
+      ],
+      "research_focus": [
+        "Materials science",
+        "Rare earth elements",
+        "AI for materials"
+      ],
+      "major_systems": [
+        "Condo",
+        "Thunder"
+      ]
     },
     {
       "id": 20,
@@ -501,17 +671,24 @@
         "region": "Northeast",
         "country": "US"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.pppl.gov/news",
-          "ai_tag_url": "https://www.pppl.gov/news?topic=artificial-intelligence",
+          "description": "Princeton Plasma Physics Laboratory - DOE National Laboratory news and updates",
           "verified": false,
           "crawl_priority": 150,
-          "notes": "Fusion energy research"
+          "last_verified": "2025-11-05T13:44:26.942710+00:00"
         }
-      },
-      "research_focus": ["Fusion energy", "Plasma physics", "AI for fusion control"],
-      "major_systems": ["NSTX-U Computing"]
+      ],
+      "research_focus": [
+        "Fusion energy",
+        "Plasma physics",
+        "AI for fusion control"
+      ],
+      "major_systems": [
+        "NSTX-U Computing"
+      ]
     },
     {
       "id": 21,
@@ -526,17 +703,24 @@
         "region": "South",
         "country": "US"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.jlab.org/news",
-          "ai_tag_url": "https://www.jlab.org/news?topic=artificial-intelligence",
+          "description": "Thomas Jefferson National Accelerator Facility - DOE National Laboratory news and updates",
           "verified": false,
           "crawl_priority": 150,
-          "notes": "Nuclear physics research"
+          "last_verified": "2025-11-05T13:44:26.942735+00:00"
         }
-      },
-      "research_focus": ["Nuclear physics", "Accelerators", "Computing"],
-      "major_systems": ["SciComp Farm"]
+      ],
+      "research_focus": [
+        "Nuclear physics",
+        "Accelerators",
+        "Computing"
+      ],
+      "major_systems": [
+        "SciComp Farm"
+      ]
     },
     {
       "id": 22,
@@ -551,16 +735,21 @@
         "region": "South",
         "country": "US"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.srnl.gov/news",
-          "ai_tag_url": "https://www.srnl.gov/news?topic=artificial-intelligence",
+          "description": "Savannah River National Laboratory - DOE National Laboratory news and updates",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Environmental management"
+          "last_verified": "2025-11-05T13:44:26.942752+00:00"
         }
-      },
-      "research_focus": ["Environmental management", "National security", "Materials"],
+      ],
+      "research_focus": [
+        "Environmental management",
+        "National security",
+        "Materials"
+      ],
       "major_systems": []
     },
     {
@@ -576,17 +765,24 @@
         "region": "Northeast",
         "country": "US"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.netl.doe.gov/newsroom",
-          "ai_tag_url": "https://www.netl.doe.gov/newsroom?topic=artificial-intelligence",
+          "description": "National Energy Technology Laboratory - DOE National Laboratory news and updates",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Fossil energy and carbon management"
+          "last_verified": "2025-11-05T13:44:26.942770+00:00"
         }
-      },
-      "research_focus": ["Fossil energy", "Carbon capture", "Energy systems"],
-      "major_systems": ["Joule 2.0"]
+      ],
+      "research_focus": [
+        "Fossil energy",
+        "Carbon capture",
+        "Energy systems"
+      ],
+      "major_systems": [
+        "Joule 2.0"
+      ]
     },
     {
       "id": 24,
@@ -601,17 +797,26 @@
         "region": "West",
         "country": "US"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://news.ucar.edu/",
-          "ai_tag_url": "https://news.ucar.edu/?topic=artificial-intelligence",
+          "description": "National Center for Atmospheric Research - NSF Research Center news and updates",
           "verified": false,
           "crawl_priority": 200,
-          "notes": "Atmospheric and climate research"
+          "last_verified": "2025-11-05T13:44:26.942789+00:00"
         }
-      },
-      "research_focus": ["Climate science", "Weather prediction", "AI/ML for climate", "Supercomputing"],
-      "major_systems": ["Derecho", "Casper"]
+      ],
+      "research_focus": [
+        "Climate science",
+        "Weather prediction",
+        "AI/ML for climate",
+        "Supercomputing"
+      ],
+      "major_systems": [
+        "Derecho",
+        "Casper"
+      ]
     },
     {
       "id": 25,
@@ -626,16 +831,22 @@
         "region": "West",
         "country": "US"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.neonscience.org/news",
-          "ai_tag_url": "https://www.neonscience.org/news?topic=artificial-intelligence",
+          "description": "National Ecological Observatory Network - NSF Research Infrastructure news and updates",
           "verified": false,
           "crawl_priority": 100,
-          "notes": "Continental-scale ecological observation"
+          "last_verified": "2025-11-05T13:44:26.942809+00:00"
         }
-      },
-      "research_focus": ["Ecology", "Environmental science", "Data science", "AI/ML"],
+      ],
+      "research_focus": [
+        "Ecology",
+        "Environmental science",
+        "Data science",
+        "AI/ML"
+      ],
       "major_systems": []
     },
     {
@@ -651,17 +862,25 @@
         "region": "South",
         "country": "US"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.olcf.ornl.gov/news/",
-          "ai_tag_url": "https://www.olcf.ornl.gov/tag/artificial-intelligence/",
+          "description": "National Center for Computational Sciences - DOE Computing Facility news and updates",
           "verified": true,
           "crawl_priority": 250,
-          "notes": "Oak Ridge Leadership Computing Facility"
+          "last_verified": "2025-11-05T13:44:26.942832+00:00"
         }
-      },
-      "research_focus": ["Leadership computing", "Exascale systems", "AI/ML"],
-      "major_systems": ["Frontier", "Summit"]
+      ],
+      "research_focus": [
+        "Leadership computing",
+        "Exascale systems",
+        "AI/ML"
+      ],
+      "major_systems": [
+        "Frontier",
+        "Summit"
+      ]
     },
     {
       "id": 27,
@@ -676,17 +895,25 @@
         "region": "West",
         "country": "US"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.nersc.gov/news/",
-          "ai_tag_url": "https://www.nersc.gov/news/?topic=artificial-intelligence",
+          "description": "NERSC - DOE Computing Facility news and updates",
           "verified": true,
           "crawl_priority": 250,
-          "notes": "National Energy Research Scientific Computing Center"
+          "last_verified": "2025-11-05T13:44:26.942864+00:00"
         }
-      },
-      "research_focus": ["Scientific computing", "AI/ML for science", "Data management"],
-      "major_systems": ["Perlmutter", "Cori"]
+      ],
+      "research_focus": [
+        "Scientific computing",
+        "AI/ML for science",
+        "Data management"
+      ],
+      "major_systems": [
+        "Perlmutter",
+        "Cori"
+      ]
     }
   ]
 }

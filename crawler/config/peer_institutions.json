@@ -1,12 +1,15 @@
 {
   "metadata": {
-    "schema_version": "2.0.0",
+    "schema_version": "3.0.0",
     "title": "Peer Institutions - University of Arizona Comparator Group",
     "description": "Peer institutions for comparison and benchmarking purposes",
     "baseline_institution": "University of Arizona",
     "total_institutions": 27,
     "date_compiled": "2025-11-02",
-    "last_updated": "2025-11-02"
+    "last_updated": "2025-11-05T13:44:26.945394+00:00",
+    "migration_notes": [
+      "Migrated to schema v3.0.0 on 2025-11-04: Converted news_sources to array structure, removed broken ai_tag_url field, added multi-source support for AI research institutions"
+    ]
   },
   "universities": [
     {
@@ -26,14 +29,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://news.arizona.edu/",
-          "ai_tag_url": "https://news.arizona.edu/tags/artificial-intelligence",
+          "description": "The University of Arizona official news and press releases",
           "verified": true,
-          "crawl_priority": 200
+          "crawl_priority": 200,
+          "last_verified": "2025-11-05T13:44:26.945415+00:00"
         }
-      }
+      ]
     },
     {
       "id": 2,
@@ -51,14 +56,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://newsroom.asu.edu/",
-          "ai_tag_url": "https://newsroom.asu.edu/topics/artificial-intelligence",
+          "description": "Arizona State University official news and press releases",
           "verified": true,
-          "crawl_priority": 200
+          "crawl_priority": 200,
+          "last_verified": "2025-11-05T13:44:26.945425+00:00"
         }
-      }
+      ]
     },
     {
       "id": 3,
@@ -76,14 +83,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.colorado.edu/today/",
-          "ai_tag_url": "https://www.colorado.edu/today/topic/artificial-intelligence",
+          "description": "University of Colorado Boulder official news and press releases",
           "verified": false,
-          "crawl_priority": 150
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T13:44:26.945432+00:00"
         }
-      }
+      ]
     },
     {
       "id": 4,
@@ -101,14 +110,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://attheu.utah.edu/",
-          "ai_tag_url": "https://attheu.utah.edu/tag/artificial-intelligence/",
+          "description": "University of Utah official news and press releases",
           "verified": false,
-          "crawl_priority": 150
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T13:44:26.945438+00:00"
         }
-      }
+      ]
     },
     {
       "id": 5,
@@ -126,14 +137,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://news.unm.edu/",
-          "ai_tag_url": "https://news.unm.edu/tag/artificial-intelligence/",
+          "description": "University of New Mexico official news and press releases",
           "verified": false,
-          "crawl_priority": 150
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T13:44:26.945444+00:00"
         }
-      }
+      ]
     },
     {
       "id": 6,
@@ -151,14 +164,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.unlv.edu/news/",
-          "ai_tag_url": "https://www.unlv.edu/news/topic/artificial-intelligence",
+          "description": "University of Nevada, Las Vegas official news and press releases",
           "verified": false,
-          "crawl_priority": 150
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T13:44:26.945449+00:00"
         }
-      }
+      ]
     },
     {
       "id": 7,
@@ -176,14 +191,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://news.ku.edu/",
-          "ai_tag_url": "https://news.ku.edu/tag/artificial-intelligence",
+          "description": "University of Kansas official news and press releases",
           "verified": false,
-          "crawl_priority": 150
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T13:44:26.945455+00:00"
         }
-      }
+      ]
     },
     {
       "id": 8,
@@ -201,14 +218,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://munews.missouri.edu/",
-          "ai_tag_url": "https://munews.missouri.edu/news-releases/?topics=artificial-intelligence",
+          "description": "University of Missouri official news and press releases",
           "verified": false,
-          "crawl_priority": 150
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T13:44:26.945460+00:00"
         }
-      }
+      ]
     },
     {
       "id": 9,
@@ -226,14 +245,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://uknow.uky.edu/",
-          "ai_tag_url": "https://uknow.uky.edu/tags/artificial-intelligence",
+          "description": "University of Kentucky official news and press releases",
           "verified": false,
-          "crawl_priority": 150
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T13:44:26.945466+00:00"
         }
-      }
+      ]
     },
     {
       "id": 10,
@@ -251,14 +272,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.news.iastate.edu/",
-          "ai_tag_url": "https://www.news.iastate.edu/news/topic/artificial-intelligence",
+          "description": "Iowa State University official news and press releases",
           "verified": false,
-          "crawl_priority": 150
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T13:44:26.945471+00:00"
         }
-      }
+      ]
     },
     {
       "id": 11,
@@ -276,14 +299,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://vtnews.vt.edu/",
-          "ai_tag_url": "https://vtnews.vt.edu/tags/artificial-intelligence.html",
+          "description": "Virginia Tech official news and press releases",
           "verified": false,
-          "crawl_priority": 150
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T13:44:26.945477+00:00"
         }
-      }
+      ]
     },
     {
       "id": 12,
@@ -301,14 +326,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://news.ncsu.edu/",
-          "ai_tag_url": "https://news.ncsu.edu/tag/artificial-intelligence/",
+          "description": "North Carolina State University official news and press releases",
           "verified": false,
-          "crawl_priority": 150
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T13:44:26.945483+00:00"
         }
-      }
+      ]
     },
     {
       "id": 13,
@@ -326,14 +353,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://news.utk.edu/",
-          "ai_tag_url": "https://news.utk.edu/tag/artificial-intelligence/",
+          "description": "University of Tennessee official news and press releases",
           "verified": false,
-          "crawl_priority": 150
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T13:44:26.945488+00:00"
         }
-      }
+      ]
     },
     {
       "id": 14,
@@ -351,14 +380,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://news.auburn.edu/",
-          "ai_tag_url": "https://news.auburn.edu/topic/artificial-intelligence/",
+          "description": "Auburn University official news and press releases",
           "verified": false,
-          "crawl_priority": 150
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T13:44:26.945493+00:00"
         }
-      }
+      ]
     },
     {
       "id": 15,
@@ -376,14 +407,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://sc.edu/about/offices_and_divisions/university_communications/newsroom/",
-          "ai_tag_url": "https://sc.edu/about/offices_and_divisions/university_communications/newsroom/?topic=artificial-intelligence",
+          "description": "University of South Carolina official news and press releases",
           "verified": false,
-          "crawl_priority": 150
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T13:44:26.945498+00:00"
         }
-      }
+      ]
     },
     {
       "id": 16,
@@ -401,14 +434,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.ou.edu/web/news",
-          "ai_tag_url": "https://www.ou.edu/web/news?topics=artificial-intelligence",
+          "description": "University of Oklahoma official news and press releases",
           "verified": false,
-          "crawl_priority": 150
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T13:44:26.945512+00:00"
         }
-      }
+      ]
     },
     {
       "id": 17,
@@ -426,14 +461,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://msutoday.msu.edu/",
-          "ai_tag_url": "https://msutoday.msu.edu/topic/artificial-intelligence/",
+          "description": "Michigan State University official news and press releases",
           "verified": false,
-          "crawl_priority": 150
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T13:44:26.945518+00:00"
         }
-      }
+      ]
     },
     {
       "id": 18,
@@ -451,14 +488,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://news.iu.edu/",
-          "ai_tag_url": "https://news.iu.edu/tags/artificial-intelligence",
+          "description": "Indiana University official news and press releases",
           "verified": false,
-          "crawl_priority": 150
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T13:44:26.945523+00:00"
         }
-      }
+      ]
     },
     {
       "id": 19,
@@ -476,14 +515,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.psu.edu/news/",
-          "ai_tag_url": "https://www.psu.edu/news/?topic=artificial-intelligence",
+          "description": "Penn State University official news and press releases",
           "verified": false,
-          "crawl_priority": 150
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T13:44:26.945529+00:00"
         }
-      }
+      ]
     },
     {
       "id": 20,
@@ -501,14 +542,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://twin-cities.umn.edu/news",
-          "ai_tag_url": "https://twin-cities.umn.edu/news?topic=artificial-intelligence",
+          "description": "University of Minnesota official news and press releases",
           "verified": false,
-          "crawl_priority": 150
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T13:44:26.945535+00:00"
         }
-      }
+      ]
     },
     {
       "id": 21,
@@ -526,14 +569,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://umdrightnow.umd.edu/",
-          "ai_tag_url": "https://umdrightnow.umd.edu/topic/artificial-intelligence",
+          "description": "University of Maryland official news and press releases",
           "verified": false,
-          "crawl_priority": 150
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T13:44:26.945543+00:00"
         }
-      }
+      ]
     },
     {
       "id": 22,
@@ -551,14 +596,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.pittwire.pitt.edu/",
-          "ai_tag_url": "https://www.pittwire.pitt.edu/topics/artificial-intelligence",
+          "description": "University of Pittsburgh official news and press releases",
           "verified": false,
-          "crawl_priority": 150
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T13:44:26.945549+00:00"
         }
-      }
+      ]
     },
     {
       "id": 23,
@@ -576,14 +623,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://today.uconn.edu/",
-          "ai_tag_url": "https://today.uconn.edu/tag/artificial-intelligence/",
+          "description": "University of Connecticut official news and press releases",
           "verified": false,
-          "crawl_priority": 150
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T13:44:26.945554+00:00"
         }
-      }
+      ]
     },
     {
       "id": 24,
@@ -601,14 +650,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.umass.edu/news/",
-          "ai_tag_url": "https://www.umass.edu/news/topic/artificial-intelligence",
+          "description": "University of Massachusetts Amherst official news and press releases",
           "verified": false,
-          "crawl_priority": 150
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T13:44:26.945560+00:00"
         }
-      }
+      ]
     },
     {
       "id": 25,
@@ -626,14 +677,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://news.rutgers.edu/",
-          "ai_tag_url": "https://news.rutgers.edu/topic/artificial-intelligence",
+          "description": "Rutgers University official news and press releases",
           "verified": false,
-          "crawl_priority": 150
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T13:44:26.945565+00:00"
         }
-      }
+      ]
     },
     {
       "id": 26,
@@ -651,14 +704,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://today.ttu.edu/",
-          "ai_tag_url": "https://today.ttu.edu/tag/artificial-intelligence/",
+          "description": "Texas Tech University official news and press releases",
           "verified": false,
-          "crawl_priority": 150
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T13:44:26.945571+00:00"
         }
-      }
+      ]
     },
     {
       "id": 27,
@@ -676,14 +731,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.washington.edu/news/",
-          "ai_tag_url": "https://www.washington.edu/news/topic/artificial-intelligence/",
+          "description": "University of Washington official news and press releases",
           "verified": false,
-          "crawl_priority": 150
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T13:44:26.945576+00:00"
         }
-      }
+      ]
     }
   ]
 }
