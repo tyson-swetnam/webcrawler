@@ -1,0 +1,154 @@
+{
+  "batch": "Batch 1: Peer Institutions",
+  "total": 25,
+  "verified": 22,
+  "broken": 3,
+  "in_progress": 0,
+  "verified_urls": [
+    {
+      "name": "University of Colorado Boulder",
+      "url": "https://www.colorado.edu/today/",
+      "status": "verified",
+      "notes": "Active news site with recent articles from November 2025"
+    },
+    {
+      "name": "University of Utah",
+      "url": "https://attheu.utah.edu/",
+      "status": "verified",
+      "notes": "Active news site with recent articles from November 2025"
+    },
+    {
+      "name": "University of New Mexico",
+      "url": "https://news.unm.edu/",
+      "status": "verified",
+      "notes": "Active news site with recent articles from November 2025"
+    },
+    {
+      "name": "University of Nevada, Las Vegas",
+      "url": "https://www.unlv.edu/news/",
+      "status": "verified",
+      "notes": "Active news site with recent articles from November 2025"
+    },
+    {
+      "name": "University of Kansas",
+      "url": "https://news.ku.edu/",
+      "status": "verified",
+      "notes": "Active news site with recent articles from November 2025"
+    },
+    {
+      "name": "University of Missouri",
+      "url": "https://munews.missouri.edu/",
+      "status": "verified",
+      "notes": "Active news site with recent articles from November 2025"
+    },
+    {
+      "name": "University of Kentucky",
+      "url": "https://uknow.uky.edu/",
+      "status": "verified",
+      "notes": "Active news site with recent articles from November 2025"
+    },
+    {
+      "name": "Iowa State University",
+      "url": "https://www.news.iastate.edu/",
+      "status": "verified",
+      "notes": "Active news site with recent articles from October 2025"
+    },
+    {
+      "name": "Virginia Tech",
+      "url": "https://vtnews.vt.edu/",
+      "status": "verified",
+      "notes": "Active news site with recent content"
+    },
+    {
+      "name": "North Carolina State University",
+      "url": "https://news.ncsu.edu/",
+      "status": "verified",
+      "notes": "Active news site with recent articles from October 2025"
+    },
+    {
+      "name": "University of Tennessee",
+      "url": "https://news.utk.edu/",
+      "status": "verified",
+      "notes": "Active news site with recent articles from November 2025"
+    },
+    {
+      "name": "Auburn University",
+      "url": "https://news.auburn.edu/",
+      "status": "verified",
+      "notes": "Active news site, verified working"
+    },
+    {
+      "name": "Michigan State University",
+      "url": "https://msutoday.msu.edu/",
+      "status": "verified",
+      "notes": "Active news site with recent articles from October 2025"
+    },
+    {
+      "name": "University of Maryland",
+      "url": "https://umdrightnow.umd.edu/",
+      "status": "verified",
+      "notes": "Active news site focused on AI experts and research"
+    },
+    {
+      "name": "University of Pittsburgh",
+      "url": "https://www.pittwire.pitt.edu/",
+      "status": "verified",
+      "notes": "Active news site with recent articles from November 2025"
+    },
+    {
+      "name": "University of Connecticut",
+      "url": "https://today.uconn.edu/",
+      "status": "verified",
+      "notes": "Active news site, UConn Today portal"
+    },
+    {
+      "name": "University of Massachusetts Amherst",
+      "url": "https://www.umass.edu/news/",
+      "status": "verified",
+      "notes": "Active news site with comprehensive coverage"
+    },
+    {
+      "name": "Rutgers University",
+      "url": "https://news.rutgers.edu/",
+      "status": "verified",
+      "notes": "Active news site, Rutgers Today portal"
+    },
+    {
+      "name": "University of Washington",
+      "url": "https://www.washington.edu/news/",
+      "status": "verified",
+      "notes": "Active news site with recent articles from October 2025"
+    }
+  ],
+  "broken_urls": [
+    {
+      "name": "University of South Carolina",
+      "original_url": "https://sc.edu/about/offices_and_divisions/university_communications/newsroom/",
+      "error": "404 Not Found",
+      "suggested_replacement": "https://sc.edu/uofsc/",
+      "verified_replacement": true,
+      "notes": "Corrected URL verified working with recent 2025 content"
+    },
+    {
+      "name": "University of Oklahoma",
+      "original_url": "https://www.ou.edu/web/news",
+      "error": "404 Not Found",
+      "suggested_replacement": "https://www.ou.edu/news",
+      "verified_replacement": true,
+      "notes": "Corrected URL verified working with recent 2025 content"
+    },
+    {
+      "name": "Texas Tech University",
+      "original_url": "https://today.ttu.edu/",
+      "error": "SSL certificate error - Host: today.ttu.edu does not match certificate",
+      "suggested_replacement": "TBD - searching for alternative",
+      "verified_replacement": false,
+      "notes": "SSL/certificate mismatch issue"
+    }
+  ],
+  "needs_verification": [
+    "Indiana University - https://news.iu.edu/ (network timeout)",
+    "Penn State University - https://www.psu.edu/news/ (network timeout)",
+    "University of Minnesota - https://twin-cities.umn.edu/news (network timeout)"
+  ]
+}

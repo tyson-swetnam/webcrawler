@@ -1,0 +1,85 @@
+{
+  "batch": 6,
+  "total_failed": 11,
+  "corrections_found": 11,
+  "manual_research_needed": 0,
+  "corrections": [
+    {
+      "institution": "Utah State University",
+      "old_url": "https://news.usu.edu",
+      "new_url": "https://www.usu.edu/today/",
+      "confidence_score": 90,
+      "verified": true
+    },
+    {
+      "institution": "George Mason University",
+      "old_url": "https://news.georgemason.edu",
+      "new_url": "https://www.gmu.edu/news",
+      "confidence_score": 90,
+      "verified": true
+    },
+    {
+      "institution": "Old Dominion University",
+      "old_url": "https://news.olddominion.edu",
+      "new_url": "https://www.odu.edu/news",
+      "confidence_score": 100,
+      "verified": true
+    },
+    {
+      "institution": "Virginia Commonwealth University",
+      "old_url": "https://news.virginiacommonwealth.edu",
+      "new_url": "https://news.vcu.edu/",
+      "confidence_score": 90,
+      "verified": true
+    },
+    {
+      "institution": "William & Mary",
+      "old_url": "https://news.william&.edu",
+      "new_url": "https://news.wm.edu/",
+      "confidence_score": 100,
+      "verified": true
+    },
+    {
+      "institution": "University of Vermont",
+      "old_url": "https://news.vermont.edu",
+      "new_url": "https://www.uvm.edu/uvmnews",
+      "confidence_score": 90,
+      "verified": true
+    },
+    {
+      "institution": "Washington State University",
+      "old_url": "https://news.washingtonstate.edu",
+      "new_url": "https://wsu.edu/news/",
+      "confidence_score": 90,
+      "verified": true
+    },
+    {
+      "institution": "University of Wisconsin-Madison",
+      "old_url": "https://news.wisconsin.edu",
+      "new_url": "https://news.wisc.edu/",
+      "confidence_score": 100,
+      "verified": true
+    },
+    {
+      "institution": "University of Wisconsin-Milwaukee",
+      "old_url": "https://news.wisconsin.edu",
+      "new_url": "https://uwm.edu/news/",
+      "confidence_score": 100,
+      "verified": true
+    },
+    {
+      "institution": "West Virginia University",
+      "old_url": "https://news.westvirginia.edu",
+      "new_url": "https://wvutoday.wvu.edu/",
+      "confidence_score": 90,
+      "verified": true
+    },
+    {
+      "institution": "University of Wyoming",
+      "old_url": "https://news.wyoming.edu",
+      "new_url": "https://www.uwyo.edu/news/",
+      "confidence_score": 90,
+      "verified": true
+    }
+  ]
+}
