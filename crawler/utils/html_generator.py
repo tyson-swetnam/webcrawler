@@ -173,9 +173,9 @@ class HTMLReportGenerator:
         return str(output_file)
 
     def _fetch_articles_for_date(self, session: Session, date: datetime) -> List[Dict]:
-        """Fetch AI-related articles for the last 3 days"""
+        """Fetch AI-related articles published in the last 5 days"""
         end_date = date.replace(hour=23, minute=59, second=59, microsecond=999999)
-        start_date = end_date - timedelta(days=3)
+        start_date = end_date - timedelta(days=5)
 
         stmt = (
             select(Article, AIAnalysis)
@@ -183,11 +183,11 @@ class HTMLReportGenerator:
             .where(
                 and_(
                     Article.is_ai_related == True,
-                    Article.first_scraped >= start_date,
-                    Article.first_scraped <= end_date
+                    Article.published_date >= start_date,
+                    Article.published_date <= end_date
                 )
             )
-            .order_by(Article.first_scraped.desc())
+            .order_by(Article.published_date.desc())
         )
 
         results = session.execute(stmt).all()
@@ -568,7 +568,7 @@ class HTMLReportGenerator:
 <body>
     <div class="header">
         <h1>AI UNIVERSITY NEWS</h1>
-        <div class="tagline">Latest AI Research & Developments from Top Universities (Last 3 Days)</div>
+        <div class="tagline">Latest AI Research & Developments from Top Universities (Last 5 Days)</div>
         <div class="date">Updated: {date_str}</div>
     </div>
 
