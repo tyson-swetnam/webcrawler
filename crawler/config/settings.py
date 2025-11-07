@@ -129,10 +129,10 @@ class Settings(BaseSettings):
         description="Minimum article length in characters"
     )
     max_article_age_days: int = Field(
-        default=7,
+        default=3,
         ge=1,
         le=30,
-        description="Maximum age of articles to process (in days, default: 7 for recent news only)"
+        description="Maximum age of articles to process (in days, default: 3 for recent news only)"
     )
 
     # Logging configuration
