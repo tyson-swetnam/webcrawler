@@ -199,6 +199,7 @@ class HTMLReportGenerator:
                 'title': article.title or 'Untitled',
                 'university': article.university_name,
                 'timestamp': article.first_scraped,
+                'published_date': article.published_date,
                 'summary': ai_analysis.consensus_summary if ai_analysis else None,
                 'topics': ai_analysis.claude_key_points if ai_analysis else [],
                 'category': ai_analysis.openai_category if ai_analysis else None
@@ -267,13 +268,31 @@ class HTMLReportGenerator:
                             plain_summary = plain_summary[:200].rsplit(' ', 1)[0] + '...'
                         summary_html = f'<div class="summary">{plain_summary}</div>'
 
+                    # Format dates
+                    pub_date_str = ''
+                    if article.get('published_date'):
+                        if isinstance(article['published_date'], str):
+                            pub_date_str = article['published_date']
+                        else:
+                            pub_date_str = article['published_date'].strftime('%B %d, %Y')
+
+                    crawl_date_str = article['timestamp'].strftime('%B %d, %Y')
+
+                    # Build meta line with both dates
+                    if pub_date_str and pub_date_str != crawl_date_str:
+                        meta_html = f'<div class="meta">Published: {pub_date_str} | Crawled: {crawl_date_str}</div>'
+                    elif pub_date_str:
+                        meta_html = f'<div class="meta">Published: {pub_date_str}</div>'
+                    else:
+                        meta_html = f'<div class="meta">Crawled: {crawl_date_str}</div>'
+
                     html.append(f'''
                         <div class="article">
                             <div class="headline">
                                 <a href="{article['url']}" target="_blank">{article['title']}</a>
                                 {topics_html}
                             </div>
-                            <div class="meta">{article['timestamp'].strftime('%B %d, %Y')}</div>
+                            {meta_html}
                             {summary_html}
                         </div>
                     ''')

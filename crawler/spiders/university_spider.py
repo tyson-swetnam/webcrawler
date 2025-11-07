@@ -23,6 +23,7 @@ from crawler.utils.deduplication import (
     normalize_url
 )
 from crawler.utils.mcp_fetcher import MCPFetcher
+from crawler.utils.university_name_mapper import get_mapper
 
 logger = logging.getLogger(__name__)
 
@@ -92,6 +93,9 @@ class UniversityNewsSpider(scrapy.Spider):
         # Initialize MCP fetcher for fallback
         self.mcp_fetcher = MCPFetcher()
 
+        # Initialize university name mapper for fixing sitename extraction issues
+        self.name_mapper = get_mapper()
+
         # Link extractor for news pages
         self.link_extractor = LinkExtractor(
             allow=(
@@ -106,6 +110,16 @@ class UniversityNewsSpider(scrapy.Spider):
                 r'/(tag|category|author|archive|search|login|admin|calendar|events|galleries)/',
                 r'/archives/\d{4}/',  # Exclude year-based archives (e.g., /archives/2021/)
                 r'/stories/archives/',  # Exclude CMU-style archive directories
+                # Exclude navigation/listing pages (end with these terms)
+                r'/news/?$',  # Just "/news" or "/news/"
+                r'/news-events/?$',
+                r'/news-and-events/?$',
+                r'/press-releases/?$',
+                r'/features-articles/?$',
+                r'/accolades-honors/?$',
+                r'/news/(features|accolades|honors|announcements|updates)/?$',
+                r'/articles/?$',  # Just "/articles" or "/articles/"
+                r'/stories/?$',  # Just "/stories" or "/stories/"
                 r'\.(pdf|jpg|jpeg|png|gif|zip|rar|exe)$'
             ),
             unique=True,
@@ -269,6 +283,12 @@ class UniversityNewsSpider(scrapy.Spider):
                 self._update_url_status(url_hash, 'excluded')
                 return
 
+            # Check for generic navigation page titles
+            if self._is_navigation_page(extracted.get('title', ''), response.url):
+                self.logger.info(f"Skipping navigation/listing page: {extracted.get('title', 'Untitled')}")
+                self._update_url_status(url_hash, 'excluded')
+                return
+
             # Check article age - only process recent articles
             if extracted.get('date'):
                 try:
@@ -368,6 +388,14 @@ class UniversityNewsSpider(scrapy.Spider):
                 except (ValueError, AttributeError):
                     pass
 
+            # Get canonical university name using hostname mapping
+            # This fixes the issue where Trafilatura extracts inconsistent sitenames
+            # like "AuburnEngineers", "ou.edu", "psu.edu" instead of canonical names
+            canonical_name = self.name_mapper.get_canonical_name(
+                hostname=article_data['hostname'],
+                fallback_sitename=article_data.get('sitename')
+            )
+
             # Create article entry
             article = Article(
                 url_id=url_obj.url_id,
@@ -377,7 +405,7 @@ class UniversityNewsSpider(scrapy.Spider):
                 content=article_data['content'],
                 content_hash=article_data['content_hash'],
                 summary=article_data.get('description'),
-                university_name=article_data.get('sitename'),
+                university_name=canonical_name,
                 language=article_data.get('language', 'en'),
                 word_count=article_data.get('word_count'),
                 metadata={
@@ -402,6 +430,59 @@ class UniversityNewsSpider(scrapy.Spider):
             self.logger.error(f"Failed to store article in database: {e}")
             self.db.rollback()
             raise
+
+    def _is_navigation_page(self, title: str, url: str) -> bool:
+        """
+        Check if this is a navigation/listing page rather than an article.
+
+        Args:
+            title: Page title
+            url: Page URL
+
+        Returns:
+            True if this appears to be a navigation page
+        """
+        if not title:
+            return False
+
+        # Generic title patterns that indicate navigation pages
+        generic_patterns = [
+            r'^News\s*$',
+            r'^News & Events',
+            r'^News and Events',
+            r'^Press Releases?\s*$',
+            r'^Media\s*$',
+            r'^Stories\s*$',
+            r'^Articles\s*$',
+            r'^Latest News',
+            r'^Latest Stories',
+            r'^All News',
+            r'^All Stories',
+            r'^\w+\s+News\s*$',  # e.g., "Pittwire News", "University News"
+            r'^Features & Articles',
+            r'^Accolades & Honors',
+        ]
+
+        import re
+        for pattern in generic_patterns:
+            if re.match(pattern, title, re.IGNORECASE):
+                return True
+
+        # Check URL patterns too
+        url_navigation_patterns = [
+            r'/news/?$',
+            r'/news-events/?$',
+            r'/press-releases?/?$',
+            r'/media/?$',
+            r'/stories/?$',
+            r'/articles/?$',
+        ]
+
+        for pattern in url_navigation_patterns:
+            if re.search(pattern, url, re.IGNORECASE):
+                return True
+
+        return False
 
     def _update_url_status(self, url_hash: str, status: str):
         """
