@@ -7,12 +7,12 @@
     "institutions_included": 187,
     "coverage_percentage": 100.0,
     "date_compiled": "2025-11-02",
-    "last_updated": "2025-11-05T13:44:26.950896+00:00",
+    "last_updated": "2025-11-07T14:49:56.712684+00:00",
     "data_sources": [
       "Carnegie Classifications 2025 RAD Public Data File",
       "carnegieclassifications.acenet.edu"
     ],
-    "quality_notes": "Complete dataset with auto-generated news URLs. All entries require manual verification of news URLs and AI tag pages.",
+    "quality_notes": "URLs updated with verified corrections on 2025-11-07",
     "verification_status": "Automated generation - manual verification required",
     "migration_notes": [
       "Migrated to schema v3.0.0 on 2025-11-04: Converted news_sources to array structure, removed broken ai_tag_url field, added multi-source support for AI research institutions"
@@ -2578,11 +2578,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.kansasstate.edu",
+          "url": "https://www.k-state.edu/news/",
           "description": "Kansas State University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951380+00:00"
+          "last_verified": "2025-11-05T13:44:26.951380+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -2744,11 +2745,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.lsu.edu",
+          "url": "https://www.lsu.edu/mediacenter/news/index.php",
           "description": "Louisiana State University and Agricultural & Mechanical College official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951402+00:00"
+          "last_verified": "2025-11-05T13:44:26.951402+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -2785,11 +2787,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.tulane.edu",
+          "url": "https://news.tulane.edu/",
           "description": "Tulane University of Louisiana official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951409+00:00"
+          "last_verified": "2025-11-05T13:44:26.951409+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -2867,11 +2870,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.bostoncollege.edu",
+          "url": "https://www.bc.edu/bc-web/bcnews.html",
           "description": "Boston College official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951428+00:00"
+          "last_verified": "2025-11-05T13:44:26.951428+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -2908,11 +2912,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.bu.edu",
+          "url": "https://www.bu.edu/today/",
           "description": "Boston University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951434+00:00"
+          "last_verified": "2025-11-05T13:44:26.951434+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -2949,11 +2954,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.brandeis.edu",
+          "url": "https://www.brandeis.edu/stories/",
           "description": "Brandeis University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951440+00:00"
+          "last_verified": "2025-11-05T13:44:26.951440+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -3090,11 +3096,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.northeasternuniversity.edu",
+          "url": "https://news.northeastern.edu/",
           "description": "Northeastern University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951471+00:00"
+          "last_verified": "2025-11-05T13:44:26.951471+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -3131,11 +3138,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.tufts.edu",
+          "url": "https://now.tufts.edu/",
           "description": "Tufts University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951478+00:00"
+          "last_verified": "2025-11-05T13:44:26.951478+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -3214,11 +3222,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.umb.edu",
+          "url": "https://www.umb.edu/news/",
           "description": "University of Massachusetts-Boston official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951491+00:00"
+          "last_verified": "2025-11-05T13:44:26.951491+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -3255,11 +3264,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.uml.edu",
+          "url": "https://www.uml.edu/news/",
           "description": "University of Massachusetts-Lowell official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951496+00:00"
+          "last_verified": "2025-11-05T13:44:26.951496+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -3296,11 +3306,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.wpi.edu",
+          "url": "https://www.wpi.edu/news",
           "description": "Worcester Polytechnic Institute official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951502+00:00"
+          "last_verified": "2025-11-05T13:44:26.951502+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -3668,11 +3679,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.waynestate.edu",
+          "url": "https://today.wayne.edu/",
           "description": "Wayne State University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951556+00:00"
+          "last_verified": "2025-11-05T13:44:26.951556+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -3709,11 +3721,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.minnesota.edu",
+          "url": "https://twin-cities.umn.edu/news-events",
           "description": "University of Minnesota-Twin Cities official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951562+00:00"
+          "last_verified": "2025-11-05T13:44:26.951562+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -3914,11 +3927,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.wustl.edu",
+          "url": "https://source.washu.edu/news",
           "description": "Washington University in St Louis official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951589+00:00"
+          "last_verified": "2025-11-05T13:44:26.951589+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -3955,11 +3969,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.msstate.edu",
+          "url": "https://www.msstate.edu/newsroom",
           "description": "Mississippi State University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951596+00:00"
+          "last_verified": "2025-11-05T13:44:26.951596+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -4572,11 +4587,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.unh.edu",
+          "url": "https://www.unh.edu/unhtoday/",
           "description": "University of New Hampshire-Main Campus official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951684+00:00"
+          "last_verified": "2025-11-05T13:44:26.951684+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -4613,11 +4629,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.njit.edu",
+          "url": "https://news.njit.edu/",
           "description": "New Jersey Institute of Technology official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951691+00:00"
+          "last_verified": "2025-11-05T13:44:26.951691+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -5085,11 +5102,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.nyu.edu",
+          "url": "https://www.nyu.edu/about/news-publications/news.html",
           "description": "New York University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951767+00:00"
+          "last_verified": "2025-11-05T13:44:26.951767+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -5126,11 +5144,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.rpi.edu",
+          "url": "https://news.rpi.edu/",
           "description": "Rensselaer Polytechnic Institute official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951778+00:00"
+          "last_verified": "2025-11-05T13:44:26.951778+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -5167,11 +5186,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.stonybrook.edu",
+          "url": "https://news.stonybrook.edu/",
           "description": "Stony Brook University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951783+00:00"
+          "last_verified": "2025-11-05T13:44:26.951783+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -5208,11 +5228,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.syracuseuniversity.edu",
+          "url": "https://news.syr.edu/",
           "description": "Syracuse University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951789+00:00"
+          "last_verified": "2025-11-05T13:44:26.951789+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -5413,11 +5434,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.case.edu",
+          "url": "https://thedaily.case.edu/",
           "description": "Case Western Reserve University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951821+00:00"
+          "last_verified": "2025-11-05T13:44:26.951821+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -5454,11 +5476,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.kentstate.edu",
+          "url": "https://www.kent.edu/today",
           "description": "Kent State University at Kent official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951827+00:00"
+          "last_verified": "2025-11-05T13:44:26.951827+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -5495,11 +5518,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.ohiostate.edu",
+          "url": "https://news.osu.edu/",
           "description": "Ohio State University-Main Campus official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951833+00:00"
+          "last_verified": "2025-11-05T13:44:26.951833+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -5783,11 +5807,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.oregonstate.edu",
+          "url": "https://news.oregonstate.edu/",
           "description": "Oregon State University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951874+00:00"
+          "last_verified": "2025-11-05T13:44:26.951874+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -5824,11 +5849,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.oregon.edu",
+          "url": "https://news.uoregon.edu",
           "description": "University of Oregon official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951881+00:00"
+          "last_verified": "2025-11-05T13:44:26.951881+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -5914,11 +5940,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.drexeluniversity.edu",
+          "url": "https://drexel.edu/news",
           "description": "Drexel University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951901+00:00"
+          "last_verified": "2025-11-05T13:44:26.951901+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -5955,11 +5982,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.lehighuniversity.edu",
+          "url": "https://news.lehigh.edu/",
           "description": "Lehigh University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951907+00:00"
+          "last_verified": "2025-11-05T13:44:26.951907+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -5996,11 +6024,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.pennsylvaniastate.edu",
+          "url": "https://www.psu.edu/news",
           "description": "Pennsylvania State University-Main Campus official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951913+00:00"
+          "last_verified": "2025-11-05T13:44:26.951913+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -6037,11 +6066,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.templeuniversity.edu",
+          "url": "https://news.temple.edu/",
           "description": "Temple University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951920+00:00"
+          "last_verified": "2025-11-05T13:44:26.951920+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -6245,11 +6275,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.clemsonuniversity.edu",
+          "url": "https://news.clemson.edu/",
           "description": "Clemson University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951951+00:00"
+          "last_verified": "2025-11-05T13:44:26.951951+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -6575,11 +6606,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.bayloruniversity.edu",
+          "url": "https://news.web.baylor.edu/",
           "description": "Baylor University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.952017+00:00"
+          "last_verified": "2025-11-05T13:44:26.952017+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -6699,11 +6731,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.texasa.edu",
+          "url": "https://stories.tamu.edu/",
           "description": "Texas A & M University-College Station official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.952045+00:00"
+          "last_verified": "2025-11-05T13:44:26.952045+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -7069,11 +7102,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.universityof.edu",
+          "url": "https://www.uh.edu/news-events/",
           "description": "University of Houston official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.952087+00:00"
+          "last_verified": "2025-11-05T13:44:26.952087+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -7192,11 +7226,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.brighamyoung.edu",
+          "url": "https://news.byu.edu/",
           "description": "Brigham Young University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.952101+00:00"
+          "last_verified": "2025-11-05T13:44:26.952101+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -7233,11 +7268,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.utah.edu",
+          "url": "https://attheu.utah.edu/",
           "description": "University of Utah official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.952106+00:00"
+          "last_verified": "2025-11-05T13:44:26.952106+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -7274,11 +7310,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.usu.edu",
+          "url": "https://www.usu.edu/today/",
           "description": "Utah State University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.952111+00:00"
+          "last_verified": "2025-11-05T13:44:26.952111+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -7397,11 +7434,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.virginia.edu",
+          "url": "https://news.virginia.edu/",
           "description": "University of Virginia-Main Campus official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.952125+00:00"
+          "last_verified": "2025-11-05T13:44:26.952125+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
@@ -7479,11 +7517,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.vt.edu",
+          "url": "https://news.vt.edu/",
           "description": "Virginia Polytechnic Institute and State University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.952138+00:00"
+          "last_verified": "2025-11-05T13:44:26.952138+00:00",
+          "verification_date": "2025-11-07"
         }
       ],
       "data_quality": {
