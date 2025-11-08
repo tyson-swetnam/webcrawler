@@ -1,17 +1,18 @@
 [Unit]
-Description=Timer for AI News Crawler (daily at midnight UTC)
-Documentation=https://github.com/yourorg/ai-news-crawler
+Description=Timer for AI News Crawler (daily at 6:00 AM MST / 1:00 PM UTC)
+Documentation=https://github.com/tyson-swetnam/webcrawler
 Requires=ai-news-crawler.service
 
 [Timer]
-# Run daily at midnight UTC
-OnCalendar=*-*-* 00:00:00
+# Run daily at 6:00 AM MST (13:00 UTC)
+# Note: MST is UTC-7. System clock is in MST.
+OnCalendar=*-*-* 06:00:00
 
-# Run on boot if missed
+# Run on boot if missed (e.g., if system was off at scheduled time)
 Persistent=true
 
-# Randomize start time by up to 5 minutes to avoid peak loads
-RandomizedDelaySec=300
+# Randomize start time by up to 2 minutes to avoid exact timing issues
+RandomizedDelaySec=120
 
 # Service to trigger
 Unit=ai-news-crawler.service
