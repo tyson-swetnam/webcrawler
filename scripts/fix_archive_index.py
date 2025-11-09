@@ -1,4 +1,56 @@
-<!DOCTYPE html>
+#!/usr/bin/env python3
+"""
+Fix archive index by scanning existing HTML archive files.
+This ensures all generated archives appear in the index, regardless of database state.
+"""
+
+import re
+from pathlib import Path
+from datetime import datetime
+
+def extract_article_count(html_file: Path) -> int:
+    """Extract article count from HTML file."""
+    content = html_file.read_text(encoding='utf-8')
+
+    # Look for the stats section with article counts
+    match = re.search(r'<strong>Total Articles:</strong>\s*(\d+)', content)
+    if match:
+        return int(match.group(1))
+
+    # If no stats section, count article divs
+    article_count = len(re.findall(r'<div class="article">', content))
+    return article_count
+
+
+def main():
+    """Generate archive index from existing HTML files."""
+    # Check both output directories
+    archive_dirs = [
+        Path("docs/archive"),
+        Path("output/archive")
+    ]
+
+    # Collect all archive files
+    archive_files = {}
+
+    for archive_dir in archive_dirs:
+        if not archive_dir.exists():
+            print(f"Warning: {archive_dir} does not exist")
+            continue
+
+        for html_file in archive_dir.glob("2025-*.html"):
+            # Extract date from filename
+            date_str = html_file.stem  # e.g., "2025-11-08"
+            if date_str not in archive_files:
+                article_count = extract_article_count(html_file)
+                archive_files[date_str] = article_count
+                print(f"Found: {date_str} with {article_count} articles")
+
+    # Sort by date descending
+    sorted_dates = sorted(archive_files.keys(), reverse=True)
+
+    # Generate archive index HTML
+    html_content = """<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -133,47 +185,28 @@
             </tr>
         </thead>
         <tbody>
-            
+            """
+
+    # Add rows for each date
+    for date_str in sorted_dates:
+        # Parse date and format it nicely
+        try:
+            date_obj = datetime.strptime(date_str, "%Y-%m-%d")
+            formatted_date = date_obj.strftime("%A, %B %d, %Y")
+        except ValueError:
+            formatted_date = date_str
+
+        article_count = archive_files[date_str]
+        article_word = "article" if article_count == 1 else "articles"
+
+        html_content += f"""
                 <tr>
-                    <td class="date-cell"><a href="2025-11-09.html">Sunday, November 09, 2025</a></td>
-                    <td class="count-cell">5 articles</td>
+                    <td class="date-cell"><a href="{date_str}.html">{formatted_date}</a></td>
+                    <td class="count-cell">{article_count} {article_word}</td>
                 </tr>
-            
-                <tr>
-                    <td class="date-cell"><a href="2025-11-08.html">Saturday, November 08, 2025</a></td>
-                    <td class="count-cell">11 articles</td>
-                </tr>
-            
-                <tr>
-                    <td class="date-cell"><a href="2025-11-07.html">Friday, November 07, 2025</a></td>
-                    <td class="count-cell">18 articles</td>
-                </tr>
-            
-                <tr>
-                    <td class="date-cell"><a href="2025-11-06.html">Thursday, November 06, 2025</a></td>
-                    <td class="count-cell">37 articles</td>
-                </tr>
-            
-                <tr>
-                    <td class="date-cell"><a href="2025-11-05.html">Wednesday, November 05, 2025</a></td>
-                    <td class="count-cell">47 articles</td>
-                </tr>
-            
-                <tr>
-                    <td class="date-cell"><a href="2025-11-04.html">Tuesday, November 04, 2025</a></td>
-                    <td class="count-cell">58 articles</td>
-                </tr>
-            
-                <tr>
-                    <td class="date-cell"><a href="2025-11-03.html">Monday, November 03, 2025</a></td>
-                    <td class="count-cell">25 articles</td>
-                </tr>
-            
-                <tr>
-                    <td class="date-cell"><a href="2025-11-02.html">Sunday, November 02, 2025</a></td>
-                    <td class="count-cell">16 articles</td>
-                </tr>
-            
+            """
+
+    html_content += """
         </tbody>
     </table>
 
@@ -182,3 +215,16 @@
     </div>
 </body>
 </html>
+"""
+
+    # Write to both archive directories
+    for archive_dir in archive_dirs:
+        if archive_dir.exists():
+            output_file = archive_dir / "index.html"
+            output_file.write_text(html_content, encoding='utf-8')
+            print(f"\nWrote archive index to: {output_file}")
+            print(f"Total dates included: {len(sorted_dates)}")
+
+
+if __name__ == "__main__":
+    main()
