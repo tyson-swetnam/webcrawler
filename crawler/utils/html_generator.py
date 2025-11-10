@@ -131,16 +131,61 @@ class HTMLReportGenerator:
         return str(output_file)
 
     def generate_archive_index(self) -> str:
-        """Generate archive index page listing all available dates"""
-        with get_db() as session:
-            # Get all unique dates with articles
-            stmt = (
-                select(func.date(Article.first_scraped).label('date'), func.count(Article.article_id).label('count'))
-                .where(Article.is_ai_related == True)
-                .group_by(func.date(Article.first_scraped))
-                .order_by(func.date(Article.first_scraped).desc())
-            )
-            dates = session.execute(stmt).all()
+        """Generate archive index page listing all available dates
+
+        This method scans existing archive HTML files rather than querying the database,
+        ensuring all generated archives appear in the index regardless of whether they
+        contain AI-related articles.
+        """
+        import re
+        from datetime import datetime
+
+        # Collect archive files from both output directories
+        archive_files = {}
+
+        # Check output directory
+        archive_dir = self.output_dir / "archive"
+        if archive_dir.exists():
+            for html_file in archive_dir.glob("20*.html"):
+                date_str = html_file.stem  # e.g., "2025-11-08"
+                if date_str not in archive_files:
+                    # Extract article count from HTML file
+                    content = html_file.read_text(encoding='utf-8')
+                    match = re.search(r'<strong>Total Articles:</strong>\s*(\d+)', content)
+                    if match:
+                        count = int(match.group(1))
+                    else:
+                        # Fallback: count article divs
+                        count = len(re.findall(r'<div class="article">', content))
+
+                    try:
+                        date_obj = datetime.strptime(date_str, '%Y-%m-%d').date()
+                        archive_files[date_str] = (date_obj, count)
+                    except ValueError:
+                        pass  # Skip invalid date formats
+
+        # Also check GitHub Pages directory if configured
+        if self.github_pages_dir:
+            gh_archive_dir = self.github_pages_dir / "archive"
+            if gh_archive_dir.exists():
+                for html_file in gh_archive_dir.glob("20*.html"):
+                    date_str = html_file.stem
+                    if date_str not in archive_files:
+                        content = html_file.read_text(encoding='utf-8')
+                        match = re.search(r'<strong>Total Articles:</strong>\s*(\d+)', content)
+                        if match:
+                            count = int(match.group(1))
+                        else:
+                            count = len(re.findall(r'<div class="article">', content))
+
+                        try:
+                            date_obj = datetime.strptime(date_str, '%Y-%m-%d').date()
+                            archive_files[date_str] = (date_obj, count)
+                        except ValueError:
+                            pass
+
+        # Sort by date descending
+        dates = sorted(archive_files.values(), key=lambda x: x[0], reverse=True)
 
         html = self._render_archive_page(dates)
 
