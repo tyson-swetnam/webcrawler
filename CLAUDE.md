@@ -13,7 +13,7 @@ The system follows a **producer-consumer pattern** with 6 distinct phases:
 1. **Discovery & Crawling**: Scrapy-based crawler identifies new articles from university press releases
 2. **Content Extraction**: Trafilatura extracts structured content with 95%+ accuracy
 3. **Deduplication**: PostgreSQL + Bloom filters identify truly new content
-4. **AI Analysis**: Parallel calls to Claude (Sonnet-4-5), OpenAI (GPT-4), and Gemini (2.5 Flash) for deep research
+4. **AI Analysis**: Parallel calls to Claude (Sonnet-4-5 and Haiku) and OpenAI (GPT-4/GPT-5) for deep research
 5. **Reporting**: Generate summaries and deliver via Slack webhooks and SMTP email
 6. **Persistence**: Store results, update tracking database, log all operations
 
@@ -22,7 +22,7 @@ The system follows a **producer-consumer pattern** with 6 distinct phases:
 - **Core**: Python 3.11+ with Scrapy 2.11+
 - **Content Extraction**: Trafilatura 2.0+ with htmldate
 - **Database**: PostgreSQL 15+ for metadata/tracking, Redis 7+ for URL frontier
-- **AI APIs**: Anthropic Claude (Sonnet-4-5), OpenAI GPT-4/3.5-turbo, Google Gemini 2.5 Flash
+- **AI APIs**: Anthropic Claude (Sonnet-4-5 and Haiku), OpenAI GPT-4/GPT-5
 - **Scheduling**: Systemd timers (preferred) or cron
 - **Notifications**: Slack webhooks + Python smtplib
 - **Deployment**: Systemd service with virtual environment isolation
@@ -48,10 +48,7 @@ ai-news-crawler/
 │   │   ├── session.py           # Database connection
 │   │   └── migrations/          # Alembic migrations
 │   ├── ai/
-│   │   ├── claude.py            # Claude API client
-│   │   ├── openai_client.py     # OpenAI API client
-│   │   ├── gemini.py            # Gemini API client
-│   │   └── analyzer.py          # Multi-API orchestration
+│   │   └── analyzer.py          # Multi-API orchestration (Claude + OpenAI)
 │   ├── notifiers/
 │   │   ├── slack.py             # Slack webhook integration
 │   │   └── email.py             # SMTP email sender
@@ -79,7 +76,7 @@ ai-news-crawler/
 
 - **urls**: URL tracking with hash-based deduplication (SHA-256 for O(1) lookups)
 - **articles**: Extracted content with AI classification
-- **ai_analyses**: Results from Claude, OpenAI, and Gemini APIs with consensus summary
+- **ai_analyses**: Results from Claude (Sonnet + Haiku) and OpenAI APIs with consensus summary
 - **notifications_sent**: Notification delivery log
 - **host_crawl_state**: Per-domain politeness tracking
 
@@ -128,7 +125,7 @@ alembic upgrade head
 This command runs the complete 6-phase pipeline:
 1. Crawl university news sites (Scrapy)
 2. Extract and deduplicate content
-3. Analyze with AI APIs (Claude + GPT + Gemini)
+3. Analyze with AI APIs (Claude Sonnet-4-5, Claude Haiku, OpenAI GPT-4/GPT-5)
 4. Generate HTML reports (Drudge Report-style website)
 5. Send notifications (Slack + Email)
 6. Store results in database
@@ -236,9 +233,11 @@ psql ai_news_crawler -c "
 
 ### AI API Integration
 
-- Use **async/await** for parallel API calls to Claude, OpenAI, and Gemini
+- Use **async/await** for parallel API calls to Claude (Sonnet + Haiku) and OpenAI
 - Implement graceful degradation (system works if 1-2 APIs fail)
 - Claude Sonnet-4-5 is the primary/highest-quality API
+- Claude Haiku provides fast, cost-effective validation
+- OpenAI GPT-4/GPT-5 provides categorization and additional summaries
 - Apply rate limiting and token limits to control costs
 - Store all API responses in `ai_analyses` table for auditing
 
@@ -278,10 +277,11 @@ This allows re-crawling URLs while detecting unchanged content.
 
 ### Multi-AI Consensus Building
 
-Results from all three AI APIs are collected, but:
+Results from all three AI providers are collected, but:
 - Claude Sonnet's summary is preferred (highest quality)
-- Fallback to OpenAI or Gemini if Claude fails
-- Confidence score based on how many APIs succeeded
+- Claude Haiku provides fast validation of AI-relevance
+- OpenAI provides categorization and backup summaries
+- Confidence score based on how many providers succeeded (0.33, 0.67, or 1.0)
 - All individual responses stored for future re-analysis
 
 ### Politeness Implementation
@@ -312,14 +312,14 @@ Per-domain crawl delays stored in `host_crawl_state` table:
 ## Cost Optimization
 
 Estimated monthly costs (100 articles/day):
-- Claude Sonnet: ~$9/month
-- GPT-4: ~$27/month
-- Gemini Flash: ~$0.30/month
-- **Total: ~$36/month**
+- Claude Sonnet-4-5: ~$9/month (primary analysis)
+- Claude Haiku: ~$0.50/month (fast validation)
+- OpenAI GPT-4/GPT-5: ~$27/month (categorization)
+- **Total: ~$36.50/month**
 
 Optimization strategies:
-1. Use Gemini Flash for initial AI-relevance filtering
-2. Only send confirmed AI articles to expensive APIs
+1. Use Claude Haiku for initial AI-relevance filtering (fast and cheap)
+2. Only send confirmed AI articles to expensive models
 3. Set max_tokens limits on all API calls
 4. Cache AI summaries to avoid reprocessing
 
