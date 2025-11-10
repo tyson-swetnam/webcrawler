@@ -1,0 +1,167 @@
+{
+  "batch_number": 13,
+  "total_batches": 18,
+  "urls_in_batch": 20,
+  "urls": [
+    {
+      "source": "r1_universities.json",
+      "name": "Texas A & M University-College Station",
+      "id": 160,
+      "url": "https://news.texasa.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Texas A & M University-College Station",
+      "id": 160,
+      "url": "https://news.texasa.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "The University of Texas Health Science Center at Houston",
+      "id": 162,
+      "url": "https://news.theuniversity.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "The University of Texas Health Science Center at Houston",
+      "id": 162,
+      "url": "https://news.theuniversity.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "The University of Texas Health Science Center at San Antonio",
+      "id": 163,
+      "url": "https://news.utsa.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "The University of Texas Health Science Center at San Antonio",
+      "id": 163,
+      "url": "https://news.utsa.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "The University of Texas at Arlington",
+      "id": 164,
+      "url": "https://news.uta.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "The University of Texas at Arlington",
+      "id": 164,
+      "url": "https://news.uta.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "The University of Texas at Austin",
+      "id": 165,
+      "url": "https://www.utexas.edu/news",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "The University of Texas at Austin",
+      "id": 165,
+      "url": "https://www.utexas.edu/news/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "The University of Texas at Dallas",
+      "id": 166,
+      "url": "https://news.utdallas.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "The University of Texas at Dallas",
+      "id": 166,
+      "url": "https://news.utdallas.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "The University of Texas at El Paso",
+      "id": 167,
+      "url": "https://news.utep.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "The University of Texas at El Paso",
+      "id": 167,
+      "url": "https://news.utep.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "The University of Texas at San Antonio",
+      "id": 168,
+      "url": "https://news.utsa.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "The University of Texas at San Antonio",
+      "id": 168,
+      "url": "https://news.utsa.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Brigham Young University",
+      "id": 172,
+      "url": "https://news.brighamyoung.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Brigham Young University",
+      "id": 172,
+      "url": "https://news.brighamyoung.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Utah",
+      "id": 173,
+      "url": "https://news.utah.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Utah",
+      "id": 173,
+      "url": "https://news.utah.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    }
+  ]
+}

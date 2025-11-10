@@ -1,0 +1,167 @@
+{
+  "batch_number": 4,
+  "total_batches": 18,
+  "urls_in_batch": 20,
+  "urls": [
+    {
+      "source": "r1_universities.json",
+      "name": "Georgia State University",
+      "id": 45,
+      "url": "https://news.georgiastate.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Georgia State University",
+      "id": 45,
+      "url": "https://news.georgiastate.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Georgia",
+      "id": 46,
+      "url": "https://news.georgia.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Georgia",
+      "id": 46,
+      "url": "https://news.georgia.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Hawaii at Manoa",
+      "id": 47,
+      "url": "https://news.hawaii.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Hawaii at Manoa",
+      "id": 47,
+      "url": "https://news.hawaii.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Iowa",
+      "id": 49,
+      "url": "https://news.iowa.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Iowa",
+      "id": 49,
+      "url": "https://news.iowa.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Idaho",
+      "id": 50,
+      "url": "https://news.idaho.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Idaho",
+      "id": 50,
+      "url": "https://news.idaho.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Loyola University Chicago",
+      "id": 51,
+      "url": "https://news.loyolauniversity.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Loyola University Chicago",
+      "id": 51,
+      "url": "https://news.loyolauniversity.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Northwestern University",
+      "id": 52,
+      "url": "https://news.northwestern.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Northwestern University",
+      "id": 52,
+      "url": "https://news.northwestern.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Southern Illinois University-Carbondale",
+      "id": 53,
+      "url": "https://news.southernillinois.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Southern Illinois University-Carbondale",
+      "id": 53,
+      "url": "https://news.southernillinois.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Chicago",
+      "id": 54,
+      "url": "https://news.uchicago.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Chicago",
+      "id": 54,
+      "url": "https://news.uchicago.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Illinois Chicago",
+      "id": 55,
+      "url": "https://news.uic.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Illinois Chicago",
+      "id": 55,
+      "url": "https://news.uic.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    }
+  ]
+}

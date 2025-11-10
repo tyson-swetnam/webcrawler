@@ -5,6 +5,11 @@ __pycache__/
 .env
 venv/
 
+# Claude-generated files and logs
+claude_thoughts/
+log/
+logs/
+
 # IDEs
 .vscode/
 .idea/

@@ -1,0 +1,167 @@
+{
+  "batch_number": 8,
+  "total_batches": 18,
+  "urls_in_batch": 20,
+  "urls": [
+    {
+      "source": "r1_universities.json",
+      "name": "Mississippi State University",
+      "id": 94,
+      "url": "https://news.msstate.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Mississippi State University",
+      "id": 94,
+      "url": "https://news.msstate.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Montana State University",
+      "id": 97,
+      "url": "https://news.montanastate.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Montana State University",
+      "id": 97,
+      "url": "https://news.montanastate.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "The University of Montana",
+      "id": 98,
+      "url": "https://news.montana.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "The University of Montana",
+      "id": 98,
+      "url": "https://news.montana.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Duke University",
+      "id": 99,
+      "url": "https://today.duke.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Duke University",
+      "id": 99,
+      "url": "https://today.duke.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "East Carolina University",
+      "id": 100,
+      "url": "https://news.eastcarolina.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "East Carolina University",
+      "id": 100,
+      "url": "https://news.eastcarolina.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "North Carolina State University at Raleigh",
+      "id": 101,
+      "url": "https://news.northcarolina.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "North Carolina State University at Raleigh",
+      "id": 101,
+      "url": "https://news.northcarolina.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "North Dakota State University-Main Campus",
+      "id": 104,
+      "url": "https://news.northdakota.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "North Dakota State University-Main Campus",
+      "id": 104,
+      "url": "https://news.northdakota.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Nebraska Medical Center",
+      "id": 106,
+      "url": "https://news.nebraska.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Nebraska Medical Center",
+      "id": 106,
+      "url": "https://news.nebraska.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Nebraska-Lincoln",
+      "id": 107,
+      "url": "https://news.nebraska.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Nebraska-Lincoln",
+      "id": 107,
+      "url": "https://news.nebraska.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Dartmouth College",
+      "id": 108,
+      "url": "https://news.dartmouth.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Dartmouth College",
+      "id": 108,
+      "url": "https://news.dartmouth.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    }
+  ]
+}

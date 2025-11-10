@@ -1,0 +1,167 @@
+{
+  "batch_number": 6,
+  "total_batches": 18,
+  "urls_in_batch": 20,
+  "urls": [
+    {
+      "source": "r1_universities.json",
+      "name": "Harvard University",
+      "id": 71,
+      "url": "https://www.harvard.edu/news",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Harvard University",
+      "id": 71,
+      "url": "https://www.harvard.edu/news/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Massachusetts Institute of Technology",
+      "id": 72,
+      "url": "https://news.mit.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Massachusetts Institute of Technology",
+      "id": 72,
+      "url": "https://news.mit.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Northeastern University",
+      "id": 73,
+      "url": "https://news.northeasternuniversity.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Northeastern University",
+      "id": 73,
+      "url": "https://news.northeasternuniversity.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Tufts University",
+      "id": 74,
+      "url": "https://news.tufts.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Tufts University",
+      "id": 74,
+      "url": "https://news.tufts.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Massachusetts-Boston",
+      "id": 76,
+      "url": "https://news.umb.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Massachusetts-Boston",
+      "id": 76,
+      "url": "https://news.umb.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Massachusetts-Lowell",
+      "id": 77,
+      "url": "https://news.uml.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Massachusetts-Lowell",
+      "id": 77,
+      "url": "https://news.uml.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Worcester Polytechnic Institute",
+      "id": 78,
+      "url": "https://news.wpi.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Worcester Polytechnic Institute",
+      "id": 78,
+      "url": "https://news.wpi.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Johns Hopkins University",
+      "id": 79,
+      "url": "https://news.jhu.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Johns Hopkins University",
+      "id": 79,
+      "url": "https://news.jhu.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Maryland - Baltimore",
+      "id": 80,
+      "url": "https://news.maryland.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Maryland - Baltimore",
+      "id": 80,
+      "url": "https://news.maryland.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Maryland-Baltimore County",
+      "id": 82,
+      "url": "https://news.maryland.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Maryland-Baltimore County",
+      "id": 82,
+      "url": "https://news.maryland.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    }
+  ]
+}

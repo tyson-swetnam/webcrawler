@@ -1,0 +1,167 @@
+{
+  "batch_number": 5,
+  "total_batches": 18,
+  "urls_in_batch": 20,
+  "urls": [
+    {
+      "source": "r1_universities.json",
+      "name": "University of Illinois Urbana-Champaign",
+      "id": 56,
+      "url": "https://news.illinois.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Illinois Urbana-Champaign",
+      "id": 56,
+      "url": "https://news.illinois.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Indiana University\u2013Purdue University-Indianapolis",
+      "id": 58,
+      "url": "https://news.indianauniversity\u2013purdue.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Indiana University\u2013Purdue University-Indianapolis",
+      "id": 58,
+      "url": "https://news.indianauniversity\u2013purdue.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Purdue University-Main Campus",
+      "id": 59,
+      "url": "https://news.purdueuniversity-main.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Purdue University-Main Campus",
+      "id": 59,
+      "url": "https://news.purdueuniversity-main.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Notre Dame",
+      "id": 60,
+      "url": "https://news.nd.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Notre Dame",
+      "id": 60,
+      "url": "https://news.nd.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Kansas State University",
+      "id": 61,
+      "url": "https://news.kansasstate.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Kansas State University",
+      "id": 61,
+      "url": "https://news.kansasstate.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Louisiana State University and Agricultural & Mechanical College",
+      "id": 65,
+      "url": "https://news.lsu.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Louisiana State University and Agricultural & Mechanical College",
+      "id": 65,
+      "url": "https://news.lsu.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Tulane University of Louisiana",
+      "id": 66,
+      "url": "https://news.tulane.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Tulane University of Louisiana",
+      "id": 66,
+      "url": "https://news.tulane.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Boston College",
+      "id": 68,
+      "url": "https://news.bostoncollege.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Boston College",
+      "id": 68,
+      "url": "https://news.bostoncollege.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Boston University",
+      "id": 69,
+      "url": "https://news.bu.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Boston University",
+      "id": 69,
+      "url": "https://news.bu.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Brandeis University",
+      "id": 70,
+      "url": "https://news.brandeis.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Brandeis University",
+      "id": 70,
+      "url": "https://news.brandeis.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    }
+  ]
+}

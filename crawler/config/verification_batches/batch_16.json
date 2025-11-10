@@ -1,0 +1,167 @@
+{
+  "batch_number": 16,
+  "total_batches": 18,
+  "urls_in_batch": 20,
+  "urls": [
+    {
+      "source": "peer_institutions.json",
+      "name": "University of Oklahoma",
+      "id": 16,
+      "url": "https://www.ou.edu/web/news",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "peer_institutions.json",
+      "name": "University of Oklahoma",
+      "id": 16,
+      "url": "https://www.ou.edu/web/news?topics=artificial-intelligence",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "peer_institutions.json",
+      "name": "Indiana University Bloomington",
+      "id": 18,
+      "url": "https://news.iu.edu/",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "peer_institutions.json",
+      "name": "Indiana University Bloomington",
+      "id": 18,
+      "url": "https://news.iu.edu/tags/artificial-intelligence",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "peer_institutions.json",
+      "name": "Pennsylvania State University",
+      "id": 19,
+      "url": "https://www.psu.edu/news/",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "peer_institutions.json",
+      "name": "Pennsylvania State University",
+      "id": 19,
+      "url": "https://www.psu.edu/news/?topic=artificial-intelligence",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "peer_institutions.json",
+      "name": "University of Minnesota Twin Cities",
+      "id": 20,
+      "url": "https://twin-cities.umn.edu/news",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "peer_institutions.json",
+      "name": "University of Minnesota Twin Cities",
+      "id": 20,
+      "url": "https://twin-cities.umn.edu/news?topic=artificial-intelligence",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "peer_institutions.json",
+      "name": "University of Maryland, College Park",
+      "id": 21,
+      "url": "https://umdrightnow.umd.edu/",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "peer_institutions.json",
+      "name": "University of Maryland, College Park",
+      "id": 21,
+      "url": "https://umdrightnow.umd.edu/topic/artificial-intelligence",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "peer_institutions.json",
+      "name": "University of Pittsburgh",
+      "id": 22,
+      "url": "https://www.pittwire.pitt.edu/",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "peer_institutions.json",
+      "name": "University of Pittsburgh",
+      "id": 22,
+      "url": "https://www.pittwire.pitt.edu/topics/artificial-intelligence",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "peer_institutions.json",
+      "name": "University of Massachusetts Amherst",
+      "id": 24,
+      "url": "https://www.umass.edu/news/",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "peer_institutions.json",
+      "name": "University of Massachusetts Amherst",
+      "id": 24,
+      "url": "https://www.umass.edu/news/topic/artificial-intelligence",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "peer_institutions.json",
+      "name": "Rutgers, The State University of New Jersey",
+      "id": 25,
+      "url": "https://news.rutgers.edu/",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "peer_institutions.json",
+      "name": "Rutgers, The State University of New Jersey",
+      "id": 25,
+      "url": "https://news.rutgers.edu/topic/artificial-intelligence",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "peer_institutions.json",
+      "name": "University of Washington",
+      "id": 27,
+      "url": "https://www.washington.edu/news/",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "peer_institutions.json",
+      "name": "University of Washington",
+      "id": 27,
+      "url": "https://www.washington.edu/news/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "Pittsburgh Supercomputing Center",
+      "id": 3,
+      "url": "https://www.psc.edu/news/",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "Pittsburgh Supercomputing Center",
+      "id": 3,
+      "url": "https://www.psc.edu/news/?topic=ai",
+      "type": "ai_tag",
+      "verified": false
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "batch_number": 9,
+  "total_batches": 18,
+  "urls_in_batch": 20,
+  "urls": [
+    {
+      "source": "r1_universities.json",
+      "name": "University of New Hampshire-Main Campus",
+      "id": 109,
+      "url": "https://news.unh.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of New Hampshire-Main Campus",
+      "id": 109,
+      "url": "https://news.unh.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "New Jersey Institute of Technology",
+      "id": 110,
+      "url": "https://news.njit.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "New Jersey Institute of Technology",
+      "id": 110,
+      "url": "https://news.njit.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Princeton University",
+      "id": 111,
+      "url": "https://www.princeton.edu/news",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Princeton University",
+      "id": 111,
+      "url": "https://www.princeton.edu/news/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Rutgers University-New Brunswick",
+      "id": 112,
+      "url": "https://news.rutgersuniversity-new.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Rutgers University-New Brunswick",
+      "id": 112,
+      "url": "https://news.rutgersuniversity-new.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "New Mexico State University-Main Campus",
+      "id": 113,
+      "url": "https://news.newmexico.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "New Mexico State University-Main Campus",
+      "id": 113,
+      "url": "https://news.newmexico.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Nevada-Reno",
+      "id": 116,
+      "url": "https://news.nevada.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Nevada-Reno",
+      "id": 116,
+      "url": "https://news.nevada.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Binghamton University",
+      "id": 117,
+      "url": "https://news.binghamtonuniversity.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Binghamton University",
+      "id": 117,
+      "url": "https://news.binghamtonuniversity.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "CUNY Graduate School and University Center",
+      "id": 118,
+      "url": "https://news.cunygraduate.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "CUNY Graduate School and University Center",
+      "id": 118,
+      "url": "https://news.cunygraduate.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Columbia University in the City of New York",
+      "id": 119,
+      "url": "https://news.columbia.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Columbia University in the City of New York",
+      "id": 119,
+      "url": "https://news.columbia.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Cornell University",
+      "id": 120,
+      "url": "https://news.cornell.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Cornell University",
+      "id": 120,
+      "url": "https://news.cornell.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    }
+  ]
+}
