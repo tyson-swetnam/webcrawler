@@ -122,6 +122,13 @@ alembic upgrade head
 
 **IMPORTANT:** There is only ONE production crawler entry point: `python -m crawler`
 
+The crawler MUST be run with the virtual environment activated:
+
+```bash
+# Activate virtual environment and run the full pipeline (production command)
+source venv/bin/activate && python -m crawler
+```
+
 This command runs the complete 6-phase pipeline:
 1. Crawl university news sites (Scrapy)
 2. Extract and deduplicate content
@@ -131,11 +138,22 @@ This command runs the complete 6-phase pipeline:
 6. Store results in database
 
 ```bash
-# Run the full pipeline (production command)
-python -m crawler
-
 # Test single university crawl (Scrapy only - for debugging)
-scrapy crawl university_news -a start_urls='["https://news.stanford.edu"]'
+source venv/bin/activate && scrapy crawl university_news -a start_urls='["https://news.stanford.edu"]'
+```
+
+**Automated Daily Execution:**
+
+The crawler is configured to run automatically via systemd timer every day at 06:00 MST. The systemd service calls `/home/tswetnam/github/webcrawler/scripts/run_crawler_and_commit.sh`, which:
+1. Activates the virtual environment
+2. Runs the crawler
+3. Commits any changes to the `docs/` directory
+4. Pushes to the `website` branch on GitHub
+
+To check the systemd timer status:
+```bash
+systemctl status ai-news-crawler.timer
+systemctl list-timers --all | grep ai-news-crawler
 ```
 
 ### Testing
