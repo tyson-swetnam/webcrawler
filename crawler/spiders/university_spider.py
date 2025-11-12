@@ -451,6 +451,7 @@ class UniversityNewsSpider(scrapy.Spider):
             r'^News & Events',
             r'^News and Events',
             r'^Press Releases?\s*$',
+            r'^News Releases?\s*$',  # Added for UW and similar sites
             r'^Media\s*$',
             r'^Stories\s*$',
             r'^Articles\s*$',
@@ -461,6 +462,10 @@ class UniversityNewsSpider(scrapy.Spider):
             r'^\w+\s+News\s*$',  # e.g., "Pittwire News", "University News"
             r'^Features & Articles',
             r'^Accolades & Honors',
+            r'^The Latest News',  # Added for UW-style pages
+            r'^Recent News',
+            r'^Archive',
+            r'^News Archive',
         ]
 
         import re
@@ -473,9 +478,17 @@ class UniversityNewsSpider(scrapy.Spider):
             r'/news/?$',
             r'/news-events/?$',
             r'/press-releases?/?$',
+            r'/news-releases?/?$',  # Added for consistency
             r'/media/?$',
             r'/stories/?$',
             r'/articles/?$',
+            r'/category/[^/]+/?$',  # Category pages (e.g., /category/news-releases/)
+            r'/tag/[^/]+/?$',  # Tag pages
+            r'/archive/?$',  # Archive pages
+            r'/latest[^/]*/?$',  # Latest news pages (e.g., /latest/, /latest-news/)
+            r'/the-latest[^/]*/?$',  # UW-style "the-latest-news-from" pages
+            r'/all-news/?$',
+            r'/recent[^/]*/?$',  # Recent news pages
         ]
 
         for pattern in url_navigation_patterns:
