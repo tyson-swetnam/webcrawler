@@ -209,6 +209,12 @@ class UniversityNewsSpider(scrapy.Spider):
         for link in self.link_extractor.extract_links(response):
             self.stats['urls_discovered'] += 1
 
+            # Pre-filter obvious listing/navigation pages by URL pattern
+            # This prevents them from even entering the database
+            if self._is_navigation_page('', link.url):
+                self.logger.debug(f"Skipping navigation/listing page URL: {link.url}")
+                continue
+
             # Check if URL already seen (fast bloom filter check)
             normalized = normalize_url(link.url)
             url_hash = compute_url_hash(normalized)
