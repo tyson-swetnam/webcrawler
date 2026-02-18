@@ -2,7 +2,7 @@
 University name mapper to convert hostnames to canonical university names.
 
 This module helps standardize university names across different sources by mapping
-hostnames to canonical names from the universities.json configuration file.
+hostnames to canonical names from the configuration files.
 """
 
 import json
@@ -17,60 +17,134 @@ logger = logging.getLogger(__name__)
 class UniversityNameMapper:
     """Maps hostnames to canonical university names."""
 
+    # Source files to load: (filename, key_for_entries, name_field)
+    SOURCE_FILES = [
+        ("universities.json", None, "name"),               # Legacy format (list of dicts)
+        ("peer_institutions.json", "universities", "name"),
+        ("r1_universities.json", "universities", "name"),
+        ("major_facilities.json", "facilities", "name"),
+        ("national_laboratories.json", "facilities", "name"),
+        ("global_institutions.json", "universities", "name"),
+    ]
+
     def __init__(self, config_path: Optional[Path] = None):
         """
         Initialize the mapper with university configuration.
 
         Args:
-            config_path: Path to universities.json file. If None, uses default location.
+            config_path: Path to config directory. If None, uses default location.
         """
         if config_path is None:
-            # Default to the config directory
-            config_path = Path(__file__).parent.parent / "config" / "universities.json"
+            config_dir = Path(__file__).parent.parent / "config"
+        else:
+            # Support both file path (legacy) and directory path
+            config_dir = config_path if config_path.is_dir() else config_path.parent
 
         self.hostname_to_name: Dict[str, str] = {}
-        self._load_universities(config_path)
+        self._load_all_sources(config_dir)
 
-    def _load_universities(self, config_path: Path) -> None:
+    def _load_all_sources(self, config_dir: Path) -> None:
         """
-        Load university configuration and build hostname mapping.
+        Load all source configuration files and build hostname mapping.
 
         Args:
-            config_path: Path to universities.json file
+            config_dir: Path to the config directory
         """
-        try:
-            with open(config_path, 'r', encoding='utf-8') as f:
-                universities = json.load(f)
+        total_loaded = 0
 
-            for university in universities:
-                name = university.get('name')
-                news_url = university.get('news_url')
+        for filename, entries_key, name_field in self.SOURCE_FILES:
+            filepath = config_dir / filename
+            if not filepath.exists():
+                continue
 
-                if not name or not news_url:
-                    continue
+            try:
+                with open(filepath, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
 
-                # Parse the news URL to get the hostname
-                parsed = urlparse(news_url)
-                hostname = parsed.netloc.lower()
+                # Get the entries list
+                if entries_key is None:
+                    # Legacy format: top-level list
+                    if isinstance(data, list):
+                        entries = data
+                    else:
+                        continue
+                else:
+                    entries = data.get(entries_key, [])
 
-                # Store full hostname mapping
-                self.hostname_to_name[hostname] = name
+                count = self._process_entries(entries, name_field)
+                total_loaded += count
+                logger.debug(f"Loaded {count} mappings from {filename}")
 
-                # Also store base domain mapping (e.g., stanford.edu)
-                # This handles cases where articles might come from different subdomains
-                parts = hostname.split('.')
-                if len(parts) >= 2:
-                    # Get the base domain (last two parts)
-                    base_domain = '.'.join(parts[-2:])
-                    # Only add if not already present (avoid overwriting)
-                    if base_domain not in self.hostname_to_name:
-                        self.hostname_to_name[base_domain] = name
+            except Exception as e:
+                logger.warning(f"Failed to load {filename}: {e}")
 
-            logger.info(f"Loaded {len(self.hostname_to_name)} hostname mappings for {len(universities)} universities")
+        logger.info(f"Loaded {len(self.hostname_to_name)} hostname mappings from {total_loaded} sources")
 
-        except Exception as e:
-            logger.error(f"Failed to load university configuration: {e}")
-            # Continue with empty mapping rather than crashing
+    def _process_entries(self, entries: list, name_field: str) -> int:
+        """
+        Process a list of entries and add hostname mappings.
+
+        Args:
+            entries: List of source dictionaries
+            name_field: Key to use for the institution name
+
+        Returns:
+            Number of entries processed
+        """
+        count = 0
+        for entry in entries:
+            name = entry.get(name_field)
+            if not name:
+                continue
+
+            # Get URL from various formats
+            news_url = self._extract_news_url(entry)
+            if not news_url:
+                continue
+
+            # Parse the news URL to get the hostname
+            parsed = urlparse(news_url)
+            hostname = parsed.netloc.lower()
+            if not hostname:
+                continue
+
+            # Store full hostname mapping
+            self.hostname_to_name[hostname] = name
+
+            # Also store base domain mapping (e.g., stanford.edu)
+            parts = hostname.split('.')
+            if len(parts) >= 2:
+                base_domain = '.'.join(parts[-2:])
+                if base_domain not in self.hostname_to_name:
+                    self.hostname_to_name[base_domain] = name
+
+            count += 1
+
+        return count
+
+    @staticmethod
+    def _extract_news_url(entry: dict) -> Optional[str]:
+        """Extract the primary news URL from various source formats."""
+        # Legacy format: direct news_url field
+        if 'news_url' in entry:
+            return entry['news_url']
+
+        # Schema v3.0.0: news_sources array
+        news_sources = entry.get('news_sources', [])
+        if isinstance(news_sources, list) and news_sources:
+            # Find primary source
+            for ns in news_sources:
+                if ns.get('type') == 'primary':
+                    return ns.get('url')
+            # Fallback to first source
+            return news_sources[0].get('url')
+
+        # Legacy nested format
+        if 'news' in entry:
+            news = entry['news']
+            return news.get('main_url') or news.get('url')
+
+        return None
 
     def get_canonical_name(self, hostname: str, fallback_sitename: Optional[str] = None) -> str:
         """

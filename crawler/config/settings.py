@@ -303,16 +303,20 @@ class Settings(BaseSettings):
             "top_universities": "crawler/config/top_universities.json",
             "peer_institutions": "crawler/config/peer_institutions.json",
             "meta_news": "crawler/config/meta_news_services.json",
-            "major_facilities": "crawler/config/major_facilities.json"
+            "major_facilities": "crawler/config/major_facilities.json",
+            "national_laboratories": "crawler/config/national_laboratories.json",
+            "global_institutions": "crawler/config/global_institutions.json"
         }
 
-        # If 'all' is specified, load all university lists plus major facilities
+        # If 'all' is specified, load all university lists plus facilities and labs
         source_type = self.university_source_type.lower()
         if source_type == "all":
             paths.extend([
-                "crawler/config/peer_institutions.json",   # Peer institutions (27)
-                "crawler/config/r1_universities.json",     # R1 institutions (187)
-                "crawler/config/major_facilities.json"     # Major research facilities (27)
+                "crawler/config/peer_institutions.json",          # Peer institutions (27)
+                "crawler/config/r1_universities.json",            # R1 institutions (187)
+                "crawler/config/major_facilities.json",           # HPC & Research Centers (10)
+                "crawler/config/national_laboratories.json",      # National Laboratories (54)
+                "crawler/config/global_institutions.json"         # Global Institutions (102)
             ])
         # If custom path is set and different from default, use it
         elif self.university_list_path != "crawler/config/universities.json":

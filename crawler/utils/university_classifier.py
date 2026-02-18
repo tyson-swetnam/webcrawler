@@ -1,5 +1,5 @@
 """
-University Classifier - Categorizes universities into Peer, R1, and All Others
+University Classifier - Categorizes universities into Peer, R1, HPC, National Lab, and Global
 """
 import json
 from pathlib import Path
@@ -7,12 +7,14 @@ from typing import Set, Tuple
 
 
 class UniversityClassifier:
-    """Classifies universities and facilities into three categories for HTML display"""
+    """Classifies universities and facilities into five categories for HTML display"""
 
     def __init__(self):
         self.peer_institutions = self._load_peer_institutions()
         self.r1_institutions = self._load_r1_institutions()
-        self.major_facilities = self._load_major_facilities()
+        self.hpc_exact, self.hpc_fuzzy = self._load_hpc_centers()
+        self.national_labs_exact, self.national_labs_fuzzy = self._load_national_labs()
+        self.global_exact, self.global_fuzzy = self._load_global_institutions()
 
         # Common abbreviations mapping
         self.abbreviations = {
@@ -44,6 +46,46 @@ class UniversityClassifier:
             'umich': 'university of michigan',
             'uw': 'university of washington',
             'ut austin': 'university of texas at austin',
+            # Global institution abbreviations
+            'eth': 'eth zurich',
+            'epfl': 'epfl',
+            'oxford': 'university of oxford',
+            'cambridge': 'university of cambridge',
+            'imperial': 'imperial college london',
+            'ucl': 'university college london',
+            'tsinghua': 'tsinghua university',
+            'peking': 'peking university',
+            'utokyo': 'university of tokyo',
+            'kaist': 'kaist',
+            'nus': 'national university of singapore',
+            'ntu': 'nanyang technological university',
+            'technion': 'technion',
+            # National lab abbreviations
+            'anl': 'argonne national laboratory',
+            'llnl': 'lawrence livermore national laboratory',
+            'lanl': 'los alamos national laboratory',
+            'ornl': 'oak ridge national laboratory',
+            'lbnl': 'lawrence berkeley national laboratory',
+            'snl': 'sandia national laboratories',
+            'pnnl': 'pacific northwest national laboratory',
+            'bnl': 'brookhaven national laboratory',
+            'slac': 'slac national accelerator laboratory',
+            'fermilab': 'fermi national accelerator laboratory',
+            'inl': 'idaho national laboratory',
+            'nrel': 'national renewable energy laboratory',
+            'pppl': 'princeton plasma physics laboratory',
+            'srnl': 'savannah river national laboratory',
+            'netl': 'national energy technology laboratory',
+            'jpl': 'nasa jpl',
+            'darpa': 'darpa',
+            'mitre': 'mitre corporation',
+            'rand': 'rand corporation',
+            'lincoln lab': 'mit lincoln laboratory',
+            'jhu apl': 'johns hopkins apl',
+            'sei': 'cmu software engineering institute',
+            'nist': 'nist',
+            'nsf': 'national science foundation',
+            'arpa-e': 'arpa-e',
         }
 
     def _load_peer_institutions(self) -> Set[str]:
@@ -70,23 +112,80 @@ class UniversityClassifier:
         universities = data.get('universities', [])
         return {univ['name'].lower() for univ in universities}
 
-    def _load_major_facilities(self) -> Set[str]:
-        """Load major facility names from major_facilities.json"""
+    def _load_hpc_centers(self) -> Tuple[Set[str], Set[str]]:
+        """Load HPC & Research Center names from major_facilities.json.
+        Returns (exact_match_set, fuzzy_match_set). Short abbreviations
+        are only in the exact set to prevent false substring matches."""
         path = Path("crawler/config/major_facilities.json")
         if not path.exists():
-            return set()
+            return set(), set()
 
         with open(path, 'r') as f:
             data = json.load(f)
 
         facilities = data.get('facilities', [])
-        # Include both full names and abbreviations
-        facility_names = set()
+        exact = set()
+        fuzzy = set()
         for facility in facilities:
-            facility_names.add(facility['name'].lower())
+            name = facility['name'].lower()
+            exact.add(name)
+            fuzzy.add(name)
             if facility.get('abbreviation'):
-                facility_names.add(facility['abbreviation'].lower())
-        return facility_names
+                abbrev = facility['abbreviation'].lower()
+                exact.add(abbrev)
+                if len(abbrev) >= 5:
+                    fuzzy.add(abbrev)
+        return exact, fuzzy
+
+    def _load_national_labs(self) -> Tuple[Set[str], Set[str]]:
+        """Load national laboratory names from national_laboratories.json.
+        Returns (exact_match_set, fuzzy_match_set). Short abbreviations
+        are only in the exact set to prevent false substring matches."""
+        path = Path("crawler/config/national_laboratories.json")
+        if not path.exists():
+            return set(), set()
+
+        with open(path, 'r') as f:
+            data = json.load(f)
+
+        facilities = data.get('facilities', [])
+        exact = set()
+        fuzzy = set()
+        for facility in facilities:
+            name = facility['name'].lower()
+            exact.add(name)
+            fuzzy.add(name)
+            if facility.get('abbreviation'):
+                abbrev = facility['abbreviation'].lower()
+                exact.add(abbrev)
+                if len(abbrev) >= 5:
+                    fuzzy.add(abbrev)
+        return exact, fuzzy
+
+    def _load_global_institutions(self) -> Tuple[Set[str], Set[str]]:
+        """Load global institution names from global_institutions.json.
+        Returns (exact_match_set, fuzzy_match_set). Short abbreviations
+        are only in the exact set to prevent false substring matches."""
+        path = Path("crawler/config/global_institutions.json")
+        if not path.exists():
+            return set(), set()
+
+        with open(path, 'r') as f:
+            data = json.load(f)
+
+        universities = data.get('universities', [])
+        exact = set()
+        fuzzy = set()
+        for univ in universities:
+            name = univ['name'].lower()
+            exact.add(name)
+            fuzzy.add(name)
+            if univ.get('abbreviation'):
+                abbrev = univ['abbreviation'].lower()
+                exact.add(abbrev)
+                if len(abbrev) >= 5:
+                    fuzzy.add(abbrev)
+        return exact, fuzzy
 
     def _normalize_name(self, name: str) -> str:
         """
@@ -108,17 +207,17 @@ class UniversityClassifier:
 
     def classify(self, university_name: str) -> str:
         """
-        Classify a university or facility into one of three categories.
-        Priority: Facility > Peer (exact) > Peer (fuzzy) > R1 (exact) > R1 (fuzzy)
+        Classify a university or facility into one of five categories.
+        Priority: national_lab > hpc > peer > global > r1
 
         Args:
             university_name: Name of the university or facility
 
         Returns:
-            'peer', 'r1', or 'facility'
+            'peer', 'r1', 'hpc', 'national_lab', or 'global'
         """
         if not university_name:
-            return 'facility'
+            return 'r1'
 
         name_lower = university_name.lower()
 
@@ -126,51 +225,70 @@ class UniversityClassifier:
         if name_lower in self.abbreviations:
             name_lower = self.abbreviations[name_lower]
 
-        # Check major facilities first (they may overlap with universities)
-        if name_lower in self.major_facilities:
-            return 'facility'
+        # Check national labs first (highest priority) - exact match
+        if name_lower in self.national_labs_exact:
+            return 'national_lab'
 
-        # Check peer (highest priority for universities) - exact match
+        # Check HPC centers - exact match
+        if name_lower in self.hpc_exact:
+            return 'hpc'
+
+        # Check peer institutions
         if name_lower in self.peer_institutions:
             return 'peer'
 
-        # Try normalized name matching for peer institutions BEFORE checking R1 exact
-        # This ensures peer institutions take priority even if they're also in R1 list
+        # Check global institutions - exact match
+        if name_lower in self.global_exact:
+            return 'global'
+
+        # Check R1 exact match
+        if name_lower in self.r1_institutions:
+            return 'r1'
+
+        # Fuzzy matching with normalized names
+        # Uses fuzzy sets that exclude short abbreviations to prevent
+        # false positives (e.g. "ida" matching "florida")
         normalized = self._normalize_name(university_name)
         if normalized:
-            # Check if normalized name appears in any peer institution
+            # Check national labs fuzzy
+            for lab in self.national_labs_fuzzy:
+                if len(lab) >= 5 and (normalized in lab or lab in normalized):
+                    return 'national_lab'
+
+            # Check HPC centers fuzzy
+            for hpc in self.hpc_fuzzy:
+                if len(hpc) >= 5 and (normalized in hpc or hpc in normalized):
+                    return 'hpc'
+
+            # Check peer institutions fuzzy
             for peer in self.peer_institutions:
                 if normalized in peer or peer in normalized:
                     return 'peer'
 
-        # Then check R1 - exact match
-        if name_lower in self.r1_institutions:
-            return 'r1'
+            # Check global institutions fuzzy
+            for glob in self.global_fuzzy:
+                if len(glob) >= 5 and (normalized in glob or glob in normalized):
+                    return 'global'
 
-        # Fuzzy matching for remaining categories
-        if normalized:
-            # Check if normalized name appears in any facility
-            for facility in self.major_facilities:
-                if normalized in facility or facility in normalized:
-                    return 'facility'
-
-            # Check if normalized name appears in any R1 institution
+            # Check R1 institutions fuzzy
             for r1 in self.r1_institutions:
                 if normalized in r1 or r1 in normalized:
                     return 'r1'
 
-        # Default to facility category
-        return 'facility'
+        # Default to r1 category
+        return 'r1'
 
-    def get_category_stats(self) -> Tuple[int, int, int]:
+    def get_category_stats(self) -> Tuple[int, int, int, int, int]:
         """
         Get counts of sources in each category.
 
         Returns:
-            Tuple of (peer_count, r1_count, facility_count)
+            Tuple of (peer_count, r1_count, hpc_count, national_lab_count, global_count)
         """
         return (
             len(self.peer_institutions),
             len(self.r1_institutions),
-            len(self.major_facilities)
+            len(self.hpc_exact),
+            len(self.national_labs_exact),
+            len(self.global_exact)
         )
