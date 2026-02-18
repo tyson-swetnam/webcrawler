@@ -1,0 +1,1422 @@
+{
+  "metadata": {
+    "schema_version": "3.0.0",
+    "title": "National Laboratories - DOE, Federal, and FFRDC Research Facilities",
+    "description": "U.S. Department of Energy national laboratories, federal government research labs, FFRDCs, and affiliated research entities",
+    "total_facilities": 54,
+    "date_compiled": "2026-02-18",
+    "last_updated": "2026-02-18T00:00:00+00:00",
+    "data_sources": [
+      "U.S. Department of Energy Office of Science National Laboratories",
+      "NNSA Production Facilities",
+      "Federal Laboratory Consortium",
+      "NSF FFRDC Directory"
+    ]
+  },
+  "facilities": [
+    {
+      "id": 1,
+      "name": "Argonne National Laboratory",
+      "abbreviation": "ANL",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Lemont",
+        "state": "IL",
+        "state_full": "Illinois",
+        "region": "Midwest",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.anl.gov/news",
+          "description": "Argonne National Laboratory - DOE National Laboratory news and updates",
+          "verified": true,
+          "crawl_priority": 250,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Exascale computing", "AI/ML", "Materials science", "Energy research"],
+      "major_systems": ["Aurora", "Polaris"]
+    },
+    {
+      "id": 2,
+      "name": "Lawrence Livermore National Laboratory",
+      "abbreviation": "LLNL",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Livermore",
+        "state": "CA",
+        "state_full": "California",
+        "region": "West",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.llnl.gov/news",
+          "description": "Lawrence Livermore National Laboratory - DOE National Laboratory news and updates",
+          "verified": true,
+          "crawl_priority": 250,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["National security", "Exascale computing", "AI/ML", "Nuclear weapons"],
+      "major_systems": ["El Capitan", "Sierra"]
+    },
+    {
+      "id": 3,
+      "name": "Los Alamos National Laboratory",
+      "abbreviation": "LANL",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Los Alamos",
+        "state": "NM",
+        "state_full": "New Mexico",
+        "region": "West",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.lanl.gov/news",
+          "description": "Los Alamos National Laboratory - DOE National Laboratory news and updates",
+          "verified": true,
+          "crawl_priority": 250,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["National security", "Nuclear science", "AI/ML", "Supercomputing"],
+      "major_systems": ["Venado", "Chicoma"]
+    },
+    {
+      "id": 4,
+      "name": "Oak Ridge National Laboratory",
+      "abbreviation": "ORNL",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Oak Ridge",
+        "state": "TN",
+        "state_full": "Tennessee",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.ornl.gov/news",
+          "description": "Oak Ridge National Laboratory - DOE National Laboratory news and updates",
+          "verified": true,
+          "crawl_priority": 250,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Exascale computing", "AI/ML", "Neutron science", "Materials research"],
+      "major_systems": ["Frontier", "Summit"]
+    },
+    {
+      "id": 5,
+      "name": "Lawrence Berkeley National Laboratory",
+      "abbreviation": "LBNL",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Berkeley",
+        "state": "CA",
+        "state_full": "California",
+        "region": "West",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://newscenter.lbl.gov/",
+          "description": "Lawrence Berkeley National Laboratory - DOE National Laboratory news and updates",
+          "verified": true,
+          "crawl_priority": 250,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Scientific computing", "AI/ML", "Energy sciences", "Materials"],
+      "major_systems": ["Perlmutter (NERSC)", "Cori"]
+    },
+    {
+      "id": 6,
+      "name": "Sandia National Laboratories",
+      "abbreviation": "SNL",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Albuquerque",
+        "state": "NM",
+        "state_full": "New Mexico",
+        "region": "West",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://newsreleases.sandia.gov/",
+          "description": "Sandia National Laboratories - DOE National Laboratory news and updates",
+          "verified": true,
+          "crawl_priority": 200,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["National security", "Engineering", "Computing", "Materials science"],
+      "major_systems": ["Astra", "Vanguard"]
+    },
+    {
+      "id": 7,
+      "name": "Pacific Northwest National Laboratory",
+      "abbreviation": "PNNL",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Richland",
+        "state": "WA",
+        "state_full": "Washington",
+        "region": "West",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.pnnl.gov/news",
+          "description": "Pacific Northwest National Laboratory - DOE National Laboratory news and updates",
+          "verified": true,
+          "crawl_priority": 200,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Environmental science", "Energy", "National security", "Computing"],
+      "major_systems": ["Deception", "Constance"]
+    },
+    {
+      "id": 8,
+      "name": "Brookhaven National Laboratory",
+      "abbreviation": "BNL",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Upton",
+        "state": "NY",
+        "state_full": "New York",
+        "region": "Northeast",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.bnl.gov/newsroom/",
+          "description": "Brookhaven National Laboratory - DOE National Laboratory news and updates",
+          "verified": true,
+          "crawl_priority": 200,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Nuclear physics", "Materials science", "Energy sciences", "Computing"],
+      "major_systems": ["RHIC Computing Facility"]
+    },
+    {
+      "id": 9,
+      "name": "SLAC National Accelerator Laboratory",
+      "abbreviation": "SLAC",
+      "affiliated_institution": "Stanford University / U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Menlo Park",
+        "state": "CA",
+        "state_full": "California",
+        "region": "West",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www6.slac.stanford.edu/news",
+          "description": "SLAC National Accelerator Laboratory - DOE National Laboratory news and updates",
+          "verified": true,
+          "crawl_priority": 250,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Particle physics", "X-ray science", "AI/ML", "Accelerators"],
+      "major_systems": ["LCLS Computing", "S3DF"]
+    },
+    {
+      "id": 10,
+      "name": "Fermi National Accelerator Laboratory",
+      "abbreviation": "Fermilab",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Batavia",
+        "state": "IL",
+        "state_full": "Illinois",
+        "region": "Midwest",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://news.fnal.gov/",
+          "description": "Fermi National Accelerator Laboratory - DOE National Laboratory news and updates",
+          "verified": true,
+          "crawl_priority": 200,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Particle physics", "Neutrinos", "AI/ML for physics", "Accelerators"],
+      "major_systems": ["Wilson Cluster", "LHC Tier-1"]
+    },
+    {
+      "id": 11,
+      "name": "Idaho National Laboratory",
+      "abbreviation": "INL",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Idaho Falls",
+        "state": "ID",
+        "state_full": "Idaho",
+        "region": "West",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://inl.gov/news/",
+          "description": "Idaho National Laboratory - DOE National Laboratory news and updates",
+          "verified": true,
+          "crawl_priority": 150,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Nuclear energy", "Critical infrastructure", "National security"],
+      "major_systems": ["Sawtooth", "Lemhi"]
+    },
+    {
+      "id": 12,
+      "name": "National Renewable Energy Laboratory",
+      "abbreviation": "NREL",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Golden",
+        "state": "CO",
+        "state_full": "Colorado",
+        "region": "West",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.nrel.gov/news/",
+          "description": "National Renewable Energy Laboratory - DOE National Laboratory news and updates (CRITICAL: nrel.gov currently redirects to nlr.gov - domain issue)",
+          "verified": false,
+          "crawl_priority": 200,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Renewable energy", "AI/ML for energy", "Solar", "Wind"],
+      "major_systems": ["Eagle", "Kestrel"]
+    },
+    {
+      "id": 13,
+      "name": "Ames Laboratory",
+      "abbreviation": "Ames Lab",
+      "affiliated_institution": "Iowa State University / U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Ames",
+        "state": "IA",
+        "state_full": "Iowa",
+        "region": "Midwest",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.ameslab.gov/news",
+          "description": "Ames Laboratory - DOE National Laboratory news and updates",
+          "verified": true,
+          "crawl_priority": 150,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Materials science", "Rare earth elements", "AI for materials"],
+      "major_systems": ["Condo", "Thunder"]
+    },
+    {
+      "id": 14,
+      "name": "Princeton Plasma Physics Laboratory",
+      "abbreviation": "PPPL",
+      "affiliated_institution": "Princeton University / U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Princeton",
+        "state": "NJ",
+        "state_full": "New Jersey",
+        "region": "Northeast",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.pppl.gov/news",
+          "description": "Princeton Plasma Physics Laboratory - DOE National Laboratory news and updates",
+          "verified": true,
+          "crawl_priority": 150,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Fusion energy", "Plasma physics", "AI for fusion control"],
+      "major_systems": ["NSTX-U Computing"]
+    },
+    {
+      "id": 15,
+      "name": "Thomas Jefferson National Accelerator Facility",
+      "abbreviation": "Jefferson Lab",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Newport News",
+        "state": "VA",
+        "state_full": "Virginia",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.jlab.org/news",
+          "description": "Thomas Jefferson National Accelerator Facility - DOE National Laboratory news and updates",
+          "verified": false,
+          "crawl_priority": 150,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Nuclear physics", "Accelerators", "Computing"],
+      "major_systems": ["SciComp Farm"]
+    },
+    {
+      "id": 16,
+      "name": "Savannah River National Laboratory",
+      "abbreviation": "SRNL",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Aiken",
+        "state": "SC",
+        "state_full": "South Carolina",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.srnl.gov/newsroom/",
+          "description": "Savannah River National Laboratory - DOE National Laboratory news and updates",
+          "verified": true,
+          "crawl_priority": 100,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Environmental management", "National security", "Materials"],
+      "major_systems": []
+    },
+    {
+      "id": 17,
+      "name": "National Energy Technology Laboratory",
+      "abbreviation": "NETL",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Pittsburgh",
+        "state": "PA",
+        "state_full": "Pennsylvania",
+        "region": "Northeast",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.netl.doe.gov/newsroom",
+          "description": "National Energy Technology Laboratory - DOE National Laboratory news and updates",
+          "verified": true,
+          "crawl_priority": 100,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Fossil energy", "Carbon capture", "Energy systems"],
+      "major_systems": ["Joule 2.0"]
+    },
+    {
+      "id": 18,
+      "name": "Battelle Memorial Institute",
+      "abbreviation": "Battelle",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE Lab Operator",
+      "location": {
+        "city": "Columbus",
+        "state": "OH",
+        "state_full": "Ohio",
+        "region": "Midwest",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.battelle.org/insights/newsroom",
+          "description": "Battelle Memorial Institute - DOE Lab Operator news and updates",
+          "verified": false,
+          "crawl_priority": 150,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Lab management", "Applied research", "Technology commercialization"],
+      "major_systems": []
+    },
+    {
+      "id": 19,
+      "name": "Y-12 National Security Complex",
+      "abbreviation": "Y-12",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "NNSA Facility",
+      "location": {
+        "city": "Oak Ridge",
+        "state": "TN",
+        "state_full": "Tennessee",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.y12.doe.gov/news/press-releases",
+          "description": "Y-12 National Security Complex - NNSA Facility news and updates",
+          "verified": false,
+          "crawl_priority": 150,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Nuclear security", "Weapons components", "Manufacturing"],
+      "major_systems": []
+    },
+    {
+      "id": 20,
+      "name": "Kansas City National Security Campus",
+      "abbreviation": "KCNSC",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "NNSA Facility",
+      "location": {
+        "city": "Kansas City",
+        "state": "MO",
+        "state_full": "Missouri",
+        "region": "Midwest",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://kcnsc.doe.gov/news/newsroom/",
+          "description": "Kansas City National Security Campus - NNSA Facility news and updates",
+          "verified": false,
+          "crawl_priority": 100,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Non-nuclear weapons components", "Manufacturing", "Engineering"],
+      "major_systems": []
+    },
+    {
+      "id": 21,
+      "name": "Pantex Plant",
+      "abbreviation": "Pantex",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "NNSA Facility",
+      "location": {
+        "city": "Amarillo",
+        "state": "TX",
+        "state_full": "Texas",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://pantex.energy.gov/news/press-releases",
+          "description": "Pantex Plant - NNSA Facility news and updates",
+          "verified": false,
+          "crawl_priority": 100,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Nuclear weapons assembly", "Dismantlement", "HE research"],
+      "major_systems": []
+    },
+    {
+      "id": 22,
+      "name": "Nevada National Security Site",
+      "abbreviation": "NNSS",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "NNSA Test Site",
+      "location": {
+        "city": "Mercury",
+        "state": "NV",
+        "state_full": "Nevada",
+        "region": "West",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://nnss.gov/news/category/press-releases/",
+          "description": "Nevada National Security Site - NNSA Test Site news and updates",
+          "verified": false,
+          "crawl_priority": 100,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Stockpile stewardship", "Subcritical experiments", "Emergency response"],
+      "major_systems": []
+    },
+    {
+      "id": 23,
+      "name": "ARPA-E",
+      "abbreviation": "ARPA-E",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE Research Agency",
+      "location": {
+        "city": "Washington",
+        "state": "DC",
+        "state_full": "District of Columbia",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://arpa-e.energy.gov/news-and-events/news-and-insights/",
+          "description": "ARPA-E - DOE Research Agency news and updates",
+          "verified": false,
+          "crawl_priority": 200,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Advanced energy research", "Breakthrough technologies", "AI for energy"],
+      "major_systems": []
+    },
+    {
+      "id": 24,
+      "name": "Oak Ridge Associated Universities",
+      "abbreviation": "ORAU",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE Consortium",
+      "location": {
+        "city": "Oak Ridge",
+        "state": "TN",
+        "state_full": "Tennessee",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.orau.org/news/releases/index.html",
+          "description": "Oak Ridge Associated Universities - DOE Consortium news and updates",
+          "verified": false,
+          "crawl_priority": 100,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Scientific workforce", "Education", "Research partnerships"],
+      "major_systems": []
+    },
+    {
+      "id": 25,
+      "name": "NIST",
+      "abbreviation": "NIST",
+      "affiliated_institution": "U.S. Department of Commerce",
+      "facility_type": "Commerce Dept. Lab",
+      "location": {
+        "city": "Gaithersburg",
+        "state": "MD",
+        "state_full": "Maryland",
+        "region": "Northeast",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.nist.gov/news-events/news",
+          "description": "NIST - Commerce Dept. Lab news and updates",
+          "verified": false,
+          "crawl_priority": 200,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Standards", "Metrology", "AI safety", "Cybersecurity"],
+      "major_systems": []
+    },
+    {
+      "id": 26,
+      "name": "NASA JPL",
+      "abbreviation": "JPL",
+      "affiliated_institution": "NASA / Caltech",
+      "facility_type": "NASA FFRDC",
+      "location": {
+        "city": "Pasadena",
+        "state": "CA",
+        "state_full": "California",
+        "region": "West",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.jpl.nasa.gov/news/",
+          "description": "NASA JPL - NASA FFRDC news and updates",
+          "verified": false,
+          "crawl_priority": 250,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Space exploration", "AI/ML for space", "Robotics", "Data science"],
+      "major_systems": []
+    },
+    {
+      "id": 27,
+      "name": "NASA Ames Research Center",
+      "abbreviation": "NASA Ames",
+      "affiliated_institution": "NASA",
+      "facility_type": "NASA Center",
+      "location": {
+        "city": "Moffett Field",
+        "state": "CA",
+        "state_full": "California",
+        "region": "West",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.nasa.gov/ames/ames-research-center-news/",
+          "description": "NASA Ames Research Center - NASA Center news and updates",
+          "verified": false,
+          "crawl_priority": 200,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Aeronautics", "AI/ML", "Quantum computing", "Astrobiology"],
+      "major_systems": []
+    },
+    {
+      "id": 28,
+      "name": "NASA Goddard Space Flight Center",
+      "abbreviation": "GSFC",
+      "affiliated_institution": "NASA",
+      "facility_type": "NASA Center",
+      "location": {
+        "city": "Greenbelt",
+        "state": "MD",
+        "state_full": "Maryland",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.nasa.gov/latest-goddard-news/",
+          "description": "NASA Goddard Space Flight Center - NASA Center news and updates",
+          "verified": false,
+          "crawl_priority": 200,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Earth science", "Space science", "AI for Earth observation"],
+      "major_systems": []
+    },
+    {
+      "id": 29,
+      "name": "NASA Langley Research Center",
+      "abbreviation": "LaRC",
+      "affiliated_institution": "NASA",
+      "facility_type": "NASA Center",
+      "location": {
+        "city": "Hampton",
+        "state": "VA",
+        "state_full": "Virginia",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.nasa.gov/langley/langley-news/",
+          "description": "NASA Langley Research Center - NASA Center news and updates",
+          "verified": false,
+          "crawl_priority": 150,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Aeronautics", "Atmospheric science", "AI/ML"],
+      "major_systems": []
+    },
+    {
+      "id": 30,
+      "name": "NASA Glenn Research Center",
+      "abbreviation": "GRC",
+      "affiliated_institution": "NASA",
+      "facility_type": "NASA Center",
+      "location": {
+        "city": "Cleveland",
+        "state": "OH",
+        "state_full": "Ohio",
+        "region": "Midwest",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.nasa.gov/glenn-news/",
+          "description": "NASA Glenn Research Center - NASA Center news and updates",
+          "verified": false,
+          "crawl_priority": 150,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Propulsion", "Power systems", "Communications"],
+      "major_systems": []
+    },
+    {
+      "id": 31,
+      "name": "U.S. Naval Research Laboratory",
+      "abbreviation": "NRL",
+      "affiliated_institution": "U.S. Navy",
+      "facility_type": "Navy Research Lab",
+      "location": {
+        "city": "Washington",
+        "state": "DC",
+        "state_full": "District of Columbia",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.nrl.navy.mil/News/",
+          "description": "U.S. Naval Research Laboratory - Navy Research Lab news and updates",
+          "verified": false,
+          "crawl_priority": 200,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["AI/ML", "Cybersecurity", "Materials", "Plasma physics"],
+      "major_systems": []
+    },
+    {
+      "id": 32,
+      "name": "DEVCOM Army Research Laboratory",
+      "abbreviation": "ARL",
+      "affiliated_institution": "U.S. Army",
+      "facility_type": "Army Research Lab",
+      "location": {
+        "city": "Adelphi",
+        "state": "MD",
+        "state_full": "Maryland",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://arl.devcom.army.mil/news/",
+          "description": "DEVCOM Army Research Laboratory - Army Research Lab news and updates",
+          "verified": false,
+          "crawl_priority": 200,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["AI/ML for defense", "Autonomous systems", "Computational science"],
+      "major_systems": []
+    },
+    {
+      "id": 33,
+      "name": "Air Force Research Laboratory",
+      "abbreviation": "AFRL",
+      "affiliated_institution": "U.S. Air Force",
+      "facility_type": "Air Force Lab",
+      "location": {
+        "city": "Wright-Patterson AFB",
+        "state": "OH",
+        "state_full": "Ohio",
+        "region": "Midwest",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.afrl.af.mil/News/",
+          "description": "Air Force Research Laboratory - Air Force Lab news and updates",
+          "verified": false,
+          "crawl_priority": 200,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["AI/ML", "Autonomy", "Directed energy", "Space"],
+      "major_systems": []
+    },
+    {
+      "id": 34,
+      "name": "Office of Naval Research",
+      "abbreviation": "ONR",
+      "affiliated_institution": "U.S. Navy",
+      "facility_type": "Navy Research Funder",
+      "location": {
+        "city": "Arlington",
+        "state": "VA",
+        "state_full": "Virginia",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.onr.navy.mil/media-center/news-releases",
+          "description": "Office of Naval Research - Navy Research Funder news and updates",
+          "verified": false,
+          "crawl_priority": 150,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Naval technology", "AI/ML", "Autonomy", "Ocean science"],
+      "major_systems": []
+    },
+    {
+      "id": 35,
+      "name": "DARPA",
+      "abbreviation": "DARPA",
+      "affiliated_institution": "U.S. Department of Defense",
+      "facility_type": "DoD Research Agency",
+      "location": {
+        "city": "Arlington",
+        "state": "VA",
+        "state_full": "Virginia",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.darpa.mil/news",
+          "description": "DARPA - DoD Research Agency news and updates",
+          "verified": false,
+          "crawl_priority": 250,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Breakthrough technology", "AI/ML", "Autonomy", "Cybersecurity"],
+      "major_systems": []
+    },
+    {
+      "id": 36,
+      "name": "IARPA",
+      "abbreviation": "IARPA",
+      "affiliated_institution": "Office of the Director of National Intelligence",
+      "facility_type": "Intelligence Agency",
+      "location": {
+        "city": "College Park",
+        "state": "MD",
+        "state_full": "Maryland",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.iarpa.gov/",
+          "description": "IARPA - Intelligence Agency news and updates",
+          "verified": false,
+          "crawl_priority": 150,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Intelligence technology", "AI/ML", "Biometrics", "Forecasting"],
+      "major_systems": []
+    },
+    {
+      "id": 37,
+      "name": "NSA Research Directorate",
+      "abbreviation": "NSA/R",
+      "affiliated_institution": "National Security Agency",
+      "facility_type": "Intelligence Agency",
+      "location": {
+        "city": "Fort Meade",
+        "state": "MD",
+        "state_full": "Maryland",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.nsa.gov/Press-Room/News-Highlights/",
+          "description": "NSA Research Directorate - Intelligence Agency news and updates",
+          "verified": false,
+          "crawl_priority": 150,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Cryptography", "AI/ML", "Cybersecurity", "Quantum computing"],
+      "major_systems": []
+    },
+    {
+      "id": 38,
+      "name": "NOAA Center for AI",
+      "abbreviation": "NCAI",
+      "affiliated_institution": "U.S. Department of Commerce",
+      "facility_type": "Commerce Dept.",
+      "location": {
+        "city": "Silver Spring",
+        "state": "MD",
+        "state_full": "Maryland",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.noaa.gov/news",
+          "description": "NOAA Center for AI - Commerce Dept. news and updates",
+          "verified": false,
+          "crawl_priority": 150,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Weather AI", "Climate modeling", "Ocean prediction"],
+      "major_systems": []
+    },
+    {
+      "id": 39,
+      "name": "DHS S&T Directorate",
+      "abbreviation": "DHS S&T",
+      "affiliated_institution": "U.S. Department of Homeland Security",
+      "facility_type": "DHS Research",
+      "location": {
+        "city": "Washington",
+        "state": "DC",
+        "state_full": "District of Columbia",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.dhs.gov/science-and-technology",
+          "description": "DHS S&T Directorate - DHS Research news and updates",
+          "verified": false,
+          "crawl_priority": 100,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Homeland security", "AI for threat detection", "Cybersecurity"],
+      "major_systems": []
+    },
+    {
+      "id": 40,
+      "name": "National Science Foundation",
+      "abbreviation": "NSF",
+      "affiliated_institution": "U.S. Government",
+      "facility_type": "Federal Funder",
+      "location": {
+        "city": "Alexandria",
+        "state": "VA",
+        "state_full": "Virginia",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.nsf.gov/news",
+          "description": "National Science Foundation - Federal Funder news and updates",
+          "verified": false,
+          "crawl_priority": 200,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Research funding", "AI policy", "STEM education", "Infrastructure"],
+      "major_systems": []
+    },
+    {
+      "id": 41,
+      "name": "MITRE Corporation",
+      "abbreviation": "MITRE",
+      "affiliated_institution": "U.S. Government (Multiple Sponsors)",
+      "facility_type": "FFRDC",
+      "location": {
+        "city": "McLean",
+        "state": "VA",
+        "state_full": "Virginia",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.mitre.org/news-insights",
+          "description": "MITRE Corporation - FFRDC news and updates",
+          "verified": false,
+          "crawl_priority": 200,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Systems engineering", "AI/ML", "Cybersecurity", "Defense"],
+      "major_systems": []
+    },
+    {
+      "id": 42,
+      "name": "The Aerospace Corporation",
+      "abbreviation": "Aerospace",
+      "affiliated_institution": "U.S. Air Force / U.S. Space Force",
+      "facility_type": "FFRDC",
+      "location": {
+        "city": "El Segundo",
+        "state": "CA",
+        "state_full": "California",
+        "region": "West",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://aerospace.org/press-releases",
+          "description": "The Aerospace Corporation - FFRDC news and updates",
+          "verified": false,
+          "crawl_priority": 150,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Space systems", "AI for space", "National security"],
+      "major_systems": []
+    },
+    {
+      "id": 43,
+      "name": "RAND Corporation",
+      "abbreviation": "RAND",
+      "affiliated_institution": "U.S. Government (Multiple Sponsors)",
+      "facility_type": "FFRDC",
+      "location": {
+        "city": "Santa Monica",
+        "state": "CA",
+        "state_full": "California",
+        "region": "West",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.rand.org/news/press.html",
+          "description": "RAND Corporation - FFRDC news and updates",
+          "verified": false,
+          "crawl_priority": 200,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Policy research", "AI policy", "Defense", "Security"],
+      "major_systems": []
+    },
+    {
+      "id": 44,
+      "name": "Institute for Defense Analyses",
+      "abbreviation": "IDA",
+      "affiliated_institution": "U.S. Department of Defense",
+      "facility_type": "FFRDC",
+      "location": {
+        "city": "Alexandria",
+        "state": "VA",
+        "state_full": "Virginia",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.ida.org/en/about-ida/ida-in-the-news",
+          "description": "Institute for Defense Analyses - FFRDC news and updates",
+          "verified": false,
+          "crawl_priority": 100,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Defense analysis", "Science and technology", "Systems evaluation"],
+      "major_systems": []
+    },
+    {
+      "id": 45,
+      "name": "MIT Lincoln Laboratory",
+      "abbreviation": "Lincoln Lab",
+      "affiliated_institution": "Massachusetts Institute of Technology",
+      "facility_type": "FFRDC",
+      "location": {
+        "city": "Lexington",
+        "state": "MA",
+        "state_full": "Massachusetts",
+        "region": "Northeast",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.ll.mit.edu/news",
+          "description": "MIT Lincoln Laboratory - FFRDC news and updates",
+          "verified": false,
+          "crawl_priority": 250,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["AI/ML", "Cybersecurity", "Space surveillance", "Biodefense"],
+      "major_systems": []
+    },
+    {
+      "id": 46,
+      "name": "Johns Hopkins APL",
+      "abbreviation": "JHU APL",
+      "affiliated_institution": "Johns Hopkins University",
+      "facility_type": "FFRDC",
+      "location": {
+        "city": "Laurel",
+        "state": "MD",
+        "state_full": "Maryland",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.jhuapl.edu/news/news-releases",
+          "description": "Johns Hopkins APL - FFRDC news and updates",
+          "verified": false,
+          "crawl_priority": 250,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["AI/ML", "Space exploration", "Missile defense", "Cybersecurity"],
+      "major_systems": []
+    },
+    {
+      "id": 47,
+      "name": "CMU Software Engineering Institute",
+      "abbreviation": "SEI",
+      "affiliated_institution": "Carnegie Mellon University",
+      "facility_type": "FFRDC",
+      "location": {
+        "city": "Pittsburgh",
+        "state": "PA",
+        "state_full": "Pennsylvania",
+        "region": "Northeast",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.sei.cmu.edu/news-events/",
+          "description": "CMU Software Engineering Institute - FFRDC news and updates",
+          "verified": false,
+          "crawl_priority": 200,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Software engineering", "AI/ML", "Cybersecurity", "DevSecOps"],
+      "major_systems": []
+    },
+    {
+      "id": 48,
+      "name": "Center for Naval Analyses",
+      "abbreviation": "CNA",
+      "affiliated_institution": "U.S. Navy",
+      "facility_type": "FFRDC",
+      "location": {
+        "city": "Arlington",
+        "state": "VA",
+        "state_full": "Virginia",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.cna.org/our-media/press-releases/",
+          "description": "Center for Naval Analyses - FFRDC news and updates",
+          "verified": false,
+          "crawl_priority": 100,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Naval operations", "Defense analysis", "AI policy"],
+      "major_systems": []
+    },
+    {
+      "id": 49,
+      "name": "Draper Laboratory",
+      "abbreviation": "Draper",
+      "affiliated_institution": "Independent Nonprofit",
+      "facility_type": "FFRDC-like",
+      "location": {
+        "city": "Cambridge",
+        "state": "MA",
+        "state_full": "Massachusetts",
+        "region": "Northeast",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.draper.com/media-center/news-releases",
+          "description": "Draper Laboratory - FFRDC-like news and updates",
+          "verified": false,
+          "crawl_priority": 150,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Autonomous systems", "Navigation", "AI/ML", "Space systems"],
+      "major_systems": []
+    },
+    {
+      "id": 50,
+      "name": "In-Q-Tel",
+      "abbreviation": "IQT",
+      "affiliated_institution": "Central Intelligence Agency",
+      "facility_type": "CIA Venture Capital",
+      "location": {
+        "city": "Tysons",
+        "state": "VA",
+        "state_full": "Virginia",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.iqt.org/blog/",
+          "description": "In-Q-Tel - CIA Venture Capital news and updates",
+          "verified": false,
+          "crawl_priority": 150,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Intelligence technology", "AI/ML startups", "Emerging tech"],
+      "major_systems": []
+    },
+    {
+      "id": 51,
+      "name": "SRI International",
+      "abbreviation": "SRI",
+      "affiliated_institution": "Independent Nonprofit",
+      "facility_type": "Nonprofit R&D",
+      "location": {
+        "city": "Menlo Park",
+        "state": "CA",
+        "state_full": "California",
+        "region": "West",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.sri.com/about-us/press-room/",
+          "description": "SRI International - Nonprofit R&D news and updates",
+          "verified": false,
+          "crawl_priority": 200,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["AI/ML", "Biomedical", "Robotics", "National security"],
+      "major_systems": []
+    },
+    {
+      "id": 52,
+      "name": "NSF AI Institutes",
+      "abbreviation": "AIVO",
+      "affiliated_institution": "National Science Foundation",
+      "facility_type": "NSF Network",
+      "location": {
+        "city": "Davis",
+        "state": "CA",
+        "state_full": "California",
+        "region": "West",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://aiinstitutes.org/",
+          "description": "NSF AI Institutes - NSF Network news and updates",
+          "verified": false,
+          "crawl_priority": 200,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["AI research", "AI education", "Multi-institution collaboration"],
+      "major_systems": []
+    },
+    {
+      "id": 53,
+      "name": "National Academies",
+      "abbreviation": "NAS",
+      "affiliated_institution": "U.S. Government (Congressional Charter)",
+      "facility_type": "Advisory Body",
+      "location": {
+        "city": "Washington",
+        "state": "DC",
+        "state_full": "District of Columbia",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.nationalacademies.org/newsroom",
+          "description": "National Academies - Advisory Body news and updates",
+          "verified": false,
+          "crawl_priority": 200,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Science policy", "AI policy", "Research consensus"],
+      "major_systems": []
+    },
+    {
+      "id": 54,
+      "name": "UMD ARLIS",
+      "abbreviation": "ARLIS",
+      "affiliated_institution": "University of Maryland",
+      "facility_type": "UARC",
+      "location": {
+        "city": "College Park",
+        "state": "MD",
+        "state_full": "Maryland",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.arlis.umd.edu/",
+          "description": "UMD ARLIS - UARC news and updates",
+          "verified": false,
+          "crawl_priority": 100,
+          "last_verified": "2026-02-18T00:00:00+00:00"
+        }
+      ],
+      "research_focus": ["Applied research", "AI for defense", "Language processing"],
+      "major_systems": []
+    }
+  ]
+}
