@@ -662,6 +662,13 @@ class HTMLReportGenerator:
             margin-bottom: 8px;
             break-inside: avoid;
         }
+        .source-list a {
+            color: var(--color-accent);
+            text-decoration: none;
+        }
+        .source-list a:hover {
+            text-decoration: underline;
+        }
         @media (max-width: 1200px) {
             .source-list { column-count: 2; }
         }
@@ -1105,26 +1112,40 @@ class HTMLReportGenerator:
         # Load source lists
         config_dir = Path(__file__).parent.parent / 'config'
 
-        def load_names(filename, key, name_field='name'):
+        def load_names_with_urls(filename, key, name_field='name'):
+            """Load institution names and their primary news URLs."""
             try:
                 with open(config_dir / filename, 'r') as f:
                     data = json.load(f)
-                    return [item[name_field] for item in data.get(key, [])]
+                    results = []
+                    for item in data.get(key, []):
+                        name = item[name_field]
+                        url = ''
+                        news_sources = item.get('news_sources', [])
+                        if news_sources:
+                            url = news_sources[0].get('url', '')
+                        results.append((name, url))
+                    return results
             except Exception:
                 return []
 
-        peer_institutions = load_names('peer_institutions.json', 'universities')
-        r1_universities = load_names('r1_universities.json', 'universities')
-        hpc_centers = load_names('major_facilities.json', 'facilities')
-        national_labs = load_names('national_laboratories.json', 'facilities')
-        global_institutions = load_names('global_institutions.json', 'universities')
+        peer_institutions = load_names_with_urls('peer_institutions.json', 'universities')
+        r1_universities = load_names_with_urls('r1_universities.json', 'universities')
+        hpc_centers = load_names_with_urls('major_facilities.json', 'facilities')
+        national_labs = load_names_with_urls('national_laboratories.json', 'facilities')
+        global_institutions = load_names_with_urls('global_institutions.json', 'universities')
 
         # Build source lists HTML
         def build_collapsible_list(title, items, section_id):
             if not items:
                 return f'<p><em>No {title.lower()} available</em></p>'
 
-            items_html = ''.join([f'<li>{item}</li>' for item in sorted(items)])
+            def make_li(name, url):
+                if url:
+                    return f'<li><a href="{url}" target="_blank" rel="noopener">{name}</a></li>'
+                return f'<li>{name}</li>'
+
+            items_html = ''.join([make_li(name, url) for name, url in sorted(items, key=lambda x: x[0])])
             return f'''
                 <details>
                     <summary><strong>{title}</strong> ({len(items)} sources)</summary>
