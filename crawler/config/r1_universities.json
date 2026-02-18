@@ -7,7 +7,7 @@
     "institutions_included": 187,
     "coverage_percentage": 100.0,
     "date_compiled": "2025-11-02",
-    "last_updated": "2025-11-07T14:49:56.712684+00:00",
+    "last_updated": "2026-02-18T03:43:11.350768+00:00",
     "data_sources": [
       "Carnegie Classifications 2025 RAD Public Data File",
       "carnegieclassifications.acenet.edu"
@@ -87,19 +87,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.alabama.edu",
+          "url": "https://news.ua.edu",
           "description": "The University of Alabama official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.950930+00:00"
+          "last_verified": "2026-02-18T03:42:22.400180+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400223+00:00"
       },
       "news_url": "https://news.ua.edu"
     },
@@ -129,19 +130,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.alabama.edu",
+          "url": "https://www.uab.edu/news",
           "description": "University of Alabama at Birmingham official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.950939+00:00"
+          "last_verified": "2026-02-18T03:42:22.400254+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400268+00:00"
       },
       "news_url": "https://www.uab.edu/news"
     },
@@ -171,19 +173,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.arkansas.edu",
+          "url": "https://news.uark.edu",
           "description": "University of Arkansas official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.950947+00:00"
+          "last_verified": "2026-02-18T03:42:22.400286+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400296+00:00"
       },
       "news_url": "https://news.uark.edu"
     },
@@ -255,19 +258,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.northernarizona.edu",
+          "url": "https://news.nau.edu",
           "description": "Northern Arizona University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.950966+00:00"
+          "last_verified": "2026-02-18T03:42:22.400308+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400317+00:00"
       },
       "news_url": "https://news.nau.edu"
     },
@@ -339,19 +343,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.caltech.edu/about/news",
+          "url": "https://news.caltech.edu",
           "description": "California Institute of Technology official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.950979+00:00"
+          "last_verified": "2026-02-18T03:43:11.347106+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:43:11.347132+00:00"
       },
       "news_url": "https://www.caltech.edu/about/news"
     },
@@ -381,19 +386,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.sandiego.edu",
+          "url": "https://www.sdsu.edu/news",
           "description": "San Diego State University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.950985+00:00"
+          "last_verified": "2026-02-18T03:42:22.400330+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400339+00:00"
       },
       "news_url": "https://www.sdsu.edu/news"
     },
@@ -524,19 +530,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.ucdavis.edu",
+          "url": "https://www.ucdavis.edu/news",
           "description": "University of California-Davis official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951043+00:00"
+          "last_verified": "2026-02-18T03:42:22.400351+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400360+00:00"
       },
       "news_url": "https://www.ucdavis.edu/news"
     },
@@ -608,19 +615,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.ucla.edu",
+          "url": "https://newsroom.ucla.edu",
           "description": "University of California-Los Angeles official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951056+00:00"
+          "last_verified": "2026-02-18T03:42:22.400372+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400380+00:00"
       },
       "news_url": "https://newsroom.ucla.edu"
     },
@@ -776,19 +784,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.ucsf.edu",
+          "url": "https://www.ucsf.edu/news",
           "description": "University of California-San Francisco official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951081+00:00"
+          "last_verified": "2026-02-18T03:42:22.400392+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400400+00:00"
       },
       "news_url": "https://www.ucsf.edu/news"
     },
@@ -902,19 +911,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.usc.edu",
+          "url": "https://today.usc.edu/news",
           "description": "University of Southern California official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951103+00:00"
+          "last_verified": "2026-02-18T03:42:22.400412+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400420+00:00"
       },
       "news_url": "https://today.usc.edu/news"
     },
@@ -944,19 +954,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.coloradoschool.edu",
+          "url": "https://www.minesnewsroom.com",
           "description": "Colorado School of Mines official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951108+00:00"
+          "last_verified": "2026-02-18T03:42:22.400432+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400440+00:00"
       },
       "news_url": "https://www.minesnewsroom.com"
     },
@@ -986,19 +997,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.colostate.edu",
+          "url": "https://source.colostate.edu",
           "description": "Colorado State University-Fort Collins official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951115+00:00"
+          "last_verified": "2026-02-18T03:42:22.400451+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400460+00:00"
       },
       "news_url": "https://source.colostate.edu"
     },
@@ -1112,19 +1124,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.universityof.edu",
+          "url": "https://www.du.edu/news",
           "description": "University of Denver official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951135+00:00"
+          "last_verified": "2026-02-18T03:42:22.400472+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400480+00:00"
       },
       "news_url": "https://www.du.edu/news"
     },
@@ -1196,19 +1209,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.yale.edu",
+          "url": "https://www.yale.edu/news",
           "description": "Yale University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951150+00:00"
+          "last_verified": "2026-02-18T03:43:11.347154+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:43:11.347163+00:00"
       },
       "news_url": "https://news.yale.edu"
     },
@@ -1238,19 +1252,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.americanuniversity.edu",
+          "url": "https://www.american.edu/news",
           "description": "American University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951156+00:00"
+          "last_verified": "2026-02-18T03:42:22.400492+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400501+00:00"
       },
       "news_url": "https://www.american.edu/news"
     },
@@ -1280,19 +1295,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.georgewashington.edu",
+          "url": "https://gwtoday.gwu.edu",
           "description": "George Washington University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951162+00:00"
+          "last_verified": "2026-02-18T03:42:22.400513+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400522+00:00"
       },
       "news_url": "https://gwtoday.gwu.edu"
     },
@@ -1363,19 +1379,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.howarduniversity.edu",
+          "url": "https://thedig.howard.edu",
           "description": "Howard University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951175+00:00"
+          "last_verified": "2026-02-18T03:42:22.400534+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400542+00:00"
       },
       "news_url": "https://thedig.howard.edu"
     },
@@ -1446,19 +1463,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.delaware.edu",
+          "url": "https://www.udel.edu/udaily",
           "description": "University of Delaware official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951189+00:00"
+          "last_verified": "2026-02-18T03:42:22.400554+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400563+00:00"
       },
       "news_url": "https://www.udel.edu/udaily"
     },
@@ -1488,19 +1506,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.floridaatlantic.edu",
+          "url": "https://www.fau.edu/newsdesk",
           "description": "Florida Atlantic University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951195+00:00"
+          "last_verified": "2026-02-18T03:42:22.400574+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400583+00:00"
       },
       "news_url": "https://www.fau.edu/newsdesk"
     },
@@ -1530,19 +1549,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.floridainternational.edu",
+          "url": "https://news.fiu.edu",
           "description": "Florida International University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951201+00:00"
+          "last_verified": "2026-02-18T03:42:22.400595+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400602+00:00"
       },
       "news_url": "https://news.fiu.edu"
     },
@@ -1572,19 +1592,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.floridastate.edu",
+          "url": "https://news.fsu.edu",
           "description": "Florida State University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951208+00:00"
+          "last_verified": "2026-02-18T03:42:22.400616+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400625+00:00"
       },
       "news_url": "https://news.fsu.edu"
     },
@@ -1614,19 +1635,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.novasoutheastern.edu",
+          "url": "https://news.nova.edu",
           "description": "Nova Southeastern University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951214+00:00"
+          "last_verified": "2026-02-18T03:42:22.400636+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400644+00:00"
       },
       "news_url": "https://news.nova.edu"
     },
@@ -1656,19 +1678,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.universityof.edu",
+          "url": "https://www.ucf.edu/news",
           "description": "University of Central Florida official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951226+00:00"
+          "last_verified": "2026-02-18T03:42:22.400656+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400664+00:00"
       },
       "news_url": "https://www.ucf.edu/news"
     },
@@ -1698,19 +1721,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.florida.edu",
+          "url": "https://news.ufl.edu",
           "description": "University of Florida official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951233+00:00"
+          "last_verified": "2026-02-18T03:42:22.400676+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400684+00:00"
       },
       "news_url": "https://news.ufl.edu"
     },
@@ -1781,19 +1805,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.universityof.edu",
+          "url": "https://www.usf.edu/news",
           "description": "University of South Florida official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951244+00:00"
+          "last_verified": "2026-02-18T03:42:22.400696+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400704+00:00"
       },
       "news_url": "https://www.usf.edu/news"
     },
@@ -1907,19 +1932,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.georgiastate.edu",
+          "url": "https://news.gsu.edu",
           "description": "Georgia State University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951263+00:00"
+          "last_verified": "2026-02-18T03:42:22.400717+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400725+00:00"
       },
       "news_url": "https://news.gsu.edu"
     },
@@ -1949,19 +1975,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.georgia.edu",
+          "url": "https://news.uga.edu",
           "description": "University of Georgia official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951269+00:00"
+          "last_verified": "2026-02-18T03:42:22.400779+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400787+00:00"
       },
       "news_url": "https://news.uga.edu"
     },
@@ -1991,19 +2018,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.hawaii.edu",
+          "url": "https://manoa.hawaii.edu/news",
           "description": "University of Hawaii at Manoa official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951275+00:00"
+          "last_verified": "2026-02-18T03:42:22.400798+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400806+00:00"
       },
       "news_url": "https://manoa.hawaii.edu/news"
     },
@@ -2116,19 +2144,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.idaho.edu",
+          "url": "https://www.idaho.edu/news",
           "description": "University of Idaho official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951298+00:00"
+          "last_verified": "2026-02-18T03:43:11.347176+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:43:11.347181+00:00"
       }
     },
     {
@@ -2198,19 +2227,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.northwestern.edu",
+          "url": "https://www.northwestern.edu/news",
           "description": "Northwestern University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951312+00:00"
+          "last_verified": "2026-02-18T03:43:11.347189+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:43:11.347194+00:00"
       },
       "news_url": "https://news.northwestern.edu"
     },
@@ -2240,19 +2270,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.southernillinois.edu",
+          "url": "https://news.siu.edu",
           "description": "Southern Illinois University-Carbondale official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951318+00:00"
+          "last_verified": "2026-02-18T03:43:11.347202+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:43:11.347206+00:00"
       }
     },
     {
@@ -2281,11 +2312,11 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.uchicago.edu",
+          "url": "https://www.uchicago.edu/news",
           "description": "University of Chicago official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951326+00:00"
+          "last_verified": "2026-02-18T03:43:11.347217+00:00"
         },
         {
           "type": "ai_research",
@@ -2300,8 +2331,9 @@
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:43:11.347222+00:00"
       },
       "news_url": "https://news.uchicago.edu"
     },
@@ -2331,19 +2363,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.uic.edu",
+          "url": "https://www.uic.edu/news",
           "description": "University of Illinois Chicago official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951340+00:00"
+          "last_verified": "2026-02-18T03:43:11.347229+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:43:11.347233+00:00"
       }
     },
     {
@@ -2372,19 +2405,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.illinois.edu",
+          "url": "https://www.uiuc.edu/news",
           "description": "University of Illinois Urbana-Champaign official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951346+00:00"
+          "last_verified": "2026-02-18T03:43:11.347240+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:43:11.347244+00:00"
       }
     },
     {
@@ -2996,19 +3030,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.harvard.edu/news",
+          "url": "https://news.harvard.edu",
           "description": "Harvard University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951452+00:00"
+          "last_verified": "2026-02-18T03:43:11.347253+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:43:11.347257+00:00"
       },
       "news_url": "https://www.harvard.edu/news"
     },
@@ -3038,11 +3073,11 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.mit.edu",
+          "url": "https://www.mit.edu/news",
           "description": "Massachusetts Institute of Technology official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951459+00:00"
+          "last_verified": "2026-02-18T03:43:11.347263+00:00"
         },
         {
           "type": "ai_research",
@@ -3065,8 +3100,9 @@
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:43:11.347268+00:00"
       },
       "news_url": "https://news.mit.edu"
     },
@@ -3348,19 +3384,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.jhu.edu",
+          "url": "https://hub.jhu.edu",
           "description": "Johns Hopkins University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951507+00:00"
+          "last_verified": "2026-02-18T03:42:22.400817+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400826+00:00"
       },
       "news_url": "https://hub.jhu.edu"
     },
@@ -3390,19 +3427,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.maryland.edu",
+          "url": "https://www.maryland.edu/news",
           "description": "University of Maryland - Baltimore official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951512+00:00"
+          "last_verified": "2026-02-18T03:43:11.347274+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:43:11.347279+00:00"
       }
     },
     {
@@ -3514,19 +3552,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.maine.edu",
+          "url": "https://www.maine.edu/news",
           "description": "University of Maine official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951529+00:00"
+          "last_verified": "2026-02-18T03:43:11.347285+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:43:11.347291+00:00"
       }
     },
     {
@@ -4134,19 +4173,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.montana.edu",
+          "url": "https://www.montana.edu/news",
           "description": "The University of Montana official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951619+00:00"
+          "last_verified": "2026-02-18T03:43:11.347302+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:43:11.347306+00:00"
       }
     },
     {
@@ -4175,19 +4215,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://today.duke.edu",
+          "url": "https://news.duke.edu",
           "description": "Duke University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951624+00:00"
+          "last_verified": "2026-02-18T03:43:11.347312+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:43:11.347316+00:00"
       },
       "news_url": "https://today.duke.edu"
     },
@@ -4258,19 +4299,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.northcarolina.edu",
+          "url": "https://www.northcarolina.edu/news",
           "description": "North Carolina State University at Raleigh official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951634+00:00"
+          "last_verified": "2026-02-18T03:43:11.347323+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:43:11.347327+00:00"
       }
     },
     {
@@ -4463,19 +4505,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.nebraska.edu",
+          "url": "https://www.nebraska.edu/news",
           "description": "University of Nebraska Medical Center official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951668+00:00"
+          "last_verified": "2026-02-18T03:43:11.347335+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:43:11.347340+00:00"
       }
     },
     {
@@ -4545,19 +4588,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.dartmouth.edu",
+          "url": "https://home.dartmouth.edu/news",
           "description": "Dartmouth College official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951679+00:00"
+          "last_verified": "2026-02-18T03:42:22.400838+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400845+00:00"
       },
       "news_url": "https://home.dartmouth.edu/news"
     },
@@ -4671,11 +4715,11 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.princeton.edu/news",
+          "url": "https://princeton.edu/news",
           "description": "Princeton University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951697+00:00"
+          "last_verified": "2026-02-18T03:43:11.347347+00:00"
         },
         {
           "type": "cs_department",
@@ -4690,8 +4734,9 @@
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:43:11.347351+00:00"
       },
       "news_url": "https://www.princeton.edu/news"
     },
@@ -5052,11 +5097,11 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.cornell.edu",
+          "url": "https://www.cornell.edu/news",
           "description": "Cornell University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951756+00:00"
+          "last_verified": "2026-02-18T03:43:11.347360+00:00"
         },
         {
           "type": "cs_department",
@@ -5071,8 +5116,9 @@
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:43:11.347365+00:00"
       },
       "news_url": "https://news.cornell.edu"
     },
@@ -5891,11 +5937,11 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.cmu.edu/news/",
+          "url": "https://today.cmu.edu",
           "description": "Carnegie Mellon University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951886+00:00"
+          "last_verified": "2026-02-18T03:43:11.347375+00:00"
         },
         {
           "type": "cs_department",
@@ -5910,8 +5956,9 @@
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:43:11.347380+00:00"
       }
     },
     {
@@ -6108,19 +6155,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://penntoday.upenn.edu",
+          "url": "https://news.upenn.edu",
           "description": "University of Pennsylvania official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951926+00:00"
+          "last_verified": "2026-02-18T03:43:11.347386+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:43:11.347391+00:00"
       },
       "news_url": "https://penntoday.upenn.edu"
     },
@@ -6192,19 +6240,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.brown.edu",
+          "url": "https://www.brown.edu/news",
           "description": "Brown University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.951938+00:00"
+          "last_verified": "2026-02-18T03:42:22.400857+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400865+00:00"
       },
       "news_url": "https://www.brown.edu/news"
     },
@@ -6856,19 +6905,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.utsa.edu",
+          "url": "https://www.utsa.edu/news",
           "description": "The University of Texas Health Science Center at San Antonio official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.952059+00:00"
+          "last_verified": "2026-02-18T03:43:11.347401+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:43:11.347406+00:00"
       }
     },
     {
@@ -6897,19 +6947,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.uta.edu",
+          "url": "https://www.uta.edu/news",
           "description": "The University of Texas at Arlington official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.952064+00:00"
+          "last_verified": "2026-02-18T03:43:11.347412+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:43:11.347416+00:00"
       }
     },
     {
@@ -6938,19 +6989,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.utexas.edu/news",
+          "url": "https://news.utexas.edu",
           "description": "The University of Texas at Austin official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.952069+00:00"
+          "last_verified": "2026-02-18T03:43:11.347422+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:43:11.347427+00:00"
       }
     },
     {
@@ -6979,19 +7031,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.utdallas.edu",
+          "url": "https://www.utdallas.edu/news",
           "description": "The University of Texas at Dallas official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.952074+00:00"
+          "last_verified": "2026-02-18T03:43:11.347433+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:43:11.347438+00:00"
       }
     },
     {
@@ -7061,19 +7114,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.utsa.edu",
+          "url": "https://www.utsa.edu/news",
           "description": "The University of Texas at San Antonio official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.952082+00:00"
+          "last_verified": "2026-02-18T03:43:11.347444+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:43:11.347449+00:00"
       }
     },
     {
@@ -7314,7 +7368,7 @@
           "description": "Utah State University official news and press releases",
           "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.952111+00:00",
+          "last_verified": "2026-02-18T03:42:20.739166+00:00",
           "verification_date": "2025-11-07"
         }
       ],
@@ -7322,8 +7376,9 @@
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:20.739182+00:00"
       }
     },
     {
@@ -7352,19 +7407,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.georgemason.edu",
+          "url": "https://www.gmu.edu/news",
           "description": "George Mason University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.952116+00:00"
+          "last_verified": "2026-02-18T03:42:20.740163+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:20.740175+00:00"
       }
     },
     {
@@ -7393,19 +7449,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.olddominion.edu",
+          "url": "https://www.odu.edu/news",
           "description": "Old Dominion University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.952120+00:00"
+          "last_verified": "2026-02-18T03:42:20.741010+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:20.741016+00:00"
       }
     },
     {
@@ -7476,19 +7533,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.virginiacommonwealth.edu",
+          "url": "https://news.vcu.edu/",
           "description": "Virginia Commonwealth University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.952130+00:00"
+          "last_verified": "2026-02-18T03:42:20.741849+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:20.741855+00:00"
       }
     },
     {
@@ -7559,19 +7617,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.william&.edu",
+          "url": "https://news.wm.edu/",
           "description": "William & Mary official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.952144+00:00"
+          "last_verified": "2026-02-18T03:42:20.742684+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:20.742688+00:00"
       }
     },
     {
@@ -7600,19 +7659,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.vermont.edu",
+          "url": "https://www.uvm.edu/uvmnews",
           "description": "University of Vermont official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.952151+00:00"
+          "last_verified": "2026-02-18T03:42:20.743538+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:20.743542+00:00"
       }
     },
     {
@@ -7641,19 +7701,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.washington.edu/news/",
+          "url": "https://www.washington.edu/news",
           "description": "University of Washington-Seattle Campus official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.952160+00:00"
+          "last_verified": "2026-02-18T03:42:22.400876+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:22.400884+00:00"
       },
       "news_url": "https://www.washington.edu/news"
     },
@@ -7683,19 +7744,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.washingtonstate.edu",
+          "url": "https://wsu.edu/news/",
           "description": "Washington State University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.952166+00:00"
+          "last_verified": "2026-02-18T03:42:20.744382+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:20.744385+00:00"
       }
     },
     {
@@ -7724,19 +7786,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.wisconsin.edu",
+          "url": "https://news.wisc.edu/",
           "description": "University of Wisconsin-Madison official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.952171+00:00"
+          "last_verified": "2026-02-18T03:42:20.745243+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:20.745248+00:00"
       }
     },
     {
@@ -7765,19 +7828,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.wisconsin.edu",
+          "url": "https://uwm.edu/news/",
           "description": "University of Wisconsin-Milwaukee official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.952178+00:00"
+          "last_verified": "2026-02-18T03:42:20.746121+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:20.746126+00:00"
       }
     },
     {
@@ -7806,19 +7870,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.westvirginia.edu",
+          "url": "https://wvutoday.wvu.edu/",
           "description": "West Virginia University official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.952186+00:00"
+          "last_verified": "2026-02-18T03:42:20.746988+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:20.746992+00:00"
       }
     },
     {
@@ -7847,19 +7912,20 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.wyoming.edu",
+          "url": "https://www.uwyo.edu/news/",
           "description": "University of Wyoming official news and press releases",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.952192+00:00"
+          "last_verified": "2026-02-18T03:42:20.747848+00:00"
         }
       ],
       "data_quality": {
         "completeness_score": 0.5,
         "last_updated": "2025-11-02T07:37:25Z",
         "verified_by": "automated_generation",
-        "verification_status": "unverified",
-        "needs_manual_review": true
+        "verification_status": "verified",
+        "needs_manual_review": false,
+        "last_verified": "2026-02-18T03:42:20.747851+00:00"
       }
     }
   ]

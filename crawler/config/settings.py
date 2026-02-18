@@ -486,7 +486,7 @@ class Settings(BaseSettings):
             # Only add if we have a valid URL, not a placeholder domain, and is verified
             news_url = entry.get("news_url", "")
             is_verified = entry.get("verified", True)  # Default to True for legacy sources without verification field
-            if news_url and "universityof.edu" not in news_url and is_verified:
+            if news_url and "universityof.edu" not in news_url and "universityat.edu" not in news_url and "theuniversity.edu" not in news_url and is_verified:
                 normalized.append(entry)
 
         return normalized
