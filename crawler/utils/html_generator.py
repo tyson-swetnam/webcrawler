@@ -1,8 +1,11 @@
 """
 HTML Report Generator - Creates Drudge Report-style static HTML pages
 """
+import calendar
+import json
 import os
 import re
+from collections import OrderedDict
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import List, Dict, Optional
@@ -17,6 +20,22 @@ from crawler.utils.university_classifier import UniversityClassifier
 class HTMLReportGenerator:
     """Generates Drudge Report-style HTML pages for crawl results"""
 
+    _NAME_OVERRIDES = {
+        # Hostnames that slip through as display names
+        "stories.tamu.edu": "Texas A&M University",
+        "tamu.edu": "Texas A&M University",
+        "usf.edu": "University of South Florida",
+        "nist.gov": "NIST",
+        # Blog/publication names
+        "The Brink": "Boston University",
+        # CamelCase concatenations
+        "Universityofri": "University of Rhode Island",
+        "FloridaAtlantic": "Florida Atlantic University",
+        "UMassLowell": "UMass Lowell",
+        # Post-cleanup matches (after suffix stripping)
+        "Notre Dame": "University of Notre Dame",
+    }
+
     def __init__(self, output_dir: str = "html_output", github_pages_dir: str = None):
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
@@ -27,6 +46,26 @@ class HTMLReportGenerator:
             self.github_pages_dir.mkdir(parents=True, exist_ok=True)
 
         self.classifier = UniversityClassifier()
+        self._source_count = self._count_sources()
+
+    def _count_sources(self) -> int:
+        """Count total monitored sources from config files"""
+        config_dir = Path(__file__).parent.parent / 'config'
+        count = 0
+        for filename, key in [
+            ('peer_institutions.json', 'universities'),
+            ('r1_universities.json', 'universities'),
+            ('major_facilities.json', 'facilities'),
+            ('national_laboratories.json', 'facilities'),
+            ('global_institutions.json', 'universities'),
+        ]:
+            try:
+                with open(config_dir / filename, 'r') as f:
+                    data = json.load(f)
+                    count += len(data.get(key, []))
+            except Exception:
+                pass
+        return count
 
     @staticmethod
     def strip_markdown(text: str) -> str:
@@ -76,6 +115,607 @@ class HTMLReportGenerator:
         text = re.sub(r'\s+', ' ', text)
 
         return text.strip()
+
+    @staticmethod
+    def clean_university_name(name: str) -> str:
+        """Clean raw university names for display.
+
+        Handles hostnames, CamelCase concatenations, blog names, and noisy suffixes.
+        """
+        if not name:
+            return "Unknown"
+
+        # Check explicit overrides first
+        if name in HTMLReportGenerator._NAME_OVERRIDES:
+            return HTMLReportGenerator._NAME_OVERRIDES[name]
+
+        # Strip pipe-delimited suffixes: "University of Central Florida News | UCF Today" -> "University of Central Florida News"
+        if ' | ' in name:
+            name = name.split(' | ')[0].strip()
+
+        # Strip common suffixes
+        for suffix in [' News', ' Today', ' Newsroom', ' Stories']:
+            if name.endswith(suffix):
+                name = name[:-len(suffix)].strip()
+
+        # Check overrides again after cleanup
+        if name in HTMLReportGenerator._NAME_OVERRIDES:
+            return HTMLReportGenerator._NAME_OVERRIDES[name]
+
+        # Handle bare hostnames (contain dots with a TLD)
+        if re.match(r'^[\w.-]+\.(edu|gov|org|com)$', name):
+            clean = re.sub(r'\.(edu|gov|org|com)$', '', name)
+            parts = clean.split('.')
+            readable = parts[-1] if parts else clean
+            return readable.replace('-', ' ').replace('_', ' ').title()
+
+        # Fix CamelCase concatenation: "FloridaAtlantic" -> "Florida Atlantic"
+        if re.search(r'[a-z][A-Z]', name):
+            name = re.sub(r'([a-z])([A-Z])', r'\1 \2', name)
+
+        return name.strip() or "Unknown"
+
+    # ── Favicon ────────────────────────────────────────────────────────────
+
+    @staticmethod
+    def _get_favicon_link() -> str:
+        return "<link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F393;</text></svg>\">"
+
+    # ── CSS Helpers ────────────────────────────────────────────────────────
+    # These return plain strings (not f-strings) to avoid brace escaping.
+
+    @staticmethod
+    def _get_base_css() -> str:
+        """CSS custom properties, reset, header, nav, footer, focus states"""
+        return """
+        :root {
+            --color-bg: #ffffff;
+            --color-surface: #fafafa;
+            --color-surface-hover: #f0f0f0;
+            --color-text: #000000;
+            --color-text-secondary: #333333;
+            --color-text-muted: #666666;
+            --color-text-faint: #999999;
+            --color-accent: #cc0000;
+            --color-link: #0000cc;
+            --color-link-visited: #551a8b;
+            --color-border: #dddddd;
+            --color-border-strong: #000000;
+            --color-nav-bg: #f5f5f5;
+            --color-highlight-bg: #fffbf0;
+
+            --color-peer: #8b0000;
+            --color-peer-bg: #fff5f5;
+            --color-r1: #00008b;
+            --color-r1-bg: #f5f5ff;
+            --color-facility: #8b6914;
+            --color-facility-bg: #fffbf0;
+            --color-lab: #006400;
+            --color-lab-bg: #f0fff0;
+            --color-global: #4b0082;
+            --color-global-bg: #f8f0ff;
+
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-md: 0 2px 8px rgba(0,0,0,0.1);
+            --radius-sm: 3px;
+            --radius-md: 6px;
+            --transition-fast: 150ms ease;
+
+            --space-xs: 4px;
+            --space-sm: 8px;
+            --space-md: 16px;
+            --space-lg: 24px;
+            --space-xl: 32px;
+            --space-2xl: 48px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            max-width: 1800px;
+            margin: 0 auto;
+            padding: 20px 40px;
+            line-height: 1.5;
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--color-accent);
+            outline-offset: 2px;
+        }
+        a:focus:not(:focus-visible) { outline: none; }
+
+        /* ── Header ── */
+        .header {
+            text-align: center;
+            border-bottom: 3px solid var(--color-border-strong);
+            padding-bottom: var(--space-lg);
+            margin-bottom: var(--space-xl);
+        }
+        .header h1 {
+            font-size: 42px;
+            font-weight: bold;
+            letter-spacing: -1px;
+            margin-bottom: var(--space-sm);
+        }
+        .header .tagline {
+            font-size: 14px;
+            color: var(--color-text-muted);
+            font-style: italic;
+        }
+        .header .date {
+            font-size: 14px;
+            color: var(--color-text);
+            margin-top: var(--space-md);
+            font-weight: bold;
+            display: inline-block;
+            background: var(--color-nav-bg);
+            border-radius: var(--radius-sm);
+            padding: var(--space-xs) 12px;
+        }
+
+        /* ── Navigation ── */
+        .nav {
+            text-align: center;
+            margin-bottom: var(--space-lg);
+            padding: var(--space-sm);
+            background-color: var(--color-nav-bg);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+        }
+        .nav a {
+            color: var(--color-accent);
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 var(--space-xs);
+            font-size: 14px;
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-sm);
+            transition: background-color var(--transition-fast), color var(--transition-fast);
+            display: inline-block;
+        }
+        .nav a:hover {
+            background-color: var(--color-accent);
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .nav a.active {
+            background-color: var(--color-accent);
+            color: #ffffff;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            margin-top: var(--space-2xl);
+            padding-top: var(--space-lg);
+            border-top: 2px solid var(--color-border-strong);
+            font-size: 12px;
+            color: var(--color-text-muted);
+        }
+        .footer a {
+            color: var(--color-text-muted);
+            text-decoration: none;
+            margin: 0 var(--space-sm);
+            transition: color var(--transition-fast);
+        }
+        .footer a:hover { color: var(--color-accent); }
+        .footer .footer-nav { margin-bottom: var(--space-sm); }
+        .footer .footer-nav a { font-weight: bold; }
+        .footer .footer-meta { margin-top: var(--space-xs); }
+
+        .no-results {
+            text-align: center;
+            font-size: 18px;
+            color: var(--color-text-muted);
+            margin: 40px 0;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 10px var(--space-md); }
+            .header h1 { font-size: 28px; }
+        }
+        """
+
+    @staticmethod
+    def _get_main_page_css() -> str:
+        """Stats pills, three-column layout, articles, responsive breakpoints"""
+        return """
+        /* ── Stats Pills ── */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+            padding: var(--space-md);
+            flex-wrap: wrap;
+        }
+        .stat-pill {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: var(--space-sm) var(--space-lg);
+            background: var(--color-surface);
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--color-border-strong);
+            box-shadow: var(--shadow-sm);
+            min-width: 80px;
+        }
+        .stat-pill .stat-number {
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 1;
+        }
+        .stat-pill .stat-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            color: var(--color-text-muted);
+            letter-spacing: 1px;
+            margin-top: var(--space-xs);
+        }
+        .stat-peer { border-left-color: var(--color-peer); }
+        .stat-r1 { border-left-color: var(--color-r1); }
+        .stat-facility { border-left-color: var(--color-facility); }
+        .stat-lab { border-left-color: var(--color-lab); }
+        .stat-global { border-left-color: var(--color-global); }
+
+        /* ── Five-Column Layout ── */
+        .five-column-layout {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+            align-items: start;
+        }
+        .column {
+            border: 1px solid var(--color-border);
+            padding: var(--space-md);
+            background-color: var(--color-surface);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            min-height: 120px;
+        }
+        .column-title {
+            font-size: 16px;
+            margin-bottom: var(--space-md);
+            padding: var(--space-sm) var(--space-md);
+            border-bottom: 3px solid var(--color-accent);
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .column-peer .column-title {
+            color: var(--color-peer);
+            border-bottom-color: var(--color-peer);
+            background: var(--color-peer-bg);
+            border-radius: var(--radius-sm);
+        }
+        .column-r1 .column-title {
+            color: var(--color-r1);
+            border-bottom-color: var(--color-r1);
+            background: var(--color-r1-bg);
+            border-radius: var(--radius-sm);
+        }
+        .column-facility .column-title {
+            color: var(--color-facility);
+            border-bottom-color: var(--color-facility);
+            background: var(--color-facility-bg);
+            border-radius: var(--radius-sm);
+        }
+        .column-lab .column-title {
+            color: var(--color-lab);
+            border-bottom-color: var(--color-lab);
+            background: var(--color-lab-bg);
+            border-radius: var(--radius-sm);
+        }
+        .column-global .column-title {
+            color: var(--color-global);
+            border-bottom-color: var(--color-global);
+            background: var(--color-global-bg);
+            border-radius: var(--radius-sm);
+        }
+        .no-articles {
+            text-align: center;
+            color: var(--color-text-faint);
+            font-style: italic;
+            padding: 20px;
+        }
+
+        /* ── University Sections ── */
+        .university-section {
+            margin-bottom: var(--space-lg);
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: var(--space-md);
+        }
+        .university-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        .university-section h3 {
+            font-size: 16px;
+            color: var(--color-text);
+            margin-bottom: var(--space-sm);
+            padding-bottom: var(--space-xs);
+            border-bottom: 1px solid var(--color-accent);
+        }
+
+        /* ── Article Cards ── */
+        .article {
+            margin-bottom: 18px;
+            padding: var(--space-sm) var(--space-sm) var(--space-sm) 10px;
+            border-radius: var(--radius-sm);
+            transition: background-color var(--transition-fast);
+        }
+        .article:hover {
+            background-color: var(--color-surface-hover);
+        }
+        .headline { margin-bottom: 3px; }
+        .headline a {
+            color: var(--color-link);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .headline a:hover {
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+        .headline a:visited { color: var(--color-link-visited); }
+        .topics {
+            display: inline;
+            margin-left: var(--space-sm);
+        }
+        .topic-pill {
+            display: inline-block;
+            background: var(--color-surface-hover);
+            border-radius: 2px;
+            padding: 1px 5px;
+            margin: 0 2px;
+            font-size: 11px;
+            color: var(--color-text-muted);
+        }
+        .meta {
+            font-size: 12px;
+            color: var(--color-text-muted);
+            font-style: italic;
+        }
+        .summary {
+            font-size: 13px;
+            color: var(--color-text-secondary);
+            margin-top: 5px;
+            padding-left: 10px;
+            line-height: 1.5;
+        }
+
+        /* ── Responsive ── */
+        @media (min-width: 1025px) and (max-width: 1400px) {
+            .five-column-layout {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .five-column-layout {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 768px) {
+            .five-column-layout {
+                grid-template-columns: 1fr;
+            }
+            .column { padding: 10px; }
+            .headline a { font-size: 15px; }
+        }
+        @media (max-width: 480px) {
+            .stats {
+                flex-direction: column;
+                align-items: center;
+            }
+            .stat-pill { width: 100%; }
+        }
+        """
+
+    @staticmethod
+    def _get_archive_page_css() -> str:
+        """Monthly groupings, bar chart rows, responsive"""
+        return """
+        .archive-month {
+            margin-bottom: var(--space-2xl);
+        }
+        .month-heading {
+            font-size: 20px;
+            font-weight: bold;
+            padding-bottom: var(--space-sm);
+            margin-bottom: var(--space-md);
+            border-bottom: 2px solid var(--color-border-strong);
+        }
+        .archive-row {
+            display: grid;
+            grid-template-columns: 140px 1fr 60px;
+            align-items: center;
+            gap: var(--space-md);
+            padding: var(--space-sm) var(--space-md);
+            text-decoration: none;
+            color: var(--color-text);
+            border-radius: var(--radius-sm);
+            transition: background-color var(--transition-fast);
+        }
+        .archive-row:hover {
+            background-color: var(--color-surface-hover);
+        }
+        .archive-date {
+            font-weight: bold;
+            font-size: 14px;
+            color: var(--color-link);
+        }
+        .archive-row:hover .archive-date {
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+        .archive-bar-container {
+            height: 6px;
+            background: var(--color-surface-hover);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        .archive-bar {
+            display: block;
+            height: 100%;
+            background: var(--color-accent);
+            border-radius: 3px;
+            min-width: 0;
+        }
+        .archive-count {
+            text-align: right;
+            font-size: 14px;
+            font-weight: bold;
+            color: var(--color-text-secondary);
+        }
+        .archive-row-empty {
+            opacity: 0.5;
+        }
+        .archive-row-empty .archive-date {
+            color: var(--color-text-muted);
+        }
+        @media (max-width: 600px) {
+            .archive-row {
+                grid-template-columns: 100px 1fr 40px;
+                padding: var(--space-sm);
+            }
+            .archive-date { font-size: 12px; }
+        }
+        """
+
+    @staticmethod
+    def _get_how_it_works_css() -> str:
+        """Content typography, highlight box, details/summary, source lists"""
+        return """
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        .content h2 {
+            font-size: 28px;
+            color: var(--color-accent);
+            margin: 30px 0 15px 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--color-accent);
+        }
+        .content h3 {
+            font-size: 20px;
+            color: var(--color-text);
+            margin: 20px 0 10px 0;
+        }
+        .content p {
+            margin-bottom: 15px;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        .content ul, .content ol {
+            margin: 15px 0 15px 30px;
+        }
+        .content li {
+            margin-bottom: 10px;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        code {
+            background-color: var(--color-nav-bg);
+            padding: 2px 6px;
+            border-radius: var(--radius-sm);
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .highlight-box {
+            background-color: var(--color-highlight-bg);
+            border-left: 4px solid var(--color-accent);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+        }
+        .sources-section { margin: 20px 0; }
+        details {
+            margin: 15px 0;
+            padding: 15px;
+            background-color: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+        }
+        summary {
+            cursor: pointer;
+            font-size: 18px;
+            padding: 10px;
+            background-color: var(--color-nav-bg);
+            border-radius: var(--radius-sm);
+            user-select: none;
+            transition: background-color var(--transition-fast);
+        }
+        summary:hover { background-color: #e8e8e8; }
+        .source-list {
+            margin: 15px 0 0 20px;
+            list-style-type: disc;
+            column-count: 3;
+            column-gap: 20px;
+        }
+        .source-list li {
+            margin-bottom: 8px;
+            break-inside: avoid;
+        }
+        @media (max-width: 1200px) {
+            .source-list { column-count: 2; }
+        }
+        @media (max-width: 768px) {
+            .source-list { column-count: 1; }
+        }
+        """
+
+    # ── HTML Component Helpers ─────────────────────────────────────────────
+
+    def _render_header(self, title: str, subtitle: str, date_str: str = None) -> str:
+        date_html = f'\n        <div class="date">Updated: {date_str}</div>' if date_str else ''
+        return f'''    <div class="header">
+        <h1>{title}</h1>
+        <div class="tagline">{subtitle}</div>{date_html}
+    </div>'''
+
+    def _render_nav(self, active_page: str = None, is_archive: bool = False) -> str:
+        if is_archive:
+            urls = {"today": "../index.html", "archive": "index.html", "how_it_works": "../how_it_works.html"}
+        else:
+            urls = {"today": "index.html", "archive": "archive/index.html", "how_it_works": "how_it_works.html"}
+
+        def cls(page):
+            return ' class="active"' if page == active_page else ''
+
+        return f'''
+    <div class="nav">
+        <a href="{urls['today']}"{cls('today')}>TODAY</a>
+        <a href="{urls['archive']}"{cls('archive')}>ARCHIVE</a>
+        <a href="{urls['how_it_works']}"{cls('how_it_works')}>HOW IT WORKS</a>
+    </div>'''
+
+    def _render_footer(self, is_archive: bool = False, timestamp: str = None) -> str:
+        if is_archive:
+            urls = {"today": "../index.html", "archive": "index.html", "how_it_works": "../how_it_works.html"}
+        else:
+            urls = {"today": "index.html", "archive": "archive/index.html", "how_it_works": "how_it_works.html"}
+
+        ts = timestamp or datetime.now().strftime('%I:%M %p %Z')
+
+        return f'''
+    <div class="footer">
+        <div class="footer-nav">
+            <a href="{urls['today']}">Today</a> &middot;
+            <a href="{urls['archive']}">Archive</a> &middot;
+            <a href="{urls['how_it_works']}">How It Works</a> &middot;
+            <a href="https://github.com/tyson-swetnam/webcrawler" target="_blank">GitHub</a>
+        </div>
+        <p>Monitoring {self._source_count} sources daily</p>
+        <p class="footer-meta">Last updated: {ts}</p>
+    </div>'''
+
+    # ── Public Generation Methods ──────────────────────────────────────────
 
     def generate_daily_report(self, date: Optional[datetime] = None) -> str:
         """Generate HTML report for a specific date (default: today)"""
@@ -137,52 +777,36 @@ class HTMLReportGenerator:
         ensuring all generated archives appear in the index regardless of whether they
         contain AI-related articles.
         """
-        import re
-        from datetime import datetime
-
         # Collect archive files from both output directories
         archive_files = {}
 
-        # Check output directory
-        archive_dir = self.output_dir / "archive"
-        if archive_dir.exists():
+        for base_dir in [self.output_dir, self.github_pages_dir]:
+            if base_dir is None:
+                continue
+            archive_dir = base_dir / "archive"
+            if not archive_dir.exists():
+                continue
             for html_file in archive_dir.glob("20*.html"):
                 date_str = html_file.stem  # e.g., "2025-11-08"
-                if date_str not in archive_files:
-                    # Extract article count from HTML file
-                    content = html_file.read_text(encoding='utf-8')
+                if date_str in archive_files:
+                    continue
+                content = html_file.read_text(encoding='utf-8')
+                # Try new format first (data attribute)
+                match = re.search(r'data-total-articles="(\d+)"', content)
+                if not match:
+                    # Try old format (text pattern)
                     match = re.search(r'<strong>Total Articles:</strong>\s*(\d+)', content)
-                    if match:
-                        count = int(match.group(1))
-                    else:
-                        # Fallback: count article divs
-                        count = len(re.findall(r'<div class="article">', content))
+                if match:
+                    count = int(match.group(1))
+                else:
+                    # Fallback: count article divs
+                    count = len(re.findall(r'<div class="article">', content))
 
-                    try:
-                        date_obj = datetime.strptime(date_str, '%Y-%m-%d').date()
-                        archive_files[date_str] = (date_obj, count)
-                    except ValueError:
-                        pass  # Skip invalid date formats
-
-        # Also check GitHub Pages directory if configured
-        if self.github_pages_dir:
-            gh_archive_dir = self.github_pages_dir / "archive"
-            if gh_archive_dir.exists():
-                for html_file in gh_archive_dir.glob("20*.html"):
-                    date_str = html_file.stem
-                    if date_str not in archive_files:
-                        content = html_file.read_text(encoding='utf-8')
-                        match = re.search(r'<strong>Total Articles:</strong>\s*(\d+)', content)
-                        if match:
-                            count = int(match.group(1))
-                        else:
-                            count = len(re.findall(r'<div class="article">', content))
-
-                        try:
-                            date_obj = datetime.strptime(date_str, '%Y-%m-%d').date()
-                            archive_files[date_str] = (date_obj, count)
-                        except ValueError:
-                            pass
+                try:
+                    date_obj = datetime.strptime(date_str, '%Y-%m-%d').date()
+                    archive_files[date_str] = (date_obj, count)
+                except ValueError:
+                    pass  # Skip invalid date formats
 
         # Sort by date descending
         dates = sorted(archive_files.values(), key=lambda x: x[0], reverse=True)
@@ -216,6 +840,8 @@ class HTMLReportGenerator:
             gh_output_file.write_text(html, encoding='utf-8')
 
         return str(output_file)
+
+    # ── Private Methods ────────────────────────────────────────────────────
 
     def _fetch_articles_for_date(self, session: Session, date: datetime) -> List[Dict]:
         """Fetch AI-related articles published in the last 5 days"""
@@ -253,67 +879,61 @@ class HTMLReportGenerator:
         return articles
 
     def _render_main_page(self, articles: List[Dict], date: datetime, is_archive_page: bool = False) -> str:
-        """Render main page with three-column layout: Peer Institutions, R1 Institutions, Major Facilities
-
-        Args:
-            articles: List of article dictionaries
-            date: Date for the report
-            is_archive_page: If True, generates URLs for pages in archive/ folder (need ../ prefix)
-        """
+        """Render main page with five-column layout"""
         date_str = date.strftime('%A, %B %d, %Y')
+        active_page = None if is_archive_page else 'today'
 
         # Categorize articles by university/facility tier
         peer_articles = {}
         r1_articles = {}
-        facility_articles = {}
+        hpc_articles = {}
+        lab_articles = {}
+        global_articles = {}
+
+        category_map = {
+            'peer': peer_articles,
+            'r1': r1_articles,
+            'hpc': hpc_articles,
+            'national_lab': lab_articles,
+            'global': global_articles,
+        }
 
         for article in articles:
             univ = article['university'] or 'Unknown'
             category = self.classifier.classify(univ)
-
-            # Select the appropriate dictionary
-            if category == 'peer':
-                target_dict = peer_articles
-            elif category == 'r1':
-                target_dict = r1_articles
-            else:  # 'facility'
-                target_dict = facility_articles
+            target_dict = category_map.get(category, r1_articles)
 
             if univ not in target_dict:
                 target_dict[univ] = []
             target_dict[univ].append(article)
 
         # Helper function to render a column
-        def render_column(articles_dict, title):
+        def render_column(articles_dict, title, css_class):
             if not articles_dict:
-                return f'<div class="column"><h2 class="column-title">{title}</h2><p class="no-articles">No articles</p></div>'
+                return f'<div class="column {css_class}"><h2 class="column-title">{title}</h2><p class="no-articles">No articles</p></div>'
 
-            html = [f'<div class="column"><h2 class="column-title">{title}</h2>']
+            html_parts = [f'<div class="column {css_class}"><h2 class="column-title">{title}</h2>']
 
             for univ, univ_articles in sorted(articles_dict.items()):
-                html.append(f'<div class="university-section"><h3>{univ}</h3>')
+                display_name = self.clean_university_name(univ)
+                html_parts.append(f'<div class="university-section"><h3>{display_name}</h3>')
 
                 for article in univ_articles:
                     topics_html = ''
                     if article.get('topics') and isinstance(article['topics'], list):
-                        # Clean topics - strip markdown and use only simple text
                         clean_topics = [self.strip_markdown(str(t)) for t in article['topics'][:3] if t]
-                        # Filter out empty or very long topics
                         clean_topics = [t for t in clean_topics if t and len(t) < 50]
                         if clean_topics:
-                            topics = ', '.join(clean_topics)
-                            topics_html = f'<span class="topics">[{topics}]</span>'
+                            pills = ''.join(f'<span class="topic-pill">{t}</span>' for t in clean_topics)
+                            topics_html = f'<span class="topics">{pills}</span>'
 
-                    # Strip markdown from summary if it exists
                     summary_html = ''
                     if article.get('summary'):
                         plain_summary = self.strip_markdown(article['summary'])
-                        # Truncate to 200 chars
                         if len(plain_summary) > 200:
                             plain_summary = plain_summary[:200].rsplit(' ', 1)[0] + '...'
                         summary_html = f'<div class="summary">{plain_summary}</div>'
 
-                    # Format dates
                     pub_date_str = ''
                     if article.get('published_date'):
                         if isinstance(article['published_date'], str):
@@ -323,7 +943,6 @@ class HTMLReportGenerator:
 
                     crawl_date_str = article['timestamp'].strftime('%B %d, %Y')
 
-                    # Build meta line with both dates
                     if pub_date_str and pub_date_str != crawl_date_str:
                         meta_html = f'<div class="meta">Published: {pub_date_str} | Crawled: {crawl_date_str}</div>'
                     elif pub_date_str:
@@ -331,7 +950,7 @@ class HTMLReportGenerator:
                     else:
                         meta_html = f'<div class="meta">Crawled: {crawl_date_str}</div>'
 
-                    html.append(f'''
+                    html_parts.append(f'''
                         <div class="article">
                             <div class="headline">
                                 <a href="{article['url']}" target="_blank">{article['title']}</a>
@@ -342,43 +961,49 @@ class HTMLReportGenerator:
                         </div>
                     ''')
 
-                html.append('</div>')
+                html_parts.append('</div>')
 
-            html.append('</div>')
-            return '\n'.join(html)
+            html_parts.append('</div>')
+            return '\n'.join(html_parts)
 
-        # Build three-column HTML
+        # Build five-column HTML
         columns_html = f'''
-            <div class="three-column-layout">
-                {render_column(peer_articles, "Peer Institutions")}
-                {render_column(r1_articles, "R1 Institutions")}
-                {render_column(facility_articles, "Major Facilities")}
+            <div class="five-column-layout">
+                {render_column(peer_articles, "Peer Institutions", "column-peer")}
+                {render_column(r1_articles, "R1 Institutions", "column-r1")}
+                {render_column(hpc_articles, "HPC &amp; Research Centers", "column-facility")}
+                {render_column(lab_articles, "National Laboratories", "column-lab")}
+                {render_column(global_articles, "Global Institutions", "column-global")}
             </div>
         '''
 
-        # Stats
+        # Stats pills
+        total = len(articles)
+        peer_count = sum(len(arts) for arts in peer_articles.values())
+        r1_count = sum(len(arts) for arts in r1_articles.values())
+        hpc_count = sum(len(arts) for arts in hpc_articles.values())
+        lab_count = sum(len(arts) for arts in lab_articles.values())
+        global_count = sum(len(arts) for arts in global_articles.values())
+
         stats_html = f'''
-            <div class="stats">
-                <strong>Total Articles:</strong> {len(articles)} |
-                <strong>Peer:</strong> {sum(len(arts) for arts in peer_articles.values())} |
-                <strong>R1:</strong> {sum(len(arts) for arts in r1_articles.values())} |
-                <strong>Facilities:</strong> {sum(len(arts) for arts in facility_articles.values())}
+            <div class="stats" data-total-articles="{total}">
+                <div class="stat-pill"><span class="stat-number">{total}</span><span class="stat-label">TOTAL</span></div>
+                <div class="stat-pill stat-peer"><span class="stat-number">{peer_count}</span><span class="stat-label">PEER</span></div>
+                <div class="stat-pill stat-r1"><span class="stat-number">{r1_count}</span><span class="stat-label">R1</span></div>
+                <div class="stat-pill stat-facility"><span class="stat-number">{hpc_count}</span><span class="stat-label">HPC</span></div>
+                <div class="stat-pill stat-lab"><span class="stat-number">{lab_count}</span><span class="stat-label">LABS</span></div>
+                <div class="stat-pill stat-global"><span class="stat-number">{global_count}</span><span class="stat-label">GLOBAL</span></div>
             </div>
         '''
 
         articles_html = stats_html + columns_html if articles else '<p class="no-results">No AI-related articles found for this date.</p>'
 
-        # Set navigation URLs based on page location
-        if is_archive_page:
-            # Archive pages are in archive/ subfolder, need ../ to go up
-            nav_today_url = "../index.html"
-            nav_archive_url = "index.html"
-            nav_how_it_works_url = "../how_it_works.html"
-        else:
-            # Main index.html is at root level
-            nav_today_url = "index.html"
-            nav_archive_url = "archive/index.html"
-            nav_how_it_works_url = "how_it_works.html"
+        base_css = self._get_base_css()
+        main_css = self._get_main_page_css()
+        header_html = self._render_header("AI UNIVERSITY NEWS", "Latest AI Research &amp; Developments from Universities &amp; Labs Worldwide (Last 5 Days)", date_str)
+        nav_html = self._render_nav(active_page, is_archive_page)
+        footer_html = self._render_footer(is_archive_page)
+        favicon = self._get_favicon_link()
 
         return f'''<!DOCTYPE html>
 <html lang="en">
@@ -386,272 +1011,72 @@ class HTMLReportGenerator:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI University News - {date_str}</title>
+    {favicon}
     <style>
-        * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-
-        body {{
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #ffffff;
-            color: #000000;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 20px 40px;
-            line-height: 1.5;
-        }}
-
-        .header {{
-            text-align: center;
-            border-bottom: 3px solid #000;
-            padding-bottom: 15px;
-            margin-bottom: 25px;
-        }}
-
-        .header h1 {{
-            font-size: 42px;
-            font-weight: bold;
-            letter-spacing: -1px;
-            margin-bottom: 5px;
-        }}
-
-        .header .tagline {{
-            font-size: 14px;
-            color: #666;
-            font-style: italic;
-        }}
-
-        .header .date {{
-            font-size: 16px;
-            color: #000;
-            margin-top: 10px;
-            font-weight: bold;
-        }}
-
-        .nav {{
-            text-align: center;
-            margin-bottom: 20px;
-            padding: 10px;
-            background-color: #f5f5f5;
-            border: 1px solid #ddd;
-        }}
-
-        .nav a {{
-            color: #cc0000;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 15px;
-            font-size: 14px;
-        }}
-
-        .nav a:hover {{
-            text-decoration: underline;
-        }}
-
-        .top-headline {{
-            text-align: center;
-            border: 2px solid #000;
-            padding: 20px;
-            margin-bottom: 30px;
-            background-color: #fffbf0;
-        }}
-
-        .top-headline h2 {{
-            font-size: 32px;
-            margin-bottom: 10px;
-            line-height: 1.2;
-        }}
-
-        .top-headline h2 a {{
-            color: #cc0000;
-            text-decoration: none;
-        }}
-
-        .top-headline h2 a:hover {{
-            text-decoration: underline;
-        }}
-
-        .top-headline .summary {{
-            margin-top: 15px;
-            font-size: 16px;
-            line-height: 1.5;
-            color: #333;
-        }}
-
-        .university-section {{
-            margin-bottom: 30px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 20px;
-        }}
-
-        .university-section h3 {{
-            font-size: 18px;
-            color: #000;
-            margin-bottom: 12px;
-            padding-bottom: 5px;
-            border-bottom: 2px solid #cc0000;
-        }}
-
-        .article {{
-            margin-bottom: 15px;
-            padding-left: 10px;
-        }}
-
-        .headline {{
-            margin-bottom: 3px;
-        }}
-
-        .headline a {{
-            color: #0000cc;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-        }}
-
-        .headline a:hover {{
-            text-decoration: underline;
-        }}
-
-        .headline a:visited {{
-            color: #551a8b;
-        }}
-
-        .topics {{
-            font-size: 12px;
-            color: #666;
-            font-style: italic;
-            margin-left: 8px;
-        }}
-
-        .meta {{
-            font-size: 12px;
-            color: #666;
-            font-style: italic;
-        }}
-
-        .summary {{
-            font-size: 13px;
-            color: #333;
-            margin-top: 5px;
-            padding-left: 10px;
-            line-height: 1.5;
-        }}
-
-        .no-results {{
-            text-align: center;
-            font-size: 18px;
-            color: #666;
-            margin: 40px 0;
-        }}
-
-        .footer {{
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 2px solid #000;
-            font-size: 12px;
-            color: #666;
-        }}
-
-        .footer a {{
-            color: #0000cc;
-            text-decoration: none;
-        }}
-
-        .stats {{
-            text-align: center;
-            font-size: 14px;
-            color: #333;
-            margin-bottom: 20px;
-            padding: 10px;
-            background-color: #f9f9f9;
-        }}
-
-        /* Three-column layout */
-        .three-column-layout {{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 20px;
-            margin-top: 20px;
-        }}
-
-        .column {{
-            border: 2px solid #ddd;
-            padding: 15px;
-            background-color: #fafafa;
-            min-height: 200px;
-        }}
-
-        .column-title {{
-            font-size: 22px;
-            color: #cc0000;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #cc0000;
-            text-align: center;
-        }}
-
-        .no-articles {{
-            text-align: center;
-            color: #999;
-            font-style: italic;
-            padding: 20px;
-        }}
-
-        @media (max-width: 1024px) {{
-            .three-column-layout {{
-                grid-template-columns: 1fr;
-            }}
-        }}
-
-        @media (max-width: 600px) {{
-            body {{ padding: 10px; }}
-            .header h1 {{ font-size: 28px; }}
-            .headline a {{ font-size: 16px; }}
-            .column {{ padding: 10px; }}
-        }}
+    {base_css}
+    {main_css}
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>AI UNIVERSITY NEWS</h1>
-        <div class="tagline">Latest AI Research & Developments from Top Universities (Last 5 Days)</div>
-        <div class="date">Updated: {date_str}</div>
-    </div>
-
-    <div class="nav">
-        <a href="{nav_today_url}">TODAY</a>
-        <a href="{nav_archive_url}">ARCHIVE</a>
-        <a href="{nav_how_it_works_url}">HOW IT WORKS</a>
-    </div>
+{header_html}
+{nav_html}
 
     {articles_html}
 
-    <div class="footer">
-        <p>Powered by AI University News Crawler</p>
-        <p>Last updated: {datetime.now().strftime('%I:%M %p %Z')}</p>
-    </div>
+{footer_html}
 </body>
 </html>'''
 
     def _render_archive_page(self, dates: List) -> str:
-        """Render archive index page"""
-        rows_html = []
+        """Render archive index page with monthly groups and bar chart"""
+        # Group by month
+        monthly_groups = OrderedDict()
+        max_count = max((count for _, count in dates if count > 0), default=1)
 
         for date_obj, count in dates:
             if isinstance(date_obj, str):
                 date_obj = datetime.strptime(date_obj, '%Y-%m-%d').date()
+            key = (date_obj.year, date_obj.month)
+            if key not in monthly_groups:
+                monthly_groups[key] = []
+            monthly_groups[key].append((date_obj, count))
 
-            date_str = date_obj.strftime('%A, %B %d, %Y')
-            filename = f"{date_obj.strftime('%Y-%m-%d')}.html"
+        groups_html = []
+        if not dates:
+            groups_html.append('<p class="no-results">No archived reports available</p>')
+        else:
+            for (year, month), entries in monthly_groups.items():
+                month_name = calendar.month_name[month]
+                heading = f"{month_name} {year}"
 
-            rows_html.append(f'''
-                <tr>
-                    <td class="date-cell"><a href="{filename}">{date_str}</a></td>
-                    <td class="count-cell">{count} articles</td>
-                </tr>
-            ''')
+                rows = []
+                for date_obj, count in entries:
+                    filename = f"{date_obj.strftime('%Y-%m-%d')}.html"
+                    short_date = date_obj.strftime('%a, %b %d')
+                    bar_width = (count / max_count * 100) if count > 0 else 0
+                    row_class = "archive-row" if count > 0 else "archive-row archive-row-empty"
 
-        if not rows_html:
-            rows_html.append('<tr><td colspan="2" class="no-results">No archived reports available</td></tr>')
+                    rows.append(f'''
+                <a href="{filename}" class="{row_class}">
+                    <span class="archive-date">{short_date}</span>
+                    <span class="archive-bar-container">
+                        <span class="archive-bar" style="width: {bar_width:.1f}%"></span>
+                    </span>
+                    <span class="archive-count">{count}</span>
+                </a>''')
+
+                groups_html.append(f'''
+            <div class="archive-month">
+                <h2 class="month-heading">{heading}</h2>
+                {''.join(rows)}
+            </div>''')
+
+        base_css = self._get_base_css()
+        archive_css = self._get_archive_page_css()
+        header_html = self._render_header("AI UNIVERSITY NEWS", "Archive")
+        nav_html = self._render_nav('archive', is_archive=True)
+        footer_html = self._render_footer(is_archive=True)
+        favicon = self._get_favicon_link()
 
         return f'''<!DOCTYPE html>
 <html lang="en">
@@ -659,180 +1084,40 @@ class HTMLReportGenerator:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Archive - AI University News</title>
+    {favicon}
     <style>
-        * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-
-        body {{
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #ffffff;
-            color: #000000;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 20px 40px;
-            line-height: 1.5;
-        }}
-
-        .header {{
-            text-align: center;
-            border-bottom: 3px solid #000;
-            padding-bottom: 15px;
-            margin-bottom: 25px;
-        }}
-
-        .header h1 {{
-            font-size: 42px;
-            font-weight: bold;
-            letter-spacing: -1px;
-            margin-bottom: 5px;
-        }}
-
-        .header .tagline {{
-            font-size: 14px;
-            color: #666;
-            font-style: italic;
-        }}
-
-        .nav {{
-            text-align: center;
-            margin-bottom: 30px;
-            padding: 10px;
-            background-color: #f5f5f5;
-            border: 1px solid #ddd;
-        }}
-
-        .nav a {{
-            color: #cc0000;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 15px;
-            font-size: 14px;
-        }}
-
-        .nav a:hover {{
-            text-decoration: underline;
-        }}
-
-        table {{
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }}
-
-        th {{
-            background-color: #000;
-            color: #fff;
-            padding: 12px;
-            text-align: left;
-            font-size: 16px;
-        }}
-
-        td {{
-            border-bottom: 1px solid #ddd;
-            padding: 12px;
-        }}
-
-        tr:hover {{
-            background-color: #f9f9f9;
-        }}
-
-        .date-cell a {{
-            color: #0000cc;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-        }}
-
-        .date-cell a:hover {{
-            text-decoration: underline;
-        }}
-
-        .count-cell {{
-            text-align: right;
-            color: #666;
-            font-size: 14px;
-        }}
-
-        .no-results {{
-            text-align: center;
-            padding: 40px;
-            color: #666;
-        }}
-
-        .footer {{
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 2px solid #000;
-            font-size: 12px;
-            color: #666;
-        }}
+    {base_css}
+    {archive_css}
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>AI UNIVERSITY NEWS</h1>
-        <div class="tagline">Archive</div>
-    </div>
+{header_html}
+{nav_html}
 
-    <div class="nav">
-        <a href="../index.html">TODAY</a>
-        <a href="index.html">ARCHIVE</a>
-        <a href="../how_it_works.html">HOW IT WORKS</a>
-    </div>
+    {''.join(groups_html)}
 
-    <table>
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th style="text-align: right;">Articles</th>
-            </tr>
-        </thead>
-        <tbody>
-            {''.join(rows_html)}
-        </tbody>
-    </table>
-
-    <div class="footer">
-        <p>Powered by AI University News Crawler</p>
-    </div>
+{footer_html}
 </body>
 </html>'''
-
 
     def _render_how_it_works_page(self) -> str:
         """Render 'How It Works' documentation page"""
         # Load source lists
-        import json
-        from pathlib import Path
-
         config_dir = Path(__file__).parent.parent / 'config'
 
-        # Load peer institutions
-        peer_institutions = []
-        try:
-            with open(config_dir / 'peer_institutions.json', 'r') as f:
-                peer_data = json.load(f)
-                peer_institutions = [u['name'] for u in peer_data.get('universities', [])]
-        except Exception as e:
-            print(f"Error loading peer institutions: {e}")
+        def load_names(filename, key, name_field='name'):
+            try:
+                with open(config_dir / filename, 'r') as f:
+                    data = json.load(f)
+                    return [item[name_field] for item in data.get(key, [])]
+            except Exception:
+                return []
 
-        # Load R1 universities
-        r1_universities = []
-        try:
-            with open(config_dir / 'r1_universities.json', 'r') as f:
-                r1_data = json.load(f)
-                r1_universities = [u['name'] for u in r1_data.get('universities', [])]
-        except Exception as e:
-            print(f"Error loading R1 universities: {e}")
-
-        # Load major facilities
-        major_facilities = []
-        try:
-            with open(config_dir / 'major_facilities.json', 'r') as f:
-                facilities_data = json.load(f)
-                major_facilities = [f['name'] for f in facilities_data.get('facilities', [])]
-        except Exception as e:
-            print(f"Error loading major facilities: {e}")
+        peer_institutions = load_names('peer_institutions.json', 'universities')
+        r1_universities = load_names('r1_universities.json', 'universities')
+        hpc_centers = load_names('major_facilities.json', 'facilities')
+        national_labs = load_names('national_laboratories.json', 'facilities')
+        global_institutions = load_names('global_institutions.json', 'universities')
 
         # Build source lists HTML
         def build_collapsible_list(title, items, section_id):
@@ -849,18 +1134,29 @@ class HTMLReportGenerator:
                 </details>
             '''
 
+        total_sources = len(peer_institutions) + len(r1_universities) + len(hpc_centers) + len(national_labs) + len(global_institutions)
+
         sources_section = f'''
         <h2>Complete Source List</h2>
         <p>
-            This crawler monitors {len(peer_institutions) + len(r1_universities) + len(major_facilities)} sources across three categories:
+            This crawler monitors {total_sources} sources across five categories:
         </p>
 
         <div class="sources-section">
             {build_collapsible_list("Peer Institutions", peer_institutions, "peer")}
             {build_collapsible_list("R1 Universities", r1_universities, "r1")}
-            {build_collapsible_list("Major Research Facilities", major_facilities, "facilities")}
+            {build_collapsible_list("HPC & Research Centers", hpc_centers, "hpc")}
+            {build_collapsible_list("National Laboratories", national_labs, "labs")}
+            {build_collapsible_list("Global Institutions", global_institutions, "global")}
         </div>
         '''
+
+        base_css = self._get_base_css()
+        hiw_css = self._get_how_it_works_css()
+        header_html = self._render_header("AI UNIVERSITY NEWS", "How It Works")
+        nav_html = self._render_nav('how_it_works', is_archive=False)
+        footer_html = self._render_footer(is_archive=False)
+        favicon = self._get_favicon_link()
 
         return f'''<!DOCTYPE html>
 <html lang="en">
@@ -868,188 +1164,23 @@ class HTMLReportGenerator:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How It Works - AI University News</title>
+    {favicon}
     <style>
-        * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-
-        body {{
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #ffffff;
-            color: #000000;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 20px 40px;
-            line-height: 1.6;
-        }}
-
-        .header {{
-            text-align: center;
-            border-bottom: 3px solid #000;
-            padding-bottom: 15px;
-            margin-bottom: 25px;
-        }}
-
-        .header h1 {{
-            font-size: 42px;
-            font-weight: bold;
-            letter-spacing: -1px;
-            margin-bottom: 5px;
-        }}
-
-        .header .tagline {{
-            font-size: 14px;
-            color: #666;
-            font-style: italic;
-        }}
-
-        .nav {{
-            text-align: center;
-            margin-bottom: 30px;
-            padding: 10px;
-            background-color: #f5f5f5;
-            border: 1px solid #ddd;
-        }}
-
-        .nav a {{
-            color: #cc0000;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 15px;
-            font-size: 14px;
-        }}
-
-        .nav a:hover {{
-            text-decoration: underline;
-        }}
-
-        .content {{
-            padding: 20px 0;
-        }}
-
-        h2 {{
-            font-size: 28px;
-            color: #cc0000;
-            margin: 30px 0 15px 0;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #cc0000;
-        }}
-
-        h3 {{
-            font-size: 20px;
-            color: #000;
-            margin: 20px 0 10px 0;
-        }}
-
-        p {{
-            margin-bottom: 15px;
-            font-size: 15px;
-        }}
-
-        ul, ol {{
-            margin: 15px 0 15px 30px;
-        }}
-
-        li {{
-            margin-bottom: 10px;
-            font-size: 15px;
-        }}
-
-        code {{
-            background-color: #f5f5f5;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-family: 'Courier New', Courier, monospace;
-        }}
-
-        .highlight-box {{
-            background-color: #fffbf0;
-            border: 2px solid #cc0000;
-            padding: 20px;
-            margin: 20px 0;
-        }}
-
-        .footer {{
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 2px solid #000;
-            font-size: 12px;
-            color: #666;
-        }}
-
-        .footer a {{
-            color: #0000cc;
-            text-decoration: none;
-        }}
-
-        .sources-section {{
-            margin: 20px 0;
-        }}
-
-        details {{
-            margin: 15px 0;
-            padding: 15px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }}
-
-        summary {{
-            cursor: pointer;
-            font-size: 18px;
-            padding: 10px;
-            background-color: #f5f5f5;
-            border-radius: 3px;
-            user-select: none;
-        }}
-
-        summary:hover {{
-            background-color: #e8e8e8;
-        }}
-
-        .source-list {{
-            margin: 15px 0 0 20px;
-            list-style-type: disc;
-            column-count: 3;
-            column-gap: 20px;
-        }}
-
-        .source-list li {{
-            margin-bottom: 8px;
-            break-inside: avoid;
-        }}
-
-        @media (max-width: 1200px) {{
-            .source-list {{
-                column-count: 2;
-            }}
-        }}
-
-        @media (max-width: 768px) {{
-            .source-list {{
-                column-count: 1;
-            }}
-        }}
+    {base_css}
+    {hiw_css}
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>AI UNIVERSITY NEWS</h1>
-        <div class="tagline">How It Works</div>
-    </div>
-
-    <div class="nav">
-        <a href="index.html">TODAY</a>
-        <a href="archive/index.html">ARCHIVE</a>
-        <a href="how_it_works.html">HOW IT WORKS</a>
-    </div>
+{header_html}
+{nav_html}
 
     <div class="content">
         <h2>Overview</h2>
         <p>
             AI University News is an automated web crawler that monitors press releases and news articles from
-            top US universities and major research facilities, focusing specifically on AI-related research and
-            developments. The system runs daily to discover, analyze, and report the latest AI breakthroughs
-            from the academic world.
+            top universities, national laboratories, and research institutions worldwide, focusing specifically on
+            AI-related research and developments. The system runs daily to discover, analyze, and report the latest
+            AI breakthroughs from academia and research labs.
         </p>
 
         <div class="highlight-box">
@@ -1060,14 +1191,16 @@ class HTMLReportGenerator:
 
         <h2>How the Crawler Works</h2>
 
-        <h3>Phase 1: Discovery & Crawling</h3>
+        <h3>Phase 1: Discovery &amp; Crawling</h3>
         <p>
             The crawler visits official news and press release pages from:
         </p>
         <ul>
             <li><strong>Peer Institutions:</strong> Top-tier research universities (MIT, Stanford, Carnegie Mellon, etc.)</li>
             <li><strong>R1 Universities:</strong> All Carnegie R1 research universities across the United States</li>
-            <li><strong>Major Facilities:</strong> National labs and research centers (Argonne, Los Alamos, NIST, etc.)</li>
+            <li><strong>HPC &amp; Research Centers:</strong> NSF supercomputing centers and DOE computing facilities (TACC, SDSC, NERSC, etc.)</li>
+            <li><strong>National Laboratories:</strong> DOE labs, federal research labs, and FFRDCs (Argonne, DARPA, MITRE, etc.)</li>
+            <li><strong>Global Institutions:</strong> Leading international universities and research organizations (Oxford, ETH Zurich, Tsinghua, etc.)</li>
         </ul>
         <p>
             Using the Scrapy framework, the system respectfully crawls these sites following robots.txt rules,
@@ -1106,14 +1239,16 @@ class HTMLReportGenerator:
             and confidence scores are assigned.
         </p>
 
-        <h3>Phase 5: Categorization & Organization</h3>
+        <h3>Phase 5: Categorization &amp; Organization</h3>
         <p>
-            Articles are automatically organized into three categories:
+            Articles are automatically organized into five categories:
         </p>
         <ul>
             <li><strong>Peer Institutions:</strong> Elite research universities with the highest AI research output</li>
-            <li><strong>R1 Institutions:</strong> Other top-tier research universities</li>
-            <li><strong>Major Facilities:</strong> Government labs and national research centers</li>
+            <li><strong>R1 Institutions:</strong> All US Carnegie R1 research universities</li>
+            <li><strong>HPC &amp; Research Centers:</strong> NSF supercomputing centers and DOE computing facilities</li>
+            <li><strong>National Laboratories:</strong> DOE national labs, federal government research labs, and FFRDCs</li>
+            <li><strong>Global Institutions:</strong> Leading international universities and research organizations</li>
         </ul>
 
         <h3>Phase 6: Publishing</h3>
@@ -1123,7 +1258,7 @@ class HTMLReportGenerator:
         <ul>
             <li><strong>Today's Page:</strong> Latest articles from the past 3 days</li>
             <li><strong>Archive:</strong> Historical daily reports accessible by date</li>
-            <li><strong>Three-Column Layout:</strong> Easy browsing by institution category</li>
+            <li><strong>Five-Column Layout:</strong> Easy browsing by institution category</li>
         </ul>
         <p>
             Results can also be delivered via Slack webhooks and email notifications for real-time updates.
@@ -1153,7 +1288,7 @@ class HTMLReportGenerator:
             <li>Never attempts to bypass access controls or paywalls</li>
         </ul>
 
-        <h2>Cost & Efficiency</h2>
+        <h2>Cost &amp; Efficiency</h2>
         <p>
             The system is designed to be cost-effective:
         </p>
@@ -1173,7 +1308,7 @@ class HTMLReportGenerator:
 
         {sources_section}
 
-        <h2>Updates & Schedule</h2>
+        <h2>Updates &amp; Schedule</h2>
         <p>
             The crawler runs automatically once per day (typically early morning UTC) and this website updates
             immediately after each run completes. The archive preserves all historical daily reports for
@@ -1181,10 +1316,7 @@ class HTMLReportGenerator:
         </p>
     </div>
 
-    <div class="footer">
-        <p>Powered by AI University News Crawler</p>
-        <p>Open source project - Built with Scrapy, PostgreSQL, and multi-AI analysis</p>
-    </div>
+{footer_html}
 </body>
 </html>'''
 
