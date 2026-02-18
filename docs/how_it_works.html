@@ -4,167 +4,238 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How It Works - AI University News</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F393;</text></svg>">
     <style>
+    
+        :root {
+            --color-bg: #ffffff;
+            --color-surface: #fafafa;
+            --color-surface-hover: #f0f0f0;
+            --color-text: #000000;
+            --color-text-secondary: #333333;
+            --color-text-muted: #666666;
+            --color-text-faint: #999999;
+            --color-accent: #cc0000;
+            --color-link: #0000cc;
+            --color-link-visited: #551a8b;
+            --color-border: #dddddd;
+            --color-border-strong: #000000;
+            --color-nav-bg: #f5f5f5;
+            --color-highlight-bg: #fffbf0;
+
+            --color-peer: #8b0000;
+            --color-peer-bg: #fff5f5;
+            --color-r1: #00008b;
+            --color-r1-bg: #f5f5ff;
+            --color-facility: #8b6914;
+            --color-facility-bg: #fffbf0;
+            --color-lab: #006400;
+            --color-lab-bg: #f0fff0;
+            --color-global: #4b0082;
+            --color-global-bg: #f8f0ff;
+
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-md: 0 2px 8px rgba(0,0,0,0.1);
+            --radius-sm: 3px;
+            --radius-md: 6px;
+            --transition-fast: 150ms ease;
+
+            --space-xs: 4px;
+            --space-sm: 8px;
+            --space-md: 16px;
+            --space-lg: 24px;
+            --space-xl: 32px;
+            --space-2xl: 48px;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Courier New', Courier, monospace;
-            background-color: #ffffff;
-            color: #000000;
-            max-width: 1400px;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            max-width: 1800px;
             margin: 0 auto;
             padding: 20px 40px;
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
+        :focus-visible {
+            outline: 2px solid var(--color-accent);
+            outline-offset: 2px;
+        }
+        a:focus:not(:focus-visible) { outline: none; }
+
+        /* ── Header ── */
         .header {
             text-align: center;
-            border-bottom: 3px solid #000;
-            padding-bottom: 15px;
-            margin-bottom: 25px;
+            border-bottom: 3px solid var(--color-border-strong);
+            padding-bottom: var(--space-lg);
+            margin-bottom: var(--space-xl);
         }
-
         .header h1 {
             font-size: 42px;
             font-weight: bold;
             letter-spacing: -1px;
-            margin-bottom: 5px;
+            margin-bottom: var(--space-sm);
         }
-
         .header .tagline {
             font-size: 14px;
-            color: #666;
+            color: var(--color-text-muted);
             font-style: italic;
         }
+        .header .date {
+            font-size: 14px;
+            color: var(--color-text);
+            margin-top: var(--space-md);
+            font-weight: bold;
+            display: inline-block;
+            background: var(--color-nav-bg);
+            border-radius: var(--radius-sm);
+            padding: var(--space-xs) 12px;
+        }
 
+        /* ── Navigation ── */
         .nav {
             text-align: center;
-            margin-bottom: 30px;
-            padding: 10px;
-            background-color: #f5f5f5;
-            border: 1px solid #ddd;
+            margin-bottom: var(--space-lg);
+            padding: var(--space-sm);
+            background-color: var(--color-nav-bg);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
         }
-
         .nav a {
-            color: #cc0000;
+            color: var(--color-accent);
             text-decoration: none;
             font-weight: bold;
-            margin: 0 15px;
+            margin: 0 var(--space-xs);
             font-size: 14px;
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-sm);
+            transition: background-color var(--transition-fast), color var(--transition-fast);
+            display: inline-block;
         }
-
         .nav a:hover {
-            text-decoration: underline;
-        }
-
-        .content {
-            padding: 20px 0;
-        }
-
-        h2 {
-            font-size: 28px;
-            color: #cc0000;
-            margin: 30px 0 15px 0;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #cc0000;
-        }
-
-        h3 {
-            font-size: 20px;
-            color: #000;
-            margin: 20px 0 10px 0;
-        }
-
-        p {
-            margin-bottom: 15px;
-            font-size: 15px;
-        }
-
-        ul, ol {
-            margin: 15px 0 15px 30px;
-        }
-
-        li {
-            margin-bottom: 10px;
-            font-size: 15px;
-        }
-
-        code {
-            background-color: #f5f5f5;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-family: 'Courier New', Courier, monospace;
-        }
-
-        .highlight-box {
-            background-color: #fffbf0;
-            border: 2px solid #cc0000;
-            padding: 20px;
-            margin: 20px 0;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 2px solid #000;
-            font-size: 12px;
-            color: #666;
-        }
-
-        .footer a {
-            color: #0000cc;
+            background-color: var(--color-accent);
+            color: #ffffff;
             text-decoration: none;
         }
-
-        .sources-section {
-            margin: 20px 0;
+        .nav a.active {
+            background-color: var(--color-accent);
+            color: #ffffff;
         }
 
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            margin-top: var(--space-2xl);
+            padding-top: var(--space-lg);
+            border-top: 2px solid var(--color-border-strong);
+            font-size: 12px;
+            color: var(--color-text-muted);
+        }
+        .footer a {
+            color: var(--color-text-muted);
+            text-decoration: none;
+            margin: 0 var(--space-sm);
+            transition: color var(--transition-fast);
+        }
+        .footer a:hover { color: var(--color-accent); }
+        .footer .footer-nav { margin-bottom: var(--space-sm); }
+        .footer .footer-nav a { font-weight: bold; }
+        .footer .footer-meta { margin-top: var(--space-xs); }
+
+        .no-results {
+            text-align: center;
+            font-size: 18px;
+            color: var(--color-text-muted);
+            margin: 40px 0;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 10px var(--space-md); }
+            .header h1 { font-size: 28px; }
+        }
+        
+    
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        .content h2 {
+            font-size: 28px;
+            color: var(--color-accent);
+            margin: 30px 0 15px 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--color-accent);
+        }
+        .content h3 {
+            font-size: 20px;
+            color: var(--color-text);
+            margin: 20px 0 10px 0;
+        }
+        .content p {
+            margin-bottom: 15px;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        .content ul, .content ol {
+            margin: 15px 0 15px 30px;
+        }
+        .content li {
+            margin-bottom: 10px;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        code {
+            background-color: var(--color-nav-bg);
+            padding: 2px 6px;
+            border-radius: var(--radius-sm);
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .highlight-box {
+            background-color: var(--color-highlight-bg);
+            border-left: 4px solid var(--color-accent);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+        }
+        .sources-section { margin: 20px 0; }
         details {
             margin: 15px 0;
             padding: 15px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+            background-color: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
         }
-
         summary {
             cursor: pointer;
             font-size: 18px;
             padding: 10px;
-            background-color: #f5f5f5;
-            border-radius: 3px;
+            background-color: var(--color-nav-bg);
+            border-radius: var(--radius-sm);
             user-select: none;
+            transition: background-color var(--transition-fast);
         }
-
-        summary:hover {
-            background-color: #e8e8e8;
-        }
-
+        summary:hover { background-color: #e8e8e8; }
         .source-list {
             margin: 15px 0 0 20px;
             list-style-type: disc;
             column-count: 3;
             column-gap: 20px;
         }
-
         .source-list li {
             margin-bottom: 8px;
             break-inside: avoid;
         }
-
         @media (max-width: 1200px) {
-            .source-list {
-                column-count: 2;
-            }
+            .source-list { column-count: 2; }
         }
-
         @media (max-width: 768px) {
-            .source-list {
-                column-count: 1;
-            }
+            .source-list { column-count: 1; }
         }
+        
     </style>
 </head>
 <body>
@@ -176,16 +247,16 @@
     <div class="nav">
         <a href="index.html">TODAY</a>
         <a href="archive/index.html">ARCHIVE</a>
-        <a href="how_it_works.html">HOW IT WORKS</a>
+        <a href="how_it_works.html" class="active">HOW IT WORKS</a>
     </div>
 
     <div class="content">
         <h2>Overview</h2>
         <p>
             AI University News is an automated web crawler that monitors press releases and news articles from
-            top US universities and major research facilities, focusing specifically on AI-related research and
-            developments. The system runs daily to discover, analyze, and report the latest AI breakthroughs
-            from the academic world.
+            top universities, national laboratories, and research institutions worldwide, focusing specifically on
+            AI-related research and developments. The system runs daily to discover, analyze, and report the latest
+            AI breakthroughs from academia and research labs.
         </p>
 
         <div class="highlight-box">
@@ -196,14 +267,16 @@
 
         <h2>How the Crawler Works</h2>
 
-        <h3>Phase 1: Discovery & Crawling</h3>
+        <h3>Phase 1: Discovery &amp; Crawling</h3>
         <p>
             The crawler visits official news and press release pages from:
         </p>
         <ul>
             <li><strong>Peer Institutions:</strong> Top-tier research universities (MIT, Stanford, Carnegie Mellon, etc.)</li>
             <li><strong>R1 Universities:</strong> All Carnegie R1 research universities across the United States</li>
-            <li><strong>Major Facilities:</strong> National labs and research centers (Argonne, Los Alamos, NIST, etc.)</li>
+            <li><strong>HPC &amp; Research Centers:</strong> NSF supercomputing centers and DOE computing facilities (TACC, SDSC, NERSC, etc.)</li>
+            <li><strong>National Laboratories:</strong> DOE labs, federal research labs, and FFRDCs (Argonne, DARPA, MITRE, etc.)</li>
+            <li><strong>Global Institutions:</strong> Leading international universities and research organizations (Oxford, ETH Zurich, Tsinghua, etc.)</li>
         </ul>
         <p>
             Using the Scrapy framework, the system respectfully crawls these sites following robots.txt rules,
@@ -242,14 +315,16 @@
             and confidence scores are assigned.
         </p>
 
-        <h3>Phase 5: Categorization & Organization</h3>
+        <h3>Phase 5: Categorization &amp; Organization</h3>
         <p>
-            Articles are automatically organized into three categories:
+            Articles are automatically organized into five categories:
         </p>
         <ul>
             <li><strong>Peer Institutions:</strong> Elite research universities with the highest AI research output</li>
-            <li><strong>R1 Institutions:</strong> Other top-tier research universities</li>
-            <li><strong>Major Facilities:</strong> Government labs and national research centers</li>
+            <li><strong>R1 Institutions:</strong> All US Carnegie R1 research universities</li>
+            <li><strong>HPC &amp; Research Centers:</strong> NSF supercomputing centers and DOE computing facilities</li>
+            <li><strong>National Laboratories:</strong> DOE national labs, federal government research labs, and FFRDCs</li>
+            <li><strong>Global Institutions:</strong> Leading international universities and research organizations</li>
         </ul>
 
         <h3>Phase 6: Publishing</h3>
@@ -259,7 +334,7 @@
         <ul>
             <li><strong>Today's Page:</strong> Latest articles from the past 3 days</li>
             <li><strong>Archive:</strong> Historical daily reports accessible by date</li>
-            <li><strong>Three-Column Layout:</strong> Easy browsing by institution category</li>
+            <li><strong>Five-Column Layout:</strong> Easy browsing by institution category</li>
         </ul>
         <p>
             Results can also be delivered via Slack webhooks and email notifications for real-time updates.
@@ -289,7 +364,7 @@
             <li>Never attempts to bypass access controls or paywalls</li>
         </ul>
 
-        <h2>Cost & Efficiency</h2>
+        <h2>Cost &amp; Efficiency</h2>
         <p>
             The system is designed to be cost-effective:
         </p>
@@ -310,7 +385,7 @@
         
         <h2>Complete Source List</h2>
         <p>
-            This crawler monitors 241 sources across three categories:
+            This crawler monitors 380 sources across five categories:
         </p>
 
         <div class="sources-section">
@@ -332,16 +407,32 @@
             
             
                 <details>
-                    <summary><strong>Major Research Facilities</strong> (27 sources)</summary>
+                    <summary><strong>HPC & Research Centers</strong> (10 sources)</summary>
                     <ul class="source-list">
-                        <li>Ames Laboratory</li><li>Argonne National Laboratory</li><li>Brookhaven National Laboratory</li><li>Fermi National Accelerator Laboratory</li><li>Idaho National Laboratory</li><li>Indiana University Pervasive Technology Institute</li><li>Lawrence Berkeley National Laboratory</li><li>Lawrence Livermore National Laboratory</li><li>Los Alamos National Laboratory</li><li>NERSC</li><li>National Center for Atmospheric Research</li><li>National Center for Computational Sciences</li><li>National Center for Supercomputing Applications</li><li>National Ecological Observatory Network</li><li>National Energy Technology Laboratory</li><li>National Renewable Energy Laboratory</li><li>Oak Ridge National Laboratory</li><li>Pacific Northwest National Laboratory</li><li>Pittsburgh Supercomputing Center</li><li>Princeton Plasma Physics Laboratory</li><li>Purdue Rosen Center for Advanced Computing</li><li>SLAC National Accelerator Laboratory</li><li>San Diego Supercomputer Center</li><li>Sandia National Laboratories</li><li>Savannah River National Laboratory</li><li>Texas Advanced Computing Center</li><li>Thomas Jefferson National Accelerator Facility</li>
+                        <li>Indiana University Pervasive Technology Institute</li><li>NERSC</li><li>National Center for Atmospheric Research</li><li>National Center for Computational Sciences</li><li>National Center for Supercomputing Applications</li><li>National Ecological Observatory Network</li><li>Pittsburgh Supercomputing Center</li><li>Purdue Rosen Center for Advanced Computing</li><li>San Diego Supercomputer Center</li><li>Texas Advanced Computing Center</li>
+                    </ul>
+                </details>
+            
+            
+                <details>
+                    <summary><strong>National Laboratories</strong> (54 sources)</summary>
+                    <ul class="source-list">
+                        <li>ARPA-E</li><li>Air Force Research Laboratory</li><li>Ames Laboratory</li><li>Argonne National Laboratory</li><li>Battelle Memorial Institute</li><li>Brookhaven National Laboratory</li><li>CMU Software Engineering Institute</li><li>Center for Naval Analyses</li><li>DARPA</li><li>DEVCOM Army Research Laboratory</li><li>DHS S&T Directorate</li><li>Draper Laboratory</li><li>Fermi National Accelerator Laboratory</li><li>IARPA</li><li>Idaho National Laboratory</li><li>In-Q-Tel</li><li>Institute for Defense Analyses</li><li>Johns Hopkins APL</li><li>Kansas City National Security Campus</li><li>Lawrence Berkeley National Laboratory</li><li>Lawrence Livermore National Laboratory</li><li>Los Alamos National Laboratory</li><li>MIT Lincoln Laboratory</li><li>MITRE Corporation</li><li>NASA Ames Research Center</li><li>NASA Glenn Research Center</li><li>NASA Goddard Space Flight Center</li><li>NASA JPL</li><li>NASA Langley Research Center</li><li>NIST</li><li>NOAA Center for AI</li><li>NSA Research Directorate</li><li>NSF AI Institutes</li><li>National Academies</li><li>National Energy Technology Laboratory</li><li>National Renewable Energy Laboratory</li><li>National Science Foundation</li><li>Nevada National Security Site</li><li>Oak Ridge Associated Universities</li><li>Oak Ridge National Laboratory</li><li>Office of Naval Research</li><li>Pacific Northwest National Laboratory</li><li>Pantex Plant</li><li>Princeton Plasma Physics Laboratory</li><li>RAND Corporation</li><li>SLAC National Accelerator Laboratory</li><li>SRI International</li><li>Sandia National Laboratories</li><li>Savannah River National Laboratory</li><li>The Aerospace Corporation</li><li>Thomas Jefferson National Accelerator Facility</li><li>U.S. Naval Research Laboratory</li><li>UMD ARLIS</li><li>Y-12 National Security Complex</li>
+                    </ul>
+                </details>
+            
+            
+                <details>
+                    <summary><strong>Global Institutions</strong> (102 sources)</summary>
+                    <ul class="source-list">
+                        <li>Aalto University</li><li>Academia Sinica</li><li>Alan Turing Institute</li><li>American University in Cairo</li><li>Australian National University</li><li>CERN</li><li>CNRS</li><li>CSIRO</li><li>Carnegie Mellon University Africa</li><li>Chalmers University of Technology</li><li>Chinese Academy of Sciences</li><li>Chinese University of Hong Kong</li><li>Chulalongkorn University</li><li>Delft University of Technology</li><li>EPFL</li><li>ETH Zurich</li><li>Eindhoven University of Technology</li><li>Federal Univ. of Rio de Janeiro</li><li>Fraunhofer Society</li><li>Fudan University</li><li>Hebrew University of Jerusalem</li><li>Heidelberg University</li><li>Helmholtz Association</li><li>Hong Kong Univ. of Science and Technology</li><li>IIT Bombay</li><li>IIT Delhi</li><li>IIT Madras</li><li>INRIA</li><li>Imperial College London</li><li>Indian Institute of Science</li><li>Institut Polytechnique de Paris</li><li>Institute of Science Tokyo</li><li>KAIST</li><li>KTH Royal Institute of Technology</li><li>KU Leuven</li><li>Karlsruhe Institute of Technology</li><li>King's College London</li><li>Korea University</li><li>Kyoto University</li><li>Max Planck Society</li><li>Monash University</li><li>Nanyang Technological University</li><li>National Taiwan University</li><li>National University of Singapore</li><li>POSTECH</li><li>Peking University</li><li>Politecnico di Milano</li><li>Pontificia Univ. Catolica de Chile</li><li>RIKEN</li><li>RWTH Aachen University</li><li>Seoul National University</li><li>Shanghai Jiao Tong University</li><li>Singapore Univ. of Technology and Design</li><li>Sorbonne University</li><li>Stellenbosch University</li><li>TU Wien</li><li>Tata Institute of Fundamental Research</li><li>Technical University of Berlin</li><li>Technical University of Denmark</li><li>Technical University of Munich</li><li>Technion</li><li>Tecnologico de Monterrey</li><li>Tel Aviv University</li><li>The University of Osaka</li><li>Tohoku University</li><li>Trinity College Dublin</li><li>Tsinghua University</li><li>UNAM</li><li>UNICAMP</li><li>Universidad de Buenos Aires</li><li>Universidad de Chile</li><li>Universite Paris-Saclay</li><li>University College London</li><li>University of Amsterdam</li><li>University of Auckland</li><li>University of Bristol</li><li>University of Cambridge</li><li>University of Canterbury</li><li>University of Cape Town</li><li>University of Edinburgh</li><li>University of Helsinki</li><li>University of Hong Kong</li><li>University of Lagos</li><li>University of Manchester</li><li>University of Melbourne</li><li>University of Nairobi</li><li>University of New South Wales</li><li>University of Oslo</li><li>University of Oxford</li><li>University of Queensland</li><li>University of Sao Paulo</li><li>University of Science and Technology of China</li><li>University of Southampton</li><li>University of Sydney</li><li>University of Tokyo</li><li>University of Vienna</li><li>University of Warsaw</li><li>University of Zurich</li><li>University of the Witwatersrand</li><li>Weizmann Institute of Science</li><li>Yonsei University</li><li>Zhejiang University</li>
                     </ul>
                 </details>
             
         </div>
         
 
-        <h2>Updates & Schedule</h2>
+        <h2>Updates &amp; Schedule</h2>
         <p>
             The crawler runs automatically once per day (typically early morning UTC) and this website updates
             immediately after each run completes. The archive preserves all historical daily reports for
@@ -349,9 +440,16 @@
         </p>
     </div>
 
+
     <div class="footer">
-        <p>Powered by AI University News Crawler</p>
-        <p>Open source project - Built with Scrapy, PostgreSQL, and multi-AI analysis</p>
+        <div class="footer-nav">
+            <a href="index.html">Today</a> &middot;
+            <a href="archive/index.html">Archive</a> &middot;
+            <a href="how_it_works.html">How It Works</a> &middot;
+            <a href="https://github.com/tyson-swetnam/webcrawler" target="_blank">GitHub</a>
+        </div>
+        <p>Monitoring 380 sources daily</p>
+        <p class="footer-meta">Last updated: 10:56 AM </p>
     </div>
 </body>
 </html>

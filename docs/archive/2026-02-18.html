@@ -4,234 +4,358 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI University News - Wednesday, February 18, 2026</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F393;</text></svg>">
     <style>
+    
+        :root {
+            --color-bg: #ffffff;
+            --color-surface: #fafafa;
+            --color-surface-hover: #f0f0f0;
+            --color-text: #000000;
+            --color-text-secondary: #333333;
+            --color-text-muted: #666666;
+            --color-text-faint: #999999;
+            --color-accent: #cc0000;
+            --color-link: #0000cc;
+            --color-link-visited: #551a8b;
+            --color-border: #dddddd;
+            --color-border-strong: #000000;
+            --color-nav-bg: #f5f5f5;
+            --color-highlight-bg: #fffbf0;
+
+            --color-peer: #8b0000;
+            --color-peer-bg: #fff5f5;
+            --color-r1: #00008b;
+            --color-r1-bg: #f5f5ff;
+            --color-facility: #8b6914;
+            --color-facility-bg: #fffbf0;
+            --color-lab: #006400;
+            --color-lab-bg: #f0fff0;
+            --color-global: #4b0082;
+            --color-global-bg: #f8f0ff;
+
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-md: 0 2px 8px rgba(0,0,0,0.1);
+            --radius-sm: 3px;
+            --radius-md: 6px;
+            --transition-fast: 150ms ease;
+
+            --space-xs: 4px;
+            --space-sm: 8px;
+            --space-md: 16px;
+            --space-lg: 24px;
+            --space-xl: 32px;
+            --space-2xl: 48px;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Courier New', Courier, monospace;
-            background-color: #ffffff;
-            color: #000000;
-            max-width: 1400px;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            max-width: 1800px;
             margin: 0 auto;
             padding: 20px 40px;
             line-height: 1.5;
         }
 
+        :focus-visible {
+            outline: 2px solid var(--color-accent);
+            outline-offset: 2px;
+        }
+        a:focus:not(:focus-visible) { outline: none; }
+
+        /* ── Header ── */
         .header {
             text-align: center;
-            border-bottom: 3px solid #000;
-            padding-bottom: 15px;
-            margin-bottom: 25px;
+            border-bottom: 3px solid var(--color-border-strong);
+            padding-bottom: var(--space-lg);
+            margin-bottom: var(--space-xl);
         }
-
         .header h1 {
             font-size: 42px;
             font-weight: bold;
             letter-spacing: -1px;
-            margin-bottom: 5px;
+            margin-bottom: var(--space-sm);
         }
-
         .header .tagline {
             font-size: 14px;
-            color: #666;
+            color: var(--color-text-muted);
             font-style: italic;
         }
-
         .header .date {
-            font-size: 16px;
-            color: #000;
-            margin-top: 10px;
+            font-size: 14px;
+            color: var(--color-text);
+            margin-top: var(--space-md);
             font-weight: bold;
+            display: inline-block;
+            background: var(--color-nav-bg);
+            border-radius: var(--radius-sm);
+            padding: var(--space-xs) 12px;
         }
 
+        /* ── Navigation ── */
         .nav {
             text-align: center;
-            margin-bottom: 20px;
-            padding: 10px;
-            background-color: #f5f5f5;
-            border: 1px solid #ddd;
+            margin-bottom: var(--space-lg);
+            padding: var(--space-sm);
+            background-color: var(--color-nav-bg);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
         }
-
         .nav a {
-            color: #cc0000;
+            color: var(--color-accent);
             text-decoration: none;
             font-weight: bold;
-            margin: 0 15px;
+            margin: 0 var(--space-xs);
             font-size: 14px;
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-sm);
+            transition: background-color var(--transition-fast), color var(--transition-fast);
+            display: inline-block;
         }
-
         .nav a:hover {
-            text-decoration: underline;
+            background-color: var(--color-accent);
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .nav a.active {
+            background-color: var(--color-accent);
+            color: #ffffff;
         }
 
-        .top-headline {
+        /* ── Footer ── */
+        .footer {
             text-align: center;
-            border: 2px solid #000;
-            padding: 20px;
-            margin-bottom: 30px;
-            background-color: #fffbf0;
+            margin-top: var(--space-2xl);
+            padding-top: var(--space-lg);
+            border-top: 2px solid var(--color-border-strong);
+            font-size: 12px;
+            color: var(--color-text-muted);
         }
-
-        .top-headline h2 {
-            font-size: 32px;
-            margin-bottom: 10px;
-            line-height: 1.2;
-        }
-
-        .top-headline h2 a {
-            color: #cc0000;
+        .footer a {
+            color: var(--color-text-muted);
             text-decoration: none;
+            margin: 0 var(--space-sm);
+            transition: color var(--transition-fast);
+        }
+        .footer a:hover { color: var(--color-accent); }
+        .footer .footer-nav { margin-bottom: var(--space-sm); }
+        .footer .footer-nav a { font-weight: bold; }
+        .footer .footer-meta { margin-top: var(--space-xs); }
+
+        .no-results {
+            text-align: center;
+            font-size: 18px;
+            color: var(--color-text-muted);
+            margin: 40px 0;
         }
 
-        .top-headline h2 a:hover {
-            text-decoration: underline;
+        @media (max-width: 600px) {
+            body { padding: 10px var(--space-md); }
+            .header h1 { font-size: 28px; }
         }
+        
+    
+        /* ── Stats Pills ── */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+            padding: var(--space-md);
+            flex-wrap: wrap;
+        }
+        .stat-pill {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: var(--space-sm) var(--space-lg);
+            background: var(--color-surface);
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--color-border-strong);
+            box-shadow: var(--shadow-sm);
+            min-width: 80px;
+        }
+        .stat-pill .stat-number {
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 1;
+        }
+        .stat-pill .stat-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            color: var(--color-text-muted);
+            letter-spacing: 1px;
+            margin-top: var(--space-xs);
+        }
+        .stat-peer { border-left-color: var(--color-peer); }
+        .stat-r1 { border-left-color: var(--color-r1); }
+        .stat-facility { border-left-color: var(--color-facility); }
+        .stat-lab { border-left-color: var(--color-lab); }
+        .stat-global { border-left-color: var(--color-global); }
 
-        .top-headline .summary {
-            margin-top: 15px;
+        /* ── Five-Column Layout ── */
+        .five-column-layout {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+            align-items: start;
+        }
+        .column {
+            border: 1px solid var(--color-border);
+            padding: var(--space-md);
+            background-color: var(--color-surface);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            min-height: 120px;
+        }
+        .column-title {
             font-size: 16px;
-            line-height: 1.5;
-            color: #333;
+            margin-bottom: var(--space-md);
+            padding: var(--space-sm) var(--space-md);
+            border-bottom: 3px solid var(--color-accent);
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .column-peer .column-title {
+            color: var(--color-peer);
+            border-bottom-color: var(--color-peer);
+            background: var(--color-peer-bg);
+            border-radius: var(--radius-sm);
+        }
+        .column-r1 .column-title {
+            color: var(--color-r1);
+            border-bottom-color: var(--color-r1);
+            background: var(--color-r1-bg);
+            border-radius: var(--radius-sm);
+        }
+        .column-facility .column-title {
+            color: var(--color-facility);
+            border-bottom-color: var(--color-facility);
+            background: var(--color-facility-bg);
+            border-radius: var(--radius-sm);
+        }
+        .column-lab .column-title {
+            color: var(--color-lab);
+            border-bottom-color: var(--color-lab);
+            background: var(--color-lab-bg);
+            border-radius: var(--radius-sm);
+        }
+        .column-global .column-title {
+            color: var(--color-global);
+            border-bottom-color: var(--color-global);
+            background: var(--color-global-bg);
+            border-radius: var(--radius-sm);
+        }
+        .no-articles {
+            text-align: center;
+            color: var(--color-text-faint);
+            font-style: italic;
+            padding: 20px;
         }
 
+        /* ── University Sections ── */
         .university-section {
-            margin-bottom: 30px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 20px;
+            margin-bottom: var(--space-lg);
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: var(--space-md);
         }
-
+        .university-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
         .university-section h3 {
-            font-size: 18px;
-            color: #000;
-            margin-bottom: 12px;
-            padding-bottom: 5px;
-            border-bottom: 2px solid #cc0000;
+            font-size: 16px;
+            color: var(--color-text);
+            margin-bottom: var(--space-sm);
+            padding-bottom: var(--space-xs);
+            border-bottom: 1px solid var(--color-accent);
         }
 
+        /* ── Article Cards ── */
         .article {
-            margin-bottom: 15px;
-            padding-left: 10px;
+            margin-bottom: 18px;
+            padding: var(--space-sm) var(--space-sm) var(--space-sm) 10px;
+            border-radius: var(--radius-sm);
+            transition: background-color var(--transition-fast);
         }
-
-        .headline {
-            margin-bottom: 3px;
+        .article:hover {
+            background-color: var(--color-surface-hover);
         }
-
+        .headline { margin-bottom: 3px; }
         .headline a {
-            color: #0000cc;
+            color: var(--color-link);
             text-decoration: none;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
         }
-
         .headline a:hover {
             text-decoration: underline;
+            text-underline-offset: 2px;
         }
-
-        .headline a:visited {
-            color: #551a8b;
-        }
-
+        .headline a:visited { color: var(--color-link-visited); }
         .topics {
-            font-size: 12px;
-            color: #666;
-            font-style: italic;
-            margin-left: 8px;
+            display: inline;
+            margin-left: var(--space-sm);
         }
-
+        .topic-pill {
+            display: inline-block;
+            background: var(--color-surface-hover);
+            border-radius: 2px;
+            padding: 1px 5px;
+            margin: 0 2px;
+            font-size: 11px;
+            color: var(--color-text-muted);
+        }
         .meta {
             font-size: 12px;
-            color: #666;
+            color: var(--color-text-muted);
             font-style: italic;
         }
-
         .summary {
             font-size: 13px;
-            color: #333;
+            color: var(--color-text-secondary);
             margin-top: 5px;
             padding-left: 10px;
             line-height: 1.5;
         }
 
-        .no-results {
-            text-align: center;
-            font-size: 18px;
-            color: #666;
-            margin: 40px 0;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 2px solid #000;
-            font-size: 12px;
-            color: #666;
-        }
-
-        .footer a {
-            color: #0000cc;
-            text-decoration: none;
-        }
-
-        .stats {
-            text-align: center;
-            font-size: 14px;
-            color: #333;
-            margin-bottom: 20px;
-            padding: 10px;
-            background-color: #f9f9f9;
-        }
-
-        /* Three-column layout */
-        .three-column-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .column {
-            border: 2px solid #ddd;
-            padding: 15px;
-            background-color: #fafafa;
-            min-height: 200px;
-        }
-
-        .column-title {
-            font-size: 22px;
-            color: #cc0000;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #cc0000;
-            text-align: center;
-        }
-
-        .no-articles {
-            text-align: center;
-            color: #999;
-            font-style: italic;
-            padding: 20px;
-        }
-
-        @media (max-width: 1024px) {
-            .three-column-layout {
-                grid-template-columns: 1fr;
+        /* ── Responsive ── */
+        @media (min-width: 1025px) and (max-width: 1400px) {
+            .five-column-layout {
+                grid-template-columns: repeat(3, 1fr);
             }
         }
-
-        @media (max-width: 600px) {
-            body { padding: 10px; }
-            .header h1 { font-size: 28px; }
-            .headline a { font-size: 16px; }
-            .column { padding: 10px; }
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .five-column-layout {
+                grid-template-columns: 1fr 1fr;
+            }
         }
+        @media (max-width: 768px) {
+            .five-column-layout {
+                grid-template-columns: 1fr;
+            }
+            .column { padding: 10px; }
+            .headline a { font-size: 15px; }
+        }
+        @media (max-width: 480px) {
+            .stats {
+                flex-direction: column;
+                align-items: center;
+            }
+            .stat-pill { width: 100%; }
+        }
+        
     </style>
 </head>
 <body>
     <div class="header">
         <h1>AI UNIVERSITY NEWS</h1>
-        <div class="tagline">Latest AI Research & Developments from Top Universities (Last 5 Days)</div>
+        <div class="tagline">Latest AI Research &amp; Developments from Universities &amp; Labs Worldwide (Last 5 Days)</div>
         <div class="date">Updated: Wednesday, February 18, 2026</div>
     </div>
 
@@ -242,17 +366,53 @@
     </div>
 
     
-            <div class="stats">
-                <strong>Total Articles:</strong> 18 |
-                <strong>Peer:</strong> 0 |
-                <strong>R1:</strong> 5 |
-                <strong>Facilities:</strong> 13
+            <div class="stats" data-total-articles="20">
+                <div class="stat-pill"><span class="stat-number">20</span><span class="stat-label">TOTAL</span></div>
+                <div class="stat-pill stat-peer"><span class="stat-number">0</span><span class="stat-label">PEER</span></div>
+                <div class="stat-pill stat-r1"><span class="stat-number">15</span><span class="stat-label">R1</span></div>
+                <div class="stat-pill stat-facility"><span class="stat-number">0</span><span class="stat-label">HPC</span></div>
+                <div class="stat-pill stat-lab"><span class="stat-number">3</span><span class="stat-label">LABS</span></div>
+                <div class="stat-pill stat-global"><span class="stat-number">2</span><span class="stat-label">GLOBAL</span></div>
             </div>
         
-            <div class="three-column-layout">
-                <div class="column"><h2 class="column-title">Peer Institutions</h2><p class="no-articles">No articles</p></div>
-                <div class="column"><h2 class="column-title">R1 Institutions</h2>
+            <div class="five-column-layout">
+                <div class="column column-peer"><h2 class="column-title">Peer Institutions</h2><p class="no-articles">No articles</p></div>
+                <div class="column column-r1"><h2 class="column-title">R1 Institutions</h2>
+<div class="university-section"><h3>Florida Atlantic University</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.fau.edu/newsdesk/articles/winners-of-second-cmbb-biotech-bridge-hackathon-announced.php" target="_blank">Winners of Second CMBB Biotech Bridge Hackathon Announced</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026</div>
+                            <div class="summary">Florida Atlantic University's Center for Molecular Biology and Biotechnology announced winners of its second annual Biotech Bridge Hackathon, where 60 interdisciplinary students developed innovative...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>University of Notre Dame</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.nd.edu/news/new-research-from-notre-dame-theologian-and-vatican-working-group-explores-how-to-reclaim-human-agency-in-age-of-ai/" target="_blank">New research from Notre Dame theologian and Vatican working group explores how to ‘reclaim human agency’ in age of AI</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
+                            <div class="summary">A Vatican-affiliated research group led by Notre Dame theologian Paul Scherz has published a book arguing that while AI promises to enhance human agency by automating mundane tasks, technology...</div>
+                        </div>
+                    
+</div>
 <div class="university-section"><h3>Princeton University</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.princeton.edu/news/2026/02/18/murthy-and-seung-win-wiley-prize-biomedical-sciences-connectome-mapping" target="_blank">Murthy and Seung win Wiley Prize in Biomedical Sciences for connectome mapping</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026</div>
+                            <div class="summary">Mala Murthy and Sebastian Seung, along with John White and Gerald Rubin, have been awarded the Wiley Prize for their pioneering work in connectome mapping—reconstructing the neural wiring diagrams of...</div>
+                        </div>
+                    
 
                         <div class="article">
                             <div class="headline">
@@ -261,6 +421,42 @@
                             </div>
                             <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
                             <div class="summary">Seven Princeton faculty members have been awarded 2024 Sloan Research Fellowships, with three from Computer Science focusing on AI and networked systems. The fellowships recognize promising...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>Boston University</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.bu.edu/articles/2026/bioengineers-win-prestigious-sloan-research-fellowships/" target="_blank">Two Boston University Bioengineers Win Prestigious Sloan Research Fellowships</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
+                            <div class="summary">Two Boston University bioengineers, Brian DePasquale and Michael Economo, have won prestigious 2026 Sloan Research Fellowships for their cutting-edge work in computational neuroscience and brain...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>UNLV</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.unlv.edu/news/accomplishments/david-r-gruber-11" target="_blank">David R. Gruber</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
+                            <div class="summary">Gruber argues that language's fundamental instability—its simultaneous representation and distortion of reality—creates an insurmountable problem for AI systems seeking to establish fixed meaning and...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>University of California San Francisco</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.ucsf.edu/news/2026/02/431511/brain-may-learn-more-rare-events-repetition" target="_blank">The Brain May Learn More from Rare Events than from Repetition</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
+                            <div class="summary">UC San Francisco researchers discovered that associative learning depends more on the timing between reward-cue pairings than on repetition frequency, overturning a century-old assumption based on...</div>
                         </div>
                     
 </div>
@@ -306,9 +502,56 @@
                         </div>
                     
 </div>
+<div class="university-section"><h3>University of Rhode Island</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.uri.edu/news/2026/02/media-advisory-uri-joins-major-league-hacking-hosts-large-scale-multi-track-hackathon/" target="_blank">Media Advisory: URI joins Major League Hacking, hosts large-scale, multi-track hackathon</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
+                            <div class="summary">The University of Rhode Island will host Hack@URI 2026, a two-day hackathon on February 21-22 featuring teams from over 60 universities competing to develop innovative solutions across six themed...</div>
+                        </div>
+                    
 </div>
-                <div class="column"><h2 class="column-title">Major Facilities</h2>
-<div class="university-section"><h3>FloridaAtlantic</h3>
+<div class="university-section"><h3>Texas A&M University</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://stories.tamu.edu/news/2026/02/17/navigating-ais-growing-influence-on-health-care/" target="_blank">Navigating AI’s growing influence on health care</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
+                            <div class="summary">Texas A&M's Institute for Healthcare Access is examining how AI's integration into medicine affects patient outcomes, trust, and equity. While AI offers efficiency gains in clinical decision-making...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>University of South Florida</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.usf.edu/news/listing.aspx" target="_blank">News Feed</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
+                            <div class="summary">This is a university news feed from the University of South Florida featuring multiple announcements from February 2026. While most items cover general university news, one article highlights USF...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.usf.edu/news/index.aspx" target="_blank">University of South Florida News</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
+                            <div class="summary">The University of South Florida has made significant research advances across multiple domains, including developing an AI system for air traffic control monitoring, creating a framework to train AI...</div>
+                        </div>
+                    
+</div>
+</div>
+                <div class="column column-facility"><h2 class="column-title">HPC &amp; Research Centers</h2><p class="no-articles">No articles</p></div>
+                <div class="column column-lab"><h2 class="column-title">National Laboratories</h2>
+<div class="university-section"><h3>Florida Atlantic University</h3>
 
                         <div class="article">
                             <div class="headline">
@@ -320,30 +563,30 @@
                         </div>
                     
 </div>
-<div class="university-section"><h3>Notre Dame News</h3>
+<div class="university-section"><h3>University of Central Florida</h3>
 
                         <div class="article">
                             <div class="headline">
-                                <a href="https://news.nd.edu/news/new-research-from-notre-dame-theologian-and-vatican-working-group-explores-how-to-reclaim-human-agency-in-age-of-ai/" target="_blank">New research from Notre Dame theologian and Vatican working group explores how to ‘reclaim human agency’ in age of AI</a>
+                                <a href="https://www.ucf.edu/news/science-technology/" target="_blank">Science & Technology Archives</a>
                                 
                             </div>
-                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
-                            <div class="summary">A Vatican-affiliated research group led by Notre Dame theologian Paul Scherz has published a book arguing that while AI promises to enhance human agency by automating mundane tasks, technology...</div>
+                            <div class="meta">Published: February 18, 2026</div>
+                            <div class="summary">This article highlights multiple AI and technology research initiatives at UCF, including Professor Shruti Vyas' AI model for molecular visualization to accelerate drug discovery, and Yu Tian's AI...</div>
                         </div>
                     
-</div>
-<div class="university-section"><h3>The Brink</h3>
 
                         <div class="article">
                             <div class="headline">
-                                <a href="https://www.bu.edu/articles/2026/bioengineers-win-prestigious-sloan-research-fellowships/" target="_blank">Two Boston University Bioengineers Win Prestigious Sloan Research Fellowships</a>
+                                <a href="https://www.ucf.edu/news/health/" target="_blank">Health & Medicine Archives</a>
                                 
                             </div>
-                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
-                            <div class="summary">Two Boston University bioengineers, Brian DePasquale and Michael Economo, have won prestigious 2026 Sloan Research Fellowships for their cutting-edge work in computational neuroscience and brain...</div>
+                            <div class="meta">Published: February 18, 2026</div>
+                            <div class="summary">This article is a collection of health and medicine news items from UCF, highlighting various initiatives including AI applications in medical imaging through the AIM lab, nursing education funding,...</div>
                         </div>
                     
 </div>
+</div>
+                <div class="column column-global"><h2 class="column-title">Global Institutions</h2>
 <div class="university-section"><h3>UC Davis</h3>
 
                         <div class="article">
@@ -356,7 +599,7 @@
                         </div>
                     
 </div>
-<div class="university-section"><h3>UMassLowell</h3>
+<div class="university-section"><h3>UMass Lowell</h3>
 
                         <div class="article">
                             <div class="headline">
@@ -368,105 +611,20 @@
                         </div>
                     
 </div>
-<div class="university-section"><h3>UNLV</h3>
-
-                        <div class="article">
-                            <div class="headline">
-                                <a href="https://www.unlv.edu/news/accomplishments/david-r-gruber-11" target="_blank">David R. Gruber</a>
-                                
-                            </div>
-                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
-                            <div class="summary">Gruber argues that language's fundamental instability—its simultaneous representation and distortion of reality—creates an insurmountable problem for AI systems seeking to establish fixed meaning and...</div>
-                        </div>
-                    
-</div>
-<div class="university-section"><h3>University of California San Francisco</h3>
-
-                        <div class="article">
-                            <div class="headline">
-                                <a href="https://www.ucsf.edu/news/2026/02/431511/brain-may-learn-more-rare-events-repetition" target="_blank">The Brain May Learn More from Rare Events than from Repetition</a>
-                                
-                            </div>
-                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
-                            <div class="summary">UC San Francisco researchers discovered that associative learning depends more on the timing between reward-cue pairings than on repetition frequency, overturning a century-old assumption based on...</div>
-                        </div>
-                    
-</div>
-<div class="university-section"><h3>University of Central Florida News | UCF Today</h3>
-
-                        <div class="article">
-                            <div class="headline">
-                                <a href="https://www.ucf.edu/news/health/" target="_blank">Health & Medicine Archives</a>
-                                
-                            </div>
-                            <div class="meta">Published: February 18, 2026</div>
-                            <div class="summary">This article is a collection of health and medicine news items from UCF, highlighting various initiatives including AI applications in medical imaging through the AIM lab, nursing education funding,...</div>
-                        </div>
-                    
-
-                        <div class="article">
-                            <div class="headline">
-                                <a href="https://www.ucf.edu/news/science-technology/" target="_blank">Science & Technology Archives</a>
-                                
-                            </div>
-                            <div class="meta">Published: February 18, 2026</div>
-                            <div class="summary">This article highlights multiple AI and technology research initiatives at UCF, including Professor Shruti Vyas' AI model for molecular visualization to accelerate drug discovery, and Yu Tian's AI...</div>
-                        </div>
-                    
-</div>
-<div class="university-section"><h3>Universityofri</h3>
-
-                        <div class="article">
-                            <div class="headline">
-                                <a href="https://www.uri.edu/news/2026/02/media-advisory-uri-joins-major-league-hacking-hosts-large-scale-multi-track-hackathon/" target="_blank">Media Advisory: URI joins Major League Hacking, hosts large-scale, multi-track hackathon</a>
-                                
-                            </div>
-                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
-                            <div class="summary">The University of Rhode Island will host Hack@URI 2026, a two-day hackathon on February 21-22 featuring teams from over 60 universities competing to develop innovative solutions across six themed...</div>
-                        </div>
-                    
-</div>
-<div class="university-section"><h3>stories.tamu.edu</h3>
-
-                        <div class="article">
-                            <div class="headline">
-                                <a href="https://stories.tamu.edu/news/2026/02/17/navigating-ais-growing-influence-on-health-care/" target="_blank">Navigating AI’s growing influence on health care</a>
-                                
-                            </div>
-                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
-                            <div class="summary">Texas A&M's Institute for Healthcare Access is examining how AI's integration into medicine affects patient outcomes, trust, and equity. While AI offers efficiency gains in clinical decision-making...</div>
-                        </div>
-                    
-</div>
-<div class="university-section"><h3>usf.edu</h3>
-
-                        <div class="article">
-                            <div class="headline">
-                                <a href="https://www.usf.edu/news/index.aspx" target="_blank">University of South Florida News</a>
-                                
-                            </div>
-                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
-                            <div class="summary">The University of South Florida has made significant research advances across multiple domains, including developing an AI system for air traffic control monitoring, creating a framework to train AI...</div>
-                        </div>
-                    
-
-                        <div class="article">
-                            <div class="headline">
-                                <a href="https://www.usf.edu/news/listing.aspx" target="_blank">News Feed</a>
-                                
-                            </div>
-                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
-                            <div class="summary">This is a university news feed from the University of South Florida featuring multiple announcements from February 2026. While most items cover general university news, one article highlights USF...</div>
-                        </div>
-                    
-</div>
 </div>
             </div>
         
 
+
     <div class="footer">
-        <p>Powered by AI University News Crawler</p>
-        <p>Last updated: 06:30 AM </p>
+        <div class="footer-nav">
+            <a href="../index.html">Today</a> &middot;
+            <a href="index.html">Archive</a> &middot;
+            <a href="../how_it_works.html">How It Works</a> &middot;
+            <a href="https://github.com/tyson-swetnam/webcrawler" target="_blank">GitHub</a>
+        </div>
+        <p>Monitoring 380 sources daily</p>
+        <p class="footer-meta">Last updated: 10:56 AM </p>
     </div>
 </body>
 </html>
