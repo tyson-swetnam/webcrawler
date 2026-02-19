@@ -9,8 +9,11 @@ import scrapy
 from scrapy.linkextractors import LinkExtractor
 from datetime import datetime, timezone
 from typing import Dict, Any
+from urllib.parse import urlparse
 import hashlib
 import logging
+
+import feedparser
 
 from crawler.config.settings import settings
 from crawler.db.models import URL, Article
@@ -103,11 +106,14 @@ class UniversityNewsSpider(scrapy.Spider):
                 r'/press-releases?/',
                 r'/media/',
                 r'/research/',
-                r'/stories/',
-                r'/articles/'
+                r'/stories?/',
+                r'/articles?/',
+                r'/\d{4}/\d{2}/',
+                r'/posts?/',
+                r'/features?/',
             ),
             deny=(
-                r'/(tag|category|author|archive|search|login|admin|calendar|events|galleries)/',
+                r'/(tag|category|author|archive|section|search|login|admin|calendar|events|galleries)/',
                 r'/archives/\d{4}/',  # Exclude year-based archives (e.g., /archives/2021/)
                 r'/stories/archives/',  # Exclude CMU-style archive directories
                 # Exclude navigation/listing pages (end with these terms)
@@ -185,7 +191,6 @@ class UniversityNewsSpider(scrapy.Spider):
                 if url:
                     urls.append(url)
                     # Add domain to allowed_domains
-                    from urllib.parse import urlparse
                     domain = urlparse(url).netloc
                     if domain not in self.allowed_domains:
                         self.allowed_domains.append(domain)
@@ -197,12 +202,75 @@ class UniversityNewsSpider(scrapy.Spider):
             logger.error(f"Failed to load university sources: {e}")
             return []
 
+    def _is_rss_feed(self, response) -> bool:
+        """Detect if the response is an RSS/Atom feed."""
+        content_type = response.headers.get('Content-Type', b'').decode('utf-8', errors='ignore').lower()
+        if any(ct in content_type for ct in ('xml', 'rss', 'atom', 'feed')):
+            return True
+        # Body sniffing for feeds served as text/html
+        body_start = response.text[:500].strip() if hasattr(response, 'text') else ''
+        return body_start.startswith('<?xml') or '<rss' in body_start or '<feed' in body_start
+
+    def _parse_rss_feed(self, response):
+        """Parse RSS/Atom feed and yield requests for each article entry."""
+        self.logger.info(f"Parsing RSS feed: {response.url}")
+        feed = feedparser.parse(response.text)
+
+        if not feed.entries:
+            self.logger.warning(f"No entries found in feed: {response.url}")
+            return
+
+        self.logger.info(f"Found {len(feed.entries)} entries in RSS feed: {response.url}")
+
+        for entry in feed.entries:
+            link = entry.get('link')
+            if not link:
+                continue
+
+            self.stats['urls_discovered'] += 1
+
+            # Skip navigation pages
+            if self._is_navigation_page('', link):
+                self.logger.debug(f"Skipping navigation URL from feed: {link}")
+                continue
+
+            # Dedup check
+            normalized = normalize_url(link)
+            url_hash = compute_url_hash(normalized)
+
+            if check_url_seen(self.db, url_hash):
+                self.stats['duplicates_skipped'] += 1
+                self.logger.debug(f"Skipping duplicate feed URL: {link}")
+                continue
+
+            # Dynamically add article domain to allowed_domains
+            domain = urlparse(link).netloc
+            if domain and domain not in self.allowed_domains:
+                self.allowed_domains.append(domain)
+                self.logger.debug(f"Added domain from feed entry: {domain}")
+
+            yield scrapy.Request(
+                link,
+                callback=self.parse_article,
+                meta={
+                    'url_hash': url_hash,
+                    'normalized_url': normalized
+                },
+                errback=self.handle_error
+            )
+
     def parse(self, response):
         """
         Parse news listing page.
 
         Extracts article links and follows pagination.
+        Detects RSS/Atom feeds and routes to feed parser.
         """
+        # RSS/Atom feed detection — route to feed parser
+        if self._is_rss_feed(response):
+            yield from self._parse_rss_feed(response)
+            return
+
         self.logger.info(f"Parsing listing page: {response.url}")
 
         # Extract article links
@@ -318,7 +386,6 @@ class UniversityNewsSpider(scrapy.Spider):
             content_hash = compute_content_hash(extracted['text'])
 
             # Extract hostname
-            from urllib.parse import urlparse
             hostname = urlparse(response.url).netloc
 
             # Prepare article data
@@ -472,6 +539,7 @@ class UniversityNewsSpider(scrapy.Spider):
             r'^Recent News',
             r'^Archive',
             r'^News Archive',
+            r'Archives?\s*$',  # Titles ending with "Archive" or "Archives"
         ]
 
         import re
@@ -495,6 +563,7 @@ class UniversityNewsSpider(scrapy.Spider):
             r'/the-latest[^/]*/?$',  # UW-style "the-latest-news-from" pages
             r'/all-news/?$',
             r'/recent[^/]*/?$',  # Recent news pages
+            r'/section/[^/]+/?$',  # Section listing pages (e.g., /news/section/engineering/)
         ]
 
         for pattern in url_navigation_patterns:

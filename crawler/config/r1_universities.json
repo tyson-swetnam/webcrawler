@@ -1048,13 +1048,13 @@
       "domains": {
         "primary": "colorado.edu",
         "news_domains": [
-          "news.colorado.edu"
+          "www.colorado.edu"
         ]
       },
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.colorado.edu",
+          "url": "https://www.colorado.edu/today/",
           "description": "University of Colorado Boulder official news and press releases",
           "verified": true,
           "crawl_priority": 100,
@@ -1175,13 +1175,13 @@
       "domains": {
         "primary": "uconn.edu",
         "news_domains": [
-          "news.uconn.edu"
+          "today.uconn.edu"
         ]
       },
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.uconn.edu",
+          "url": "https://today.uconn.edu/",
           "description": "University of Connecticut official news and press releases",
           "verified": true,
           "crawl_priority": 100,
@@ -2079,13 +2079,13 @@
       "domains": {
         "primary": "iowastate.edu",
         "news_domains": [
-          "news.iowastate.edu"
+          "www.news.iastate.edu"
         ]
       },
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.iowastate.edu",
+          "url": "https://www.news.iastate.edu/",
           "description": "Iowa State University official news and press releases",
           "verified": true,
           "crawl_priority": 100,
@@ -2677,13 +2677,13 @@
       "domains": {
         "primary": "kansas.edu",
         "news_domains": [
-          "news.kansas.edu"
+          "news.ku.edu"
         ]
       },
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.kansas.edu",
+          "url": "https://news.ku.edu/",
           "description": "University of Kansas official news and press releases",
           "verified": true,
           "crawl_priority": 100,
@@ -2719,13 +2719,13 @@
       "domains": {
         "primary": "kentucky.edu",
         "news_domains": [
-          "news.kentucky.edu"
+          "uknow.uky.edu"
         ]
       },
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.kentucky.edu",
+          "url": "https://uknow.uky.edu/",
           "description": "University of Kentucky official news and press releases",
           "verified": true,
           "crawl_priority": 100,
@@ -3245,13 +3245,13 @@
       "domains": {
         "primary": "umass.edu",
         "news_domains": [
-          "news.umass.edu"
+          "www.umass.edu"
         ]
       },
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.umass.edu",
+          "url": "https://www.umass.edu/news/",
           "description": "University of Massachusetts-Amherst official news and press releases",
           "verified": true,
           "crawl_priority": 100,
@@ -3501,13 +3501,13 @@
       "domains": {
         "primary": "maryland.edu",
         "news_domains": [
-          "news.maryland.edu"
+          "umdrightnow.umd.edu"
         ]
       },
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.maryland.edu",
+          "url": "https://umdrightnow.umd.edu/",
           "description": "University of Maryland - College Park official news and press releases",
           "verified": true,
           "crawl_priority": 100,
@@ -6898,13 +6898,13 @@
       "domains": {
         "primary": "texastech.edu",
         "news_domains": [
-          "news.texastech.edu"
+          "www.ttu.edu"
         ]
       },
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.texastech.edu",
+          "url": "https://www.ttu.edu/now/",
           "description": "Texas Tech University official news and press releases",
           "verified": true,
           "crawl_priority": 100,

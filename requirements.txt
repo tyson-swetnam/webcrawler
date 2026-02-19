@@ -1,6 +1,7 @@
 # Web Crawling and Content Extraction
 scrapy>=2.12.0  # Python 3.13 compatible
 trafilatura>=1.6.2
+feedparser>=6.0.0
 htmldate>=1.5.2
 requests>=2.31.0
 requests-ratelimiter>=0.4.1

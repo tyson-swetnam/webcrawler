@@ -448,12 +448,18 @@ class Settings(BaseSettings):
                 location_obj = source.get("location", {})
                 location = f"{location_obj.get('city', '')}, {location_obj.get('state', '')}".strip(", ")
 
+                # Use RSS feed if enabled and available (matching university handler)
+                facility_news_url = news.get("url")
+                facility_rss_feed = news.get("rss_feed")
+                if self.use_rss_feeds and facility_rss_feed and isinstance(facility_rss_feed, str):
+                    facility_news_url = facility_rss_feed
+
                 entry = {
                     "name": source.get("name"),
                     "abbreviation": source.get("abbreviation"),
-                    "news_url": news.get("url"),
+                    "news_url": facility_news_url,
                     "ai_tag_url": news.get("ai_tag_url"),
-                    "rss_feed": None,
+                    "rss_feed": facility_rss_feed,
                     "location": location,
                     "focus_areas": source.get("research_focus", []),
                     "source_type": "facility",
