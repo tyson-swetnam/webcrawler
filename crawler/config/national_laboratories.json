@@ -37,8 +37,16 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Exascale computing", "AI/ML", "Materials science", "Energy research"],
-      "major_systems": ["Aurora", "Polaris"]
+      "research_focus": [
+        "Exascale computing",
+        "AI/ML",
+        "Materials science",
+        "Energy research"
+      ],
+      "major_systems": [
+        "Aurora",
+        "Polaris"
+      ]
     },
     {
       "id": 2,
@@ -63,8 +71,16 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["National security", "Exascale computing", "AI/ML", "Nuclear weapons"],
-      "major_systems": ["El Capitan", "Sierra"]
+      "research_focus": [
+        "National security",
+        "Exascale computing",
+        "AI/ML",
+        "Nuclear weapons"
+      ],
+      "major_systems": [
+        "El Capitan",
+        "Sierra"
+      ]
     },
     {
       "id": 3,
@@ -86,11 +102,20 @@
           "description": "Los Alamos National Laboratory - DOE National Laboratory news and updates",
           "verified": true,
           "crawl_priority": 250,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-02-18T00:00:00+00:00",
+          "rss_feed": "https://www.lanl.gov/rss.xml"
         }
       ],
-      "research_focus": ["National security", "Nuclear science", "AI/ML", "Supercomputing"],
-      "major_systems": ["Venado", "Chicoma"]
+      "research_focus": [
+        "National security",
+        "Nuclear science",
+        "AI/ML",
+        "Supercomputing"
+      ],
+      "major_systems": [
+        "Venado",
+        "Chicoma"
+      ]
     },
     {
       "id": 4,
@@ -115,8 +140,16 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Exascale computing", "AI/ML", "Neutron science", "Materials research"],
-      "major_systems": ["Frontier", "Summit"]
+      "research_focus": [
+        "Exascale computing",
+        "AI/ML",
+        "Neutron science",
+        "Materials research"
+      ],
+      "major_systems": [
+        "Frontier",
+        "Summit"
+      ]
     },
     {
       "id": 5,
@@ -138,11 +171,20 @@
           "description": "Lawrence Berkeley National Laboratory - DOE National Laboratory news and updates",
           "verified": true,
           "crawl_priority": 250,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-02-18T00:00:00+00:00",
+          "rss_feed": "https://newscenter.lbl.gov/feed/"
         }
       ],
-      "research_focus": ["Scientific computing", "AI/ML", "Energy sciences", "Materials"],
-      "major_systems": ["Perlmutter (NERSC)", "Cori"]
+      "research_focus": [
+        "Scientific computing",
+        "AI/ML",
+        "Energy sciences",
+        "Materials"
+      ],
+      "major_systems": [
+        "Perlmutter (NERSC)",
+        "Cori"
+      ]
     },
     {
       "id": 6,
@@ -164,11 +206,20 @@
           "description": "Sandia National Laboratories - DOE National Laboratory news and updates",
           "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-02-18T00:00:00+00:00",
+          "rss_feed": "https://newsreleases.sandia.gov/feed/"
         }
       ],
-      "research_focus": ["National security", "Engineering", "Computing", "Materials science"],
-      "major_systems": ["Astra", "Vanguard"]
+      "research_focus": [
+        "National security",
+        "Engineering",
+        "Computing",
+        "Materials science"
+      ],
+      "major_systems": [
+        "Astra",
+        "Vanguard"
+      ]
     },
     {
       "id": 7,
@@ -193,8 +244,16 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Environmental science", "Energy", "National security", "Computing"],
-      "major_systems": ["Deception", "Constance"]
+      "research_focus": [
+        "Environmental science",
+        "Energy",
+        "National security",
+        "Computing"
+      ],
+      "major_systems": [
+        "Deception",
+        "Constance"
+      ]
     },
     {
       "id": 8,
@@ -219,8 +278,15 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Nuclear physics", "Materials science", "Energy sciences", "Computing"],
-      "major_systems": ["RHIC Computing Facility"]
+      "research_focus": [
+        "Nuclear physics",
+        "Materials science",
+        "Energy sciences",
+        "Computing"
+      ],
+      "major_systems": [
+        "RHIC Computing Facility"
+      ]
     },
     {
       "id": 9,
@@ -242,11 +308,20 @@
           "description": "SLAC National Accelerator Laboratory - DOE National Laboratory news and updates",
           "verified": true,
           "crawl_priority": 250,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-02-18T00:00:00+00:00",
+          "rss_feed": "https://www6.slac.stanford.edu/rss.xml"
         }
       ],
-      "research_focus": ["Particle physics", "X-ray science", "AI/ML", "Accelerators"],
-      "major_systems": ["LCLS Computing", "S3DF"]
+      "research_focus": [
+        "Particle physics",
+        "X-ray science",
+        "AI/ML",
+        "Accelerators"
+      ],
+      "major_systems": [
+        "LCLS Computing",
+        "S3DF"
+      ]
     },
     {
       "id": 10,
@@ -268,11 +343,20 @@
           "description": "Fermi National Accelerator Laboratory - DOE National Laboratory news and updates",
           "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-02-18T00:00:00+00:00",
+          "rss_feed": "https://news.fnal.gov/feed/"
         }
       ],
-      "research_focus": ["Particle physics", "Neutrinos", "AI/ML for physics", "Accelerators"],
-      "major_systems": ["Wilson Cluster", "LHC Tier-1"]
+      "research_focus": [
+        "Particle physics",
+        "Neutrinos",
+        "AI/ML for physics",
+        "Accelerators"
+      ],
+      "major_systems": [
+        "Wilson Cluster",
+        "LHC Tier-1"
+      ]
     },
     {
       "id": 11,
@@ -297,8 +381,15 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Nuclear energy", "Critical infrastructure", "National security"],
-      "major_systems": ["Sawtooth", "Lemhi"]
+      "research_focus": [
+        "Nuclear energy",
+        "Critical infrastructure",
+        "National security"
+      ],
+      "major_systems": [
+        "Sawtooth",
+        "Lemhi"
+      ]
     },
     {
       "id": 12,
@@ -323,8 +414,16 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Renewable energy", "AI/ML for energy", "Solar", "Wind"],
-      "major_systems": ["Eagle", "Kestrel"]
+      "research_focus": [
+        "Renewable energy",
+        "AI/ML for energy",
+        "Solar",
+        "Wind"
+      ],
+      "major_systems": [
+        "Eagle",
+        "Kestrel"
+      ]
     },
     {
       "id": 13,
@@ -349,8 +448,15 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Materials science", "Rare earth elements", "AI for materials"],
-      "major_systems": ["Condo", "Thunder"]
+      "research_focus": [
+        "Materials science",
+        "Rare earth elements",
+        "AI for materials"
+      ],
+      "major_systems": [
+        "Condo",
+        "Thunder"
+      ]
     },
     {
       "id": 14,
@@ -375,8 +481,14 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Fusion energy", "Plasma physics", "AI for fusion control"],
-      "major_systems": ["NSTX-U Computing"]
+      "research_focus": [
+        "Fusion energy",
+        "Plasma physics",
+        "AI for fusion control"
+      ],
+      "major_systems": [
+        "NSTX-U Computing"
+      ]
     },
     {
       "id": 15,
@@ -401,8 +513,14 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Nuclear physics", "Accelerators", "Computing"],
-      "major_systems": ["SciComp Farm"]
+      "research_focus": [
+        "Nuclear physics",
+        "Accelerators",
+        "Computing"
+      ],
+      "major_systems": [
+        "SciComp Farm"
+      ]
     },
     {
       "id": 16,
@@ -424,10 +542,15 @@
           "description": "Savannah River National Laboratory - DOE National Laboratory news and updates",
           "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-02-18T00:00:00+00:00",
+          "rss_feed": "https://www.srnl.gov/feed/"
         }
       ],
-      "research_focus": ["Environmental management", "National security", "Materials"],
+      "research_focus": [
+        "Environmental management",
+        "National security",
+        "Materials"
+      ],
       "major_systems": []
     },
     {
@@ -453,8 +576,14 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Fossil energy", "Carbon capture", "Energy systems"],
-      "major_systems": ["Joule 2.0"]
+      "research_focus": [
+        "Fossil energy",
+        "Carbon capture",
+        "Energy systems"
+      ],
+      "major_systems": [
+        "Joule 2.0"
+      ]
     },
     {
       "id": 18,
@@ -479,7 +608,11 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Lab management", "Applied research", "Technology commercialization"],
+      "research_focus": [
+        "Lab management",
+        "Applied research",
+        "Technology commercialization"
+      ],
       "major_systems": []
     },
     {
@@ -505,7 +638,11 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Nuclear security", "Weapons components", "Manufacturing"],
+      "research_focus": [
+        "Nuclear security",
+        "Weapons components",
+        "Manufacturing"
+      ],
       "major_systems": []
     },
     {
@@ -531,7 +668,11 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Non-nuclear weapons components", "Manufacturing", "Engineering"],
+      "research_focus": [
+        "Non-nuclear weapons components",
+        "Manufacturing",
+        "Engineering"
+      ],
       "major_systems": []
     },
     {
@@ -557,7 +698,11 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Nuclear weapons assembly", "Dismantlement", "HE research"],
+      "research_focus": [
+        "Nuclear weapons assembly",
+        "Dismantlement",
+        "HE research"
+      ],
       "major_systems": []
     },
     {
@@ -583,7 +728,11 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Stockpile stewardship", "Subcritical experiments", "Emergency response"],
+      "research_focus": [
+        "Stockpile stewardship",
+        "Subcritical experiments",
+        "Emergency response"
+      ],
       "major_systems": []
     },
     {
@@ -609,7 +758,11 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Advanced energy research", "Breakthrough technologies", "AI for energy"],
+      "research_focus": [
+        "Advanced energy research",
+        "Breakthrough technologies",
+        "AI for energy"
+      ],
       "major_systems": []
     },
     {
@@ -635,7 +788,11 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Scientific workforce", "Education", "Research partnerships"],
+      "research_focus": [
+        "Scientific workforce",
+        "Education",
+        "Research partnerships"
+      ],
       "major_systems": []
     },
     {
@@ -661,7 +818,12 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Standards", "Metrology", "AI safety", "Cybersecurity"],
+      "research_focus": [
+        "Standards",
+        "Metrology",
+        "AI safety",
+        "Cybersecurity"
+      ],
       "major_systems": []
     },
     {
@@ -687,7 +849,12 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Space exploration", "AI/ML for space", "Robotics", "Data science"],
+      "research_focus": [
+        "Space exploration",
+        "AI/ML for space",
+        "Robotics",
+        "Data science"
+      ],
       "major_systems": []
     },
     {
@@ -713,7 +880,12 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Aeronautics", "AI/ML", "Quantum computing", "Astrobiology"],
+      "research_focus": [
+        "Aeronautics",
+        "AI/ML",
+        "Quantum computing",
+        "Astrobiology"
+      ],
       "major_systems": []
     },
     {
@@ -739,7 +911,11 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Earth science", "Space science", "AI for Earth observation"],
+      "research_focus": [
+        "Earth science",
+        "Space science",
+        "AI for Earth observation"
+      ],
       "major_systems": []
     },
     {
@@ -765,7 +941,11 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Aeronautics", "Atmospheric science", "AI/ML"],
+      "research_focus": [
+        "Aeronautics",
+        "Atmospheric science",
+        "AI/ML"
+      ],
       "major_systems": []
     },
     {
@@ -791,7 +971,11 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Propulsion", "Power systems", "Communications"],
+      "research_focus": [
+        "Propulsion",
+        "Power systems",
+        "Communications"
+      ],
       "major_systems": []
     },
     {
@@ -817,7 +1001,12 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["AI/ML", "Cybersecurity", "Materials", "Plasma physics"],
+      "research_focus": [
+        "AI/ML",
+        "Cybersecurity",
+        "Materials",
+        "Plasma physics"
+      ],
       "major_systems": []
     },
     {
@@ -843,7 +1032,11 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["AI/ML for defense", "Autonomous systems", "Computational science"],
+      "research_focus": [
+        "AI/ML for defense",
+        "Autonomous systems",
+        "Computational science"
+      ],
       "major_systems": []
     },
     {
@@ -869,7 +1062,12 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["AI/ML", "Autonomy", "Directed energy", "Space"],
+      "research_focus": [
+        "AI/ML",
+        "Autonomy",
+        "Directed energy",
+        "Space"
+      ],
       "major_systems": []
     },
     {
@@ -895,7 +1093,12 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Naval technology", "AI/ML", "Autonomy", "Ocean science"],
+      "research_focus": [
+        "Naval technology",
+        "AI/ML",
+        "Autonomy",
+        "Ocean science"
+      ],
       "major_systems": []
     },
     {
@@ -921,7 +1124,12 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Breakthrough technology", "AI/ML", "Autonomy", "Cybersecurity"],
+      "research_focus": [
+        "Breakthrough technology",
+        "AI/ML",
+        "Autonomy",
+        "Cybersecurity"
+      ],
       "major_systems": []
     },
     {
@@ -947,7 +1155,12 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Intelligence technology", "AI/ML", "Biometrics", "Forecasting"],
+      "research_focus": [
+        "Intelligence technology",
+        "AI/ML",
+        "Biometrics",
+        "Forecasting"
+      ],
       "major_systems": []
     },
     {
@@ -973,7 +1186,12 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Cryptography", "AI/ML", "Cybersecurity", "Quantum computing"],
+      "research_focus": [
+        "Cryptography",
+        "AI/ML",
+        "Cybersecurity",
+        "Quantum computing"
+      ],
       "major_systems": []
     },
     {
@@ -999,7 +1217,11 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Weather AI", "Climate modeling", "Ocean prediction"],
+      "research_focus": [
+        "Weather AI",
+        "Climate modeling",
+        "Ocean prediction"
+      ],
       "major_systems": []
     },
     {
@@ -1025,7 +1247,11 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Homeland security", "AI for threat detection", "Cybersecurity"],
+      "research_focus": [
+        "Homeland security",
+        "AI for threat detection",
+        "Cybersecurity"
+      ],
       "major_systems": []
     },
     {
@@ -1051,7 +1277,12 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Research funding", "AI policy", "STEM education", "Infrastructure"],
+      "research_focus": [
+        "Research funding",
+        "AI policy",
+        "STEM education",
+        "Infrastructure"
+      ],
       "major_systems": []
     },
     {
@@ -1077,7 +1308,12 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Systems engineering", "AI/ML", "Cybersecurity", "Defense"],
+      "research_focus": [
+        "Systems engineering",
+        "AI/ML",
+        "Cybersecurity",
+        "Defense"
+      ],
       "major_systems": []
     },
     {
@@ -1103,7 +1339,11 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Space systems", "AI for space", "National security"],
+      "research_focus": [
+        "Space systems",
+        "AI for space",
+        "National security"
+      ],
       "major_systems": []
     },
     {
@@ -1129,7 +1369,12 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Policy research", "AI policy", "Defense", "Security"],
+      "research_focus": [
+        "Policy research",
+        "AI policy",
+        "Defense",
+        "Security"
+      ],
       "major_systems": []
     },
     {
@@ -1155,7 +1400,11 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Defense analysis", "Science and technology", "Systems evaluation"],
+      "research_focus": [
+        "Defense analysis",
+        "Science and technology",
+        "Systems evaluation"
+      ],
       "major_systems": []
     },
     {
@@ -1181,7 +1430,12 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["AI/ML", "Cybersecurity", "Space surveillance", "Biodefense"],
+      "research_focus": [
+        "AI/ML",
+        "Cybersecurity",
+        "Space surveillance",
+        "Biodefense"
+      ],
       "major_systems": []
     },
     {
@@ -1207,7 +1461,12 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["AI/ML", "Space exploration", "Missile defense", "Cybersecurity"],
+      "research_focus": [
+        "AI/ML",
+        "Space exploration",
+        "Missile defense",
+        "Cybersecurity"
+      ],
       "major_systems": []
     },
     {
@@ -1233,7 +1492,12 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Software engineering", "AI/ML", "Cybersecurity", "DevSecOps"],
+      "research_focus": [
+        "Software engineering",
+        "AI/ML",
+        "Cybersecurity",
+        "DevSecOps"
+      ],
       "major_systems": []
     },
     {
@@ -1259,7 +1523,11 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Naval operations", "Defense analysis", "AI policy"],
+      "research_focus": [
+        "Naval operations",
+        "Defense analysis",
+        "AI policy"
+      ],
       "major_systems": []
     },
     {
@@ -1285,7 +1553,12 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Autonomous systems", "Navigation", "AI/ML", "Space systems"],
+      "research_focus": [
+        "Autonomous systems",
+        "Navigation",
+        "AI/ML",
+        "Space systems"
+      ],
       "major_systems": []
     },
     {
@@ -1311,7 +1584,11 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Intelligence technology", "AI/ML startups", "Emerging tech"],
+      "research_focus": [
+        "Intelligence technology",
+        "AI/ML startups",
+        "Emerging tech"
+      ],
       "major_systems": []
     },
     {
@@ -1337,7 +1614,12 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["AI/ML", "Biomedical", "Robotics", "National security"],
+      "research_focus": [
+        "AI/ML",
+        "Biomedical",
+        "Robotics",
+        "National security"
+      ],
       "major_systems": []
     },
     {
@@ -1363,7 +1645,11 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["AI research", "AI education", "Multi-institution collaboration"],
+      "research_focus": [
+        "AI research",
+        "AI education",
+        "Multi-institution collaboration"
+      ],
       "major_systems": []
     },
     {
@@ -1389,7 +1675,11 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Science policy", "AI policy", "Research consensus"],
+      "research_focus": [
+        "Science policy",
+        "AI policy",
+        "Research consensus"
+      ],
       "major_systems": []
     },
     {
@@ -1415,7 +1705,11 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Applied research", "AI for defense", "Language processing"],
+      "research_focus": [
+        "Applied research",
+        "AI for defense",
+        "Language processing"
+      ],
       "major_systems": []
     }
   ]

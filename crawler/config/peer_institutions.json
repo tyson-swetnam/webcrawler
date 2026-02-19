@@ -36,7 +36,8 @@
           "description": "The University of Arizona official news and press releases",
           "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2025-11-05T13:44:26.945415+00:00"
+          "last_verified": "2025-11-05T13:44:26.945415+00:00",
+          "rss_feed": "https://news.arizona.edu/rss.xml"
         }
       ]
     },
@@ -63,7 +64,8 @@
           "description": "Arizona State University official news and press releases",
           "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2025-11-05T13:44:26.945425+00:00"
+          "last_verified": "2025-11-05T13:44:26.945425+00:00",
+          "rss_feed": "https://newsroom.asu.edu/rss.xml"
         }
       ]
     },
@@ -90,7 +92,8 @@
           "description": "University of Colorado Boulder official news and press releases",
           "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2025-11-05T14:10:28.688494"
+          "last_verified": "2025-11-05T14:10:28.688494",
+          "rss_feed": "https://www.colorado.edu/rss.xml"
         }
       ]
     },
@@ -117,7 +120,8 @@
           "description": "University of Utah official news and press releases",
           "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2025-11-05T14:10:28.688507"
+          "last_verified": "2025-11-05T14:10:28.688507",
+          "rss_feed": "https://attheu.utah.edu/feed/"
         }
       ]
     },
@@ -144,7 +148,8 @@
           "description": "University of New Mexico official news and press releases",
           "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2025-11-05T14:10:28.688510"
+          "last_verified": "2025-11-05T14:10:28.688510",
+          "rss_feed": "https://news.unm.edu/rss.xml"
         }
       ]
     },
@@ -225,7 +230,8 @@
           "description": "University of Missouri official news and press releases",
           "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2025-11-05T14:10:28.688516"
+          "last_verified": "2025-11-05T14:10:28.688516",
+          "rss_feed": "https://showme.missouri.edu/feed/"
         }
       ]
     },
@@ -252,7 +258,8 @@
           "description": "University of Kentucky official news and press releases",
           "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2025-11-05T14:10:28.688517"
+          "last_verified": "2025-11-05T14:10:28.688517",
+          "rss_feed": "https://uknow.uky.edu/rss.xml"
         }
       ]
     },
@@ -279,7 +286,8 @@
           "description": "Iowa State University official news and press releases",
           "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2025-11-05T14:10:28.688519"
+          "last_verified": "2025-11-05T14:10:28.688519",
+          "rss_feed": "https://www.news.iastate.edu/rss.xml"
         }
       ]
     },
@@ -333,7 +341,8 @@
           "description": "North Carolina State University official news and press releases",
           "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2025-11-05T14:10:28.688523"
+          "last_verified": "2025-11-05T14:10:28.688523",
+          "rss_feed": "https://news.ncsu.edu/homepage-3/feed/"
         }
       ]
     },
@@ -360,7 +369,8 @@
           "description": "University of Tennessee official news and press releases",
           "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2025-11-05T14:10:28.688524"
+          "last_verified": "2025-11-05T14:10:28.688524",
+          "rss_feed": "https://news.utk.edu/feed/"
         }
       ]
     },
@@ -465,6 +475,7 @@
         {
           "type": "primary",
           "url": "https://msutoday.msu.edu/",
+          "rss_feed": "https://msutoday.msu.edu/rss",
           "description": "Michigan State University official news and press releases",
           "verified": true,
           "crawl_priority": 150,
@@ -522,7 +533,8 @@
           "description": "Penn State University official news and press releases",
           "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2025-11-05T14:10:28.688531"
+          "last_verified": "2025-11-05T14:10:28.688531",
+          "rss_feed": "https://www.psu.edu/news/rss/rss.xml"
         }
       ]
     },
@@ -549,7 +561,8 @@
           "description": "University of Minnesota official news and press releases",
           "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2025-11-05T14:10:28.688533"
+          "last_verified": "2025-11-05T14:10:28.688533",
+          "rss_feed": "https://twin-cities.umn.edu/rss.xml"
         }
       ]
     },
@@ -630,7 +643,8 @@
           "description": "University of Connecticut official news and press releases",
           "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2025-11-05T14:10:28.688538"
+          "last_verified": "2025-11-05T14:10:28.688538",
+          "rss_feed": "https://today.uconn.edu/feed/"
         }
       ]
     },
@@ -657,7 +671,8 @@
           "description": "University of Massachusetts Amherst official news and press releases",
           "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2025-11-05T14:10:28.688540"
+          "last_verified": "2025-11-05T14:10:28.688540",
+          "rss_feed": "https://www.umass.edu/news/feed"
         }
       ]
     },
@@ -738,7 +753,8 @@
           "description": "University of Washington official news and press releases",
           "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2025-11-05T14:10:28.688543"
+          "last_verified": "2025-11-05T14:10:28.688543",
+          "rss_feed": "https://www.washington.edu/news/feed/"
         }
       ]
     }
