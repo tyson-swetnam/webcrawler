@@ -42,8 +42,8 @@ class Settings(BaseSettings):
 
     # AI API Configuration
     claude_model: str = Field(
-        default="claude-haiku-4-5-20251001",
-        description="Claude Haiku model to use for primary analysis"
+        default="claude-sonnet-4-6",
+        description="Claude Sonnet model to use for primary analysis"
     )
     claude_haiku_model: str = Field(
         default="claude-haiku-4-5-20251001",

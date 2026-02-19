@@ -1247,17 +1247,10 @@ class HTMLReportGenerator:
 
         <h3>Phase 4: AI Analysis</h3>
         <p>
-            This is where the magic happens. Each new article is analyzed by three different AI systems:
-        </p>
-        <ul>
-            <li><strong>Claude (Sonnet-4-5):</strong> Primary analysis for deep research understanding</li>
-            <li><strong>OpenAI (GPT-4):</strong> Secondary analysis for categorization and validation</li>
-            <li><strong>Google Gemini (2.5 Flash):</strong> Fast initial filtering and topic extraction</li>
-        </ul>
-        <p>
-            The system builds a consensus summary from all three AI engines, with Claude's analysis taking priority
-            due to its superior research comprehension. Articles are classified by relevance, key topics are extracted,
-            and confidence scores are assigned.
+            This is where the magic happens. Each new article is analyzed by Claude (Sonnet 4.6),
+            Anthropic's frontier model for deep research understanding. Articles are classified by
+            relevance, key topics are extracted, summaries are generated, and confidence scores
+            are assigned.
         </p>
 
         <h3>Phase 5: Categorization &amp; Organization</h3>
@@ -1293,7 +1286,7 @@ class HTMLReportGenerator:
             <li><strong>Crawling:</strong> Scrapy 2.11+ with custom spiders</li>
             <li><strong>Content Extraction:</strong> Trafilatura 2.0+ with htmldate</li>
             <li><strong>Database:</strong> PostgreSQL 15+ for metadata and tracking</li>
-            <li><strong>AI APIs:</strong> Anthropic Claude, OpenAI GPT, Google Gemini</li>
+            <li><strong>AI APIs:</strong> Anthropic Claude (Sonnet 4.6)</li>
             <li><strong>Deployment:</strong> Systemd service with daily automated runs</li>
         </ul>
 
@@ -1315,7 +1308,7 @@ class HTMLReportGenerator:
         </p>
         <ul>
             <li><strong>Estimated monthly cost:</strong> ~$36/month for AI API usage (100 articles/day)</li>
-            <li><strong>Optimization:</strong> Uses fast Gemini Flash for initial filtering before expensive Claude/GPT-4 calls</li>
+            <li><strong>Optimization:</strong> Claude Sonnet 4.6 handles all analysis in a single pass, minimizing redundant API calls</li>
             <li><strong>Caching:</strong> All AI responses stored to avoid reprocessing</li>
             <li><strong>Smart limits:</strong> Token limits and max articles per run prevent runaway costs</li>
         </ul>
