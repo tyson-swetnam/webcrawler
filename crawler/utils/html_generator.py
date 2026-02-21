@@ -364,7 +364,7 @@ class HTMLReportGenerator:
         /* ── Five-Column Layout ── */
         .five-column-layout {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(5, minmax(50px, 1fr));
             gap: var(--space-md);
             margin-top: var(--space-lg);
             align-items: start;
@@ -422,6 +422,24 @@ class HTMLReportGenerator:
             font-style: italic;
             padding: 20px;
         }
+
+        /* ── Empty Column Thin Bar ── */
+        .column-empty {
+            max-width: 50px;
+            min-height: 120px;
+            padding: 4px;
+            opacity: 0.6;
+        }
+        .column-empty .column-title {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+            font-size: 12px;
+            border-bottom: none;
+            padding: 8px 2px;
+            white-space: nowrap;
+        }
+        .column-empty .no-articles { display: none; }
 
         /* ── University Sections ── */
         .university-section {
@@ -488,6 +506,24 @@ class HTMLReportGenerator:
             padding-left: 10px;
             line-height: 1.5;
         }
+
+        /* ── Show More Toggle ── */
+        .article-hidden { display: none; }
+        .show-more-btn {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            margin-top: 8px;
+            background: var(--color-surface-hover);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            color: var(--color-link);
+            text-align: center;
+        }
+        .show-more-btn:hover { background: var(--color-accent-bg, #fff0f0); }
 
         /* ── Responsive ── */
         @media (min-width: 1025px) and (max-width: 1400px) {
@@ -870,10 +906,21 @@ class HTMLReportGenerator:
 
         results = session.execute(stmt).all()
 
-        articles = []
+        # Deduplicate by URL — keep the most recently scraped version
+        seen_urls = {}
         for article, ai_analysis in results:
+            url = article.url.url if article.url else ''
+            if url in seen_urls:
+                existing = seen_urls[url]
+                if article.first_scraped > existing[0].first_scraped:
+                    seen_urls[url] = (article, ai_analysis)
+            else:
+                seen_urls[url] = (article, ai_analysis)
+
+        articles = []
+        for url, (article, ai_analysis) in seen_urls.items():
             articles.append({
-                'url': article.url.url if article.url else '',
+                'url': url,
                 'title': article.title or 'Untitled',
                 'university': article.university_name,
                 'timestamp': article.first_scraped,
@@ -882,6 +929,9 @@ class HTMLReportGenerator:
                 'topics': ai_analysis.claude_key_points if ai_analysis else [],
                 'category': ai_analysis.openai_category if ai_analysis else None
             })
+
+        # Re-sort by published_date descending (dict iteration lost ordering)
+        articles.sort(key=lambda a: a['published_date'] or datetime.min, reverse=True)
 
         return articles
 
@@ -915,17 +965,22 @@ class HTMLReportGenerator:
             target_dict[univ].append(article)
 
         # Helper function to render a column
+        MAX_VISIBLE = 10
+
         def render_column(articles_dict, title, css_class):
             if not articles_dict:
-                return f'<div class="column {css_class}"><h2 class="column-title">{title}</h2><p class="no-articles">No articles</p></div>'
+                return f'<div class="column {css_class} column-empty"><h2 class="column-title">{title}</h2><p class="no-articles">No articles</p></div>'
 
             html_parts = [f'<div class="column {css_class}"><h2 class="column-title">{title}</h2>']
 
+            article_index = 0
             for univ, univ_articles in sorted(articles_dict.items()):
                 display_name = self.clean_university_name(univ)
                 html_parts.append(f'<div class="university-section"><h3>{display_name}</h3>')
 
                 for article in univ_articles:
+                    hidden_class = ' article-hidden' if article_index >= MAX_VISIBLE else ''
+
                     topics_html = ''
                     if article.get('topics') and isinstance(article['topics'], list):
                         clean_topics = [self.strip_markdown(str(t)) for t in article['topics'][:3] if t]
@@ -958,7 +1013,7 @@ class HTMLReportGenerator:
                         meta_html = f'<div class="meta">Crawled: {crawl_date_str}</div>'
 
                     html_parts.append(f'''
-                        <div class="article">
+                        <div class="article{hidden_class}">
                             <div class="headline">
                                 <a href="{article['url']}" target="_blank">{article['title']}</a>
                                 {topics_html}
@@ -967,8 +1022,19 @@ class HTMLReportGenerator:
                             {summary_html}
                         </div>
                     ''')
+                    article_index += 1
 
                 html_parts.append('</div>')
+
+            hidden_count = article_index - MAX_VISIBLE
+            if hidden_count > 0:
+                show_text = f'Show {hidden_count} more'
+                hide_text = f'Hide {hidden_count} articles'
+                html_parts.append(
+                    f'<button class="show-more-btn" onclick="toggleMore(this)" '
+                    f'data-expanded="false" data-show-text="{show_text}" '
+                    f'data-hide-text="{hide_text}">{show_text}</button>'
+                )
 
             html_parts.append('</div>')
             return '\n'.join(html_parts)
@@ -1012,6 +1078,17 @@ class HTMLReportGenerator:
         footer_html = self._render_footer(is_archive_page)
         favicon = self._get_favicon_link()
 
+        toggle_js = '''<script>
+function toggleMore(btn) {
+    var col = btn.closest('.column');
+    var hidden = col.querySelectorAll('.article-hidden');
+    var showing = btn.getAttribute('data-expanded') === 'true';
+    hidden.forEach(function(el) { el.style.display = showing ? 'none' : ''; });
+    btn.setAttribute('data-expanded', showing ? 'false' : 'true');
+    btn.textContent = showing ? btn.getAttribute('data-show-text') : btn.getAttribute('data-hide-text');
+}
+</script>'''
+
         return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1031,6 +1108,7 @@ class HTMLReportGenerator:
     {articles_html}
 
 {footer_html}
+{toggle_js}
 </body>
 </html>'''
 
