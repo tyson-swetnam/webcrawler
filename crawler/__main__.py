@@ -59,16 +59,16 @@ async def main():
             echo=settings.database_echo
         )
 
-        # Phase 1: Crawl new articles
-        logger.info("\n📡 Phase 1: Crawling university news sites")
-        crawl_success = await run_crawler()
+        # Phase 1+2: Crawl and analyze concurrently
+        logger.info("\n📡 Phase 1: Crawling university news sites (parallel spiders + overlapping AI analysis)")
+        crawl_success = await run_crawl_with_analysis()
 
         if not crawl_success:
             logger.error("Crawling phase failed")
             return 1
 
-        # Phase 2: Get new articles from database
-        logger.info("\n📚 Phase 2: Retrieving new articles from database")
+        # Phase 3: Final analysis pass — pick up any articles missed during overlap
+        logger.info("\n📚 Phase 3: Final analysis pass for remaining articles")
         db_manager = get_db_manager()
 
         with db_manager.session_scope() as db:
@@ -79,39 +79,47 @@ async def main():
                 and_(
                     Article.first_scraped >= lookback_time,
                     Article.last_analyzed == None,
-                    # Also filter by published date to exclude old articles
-                    # Allow NULL published_date (some articles may not have it)
                     (Article.published_date == None) | (Article.published_date >= age_limit_date)
                 )
             ).limit(settings.max_articles_per_run).all()
 
-            logger.info(f"Found {len(new_articles)} new articles to analyze")
+            if new_articles:
+                logger.info(f"Found {len(new_articles)} remaining unanalyzed articles")
+                if settings.enable_ai_analysis:
+                    analyses = await analyze_articles(new_articles, db)
+                    logger.info(f"Completed {len(analyses)} final AI analyses")
+                else:
+                    analyses = []
+            else:
+                logger.info("All articles already analyzed during crawl")
+                analyses = []
 
-            if not new_articles:
-                logger.info("No new articles found to analyze.")
-                # Still generate HTML reports for docs/ folder
+            # Re-query all recently analyzed articles for reporting
+            all_recent = db.query(Article).filter(
+                and_(
+                    Article.first_scraped >= lookback_time,
+                    Article.last_analyzed != None,
+                    (Article.published_date == None) | (Article.published_date >= age_limit_date)
+                )
+            ).limit(settings.max_articles_per_run).all()
+
+            if not all_recent:
+                logger.info("No articles found to report on.")
                 logger.info("\n📬 Phase 4: Generating HTML reports")
                 await send_notifications([], [], db)
                 return 0
 
-            # Phase 3: AI Analysis (if enabled)
-            if settings.enable_ai_analysis:
-                logger.info(f"\n🤖 Phase 3: Analyzing {len(new_articles)} articles with AI")
-                analyses = await analyze_articles(new_articles, db)
-                logger.info(f"Completed {len(analyses)} AI analyses")
-            else:
-                logger.info("\n⏭️  Phase 3: AI analysis disabled, skipping")
-                analyses = []
+            logger.info(f"Total articles for reporting: {len(all_recent)}")
 
             # Phase 4: Generate and send reports
             logger.info("\n📬 Phase 4: Generating and sending notifications/exports")
-            exported_files = await send_notifications(new_articles, analyses, db)
+            exported_files = await send_notifications(all_recent, analyses, db)
 
         # Phase 5: Summary and statistics
         duration = (datetime.now(timezone.utc) - start_time).total_seconds()
         logger.info("\n" + "=" * 60)
         logger.info(f"✅ Crawler completed successfully in {duration:.1f}s")
-        logger.info(f"   Processed {len(new_articles)} articles")
+        logger.info(f"   Processed {len(all_recent)} articles")
 
         # Show export summary
         if exported_files:
@@ -157,24 +165,9 @@ async def main():
             pass
 
 
-async def run_crawler() -> bool:
-    """
-    Run Scrapy crawler to fetch new articles.
-
-    Uses subprocess to avoid asyncio event loop conflicts with Twisted reactor.
-
-    Returns:
-        True if successful, False otherwise
-    """
-    try:
-        import subprocess
-        import sys
-
-        logger.info("Starting Scrapy spider in subprocess...")
-
-        # Create a subprocess to run Scrapy independently
-        # This avoids event loop conflicts between asyncio and Twisted
-        script = """
+def _make_spider_script() -> str:
+    """Return the Python script run inside each Scrapy subprocess."""
+    return """
 import sys
 from scrapy.crawler import CrawlerProcess
 from crawler.spiders.university_spider import UniversityNewsSpider
@@ -182,7 +175,6 @@ from crawler.config.settings import settings
 from crawler.db.session import init_db
 
 if __name__ == '__main__':
-    # Initialize database in subprocess
     init_db(
         settings.database_url,
         pool_size=settings.database_pool_size,
@@ -197,14 +189,13 @@ if __name__ == '__main__':
         'DOWNLOAD_DELAY': settings.crawl_delay,
         'CONCURRENT_REQUESTS_PER_DOMAIN': 1,
         'AUTOTHROTTLE_ENABLED': True,
-        'AUTOTHROTTLE_START_DELAY': 1.0,
+        'AUTOTHROTTLE_START_DELAY': 0.5,
         'AUTOTHROTTLE_MAX_DELAY': 10.0,
         'AUTOTHROTTLE_TARGET_CONCURRENCY': 2.0,
         'DOWNLOAD_TIMEOUT': 30,
         'RETRY_TIMES': 3,
         'RETRY_HTTP_CODES': [500, 502, 503, 504, 408, 429],
         'COOKIES_ENABLED': False,
-        # Depth limiting - prevent crawling too deep (max 10 pages of pagination)
         'DEPTH_LIMIT': 10,
         'DEPTH_PRIORITY': 1,
     })
@@ -213,58 +204,230 @@ if __name__ == '__main__':
     process.start()
 """
 
-        # Run in subprocess with proper asyncio handling
-        # Use -u flag for unbuffered output to see real-time progress
-        proc = await asyncio.create_subprocess_exec(
-            sys.executable, '-u', '-c', script,
-            stdout=asyncio.subprocess.PIPE,
-            stderr=asyncio.subprocess.PIPE
+
+# Source groups for parallel crawling — each maps to one or more JSON config files
+CRAWL_GROUPS = {
+    "peer": ["crawler/config/peer_institutions.json"],
+    "r1": ["crawler/config/r1_universities.json"],
+    "facilities": [
+        "crawler/config/major_facilities.json",
+        "crawler/config/national_laboratories.json",
+        "crawler/config/global_institutions.json",
+    ],
+}
+
+
+async def _run_spider_subprocess(group_name: str, source_files: list[str]) -> bool:
+    """
+    Launch a single Scrapy spider subprocess for a source group.
+
+    Args:
+        group_name: Human-readable label (for logging)
+        source_files: List of JSON config file paths
+
+    Returns:
+        True if the subprocess exited successfully
+    """
+    import os
+
+    env = os.environ.copy()
+    env["CRAWLER_SOURCE_FILES"] = ",".join(source_files)
+
+    script = _make_spider_script()
+
+    proc = await asyncio.create_subprocess_exec(
+        sys.executable, "-u", "-c", script,
+        stdout=asyncio.subprocess.PIPE,
+        stderr=asyncio.subprocess.PIPE,
+        env=env,
+    )
+
+    logger.info(f"[{group_name}] Spider subprocess started (PID {proc.pid})")
+
+    try:
+        stdout, stderr = await asyncio.wait_for(
+            proc.communicate(),
+            timeout=3600,  # 60 min per group
         )
+    except asyncio.TimeoutError:
+        logger.error(f"[{group_name}] Spider timed out after 60 minutes")
+        proc.kill()
+        await proc.wait()
+        return False
 
-        logger.info("Waiting for spider to complete (timeout: 30 minutes)...")
+    if stdout:
+        for line in stdout.decode().strip().split("\n"):
+            if line:
+                logger.info(f"[{group_name}] {line}")
 
-        # Add timeout to prevent indefinite hanging (30 minutes should be enough)
-        try:
-            stdout, stderr = await asyncio.wait_for(
-                proc.communicate(),
-                timeout=1800  # 30 minutes timeout
-            )
-        except asyncio.TimeoutError:
-            logger.error("Crawling timed out after 30 minutes")
-            proc.kill()
-            await proc.wait()
-            return False
+    if stderr:
+        for line in stderr.decode().strip().split("\n"):
+            if line and "DeprecationWarning" not in line:
+                logger.warning(f"[{group_name} stderr] {line}")
 
-        # Log output
-        if stdout:
-            output_lines = stdout.decode().strip().split('\n')
-            logger.info(f"Scrapy output ({len(output_lines)} lines):")
-            for line in output_lines:
-                if line:
-                    logger.info(f"[Scrapy] {line}")
+    if proc.returncode == 0:
+        logger.info(f"[{group_name}] Spider completed successfully")
+        return True
+    else:
+        logger.error(f"[{group_name}] Spider failed with exit code {proc.returncode}")
+        return False
 
-        if stderr:
-            error_lines = stderr.decode().strip().split('\n')
-            for line in error_lines:
-                if line and 'DeprecationWarning' not in line:  # Filter out deprecation warnings
-                    logger.warning(f"[Scrapy stderr] {line}")
 
-        if proc.returncode == 0:
-            logger.info("✅ Crawling completed successfully")
-            return True
-        else:
-            logger.error(f"❌ Crawling failed with exit code {proc.returncode}")
-            # Log the last few lines for debugging
-            if stderr:
-                logger.error("Last stderr output:")
-                for line in stderr.decode().strip().split('\n')[-10:]:
-                    if line:
-                        logger.error(f"  {line}")
-            return False
+async def run_crawler() -> bool:
+    """
+    Run Scrapy crawlers in parallel — one subprocess per source group.
+
+    Launches peer, r1, and facilities spiders concurrently via asyncio.gather().
+    Succeeds if ANY subprocess succeeds (partial results are still useful).
+
+    Returns:
+        True if at least one group succeeded, False if all failed
+    """
+    try:
+        logger.info(f"Starting {len(CRAWL_GROUPS)} parallel spider subprocesses...")
+
+        tasks = [
+            _run_spider_subprocess(name, files)
+            for name, files in CRAWL_GROUPS.items()
+        ]
+
+        results = await asyncio.gather(*tasks, return_exceptions=True)
+
+        successes = 0
+        for (name, _), result in zip(CRAWL_GROUPS.items(), results):
+            if isinstance(result, Exception):
+                logger.error(f"[{name}] Spider raised exception: {result}")
+            elif result:
+                successes += 1
+            else:
+                logger.warning(f"[{name}] Spider returned failure")
+
+        logger.info(f"Crawling finished: {successes}/{len(CRAWL_GROUPS)} groups succeeded")
+        return successes > 0
 
     except Exception as e:
-        logger.error(f"❌ Crawling failed with exception: {e}", exc_info=True)
+        logger.error(f"Crawling failed with exception: {e}", exc_info=True)
         return False
+
+
+async def run_crawl_with_analysis() -> bool:
+    """
+    Run crawling and AI analysis concurrently.
+
+    Launches all spider subprocesses, then starts analyzing articles as they
+    arrive in the database — overlapping crawl I/O with AI API calls.
+
+    Returns:
+        True if crawling succeeded (analysis failures are non-fatal)
+    """
+    crawl_tasks = [
+        _run_spider_subprocess(name, files)
+        for name, files in CRAWL_GROUPS.items()
+    ]
+
+    # Wrap each crawl task so we can track completion
+    crawl_done = asyncio.Event()
+    crawl_results: list = []
+
+    async def crawl_all():
+        results = await asyncio.gather(*crawl_tasks, return_exceptions=True)
+        crawl_results.extend(results)
+        crawl_done.set()
+
+    async def incremental_analysis():
+        """Analyze articles as they appear in the DB while crawling continues."""
+        if not settings.enable_ai_analysis:
+            return
+
+        # Wait for initial articles to accumulate
+        await asyncio.sleep(60)
+
+        analyzer = MultiAIAnalyzer()
+        db_manager = get_db_manager()
+        total_analyzed = 0
+
+        while True:
+            try:
+                with db_manager.session_scope() as db:
+                    lookback_time = datetime.now(timezone.utc) - timedelta(days=settings.lookback_days)
+                    age_limit_date = (datetime.now(timezone.utc) - timedelta(days=settings.max_article_age_days)).date()
+
+                    batch = db.query(Article).filter(
+                        and_(
+                            Article.first_scraped >= lookback_time,
+                            Article.last_analyzed == None,
+                            (Article.published_date == None) | (Article.published_date >= age_limit_date),
+                        )
+                    ).limit(100).all()
+
+                    if not batch:
+                        if crawl_done.is_set():
+                            logger.info(f"Incremental analysis complete — {total_analyzed} articles analyzed during crawl")
+                            return
+                        await asyncio.sleep(30)
+                        continue
+
+                    logger.info(f"Incremental analysis: processing {len(batch)} articles...")
+
+                    articles_data = [
+                        {
+                            "article_id": art.article_id,
+                            "title": art.title or "Untitled",
+                            "content": art.content or "",
+                            "url": art.url.url if art.url else "",
+                        }
+                        for art in batch
+                    ]
+
+                    analyses = await analyzer.batch_analyze(
+                        articles_data,
+                        max_concurrent=settings.ai_analysis_batch_size,
+                    )
+
+                    for i, analysis in enumerate(analyses):
+                        article = batch[i]
+                        ai_analysis = AIAnalysis(
+                            article_id=article.article_id,
+                            claude_summary=analysis.get("claude", {}).get("summary") if analysis.get("claude") else None,
+                            claude_key_points=analysis.get("claude", {}).get("key_points", []) if analysis.get("claude") else None,
+                            openai_summary=analysis.get("openai", {}).get("summary") if analysis.get("openai") else None,
+                            openai_category=analysis.get("openai", {}).get("category") if analysis.get("openai") else None,
+                            gemini_summary=analysis.get("gemini", {}).get("summary") if analysis.get("gemini") else None,
+                            consensus_summary=analysis["consensus"]["summary"],
+                            relevance_score=analysis["consensus"].get("relevance_score"),
+                            processing_time_ms=analysis.get("processing_time_ms"),
+                        )
+                        article.is_ai_related = analysis["consensus"]["is_ai_related"]
+                        article.ai_confidence_score = analysis["consensus"]["confidence"]
+                        article.last_analyzed = datetime.now(timezone.utc)
+                        db.add(ai_analysis)
+
+                    db.commit()
+                    total_analyzed += len(batch)
+                    logger.info(f"Incremental analysis: {total_analyzed} total articles analyzed so far")
+
+            except Exception as e:
+                logger.error(f"Incremental analysis batch error: {e}", exc_info=True)
+                if crawl_done.is_set():
+                    return
+                await asyncio.sleep(30)
+
+    # Run crawling and analysis concurrently
+    await asyncio.gather(crawl_all(), incremental_analysis())
+
+    # Evaluate crawl results
+    successes = sum(
+        1 for r in crawl_results
+        if not isinstance(r, Exception) and r
+    )
+    for (name, _), result in zip(CRAWL_GROUPS.items(), crawl_results):
+        if isinstance(result, Exception):
+            logger.error(f"[{name}] Spider raised exception: {result}")
+        elif not result:
+            logger.warning(f"[{name}] Spider returned failure")
+
+    logger.info(f"Crawling finished: {successes}/{len(CRAWL_GROUPS)} groups succeeded")
+    return successes > 0
 
 
 async def analyze_articles(articles, db) -> list:

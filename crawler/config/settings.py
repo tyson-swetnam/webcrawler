@@ -55,14 +55,14 @@ class Settings(BaseSettings):
 
     # Web crawling configuration
     max_concurrent_requests: int = Field(
-        default=8,
+        default=24,
         ge=1,
         le=50,
         description="Maximum concurrent HTTP requests"
     )
     crawl_delay: float = Field(
-        default=1.0,
-        ge=0.5,
+        default=0.5,
+        ge=0.25,
         description="Delay between requests to same domain (seconds)"
     )
     user_agent: str = Field(
@@ -94,6 +94,10 @@ class Settings(BaseSettings):
     use_rss_feeds: bool = Field(
         default=True,
         description="Prefer RSS feeds over HTML crawling when available"
+    )
+    crawler_source_files: str = Field(
+        default="",
+        description="Comma-separated list of source JSON file paths (overrides university_source_type when set)"
     )
 
     # Notification configuration
@@ -290,9 +294,16 @@ class Settings(BaseSettings):
         """
         Get list of source file paths based on configuration.
 
+        If CRAWLER_SOURCE_FILES env var is set, uses those paths exclusively.
+        Otherwise falls back to university_source_type logic.
+
         Returns:
             List of file paths to load
         """
+        # If crawler_source_files is set (e.g. by parallel subprocess), use it directly
+        if self.crawler_source_files:
+            return [p.strip() for p in self.crawler_source_files.split(",") if p.strip()]
+
         paths = []
 
         # Map source types to file paths
