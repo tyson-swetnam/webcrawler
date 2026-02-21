@@ -464,6 +464,7 @@ class HTMLReportGenerator:
 
         /* ── Show More ── */
         .article-overflow { display: none; }
+        .article-overflow.shown { display: grid; }
         .show-more-btn {
             display: block;
             width: 100%;
@@ -1087,27 +1088,29 @@ function switchTab(cat) {
     var rows = document.querySelectorAll('.article-row');
     var details = document.querySelectorAll('.article-detail');
     rows.forEach(function(r) {
-        if (cat === 'all' || r.getAttribute('data-category') === cat) {
-            r.style.display = '';
+        var match = (cat === 'all' || r.getAttribute('data-category') === cat);
+        if (match) {
+            r.style.removeProperty('display');
         } else {
             r.style.display = 'none';
+            r.classList.remove('expanded');
         }
     });
     details.forEach(function(d) {
-        if (cat === 'all' || d.getAttribute('data-category') === cat) {
-            // keep current open/closed state, just allow visibility
-        } else {
-            d.style.display = 'none';
+        var match = (cat === 'all' || d.getAttribute('data-category') === cat);
+        if (!match) {
             d.classList.remove('open');
+            d.style.display = 'none';
+        } else {
+            d.style.removeProperty('display');
         }
     });
     // Reset show-more when switching tabs
     var overflows = document.querySelectorAll('.article-overflow');
-    overflows.forEach(function(el) { el.style.display = 'none'; });
+    overflows.forEach(function(el) { el.classList.remove('shown'); });
     var btn = document.querySelector('.show-more-btn');
     if (btn) {
         btn.setAttribute('data-expanded', 'false');
-        btn.textContent = btn.getAttribute('data-show-text');
         // Update count for current tab
         var hidden = 0;
         overflows.forEach(function(el) {
@@ -1127,7 +1130,6 @@ function toggleDetail(row) {
     if (detail && detail.classList.contains('article-detail')) {
         var isOpen = detail.classList.contains('open');
         detail.classList.toggle('open');
-        detail.style.display = isOpen ? 'none' : 'block';
         row.classList.toggle('expanded');
     }
 }
@@ -1138,13 +1140,16 @@ function toggleMore(btn) {
     var overflows = document.querySelectorAll('.article-overflow');
     overflows.forEach(function(el) {
         if (cat === 'all' || el.getAttribute('data-category') === cat) {
-            el.style.display = showing ? 'none' : '';
-            // Also handle adjacent detail panels
-            var next = el.nextElementSibling;
-            if (next && next.classList.contains('article-detail') && showing) {
-                next.style.display = 'none';
-                next.classList.remove('open');
-                el.classList.remove('expanded');
+            if (showing) {
+                el.classList.remove('shown');
+                // Collapse any open detail panels for hidden overflow rows
+                var next = el.nextElementSibling;
+                if (next && next.classList.contains('article-detail')) {
+                    next.classList.remove('open');
+                    el.classList.remove('expanded');
+                }
+            } else {
+                el.classList.add('shown');
             }
         }
     });
