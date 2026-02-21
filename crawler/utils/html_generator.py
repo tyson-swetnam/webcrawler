@@ -170,34 +170,26 @@ class HTMLReportGenerator:
         return """
         :root {
             --color-bg: #ffffff;
-            --color-surface: #fafafa;
-            --color-surface-hover: #f0f0f0;
-            --color-text: #000000;
-            --color-text-secondary: #333333;
-            --color-text-muted: #666666;
-            --color-text-faint: #999999;
-            --color-accent: #cc0000;
-            --color-link: #0000cc;
-            --color-link-visited: #551a8b;
-            --color-border: #dddddd;
-            --color-border-strong: #000000;
-            --color-nav-bg: #f5f5f5;
-            --color-highlight-bg: #fffbf0;
+            --color-surface: #f8f9fa;
+            --color-surface-alt: #f1f3f5;
+            --color-surface-hover: #e9ecef;
+            --color-border: #dee2e6;
+            --color-text: #212529;
+            --color-text-secondary: #495057;
+            --color-text-muted: #868e96;
+            --color-text-faint: #adb5bd;
+            --color-link: #1a1a2e;
+            --color-link-visited: #3d3d5c;
+            --color-focus: #4dabf7;
+            --color-highlight-bg: #f8f9fa;
 
-            --color-peer: #8b0000;
-            --color-peer-bg: #fff5f5;
-            --color-r1: #00008b;
-            --color-r1-bg: #f5f5ff;
-            --color-facility: #8b6914;
-            --color-facility-bg: #fffbf0;
-            --color-lab: #006400;
-            --color-lab-bg: #f0fff0;
-            --color-global: #4b0082;
-            --color-global-bg: #f8f0ff;
+            --color-peer: #7c3aed;
+            --color-r1: #2563eb;
+            --color-hpc: #d97706;
+            --color-lab: #059669;
+            --color-global: #dc2626;
 
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
-            --shadow-md: 0 2px 8px rgba(0,0,0,0.1);
-            --radius-sm: 3px;
+            --radius-sm: 4px;
             --radius-md: 6px;
             --transition-fast: 150ms ease;
 
@@ -206,349 +198,308 @@ class HTMLReportGenerator:
             --space-md: 16px;
             --space-lg: 24px;
             --space-xl: 32px;
-            --space-2xl: 48px;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Courier New', Courier, monospace;
+            font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
             background-color: var(--color-bg);
             color: var(--color-text);
-            max-width: 1800px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 20px 40px;
+            padding: 0 var(--space-lg);
             line-height: 1.5;
+            font-size: 14px;
         }
 
         :focus-visible {
-            outline: 2px solid var(--color-accent);
+            outline: 2px solid var(--color-focus);
             outline-offset: 2px;
         }
         a:focus:not(:focus-visible) { outline: none; }
 
-        /* ── Header ── */
+        /* ── Compact Header ── */
         .header {
-            text-align: center;
-            border-bottom: 3px solid var(--color-border-strong);
-            padding-bottom: var(--space-lg);
-            margin-bottom: var(--space-xl);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--color-border);
+            margin-bottom: var(--space-md);
+            min-height: 48px;
         }
         .header h1 {
-            font-size: 42px;
-            font-weight: bold;
-            letter-spacing: -1px;
-            margin-bottom: var(--space-sm);
-        }
-        .header .tagline {
-            font-size: 14px;
-            color: var(--color-text-muted);
-            font-style: italic;
-        }
-        .header .date {
-            font-size: 14px;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
             color: var(--color-text);
-            margin-top: var(--space-md);
-            font-weight: bold;
-            display: inline-block;
-            background: var(--color-nav-bg);
-            border-radius: var(--radius-sm);
-            padding: var(--space-xs) 12px;
+            white-space: nowrap;
         }
-
-        /* ── Navigation ── */
-        .nav {
-            text-align: center;
-            margin-bottom: var(--space-lg);
-            padding: var(--space-sm);
-            background-color: var(--color-nav-bg);
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius-md);
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            font-size: 13px;
+            color: var(--color-text-muted);
         }
-        .nav a {
-            color: var(--color-accent);
+        .header-meta {
+            white-space: nowrap;
+        }
+        .header-nav a {
+            color: var(--color-text-muted);
             text-decoration: none;
-            font-weight: bold;
-            margin: 0 var(--space-xs);
-            font-size: 14px;
-            padding: var(--space-sm) var(--space-md);
-            border-radius: var(--radius-sm);
-            transition: background-color var(--transition-fast), color var(--transition-fast);
-            display: inline-block;
+            font-size: 13px;
+            font-weight: 500;
+            transition: color var(--transition-fast);
         }
-        .nav a:hover {
-            background-color: var(--color-accent);
-            color: #ffffff;
-            text-decoration: none;
-        }
-        .nav a.active {
-            background-color: var(--color-accent);
-            color: #ffffff;
+        .header-nav a:hover { color: var(--color-text); }
+        .header-nav a.active {
+            color: var(--color-text);
+            font-weight: 600;
         }
 
         /* ── Footer ── */
         .footer {
             text-align: center;
-            margin-top: var(--space-2xl);
-            padding-top: var(--space-lg);
-            border-top: 2px solid var(--color-border-strong);
+            margin-top: var(--space-xl);
+            padding: var(--space-md) 0;
+            border-top: 1px solid var(--color-border);
             font-size: 12px;
             color: var(--color-text-muted);
         }
         .footer a {
             color: var(--color-text-muted);
             text-decoration: none;
-            margin: 0 var(--space-sm);
             transition: color var(--transition-fast);
         }
-        .footer a:hover { color: var(--color-accent); }
-        .footer .footer-nav { margin-bottom: var(--space-sm); }
-        .footer .footer-nav a { font-weight: bold; }
-        .footer .footer-meta { margin-top: var(--space-xs); }
+        .footer a:hover { color: var(--color-text); }
 
         .no-results {
             text-align: center;
-            font-size: 18px;
+            font-size: 15px;
             color: var(--color-text-muted);
-            margin: 40px 0;
+            margin: 60px 0;
         }
 
         @media (max-width: 600px) {
-            body { padding: 10px var(--space-md); }
-            .header h1 { font-size: 28px; }
+            body { padding: 0 var(--space-md); }
+            .header { flex-direction: column; gap: var(--space-sm); align-items: flex-start; }
+            .header-right { flex-wrap: wrap; }
         }
         """
 
     @staticmethod
     def _get_main_page_css() -> str:
-        """Stats pills, three-column layout, articles, responsive breakpoints"""
+        """Tab bar, article rows, expand panels, show-more, responsive"""
         return """
-        /* ── Stats Pills ── */
-        .stats {
+        /* ── Stats Line ── */
+        .stats-line {
+            font-size: 13px;
+            color: var(--color-text-muted);
+            margin-bottom: var(--space-md);
             display: flex;
-            justify-content: center;
-            gap: var(--space-md);
-            margin-bottom: var(--space-lg);
-            padding: var(--space-md);
+            align-items: center;
+            gap: var(--space-sm);
             flex-wrap: wrap;
         }
-        .stat-pill {
+        .stats-line .cat-dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            margin-right: 2px;
+            vertical-align: middle;
+        }
+        .dot-peer { background: var(--color-peer); }
+        .dot-r1 { background: var(--color-r1); }
+        .dot-hpc { background: var(--color-hpc); }
+        .dot-lab { background: var(--color-lab); }
+        .dot-global { background: var(--color-global); }
+
+        /* ── Tab Bar ── */
+        .tab-bar {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: var(--space-sm) var(--space-lg);
-            background: var(--color-surface);
-            border-radius: var(--radius-md);
-            border-left: 4px solid var(--color-border-strong);
-            box-shadow: var(--shadow-sm);
-            min-width: 80px;
-        }
-        .stat-pill .stat-number {
-            font-size: 28px;
-            font-weight: bold;
-            line-height: 1;
-        }
-        .stat-pill .stat-label {
-            font-size: 10px;
-            text-transform: uppercase;
-            color: var(--color-text-muted);
-            letter-spacing: 1px;
-            margin-top: var(--space-xs);
-        }
-        .stat-peer { border-left-color: var(--color-peer); }
-        .stat-r1 { border-left-color: var(--color-r1); }
-        .stat-facility { border-left-color: var(--color-facility); }
-        .stat-lab { border-left-color: var(--color-lab); }
-        .stat-global { border-left-color: var(--color-global); }
-
-        /* ── Five-Column Layout ── */
-        .five-column-layout {
-            display: grid;
-            grid-template-columns: repeat(5, minmax(50px, 1fr));
-            gap: var(--space-md);
-            margin-top: var(--space-lg);
-            align-items: start;
-        }
-        .column {
-            border: 1px solid var(--color-border);
-            padding: var(--space-md);
-            background-color: var(--color-surface);
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-sm);
-            min-height: 120px;
-        }
-        .column-title {
-            font-size: 16px;
-            margin-bottom: var(--space-md);
-            padding: var(--space-sm) var(--space-md);
-            border-bottom: 3px solid var(--color-accent);
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .column-peer .column-title {
-            color: var(--color-peer);
-            border-bottom-color: var(--color-peer);
-            background: var(--color-peer-bg);
-            border-radius: var(--radius-sm);
-        }
-        .column-r1 .column-title {
-            color: var(--color-r1);
-            border-bottom-color: var(--color-r1);
-            background: var(--color-r1-bg);
-            border-radius: var(--radius-sm);
-        }
-        .column-facility .column-title {
-            color: var(--color-facility);
-            border-bottom-color: var(--color-facility);
-            background: var(--color-facility-bg);
-            border-radius: var(--radius-sm);
-        }
-        .column-lab .column-title {
-            color: var(--color-lab);
-            border-bottom-color: var(--color-lab);
-            background: var(--color-lab-bg);
-            border-radius: var(--radius-sm);
-        }
-        .column-global .column-title {
-            color: var(--color-global);
-            border-bottom-color: var(--color-global);
-            background: var(--color-global-bg);
-            border-radius: var(--radius-sm);
-        }
-        .no-articles {
-            text-align: center;
-            color: var(--color-text-faint);
-            font-style: italic;
-            padding: 20px;
-        }
-
-        /* ── Empty Column Thin Bar ── */
-        .column-empty {
-            max-width: 50px;
-            min-height: 120px;
-            padding: 4px;
-            opacity: 0.6;
-        }
-        .column-empty .column-title {
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-            transform: rotate(180deg);
-            font-size: 12px;
-            border-bottom: none;
-            padding: 8px 2px;
-            white-space: nowrap;
-        }
-        .column-empty .no-articles { display: none; }
-
-        /* ── University Sections ── */
-        .university-section {
-            margin-bottom: var(--space-lg);
+            gap: 0;
             border-bottom: 1px solid var(--color-border);
-            padding-bottom: var(--space-md);
-        }
-        .university-section:last-child {
-            border-bottom: none;
             margin-bottom: 0;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
         }
-        .university-section h3 {
-            font-size: 16px;
+        .tab-btn {
+            padding: 10px var(--space-md);
+            border: none;
+            background: none;
+            font-family: 'DM Sans', system-ui, sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--color-text-muted);
+            cursor: pointer;
+            white-space: nowrap;
+            border-bottom: 2px solid transparent;
+            transition: color var(--transition-fast), border-color var(--transition-fast);
+        }
+        .tab-btn:hover { color: var(--color-text-secondary); }
+        .tab-btn.active {
             color: var(--color-text);
-            margin-bottom: var(--space-sm);
-            padding-bottom: var(--space-xs);
-            border-bottom: 1px solid var(--color-accent);
+            border-bottom-color: var(--color-text);
+        }
+        .tab-btn.tab-empty {
+            opacity: 0.4;
+            cursor: default;
+        }
+        .tab-count {
+            font-weight: 400;
+            font-size: 12px;
+            color: var(--color-text-faint);
+            margin-left: 3px;
         }
 
-        /* ── Article Cards ── */
-        .article {
-            margin-bottom: 18px;
-            padding: var(--space-sm) var(--space-sm) var(--space-sm) 10px;
-            border-radius: var(--radius-sm);
+        /* ── Article List ── */
+        .article-list {
+            margin: 0;
+        }
+
+        /* ── University Group Subheader ── */
+        .univ-group-header {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-text-muted);
+            padding: var(--space-sm) 0 var(--space-xs) 0;
+            margin-top: var(--space-sm);
+            border-bottom: 1px solid var(--color-surface-alt);
+        }
+        .univ-group-header:first-child { margin-top: 0; }
+
+        /* ── Article Row ── */
+        .article-row {
+            display: grid;
+            grid-template-columns: 8px 1fr auto auto 20px;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: 10px var(--space-sm);
+            border-bottom: 1px solid var(--color-surface-alt);
+            cursor: pointer;
             transition: background-color var(--transition-fast);
+            min-height: 40px;
         }
-        .article:hover {
-            background-color: var(--color-surface-hover);
+        .article-row:hover { background-color: var(--color-surface); }
+        .article-row .cat-dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
         }
-        .headline { margin-bottom: 3px; }
-        .headline a {
+        .article-row .headline-link {
+            font-size: 14px;
+            font-weight: 500;
             color: var(--color-link);
             text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
-        .headline a:hover {
-            text-decoration: underline;
-            text-underline-offset: 2px;
-        }
-        .headline a:visited { color: var(--color-link-visited); }
-        .topics {
-            display: inline;
-            margin-left: var(--space-sm);
-        }
-        .topic-pill {
-            display: inline-block;
-            background: var(--color-surface-hover);
-            border-radius: 2px;
-            padding: 1px 5px;
-            margin: 0 2px;
-            font-size: 11px;
-            color: var(--color-text-muted);
-        }
-        .meta {
+        .article-row .headline-link:hover { text-decoration: underline; text-underline-offset: 2px; }
+        .article-row .headline-link:visited { color: var(--color-link-visited); }
+        .article-row .univ-label {
             font-size: 12px;
             color: var(--color-text-muted);
-            font-style: italic;
+            white-space: nowrap;
         }
-        .summary {
+        .article-row .date-label {
+            font-size: 12px;
+            color: var(--color-text-faint);
+            white-space: nowrap;
+        }
+        .article-row .chevron {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            font-size: 10px;
+            color: var(--color-text-faint);
+            transition: transform 0.2s ease;
+        }
+        .article-row.expanded .chevron { transform: rotate(90deg); }
+
+        /* ── Article Detail (expand panel) ── */
+        .article-detail {
+            display: none;
+            padding: var(--space-sm) var(--space-md) var(--space-md) 22px;
+            border-bottom: 1px solid var(--color-surface-alt);
+            background: var(--color-surface);
+        }
+        .article-detail.open { display: block; }
+        .article-detail .summary {
             font-size: 13px;
             color: var(--color-text-secondary);
-            margin-top: 5px;
-            padding-left: 10px;
-            line-height: 1.5;
+            line-height: 1.6;
+            margin-bottom: var(--space-sm);
         }
+        .article-detail .detail-meta {
+            font-size: 12px;
+            color: var(--color-text-muted);
+            margin-bottom: var(--space-sm);
+        }
+        .article-detail .topics { margin-bottom: var(--space-sm); }
+        .topic-pill {
+            display: inline-block;
+            background: var(--color-surface-alt);
+            border-radius: var(--radius-sm);
+            padding: 2px 8px;
+            margin: 2px 3px 2px 0;
+            font-size: 11px;
+            color: var(--color-text-secondary);
+        }
+        .article-detail .detail-link a {
+            font-size: 12px;
+            color: var(--color-link);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .article-detail .detail-link a:hover { text-decoration: underline; }
 
-        /* ── Show More Toggle ── */
-        .article-hidden { display: none; }
+        /* ── Show More ── */
+        .article-overflow { display: none; }
         .show-more-btn {
             display: block;
             width: 100%;
-            padding: 8px;
-            margin-top: 8px;
-            background: var(--color-surface-hover);
+            padding: 10px;
+            margin-top: var(--space-xs);
+            background: var(--color-surface);
             border: 1px solid var(--color-border);
             border-radius: var(--radius-sm);
             cursor: pointer;
-            font-family: 'Courier New', monospace;
+            font-family: 'DM Sans', system-ui, sans-serif;
             font-size: 13px;
-            color: var(--color-link);
+            font-weight: 500;
+            color: var(--color-text-secondary);
             text-align: center;
+            transition: background-color var(--transition-fast);
         }
-        .show-more-btn:hover { background: var(--color-accent-bg, #fff0f0); }
+        .show-more-btn:hover { background: var(--color-surface-hover); }
 
         /* ── Responsive ── */
-        @media (min-width: 1025px) and (max-width: 1400px) {
-            .five-column-layout {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-        @media (min-width: 769px) and (max-width: 1024px) {
-            .five-column-layout {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
         @media (max-width: 768px) {
-            .five-column-layout {
-                grid-template-columns: 1fr;
+            .article-row {
+                grid-template-columns: 6px 1fr 20px;
+                gap: var(--space-xs);
+                padding: var(--space-sm) var(--space-xs);
             }
-            .column { padding: 10px; }
-            .headline a { font-size: 15px; }
+            .article-row .univ-label,
+            .article-row .date-label { display: none; }
+            .article-row .headline-link {
+                white-space: normal;
+                font-size: 13px;
+            }
+            .tab-bar { gap: 0; }
+            .tab-btn { padding: 8px 10px; font-size: 12px; }
         }
         @media (max-width: 480px) {
-            .stats {
-                flex-direction: column;
-                align-items: center;
-            }
-            .stat-pill { width: 100%; }
+            .stats-line { font-size: 12px; }
         }
         """
 
@@ -557,14 +508,15 @@ class HTMLReportGenerator:
         """Monthly groupings, bar chart rows, responsive"""
         return """
         .archive-month {
-            margin-bottom: var(--space-2xl);
+            margin-bottom: var(--space-xl);
         }
         .month-heading {
-            font-size: 20px;
-            font-weight: bold;
+            font-size: 15px;
+            font-weight: 600;
             padding-bottom: var(--space-sm);
-            margin-bottom: var(--space-md);
-            border-bottom: 2px solid var(--color-border-strong);
+            margin-bottom: var(--space-sm);
+            border-bottom: 1px solid var(--color-border);
+            color: var(--color-text);
         }
         .archive-row {
             display: grid;
@@ -578,10 +530,10 @@ class HTMLReportGenerator:
             transition: background-color var(--transition-fast);
         }
         .archive-row:hover {
-            background-color: var(--color-surface-hover);
+            background-color: var(--color-surface);
         }
         .archive-date {
-            font-weight: bold;
+            font-weight: 500;
             font-size: 14px;
             color: var(--color-link);
         }
@@ -590,26 +542,26 @@ class HTMLReportGenerator:
             text-underline-offset: 2px;
         }
         .archive-bar-container {
-            height: 6px;
-            background: var(--color-surface-hover);
-            border-radius: 3px;
+            height: 4px;
+            background: var(--color-surface-alt);
+            border-radius: 2px;
             overflow: hidden;
         }
         .archive-bar {
             display: block;
             height: 100%;
-            background: var(--color-accent);
-            border-radius: 3px;
+            background: var(--color-text-muted);
+            border-radius: 2px;
             min-width: 0;
         }
         .archive-count {
             text-align: right;
             font-size: 14px;
-            font-weight: bold;
+            font-weight: 600;
             color: var(--color-text-secondary);
         }
         .archive-row-empty {
-            opacity: 0.5;
+            opacity: 0.4;
         }
         .archive-row-empty .archive-date {
             color: var(--color-text-muted);
@@ -633,21 +585,24 @@ class HTMLReportGenerator:
             padding: 20px 0;
         }
         .content h2 {
-            font-size: 28px;
-            color: var(--color-accent);
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--color-text);
             margin: 30px 0 15px 0;
             padding-bottom: 8px;
-            border-bottom: 2px solid var(--color-accent);
+            border-bottom: 1px solid var(--color-border);
         }
         .content h3 {
-            font-size: 20px;
-            color: var(--color-text);
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--color-text-secondary);
             margin: 20px 0 10px 0;
         }
         .content p {
             margin-bottom: 15px;
             font-size: 15px;
             line-height: 1.7;
+            color: var(--color-text-secondary);
         }
         .content ul, .content ol {
             margin: 15px 0 15px 30px;
@@ -656,16 +611,18 @@ class HTMLReportGenerator:
             margin-bottom: 10px;
             font-size: 15px;
             line-height: 1.7;
+            color: var(--color-text-secondary);
         }
         code {
-            background-color: var(--color-nav-bg);
+            background-color: var(--color-surface);
             padding: 2px 6px;
             border-radius: var(--radius-sm);
-            font-family: 'Courier New', Courier, monospace;
+            font-family: 'DM Mono', 'Courier New', monospace;
+            font-size: 13px;
         }
         .highlight-box {
             background-color: var(--color-highlight-bg);
-            border-left: 4px solid var(--color-accent);
+            border-left: 3px solid var(--color-text-muted);
             padding: 20px;
             margin: 20px 0;
             border-radius: 0 var(--radius-md) var(--radius-md) 0;
@@ -680,14 +637,15 @@ class HTMLReportGenerator:
         }
         summary {
             cursor: pointer;
-            font-size: 18px;
+            font-size: 15px;
+            font-weight: 500;
             padding: 10px;
-            background-color: var(--color-nav-bg);
+            background-color: var(--color-surface);
             border-radius: var(--radius-sm);
             user-select: none;
             transition: background-color var(--transition-fast);
         }
-        summary:hover { background-color: #e8e8e8; }
+        summary:hover { background-color: var(--color-surface-hover); }
         .source-list {
             margin: 15px 0 0 20px;
             list-style-type: disc;
@@ -699,7 +657,7 @@ class HTMLReportGenerator:
             break-inside: avoid;
         }
         .source-list a {
-            color: var(--color-accent);
+            color: var(--color-link);
             text-decoration: none;
         }
         .source-list a:hover {
@@ -715,14 +673,9 @@ class HTMLReportGenerator:
 
     # ── HTML Component Helpers ─────────────────────────────────────────────
 
-    def _render_header(self, title: str, subtitle: str, date_str: str = None) -> str:
-        date_html = f'\n        <div class="date">Updated: {date_str}</div>' if date_str else ''
-        return f'''    <div class="header">
-        <h1>{title}</h1>
-        <div class="tagline">{subtitle}</div>{date_html}
-    </div>'''
-
-    def _render_nav(self, active_page: str = None, is_archive: bool = False) -> str:
+    def _render_header(self, title: str, meta_text: str = None,
+                       active_page: str = None, is_archive: bool = False) -> str:
+        """Compact single-row header with title left, meta + nav right"""
         if is_archive:
             urls = {"today": "../index.html", "archive": "index.html", "how_it_works": "../how_it_works.html"}
         else:
@@ -731,11 +684,20 @@ class HTMLReportGenerator:
         def cls(page):
             return ' class="active"' if page == active_page else ''
 
-        return f'''
-    <div class="nav">
-        <a href="{urls['today']}"{cls('today')}>TODAY</a>
-        <a href="{urls['archive']}"{cls('archive')}>ARCHIVE</a>
-        <a href="{urls['how_it_works']}"{cls('how_it_works')}>HOW IT WORKS</a>
+        meta_html = f'<span class="header-meta">{meta_text}</span>' if meta_text else ''
+
+        return f'''    <div class="header">
+        <h1>{title}</h1>
+        <div class="header-right">
+            {meta_html}
+            <span class="header-nav">
+                <a href="{urls['today']}"{cls('today')}>Today</a>
+                &middot;
+                <a href="{urls['archive']}"{cls('archive')}>Archive</a>
+                &middot;
+                <a href="{urls['how_it_works']}"{cls('how_it_works')}>How It Works</a>
+            </span>
+        </div>
     </div>'''
 
     def _render_footer(self, is_archive: bool = False, timestamp: str = None) -> str:
@@ -744,18 +706,15 @@ class HTMLReportGenerator:
         else:
             urls = {"today": "index.html", "archive": "archive/index.html", "how_it_works": "how_it_works.html"}
 
-        ts = timestamp or datetime.now().strftime('%I:%M %p %Z')
+        ts = timestamp or datetime.now().strftime('%I:%M %p')
 
         return f'''
     <div class="footer">
-        <div class="footer-nav">
-            <a href="{urls['today']}">Today</a> &middot;
-            <a href="{urls['archive']}">Archive</a> &middot;
-            <a href="{urls['how_it_works']}">How It Works</a> &middot;
-            <a href="https://github.com/tyson-swetnam/webcrawler" target="_blank">GitHub</a>
-        </div>
-        <p>Monitoring {self._source_count} sources daily</p>
-        <p class="footer-meta">Last updated: {ts}</p>
+        <a href="{urls['today']}">Today</a> &middot;
+        <a href="{urls['archive']}">Archive</a> &middot;
+        <a href="{urls['how_it_works']}">How It Works</a> &middot;
+        <a href="https://github.com/tyson-swetnam/webcrawler" target="_blank">GitHub</a>
+        &nbsp;|&nbsp; {self._source_count} sources &middot; Updated {ts}
     </div>'''
 
     # ── Public Generation Methods ──────────────────────────────────────────
@@ -935,155 +894,260 @@ class HTMLReportGenerator:
 
         return articles
 
+    @staticmethod
+    def _get_google_fonts_link() -> str:
+        return ('<link rel="preconnect" href="https://fonts.googleapis.com">'
+                '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+                '<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">')
+
     def _render_main_page(self, articles: List[Dict], date: datetime, is_archive_page: bool = False) -> str:
-        """Render main page with five-column layout"""
+        """Render main page with tabbed dense-list layout"""
         date_str = date.strftime('%A, %B %d, %Y')
+        short_date = date.strftime('%b %d')
         active_page = None if is_archive_page else 'today'
 
-        # Categorize articles by university/facility tier
-        peer_articles = {}
-        r1_articles = {}
-        hpc_articles = {}
-        lab_articles = {}
-        global_articles = {}
-
-        category_map = {
-            'peer': peer_articles,
-            'r1': r1_articles,
-            'hpc': hpc_articles,
-            'national_lab': lab_articles,
-            'global': global_articles,
+        # Categorize articles
+        category_key_map = {
+            'peer': 'peer',
+            'r1': 'r1',
+            'hpc': 'hpc',
+            'national_lab': 'lab',
+            'global': 'global',
+        }
+        dot_class_map = {
+            'peer': 'dot-peer',
+            'r1': 'dot-r1',
+            'hpc': 'dot-hpc',
+            'lab': 'dot-lab',
+            'global': 'dot-global',
         }
 
+        # Annotate each article with its category and display name
+        annotated = []
         for article in articles:
             univ = article['university'] or 'Unknown'
-            category = self.classifier.classify(univ)
-            target_dict = category_map.get(category, r1_articles)
+            raw_cat = self.classifier.classify(univ)
+            cat = category_key_map.get(raw_cat, 'r1')
+            display_name = self.clean_university_name(univ)
+            annotated.append({**article, '_cat': cat, '_display_univ': display_name})
 
-            if univ not in target_dict:
-                target_dict[univ] = []
-            target_dict[univ].append(article)
+        # Count per category
+        counts = {'peer': 0, 'r1': 0, 'hpc': 0, 'lab': 0, 'global': 0}
+        for a in annotated:
+            counts[a['_cat']] = counts.get(a['_cat'], 0) + 1
+        total = len(annotated)
 
-        # Helper function to render a column
-        MAX_VISIBLE = 10
+        # Stats line
+        stats_html = (
+            f'<div class="stats-line" data-total-articles="{total}">'
+            f'{total} articles &middot; '
+            f'<span class="cat-dot dot-peer"></span>&nbsp;Peer&nbsp;{counts["peer"]} &middot; '
+            f'<span class="cat-dot dot-r1"></span>&nbsp;R1&nbsp;{counts["r1"]} &middot; '
+            f'<span class="cat-dot dot-hpc"></span>&nbsp;HPC&nbsp;{counts["hpc"]} &middot; '
+            f'<span class="cat-dot dot-lab"></span>&nbsp;Labs&nbsp;{counts["lab"]} &middot; '
+            f'<span class="cat-dot dot-global"></span>&nbsp;Global&nbsp;{counts["global"]}'
+            f'</div>'
+        )
 
-        def render_column(articles_dict, title, css_class):
-            if not articles_dict:
-                return f'<div class="column {css_class} column-empty"><h2 class="column-title">{title}</h2><p class="no-articles">No articles</p></div>'
+        # Tab bar
+        tab_labels = [
+            ('all', 'All', total),
+            ('peer', 'Peer', counts['peer']),
+            ('r1', 'R1', counts['r1']),
+            ('hpc', 'HPC', counts['hpc']),
+            ('lab', 'Labs', counts['lab']),
+            ('global', 'Global', counts['global']),
+        ]
+        tab_buttons = []
+        for tab_id, label, count in tab_labels:
+            active_cls = ' active' if tab_id == 'all' else ''
+            empty_cls = ' tab-empty' if count == 0 and tab_id != 'all' else ''
+            tab_buttons.append(
+                f'<button class="tab-btn{active_cls}{empty_cls}" data-tab="{tab_id}" '
+                f'onclick="switchTab(\'{tab_id}\')">{label}<span class="tab-count">({count})</span></button>'
+            )
+        tab_bar_html = '<div class="tab-bar">' + ''.join(tab_buttons) + '</div>'
 
-            html_parts = [f'<div class="column {css_class}"><h2 class="column-title">{title}</h2>']
+        # Build article rows
+        MAX_VISIBLE = 25
+        article_rows = []
+        row_index = 0
 
-            article_index = 0
-            for univ, univ_articles in sorted(articles_dict.items()):
-                display_name = self.clean_university_name(univ)
-                html_parts.append(f'<div class="university-section"><h3>{display_name}</h3>')
+        # For category tabs: group by university within each category
+        # We'll emit all articles in chronological order (already sorted) with data-category
+        # For grouped views, JS handles university subheader visibility
+        # Build a map of university -> articles per category for grouped view
+        cat_univ_map = {}  # cat -> OrderedDict(univ -> [articles])
+        for a in annotated:
+            cat = a['_cat']
+            univ = a['_display_univ']
+            if cat not in cat_univ_map:
+                cat_univ_map[cat] = OrderedDict()
+            if univ not in cat_univ_map[cat]:
+                cat_univ_map[cat][univ] = []
+            cat_univ_map[cat][univ].append(a)
 
-                for article in univ_articles:
-                    hidden_class = ' article-hidden' if article_index >= MAX_VISIBLE else ''
+        def render_article_row(article, idx):
+            cat = article['_cat']
+            display_name = article['_display_univ']
+            dot_cls = dot_class_map.get(cat, 'dot-r1')
+            overflow_cls = ' article-overflow' if idx >= MAX_VISIBLE else ''
 
-                    topics_html = ''
-                    if article.get('topics') and isinstance(article['topics'], list):
-                        clean_topics = [self.strip_markdown(str(t)) for t in article['topics'][:3] if t]
-                        clean_topics = [t for t in clean_topics if t and len(t) < 50]
-                        if clean_topics:
-                            pills = ''.join(f'<span class="topic-pill">{t}</span>' for t in clean_topics)
-                            topics_html = f'<span class="topics">{pills}</span>'
+            # Short date for the row
+            pub_short = ''
+            if article.get('published_date'):
+                if isinstance(article['published_date'], str):
+                    pub_short = article['published_date']
+                else:
+                    pub_short = article['published_date'].strftime('%b %d')
+            else:
+                pub_short = article['timestamp'].strftime('%b %d')
 
-                    summary_html = ''
-                    if article.get('summary'):
-                        plain_summary = self.strip_markdown(article['summary'])
-                        if len(plain_summary) > 200:
-                            plain_summary = plain_summary[:200].rsplit(' ', 1)[0] + '...'
-                        summary_html = f'<div class="summary">{plain_summary}</div>'
+            # Detail panel content
+            summary_html = ''
+            if article.get('summary'):
+                plain_summary = self.strip_markdown(article['summary'])
+                if len(plain_summary) > 300:
+                    plain_summary = plain_summary[:300].rsplit(' ', 1)[0] + '...'
+                summary_html = f'<div class="summary">{plain_summary}</div>'
 
-                    pub_date_str = ''
-                    if article.get('published_date'):
-                        if isinstance(article['published_date'], str):
-                            pub_date_str = article['published_date']
-                        else:
-                            pub_date_str = article['published_date'].strftime('%B %d, %Y')
+            topics_html = ''
+            if article.get('topics') and isinstance(article['topics'], list):
+                clean_topics = [self.strip_markdown(str(t)) for t in article['topics'][:4] if t]
+                clean_topics = [t for t in clean_topics if t and len(t) < 50]
+                if clean_topics:
+                    pills = ''.join(f'<span class="topic-pill">{t}</span>' for t in clean_topics)
+                    topics_html = f'<div class="topics">{pills}</div>'
 
-                    crawl_date_str = article['timestamp'].strftime('%B %d, %Y')
+            # Full dates for detail
+            pub_date_long = ''
+            if article.get('published_date'):
+                if isinstance(article['published_date'], str):
+                    pub_date_long = article['published_date']
+                else:
+                    pub_date_long = article['published_date'].strftime('%B %d, %Y')
+            crawl_date_long = article['timestamp'].strftime('%B %d, %Y')
+            meta_parts = []
+            if pub_date_long:
+                meta_parts.append(f'Published: {pub_date_long}')
+            meta_parts.append(f'Crawled: {crawl_date_long}')
+            detail_meta = ' &middot; '.join(meta_parts)
 
-                    if pub_date_str and pub_date_str != crawl_date_str:
-                        meta_html = f'<div class="meta">Published: {pub_date_str} | Crawled: {crawl_date_str}</div>'
-                    elif pub_date_str:
-                        meta_html = f'<div class="meta">Published: {pub_date_str}</div>'
-                    else:
-                        meta_html = f'<div class="meta">Crawled: {crawl_date_str}</div>'
+            row_html = (
+                f'<div class="article-row{overflow_cls}" data-category="{cat}" onclick="toggleDetail(this)">'
+                f'<span class="cat-dot {dot_cls}"></span>'
+                f'<a class="headline-link" href="{article["url"]}" target="_blank" onclick="event.stopPropagation()">{article["title"]}</a>'
+                f'<span class="univ-label">{display_name}</span>'
+                f'<span class="date-label">{pub_short}</span>'
+                f'<span class="chevron">&#9654;</span>'
+                f'</div>'
+                f'<div class="article-detail" data-category="{cat}">'
+                f'{summary_html}'
+                f'{topics_html}'
+                f'<div class="detail-meta">{detail_meta}</div>'
+                f'<div class="detail-link"><a href="{article["url"]}" target="_blank">Read full article &rarr;</a></div>'
+                f'</div>'
+            )
+            return row_html
 
-                    html_parts.append(f'''
-                        <div class="article{hidden_class}">
-                            <div class="headline">
-                                <a href="{article['url']}" target="_blank">{article['title']}</a>
-                                {topics_html}
-                            </div>
-                            {meta_html}
-                            {summary_html}
-                        </div>
-                    ''')
-                    article_index += 1
+        # Render flat chronological list (for "All" tab — default view)
+        for idx, article in enumerate(annotated):
+            article_rows.append(render_article_row(article, idx))
 
-                html_parts.append('</div>')
+        overflow_count = max(0, total - MAX_VISIBLE)
+        show_more_html = ''
+        if overflow_count > 0:
+            show_more_html = (
+                f'<button class="show-more-btn" onclick="toggleMore(this)" '
+                f'data-expanded="false" data-show-text="Show {overflow_count} more" '
+                f'data-hide-text="Show fewer">'
+                f'Show {overflow_count} more</button>'
+            )
 
-            hidden_count = article_index - MAX_VISIBLE
-            if hidden_count > 0:
-                show_text = f'Show {hidden_count} more'
-                hide_text = f'Hide {hidden_count} articles'
-                html_parts.append(
-                    f'<button class="show-more-btn" onclick="toggleMore(this)" '
-                    f'data-expanded="false" data-show-text="{show_text}" '
-                    f'data-hide-text="{hide_text}">{show_text}</button>'
-                )
+        list_html = '<div class="article-list">' + ''.join(article_rows) + show_more_html + '</div>'
 
-            html_parts.append('</div>')
-            return '\n'.join(html_parts)
-
-        # Build five-column HTML
-        columns_html = f'''
-            <div class="five-column-layout">
-                {render_column(peer_articles, "Peer Institutions", "column-peer")}
-                {render_column(r1_articles, "R1 Institutions", "column-r1")}
-                {render_column(hpc_articles, "HPC &amp; Research Centers", "column-facility")}
-                {render_column(lab_articles, "National Laboratories", "column-lab")}
-                {render_column(global_articles, "Global Institutions", "column-global")}
-            </div>
-        '''
-
-        # Stats pills
-        total = len(articles)
-        peer_count = sum(len(arts) for arts in peer_articles.values())
-        r1_count = sum(len(arts) for arts in r1_articles.values())
-        hpc_count = sum(len(arts) for arts in hpc_articles.values())
-        lab_count = sum(len(arts) for arts in lab_articles.values())
-        global_count = sum(len(arts) for arts in global_articles.values())
-
-        stats_html = f'''
-            <div class="stats" data-total-articles="{total}">
-                <div class="stat-pill"><span class="stat-number">{total}</span><span class="stat-label">TOTAL</span></div>
-                <div class="stat-pill stat-peer"><span class="stat-number">{peer_count}</span><span class="stat-label">PEER</span></div>
-                <div class="stat-pill stat-r1"><span class="stat-number">{r1_count}</span><span class="stat-label">R1</span></div>
-                <div class="stat-pill stat-facility"><span class="stat-number">{hpc_count}</span><span class="stat-label">HPC</span></div>
-                <div class="stat-pill stat-lab"><span class="stat-number">{lab_count}</span><span class="stat-label">LABS</span></div>
-                <div class="stat-pill stat-global"><span class="stat-number">{global_count}</span><span class="stat-label">GLOBAL</span></div>
-            </div>
-        '''
-
-        articles_html = stats_html + columns_html if articles else '<p class="no-results">No AI-related articles found for this date.</p>'
+        if not articles:
+            articles_html = '<p class="no-results">No AI-related articles found for this date.</p>'
+        else:
+            articles_html = stats_html + tab_bar_html + list_html
 
         base_css = self._get_base_css()
         main_css = self._get_main_page_css()
-        header_html = self._render_header("AI UNIVERSITY NEWS", "Latest AI Research &amp; Developments from Universities &amp; Labs Worldwide (Last 5 Days)", date_str)
-        nav_html = self._render_nav(active_page, is_archive_page)
+        meta_text = f'{total} articles &middot; {short_date}'
+        header_html = self._render_header("AI University News", meta_text=meta_text, active_page=active_page, is_archive=is_archive_page)
         footer_html = self._render_footer(is_archive_page)
         favicon = self._get_favicon_link()
+        fonts = self._get_google_fonts_link()
 
-        toggle_js = '''<script>
+        # JavaScript — plain string (no f-string) to avoid brace escaping
+        page_js = '''<script>
+function switchTab(cat) {
+    var btns = document.querySelectorAll('.tab-btn');
+    btns.forEach(function(b) { b.classList.toggle('active', b.getAttribute('data-tab') === cat); });
+    var rows = document.querySelectorAll('.article-row');
+    var details = document.querySelectorAll('.article-detail');
+    rows.forEach(function(r) {
+        if (cat === 'all' || r.getAttribute('data-category') === cat) {
+            r.style.display = '';
+        } else {
+            r.style.display = 'none';
+        }
+    });
+    details.forEach(function(d) {
+        if (cat === 'all' || d.getAttribute('data-category') === cat) {
+            // keep current open/closed state, just allow visibility
+        } else {
+            d.style.display = 'none';
+            d.classList.remove('open');
+        }
+    });
+    // Reset show-more when switching tabs
+    var overflows = document.querySelectorAll('.article-overflow');
+    overflows.forEach(function(el) { el.style.display = 'none'; });
+    var btn = document.querySelector('.show-more-btn');
+    if (btn) {
+        btn.setAttribute('data-expanded', 'false');
+        btn.textContent = btn.getAttribute('data-show-text');
+        // Update count for current tab
+        var hidden = 0;
+        overflows.forEach(function(el) {
+            if (cat === 'all' || el.getAttribute('data-category') === cat) hidden++;
+        });
+        if (hidden > 0) {
+            btn.style.display = '';
+            btn.setAttribute('data-show-text', 'Show ' + hidden + ' more');
+            btn.textContent = 'Show ' + hidden + ' more';
+        } else {
+            btn.style.display = 'none';
+        }
+    }
+}
+function toggleDetail(row) {
+    var detail = row.nextElementSibling;
+    if (detail && detail.classList.contains('article-detail')) {
+        var isOpen = detail.classList.contains('open');
+        detail.classList.toggle('open');
+        detail.style.display = isOpen ? 'none' : 'block';
+        row.classList.toggle('expanded');
+    }
+}
 function toggleMore(btn) {
-    var col = btn.closest('.column');
-    var hidden = col.querySelectorAll('.article-hidden');
     var showing = btn.getAttribute('data-expanded') === 'true';
-    hidden.forEach(function(el) { el.style.display = showing ? 'none' : ''; });
+    var activeTab = document.querySelector('.tab-btn.active');
+    var cat = activeTab ? activeTab.getAttribute('data-tab') : 'all';
+    var overflows = document.querySelectorAll('.article-overflow');
+    overflows.forEach(function(el) {
+        if (cat === 'all' || el.getAttribute('data-category') === cat) {
+            el.style.display = showing ? 'none' : '';
+            // Also handle adjacent detail panels
+            var next = el.nextElementSibling;
+            if (next && next.classList.contains('article-detail') && showing) {
+                next.style.display = 'none';
+                next.classList.remove('open');
+                el.classList.remove('expanded');
+            }
+        }
+    });
     btn.setAttribute('data-expanded', showing ? 'false' : 'true');
     btn.textContent = showing ? btn.getAttribute('data-show-text') : btn.getAttribute('data-hide-text');
 }
@@ -1096,6 +1160,7 @@ function toggleMore(btn) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI University News - {date_str}</title>
     {favicon}
+    {fonts}
     <style>
     {base_css}
     {main_css}
@@ -1103,12 +1168,11 @@ function toggleMore(btn) {
 </head>
 <body>
 {header_html}
-{nav_html}
 
     {articles_html}
 
 {footer_html}
-{toggle_js}
+{page_js}
 </body>
 </html>'''
 
@@ -1158,10 +1222,10 @@ function toggleMore(btn) {
 
         base_css = self._get_base_css()
         archive_css = self._get_archive_page_css()
-        header_html = self._render_header("AI UNIVERSITY NEWS", "Archive")
-        nav_html = self._render_nav('archive', is_archive=True)
+        header_html = self._render_header("AI University News", meta_text="Archive", active_page='archive', is_archive=True)
         footer_html = self._render_footer(is_archive=True)
         favicon = self._get_favicon_link()
+        fonts = self._get_google_fonts_link()
 
         return f'''<!DOCTYPE html>
 <html lang="en">
@@ -1170,6 +1234,7 @@ function toggleMore(btn) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Archive - AI University News</title>
     {favicon}
+    {fonts}
     <style>
     {base_css}
     {archive_css}
@@ -1177,7 +1242,6 @@ function toggleMore(btn) {
 </head>
 <body>
 {header_html}
-{nav_html}
 
     {''.join(groups_html)}
 
@@ -1252,10 +1316,10 @@ function toggleMore(btn) {
 
         base_css = self._get_base_css()
         hiw_css = self._get_how_it_works_css()
-        header_html = self._render_header("AI UNIVERSITY NEWS", "How It Works")
-        nav_html = self._render_nav('how_it_works', is_archive=False)
+        header_html = self._render_header("AI University News", meta_text="How It Works", active_page='how_it_works', is_archive=False)
         footer_html = self._render_footer(is_archive=False)
         favicon = self._get_favicon_link()
+        fonts = self._get_google_fonts_link()
 
         return f'''<!DOCTYPE html>
 <html lang="en">
@@ -1264,6 +1328,7 @@ function toggleMore(btn) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How It Works - AI University News</title>
     {favicon}
+    {fonts}
     <style>
     {base_css}
     {hiw_css}
@@ -1271,7 +1336,6 @@ function toggleMore(btn) {
 </head>
 <body>
 {header_html}
-{nav_html}
 
     <div class="content">
         <h2>Overview</h2>

@@ -5,38 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How It Works - AI University News</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F393;</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
     
         :root {
             --color-bg: #ffffff;
-            --color-surface: #fafafa;
-            --color-surface-hover: #f0f0f0;
-            --color-text: #000000;
-            --color-text-secondary: #333333;
-            --color-text-muted: #666666;
-            --color-text-faint: #999999;
-            --color-accent: #cc0000;
-            --color-link: #0000cc;
-            --color-link-visited: #551a8b;
-            --color-border: #dddddd;
-            --color-border-strong: #000000;
-            --color-nav-bg: #f5f5f5;
-            --color-highlight-bg: #fffbf0;
+            --color-surface: #f8f9fa;
+            --color-surface-alt: #f1f3f5;
+            --color-surface-hover: #e9ecef;
+            --color-border: #dee2e6;
+            --color-text: #212529;
+            --color-text-secondary: #495057;
+            --color-text-muted: #868e96;
+            --color-text-faint: #adb5bd;
+            --color-link: #1a1a2e;
+            --color-link-visited: #3d3d5c;
+            --color-focus: #4dabf7;
+            --color-highlight-bg: #f8f9fa;
 
-            --color-peer: #8b0000;
-            --color-peer-bg: #fff5f5;
-            --color-r1: #00008b;
-            --color-r1-bg: #f5f5ff;
-            --color-facility: #8b6914;
-            --color-facility-bg: #fffbf0;
-            --color-lab: #006400;
-            --color-lab-bg: #f0fff0;
-            --color-global: #4b0082;
-            --color-global-bg: #f8f0ff;
+            --color-peer: #7c3aed;
+            --color-r1: #2563eb;
+            --color-hpc: #d97706;
+            --color-lab: #059669;
+            --color-global: #dc2626;
 
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
-            --shadow-md: 0 2px 8px rgba(0,0,0,0.1);
-            --radius-sm: 3px;
+            --radius-sm: 4px;
             --radius-md: 6px;
             --transition-fast: 150ms ease;
 
@@ -45,116 +38,95 @@
             --space-md: 16px;
             --space-lg: 24px;
             --space-xl: 32px;
-            --space-2xl: 48px;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Courier New', Courier, monospace;
+            font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
             background-color: var(--color-bg);
             color: var(--color-text);
-            max-width: 1800px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 20px 40px;
+            padding: 0 var(--space-lg);
             line-height: 1.5;
+            font-size: 14px;
         }
 
         :focus-visible {
-            outline: 2px solid var(--color-accent);
+            outline: 2px solid var(--color-focus);
             outline-offset: 2px;
         }
         a:focus:not(:focus-visible) { outline: none; }
 
-        /* ── Header ── */
+        /* ── Compact Header ── */
         .header {
-            text-align: center;
-            border-bottom: 3px solid var(--color-border-strong);
-            padding-bottom: var(--space-lg);
-            margin-bottom: var(--space-xl);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--color-border);
+            margin-bottom: var(--space-md);
+            min-height: 48px;
         }
         .header h1 {
-            font-size: 42px;
-            font-weight: bold;
-            letter-spacing: -1px;
-            margin-bottom: var(--space-sm);
-        }
-        .header .tagline {
-            font-size: 14px;
-            color: var(--color-text-muted);
-            font-style: italic;
-        }
-        .header .date {
-            font-size: 14px;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
             color: var(--color-text);
-            margin-top: var(--space-md);
-            font-weight: bold;
-            display: inline-block;
-            background: var(--color-nav-bg);
-            border-radius: var(--radius-sm);
-            padding: var(--space-xs) 12px;
+            white-space: nowrap;
         }
-
-        /* ── Navigation ── */
-        .nav {
-            text-align: center;
-            margin-bottom: var(--space-lg);
-            padding: var(--space-sm);
-            background-color: var(--color-nav-bg);
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius-md);
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            font-size: 13px;
+            color: var(--color-text-muted);
         }
-        .nav a {
-            color: var(--color-accent);
+        .header-meta {
+            white-space: nowrap;
+        }
+        .header-nav a {
+            color: var(--color-text-muted);
             text-decoration: none;
-            font-weight: bold;
-            margin: 0 var(--space-xs);
-            font-size: 14px;
-            padding: var(--space-sm) var(--space-md);
-            border-radius: var(--radius-sm);
-            transition: background-color var(--transition-fast), color var(--transition-fast);
-            display: inline-block;
+            font-size: 13px;
+            font-weight: 500;
+            transition: color var(--transition-fast);
         }
-        .nav a:hover {
-            background-color: var(--color-accent);
-            color: #ffffff;
-            text-decoration: none;
-        }
-        .nav a.active {
-            background-color: var(--color-accent);
-            color: #ffffff;
+        .header-nav a:hover { color: var(--color-text); }
+        .header-nav a.active {
+            color: var(--color-text);
+            font-weight: 600;
         }
 
         /* ── Footer ── */
         .footer {
             text-align: center;
-            margin-top: var(--space-2xl);
-            padding-top: var(--space-lg);
-            border-top: 2px solid var(--color-border-strong);
+            margin-top: var(--space-xl);
+            padding: var(--space-md) 0;
+            border-top: 1px solid var(--color-border);
             font-size: 12px;
             color: var(--color-text-muted);
         }
         .footer a {
             color: var(--color-text-muted);
             text-decoration: none;
-            margin: 0 var(--space-sm);
             transition: color var(--transition-fast);
         }
-        .footer a:hover { color: var(--color-accent); }
-        .footer .footer-nav { margin-bottom: var(--space-sm); }
-        .footer .footer-nav a { font-weight: bold; }
-        .footer .footer-meta { margin-top: var(--space-xs); }
+        .footer a:hover { color: var(--color-text); }
 
         .no-results {
             text-align: center;
-            font-size: 18px;
+            font-size: 15px;
             color: var(--color-text-muted);
-            margin: 40px 0;
+            margin: 60px 0;
         }
 
         @media (max-width: 600px) {
-            body { padding: 10px var(--space-md); }
-            .header h1 { font-size: 28px; }
+            body { padding: 0 var(--space-md); }
+            .header { flex-direction: column; gap: var(--space-sm); align-items: flex-start; }
+            .header-right { flex-wrap: wrap; }
         }
         
     
@@ -164,21 +136,24 @@
             padding: 20px 0;
         }
         .content h2 {
-            font-size: 28px;
-            color: var(--color-accent);
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--color-text);
             margin: 30px 0 15px 0;
             padding-bottom: 8px;
-            border-bottom: 2px solid var(--color-accent);
+            border-bottom: 1px solid var(--color-border);
         }
         .content h3 {
-            font-size: 20px;
-            color: var(--color-text);
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--color-text-secondary);
             margin: 20px 0 10px 0;
         }
         .content p {
             margin-bottom: 15px;
             font-size: 15px;
             line-height: 1.7;
+            color: var(--color-text-secondary);
         }
         .content ul, .content ol {
             margin: 15px 0 15px 30px;
@@ -187,16 +162,18 @@
             margin-bottom: 10px;
             font-size: 15px;
             line-height: 1.7;
+            color: var(--color-text-secondary);
         }
         code {
-            background-color: var(--color-nav-bg);
+            background-color: var(--color-surface);
             padding: 2px 6px;
             border-radius: var(--radius-sm);
-            font-family: 'Courier New', Courier, monospace;
+            font-family: 'DM Mono', 'Courier New', monospace;
+            font-size: 13px;
         }
         .highlight-box {
             background-color: var(--color-highlight-bg);
-            border-left: 4px solid var(--color-accent);
+            border-left: 3px solid var(--color-text-muted);
             padding: 20px;
             margin: 20px 0;
             border-radius: 0 var(--radius-md) var(--radius-md) 0;
@@ -211,14 +188,15 @@
         }
         summary {
             cursor: pointer;
-            font-size: 18px;
+            font-size: 15px;
+            font-weight: 500;
             padding: 10px;
-            background-color: var(--color-nav-bg);
+            background-color: var(--color-surface);
             border-radius: var(--radius-sm);
             user-select: none;
             transition: background-color var(--transition-fast);
         }
-        summary:hover { background-color: #e8e8e8; }
+        summary:hover { background-color: var(--color-surface-hover); }
         .source-list {
             margin: 15px 0 0 20px;
             list-style-type: disc;
@@ -230,7 +208,7 @@
             break-inside: avoid;
         }
         .source-list a {
-            color: var(--color-accent);
+            color: var(--color-link);
             text-decoration: none;
         }
         .source-list a:hover {
@@ -247,14 +225,17 @@
 </head>
 <body>
     <div class="header">
-        <h1>AI UNIVERSITY NEWS</h1>
-        <div class="tagline">How It Works</div>
-    </div>
-
-    <div class="nav">
-        <a href="index.html">TODAY</a>
-        <a href="archive/index.html">ARCHIVE</a>
-        <a href="how_it_works.html" class="active">HOW IT WORKS</a>
+        <h1>AI University News</h1>
+        <div class="header-right">
+            <span class="header-meta">How It Works</span>
+            <span class="header-nav">
+                <a href="index.html">Today</a>
+                &middot;
+                <a href="archive/index.html">Archive</a>
+                &middot;
+                <a href="how_it_works.html" class="active">How It Works</a>
+            </span>
+        </div>
     </div>
 
     <div class="content">
@@ -442,14 +423,11 @@
 
 
     <div class="footer">
-        <div class="footer-nav">
-            <a href="index.html">Today</a> &middot;
-            <a href="archive/index.html">Archive</a> &middot;
-            <a href="how_it_works.html">How It Works</a> &middot;
-            <a href="https://github.com/tyson-swetnam/webcrawler" target="_blank">GitHub</a>
-        </div>
-        <p>Monitoring 380 sources daily</p>
-        <p class="footer-meta">Last updated: 06:13 AM </p>
+        <a href="index.html">Today</a> &middot;
+        <a href="archive/index.html">Archive</a> &middot;
+        <a href="how_it_works.html">How It Works</a> &middot;
+        <a href="https://github.com/tyson-swetnam/webcrawler" target="_blank">GitHub</a>
+        &nbsp;|&nbsp; 380 sources &middot; Updated 08:32 PM
     </div>
 </body>
 </html>
