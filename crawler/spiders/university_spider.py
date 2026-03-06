@@ -11,6 +11,7 @@ from datetime import datetime, timezone
 from typing import Dict, Any
 from urllib.parse import urlparse
 import hashlib
+import json
 import logging
 
 import feedparser
@@ -146,6 +147,11 @@ class UniversityNewsSpider(scrapy.Spider):
             'mcp_fallback_successes': 0
         }
 
+        # Per-domain tracking
+        self.domain_stats = {}  # hostname -> {'urls': 0, 'articles': 0, 'errors': 0}
+        self.sources_attempted = set()
+        self.sources_succeeded = set()
+
         logger.info(f"Initialized {self.name} spider with {len(self.start_urls)} start URLs")
 
     @property
@@ -238,10 +244,14 @@ class UniversityNewsSpider(scrapy.Spider):
             normalized = normalize_url(link)
             url_hash = compute_url_hash(normalized)
 
-            if check_url_seen(self.db, url_hash):
-                self.stats['duplicates_skipped'] += 1
-                self.logger.debug(f"Skipping duplicate feed URL: {link}")
-                continue
+            try:
+                if check_url_seen(self.db, url_hash):
+                    self.stats['duplicates_skipped'] += 1
+                    self.logger.debug(f"Skipping duplicate feed URL: {link}")
+                    continue
+            except Exception as e:
+                self.logger.warning(f"DB dedup check failed for {link}, proceeding: {e}")
+                self.db.rollback()
 
             # Dynamically add article domain to allowed_domains
             domain = urlparse(link).netloc
@@ -272,6 +282,8 @@ class UniversityNewsSpider(scrapy.Spider):
             return
 
         self.logger.info(f"Parsing listing page: {response.url}")
+        domain = urlparse(response.url).netloc
+        self.sources_attempted.add(domain)
 
         # Extract article links
         for link in self.link_extractor.extract_links(response):
@@ -287,7 +299,14 @@ class UniversityNewsSpider(scrapy.Spider):
             normalized = normalize_url(link.url)
             url_hash = compute_url_hash(normalized)
 
-            if not check_url_seen(self.db, url_hash):
+            try:
+                url_seen = check_url_seen(self.db, url_hash)
+            except Exception as e:
+                self.logger.warning(f"DB dedup check failed for {link.url}, proceeding: {e}")
+                self.db.rollback()
+                url_seen = False
+
+            if not url_seen:
                 yield scrapy.Request(
                     link.url,
                     callback=self.parse_article,
@@ -412,6 +431,11 @@ class UniversityNewsSpider(scrapy.Spider):
             self._store_article(article_data)
 
             self.stats['articles_extracted'] += 1
+            domain = urlparse(response.url).netloc
+            self.sources_succeeded.add(domain)
+            if domain not in self.domain_stats:
+                self.domain_stats[domain] = {'urls': 0, 'articles': 0, 'errors': 0}
+            self.domain_stats[domain]['articles'] += 1
             self.logger.info(f"Successfully extracted article: {extracted.get('title', 'Untitled')}")
 
             yield article_data
@@ -423,12 +447,15 @@ class UniversityNewsSpider(scrapy.Spider):
 
     def _store_article(self, article_data: Dict[str, Any]):
         """
-        Store article in database.
+        Store article in database using a savepoint so failures don't poison the session.
 
         Args:
             article_data: Article data dictionary
         """
         try:
+            # Use a savepoint so a failure here doesn't abort the entire session
+            nested = self.db.begin_nested()
+
             # Get or create URL entry
             url_obj, created = get_or_create_url(
                 self.db,
@@ -448,6 +475,7 @@ class UniversityNewsSpider(scrapy.Spider):
                 self.logger.debug(f"Duplicate content detected for {article_data['url']}")
                 url_obj.status = 'crawled'
                 url_obj.last_checked = datetime.now(timezone.utc)
+                nested.commit()
                 self.db.commit()
                 return
 
@@ -461,9 +489,6 @@ class UniversityNewsSpider(scrapy.Spider):
                 except (ValueError, AttributeError):
                     pass
 
-            # Get canonical university name using hostname mapping
-            # This fixes the issue where Trafilatura extracts inconsistent sitenames
-            # like "AuburnEngineers", "ou.edu", "psu.edu" instead of canonical names
             canonical_name = self.name_mapper.get_canonical_name(
                 hostname=article_data['hostname'],
                 fallback_sitename=article_data.get('sitename')
@@ -495,6 +520,7 @@ class UniversityNewsSpider(scrapy.Spider):
             url_obj.content_hash = article_data['content_hash']
 
             self.db.add(article)
+            nested.commit()
             self.db.commit()
 
             self.logger.debug(f"Stored article in database: {article.article_id}")
@@ -502,7 +528,6 @@ class UniversityNewsSpider(scrapy.Spider):
         except Exception as e:
             self.logger.error(f"Failed to store article in database: {e}")
             self.db.rollback()
-            raise
 
     def _is_navigation_page(self, title: str, url: str) -> bool:
         """
@@ -574,18 +599,20 @@ class UniversityNewsSpider(scrapy.Spider):
 
     def _update_url_status(self, url_hash: str, status: str):
         """
-        Update URL status in database.
+        Update URL status in database using a savepoint for isolation.
 
         Args:
             url_hash: URL hash
             status: New status
         """
         try:
+            nested = self.db.begin_nested()
             url_obj = self.db.query(URL).filter(URL.url_hash == url_hash).first()
             if url_obj:
                 url_obj.status = status
                 url_obj.last_checked = datetime.now(timezone.utc)
-                self.db.commit()
+            nested.commit()
+            self.db.commit()
         except Exception as e:
             self.logger.error(f"Failed to update URL status: {e}")
             self.db.rollback()
@@ -601,6 +628,10 @@ class UniversityNewsSpider(scrapy.Spider):
         self.logger.error(f"Request failed: {url}")
         self.logger.error(f"Error: {failure.value}")
         self.stats['errors'] += 1
+        domain = urlparse(url).netloc
+        if domain not in self.domain_stats:
+            self.domain_stats[domain] = {'urls': 0, 'articles': 0, 'errors': 0}
+        self.domain_stats[domain]['errors'] += 1
 
         # Check if we should attempt MCP fallback
         status_code = None
@@ -654,7 +685,7 @@ class UniversityNewsSpider(scrapy.Spider):
 
     def closed(self, reason):
         """
-        Clean up when spider closes.
+        Clean up when spider closes. Writes health stats to JSON file.
 
         Args:
             reason: Reason for spider closure
@@ -662,17 +693,50 @@ class UniversityNewsSpider(scrapy.Spider):
         self.logger.info(f"Spider closing: {reason}")
         self.logger.info(f"Statistics: {self.stats}")
 
+        # Build health report
+        failed_domains = {
+            domain: stats for domain, stats in self.domain_stats.items()
+            if stats.get('errors', 0) > 0 and stats.get('articles', 0) == 0
+        }
+
+        health_report = {
+            'stats': self.stats,
+            'sources_attempted': len(self.sources_attempted),
+            'sources_succeeded': len(self.sources_succeeded),
+            'domain_stats': self.domain_stats,
+            'failed_domains': list(failed_domains.keys())[:20],
+            'closed_reason': reason,
+            'timestamp': datetime.now(timezone.utc).isoformat(),
+        }
+
+        # Write health report to file for main pipeline to read
+        import os
+        stats_dir = os.environ.get('CRAWLER_STATS_DIR', 'output')
+        os.makedirs(stats_dir, exist_ok=True)
+        stats_file = os.path.join(stats_dir, 'spider_health.json')
+        try:
+            with open(stats_file, 'w') as f:
+                json.dump(health_report, f, indent=2)
+            self.logger.info(f"Health report written to {stats_file}")
+        except Exception as e:
+            self.logger.error(f"Failed to write health report: {e}")
+
         # Close database session
-        self.db.close()
+        if self._db is not None:
+            self._db.close()
 
         # Log final stats
         logger.info(f"""
-Spider Statistics:
-  URLs Discovered: {self.stats['urls_discovered']}
-  URLs Crawled: {self.stats['urls_crawled']}
-  Articles Extracted: {self.stats['articles_extracted']}
-  Duplicates Skipped: {self.stats['duplicates_skipped']}
-  Errors: {self.stats['errors']}
-  MCP Fallback Attempts: {self.stats['mcp_fallback_attempts']}
-  MCP Fallback Successes: {self.stats['mcp_fallback_successes']}
+=== SPIDER HEALTH REPORT ===
+Sources Attempted: {len(self.sources_attempted)}
+Sources Succeeded: {len(self.sources_succeeded)}
+URLs Discovered: {self.stats['urls_discovered']}
+URLs Crawled: {self.stats['urls_crawled']}
+Articles Extracted: {self.stats['articles_extracted']}
+Duplicates Skipped: {self.stats['duplicates_skipped']}
+Errors: {self.stats['errors']}
+MCP Fallback Attempts: {self.stats['mcp_fallback_attempts']}
+MCP Fallback Successes: {self.stats['mcp_fallback_successes']}
+Failed Domains: {', '.join(list(failed_domains.keys())[:10]) or 'None'}
+============================
 """)

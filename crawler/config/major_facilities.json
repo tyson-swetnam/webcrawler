@@ -205,11 +205,11 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://news.iu.edu/it",
+          "url": "https://news.iu.edu/it/",
           "description": "Indiana University Pervasive Technology Institute - University Research Computing news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2026-02-18T04:01:46.070423+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -304,11 +304,11 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.ornl.gov/news",
+          "url": "https://www.olcf.ornl.gov/olcf-news/",
           "description": "National Center for Computational Sciences (OLCF) - DOE Computing Facility news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 250,
-          "last_verified": "2025-11-05T13:44:26.942832+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [

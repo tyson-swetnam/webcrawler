@@ -34,6 +34,38 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
+def _log_spider_health():
+    """Read and log spider health reports if available."""
+    import json
+    health_file = Path(settings.local_output_dir) / 'spider_health.json'
+    if not health_file.exists():
+        logger.info("No spider health report found")
+        return
+
+    try:
+        with open(health_file) as f:
+            report = json.load(f)
+
+        stats = report.get('stats', {})
+        logger.info("\n" + "=" * 50)
+        logger.info("=== CRAWL HEALTH REPORT ===")
+        logger.info(f"Sources attempted: {report.get('sources_attempted', '?')}")
+        logger.info(f"Sources succeeded: {report.get('sources_succeeded', '?')}")
+        logger.info(f"URLs discovered: {stats.get('urls_discovered', '?')}")
+        logger.info(f"URLs crawled: {stats.get('urls_crawled', '?')}")
+        logger.info(f"Articles extracted: {stats.get('articles_extracted', '?')}")
+        logger.info(f"Duplicates skipped: {stats.get('duplicates_skipped', '?')}")
+        logger.info(f"Errors: {stats.get('errors', '?')}")
+
+        failed = report.get('failed_domains', [])
+        if failed:
+            logger.warning(f"Failed domains ({len(failed)}): {', '.join(failed[:10])}")
+
+        logger.info("=" * 50)
+    except Exception as e:
+        logger.warning(f"Could not read spider health report: {e}")
+
+
 async def main():
     """
     Main orchestration function.
@@ -58,6 +90,9 @@ async def main():
             pool_size=settings.database_pool_size,
             echo=settings.database_echo
         )
+        db_manager = get_db_manager()
+        db_manager.create_tables()
+        logger.info("Database tables verified/created")
 
         # Phase 1+2: Crawl and analyze concurrently
         logger.info("\n📡 Phase 1: Crawling university news sites (parallel spiders + overlapping AI analysis)")
@@ -66,6 +101,9 @@ async def main():
         if not crawl_success:
             logger.error("Crawling phase failed")
             return 1
+
+        # Log spider health reports if available
+        _log_spider_health()
 
         # Phase 3: Final analysis pass — pick up any articles missed during overlap
         logger.info("\n📚 Phase 3: Final analysis pass for remaining articles")
@@ -172,7 +210,7 @@ import sys
 from scrapy.crawler import CrawlerProcess
 from crawler.spiders.university_spider import UniversityNewsSpider
 from crawler.config.settings import settings
-from crawler.db.session import init_db
+from crawler.db.session import init_db, get_db_manager
 
 if __name__ == '__main__':
     init_db(
@@ -180,6 +218,7 @@ if __name__ == '__main__':
         pool_size=settings.database_pool_size,
         echo=settings.database_echo
     )
+    get_db_manager().create_tables()
 
     process = CrawlerProcess({
         'LOG_LEVEL': 'INFO',
@@ -345,6 +384,8 @@ async def run_crawl_with_analysis() -> bool:
         analyzer = MultiAIAnalyzer()
         db_manager = get_db_manager()
         total_analyzed = 0
+        consecutive_errors = 0
+        MAX_CONSECUTIVE_ERRORS = 5
 
         while True:
             try:
@@ -404,10 +445,15 @@ async def run_crawl_with_analysis() -> bool:
 
                     db.commit()
                     total_analyzed += len(batch)
+                    consecutive_errors = 0
                     logger.info(f"Incremental analysis: {total_analyzed} total articles analyzed so far")
 
             except Exception as e:
-                logger.error(f"Incremental analysis batch error: {e}", exc_info=True)
+                consecutive_errors += 1
+                logger.error(f"Incremental analysis batch error ({consecutive_errors}/{MAX_CONSECUTIVE_ERRORS}): {e}", exc_info=True)
+                if consecutive_errors >= MAX_CONSECUTIVE_ERRORS:
+                    logger.error("Incremental analysis giving up after too many consecutive errors")
+                    return
                 if crawl_done.is_set():
                     return
                 await asyncio.sleep(30)
@@ -416,15 +462,20 @@ async def run_crawl_with_analysis() -> bool:
     await asyncio.gather(crawl_all(), incremental_analysis())
 
     # Evaluate crawl results
-    successes = sum(
-        1 for r in crawl_results
-        if not isinstance(r, Exception) and r
-    )
+    successes = 0
+    failed_groups = []
     for (name, _), result in zip(CRAWL_GROUPS.items(), crawl_results):
         if isinstance(result, Exception):
             logger.error(f"[{name}] Spider raised exception: {result}")
-        elif not result:
+            failed_groups.append(name)
+        elif result:
+            successes += 1
+        else:
             logger.warning(f"[{name}] Spider returned failure")
+            failed_groups.append(name)
+
+    if failed_groups:
+        logger.warning(f"Failed spider groups: {', '.join(failed_groups)}")
 
     logger.info(f"Crawling finished: {successes}/{len(CRAWL_GROUPS)} groups succeeded")
     return successes > 0

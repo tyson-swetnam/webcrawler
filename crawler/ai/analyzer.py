@@ -382,8 +382,19 @@ AI_RELATED: [yes/no]"""
             else:
                 consensus_summary = summaries[0][1]
 
+        # If no providers succeeded, return explicitly uncertain results
+        if not summaries:
+            logger.warning("All AI providers failed — returning uncertain consensus")
+            return {
+                'summary': consensus_summary,
+                'is_ai_related': None,
+                'relevance_score': 0,
+                'providers_count': 0,
+                'confidence': 0.0,
+            }
+
         # Determine AI-related consensus (majority vote)
-        is_ai_related = sum(is_ai_votes) > len(is_ai_votes) / 2 if is_ai_votes else False
+        is_ai_related = sum(is_ai_votes) > len(is_ai_votes) / 2
 
         # Average relevance score
         avg_relevance = sum(relevance_scores) / len(relevance_scores) if relevance_scores else 5.0

@@ -393,8 +393,8 @@
     },
     {
       "id": 12,
-      "name": "National Renewable Energy Laboratory",
-      "abbreviation": "NREL",
+      "name": "National Laboratory of the Rockies",
+      "abbreviation": "NLR",
       "affiliated_institution": "U.S. Department of Energy",
       "facility_type": "DOE National Laboratory",
       "location": {
@@ -407,11 +407,11 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.nrel.gov/news/",
-          "description": "National Renewable Energy Laboratory - DOE National Laboratory news and updates (CRITICAL: nrel.gov currently redirects to nlr.gov - domain issue)",
-          "verified": false,
+          "url": "https://www.nlr.gov/news/",
+          "description": "National Laboratory of the Rockies (formerly NREL) - DOE National Laboratory news and updates",
+          "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -506,11 +506,11 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.jlab.org/news",
+          "url": "https://www.jlab.org/pressroom",
           "description": "Thomas Jefferson National Accelerator Facility - DOE National Laboratory news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -603,9 +603,10 @@
           "type": "primary",
           "url": "https://www.battelle.org/insights/newsroom",
           "description": "Battelle Memorial Institute - DOE Lab Operator news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00",
+          "rss_feed": "https://www.battelle.org/feeds/battelle-news"
         }
       ],
       "research_focus": [
@@ -631,11 +632,11 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.y12.doe.gov/news/press-releases",
+          "url": "https://www.y12.doe.gov/news/blog",
           "description": "Y-12 National Security Complex - NNSA Facility news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -663,9 +664,9 @@
           "type": "primary",
           "url": "https://kcnsc.doe.gov/news/newsroom/",
           "description": "Kansas City National Security Campus - NNSA Facility news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -693,9 +694,9 @@
           "type": "primary",
           "url": "https://pantex.energy.gov/news/press-releases",
           "description": "Pantex Plant - NNSA Facility news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -723,9 +724,10 @@
           "type": "primary",
           "url": "https://nnss.gov/news/category/press-releases/",
           "description": "Nevada National Security Site - NNSA Test Site news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00",
+          "rss_feed": "https://nnss.gov/news/category/press-releases/feed/"
         }
       ],
       "research_focus": [
@@ -783,9 +785,9 @@
           "type": "primary",
           "url": "https://www.orau.org/news/releases/index.html",
           "description": "Oak Ridge Associated Universities - DOE Consortium news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -813,9 +815,9 @@
           "type": "primary",
           "url": "https://www.nist.gov/news-events/news",
           "description": "NIST - Commerce Dept. Lab news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -844,9 +846,10 @@
           "type": "primary",
           "url": "https://www.jpl.nasa.gov/news/",
           "description": "NASA JPL - NASA FFRDC news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 250,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00",
+          "rss_feed": "https://www.jpl.nasa.gov/news.rss"
         }
       ],
       "research_focus": [
@@ -873,11 +876,11 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.nasa.gov/ames/ames-research-center-news/",
+          "url": "https://www.nasa.gov/ames/news/",
           "description": "NASA Ames Research Center - NASA Center news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -906,9 +909,9 @@
           "type": "primary",
           "url": "https://www.nasa.gov/latest-goddard-news/",
           "description": "NASA Goddard Space Flight Center - NASA Center news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -936,9 +939,9 @@
           "type": "primary",
           "url": "https://www.nasa.gov/langley/langley-news/",
           "description": "NASA Langley Research Center - NASA Center news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -966,9 +969,9 @@
           "type": "primary",
           "url": "https://www.nasa.gov/glenn-news/",
           "description": "NASA Glenn Research Center - NASA Center news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -994,11 +997,11 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.nrl.navy.mil/News/",
+          "url": "https://www.nrl.navy.mil/Media/News/",
           "description": "U.S. Naval Research Laboratory - Navy Research Lab news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -1027,9 +1030,10 @@
           "type": "primary",
           "url": "https://arl.devcom.army.mil/news/",
           "description": "DEVCOM Army Research Laboratory - Army Research Lab news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00",
+          "rss_feed": "https://arl.devcom.army.mil/news/feed/"
         }
       ],
       "research_focus": [
@@ -1057,9 +1061,9 @@
           "type": "primary",
           "url": "https://www.afrl.af.mil/News/",
           "description": "Air Force Research Laboratory - Air Force Lab news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -1088,9 +1092,9 @@
           "type": "primary",
           "url": "https://www.onr.navy.mil/media-center/news-releases",
           "description": "Office of Naval Research - Navy Research Funder news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -1119,9 +1123,10 @@
           "type": "primary",
           "url": "https://www.darpa.mil/news",
           "description": "DARPA - DoD Research Agency news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 250,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00",
+          "rss_feed": "https://www.darpa.mil/news.xml"
         }
       ],
       "research_focus": [
@@ -1148,11 +1153,11 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.iarpa.gov/",
+          "url": "https://www.iarpa.gov/newsroom",
           "description": "IARPA - Intelligence Agency news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -1181,9 +1186,10 @@
           "type": "primary",
           "url": "https://www.nsa.gov/Press-Room/News-Highlights/",
           "description": "NSA Research Directorate - Intelligence Agency news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00",
+          "rss_feed": "https://www.nsa.gov/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=1282&max=20"
         }
       ],
       "research_focus": [
@@ -1210,11 +1216,11 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.noaa.gov/news",
+          "url": "https://www.noaa.gov/news-release",
           "description": "NOAA Center for AI - Commerce Dept. news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -1240,11 +1246,11 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.dhs.gov/science-and-technology",
+          "url": "https://www.dhs.gov/science-and-technology/newsroom",
           "description": "DHS S&T Directorate - DHS Research news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -1270,11 +1276,11 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.nsf.gov/news",
+          "url": "https://www.nsf.gov/news/",
           "description": "National Science Foundation - Federal Funder news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -1303,9 +1309,9 @@
           "type": "primary",
           "url": "https://www.mitre.org/news-insights",
           "description": "MITRE Corporation - FFRDC news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -1332,11 +1338,11 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://aerospace.org/press-releases",
+          "url": "https://aerospace.org/news",
           "description": "The Aerospace Corporation - FFRDC news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -1364,9 +1370,10 @@
           "type": "primary",
           "url": "https://www.rand.org/news/press.html",
           "description": "RAND Corporation - FFRDC news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00",
+          "rss_feed": "https://www.rand.org/news/press.xml"
         }
       ],
       "research_focus": [
@@ -1395,9 +1402,9 @@
           "type": "primary",
           "url": "https://www.ida.org/en/about-ida/ida-in-the-news",
           "description": "Institute for Defense Analyses - FFRDC news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -1425,9 +1432,9 @@
           "type": "primary",
           "url": "https://www.ll.mit.edu/news",
           "description": "MIT Lincoln Laboratory - FFRDC news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 250,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -1454,11 +1461,11 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.jhuapl.edu/news/news-releases",
+          "url": "https://www.jhuapl.edu/news",
           "description": "Johns Hopkins APL - FFRDC news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 250,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -1487,9 +1494,9 @@
           "type": "primary",
           "url": "https://www.sei.cmu.edu/news-events/",
           "description": "CMU Software Engineering Institute - FFRDC news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -1518,9 +1525,9 @@
           "type": "primary",
           "url": "https://www.cna.org/our-media/press-releases/",
           "description": "Center for Naval Analyses - FFRDC news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -1546,11 +1553,11 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.draper.com/media-center/news-releases",
+          "url": "https://www.draper.com/news",
           "description": "Draper Laboratory - FFRDC-like news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -1577,11 +1584,11 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.iqt.org/blog/",
+          "url": "https://www.iqt.org/knowledge-hub?content-type=Blog",
           "description": "In-Q-Tel - CIA Venture Capital news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -1607,11 +1614,11 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.sri.com/about-us/press-room/",
+          "url": "https://www.sri.com/newsroom/",
           "description": "SRI International - Nonprofit R&D news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -1638,11 +1645,12 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://aiinstitutes.org/",
+          "url": "https://aiinstitutes.org/news/",
           "description": "NSF AI Institutes - NSF Network news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00",
+          "rss_feed": "https://aiinstitutes.org/news/feed/"
         }
       ],
       "research_focus": [
@@ -1668,11 +1676,11 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.nationalacademies.org/newsroom",
+          "url": "https://www.nationalacademies.org/news",
           "description": "National Academies - Advisory Body news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [
@@ -1698,11 +1706,11 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.arlis.umd.edu/",
+          "url": "https://www.arlis.umd.edu/about/news-events",
           "description": "UMD ARLIS - UARC news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
       "research_focus": [

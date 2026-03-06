@@ -20,6 +20,12 @@ git pull origin website || echo "Warning: git pull failed, continuing anyway..."
 # Run the crawler
 echo "Running crawler at $DATE..."
 python -m crawler
+CRAWLER_EXIT=$?
+
+if [ $CRAWLER_EXIT -ne 0 ]; then
+    echo "Error: Crawler failed with exit code $CRAWLER_EXIT at $DATE"
+    exit $CRAWLER_EXIT
+fi
 
 # Check if there are changes to commit
 if [[ -n $(git status --porcelain) ]]; then
