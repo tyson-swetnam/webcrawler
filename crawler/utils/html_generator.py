@@ -977,10 +977,14 @@ class HTMLReportGenerator:
                 '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
                 '<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">')
 
-    def _render_top_news_section(self, articles: List[Dict]) -> str:
-        """Render the Top News editorial picks section."""
+    def _render_top_news_section(self, articles: List[Dict]) -> tuple:
+        """Render the Top News editorial picks section.
+
+        Returns:
+            Tuple of (html_string, matched_count). HTML is empty string if no picks match.
+        """
         if not self.editorial_picks:
-            return ''
+            return '', 0
 
         # Build article_id -> article lookup
         article_map = {}
@@ -1026,13 +1030,14 @@ class HTMLReportGenerator:
             )
 
         if not rows:
-            return ''
+            return '', 0
 
-        return (
+        html = (
             '<div id="top-news-section" class="top-news-section active">'
             + ''.join(rows)
             + '</div>'
         )
+        return html, len(rows)
 
     def _render_main_page(self, articles: List[Dict], date: datetime, is_archive_page: bool = False) -> str:
         """Render main page with tabbed dense-list layout"""
@@ -1083,8 +1088,10 @@ class HTMLReportGenerator:
             f'</div>'
         )
 
+        # Render Top News section first to get matched count
+        top_news_html, top_count = self._render_top_news_section(annotated) if not is_archive_page else ('', 0)
+
         # Tab bar
-        top_count = len(self.editorial_picks) if not is_archive_page else 0
         tab_labels = []
         if top_count > 0:
             tab_labels.append(('top', 'Top News', top_count))
@@ -1206,9 +1213,6 @@ class HTMLReportGenerator:
         # Hide article list initially when Top News is the default tab
         list_hidden = ' style="display:none"' if default_tab == 'top' else ''
         list_html = f'<div class="article-list"{list_hidden}>' + ''.join(article_rows) + show_more_html + '</div>'
-
-        # Render Top News section (empty string if no picks)
-        top_news_html = self._render_top_news_section(annotated)
 
         if not articles:
             articles_html = '<p class="no-results">No AI-related articles found for this date.</p>'
