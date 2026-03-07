@@ -4,407 +4,430 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How It Works - AI University News</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F393;</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+    
+        :root {
+            --color-bg: #ffffff;
+            --color-surface: #f8f9fa;
+            --color-surface-alt: #f1f3f5;
+            --color-surface-hover: #e9ecef;
+            --color-border: #dee2e6;
+            --color-text: #212529;
+            --color-text-secondary: #495057;
+            --color-text-muted: #868e96;
+            --color-text-faint: #adb5bd;
+            --color-link: #1a1a2e;
+            --color-link-visited: #3d3d5c;
+            --color-focus: #4dabf7;
+            --color-highlight-bg: #f8f9fa;
+
+            --color-peer: #7c3aed;
+            --color-r1: #2563eb;
+            --color-hpc: #d97706;
+            --color-lab: #059669;
+            --color-global: #dc2626;
+
+            --radius-sm: 4px;
+            --radius-md: 6px;
+            --transition-fast: 150ms ease;
+
+            --space-xs: 4px;
+            --space-sm: 8px;
+            --space-md: 16px;
+            --space-lg: 24px;
+            --space-xl: 32px;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: Georgia, 'Times New Roman', serif;
-            background-color: #ffffff;
-            color: #000000;
-            margin: 0;
-            padding: 20px 40px;
-            line-height: 1.6;
-        }
-
-        .header {
-            text-align: center;
-            border-bottom: 3px solid #000;
-            padding-bottom: 15px;
-            margin-bottom: 25px;
-        }
-
-        .header h1 {
-            font-size: 42px;
-            font-weight: bold;
-            letter-spacing: -1px;
-            margin-bottom: 5px;
-        }
-
-        .header .tagline {
-            font-size: 14px;
-            color: #666;
-            font-style: italic;
-        }
-
-        .nav {
-            text-align: center;
-            margin-bottom: 30px;
-            padding: 10px;
-            background-color: #f5f5f5;
-            border: 1px solid #ddd;
-        }
-
-        .nav a {
-            color: #cc0000;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 15px;
-            font-size: 14px;
-        }
-
-        .nav a:hover {
-            text-decoration: underline;
-        }
-
-        .content {
+            font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-text);
             max-width: 1200px;
             margin: 0 auto;
-        }
-
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .section h2 {
-            font-size: 28px;
-            color: #cc0000;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #cc0000;
-        }
-
-        .section h3 {
-            font-size: 20px;
-            color: #333;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-
-        .section p {
-            margin-bottom: 15px;
-            font-size: 16px;
-        }
-
-        .section ul, .section ol {
-            margin-left: 30px;
-            margin-bottom: 15px;
-        }
-
-        .section li {
-            margin-bottom: 8px;
-            font-size: 16px;
-        }
-
-        .highlight-box {
-            background-color: #f9f9f9;
-            border-left: 4px solid #cc0000;
-            padding: 15px 20px;
-            margin: 20px 0;
-        }
-
-        .university-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .university-card {
-            background-color: #fafafa;
-            border: 1px solid #ddd;
-            padding: 12px 15px;
-            border-radius: 4px;
-        }
-
-        .university-card strong {
-            color: #000;
-            font-size: 15px;
-        }
-
-        .university-card .location {
-            color: #666;
-            font-size: 13px;
-            font-style: italic;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-
-        .stat-box {
-            background-color: #f0f0f0;
-            padding: 20px;
-            text-align: center;
-            border-radius: 8px;
-            border: 2px solid #ddd;
-        }
-
-        .stat-box .number {
-            font-size: 36px;
-            font-weight: bold;
-            color: #cc0000;
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .stat-box .label {
+            padding: 0 var(--space-lg);
+            line-height: 1.5;
             font-size: 14px;
-            color: #666;
         }
 
-        .github-link {
-            display: inline-block;
-            background-color: #24292e;
-            color: white;
-            padding: 12px 24px;
+        :focus-visible {
+            outline: 2px solid var(--color-focus);
+            outline-offset: 2px;
+        }
+        a:focus:not(:focus-visible) { outline: none; }
+
+        /* ── Compact Header ── */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--color-border);
+            margin-bottom: var(--space-md);
+            min-height: 48px;
+        }
+        .header h1 {
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--color-text);
+            white-space: nowrap;
+        }
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            font-size: 13px;
+            color: var(--color-text-muted);
+        }
+        .header-meta {
+            white-space: nowrap;
+        }
+        .header-nav a {
+            color: var(--color-text-muted);
             text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            margin-top: 10px;
+            font-size: 13px;
+            font-weight: 500;
+            transition: color var(--transition-fast);
+        }
+        .header-nav a:hover { color: var(--color-text); }
+        .header-nav a.active {
+            color: var(--color-text);
+            font-weight: 600;
         }
 
-        .github-link:hover {
-            background-color: #000;
-        }
-
+        /* ── Footer ── */
         .footer {
             text-align: center;
-            margin-top: 60px;
-            padding-top: 20px;
-            border-top: 2px solid #000;
+            margin-top: var(--space-xl);
+            padding: var(--space-md) 0;
+            border-top: 1px solid var(--color-border);
             font-size: 12px;
-            color: #666;
+            color: var(--color-text-muted);
+        }
+        .footer a {
+            color: var(--color-text-muted);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        .footer a:hover { color: var(--color-text); }
+
+        .no-results {
+            text-align: center;
+            font-size: 15px;
+            color: var(--color-text-muted);
+            margin: 60px 0;
         }
 
-        .footer a {
-            color: #0000cc;
+        @media (max-width: 600px) {
+            body { padding: 0 var(--space-md); }
+            .header { flex-direction: column; gap: var(--space-sm); align-items: flex-start; }
+            .header-right { flex-wrap: wrap; }
+        }
+        
+    
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        .content h2 {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--color-text);
+            margin: 30px 0 15px 0;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--color-border);
+        }
+        .content h3 {
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--color-text-secondary);
+            margin: 20px 0 10px 0;
+        }
+        .content p {
+            margin-bottom: 15px;
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--color-text-secondary);
+        }
+        .content ul, .content ol {
+            margin: 15px 0 15px 30px;
+        }
+        .content li {
+            margin-bottom: 10px;
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--color-text-secondary);
+        }
+        code {
+            background-color: var(--color-surface);
+            padding: 2px 6px;
+            border-radius: var(--radius-sm);
+            font-family: 'DM Mono', 'Courier New', monospace;
+            font-size: 13px;
+        }
+        .highlight-box {
+            background-color: var(--color-highlight-bg);
+            border-left: 3px solid var(--color-text-muted);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+        }
+        .sources-section { margin: 20px 0; }
+        details {
+            margin: 15px 0;
+            padding: 15px;
+            background-color: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+        }
+        summary {
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 10px;
+            background-color: var(--color-surface);
+            border-radius: var(--radius-sm);
+            user-select: none;
+            transition: background-color var(--transition-fast);
+        }
+        summary:hover { background-color: var(--color-surface-hover); }
+        .source-list {
+            margin: 15px 0 0 20px;
+            list-style-type: disc;
+            column-count: 3;
+            column-gap: 20px;
+        }
+        .source-list li {
+            margin-bottom: 8px;
+            break-inside: avoid;
+        }
+        .source-list a {
+            color: var(--color-link);
             text-decoration: none;
         }
-
-        /* Tablet: Adjust grid */
+        .source-list a:hover {
+            text-decoration: underline;
+        }
         @media (max-width: 1200px) {
-            .university-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            }
+            .source-list { column-count: 2; }
         }
-
-        /* Mobile: Stack everything */
         @media (max-width: 768px) {
-            body { padding: 15px; }
-            .header h1 { font-size: 32px; }
-            .section h2 { font-size: 24px; }
-            .university-grid {
-                grid-template-columns: 1fr;
-            }
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
+            .source-list { column-count: 1; }
         }
-
-        @media (max-width: 480px) {
-            body { padding: 10px; }
-            .header h1 { font-size: 24px; }
-            .section h2 { font-size: 20px; }
-            .nav a { margin: 0 8px; font-size: 13px; }
-        }
+        
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>AI UNIVERSITY NEWS</h1>
-        <div class="tagline">Latest AI Research & Developments from Universities and Research Facilities</div>
-    </div>
-
-    <div class="nav">
-        <a href="index.html">TODAY</a>
-        <a href="archive/index.html">ARCHIVE</a>
-        <a href="how_it_works.html">HOW IT WORKS</a>
+        <h1>AI University News</h1>
+        <div class="header-right">
+            <span class="header-meta">How It Works</span>
+            <span class="header-nav">
+                <a href="index.html">Today</a>
+                &middot;
+                <a href="archive/index.html">Archive</a>
+                &middot;
+                <a href="how_it_works.html" class="active">How It Works</a>
+            </span>
+        </div>
     </div>
 
     <div class="content">
-        <div class="section">
-            <h2>How It Works</h2>
+        <h2>Overview</h2>
+        <p>
+            AI University News is an automated web crawler that monitors press releases and news articles from
+            top universities, national laboratories, and research institutions worldwide, focusing specifically on
+            AI-related research and developments. The system runs daily to discover, analyze, and report the latest
+            AI breakthroughs from academia and research labs.
+        </p>
 
-            <div class="highlight-box">
-                <p><strong>AI University News Crawler</strong> is a production-grade Python application that automatically monitors university news sites for AI-related research announcements and developments. The system runs daily to deliver intelligent summaries of the latest artificial intelligence breakthroughs from leading research institutions.</p>
-            </div>
+        <div class="highlight-box">
+            <strong>What makes this unique:</strong> Unlike general news aggregators, this crawler specifically
+            targets university press offices and applies multi-AI analysis to identify truly significant AI research,
+            filtering out noise and delivering high-quality, relevant content.
+        </div>
 
-            <h3>The Crawling Process</h3>
-            <p>The crawler operates through a sophisticated six-phase pipeline:</p>
+        <h2>How the Crawler Works</h2>
 
-            <ol>
-                <li><strong>Discovery & Crawling:</strong> Using Scrapy, the system visits designated university news pages and identifies new articles from press releases and news feeds.</li>
+        <h3>Phase 1: Discovery &amp; Crawling</h3>
+        <p>
+            The crawler visits official news and press release pages from:
+        </p>
+        <ul>
+            <li><strong>Peer Institutions:</strong> Top-tier research universities (MIT, Stanford, Carnegie Mellon, etc.)</li>
+            <li><strong>R1 Universities:</strong> All Carnegie R1 research universities across the United States</li>
+            <li><strong>HPC &amp; Research Centers:</strong> NSF supercomputing centers and DOE computing facilities (TACC, SDSC, NERSC, etc.)</li>
+            <li><strong>National Laboratories:</strong> DOE labs, federal research labs, and FFRDCs (Argonne, DARPA, MITRE, etc.)</li>
+            <li><strong>Global Institutions:</strong> Leading international universities and research organizations (Oxford, ETH Zurich, Tsinghua, etc.)</li>
+        </ul>
+        <p>
+            Using the Scrapy framework, the system respectfully crawls these sites following robots.txt rules,
+            implementing politeness delays between requests, and using proper identification.
+        </p>
 
-                <li><strong>Content Extraction:</strong> Trafilatura extracts structured content from web pages with over 95% accuracy, capturing article text, metadata, publication dates, and authors.</li>
+        <h3>Phase 2: Content Extraction</h3>
+        <p>
+            When new articles are discovered, the crawler uses Trafilatura (a state-of-the-art content extraction
+            library) to extract clean article text, metadata, publication dates, and author information with
+            95%+ accuracy.
+        </p>
 
-                <li><strong>Deduplication:</strong> A PostgreSQL database combined with Bloom filters and SHA-256 hashing identifies truly new content, preventing duplicate articles from being processed.</li>
+        <h3>Phase 3: Deduplication</h3>
+        <p>
+            The system maintains a PostgreSQL database tracking every URL and content hash to ensure:
+        </p>
+        <ul>
+            <li>No duplicate URLs are processed</li>
+            <li>Updated articles are detected through content hash comparison</li>
+            <li>Fast O(1) lookups using SHA-256 hashing</li>
+        </ul>
 
-                <li><strong>AI Analysis:</strong> Articles are analyzed in parallel using multiple AI APIs:
-                    <ul>
-                        <li><strong>Claude Sonnet 4.5</strong> (Anthropic) - Primary analysis with highest quality summaries</li>
-                        <li><strong>GPT-4</strong> (OpenAI) - Secondary analysis and validation</li>
-                        <li><strong>Gemini 2.5 Flash</strong> (Google) - Initial AI-relevance filtering for cost optimization</li>
+        <h3>Phase 4: AI Analysis</h3>
+        <p>
+            This is where the magic happens. Each new article is analyzed by Claude (Sonnet 4.6),
+            Anthropic's frontier model for deep research understanding. Articles are classified by
+            relevance, key topics are extracted, summaries are generated, and confidence scores
+            are assigned.
+        </p>
+
+        <h3>Phase 5: Categorization &amp; Organization</h3>
+        <p>
+            Articles are automatically organized into five categories:
+        </p>
+        <ul>
+            <li><strong>Peer Institutions:</strong> Elite research universities with the highest AI research output</li>
+            <li><strong>R1 Institutions:</strong> All US Carnegie R1 research universities</li>
+            <li><strong>HPC &amp; Research Centers:</strong> NSF supercomputing centers and DOE computing facilities</li>
+            <li><strong>National Laboratories:</strong> DOE national labs, federal government research labs, and FFRDCs</li>
+            <li><strong>Global Institutions:</strong> Leading international universities and research organizations</li>
+        </ul>
+
+        <h3>Phase 6: Publishing</h3>
+        <p>
+            The crawler automatically generates this website with:
+        </p>
+        <ul>
+            <li><strong>Today's Page:</strong> Latest articles from the past 3 days</li>
+            <li><strong>Archive:</strong> Historical daily reports accessible by date</li>
+            <li><strong>Five-Column Layout:</strong> Easy browsing by institution category</li>
+        </ul>
+        <p>
+            Results can also be delivered via Slack webhooks and email notifications for real-time updates.
+        </p>
+
+        <h2>Technical Architecture</h2>
+
+        <h3>Technology Stack</h3>
+        <ul>
+            <li><strong>Language:</strong> Python 3.11+</li>
+            <li><strong>Crawling:</strong> Scrapy 2.11+ with custom spiders</li>
+            <li><strong>Content Extraction:</strong> Trafilatura 2.0+ with htmldate</li>
+            <li><strong>Database:</strong> PostgreSQL 15+ for metadata and tracking</li>
+            <li><strong>AI APIs:</strong> Anthropic Claude (Sonnet 4.6)</li>
+            <li><strong>Deployment:</strong> Systemd service with daily automated runs</li>
+        </ul>
+
+        <h3>Ethical Crawling</h3>
+        <p>
+            This crawler follows web crawling best practices:
+        </p>
+        <ul>
+            <li>Always respects robots.txt directives</li>
+            <li>Implements per-domain rate limiting (1 request/second default)</li>
+            <li>Uses descriptive User-Agent with contact information</li>
+            <li>Implements exponential backoff for failed requests</li>
+            <li>Never attempts to bypass access controls or paywalls</li>
+        </ul>
+
+        <h2>Cost &amp; Efficiency</h2>
+        <p>
+            The system is designed to be cost-effective:
+        </p>
+        <ul>
+            <li><strong>Estimated monthly cost:</strong> ~$36/month for AI API usage (100 articles/day)</li>
+            <li><strong>Optimization:</strong> Claude Sonnet 4.6 handles all analysis in a single pass, minimizing redundant API calls</li>
+            <li><strong>Caching:</strong> All AI responses stored to avoid reprocessing</li>
+            <li><strong>Smart limits:</strong> Token limits and max articles per run prevent runaway costs</li>
+        </ul>
+
+        <h2>Source Code</h2>
+        <p>
+            This is an open-source project. The complete source code, documentation, and deployment guides
+            are available on GitHub. The system is designed as a standalone Linux application that can be
+            deployed on any server with Python 3.11+ and PostgreSQL.
+        </p>
+
+        
+        <h2>Complete Source List</h2>
+        <p>
+            This crawler monitors 380 sources across five categories:
+        </p>
+
+        <div class="sources-section">
+            
+                <details>
+                    <summary><strong>Peer Institutions</strong> (27 sources)</summary>
+                    <ul class="source-list">
+                        <li><a href="https://newsroom.asu.edu/" target="_blank" rel="noopener">Arizona State University</a></li><li><a href="https://news.auburn.edu/" target="_blank" rel="noopener">Auburn University</a></li><li><a href="https://news.iu.edu/" target="_blank" rel="noopener">Indiana University</a></li><li><a href="https://www.news.iastate.edu/" target="_blank" rel="noopener">Iowa State University</a></li><li><a href="https://msutoday.msu.edu/" target="_blank" rel="noopener">Michigan State University</a></li><li><a href="https://news.ncsu.edu/" target="_blank" rel="noopener">North Carolina State University</a></li><li><a href="https://www.psu.edu/news/" target="_blank" rel="noopener">Penn State University</a></li><li><a href="https://news.rutgers.edu/" target="_blank" rel="noopener">Rutgers University</a></li><li><a href="https://www.ttu.edu/now/" target="_blank" rel="noopener">Texas Tech University</a></li><li><a href="https://news.arizona.edu/" target="_blank" rel="noopener">The University of Arizona</a></li><li><a href="https://www.colorado.edu/today/" target="_blank" rel="noopener">University of Colorado Boulder</a></li><li><a href="https://today.uconn.edu/" target="_blank" rel="noopener">University of Connecticut</a></li><li><a href="https://news.ku.edu/" target="_blank" rel="noopener">University of Kansas</a></li><li><a href="https://uknow.uky.edu/" target="_blank" rel="noopener">University of Kentucky</a></li><li><a href="https://umdrightnow.umd.edu/" target="_blank" rel="noopener">University of Maryland</a></li><li><a href="https://www.umass.edu/news/" target="_blank" rel="noopener">University of Massachusetts Amherst</a></li><li><a href="https://twin-cities.umn.edu/news" target="_blank" rel="noopener">University of Minnesota</a></li><li><a href="https://munews.missouri.edu/" target="_blank" rel="noopener">University of Missouri</a></li><li><a href="https://www.unlv.edu/news/" target="_blank" rel="noopener">University of Nevada, Las Vegas</a></li><li><a href="https://news.unm.edu/" target="_blank" rel="noopener">University of New Mexico</a></li><li><a href="https://www.ou.edu/news" target="_blank" rel="noopener">University of Oklahoma</a></li><li><a href="https://www.pittwire.pitt.edu/" target="_blank" rel="noopener">University of Pittsburgh</a></li><li><a href="https://sc.edu/uofsc/" target="_blank" rel="noopener">University of South Carolina</a></li><li><a href="https://news.utk.edu/" target="_blank" rel="noopener">University of Tennessee</a></li><li><a href="https://attheu.utah.edu/" target="_blank" rel="noopener">University of Utah</a></li><li><a href="https://www.washington.edu/news/" target="_blank" rel="noopener">University of Washington</a></li><li><a href="https://vtnews.vt.edu/" target="_blank" rel="noopener">Virginia Tech</a></li>
                     </ul>
-                </li>
-
-                <li><strong>Reporting:</strong> The system generates comprehensive summaries and delivers them via multiple channels including this web interface, Slack webhooks, and email notifications.</li>
-
-                <li><strong>Persistence:</strong> All results are stored in a PostgreSQL database with complete logging for auditing and historical analysis.</li>
-            </ol>
-
-            <h3>Web Crawling Ethics</h3>
-            <p>This crawler follows strict ethical guidelines:</p>
-            <ul>
-                <li>Always respects <code>robots.txt</code> directives</li>
-                <li>Implements per-domain rate limiting (default: 1 request per second)</li>
-                <li>Uses descriptive User-Agent strings with contact information</li>
-                <li>Employs exponential backoff for failed requests</li>
-                <li>Stores crawl delays to ensure politeness</li>
-            </ul>
+                </details>
+            
+            
+                <details>
+                    <summary><strong>R1 Universities</strong> (187 sources)</summary>
+                    <ul class="source-list">
+                        <li><a href="https://www.american.edu/news" target="_blank" rel="noopener">American University</a></li><li><a href="https://news.asu.edu" target="_blank" rel="noopener">Arizona State University Campus Immersion</a></li><li><a href="https://ocm.auburn.edu/newsroom/" target="_blank" rel="noopener">Auburn University</a></li><li><a href="https://www.bcm.edu/news" target="_blank" rel="noopener">Baylor College of Medicine</a></li><li><a href="https://news.web.baylor.edu/" target="_blank" rel="noopener">Baylor University</a></li><li><a href="https://www.binghamton.edu/news/" target="_blank" rel="noopener">Binghamton University</a></li><li><a href="https://www.bc.edu/bc-web/bcnews.html" target="_blank" rel="noopener">Boston College</a></li><li><a href="https://www.bu.edu/today/" target="_blank" rel="noopener">Boston University</a></li><li><a href="https://www.brandeis.edu/stories/" target="_blank" rel="noopener">Brandeis University</a></li><li><a href="https://news.byu.edu/" target="_blank" rel="noopener">Brigham Young University</a></li><li><a href="https://www.brown.edu/news" target="_blank" rel="noopener">Brown University</a></li><li><a href="https://www.gc.cuny.edu/news" target="_blank" rel="noopener">CUNY Graduate School and University Center</a></li><li><a href="https://news.caltech.edu" target="_blank" rel="noopener">California Institute of Technology</a></li><li><a href="https://today.cmu.edu" target="_blank" rel="noopener">Carnegie Mellon University</a></li><li><a href="https://thedaily.case.edu/" target="_blank" rel="noopener">Case Western Reserve University</a></li><li><a href="https://news.clemson.edu/" target="_blank" rel="noopener">Clemson University</a></li><li><a href="https://www.minesnewsroom.com" target="_blank" rel="noopener">Colorado School of Mines</a></li><li><a href="https://source.colostate.edu" target="_blank" rel="noopener">Colorado State University-Fort Collins</a></li><li><a href="https://news.columbia.edu/" target="_blank" rel="noopener">Columbia University in the City of New York</a></li><li><a href="https://www.cornell.edu/news" target="_blank" rel="noopener">Cornell University</a></li><li><a href="https://home.dartmouth.edu/news" target="_blank" rel="noopener">Dartmouth College</a></li><li><a href="https://drexel.edu/news" target="_blank" rel="noopener">Drexel University</a></li><li><a href="https://news.duke.edu" target="_blank" rel="noopener">Duke University</a></li><li><a href="https://news.ecu.edu/" target="_blank" rel="noopener">East Carolina University</a></li><li><a href="https://news.emory.edu" target="_blank" rel="noopener">Emory University</a></li><li><a href="https://www.fau.edu/newsdesk" target="_blank" rel="noopener">Florida Atlantic University</a></li><li><a href="https://news.fiu.edu" target="_blank" rel="noopener">Florida International University</a></li><li><a href="https://news.fsu.edu" target="_blank" rel="noopener">Florida State University</a></li><li><a href="https://www.gmu.edu/news" target="_blank" rel="noopener">George Mason University</a></li><li><a href="https://gwtoday.gwu.edu" target="_blank" rel="noopener">George Washington University</a></li><li><a href="https://www.georgetown.edu/news/" target="_blank" rel="noopener">Georgetown University</a></li><li><a href="https://news.gatech.edu" target="_blank" rel="noopener">Georgia Institute of Technology-Main Campus</a></li><li><a href="https://news.gsu.edu" target="_blank" rel="noopener">Georgia State University</a></li><li><a href="https://news.harvard.edu" target="_blank" rel="noopener">Harvard University</a></li><li><a href="https://thedig.howard.edu" target="_blank" rel="noopener">Howard University</a></li><li><a href="https://news.iu.edu" target="_blank" rel="noopener">Indiana University-Bloomington</a></li><li><a href="https://indianapolis.iu.edu/about/news.html" target="_blank" rel="noopener">Indiana University–Purdue University-Indianapolis</a></li><li><a href="https://www.news.iastate.edu/" target="_blank" rel="noopener">Iowa State University</a></li><li><a href="https://hub.jhu.edu" target="_blank" rel="noopener">Johns Hopkins University</a></li><li><a href="https://www.k-state.edu/news/" target="_blank" rel="noopener">Kansas State University</a></li><li><a href="https://www.kent.edu/today" target="_blank" rel="noopener">Kent State University at Kent</a></li><li><a href="https://news.lehigh.edu/" target="_blank" rel="noopener">Lehigh University</a></li><li><a href="https://www.lsu.edu/mediacenter/news/index.php" target="_blank" rel="noopener">Louisiana State University and Agricultural & Mechanical College</a></li><li><a href="https://news.luc.edu" target="_blank" rel="noopener">Loyola University Chicago</a></li><li><a href="https://www.mit.edu/news" target="_blank" rel="noopener">Massachusetts Institute of Technology</a></li><li><a href="https://web.musc.edu/about/news-center" target="_blank" rel="noopener">Medical University of South Carolina</a></li><li><a href="https://msutoday.msu.edu" target="_blank" rel="noopener">Michigan State University</a></li><li><a href="https://www.mtu.edu/news/" target="_blank" rel="noopener">Michigan Technological University</a></li><li><a href="https://www.msstate.edu/newsroom" target="_blank" rel="noopener">Mississippi State University</a></li><li><a href="https://news.mst.edu/" target="_blank" rel="noopener">Missouri University of Science and Technology</a></li><li><a href="https://www.montana.edu/news/" target="_blank" rel="noopener">Montana State University</a></li><li><a href="https://news.njit.edu/" target="_blank" rel="noopener">New Jersey Institute of Technology</a></li><li><a href="https://newsroom.nmsu.edu/" target="_blank" rel="noopener">New Mexico State University-Main Campus</a></li><li><a href="https://www.nyu.edu/about/news-publications/news.html" target="_blank" rel="noopener">New York University</a></li><li><a href="https://news.ncsu.edu" target="_blank" rel="noopener">North Carolina State University at Raleigh</a></li><li><a href="https://www.ndsu.edu/news" target="_blank" rel="noopener">North Dakota State University-Main Campus</a></li><li><a href="https://news.northeastern.edu/" target="_blank" rel="noopener">Northeastern University</a></li><li><a href="https://news.nau.edu" target="_blank" rel="noopener">Northern Arizona University</a></li><li><a href="https://www.northwestern.edu/news" target="_blank" rel="noopener">Northwestern University</a></li><li><a href="https://news.nova.edu" target="_blank" rel="noopener">Nova Southeastern University</a></li><li><a href="https://news.osu.edu/" target="_blank" rel="noopener">Ohio State University-Main Campus</a></li><li><a href="https://www.ohio.edu/news" target="_blank" rel="noopener">Ohio University-Main Campus</a></li><li><a href="https://news.okstate.edu" target="_blank" rel="noopener">Oklahoma State University-Main Campus</a></li><li><a href="https://www.odu.edu/news" target="_blank" rel="noopener">Old Dominion University</a></li><li><a href="https://news.oregonstate.edu/" target="_blank" rel="noopener">Oregon State University</a></li><li><a href="https://www.psu.edu/news" target="_blank" rel="noopener">Pennsylvania State University-Main Campus</a></li><li><a href="https://princeton.edu/news" target="_blank" rel="noopener">Princeton University</a></li><li><a href="https://www.purdue.edu/newsroom/" target="_blank" rel="noopener">Purdue University-Main Campus</a></li><li><a href="https://news.rpi.edu/" target="_blank" rel="noopener">Rensselaer Polytechnic Institute</a></li><li><a href="https://news.rice.edu" target="_blank" rel="noopener">Rice University</a></li><li><a href="https://www.rutgers.edu/news" target="_blank" rel="noopener">Rutgers University-New Brunswick</a></li><li><a href="https://www.slu.edu/news/" target="_blank" rel="noopener">Saint Louis University</a></li><li><a href="https://www.sdsu.edu/news" target="_blank" rel="noopener">San Diego State University</a></li><li><a href="https://news.siu.edu" target="_blank" rel="noopener">Southern Illinois University-Carbondale</a></li><li><a href="https://www.smu.edu/news" target="_blank" rel="noopener">Southern Methodist University</a></li><li><a href="https://news.stanford.edu" target="_blank" rel="noopener">Stanford University</a></li><li><a href="https://news.stonybrook.edu/" target="_blank" rel="noopener">Stony Brook University</a></li><li><a href="https://news.syr.edu/" target="_blank" rel="noopener">Syracuse University</a></li><li><a href="https://news.temple.edu/" target="_blank" rel="noopener">Temple University</a></li><li><a href="https://stories.tamu.edu/" target="_blank" rel="noopener">Texas A & M University-College Station</a></li><li><a href="https://www.ttu.edu/now/" target="_blank" rel="noopener">Texas Tech University</a></li><li><a href="https://communications.catholic.edu/news/" target="_blank" rel="noopener">The Catholic University of America</a></li><li><a href="https://news.ua.edu" target="_blank" rel="noopener">The University of Alabama</a></li><li><a href="https://www.umt.edu/news/" target="_blank" rel="noopener">The University of Montana</a></li><li><a href="https://news.uthsc.edu" target="_blank" rel="noopener">The University of Tennessee Health Science Center</a></li><li><a href="https://news.utk.edu" target="_blank" rel="noopener">The University of Tennessee-Knoxville</a></li><li><a href="https://www.uthouston.edu/news" target="_blank" rel="noopener">The University of Texas Health Science Center at Houston</a></li><li><a href="https://news.uthscsa.edu" target="_blank" rel="noopener">The University of Texas Health Science Center at San Antonio</a></li><li><a href="https://www.uta.edu/news" target="_blank" rel="noopener">The University of Texas at Arlington</a></li><li><a href="https://news.utexas.edu" target="_blank" rel="noopener">The University of Texas at Austin</a></li><li><a href="https://www.utdallas.edu/news" target="_blank" rel="noopener">The University of Texas at Dallas</a></li><li><a href="https://www.utep.edu/newsfeed/" target="_blank" rel="noopener">The University of Texas at El Paso</a></li><li><a href="https://www.utsa.edu/news" target="_blank" rel="noopener">The University of Texas at San Antonio</a></li><li><a href="https://now.tufts.edu/" target="_blank" rel="noopener">Tufts University</a></li><li><a href="https://news.tulane.edu/" target="_blank" rel="noopener">Tulane University of Louisiana</a></li><li><a href="https://www.albany.edu/news-center" target="_blank" rel="noopener">University at Albany</a></li><li><a href="https://www.buffalo.edu/news.html" target="_blank" rel="noopener">University at Buffalo</a></li><li><a href="https://www.uab.edu/news" target="_blank" rel="noopener">University of Alabama at Birmingham</a></li><li><a href="https://news.arizona.edu" target="_blank" rel="noopener">University of Arizona</a></li><li><a href="https://news.uark.edu" target="_blank" rel="noopener">University of Arkansas</a></li><li><a href="https://news.berkeley.edu" target="_blank" rel="noopener">University of California-Berkeley</a></li><li><a href="https://www.ucdavis.edu/news" target="_blank" rel="noopener">University of California-Davis</a></li><li><a href="https://news.uci.edu" target="_blank" rel="noopener">University of California-Irvine</a></li><li><a href="https://newsroom.ucla.edu" target="_blank" rel="noopener">University of California-Los Angeles</a></li><li><a href="https://news.ucmerced.edu" target="_blank" rel="noopener">University of California-Merced</a></li><li><a href="https://news.ucr.edu" target="_blank" rel="noopener">University of California-Riverside</a></li><li><a href="https://news.ucsd.edu" target="_blank" rel="noopener">University of California-San Diego</a></li><li><a href="https://www.ucsf.edu/news" target="_blank" rel="noopener">University of California-San Francisco</a></li><li><a href="https://news.ucsb.edu" target="_blank" rel="noopener">University of California-Santa Barbara</a></li><li><a href="https://news.ucsc.edu" target="_blank" rel="noopener">University of California-Santa Cruz</a></li><li><a href="https://www.ucf.edu/news" target="_blank" rel="noopener">University of Central Florida</a></li><li><a href="https://www.uchicago.edu/news" target="_blank" rel="noopener">University of Chicago</a></li><li><a href="https://www.uc.edu/news.html" target="_blank" rel="noopener">University of Cincinnati-Main Campus</a></li><li><a href="https://www.colorado.edu/today/" target="_blank" rel="noopener">University of Colorado Boulder</a></li><li><a href="https://news.ucdenver.edu" target="_blank" rel="noopener">University of Colorado Denver/Anschutz Medical Campus</a></li><li><a href="https://today.uconn.edu/" target="_blank" rel="noopener">University of Connecticut</a></li><li><a href="https://udayton.edu/news/index.php" target="_blank" rel="noopener">University of Dayton</a></li><li><a href="https://www.udel.edu/udaily" target="_blank" rel="noopener">University of Delaware</a></li><li><a href="https://www.du.edu/news" target="_blank" rel="noopener">University of Denver</a></li><li><a href="https://news.ufl.edu" target="_blank" rel="noopener">University of Florida</a></li><li><a href="https://news.uga.edu" target="_blank" rel="noopener">University of Georgia</a></li><li><a href="https://manoa.hawaii.edu/news" target="_blank" rel="noopener">University of Hawaii at Manoa</a></li><li><a href="https://www.uh.edu/news-events/" target="_blank" rel="noopener">University of Houston</a></li><li><a href="https://www.idaho.edu/news" target="_blank" rel="noopener">University of Idaho</a></li><li><a href="https://www.uic.edu/news" target="_blank" rel="noopener">University of Illinois Chicago</a></li><li><a href="https://news.illinois.edu" target="_blank" rel="noopener">University of Illinois Urbana-Champaign</a></li><li><a href="https://now.uiowa.edu" target="_blank" rel="noopener">University of Iowa</a></li><li><a href="https://news.ku.edu/" target="_blank" rel="noopener">University of Kansas</a></li><li><a href="https://uknow.uky.edu/" target="_blank" rel="noopener">University of Kentucky</a></li><li><a href="https://louisiana.edu/news" target="_blank" rel="noopener">University of Louisiana at Lafayette</a></li><li><a href="https://news.louisville.edu" target="_blank" rel="noopener">University of Louisville</a></li><li><a href="https://www.maine.edu/news" target="_blank" rel="noopener">University of Maine</a></li><li><a href="https://www.maryland.edu/news" target="_blank" rel="noopener">University of Maryland - Baltimore</a></li><li><a href="https://umdrightnow.umd.edu/" target="_blank" rel="noopener">University of Maryland - College Park</a></li><li><a href="https://umbc.edu/news-home/" target="_blank" rel="noopener">University of Maryland-Baltimore County</a></li><li><a href="https://www.umass.edu/news/" target="_blank" rel="noopener">University of Massachusetts-Amherst</a></li><li><a href="https://www.umb.edu/news/" target="_blank" rel="noopener">University of Massachusetts-Boston</a></li><li><a href="https://www.uml.edu/news/" target="_blank" rel="noopener">University of Massachusetts-Lowell</a></li><li><a href="https://news.memphis.edu" target="_blank" rel="noopener">University of Memphis</a></li><li><a href="https://news.miami.edu" target="_blank" rel="noopener">University of Miami</a></li><li><a href="https://news.umich.edu/" target="_blank" rel="noopener">University of Michigan-Ann Arbor</a></li><li><a href="https://twin-cities.umn.edu/news-events" target="_blank" rel="noopener">University of Minnesota-Twin Cities</a></li><li><a href="https://news.olemiss.edu/" target="_blank" rel="noopener">University of Mississippi</a></li><li><a href="https://showme.missouri.edu/" target="_blank" rel="noopener">University of Missouri-Columbia</a></li><li><a href="https://www.umkc.edu/news/" target="_blank" rel="noopener">University of Missouri-Kansas City</a></li><li><a href="https://www.nebraska.edu/news" target="_blank" rel="noopener">University of Nebraska Medical Center</a></li><li><a href="https://news.unl.edu/" target="_blank" rel="noopener">University of Nebraska-Lincoln</a></li><li><a href="https://www.unlv.edu/news" target="_blank" rel="noopener">University of Nevada-Las Vegas</a></li><li><a href="https://www.unr.edu/nevada-today" target="_blank" rel="noopener">University of Nevada-Reno</a></li><li><a href="https://www.unh.edu/unhtoday/" target="_blank" rel="noopener">University of New Hampshire-Main Campus</a></li><li><a href="https://news.unm.edu" target="_blank" rel="noopener">University of New Mexico-Main Campus</a></li><li><a href="https://uncnews.unc.edu/" target="_blank" rel="noopener">University of North Carolina at Chapel Hill</a></li><li><a href="https://inside.charlotte.edu/news-features/" target="_blank" rel="noopener">University of North Carolina at Charlotte</a></li><li><a href="https://blogs.und.edu/und-today/" target="_blank" rel="noopener">University of North Dakota</a></li><li><a href="https://news.unt.edu" target="_blank" rel="noopener">University of North Texas</a></li><li><a href="https://news.nd.edu" target="_blank" rel="noopener">University of Notre Dame</a></li><li><a href="https://www.ou.edu/news" target="_blank" rel="noopener">University of Oklahoma-Norman Campus</a></li><li><a href="https://news.uoregon.edu" target="_blank" rel="noopener">University of Oregon</a></li><li><a href="https://news.upenn.edu" target="_blank" rel="noopener">University of Pennsylvania</a></li><li><a href="https://www.pittwire.pitt.edu" target="_blank" rel="noopener">University of Pittsburgh-Pittsburgh Campus</a></li><li><a href="https://www.uri.edu/news/" target="_blank" rel="noopener">University of Rhode Island</a></li><li><a href="https://www.rochester.edu/newscenter/" target="_blank" rel="noopener">University of Rochester</a></li><li><a href="https://www.sc.edu/uofsc/posts/" target="_blank" rel="noopener">University of South Carolina-Columbia</a></li><li><a href="https://www.usf.edu/news" target="_blank" rel="noopener">University of South Florida</a></li><li><a href="https://today.usc.edu/news" target="_blank" rel="noopener">University of Southern California</a></li><li><a href="https://www.usm.edu/news/" target="_blank" rel="noopener">University of Southern Mississippi</a></li><li><a href="https://www.utsouthwestern.edu/newsroom/" target="_blank" rel="noopener">University of Texas Southwestern Medical Center</a></li><li><a href="https://news.utoledo.edu" target="_blank" rel="noopener">University of Toledo</a></li><li><a href="https://attheu.utah.edu/" target="_blank" rel="noopener">University of Utah</a></li><li><a href="https://www.uvm.edu/uvmnews" target="_blank" rel="noopener">University of Vermont</a></li><li><a href="https://news.virginia.edu/" target="_blank" rel="noopener">University of Virginia-Main Campus</a></li><li><a href="https://www.washington.edu/news" target="_blank" rel="noopener">University of Washington-Seattle Campus</a></li><li><a href="https://news.wisc.edu/" target="_blank" rel="noopener">University of Wisconsin-Madison</a></li><li><a href="https://uwm.edu/news/" target="_blank" rel="noopener">University of Wisconsin-Milwaukee</a></li><li><a href="https://www.uwyo.edu/news/" target="_blank" rel="noopener">University of Wyoming</a></li><li><a href="https://www.usu.edu/today/" target="_blank" rel="noopener">Utah State University</a></li><li><a href="https://news.vanderbilt.edu" target="_blank" rel="noopener">Vanderbilt University</a></li><li><a href="https://news.vcu.edu/" target="_blank" rel="noopener">Virginia Commonwealth University</a></li><li><a href="https://news.vt.edu/" target="_blank" rel="noopener">Virginia Polytechnic Institute and State University</a></li><li><a href="https://wsu.edu/news/" target="_blank" rel="noopener">Washington State University</a></li><li><a href="https://source.washu.edu/news" target="_blank" rel="noopener">Washington University in St Louis</a></li><li><a href="https://today.wayne.edu/" target="_blank" rel="noopener">Wayne State University</a></li><li><a href="https://news.weill.cornell.edu/" target="_blank" rel="noopener">Weill Medical College of Cornell University</a></li><li><a href="https://wvutoday.wvu.edu/" target="_blank" rel="noopener">West Virginia University</a></li><li><a href="https://news.wm.edu/" target="_blank" rel="noopener">William & Mary</a></li><li><a href="https://www.wpi.edu/news" target="_blank" rel="noopener">Worcester Polytechnic Institute</a></li><li><a href="https://www.yale.edu/news" target="_blank" rel="noopener">Yale University</a></li>
+                    </ul>
+                </details>
+            
+            
+                <details>
+                    <summary><strong>HPC & Research Centers</strong> (10 sources)</summary>
+                    <ul class="source-list">
+                        <li><a href="https://news.iu.edu/it/" target="_blank" rel="noopener">Indiana University Pervasive Technology Institute</a></li><li><a href="https://www.nersc.gov/news/" target="_blank" rel="noopener">NERSC</a></li><li><a href="https://news.ucar.edu/" target="_blank" rel="noopener">National Center for Atmospheric Research</a></li><li><a href="https://www.olcf.ornl.gov/olcf-news/" target="_blank" rel="noopener">National Center for Computational Sciences</a></li><li><a href="https://www.ncsa.illinois.edu/news/" target="_blank" rel="noopener">National Center for Supercomputing Applications</a></li><li><a href="https://www.neonscience.org/newsletter-archive" target="_blank" rel="noopener">National Ecological Observatory Network</a></li><li><a href="https://www.psc.edu/news/" target="_blank" rel="noopener">Pittsburgh Supercomputing Center</a></li><li><a href="https://www.rcac.purdue.edu/news" target="_blank" rel="noopener">Purdue Rosen Center for Advanced Computing</a></li><li><a href="https://www.sdsc.edu/news/" target="_blank" rel="noopener">San Diego Supercomputer Center</a></li><li><a href="https://www.tacc.utexas.edu/news" target="_blank" rel="noopener">Texas Advanced Computing Center</a></li>
+                    </ul>
+                </details>
+            
+            
+                <details>
+                    <summary><strong>National Laboratories</strong> (54 sources)</summary>
+                    <ul class="source-list">
+                        <li><a href="https://arpa-e.energy.gov/news-and-events/news-and-insights/" target="_blank" rel="noopener">ARPA-E</a></li><li><a href="https://www.afrl.af.mil/News/" target="_blank" rel="noopener">Air Force Research Laboratory</a></li><li><a href="https://www.ameslab.gov/news" target="_blank" rel="noopener">Ames Laboratory</a></li><li><a href="https://www.anl.gov/news" target="_blank" rel="noopener">Argonne National Laboratory</a></li><li><a href="https://www.battelle.org/insights/newsroom" target="_blank" rel="noopener">Battelle Memorial Institute</a></li><li><a href="https://www.bnl.gov/newsroom/" target="_blank" rel="noopener">Brookhaven National Laboratory</a></li><li><a href="https://www.sei.cmu.edu/news-events/" target="_blank" rel="noopener">CMU Software Engineering Institute</a></li><li><a href="https://www.cna.org/our-media/press-releases/" target="_blank" rel="noopener">Center for Naval Analyses</a></li><li><a href="https://www.darpa.mil/news" target="_blank" rel="noopener">DARPA</a></li><li><a href="https://arl.devcom.army.mil/news/" target="_blank" rel="noopener">DEVCOM Army Research Laboratory</a></li><li><a href="https://www.dhs.gov/science-and-technology/newsroom" target="_blank" rel="noopener">DHS S&T Directorate</a></li><li><a href="https://www.draper.com/news" target="_blank" rel="noopener">Draper Laboratory</a></li><li><a href="https://news.fnal.gov/" target="_blank" rel="noopener">Fermi National Accelerator Laboratory</a></li><li><a href="https://www.iarpa.gov/newsroom" target="_blank" rel="noopener">IARPA</a></li><li><a href="https://inl.gov/news/" target="_blank" rel="noopener">Idaho National Laboratory</a></li><li><a href="https://www.iqt.org/knowledge-hub?content-type=Blog" target="_blank" rel="noopener">In-Q-Tel</a></li><li><a href="https://www.ida.org/en/about-ida/ida-in-the-news" target="_blank" rel="noopener">Institute for Defense Analyses</a></li><li><a href="https://www.jhuapl.edu/news" target="_blank" rel="noopener">Johns Hopkins APL</a></li><li><a href="https://kcnsc.doe.gov/news/newsroom/" target="_blank" rel="noopener">Kansas City National Security Campus</a></li><li><a href="https://newscenter.lbl.gov/" target="_blank" rel="noopener">Lawrence Berkeley National Laboratory</a></li><li><a href="https://www.llnl.gov/news" target="_blank" rel="noopener">Lawrence Livermore National Laboratory</a></li><li><a href="https://www.lanl.gov/news" target="_blank" rel="noopener">Los Alamos National Laboratory</a></li><li><a href="https://www.ll.mit.edu/news" target="_blank" rel="noopener">MIT Lincoln Laboratory</a></li><li><a href="https://www.mitre.org/news-insights" target="_blank" rel="noopener">MITRE Corporation</a></li><li><a href="https://www.nasa.gov/ames/news/" target="_blank" rel="noopener">NASA Ames Research Center</a></li><li><a href="https://www.nasa.gov/glenn-news/" target="_blank" rel="noopener">NASA Glenn Research Center</a></li><li><a href="https://www.nasa.gov/latest-goddard-news/" target="_blank" rel="noopener">NASA Goddard Space Flight Center</a></li><li><a href="https://www.jpl.nasa.gov/news/" target="_blank" rel="noopener">NASA JPL</a></li><li><a href="https://www.nasa.gov/langley/langley-news/" target="_blank" rel="noopener">NASA Langley Research Center</a></li><li><a href="https://www.nist.gov/news-events/news" target="_blank" rel="noopener">NIST</a></li><li><a href="https://www.noaa.gov/news-release" target="_blank" rel="noopener">NOAA Center for AI</a></li><li><a href="https://www.nsa.gov/Press-Room/News-Highlights/" target="_blank" rel="noopener">NSA Research Directorate</a></li><li><a href="https://aiinstitutes.org/news/" target="_blank" rel="noopener">NSF AI Institutes</a></li><li><a href="https://www.nationalacademies.org/news" target="_blank" rel="noopener">National Academies</a></li><li><a href="https://www.netl.doe.gov/newsroom" target="_blank" rel="noopener">National Energy Technology Laboratory</a></li><li><a href="https://www.nlr.gov/news/" target="_blank" rel="noopener">National Laboratory of the Rockies</a></li><li><a href="https://www.nsf.gov/news/" target="_blank" rel="noopener">National Science Foundation</a></li><li><a href="https://nnss.gov/news/category/press-releases/" target="_blank" rel="noopener">Nevada National Security Site</a></li><li><a href="https://www.orau.org/news/releases/index.html" target="_blank" rel="noopener">Oak Ridge Associated Universities</a></li><li><a href="https://www.ornl.gov/news" target="_blank" rel="noopener">Oak Ridge National Laboratory</a></li><li><a href="https://www.onr.navy.mil/media-center/news-releases" target="_blank" rel="noopener">Office of Naval Research</a></li><li><a href="https://www.pnnl.gov/news" target="_blank" rel="noopener">Pacific Northwest National Laboratory</a></li><li><a href="https://pantex.energy.gov/news/press-releases" target="_blank" rel="noopener">Pantex Plant</a></li><li><a href="https://www.pppl.gov/news" target="_blank" rel="noopener">Princeton Plasma Physics Laboratory</a></li><li><a href="https://www.rand.org/news/press.html" target="_blank" rel="noopener">RAND Corporation</a></li><li><a href="https://www6.slac.stanford.edu/news" target="_blank" rel="noopener">SLAC National Accelerator Laboratory</a></li><li><a href="https://www.sri.com/newsroom/" target="_blank" rel="noopener">SRI International</a></li><li><a href="https://newsreleases.sandia.gov/" target="_blank" rel="noopener">Sandia National Laboratories</a></li><li><a href="https://www.srnl.gov/newsroom/" target="_blank" rel="noopener">Savannah River National Laboratory</a></li><li><a href="https://aerospace.org/news" target="_blank" rel="noopener">The Aerospace Corporation</a></li><li><a href="https://www.jlab.org/pressroom" target="_blank" rel="noopener">Thomas Jefferson National Accelerator Facility</a></li><li><a href="https://www.nrl.navy.mil/Media/News/" target="_blank" rel="noopener">U.S. Naval Research Laboratory</a></li><li><a href="https://www.arlis.umd.edu/about/news-events" target="_blank" rel="noopener">UMD ARLIS</a></li><li><a href="https://www.y12.doe.gov/news/blog" target="_blank" rel="noopener">Y-12 National Security Complex</a></li>
+                    </ul>
+                </details>
+            
+            
+                <details>
+                    <summary><strong>Global Institutions</strong> (102 sources)</summary>
+                    <ul class="source-list">
+                        <li><a href="https://www.aalto.fi/en/news" target="_blank" rel="noopener">Aalto University</a></li><li><a href="https://www.sinica.edu.tw/en" target="_blank" rel="noopener">Academia Sinica</a></li><li><a href="https://www.turing.ac.uk/news" target="_blank" rel="noopener">Alan Turing Institute</a></li><li><a href="https://www.aucegypt.edu/news" target="_blank" rel="noopener">American University in Cairo</a></li><li><a href="https://www.anu.edu.au/news" target="_blank" rel="noopener">Australian National University</a></li><li><a href="https://home.cern/news" target="_blank" rel="noopener">CERN</a></li><li><a href="https://news.cnrs.fr/" target="_blank" rel="noopener">CNRS</a></li><li><a href="https://www.csiro.au/en/news" target="_blank" rel="noopener">CSIRO</a></li><li><a href="https://www.africa.engineering.cmu.edu/news/index.html" target="_blank" rel="noopener">Carnegie Mellon University Africa</a></li><li><a href="https://www.chalmers.se/en/current/news/" target="_blank" rel="noopener">Chalmers University of Technology</a></li><li><a href="https://english.cas.cn/" target="_blank" rel="noopener">Chinese Academy of Sciences</a></li><li><a href="https://www.cpr.cuhk.edu.hk/en/news-centre/press-releases/" target="_blank" rel="noopener">Chinese University of Hong Kong</a></li><li><a href="https://www.chula.ac.th/en/news-and-knowledge/news-updates/cu-news/" target="_blank" rel="noopener">Chulalongkorn University</a></li><li><a href="https://www.tudelft.nl/en/about-tu-delft/current/latest-news" target="_blank" rel="noopener">Delft University of Technology</a></li><li><a href="https://news.epfl.ch/" target="_blank" rel="noopener">EPFL</a></li><li><a href="https://ethz.ch/en/news-and-events/eth-news.html" target="_blank" rel="noopener">ETH Zurich</a></li><li><a href="https://www.tue.nl/en/news-and-events/news-overview" target="_blank" rel="noopener">Eindhoven University of Technology</a></li><li><a href="https://ufrj.br/en/" target="_blank" rel="noopener">Federal Univ. of Rio de Janeiro</a></li><li><a href="https://www.fraunhofer.de/en/press/research-news.html" target="_blank" rel="noopener">Fraunhofer Society</a></li><li><a href="https://www.fudan.edu.cn/en/News/list.htm" target="_blank" rel="noopener">Fudan University</a></li><li><a href="https://en.huji.ac.il/latest-news" target="_blank" rel="noopener">Hebrew University of Jerusalem</a></li><li><a href="https://www.uni-heidelberg.de/en/newsroom" target="_blank" rel="noopener">Heidelberg University</a></li><li><a href="https://www.helmholtz.de/en/newsroom/" target="_blank" rel="noopener">Helmholtz Association</a></li><li><a href="https://hkust.edu.hk/news" target="_blank" rel="noopener">Hong Kong Univ. of Science and Technology</a></li><li><a href="https://www.iitb.ac.in/news" target="_blank" rel="noopener">IIT Bombay</a></li><li><a href="https://home.iitd.ac.in/news-all.php" target="_blank" rel="noopener">IIT Delhi</a></li><li><a href="https://www.iitm.ac.in/happenings/IITM-news" target="_blank" rel="noopener">IIT Madras</a></li><li><a href="https://www.inria.fr/en/news/news-from-inria" target="_blank" rel="noopener">INRIA</a></li><li><a href="https://www.imperial.ac.uk/news/" target="_blank" rel="noopener">Imperial College London</a></li><li><a href="https://www.iisc.ac.in/news-events/news/" target="_blank" rel="noopener">Indian Institute of Science</a></li><li><a href="https://www.ip-paris.fr/en/news-room" target="_blank" rel="noopener">Institut Polytechnique de Paris</a></li><li><a href="https://www.isct.ac.jp/en" target="_blank" rel="noopener">Institute of Science Tokyo</a></li><li><a href="https://news.kaist.ac.kr/newsen/" target="_blank" rel="noopener">KAIST</a></li><li><a href="https://www.kth.se/en/om/nyheter" target="_blank" rel="noopener">KTH Royal Institute of Technology</a></li><li><a href="https://nieuws.kuleuven.be/en" target="_blank" rel="noopener">KU Leuven</a></li><li><a href="https://www.kit.edu/kit/english/news.php" target="_blank" rel="noopener">Karlsruhe Institute of Technology</a></li><li><a href="https://www.kcl.ac.uk/news" target="_blank" rel="noopener">King's College London</a></li><li><a href="https://www.korea.edu/en/1127/subview.do" target="_blank" rel="noopener">Korea University</a></li><li><a href="https://www.kyoto-u.ac.jp/en/news" target="_blank" rel="noopener">Kyoto University</a></li><li><a href="https://www.mpg.de/en/newsroom" target="_blank" rel="noopener">Max Planck Society</a></li><li><a href="https://www.monash.edu/news" target="_blank" rel="noopener">Monash University</a></li><li><a href="https://www.ntu.edu.sg/news" target="_blank" rel="noopener">Nanyang Technological University</a></li><li><a href="https://www.ntu.edu.tw/english/spotlight/spotlight.html" target="_blank" rel="noopener">National Taiwan University</a></li><li><a href="https://news.nus.edu.sg/" target="_blank" rel="noopener">National University of Singapore</a></li><li><a href="https://www.postech.ac.kr/eng/index.do" target="_blank" rel="noopener">POSTECH</a></li><li><a href="https://newsen.pku.edu.cn/newscenter.html" target="_blank" rel="noopener">Peking University</a></li><li><a href="https://www.polimi.it/en/press-room" target="_blank" rel="noopener">Politecnico di Milano</a></li><li><a href="https://www.uc.cl/en/news/" target="_blank" rel="noopener">Pontificia Univ. Catolica de Chile</a></li><li><a href="https://www.riken.jp/en/news_pubs/research_news/" target="_blank" rel="noopener">RIKEN</a></li><li><a href="https://www.rwth-aachen.de/cms/root/Die-RWTH/Aktuell/~uma/Pressemitteilungen/lidx/1/" target="_blank" rel="noopener">RWTH Aachen University</a></li><li><a href="https://en.snu.ac.kr/snunow/snu_media/news" target="_blank" rel="noopener">Seoul National University</a></li><li><a href="https://en.sjtu.edu.cn/" target="_blank" rel="noopener">Shanghai Jiao Tong University</a></li><li><a href="https://www.sutd.edu.sg/about/happenings/news/" target="_blank" rel="noopener">Singapore Univ. of Technology and Design</a></li><li><a href="https://www.sorbonne-universite.fr/en/press-releases" target="_blank" rel="noopener">Sorbonne University</a></li><li><a href="https://www.su.ac.za/en/stories" target="_blank" rel="noopener">Stellenbosch University</a></li><li><a href="https://www.tuwien.at/en/tu-wien/news/news-articles" target="_blank" rel="noopener">TU Wien</a></li><li><a href="https://www.tifr.res.in/" target="_blank" rel="noopener">Tata Institute of Fundamental Research</a></li><li><a href="https://www.tu.berlin/en/news/list-of-press-releases" target="_blank" rel="noopener">Technical University of Berlin</a></li><li><a href="https://www.dtu.dk/english/news/all-news" target="_blank" rel="noopener">Technical University of Denmark</a></li><li><a href="https://www.tum.de/en/news-and-events" target="_blank" rel="noopener">Technical University of Munich</a></li><li><a href="https://int.technion.ac.il/about-technion/news/" target="_blank" rel="noopener">Technion</a></li><li><a href="https://global.tec.mx/en/news-stories" target="_blank" rel="noopener">Tecnologico de Monterrey</a></li><li><a href="https://english.tau.ac.il/" target="_blank" rel="noopener">Tel Aviv University</a></li><li><a href="https://www.osaka-u.ac.jp/en/news/topics" target="_blank" rel="noopener">The University of Osaka</a></li><li><a href="https://www.tohoku.ac.jp/en/news/" target="_blank" rel="noopener">Tohoku University</a></li><li><a href="https://www.tcd.ie/news_events/" target="_blank" rel="noopener">Trinity College Dublin</a></li><li><a href="https://www.tsinghua.edu.cn/en/News.htm" target="_blank" rel="noopener">Tsinghua University</a></li><li><a href="https://newsletter.unam.mx/" target="_blank" rel="noopener">UNAM</a></li><li><a href="https://unicamp.br/en/" target="_blank" rel="noopener">UNICAMP</a></li><li><a href="https://www.uba.ar/" target="_blank" rel="noopener">Universidad de Buenos Aires</a></li><li><a href="https://uchile.cl/english" target="_blank" rel="noopener">Universidad de Chile</a></li><li><a href="https://www.universite-paris-saclay.fr/en/news" target="_blank" rel="noopener">Universite Paris-Saclay</a></li><li><a href="https://www.ucl.ac.uk/news/" target="_blank" rel="noopener">University College London</a></li><li><a href="https://www.uva.nl/en/news-events/news/uva-news.html" target="_blank" rel="noopener">University of Amsterdam</a></li><li><a href="https://www.auckland.ac.nz/en/news.html" target="_blank" rel="noopener">University of Auckland</a></li><li><a href="https://www.bristol.ac.uk/news/" target="_blank" rel="noopener">University of Bristol</a></li><li><a href="https://www.cam.ac.uk/news" target="_blank" rel="noopener">University of Cambridge</a></li><li><a href="https://www.canterbury.ac.nz/news-and-events/news" target="_blank" rel="noopener">University of Canterbury</a></li><li><a href="https://www.news.uct.ac.za/" target="_blank" rel="noopener">University of Cape Town</a></li><li><a href="https://www.ed.ac.uk/news" target="_blank" rel="noopener">University of Edinburgh</a></li><li><a href="https://www.helsinki.fi/en/news/news-and-press-releases" target="_blank" rel="noopener">University of Helsinki</a></li><li><a href="https://www.hku.hk/press/press-releases/" target="_blank" rel="noopener">University of Hong Kong</a></li><li><a href="https://unilag.edu.ng/" target="_blank" rel="noopener">University of Lagos</a></li><li><a href="https://www.manchester.ac.uk/about/news/" target="_blank" rel="noopener">University of Manchester</a></li><li><a href="https://www.unimelb.edu.au/newsroom" target="_blank" rel="noopener">University of Melbourne</a></li><li><a href="https://www.uonbi.ac.ke/news" target="_blank" rel="noopener">University of Nairobi</a></li><li><a href="https://www.unsw.edu.au/newsroom" target="_blank" rel="noopener">University of New South Wales</a></li><li><a href="https://www.uio.no/english/about/news-and-events/news/" target="_blank" rel="noopener">University of Oslo</a></li><li><a href="https://www.ox.ac.uk/news-and-events" target="_blank" rel="noopener">University of Oxford</a></li><li><a href="https://news.uq.edu.au/" target="_blank" rel="noopener">University of Queensland</a></li><li><a href="https://www5.usp.br/english/institutional/" target="_blank" rel="noopener">University of Sao Paulo</a></li><li><a href="https://en.ustc.edu.cn/News___Events/NEWS.htm" target="_blank" rel="noopener">University of Science and Technology of China</a></li><li><a href="https://www.southampton.ac.uk/news.page" target="_blank" rel="noopener">University of Southampton</a></li><li><a href="https://www.sydney.edu.au/news-opinion/news.html" target="_blank" rel="noopener">University of Sydney</a></li><li><a href="https://www.u-tokyo.ac.jp/focus/en/press/" target="_blank" rel="noopener">University of Tokyo</a></li><li><a href="https://www.univie.ac.at/en/news/" target="_blank" rel="noopener">University of Vienna</a></li><li><a href="https://en.uw.edu.pl/category/news/" target="_blank" rel="noopener">University of Warsaw</a></li><li><a href="https://news.uzh.ch/en.html" target="_blank" rel="noopener">University of Zurich</a></li><li><a href="https://www.wits.ac.za/news/" target="_blank" rel="noopener">University of the Witwatersrand</a></li><li><a href="https://wis-wander.weizmann.ac.il/" target="_blank" rel="noopener">Weizmann Institute of Science</a></li><li><a href="https://news.yonsei.ac.kr/en/main" target="_blank" rel="noopener">Yonsei University</a></li><li><a href="https://www.zju.edu.cn/english/new_events/main.psp" target="_blank" rel="noopener">Zhejiang University</a></li>
+                    </ul>
+                </details>
+            
         </div>
+        
 
-        <div class="section">
-            <h2>Monitored Sources</h2>
-
-            <div class="stats-grid">
-                <div class="stat-box">
-                    <span class="number">187</span>
-                    <span class="label">R1 Universities</span>
-                </div>
-                <div class="stat-box">
-                    <span class="number">15</span>
-                    <span class="label">Premier AI Institutions</span>
-                </div>
-                <div class="stat-box">
-                    <span class="number">10+</span>
-                    <span class="label">Major Research Facilities</span>
-                </div>
-            </div>
-
-            <h3>Premier AI Research Institutions</h3>
-            <p>The following universities are actively monitored for AI research news:</p>
-
-            <div class="university-grid">
-                <div class="university-card">
-                    <strong>Stanford University</strong><br>
-                    <span class="location">Stanford, CA</span>
-                </div>
-                <div class="university-card">
-                    <strong>MIT</strong><br>
-                    <span class="location">Cambridge, MA</span>
-                </div>
-                <div class="university-card">
-                    <strong>Carnegie Mellon University</strong><br>
-                    <span class="location">Pittsburgh, PA</span>
-                </div>
-                <div class="university-card">
-                    <strong>UC Berkeley</strong><br>
-                    <span class="location">Berkeley, CA</span>
-                </div>
-                <div class="university-card">
-                    <strong>University of Washington</strong><br>
-                    <span class="location">Seattle, WA</span>
-                </div>
-                <div class="university-card">
-                    <strong>Georgia Tech</strong><br>
-                    <span class="location">Atlanta, GA</span>
-                </div>
-                <div class="university-card">
-                    <strong>UIUC</strong><br>
-                    <span class="location">Urbana-Champaign, IL</span>
-                </div>
-                <div class="university-card">
-                    <strong>Cornell University</strong><br>
-                    <span class="location">Ithaca, NY</span>
-                </div>
-                <div class="university-card">
-                    <strong>University of Michigan</strong><br>
-                    <span class="location">Ann Arbor, MI</span>
-                </div>
-                <div class="university-card">
-                    <strong>Princeton University</strong><br>
-                    <span class="location">Princeton, NJ</span>
-                </div>
-                <div class="university-card">
-                    <strong>Harvard University</strong><br>
-                    <span class="location">Cambridge, MA</span>
-                </div>
-                <div class="university-card">
-                    <strong>UT Austin</strong><br>
-                    <span class="location">Austin, TX</span>
-                </div>
-                <div class="university-card">
-                    <strong>Caltech</strong><br>
-                    <span class="location">Pasadena, CA</span>
-                </div>
-                <div class="university-card">
-                    <strong>University of Pennsylvania</strong><br>
-                    <span class="location">Philadelphia, PA</span>
-                </div>
-                <div class="university-card">
-                    <strong>Columbia University</strong><br>
-                    <span class="location">New York, NY</span>
-                </div>
-            </div>
-
-            <h3>Complete R1 Universities (187 Institutions)</h3>
-            <p>In addition to the premier institutions listed above, this crawler monitors all 187 universities classified as R1 (Very High Research Activity) in the 2025 Carnegie Classification. This comprehensive coverage ensures no major AI research announcement goes unnoticed.</p>
-
-            <h3>Major Research Facilities</h3>
-            <p>The crawler also monitors news from major computing and research facilities including:</p>
-            <ul>
-                <li><strong>Argonne National Laboratory</strong> - Aurora Exascale Computing System</li>
-                <li><strong>Oak Ridge National Laboratory</strong> - Frontier Supercomputer</li>
-                <li><strong>NERSC</strong> - National Energy Research Scientific Computing Center</li>
-                <li><strong>TACC</strong> - Texas Advanced Computing Center</li>
-                <li><strong>San Diego Supercomputer Center</strong></li>
-                <li><strong>National Center for Supercomputing Applications (NCSA)</strong></li>
-                <li>And other DOE national laboratories and NSF facilities</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Technology Stack</h2>
-            <ul>
-                <li><strong>Core:</strong> Python 3.11+ with Scrapy 2.11+</li>
-                <li><strong>Content Extraction:</strong> Trafilatura 2.0+ with htmldate</li>
-                <li><strong>Database:</strong> PostgreSQL 15+ for metadata/tracking, Redis 7+ for URL frontier</li>
-                <li><strong>AI APIs:</strong> Claude (Sonnet 4.5), GPT-4, Gemini 2.5 Flash</li>
-                <li><strong>Scheduling:</strong> Systemd timers or cron for automated daily execution</li>
-                <li><strong>Notifications:</strong> Slack webhooks + SMTP email delivery</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Source Code & Documentation</h2>
-            <p>This project is open source and available on GitHub. The repository includes complete documentation, deployment scripts, and configuration examples.</p>
-
-            <a href="https://github.com/tswetnam/webcrawler" class="github-link" target="_blank">
-                View on GitHub →
-            </a>
-
-            <div class="highlight-box" style="margin-top: 30px;">
-                <p><strong>Want to contribute?</strong> The project welcomes contributions including:</p>
-                <ul>
-                    <li>Additional university news sources</li>
-                    <li>Improved content extraction patterns</li>
-                    <li>Enhanced AI analysis prompts</li>
-                    <li>Bug fixes and performance improvements</li>
-                </ul>
-            </div>
-        </div>
+        <h2>Updates &amp; Schedule</h2>
+        <p>
+            The crawler runs automatically once per day (typically early morning UTC) and this website updates
+            immediately after each run completes. The archive preserves all historical daily reports for
+            research and trend analysis.
+        </p>
     </div>
 
+
     <div class="footer">
-        <p><strong>Powered by AI University News Crawler</strong></p>
-        <p style="margin-top: 10px;">
-            <a href="https://github.com/tswetnam/webcrawler" target="_blank">GitHub</a> |
-            <a href="index.html">Today's News</a> |
-            <a href="archive/index.html">Archive</a>
-        </p>
+        <a href="index.html">Today</a> &middot;
+        <a href="archive/index.html">Archive</a> &middot;
+        <a href="how_it_works.html">How It Works</a> &middot;
+        <a href="https://github.com/tyson-swetnam/webcrawler" target="_blank">GitHub</a>
+        &nbsp;|&nbsp; 380 sources &middot; Updated 04:29 AM
     </div>
 </body>
 </html>
