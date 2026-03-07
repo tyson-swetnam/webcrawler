@@ -1007,7 +1007,7 @@ class HTMLReportGenerator:
             if not article:
                 continue
 
-            rank = pick.get('rank', 0)
+            rank = len(rows) + 1  # Sequential numbering based on matched picks
             note = pick.get('editorial_note', '')
             impact_cat = pick.get('impact_category', 'Scientific Breakthrough')
             badge_cls = category_class.get(impact_cat, 'scientific')
