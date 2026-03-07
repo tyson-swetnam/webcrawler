@@ -701,13 +701,41 @@ async def send_notifications(articles, analyses, db, editorial_picks=None):
             editorial_picks=editorial_picks
         )
         today_file = html_gen.generate_daily_report()
-        archive_file = html_gen.generate_archive_index()
-        how_it_works_file = html_gen.generate_how_it_works()
         logger.info(f"✅ HTML report generated: {today_file}")
+        exported_files['html'] = today_file
+
+        # Generate Pagefind search index (non-fatal)
+        popular_topics = []
+        try:
+            import subprocess as _sp
+            import tempfile
+            import shutil
+
+            staging_dir = tempfile.mkdtemp(prefix='pagefind_stubs_')
+            stub_count, popular_topics = html_gen.generate_search_stubs(staging_dir)
+            logger.info(f"Generated {stub_count} search stubs")
+
+            pagefind_output = str(Path("docs") / "pagefind")
+            result = _sp.run(
+                ["pagefind", "--site", staging_dir, "--output-path", pagefind_output],
+                capture_output=True, text=True, timeout=120
+            )
+            if result.returncode == 0:
+                logger.info(f"✅ Pagefind index built at {pagefind_output}")
+            else:
+                logger.warning(f"Pagefind failed: {result.stderr}")
+
+            shutil.rmtree(staging_dir, ignore_errors=True)
+        except FileNotFoundError:
+            logger.warning("pagefind CLI not found, skipping search index")
+        except Exception as e:
+            logger.warning(f"Search index generation failed (non-fatal): {e}")
+
+        archive_file = html_gen.generate_archive_index(popular_topics=popular_topics)
+        how_it_works_file = html_gen.generate_how_it_works()
         logger.info(f"✅ Archive index generated: {archive_file}")
         logger.info(f"✅ How It Works page generated: {how_it_works_file}")
         logger.info(f"✅ GitHub Pages output: docs/")
-        exported_files['html'] = today_file
         exported_files['html_archive'] = archive_file
         exported_files['html_how_it_works'] = how_it_works_file
     except Exception as e:

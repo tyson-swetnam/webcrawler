@@ -2,6 +2,8 @@
 HTML Report Generator - Creates Drudge Report-style static HTML pages
 """
 import calendar
+import hashlib
+import html as html_mod
 import json
 import os
 import re
@@ -295,6 +297,55 @@ class HTMLReportGenerator:
     def _get_main_page_css() -> str:
         """Tab bar, article rows, expand panels, show-more, responsive"""
         return """
+        /* ── Search Bar ── */
+        .search-bar {
+            position: relative;
+            max-width: 400px;
+            margin-bottom: var(--space-md);
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 8px 32px 8px 12px;
+            font-family: 'DM Sans', system-ui, sans-serif;
+            font-size: 13px;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            background: var(--color-bg);
+            color: var(--color-text);
+            outline: none;
+            box-sizing: border-box;
+            transition: border-color var(--transition-fast);
+        }
+        .search-bar input:focus {
+            border-color: var(--color-text-muted);
+        }
+        .search-bar input::placeholder {
+            color: var(--color-text-faint);
+        }
+        .clear-search-btn {
+            position: absolute;
+            right: 6px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            background: none;
+            font-size: 18px;
+            color: var(--color-text-muted);
+            cursor: pointer;
+            padding: 2px 6px;
+            line-height: 1;
+        }
+        .clear-search-btn:hover {
+            color: var(--color-text);
+        }
+        .search-no-results {
+            padding: var(--space-md);
+            text-align: center;
+            color: var(--color-text-muted);
+            font-size: 13px;
+            display: none;
+        }
+
         /* ── Stats Line ── */
         .stats-line {
             font-size: 13px;
@@ -845,7 +896,7 @@ class HTMLReportGenerator:
 
         return str(output_file)
 
-    def generate_archive_index(self) -> str:
+    def generate_archive_index(self, popular_topics: list = None) -> str:
         """Generate archive index page listing all available dates
 
         This method scans existing archive HTML files rather than querying the database,
@@ -886,7 +937,7 @@ class HTMLReportGenerator:
         # Sort by date descending
         dates = sorted(archive_files.values(), key=lambda x: x[0], reverse=True)
 
-        html = self._render_archive_page(dates)
+        html = self._render_archive_page(dates, popular_topics=popular_topics or [])
 
         archive_dir = self.output_dir / "archive"
         archive_dir.mkdir(exist_ok=True)
@@ -901,6 +952,89 @@ class HTMLReportGenerator:
             gh_output_file.write_text(html, encoding='utf-8')
 
         return str(output_file)
+
+    def generate_search_stubs(self, staging_dir: str) -> tuple:
+        """Generate lightweight per-article HTML stubs for Pagefind indexing.
+
+        Returns (stub_count, top_20_topics) where top_20_topics is a list of
+        (topic_name, count) tuples sorted by frequency.
+        """
+        staging = Path(staging_dir)
+        staging.mkdir(parents=True, exist_ok=True)
+
+        # Scan archive HTML files from github_pages_dir (primary) or output_dir
+        archive_dir = None
+        for base_dir in [self.github_pages_dir, self.output_dir]:
+            if base_dir and (base_dir / "archive").exists():
+                archive_dir = base_dir / "archive"
+                break
+        if not archive_dir:
+            return (0, [])
+
+        stub_count = 0
+        topic_counts = {}
+
+        for html_file in sorted(archive_dir.glob("20*.html")):
+            date_str = html_file.stem  # e.g. "2026-03-07"
+            content = html_file.read_text(encoding='utf-8')
+
+            # Parse articles from the well-structured generated HTML
+            # Each article is a pair: .article-row div followed by .article-detail div
+            row_pattern = re.compile(
+                r'<div class="article-row[^"]*"'
+                r'[^>]*data-category="([^"]*)"'
+                r'[^>]*data-title="([^"]*)"'
+                r'[^>]*data-university="([^"]*)"'
+                r'[^>]*data-summary="([^"]*)"'
+                r'[^>]*data-topics="([^"]*)"'
+                r'[^>]*>.*?'
+                r'<a class="headline-link" href="([^"]*)"',
+                re.DOTALL
+            )
+
+            for m in row_pattern.finditer(content):
+                cat = html_mod.unescape(m.group(1))
+                title = html_mod.unescape(m.group(2))
+                university = html_mod.unescape(m.group(3))
+                summary = html_mod.unescape(m.group(4))
+                topics_str = html_mod.unescape(m.group(5))
+                url = html_mod.unescape(m.group(6))
+
+                topics = [t.strip() for t in topics_str.split('|') if t.strip()]
+
+                # Track topic frequency
+                for t in topics:
+                    topic_counts[t] = topic_counts.get(t, 0) + 1
+
+                # Generate stable filename from URL
+                url_hash = hashlib.sha256(url.encode()).hexdigest()[:12]
+                stub_file = staging / f"{url_hash}.html"
+
+                # Build topic filter spans
+                topic_spans = ''.join(
+                    f'  <span data-pagefind-filter="topic">{html_mod.escape(t)}</span>\n'
+                    for t in topics
+                )
+
+                stub_html = (
+                    f'<html><head><meta charset="UTF-8"></head><body>\n'
+                    f'<article data-pagefind-body>\n'
+                    f'  <h1 data-pagefind-meta="title">{html_mod.escape(title)}</h1>\n'
+                    f'  <p>{html_mod.escape(summary)}</p>\n'
+                    f'  <span data-pagefind-filter="category">{html_mod.escape(cat)}</span>\n'
+                    f'  <span data-pagefind-filter="university">{html_mod.escape(university)}</span>\n'
+                    f'{topic_spans}'
+                    f'  <time data-pagefind-sort="date" data-pagefind-filter="date:{date_str}">{date_str}</time>\n'
+                    f'  <a data-pagefind-meta="url" href="{html_mod.escape(url)}">{html_mod.escape(title)}</a>\n'
+                    f'</article>\n'
+                    f'</body></html>\n'
+                )
+                stub_file.write_text(stub_html, encoding='utf-8')
+                stub_count += 1
+
+        # Return top 20 topics by frequency
+        top_topics = sorted(topic_counts.items(), key=lambda x: x[1], reverse=True)[:20]
+        return (stub_count, top_topics)
 
     def generate_how_it_works(self) -> str:
         """Generate 'How It Works' documentation page"""
@@ -1148,6 +1282,7 @@ class HTMLReportGenerator:
                 pub_short = article['timestamp'].strftime('%b %d')
 
             # Detail panel content
+            plain_summary = ''
             summary_html = ''
             if article.get('summary'):
                 plain_summary = self.strip_markdown(article['summary'])
@@ -1155,6 +1290,7 @@ class HTMLReportGenerator:
                     plain_summary = plain_summary[:300].rsplit(' ', 1)[0] + '...'
                 summary_html = f'<div class="summary">{plain_summary}</div>'
 
+            clean_topics = []
             topics_html = ''
             if article.get('topics') and isinstance(article['topics'], list):
                 clean_topics = [self.strip_markdown(str(t)) for t in article['topics'][:4] if t]
@@ -1177,8 +1313,17 @@ class HTMLReportGenerator:
             meta_parts.append(f'Crawled: {crawl_date_long}')
             detail_meta = ' &middot; '.join(meta_parts)
 
+            # Data attributes for client-side search filtering
+            data_title = html_mod.escape(article['title'], quote=True)
+            data_univ = html_mod.escape(display_name, quote=True)
+            data_summary = html_mod.escape(plain_summary[:200], quote=True)
+            data_topics = html_mod.escape('|'.join(clean_topics), quote=True)
+
             row_html = (
-                f'<div class="article-row{overflow_cls}" data-category="{cat}" onclick="toggleDetail(this)">'
+                f'<div class="article-row{overflow_cls}" data-category="{cat}" '
+                f'data-title="{data_title}" data-university="{data_univ}" '
+                f'data-summary="{data_summary}" data-topics="{data_topics}" '
+                f'onclick="toggleDetail(this)">'
                 f'<span class="cat-dot {dot_cls}"></span>'
                 f'<a class="headline-link" href="{article["url"]}" target="_blank" onclick="event.stopPropagation()">{article["title"]}</a>'
                 f'<span class="univ-label">{display_name}</span>'
@@ -1212,10 +1357,19 @@ class HTMLReportGenerator:
         list_hidden = ' style="display:none"' if default_tab == 'top' else ''
         list_html = f'<div class="article-list"{list_hidden}>' + ''.join(article_rows) + show_more_html + '</div>'
 
+        search_bar_html = (
+            '<div class="search-bar">'
+            '<input type="text" id="article-search" placeholder="Filter articles..." '
+            'autocomplete="off" aria-label="Filter articles on this page">'
+            '<button id="clear-search" class="clear-search-btn" style="display:none" '
+            'onclick="clearSearch()">&times;</button>'
+            '</div>'
+        )
+
         if not articles:
             articles_html = '<p class="no-results">No AI-related articles found for this date.</p>'
         else:
-            articles_html = stats_html + tab_bar_html + top_news_html + list_html
+            articles_html = stats_html + search_bar_html + tab_bar_html + top_news_html + list_html
 
         base_css = self._get_base_css()
         main_css = self._get_main_page_css()
@@ -1332,6 +1486,75 @@ function toggleMore(btn) {
     var activeBtn = document.querySelector('.tab-btn.active');
     if (activeBtn) switchTab(activeBtn.getAttribute('data-tab'));
 })();
+
+// ── Client-side article search filter ──
+function filterArticles(query) {
+    var q = query.toLowerCase().trim();
+    var rows = document.querySelectorAll('.article-row');
+    var details = document.querySelectorAll('.article-detail');
+    var btn = document.querySelector('.show-more-btn');
+    var clearBtn = document.getElementById('clear-search');
+
+    if (clearBtn) clearBtn.style.display = q ? '' : 'none';
+
+    if (!q) {
+        // Re-apply current tab filter
+        var activeBtn = document.querySelector('.tab-btn.active');
+        if (activeBtn) switchTab(activeBtn.getAttribute('data-tab'));
+        return;
+    }
+
+    // Hide show-more button during search
+    if (btn) btn.style.display = 'none';
+
+    var matchCount = 0;
+    rows.forEach(function(r, i) {
+        var title = (r.getAttribute('data-title') || '').toLowerCase();
+        var univ = (r.getAttribute('data-university') || '').toLowerCase();
+        var summary = (r.getAttribute('data-summary') || '').toLowerCase();
+        var topics = (r.getAttribute('data-topics') || '').toLowerCase();
+        var haystack = title + ' ' + univ + ' ' + summary + ' ' + topics;
+        var match = haystack.indexOf(q) !== -1;
+
+        r.style.display = match ? '' : 'none';
+        r.classList.remove('tab-hidden');
+        if (!match) r.classList.remove('expanded');
+        if (match) matchCount++;
+
+        // Also hide/show corresponding detail panel
+        var detail = r.nextElementSibling;
+        if (detail && detail.classList.contains('article-detail')) {
+            if (!match) {
+                detail.classList.remove('open');
+                detail.style.display = 'none';
+            } else {
+                detail.style.removeProperty('display');
+            }
+        }
+    });
+
+    // Also hide Top News section during search
+    var topSection = document.getElementById('top-news-section');
+    if (topSection) topSection.classList.remove('active');
+    var articleList = document.querySelector('.article-list');
+    if (articleList) articleList.style.removeProperty('display');
+}
+
+function clearSearch() {
+    var input = document.getElementById('article-search');
+    if (input) { input.value = ''; input.focus(); }
+    filterArticles('');
+}
+
+(function() {
+    var input = document.getElementById('article-search');
+    if (!input) return;
+    var timer;
+    input.addEventListener('input', function() {
+        clearTimeout(timer);
+        timer = setTimeout(function() { filterArticles(input.value); }, 150);
+    });
+})();
 </script>'''
 
         return f'''<!DOCTYPE html>
@@ -1357,7 +1580,7 @@ function toggleMore(btn) {
 </body>
 </html>'''
 
-    def _render_archive_page(self, dates: List) -> str:
+    def _render_archive_page(self, dates: List, popular_topics: list = None) -> str:
         """Render archive index page with monthly groups and bar chart"""
         # Group by month
         monthly_groups = OrderedDict()
@@ -1408,6 +1631,87 @@ function toggleMore(btn) {
         favicon = self._get_favicon_link()
         fonts = self._get_google_fonts_link()
 
+        # Build popular topics pills
+        topics_list = popular_topics or []
+        topic_pills = ''.join(
+            f'<span class="topic-pill topic-pill-clickable" onclick="searchTopic(this)">{html_mod.escape(name)}</span>'
+            for name, _count in topics_list
+        )
+        topics_section = ''
+        if topic_pills:
+            topics_section = f'<div class="popular-topics">{topic_pills}</div>'
+
+        search_section = f'''
+    <div class="search-section">
+        <div id="search"></div>
+        {topics_section}
+    </div>'''
+
+        # Pagefind CSS overrides
+        pagefind_css = """
+        /* ── Pagefind UI Overrides ── */
+        :root {
+            --pagefind-ui-scale: 0.9;
+            --pagefind-ui-primary: var(--color-text);
+            --pagefind-ui-text: var(--color-text-secondary);
+            --pagefind-ui-background: var(--color-bg);
+            --pagefind-ui-border: var(--color-border);
+            --pagefind-ui-tag: var(--color-surface-alt);
+            --pagefind-ui-border-width: 1px;
+            --pagefind-ui-border-radius: 6px;
+            --pagefind-ui-font: 'DM Sans', system-ui, sans-serif;
+        }
+        .search-section {
+            margin-bottom: var(--space-xl);
+        }
+        .popular-topics {
+            margin-top: var(--space-sm);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+        .topic-pill-clickable {
+            cursor: pointer;
+            transition: background-color var(--transition-fast);
+        }
+        .topic-pill-clickable:hover {
+            background: var(--color-border);
+        }
+        """
+
+        # Pagefind JS — plain string to avoid f-string brace issues
+        pagefind_js = '''<script>
+window.addEventListener('DOMContentLoaded', function() {
+    if (typeof PagefindUI === 'undefined') return;
+    new PagefindUI({
+        element: "#search",
+        showSubResults: false,
+        showImages: false,
+        pageSize: 15,
+        excerptLength: 40,
+        openFilters: ["category"],
+        showEmptyFilters: false,
+        translations: {
+            placeholder: "Search AI news articles...",
+            zero_results: "No articles found for [SEARCH_TERM]"
+        },
+        processResult: function(result) {
+            if (result.meta && result.meta.url) {
+                result.url = result.meta.url;
+            }
+            return result;
+        }
+    });
+});
+function searchTopic(pill) {
+    var input = document.querySelector('.pagefind-ui--input');
+    if (input) {
+        input.value = pill.textContent;
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+    }
+}
+</script>'''
+
         return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1416,17 +1720,22 @@ function toggleMore(btn) {
     <title>Archive - AI University News</title>
     {favicon}
     {fonts}
+    <link href="../pagefind/pagefind-ui.css" rel="stylesheet">
     <style>
     {base_css}
     {archive_css}
+    {pagefind_css}
     </style>
 </head>
 <body>
 {header_html}
 
+    {search_section}
     {''.join(groups_html)}
 
 {footer_html}
+<script src="../pagefind/pagefind-ui.js"></script>
+{pagefind_js}
 </body>
 </html>'''
 
