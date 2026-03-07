@@ -6,6 +6,7 @@ to provide high-quality, consensus-based article summaries and relevance scoring
 """
 
 import asyncio
+import re
 from typing import List, Dict, Optional, Any
 from datetime import datetime
 import logging
@@ -246,7 +247,7 @@ Provide:
 
         # Parse category and AI-related flag
         category = self._extract_category(response_text)
-        is_ai_related = 'no' not in response_text.lower() or 'yes' in response_text.lower()
+        is_ai_related = self._parse_openai_ai_related(response_text)
 
         return {
             'summary': response_text,
@@ -271,6 +272,22 @@ Provide:
                 return category
 
         return 'Other'
+
+    def _parse_openai_ai_related(self, response_text: str) -> bool:
+        """Parse AI-related flag from OpenAI structured response.
+
+        Looks for yes/no after "3." or "AI-related" markers instead of
+        naive substring matching which false-positives on words like
+        "know", "innovation", "technology".
+        """
+        match = re.search(
+            r'(?:3\.\s*(?:Is this )?)?AI[- ]related.*?\b(yes|no)\b',
+            response_text, re.IGNORECASE
+        )
+        if match:
+            return match.group(1).lower() == 'yes'
+        # Conservative default: treat as AI-related to avoid filtering out
+        return True
 
     async def haiku_analyze(self, article: Dict[str, Any]) -> Dict[str, Any]:
         """
@@ -365,8 +382,19 @@ AI_RELATED: [yes/no]"""
             else:
                 consensus_summary = summaries[0][1]
 
+        # If no providers succeeded, return explicitly uncertain results
+        if not summaries:
+            logger.warning("All AI providers failed — returning uncertain consensus")
+            return {
+                'summary': consensus_summary,
+                'is_ai_related': None,
+                'relevance_score': 0,
+                'providers_count': 0,
+                'confidence': 0.0,
+            }
+
         # Determine AI-related consensus (majority vote)
-        is_ai_related = sum(is_ai_votes) > len(is_ai_votes) / 2 if is_ai_votes else False
+        is_ai_related = sum(is_ai_votes) > len(is_ai_votes) / 2
 
         # Average relevance score
         avg_relevance = sum(relevance_scores) / len(relevance_scores) if relevance_scores else 5.0

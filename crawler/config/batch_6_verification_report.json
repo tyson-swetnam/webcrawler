@@ -1,0 +1,430 @@
+{
+  "batch": 6,
+  "description": "Final batch - R1 Universities (remaining)",
+  "verification_date": "2025-11-05T21:21:31.195416",
+  "total_urls": 14,
+  "verified": 3,
+  "verification_rate": "21.4%",
+  "results": [
+    {
+      "url": "https://news.usu.edu",
+      "institution": "Utah State University",
+      "status": "INVALID",
+      "confidence_score": 30,
+      "institution_verified": false,
+      "content_type": "unknown",
+      "quality_indicators": {
+        "has_structured_data": false,
+        "has_publication_date": false,
+        "has_author_attribution": false,
+        "word_count": 584,
+        "institutional_branding": false
+      },
+      "issues": [],
+      "recommendation": "SKIP",
+      "reasoning": "Low quality score - may not be primary news source",
+      "corrected_url": null,
+      "ai_tag_url": null,
+      "http_status": 200,
+      "response_time_ms": 940,
+      "has_2025_content": false,
+      "title": "Mailing lists service - home",
+      "category": "r1",
+      "config_file": "r1_universities.json"
+    },
+    {
+      "url": "https://news.georgemason.edu",
+      "institution": "George Mason University",
+      "status": "INVALID",
+      "confidence_score": 0,
+      "institution_verified": false,
+      "content_type": "unknown",
+      "quality_indicators": {
+        "has_structured_data": false,
+        "has_publication_date": false,
+        "has_author_attribution": false,
+        "word_count": 0,
+        "institutional_branding": false
+      },
+      "issues": [
+        {
+          "severity": "CRITICAL",
+          "message": "Connection failed"
+        }
+      ],
+      "recommendation": "SKIP",
+      "reasoning": "Cannot connect to server",
+      "corrected_url": null,
+      "ai_tag_url": null,
+      "http_status": null,
+      "response_time_ms": null,
+      "has_2025_content": false,
+      "title": null,
+      "category": "r1",
+      "config_file": "r1_universities.json"
+    },
+    {
+      "url": "https://news.olddominion.edu",
+      "institution": "Old Dominion University",
+      "status": "INVALID",
+      "confidence_score": 0,
+      "institution_verified": false,
+      "content_type": "unknown",
+      "quality_indicators": {
+        "has_structured_data": false,
+        "has_publication_date": false,
+        "has_author_attribution": false,
+        "word_count": 0,
+        "institutional_branding": false
+      },
+      "issues": [
+        {
+          "severity": "CRITICAL",
+          "message": "Connection failed"
+        }
+      ],
+      "recommendation": "SKIP",
+      "reasoning": "Cannot connect to server",
+      "corrected_url": null,
+      "ai_tag_url": null,
+      "http_status": null,
+      "response_time_ms": null,
+      "has_2025_content": false,
+      "title": null,
+      "category": "r1",
+      "config_file": "r1_universities.json"
+    },
+    {
+      "url": "https://news.virginia.edu",
+      "institution": "University of Virginia-Main Campus",
+      "status": "VALID",
+      "confidence_score": 90,
+      "institution_verified": true,
+      "content_type": "event",
+      "quality_indicators": {
+        "has_structured_data": true,
+        "has_publication_date": true,
+        "has_author_attribution": false,
+        "word_count": 5919,
+        "institutional_branding": true
+      },
+      "issues": [],
+      "recommendation": "PROCEED",
+      "reasoning": "URL verified with high confidence - institutional news site confirmed",
+      "corrected_url": null,
+      "ai_tag_url": null,
+      "http_status": 200,
+      "response_time_ms": 1636,
+      "has_2025_content": true,
+      "title": "UVA Today",
+      "category": "r1",
+      "config_file": "r1_universities.json"
+    },
+    {
+      "url": "https://news.virginiacommonwealth.edu",
+      "institution": "Virginia Commonwealth University",
+      "status": "INVALID",
+      "confidence_score": 0,
+      "institution_verified": false,
+      "content_type": "unknown",
+      "quality_indicators": {
+        "has_structured_data": false,
+        "has_publication_date": false,
+        "has_author_attribution": false,
+        "word_count": 0,
+        "institutional_branding": false
+      },
+      "issues": [
+        {
+          "severity": "CRITICAL",
+          "message": "Connection failed"
+        }
+      ],
+      "recommendation": "SKIP",
+      "reasoning": "Cannot connect to server",
+      "corrected_url": null,
+      "ai_tag_url": null,
+      "http_status": null,
+      "response_time_ms": null,
+      "has_2025_content": false,
+      "title": null,
+      "category": "r1",
+      "config_file": "r1_universities.json"
+    },
+    {
+      "url": "https://news.vt.edu",
+      "institution": "Virginia Polytechnic Institute and State University",
+      "status": "VALID",
+      "confidence_score": 90,
+      "institution_verified": true,
+      "content_type": "news_article",
+      "quality_indicators": {
+        "has_structured_data": false,
+        "has_publication_date": true,
+        "has_author_attribution": false,
+        "word_count": 7917,
+        "institutional_branding": true
+      },
+      "issues": [],
+      "recommendation": "PROCEED",
+      "reasoning": "URL verified with high confidence - institutional news site confirmed",
+      "corrected_url": null,
+      "ai_tag_url": null,
+      "http_status": 200,
+      "response_time_ms": 290,
+      "has_2025_content": true,
+      "title": "Virginia Tech News  | Virginia Tech News | Virginia Tech",
+      "category": "r1",
+      "config_file": "r1_universities.json"
+    },
+    {
+      "url": "https://news.william&.edu",
+      "institution": "William & Mary",
+      "status": "INVALID",
+      "confidence_score": 0,
+      "institution_verified": false,
+      "content_type": "unknown",
+      "quality_indicators": {
+        "has_structured_data": false,
+        "has_publication_date": false,
+        "has_author_attribution": false,
+        "word_count": 0,
+        "institutional_branding": false
+      },
+      "issues": [
+        {
+          "severity": "CRITICAL",
+          "message": "Invalid URL encoding: contains '&' symbol"
+        }
+      ],
+      "recommendation": "SKIP",
+      "reasoning": "URL contains invalid '&' character - should be 'wm.edu'",
+      "corrected_url": "https://www.wm.edu/news/",
+      "ai_tag_url": null,
+      "http_status": null,
+      "response_time_ms": null,
+      "has_2025_content": false,
+      "title": null,
+      "category": "r1",
+      "config_file": "r1_universities.json"
+    },
+    {
+      "url": "https://news.vermont.edu",
+      "institution": "University of Vermont",
+      "status": "INVALID",
+      "confidence_score": 0,
+      "institution_verified": false,
+      "content_type": "unknown",
+      "quality_indicators": {
+        "has_structured_data": false,
+        "has_publication_date": false,
+        "has_author_attribution": false,
+        "word_count": 0,
+        "institutional_branding": false
+      },
+      "issues": [
+        {
+          "severity": "CRITICAL",
+          "message": "Connection failed"
+        }
+      ],
+      "recommendation": "SKIP",
+      "reasoning": "Cannot connect to server",
+      "corrected_url": null,
+      "ai_tag_url": null,
+      "http_status": null,
+      "response_time_ms": null,
+      "has_2025_content": false,
+      "title": null,
+      "category": "r1",
+      "config_file": "r1_universities.json"
+    },
+    {
+      "url": "https://www.washington.edu/news/",
+      "institution": "University of Washington-Seattle Campus",
+      "status": "VALID",
+      "confidence_score": 90,
+      "institution_verified": true,
+      "content_type": "news_article",
+      "quality_indicators": {
+        "has_structured_data": false,
+        "has_publication_date": false,
+        "has_author_attribution": false,
+        "word_count": 4580,
+        "institutional_branding": true
+      },
+      "issues": [],
+      "recommendation": "PROCEED",
+      "reasoning": "URL verified with high confidence - institutional news site confirmed",
+      "corrected_url": null,
+      "ai_tag_url": null,
+      "http_status": 200,
+      "response_time_ms": 615,
+      "has_2025_content": true,
+      "title": "UW News",
+      "category": "r1",
+      "config_file": "r1_universities.json"
+    },
+    {
+      "url": "https://news.washingtonstate.edu",
+      "institution": "Washington State University",
+      "status": "INVALID",
+      "confidence_score": 0,
+      "institution_verified": false,
+      "content_type": "unknown",
+      "quality_indicators": {
+        "has_structured_data": false,
+        "has_publication_date": false,
+        "has_author_attribution": false,
+        "word_count": 0,
+        "institutional_branding": false
+      },
+      "issues": [
+        {
+          "severity": "CRITICAL",
+          "message": "Connection failed"
+        }
+      ],
+      "recommendation": "SKIP",
+      "reasoning": "Cannot connect to server",
+      "corrected_url": null,
+      "ai_tag_url": null,
+      "http_status": null,
+      "response_time_ms": null,
+      "has_2025_content": false,
+      "title": null,
+      "category": "r1",
+      "config_file": "r1_universities.json"
+    },
+    {
+      "url": "https://news.wisconsin.edu",
+      "institution": "University of Wisconsin-Madison",
+      "status": "INVALID",
+      "confidence_score": 0,
+      "institution_verified": false,
+      "content_type": "unknown",
+      "quality_indicators": {
+        "has_structured_data": false,
+        "has_publication_date": false,
+        "has_author_attribution": false,
+        "word_count": 0,
+        "institutional_branding": false
+      },
+      "issues": [
+        {
+          "severity": "CRITICAL",
+          "message": "Connection failed"
+        }
+      ],
+      "recommendation": "SKIP",
+      "reasoning": "Cannot connect to server",
+      "corrected_url": null,
+      "ai_tag_url": null,
+      "http_status": null,
+      "response_time_ms": null,
+      "has_2025_content": false,
+      "title": null,
+      "category": "r1",
+      "config_file": "r1_universities.json"
+    },
+    {
+      "url": "https://news.wisconsin.edu",
+      "institution": "University of Wisconsin-Milwaukee",
+      "status": "INVALID",
+      "confidence_score": 0,
+      "institution_verified": false,
+      "content_type": "unknown",
+      "quality_indicators": {
+        "has_structured_data": false,
+        "has_publication_date": false,
+        "has_author_attribution": false,
+        "word_count": 0,
+        "institutional_branding": false
+      },
+      "issues": [
+        {
+          "severity": "CRITICAL",
+          "message": "Connection failed"
+        }
+      ],
+      "recommendation": "SKIP",
+      "reasoning": "Cannot connect to server",
+      "corrected_url": null,
+      "ai_tag_url": null,
+      "http_status": null,
+      "response_time_ms": null,
+      "has_2025_content": false,
+      "title": null,
+      "category": "r1",
+      "config_file": "r1_universities.json"
+    },
+    {
+      "url": "https://news.westvirginia.edu",
+      "institution": "West Virginia University",
+      "status": "INVALID",
+      "confidence_score": 0,
+      "institution_verified": false,
+      "content_type": "unknown",
+      "quality_indicators": {
+        "has_structured_data": false,
+        "has_publication_date": false,
+        "has_author_attribution": false,
+        "word_count": 0,
+        "institutional_branding": false
+      },
+      "issues": [
+        {
+          "severity": "CRITICAL",
+          "message": "Connection failed"
+        }
+      ],
+      "recommendation": "SKIP",
+      "reasoning": "Cannot connect to server",
+      "corrected_url": null,
+      "ai_tag_url": null,
+      "http_status": null,
+      "response_time_ms": null,
+      "has_2025_content": false,
+      "title": null,
+      "category": "r1",
+      "config_file": "r1_universities.json"
+    },
+    {
+      "url": "https://news.wyoming.edu",
+      "institution": "University of Wyoming",
+      "status": "INVALID",
+      "confidence_score": 0,
+      "institution_verified": false,
+      "content_type": "unknown",
+      "quality_indicators": {
+        "has_structured_data": false,
+        "has_publication_date": false,
+        "has_author_attribution": false,
+        "word_count": 0,
+        "institutional_branding": false
+      },
+      "issues": [
+        {
+          "severity": "CRITICAL",
+          "message": "Connection failed"
+        }
+      ],
+      "recommendation": "SKIP",
+      "reasoning": "Cannot connect to server",
+      "corrected_url": null,
+      "ai_tag_url": null,
+      "http_status": null,
+      "response_time_ms": null,
+      "has_2025_content": false,
+      "title": null,
+      "category": "r1",
+      "config_file": "r1_universities.json"
+    }
+  ],
+  "summary": {
+    "proceed": 3,
+    "caution": 0,
+    "skip": 11,
+    "review": 0
+  }
+}

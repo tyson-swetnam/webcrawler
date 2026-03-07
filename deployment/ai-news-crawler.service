@@ -1,20 +1,20 @@
 [Unit]
-Description=AI News Crawler - Daily university AI news monitoring
-Documentation=https://github.com/yourorg/ai-news-crawler
-After=network.target postgresql.service
+Description=AI News Crawler - Daily university AI news monitoring with auto-commit
+Documentation=https://github.com/tyson-swetnam/webcrawler
+After=network.target
 
 [Service]
 Type=oneshot
-User=crawler
-Group=crawler
-WorkingDirectory=/opt/ai-news-crawler
+User=tswetnam
+Group=tswetnam
+WorkingDirectory=/home/tswetnam/github/webcrawler
 
 # Environment
-Environment="PATH=/opt/ai-news-crawler/venv/bin:/usr/local/bin:/usr/bin:/bin"
-EnvironmentFile=/opt/ai-news-crawler/.env
+Environment="PATH=/home/tswetnam/github/webcrawler/venv/bin:/usr/local/bin:/usr/bin:/bin"
+EnvironmentFile=/home/tswetnam/github/webcrawler/.env
 
-# Execution
-ExecStart=/opt/ai-news-crawler/venv/bin/python -m crawler
+# Execution - runs crawler and commits/pushes changes
+ExecStart=/home/tswetnam/github/webcrawler/scripts/run_crawler_and_commit.sh
 
 # Logging
 StandardOutput=journal
@@ -22,15 +22,8 @@ StandardError=journal
 SyslogIdentifier=ai-news-crawler
 
 # Resource limits
-TimeoutStartSec=600
+TimeoutStartSec=1800
 TimeoutStopSec=30
-
-# Security hardening
-NoNewPrivileges=true
-PrivateTmp=true
-ProtectSystem=strict
-ProtectHome=true
-ReadWritePaths=/opt/ai-news-crawler /var/log/ai-news-crawler
 
 # Restart policy
 Restart=no

@@ -9,8 +9,12 @@ import scrapy
 from scrapy.linkextractors import LinkExtractor
 from datetime import datetime, timezone
 from typing import Dict, Any
+from urllib.parse import urlparse
 import hashlib
+import json
 import logging
+
+import feedparser
 
 from crawler.config.settings import settings
 from crawler.db.models import URL, Article
@@ -23,6 +27,7 @@ from crawler.utils.deduplication import (
     normalize_url
 )
 from crawler.utils.mcp_fetcher import MCPFetcher
+from crawler.utils.university_name_mapper import get_mapper
 
 logger = logging.getLogger(__name__)
 
@@ -92,6 +97,9 @@ class UniversityNewsSpider(scrapy.Spider):
         # Initialize MCP fetcher for fallback
         self.mcp_fetcher = MCPFetcher()
 
+        # Initialize university name mapper for fixing sitename extraction issues
+        self.name_mapper = get_mapper()
+
         # Link extractor for news pages
         self.link_extractor = LinkExtractor(
             allow=(
@@ -99,21 +107,31 @@ class UniversityNewsSpider(scrapy.Spider):
                 r'/press-releases?/',
                 r'/media/',
                 r'/research/',
-                r'/stories/',
-                r'/articles/'
+                r'/stories?/',
+                r'/articles?/',
+                r'/\d{4}/\d{2}/',
+                r'/posts?/',
+                r'/features?/',
             ),
             deny=(
-                r'/(tag|category|author|archive|search|login|admin|calendar|events|galleries)/',
+                r'/(tag|category|author|archive|section|search|login|admin|calendar|events|galleries)/',
                 r'/archives/\d{4}/',  # Exclude year-based archives (e.g., /archives/2021/)
                 r'/stories/archives/',  # Exclude CMU-style archive directories
+                # Exclude navigation/listing pages (end with these terms)
+                r'/news/?$',  # Just "/news" or "/news/"
+                r'/news-events/?$',
+                r'/news-and-events/?$',
+                r'/press-releases/?$',
+                r'/features-articles/?$',
+                r'/accolades-honors/?$',
+                r'/news/(features|accolades|honors|announcements|updates)/?$',
+                r'/articles/?$',  # Just "/articles" or "/articles/"
+                r'/stories/?$',  # Just "/stories" or "/stories/"
                 r'\.(pdf|jpg|jpeg|png|gif|zip|rar|exe)$'
             ),
             unique=True,
             deny_domains=[]
         )
-
-        # Build domain-to-canonical-name mapping for accurate university classification
-        self.domain_to_canonical = self._build_domain_mapping()
 
         # Load university sources
         self.start_urls = self.load_university_sources()
@@ -129,8 +147,12 @@ class UniversityNewsSpider(scrapy.Spider):
             'mcp_fallback_successes': 0
         }
 
+        # Per-domain tracking
+        self.domain_stats = {}  # hostname -> {'urls': 0, 'articles': 0, 'errors': 0}
+        self.sources_attempted = set()
+        self.sources_succeeded = set()
+
         logger.info(f"Initialized {self.name} spider with {len(self.start_urls)} start URLs")
-        logger.info(f"Built domain mapping for {len(self.domain_to_canonical)} domains")
 
     @property
     def db(self):
@@ -159,109 +181,6 @@ class UniversityNewsSpider(scrapy.Spider):
             logger.info("Database session created for spider")
         return self._db
 
-    def _build_domain_mapping(self) -> Dict[str, str]:
-        """
-        Build a mapping from news domains to canonical university/facility names.
-
-        This mapping is used to ensure that articles are classified with the
-        canonical name from config files rather than Trafilatura's extracted sitename.
-
-        Returns:
-            Dictionary mapping domain (e.g., 'eng.auburn.edu') to canonical name
-            (e.g., 'Auburn University')
-        """
-        import json
-        from pathlib import Path
-        from urllib.parse import urlparse
-
-        domain_map = {}
-
-        # Load R1 universities
-        r1_path = Path("crawler/config/r1_universities.json")
-        if r1_path.exists():
-            try:
-                with open(r1_path, 'r') as f:
-                    data = json.load(f)
-                    for univ in data.get('universities', []):
-                        canonical = univ.get('canonical_name', univ.get('name'))
-
-                        # Add primary domain
-                        if 'domains' in univ and 'primary' in univ['domains']:
-                            domain_map[univ['domains']['primary']] = canonical
-
-                        # Add news domains
-                        if 'domains' in univ and 'news_domains' in univ['domains']:
-                            for domain in univ['domains']['news_domains']:
-                                domain_map[domain] = canonical
-
-                        # Add domains from news URLs
-                        if 'news_sources' in univ and 'primary' in univ['news_sources']:
-                            url = univ['news_sources']['primary'].get('url')
-                            if url:
-                                parsed = urlparse(url)
-                                domain_map[parsed.netloc] = canonical
-
-                            ai_url = univ['news_sources']['primary'].get('ai_tag_url')
-                            if ai_url:
-                                parsed = urlparse(ai_url)
-                                domain_map[parsed.netloc] = canonical
-
-                logger.info(f"Loaded {len([k for k, v in domain_map.items()])} domains from R1 universities")
-            except Exception as e:
-                logger.error(f"Failed to load R1 universities: {e}")
-
-        # Load peer institutions
-        peer_path = Path("crawler/config/peer_institutions.json")
-        if peer_path.exists():
-            try:
-                with open(peer_path, 'r') as f:
-                    data = json.load(f)
-                    for univ in data.get('universities', []):
-                        canonical = univ.get('canonical_name', univ.get('name'))
-
-                        # Add domains from news URLs
-                        if 'news_sources' in univ and 'primary' in univ['news_sources']:
-                            url = univ['news_sources']['primary'].get('url')
-                            if url:
-                                parsed = urlparse(url)
-                                domain_map[parsed.netloc] = canonical
-
-                            ai_url = univ['news_sources']['primary'].get('ai_tag_url')
-                            if ai_url:
-                                parsed = urlparse(ai_url)
-                                domain_map[parsed.netloc] = canonical
-
-                logger.info(f"Loaded domains from {len(data.get('universities', []))} peer institutions")
-            except Exception as e:
-                logger.error(f"Failed to load peer institutions: {e}")
-
-        # Load major facilities
-        facilities_path = Path("crawler/config/major_facilities.json")
-        if facilities_path.exists():
-            try:
-                with open(facilities_path, 'r') as f:
-                    data = json.load(f)
-                    for facility in data.get('facilities', []):
-                        canonical = facility.get('name')
-
-                        # Add domains from news URLs
-                        if 'news_sources' in facility and 'primary' in facility['news_sources']:
-                            url = facility['news_sources']['primary'].get('url')
-                            if url:
-                                parsed = urlparse(url)
-                                domain_map[parsed.netloc] = canonical
-
-                            ai_url = facility['news_sources']['primary'].get('ai_tag_url')
-                            if ai_url:
-                                parsed = urlparse(ai_url)
-                                domain_map[parsed.netloc] = canonical
-
-                logger.info(f"Loaded domains from {len(data.get('facilities', []))} major facilities")
-            except Exception as e:
-                logger.error(f"Failed to load major facilities: {e}")
-
-        return domain_map
-
     def load_university_sources(self) -> list:
         """
         Load university news URLs from configuration.
@@ -278,7 +197,6 @@ class UniversityNewsSpider(scrapy.Spider):
                 if url:
                     urls.append(url)
                     # Add domain to allowed_domains
-                    from urllib.parse import urlparse
                     domain = urlparse(url).netloc
                     if domain not in self.allowed_domains:
                         self.allowed_domains.append(domain)
@@ -290,23 +208,105 @@ class UniversityNewsSpider(scrapy.Spider):
             logger.error(f"Failed to load university sources: {e}")
             return []
 
+    def _is_rss_feed(self, response) -> bool:
+        """Detect if the response is an RSS/Atom feed."""
+        content_type = response.headers.get('Content-Type', b'').decode('utf-8', errors='ignore').lower()
+        if any(ct in content_type for ct in ('xml', 'rss', 'atom', 'feed')):
+            return True
+        # Body sniffing for feeds served as text/html
+        body_start = response.text[:500].strip() if hasattr(response, 'text') else ''
+        return body_start.startswith('<?xml') or '<rss' in body_start or '<feed' in body_start
+
+    def _parse_rss_feed(self, response):
+        """Parse RSS/Atom feed and yield requests for each article entry."""
+        self.logger.info(f"Parsing RSS feed: {response.url}")
+        feed = feedparser.parse(response.text)
+
+        if not feed.entries:
+            self.logger.warning(f"No entries found in feed: {response.url}")
+            return
+
+        self.logger.info(f"Found {len(feed.entries)} entries in RSS feed: {response.url}")
+
+        for entry in feed.entries:
+            link = entry.get('link')
+            if not link:
+                continue
+
+            self.stats['urls_discovered'] += 1
+
+            # Skip navigation pages
+            if self._is_navigation_page('', link):
+                self.logger.debug(f"Skipping navigation URL from feed: {link}")
+                continue
+
+            # Dedup check
+            normalized = normalize_url(link)
+            url_hash = compute_url_hash(normalized)
+
+            try:
+                if check_url_seen(self.db, url_hash):
+                    self.stats['duplicates_skipped'] += 1
+                    self.logger.debug(f"Skipping duplicate feed URL: {link}")
+                    continue
+            except Exception as e:
+                self.logger.warning(f"DB dedup check failed for {link}, proceeding: {e}")
+                self.db.rollback()
+
+            # Dynamically add article domain to allowed_domains
+            domain = urlparse(link).netloc
+            if domain and domain not in self.allowed_domains:
+                self.allowed_domains.append(domain)
+                self.logger.debug(f"Added domain from feed entry: {domain}")
+
+            yield scrapy.Request(
+                link,
+                callback=self.parse_article,
+                meta={
+                    'url_hash': url_hash,
+                    'normalized_url': normalized
+                },
+                errback=self.handle_error
+            )
+
     def parse(self, response):
         """
         Parse news listing page.
 
         Extracts article links and follows pagination.
+        Detects RSS/Atom feeds and routes to feed parser.
         """
+        # RSS/Atom feed detection — route to feed parser
+        if self._is_rss_feed(response):
+            yield from self._parse_rss_feed(response)
+            return
+
         self.logger.info(f"Parsing listing page: {response.url}")
+        domain = urlparse(response.url).netloc
+        self.sources_attempted.add(domain)
 
         # Extract article links
         for link in self.link_extractor.extract_links(response):
             self.stats['urls_discovered'] += 1
 
+            # Pre-filter obvious listing/navigation pages by URL pattern
+            # This prevents them from even entering the database
+            if self._is_navigation_page('', link.url):
+                self.logger.debug(f"Skipping navigation/listing page URL: {link.url}")
+                continue
+
             # Check if URL already seen (fast bloom filter check)
             normalized = normalize_url(link.url)
             url_hash = compute_url_hash(normalized)
 
-            if not check_url_seen(self.db, url_hash):
+            try:
+                url_seen = check_url_seen(self.db, url_hash)
+            except Exception as e:
+                self.logger.warning(f"DB dedup check failed for {link.url}, proceeding: {e}")
+                self.db.rollback()
+                url_seen = False
+
+            if not url_seen:
                 yield scrapy.Request(
                     link.url,
                     callback=self.parse_article,
@@ -376,6 +376,12 @@ class UniversityNewsSpider(scrapy.Spider):
                 self._update_url_status(url_hash, 'excluded')
                 return
 
+            # Check for generic navigation page titles
+            if self._is_navigation_page(extracted.get('title', ''), response.url):
+                self.logger.info(f"Skipping navigation/listing page: {extracted.get('title', 'Untitled')}")
+                self._update_url_status(url_hash, 'excluded')
+                return
+
             # Check article age - only process recent articles
             if extracted.get('date'):
                 try:
@@ -399,7 +405,6 @@ class UniversityNewsSpider(scrapy.Spider):
             content_hash = compute_content_hash(extracted['text'])
 
             # Extract hostname
-            from urllib.parse import urlparse
             hostname = urlparse(response.url).netloc
 
             # Prepare article data
@@ -426,6 +431,11 @@ class UniversityNewsSpider(scrapy.Spider):
             self._store_article(article_data)
 
             self.stats['articles_extracted'] += 1
+            domain = urlparse(response.url).netloc
+            self.sources_succeeded.add(domain)
+            if domain not in self.domain_stats:
+                self.domain_stats[domain] = {'urls': 0, 'articles': 0, 'errors': 0}
+            self.domain_stats[domain]['articles'] += 1
             self.logger.info(f"Successfully extracted article: {extracted.get('title', 'Untitled')}")
 
             yield article_data
@@ -437,12 +447,15 @@ class UniversityNewsSpider(scrapy.Spider):
 
     def _store_article(self, article_data: Dict[str, Any]):
         """
-        Store article in database.
+        Store article in database using a savepoint so failures don't poison the session.
 
         Args:
             article_data: Article data dictionary
         """
         try:
+            # Use a savepoint so a failure here doesn't abort the entire session
+            nested = self.db.begin_nested()
+
             # Get or create URL entry
             url_obj, created = get_or_create_url(
                 self.db,
@@ -462,6 +475,7 @@ class UniversityNewsSpider(scrapy.Spider):
                 self.logger.debug(f"Duplicate content detected for {article_data['url']}")
                 url_obj.status = 'crawled'
                 url_obj.last_checked = datetime.now(timezone.utc)
+                nested.commit()
                 self.db.commit()
                 return
 
@@ -475,11 +489,9 @@ class UniversityNewsSpider(scrapy.Spider):
                 except (ValueError, AttributeError):
                     pass
 
-            # Determine canonical university name
-            # Priority: domain mapping lookup -> sitename from Trafilatura
-            canonical_name = self._get_canonical_name(
-                article_data['hostname'],
-                article_data.get('sitename')
+            canonical_name = self.name_mapper.get_canonical_name(
+                hostname=article_data['hostname'],
+                fallback_sitename=article_data.get('sitename')
             )
 
             # Create article entry
@@ -497,8 +509,7 @@ class UniversityNewsSpider(scrapy.Spider):
                 metadata={
                     'categories': article_data.get('categories', []),
                     'tags': article_data.get('tags', []),
-                    'hostname': article_data['hostname'],
-                    'original_sitename': article_data.get('sitename')  # Preserve original for debugging
+                    'hostname': article_data['hostname']
                 },
                 first_scraped=datetime.now(timezone.utc)
             )
@@ -509,82 +520,99 @@ class UniversityNewsSpider(scrapy.Spider):
             url_obj.content_hash = article_data['content_hash']
 
             self.db.add(article)
+            nested.commit()
             self.db.commit()
 
-            self.logger.debug(f"Stored article in database: {article.article_id} (university: {canonical_name})")
+            self.logger.debug(f"Stored article in database: {article.article_id}")
 
         except Exception as e:
             self.logger.error(f"Failed to store article in database: {e}")
             self.db.rollback()
-            raise
 
-    def _get_canonical_name(self, hostname: str, sitename: str = None) -> str:
+    def _is_navigation_page(self, title: str, url: str) -> bool:
         """
-        Get canonical university/facility name from domain mapping.
-
-        This method looks up the hostname in the domain-to-canonical mapping
-        built from config files. If not found, falls back to sitename.
+        Check if this is a navigation/listing page rather than an article.
 
         Args:
-            hostname: The domain from the article URL (e.g., 'eng.auburn.edu')
-            sitename: The sitename extracted by Trafilatura (fallback)
+            title: Page title
+            url: Page URL
 
         Returns:
-            Canonical name from config, or sitename if no mapping exists
+            True if this appears to be a navigation page
         """
-        # Direct lookup
-        if hostname in self.domain_to_canonical:
-            canonical = self.domain_to_canonical[hostname]
-            if sitename and canonical != sitename:
-                self.logger.debug(
-                    f"Mapped '{sitename}' -> '{canonical}' for domain {hostname}"
-                )
-            return canonical
+        if not title:
+            return False
 
-        # Try removing 'www.' prefix
-        if hostname.startswith('www.'):
-            without_www = hostname[4:]
-            if without_www in self.domain_to_canonical:
-                canonical = self.domain_to_canonical[without_www]
-                self.logger.debug(
-                    f"Mapped '{sitename}' -> '{canonical}' for domain {hostname} (without www)"
-                )
-                return canonical
+        # Generic title patterns that indicate navigation pages
+        generic_patterns = [
+            r'^News\s*$',
+            r'^News & Events',
+            r'^News and Events',
+            r'^Press Releases?\s*$',
+            r'^News Releases?\s*$',  # Added for UW and similar sites
+            r'^Media\s*$',
+            r'^Stories\s*$',
+            r'^Articles\s*$',
+            r'^Latest News',
+            r'^Latest Stories',
+            r'^All News',
+            r'^All Stories',
+            r'^\w+\s+News\s*$',  # e.g., "Pittwire News", "University News"
+            r'^Features & Articles',
+            r'^Accolades & Honors',
+            r'^The Latest News',  # Added for UW-style pages
+            r'^Recent News',
+            r'^Archive',
+            r'^News Archive',
+            r'Archives?\s*$',  # Titles ending with "Archive" or "Archives"
+        ]
 
-        # Try parent domain (e.g., 'eng.auburn.edu' -> 'auburn.edu')
-        parts = hostname.split('.')
-        if len(parts) > 2:
-            parent_domain = '.'.join(parts[-2:])
-            if parent_domain in self.domain_to_canonical:
-                canonical = self.domain_to_canonical[parent_domain]
-                self.logger.debug(
-                    f"Mapped '{sitename}' -> '{canonical}' for domain {hostname} (parent domain)"
-                )
-                return canonical
+        import re
+        for pattern in generic_patterns:
+            if re.match(pattern, title, re.IGNORECASE):
+                return True
 
-        # No mapping found, use sitename as fallback
-        if sitename:
-            self.logger.debug(f"No canonical mapping found for {hostname}, using sitename: {sitename}")
-            return sitename
+        # Check URL patterns too
+        url_navigation_patterns = [
+            r'/news/?$',
+            r'/news-events/?$',
+            r'/press-releases?/?$',
+            r'/news-releases?/?$',  # Added for consistency
+            r'/media/?$',
+            r'/stories/?$',
+            r'/articles/?$',
+            r'/category/[^/]+/?$',  # Category pages (e.g., /category/news-releases/)
+            r'/tag/[^/]+/?$',  # Tag pages
+            r'/archive/?$',  # Archive pages
+            r'/latest[^/]*/?$',  # Latest news pages (e.g., /latest/, /latest-news/)
+            r'/the-latest[^/]*/?$',  # UW-style "the-latest-news-from" pages
+            r'/all-news/?$',
+            r'/recent[^/]*/?$',  # Recent news pages
+            r'/section/[^/]+/?$',  # Section listing pages (e.g., /news/section/engineering/)
+        ]
 
-        # Last resort: use hostname
-        self.logger.warning(f"No canonical name or sitename found for {hostname}")
-        return hostname
+        for pattern in url_navigation_patterns:
+            if re.search(pattern, url, re.IGNORECASE):
+                return True
+
+        return False
 
     def _update_url_status(self, url_hash: str, status: str):
         """
-        Update URL status in database.
+        Update URL status in database using a savepoint for isolation.
 
         Args:
             url_hash: URL hash
             status: New status
         """
         try:
+            nested = self.db.begin_nested()
             url_obj = self.db.query(URL).filter(URL.url_hash == url_hash).first()
             if url_obj:
                 url_obj.status = status
                 url_obj.last_checked = datetime.now(timezone.utc)
-                self.db.commit()
+            nested.commit()
+            self.db.commit()
         except Exception as e:
             self.logger.error(f"Failed to update URL status: {e}")
             self.db.rollback()
@@ -600,6 +628,10 @@ class UniversityNewsSpider(scrapy.Spider):
         self.logger.error(f"Request failed: {url}")
         self.logger.error(f"Error: {failure.value}")
         self.stats['errors'] += 1
+        domain = urlparse(url).netloc
+        if domain not in self.domain_stats:
+            self.domain_stats[domain] = {'urls': 0, 'articles': 0, 'errors': 0}
+        self.domain_stats[domain]['errors'] += 1
 
         # Check if we should attempt MCP fallback
         status_code = None
@@ -653,7 +685,7 @@ class UniversityNewsSpider(scrapy.Spider):
 
     def closed(self, reason):
         """
-        Clean up when spider closes.
+        Clean up when spider closes. Writes health stats to JSON file.
 
         Args:
             reason: Reason for spider closure
@@ -661,17 +693,50 @@ class UniversityNewsSpider(scrapy.Spider):
         self.logger.info(f"Spider closing: {reason}")
         self.logger.info(f"Statistics: {self.stats}")
 
+        # Build health report
+        failed_domains = {
+            domain: stats for domain, stats in self.domain_stats.items()
+            if stats.get('errors', 0) > 0 and stats.get('articles', 0) == 0
+        }
+
+        health_report = {
+            'stats': self.stats,
+            'sources_attempted': len(self.sources_attempted),
+            'sources_succeeded': len(self.sources_succeeded),
+            'domain_stats': self.domain_stats,
+            'failed_domains': list(failed_domains.keys())[:20],
+            'closed_reason': reason,
+            'timestamp': datetime.now(timezone.utc).isoformat(),
+        }
+
+        # Write health report to file for main pipeline to read
+        import os
+        stats_dir = os.environ.get('CRAWLER_STATS_DIR', 'output')
+        os.makedirs(stats_dir, exist_ok=True)
+        stats_file = os.path.join(stats_dir, 'spider_health.json')
+        try:
+            with open(stats_file, 'w') as f:
+                json.dump(health_report, f, indent=2)
+            self.logger.info(f"Health report written to {stats_file}")
+        except Exception as e:
+            self.logger.error(f"Failed to write health report: {e}")
+
         # Close database session
-        self.db.close()
+        if self._db is not None:
+            self._db.close()
 
         # Log final stats
         logger.info(f"""
-Spider Statistics:
-  URLs Discovered: {self.stats['urls_discovered']}
-  URLs Crawled: {self.stats['urls_crawled']}
-  Articles Extracted: {self.stats['articles_extracted']}
-  Duplicates Skipped: {self.stats['duplicates_skipped']}
-  Errors: {self.stats['errors']}
-  MCP Fallback Attempts: {self.stats['mcp_fallback_attempts']}
-  MCP Fallback Successes: {self.stats['mcp_fallback_successes']}
+=== SPIDER HEALTH REPORT ===
+Sources Attempted: {len(self.sources_attempted)}
+Sources Succeeded: {len(self.sources_succeeded)}
+URLs Discovered: {self.stats['urls_discovered']}
+URLs Crawled: {self.stats['urls_crawled']}
+Articles Extracted: {self.stats['articles_extracted']}
+Duplicates Skipped: {self.stats['duplicates_skipped']}
+Errors: {self.stats['errors']}
+MCP Fallback Attempts: {self.stats['mcp_fallback_attempts']}
+MCP Fallback Successes: {self.stats['mcp_fallback_successes']}
+Failed Domains: {', '.join(list(failed_domains.keys())[:10]) or 'None'}
+============================
 """)

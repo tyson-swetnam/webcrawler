@@ -1,17 +1,46 @@
 {
   "metadata": {
-    "schema_version": "2.0.0",
+    "schema_version": "3.0.0",
     "title": "Peer Institutions - University of Arizona Comparator Group",
     "description": "Peer institutions for comparison and benchmarking purposes",
     "baseline_institution": "University of Arizona",
-    "total_institutions": 16,
+    "total_institutions": 27,
     "date_compiled": "2025-11-02",
-    "last_updated": "2025-11-04T14:14:52.238155+00:00",
-    "quality_notes": [
-      "Removed 11 R1 duplicates on 2025-11-04"
+    "last_updated": "2026-02-18T03:43:11.350768+00:00",
+    "migration_notes": [
+      "Migrated to schema v3.0.0 on 2025-11-04: Converted news_sources to array structure, removed broken ai_tag_url field, added multi-source support for AI research institutions"
     ]
   },
   "universities": [
+    {
+      "id": 1,
+      "name": "The University of Arizona",
+      "abbreviation": "UArizona",
+      "canonical_name": "University of Arizona",
+      "is_baseline": true,
+      "location": {
+        "city": "Tucson",
+        "state": "AZ",
+        "state_full": "Arizona",
+        "region": "West",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://news.arizona.edu/",
+          "description": "The University of Arizona official news and press releases",
+          "verified": true,
+          "crawl_priority": 200,
+          "last_verified": "2025-11-05T13:44:26.945415+00:00",
+          "rss_feed": "https://news.arizona.edu/rss.xml"
+        }
+      ]
+    },
     {
       "id": 2,
       "name": "Arizona State University",
@@ -28,15 +57,73 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://newsroom.asu.edu/",
-          "ai_tag_url": "https://newsroom.asu.edu/",
-          "verified": false,
+          "description": "Arizona State University official news and press releases",
+          "verified": true,
           "crawl_priority": 200,
-          "notes": " | ai_tag_url replaced with base url due to error: HTTP 404"
+          "last_verified": "2025-11-05T13:44:26.945425+00:00",
+          "rss_feed": "https://newsroom.asu.edu/rss.xml"
         }
-      }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "University of Colorado Boulder",
+      "abbreviation": "CU Boulder",
+      "canonical_name": "University of Colorado Boulder",
+      "location": {
+        "city": "Boulder",
+        "state": "CO",
+        "state_full": "Colorado",
+        "region": "West",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.colorado.edu/today/",
+          "description": "University of Colorado Boulder official news and press releases",
+          "verified": true,
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T14:10:28.688494",
+          "rss_feed": "https://www.colorado.edu/rss.xml"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "University of Utah",
+      "abbreviation": "Utah",
+      "canonical_name": "University of Utah",
+      "location": {
+        "city": "Salt Lake City",
+        "state": "UT",
+        "state_full": "Utah",
+        "region": "West",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://attheu.utah.edu/",
+          "description": "University of Utah official news and press releases",
+          "verified": true,
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T14:10:28.688507",
+          "rss_feed": "https://attheu.utah.edu/feed/"
+        }
+      ]
     },
     {
       "id": 5,
@@ -54,16 +141,17 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://news.unm.edu/",
-          "ai_tag_url": "https://news.unm.edu/",
-          "verified": false,
+          "description": "University of New Mexico official news and press releases",
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2025-11-04T13:55:18.612974+00:00",
-          "notes": " | ai_tag_url replaced with base url due to error: HTTP 404"
+          "last_verified": "2025-11-05T14:10:28.688510",
+          "rss_feed": "https://news.unm.edu/rss.xml"
         }
-      }
+      ]
     },
     {
       "id": 6,
@@ -81,16 +169,43 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.unlv.edu/news/",
-          "ai_tag_url": "https://www.unlv.edu/news/",
-          "verified": false,
+          "description": "University of Nevada, Las Vegas official news and press releases",
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2025-11-04T13:55:21.119977+00:00",
-          "notes": " | ai_tag_url replaced with base url due to error: HTTP 404"
+          "last_verified": "2025-11-05T14:10:28.688512"
         }
-      }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "University of Kansas",
+      "abbreviation": "KU",
+      "canonical_name": "University of Kansas",
+      "location": {
+        "city": "Lawrence",
+        "state": "KS",
+        "state_full": "Kansas",
+        "region": "Midwest",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://news.ku.edu/",
+          "description": "University of Kansas official news and press releases",
+          "verified": true,
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T14:10:28.688514"
+        }
+      ]
     },
     {
       "id": 8,
@@ -108,15 +223,100 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://munews.missouri.edu/",
-          "ai_tag_url": "https://munews.missouri.edu/news-releases/?topics=artificial-intelligence",
+          "description": "University of Missouri official news and press releases",
           "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2025-11-04T13:55:22.282944+00:00"
+          "last_verified": "2025-11-05T14:10:28.688516",
+          "rss_feed": "https://showme.missouri.edu/feed/"
         }
-      }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "University of Kentucky",
+      "abbreviation": "UK",
+      "canonical_name": "University of Kentucky",
+      "location": {
+        "city": "Lexington",
+        "state": "KY",
+        "state_full": "Kentucky",
+        "region": "South",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://uknow.uky.edu/",
+          "description": "University of Kentucky official news and press releases",
+          "verified": true,
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T14:10:28.688517",
+          "rss_feed": "https://uknow.uky.edu/rss.xml"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Iowa State University",
+      "abbreviation": "ISU",
+      "canonical_name": "Iowa State University",
+      "location": {
+        "city": "Ames",
+        "state": "IA",
+        "state_full": "Iowa",
+        "region": "Midwest",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.news.iastate.edu/",
+          "description": "Iowa State University official news and press releases",
+          "verified": true,
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T14:10:28.688519",
+          "rss_feed": "https://www.news.iastate.edu/rss.xml"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Virginia Tech",
+      "abbreviation": "VT",
+      "canonical_name": "Virginia Polytechnic Institute and State University",
+      "location": {
+        "city": "Blacksburg",
+        "state": "VA",
+        "state_full": "Virginia",
+        "region": "South",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://vtnews.vt.edu/",
+          "description": "Virginia Tech official news and press releases",
+          "verified": true,
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T14:10:28.688521"
+        }
+      ]
     },
     {
       "id": 12,
@@ -134,15 +334,17 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://news.ncsu.edu/",
-          "ai_tag_url": "https://news.ncsu.edu/tag/artificial-intelligence/",
+          "description": "North Carolina State University official news and press releases",
           "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2025-11-04T13:55:23.222764+00:00"
+          "last_verified": "2025-11-05T14:10:28.688523",
+          "rss_feed": "https://news.ncsu.edu/homepage-3/feed/"
         }
-      }
+      ]
     },
     {
       "id": 13,
@@ -160,15 +362,44 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://news.utk.edu/",
-          "ai_tag_url": "https://news.utk.edu/tag/artificial-intelligence/",
+          "description": "University of Tennessee official news and press releases",
           "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2025-11-04T13:55:23.597579+00:00"
+          "last_verified": "2025-11-05T14:10:28.688524",
+          "rss_feed": "https://news.utk.edu/feed/"
         }
-      }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Auburn University",
+      "abbreviation": "Auburn",
+      "canonical_name": "Auburn University",
+      "location": {
+        "city": "Auburn",
+        "state": "AL",
+        "state_full": "Alabama",
+        "region": "South",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://news.auburn.edu/",
+          "description": "Auburn University official news and press releases",
+          "verified": true,
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T14:10:28.688526"
+        }
+      ]
     },
     {
       "id": 15,
@@ -186,14 +417,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
-          "url": "https://sc.edu/about/offices_and_divisions/university_communications/newsroom/",
-          "ai_tag_url": "https://sc.edu/about/offices_and_divisions/university_communications/newsroom/?topic=artificial-intelligence",
-          "verified": false,
-          "crawl_priority": 150
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://sc.edu/uofsc/",
+          "description": "University of South Carolina official news and press releases",
+          "verified": true,
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T14:10:08.015736"
         }
-      }
+      ]
     },
     {
       "id": 16,
@@ -211,14 +444,44 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
-          "url": "https://www.ou.edu/web/news",
-          "ai_tag_url": "https://www.ou.edu/web/news?topics=artificial-intelligence",
-          "verified": false,
-          "crawl_priority": 150
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.ou.edu/news",
+          "description": "University of Oklahoma official news and press releases",
+          "verified": true,
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T14:10:08.015761"
         }
-      }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Michigan State University",
+      "abbreviation": "MSU",
+      "canonical_name": "Michigan State University",
+      "location": {
+        "city": "East Lansing",
+        "state": "MI",
+        "state_full": "Michigan",
+        "region": "Midwest",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://msutoday.msu.edu/",
+          "rss_feed": "https://msutoday.msu.edu/rss",
+          "description": "Michigan State University official news and press releases",
+          "verified": true,
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T14:10:28.688528"
+        }
+      ]
     },
     {
       "id": 18,
@@ -236,16 +499,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://news.iu.edu/",
-          "ai_tag_url": "https://news.iu.edu/",
-          "verified": false,
+          "description": "Indiana University official news and press releases",
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2025-11-04T13:55:25.242458+00:00",
-          "notes": " | ai_tag_url replaced with base url due to error: HTTP 404"
+          "last_verified": "2025-11-05T14:10:28.688529"
         }
-      }
+      ]
     },
     {
       "id": 19,
@@ -263,15 +526,17 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.psu.edu/news/",
-          "ai_tag_url": "https://www.psu.edu/news/?topic=artificial-intelligence",
+          "description": "Penn State University official news and press releases",
           "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2025-11-04T13:55:26.560367+00:00"
+          "last_verified": "2025-11-05T14:10:28.688531",
+          "rss_feed": "https://www.psu.edu/news/rss/rss.xml"
         }
-      }
+      ]
     },
     {
       "id": 20,
@@ -289,15 +554,17 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://twin-cities.umn.edu/news",
-          "ai_tag_url": "https://twin-cities.umn.edu/news?topic=artificial-intelligence",
+          "description": "University of Minnesota official news and press releases",
           "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2025-11-04T13:55:27.386272+00:00"
+          "last_verified": "2025-11-05T14:10:28.688533",
+          "rss_feed": "https://twin-cities.umn.edu/rss.xml"
         }
-      }
+      ]
     },
     {
       "id": 21,
@@ -315,16 +582,16 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://umdrightnow.umd.edu/",
-          "ai_tag_url": "https://umdrightnow.umd.edu/",
-          "verified": false,
+          "description": "University of Maryland official news and press releases",
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2025-11-04T13:55:28.028059+00:00",
-          "notes": " | ai_tag_url replaced with base url due to error: HTTP 404"
+          "last_verified": "2025-11-05T14:10:28.688534"
         }
-      }
+      ]
     },
     {
       "id": 22,
@@ -342,16 +609,44 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.pittwire.pitt.edu/",
-          "ai_tag_url": "https://www.pittwire.pitt.edu/",
-          "verified": false,
+          "description": "University of Pittsburgh official news and press releases",
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2025-11-04T13:55:28.514630+00:00",
-          "notes": " | ai_tag_url replaced with base url due to error: HTTP 404"
+          "last_verified": "2025-11-05T14:10:28.688536"
         }
-      }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "University of Connecticut",
+      "abbreviation": "UConn",
+      "canonical_name": "University of Connecticut",
+      "location": {
+        "city": "Storrs",
+        "state": "CT",
+        "state_full": "Connecticut",
+        "region": "Northeast",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://today.uconn.edu/",
+          "description": "University of Connecticut official news and press releases",
+          "verified": true,
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T14:10:28.688538",
+          "rss_feed": "https://today.uconn.edu/feed/"
+        }
+      ]
     },
     {
       "id": 24,
@@ -369,16 +664,17 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.umass.edu/news/",
-          "ai_tag_url": "https://www.umass.edu/news/",
-          "verified": false,
+          "description": "University of Massachusetts Amherst official news and press releases",
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2025-11-04T13:55:29.038172+00:00",
-          "notes": " | ai_tag_url replaced with base url due to error: HTTP 404"
+          "last_verified": "2025-11-05T14:10:28.688540",
+          "rss_feed": "https://www.umass.edu/news/feed"
         }
-      }
+      ]
     },
     {
       "id": 25,
@@ -396,15 +692,43 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://news.rutgers.edu/",
-          "ai_tag_url": "https://news.rutgers.edu/topic/artificial-intelligence",
+          "description": "Rutgers University official news and press releases",
           "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2025-11-04T13:55:30.387753+00:00"
+          "last_verified": "2025-11-05T14:10:28.688541"
         }
-      }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Texas Tech University",
+      "abbreviation": "Texas Tech",
+      "canonical_name": "Texas Tech University",
+      "location": {
+        "city": "Lubbock",
+        "state": "TX",
+        "state_full": "Texas",
+        "region": "South",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": [
+        {
+          "type": "primary",
+          "url": "https://www.ttu.edu/now/",
+          "description": "Texas Tech University official news and press releases",
+          "verified": true,
+          "crawl_priority": 150,
+          "last_verified": "2025-11-05T14:10:08.015777"
+        }
+      ]
     },
     {
       "id": 27,
@@ -422,15 +746,17 @@
         "carnegie_r1": true,
         "institution_type": "public"
       },
-      "news_sources": {
-        "primary": {
+      "news_sources": [
+        {
+          "type": "primary",
           "url": "https://www.washington.edu/news/",
-          "ai_tag_url": "https://www.washington.edu/news/topic/artificial-intelligence/",
+          "description": "University of Washington official news and press releases",
           "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2025-11-04T13:55:31.008131+00:00"
+          "last_verified": "2025-11-05T14:10:28.688543",
+          "rss_feed": "https://www.washington.edu/news/feed/"
         }
-      }
+      ]
     }
   ]
 }

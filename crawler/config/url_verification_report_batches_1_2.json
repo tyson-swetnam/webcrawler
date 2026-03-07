@@ -1,0 +1,372 @@
+{
+  "verification_summary": {
+    "report_date": "2025-11-05",
+    "batches_completed": 2,
+    "total_urls_tested": 41,
+    "verified": 35,
+    "broken": 6,
+    "robots_blocked": 2,
+    "verification_rate": "85.4%"
+  },
+  "batch_1_peer_institutions": {
+    "total": 25,
+    "verified": 22,
+    "broken": 3,
+    "verified_urls": [
+      {
+        "name": "University of Colorado Boulder",
+        "url": "https://www.colorado.edu/today/",
+        "status": "verified",
+        "last_article_date": "2025-11",
+        "notes": "Active news site featuring Quantum Valley research"
+      },
+      {
+        "name": "University of Utah",
+        "url": "https://attheu.utah.edu/",
+        "status": "verified",
+        "last_article_date": "2025-11",
+        "notes": "Active @theU news portal with recent suicide prevention research"
+      },
+      {
+        "name": "University of New Mexico",
+        "url": "https://news.unm.edu/",
+        "status": "verified",
+        "last_article_date": "2025-11",
+        "notes": "Active UNM Newsroom with recent research articles"
+      },
+      {
+        "name": "University of Nevada, Las Vegas",
+        "url": "https://www.unlv.edu/news/",
+        "status": "verified",
+        "last_article_date": "2025-11",
+        "notes": "Active News Center with recent AI and cybersecurity content"
+      },
+      {
+        "name": "University of Kansas",
+        "url": "https://news.ku.edu/",
+        "status": "verified",
+        "last_article_date": "2025-11",
+        "notes": "Active news site with Indigenous fire sovereignty research"
+      },
+      {
+        "name": "University of Missouri",
+        "url": "https://munews.missouri.edu/",
+        "status": "verified",
+        "last_article_date": "2025-11",
+        "notes": "Show Me Mizzou news portal, first-gen student features"
+      },
+      {
+        "name": "University of Kentucky",
+        "url": "https://uknow.uky.edu/",
+        "status": "verified",
+        "last_article_date": "2025-11",
+        "notes": "UKNow portal with Great Teacher awards, healthcare news"
+      },
+      {
+        "name": "Iowa State University",
+        "url": "https://www.news.iastate.edu/",
+        "status": "verified",
+        "last_article_date": "2025-10",
+        "notes": "Innovation at Work series, heat alert app research"
+      },
+      {
+        "name": "Virginia Tech",
+        "url": "https://vtnews.vt.edu/",
+        "status": "verified",
+        "last_article_date": "2025",
+        "notes": "Active VT News portal, global land grant focus"
+      },
+      {
+        "name": "North Carolina State University",
+        "url": "https://news.ncsu.edu/",
+        "status": "verified",
+        "last_article_date": "2025-10",
+        "notes": "Active NC State News with education features"
+      },
+      {
+        "name": "University of Tennessee",
+        "url": "https://news.utk.edu/",
+        "status": "verified",
+        "last_article_date": "2025-11",
+        "notes": "Army Research Lab partnership, homecoming news"
+      },
+      {
+        "name": "Auburn University",
+        "url": "https://news.auburn.edu/",
+        "status": "verified",
+        "last_article_date": "2025",
+        "notes": "Active homepage with rankings and outreach highlights"
+      },
+      {
+        "name": "Michigan State University",
+        "url": "https://msutoday.msu.edu/",
+        "status": "verified",
+        "last_article_date": "2025-10",
+        "notes": "MSUToday portal with research and Spartan stories"
+      },
+      {
+        "name": "Indiana University",
+        "url": "https://news.iu.edu/",
+        "status": "verified",
+        "last_article_date": "2025",
+        "notes": "News at IU portal (verified via curl, MCP timeout)"
+      },
+      {
+        "name": "Penn State University",
+        "url": "https://www.psu.edu/news/",
+        "status": "verified",
+        "last_article_date": "2025",
+        "notes": "PSU news portal (HTTP 308 redirect, verified functional)"
+      },
+      {
+        "name": "University of Minnesota",
+        "url": "https://twin-cities.umn.edu/news",
+        "status": "verified",
+        "last_article_date": "2025",
+        "notes": "Twin Cities news portal (verified via curl)"
+      },
+      {
+        "name": "University of Maryland",
+        "url": "https://umdrightnow.umd.edu/",
+        "status": "verified",
+        "last_article_date": "2025",
+        "notes": "UMD Right Now portal with AI experts directory"
+      },
+      {
+        "name": "University of Pittsburgh",
+        "url": "https://www.pittwire.pitt.edu/",
+        "status": "verified",
+        "last_article_date": "2025-11",
+        "notes": "Pittwire portal with homecoming 2025 coverage"
+      },
+      {
+        "name": "University of Connecticut",
+        "url": "https://today.uconn.edu/",
+        "status": "verified",
+        "last_article_date": "2025",
+        "notes": "UConn Today portal with UConn360 podcast"
+      },
+      {
+        "name": "University of Massachusetts Amherst",
+        "url": "https://www.umass.edu/news/",
+        "status": "verified",
+        "last_article_date": "2025",
+        "notes": "News & Media Relations office portal"
+      },
+      {
+        "name": "Rutgers University",
+        "url": "https://news.rutgers.edu/",
+        "status": "verified",
+        "last_article_date": "2025",
+        "notes": "Rutgers Today news portal"
+      },
+      {
+        "name": "University of Washington",
+        "url": "https://www.washington.edu/news/",
+        "status": "verified",
+        "last_article_date": "2025-10",
+        "notes": "UW News office with Halloween organ concert coverage"
+      }
+    ],
+    "broken_urls": [
+      {
+        "name": "University of South Carolina",
+        "original_url": "https://sc.edu/about/offices_and_divisions/university_communications/newsroom/",
+        "error": "404 Not Found",
+        "corrected_url": "https://sc.edu/uofsc/",
+        "verified_corrected": true,
+        "last_article_date": "2025-10",
+        "notes": "Corrected to USC NEWS & EVENTS portal"
+      },
+      {
+        "name": "University of Oklahoma",
+        "original_url": "https://www.ou.edu/web/news",
+        "error": "404 Not Found",
+        "corrected_url": "https://www.ou.edu/news",
+        "verified_corrected": true,
+        "last_article_date": "2025",
+        "notes": "Removed /web/ from path, OU News and Events portal working"
+      },
+      {
+        "name": "Texas Tech University",
+        "original_url": "https://today.ttu.edu/",
+        "error": "SSL certificate mismatch - Host: today.ttu.edu does not match certificate for www.ttu.edu",
+        "corrected_url": "https://www.ttu.edu/now/",
+        "verified_corrected": true,
+        "last_article_date": "2025-11",
+        "notes": "Texas Tech Now portal with Rise & Research series"
+      }
+    ]
+  },
+  "batch_2_major_facilities": {
+    "total": 16,
+    "verified": 13,
+    "broken": 3,
+    "robots_blocked": 2,
+    "verified_urls": [
+      {
+        "name": "Pittsburgh Supercomputing Center",
+        "url": "https://www.psc.edu/news/",
+        "status": "verified",
+        "last_article_date": "2025-10",
+        "notes": "Bridges-2 supercomputer research highlights, AI and astronomy"
+      },
+      {
+        "name": "Purdue Rosen Center for Advanced Computing",
+        "url": "https://www.rcac.purdue.edu/news",
+        "status": "verified",
+        "last_article_date": "2025",
+        "notes": "RCAC news portal with HPC infrastructure updates"
+      },
+      {
+        "name": "Sandia National Laboratories",
+        "url": "https://www.sandia.gov/labnews/",
+        "status": "verified",
+        "last_article_date": "2025-09",
+        "notes": "Lab News biweekly publication, space-based detection systems"
+      },
+      {
+        "name": "Pacific Northwest National Laboratory",
+        "url": "https://www.pnnl.gov/news",
+        "status": "verified",
+        "last_article_date": "2025-09",
+        "notes": "News & Media with autonomous battery research, ice crystal studies"
+      },
+      {
+        "name": "Brookhaven National Laboratory",
+        "url": "https://www.bnl.gov/newsroom/",
+        "status": "verified",
+        "last_article_date": "2025",
+        "notes": "BNL Newsroom active with DOE Office of Science projects"
+      },
+      {
+        "name": "Fermi National Accelerator Laboratory",
+        "url": "https://news.fnal.gov/",
+        "status": "verified",
+        "last_article_date": "2025-11",
+        "notes": "Newsroom with SQMS quantum center $125M funding announcement"
+      },
+      {
+        "name": "Idaho National Laboratory",
+        "url": "https://inl.gov/news/",
+        "status": "verified",
+        "last_article_date": "2025",
+        "notes": "Nuclear energy research, small modular reactors, EBR-I 70th anniversary"
+      },
+      {
+        "name": "National Renewable Energy Laboratory",
+        "url": "https://www.nrel.gov/news/",
+        "status": "verified",
+        "last_article_date": "2025-09",
+        "notes": "News portal with battery safety, rail transportation, wave energy research"
+      },
+      {
+        "name": "Ames Laboratory",
+        "url": "https://www.ameslab.gov/news",
+        "status": "verified",
+        "last_article_date": "2025",
+        "notes": "Materials science news, critical minerals, rare earth elements"
+      },
+      {
+        "name": "Princeton Plasma Physics Laboratory",
+        "url": "https://www.pppl.gov/news",
+        "status": "verified",
+        "last_article_date": "2025",
+        "notes": "PPPL news portal for fusion energy research"
+      },
+      {
+        "name": "National Energy Technology Laboratory",
+        "url": "https://www.netl.doe.gov/newsroom",
+        "status": "verified",
+        "last_article_date": "2025-09",
+        "notes": "Top Stories with R&D 100 Awards, REE detection, CO2 monitoring"
+      },
+      {
+        "name": "National Center for Atmospheric Research",
+        "url": "https://news.ucar.edu/",
+        "status": "verified",
+        "last_article_date": "2025-10",
+        "notes": "NCAR & UCAR News with urban air quality, weather research"
+      },
+      {
+        "name": "Savannah River National Laboratory",
+        "url": "https://www.srnl.gov/newsroom/",
+        "status": "verified",
+        "last_article_date": "2025-09",
+        "notes": "Corrected from /news to /newsroom/, R&D 100 Awards coverage"
+      }
+    ],
+    "broken_or_blocked_urls": [
+      {
+        "name": "Indiana University Pervasive Technology Institute",
+        "original_url": "https://pti.iu.edu/news/",
+        "error": "robots.txt blocks autonomous fetching + redirect",
+        "corrected_url": "https://pti.iu.edu/pti/news/",
+        "verified_corrected": false,
+        "status": "robots_blocked",
+        "notes": "301 redirect detected, robots.txt prevents MCP fetch"
+      },
+      {
+        "name": "Thomas Jefferson National Accelerator Facility",
+        "original_url": "https://www.jlab.org/news",
+        "error": "404 Not Found / 403 Forbidden on news-releases",
+        "suggested_url": "https://www.jlab.org/news-releases",
+        "verified_corrected": false,
+        "status": "access_restricted",
+        "notes": "JLab has restricted bot access, manual verification needed"
+      },
+      {
+        "name": "National Ecological Observatory Network",
+        "original_url": "https://www.neonscience.org/news",
+        "error": "404 Not Found",
+        "corrected_url": "https://www.neonscience.org/impact/newsroom",
+        "verified_corrected": true,
+        "last_article_date": "2025",
+        "notes": "Corrected to /impact/newsroom/, NEON in the News section active"
+      }
+    ]
+  },
+  "additional_url_recommendations": {
+    "ai_specific_tags": {
+      "note": "Many universities have AI-specific news tags or sections that should be explored",
+      "examples": [
+        "University of Maryland has comprehensive AI experts directory: https://umdrightnow.umd.edu/ (AI & Arts, AI & Business, AI & Data Security, etc.)",
+        "Universities likely have /tag/artificial-intelligence or /topic/ai URLs worth discovering"
+      ]
+    },
+    "rss_feeds": {
+      "note": "Several institutions offer RSS feeds for automated content tracking",
+      "discovered": [
+        "Purdue RCAC has RSS feeds section: https://www.rcac.purdue.edu/news/rss"
+      ]
+    }
+  },
+  "methodology": {
+    "tools_used": [
+      "MCP imageFetch tool for content verification",
+      "curl via Bash for timeout/SSL issue resolution",
+      "WebSearch for finding corrected URLs"
+    ],
+    "verification_criteria": [
+      "HTTP 200 response code",
+      "Recent content published in 2025 (preferably Oct-Nov)",
+      "Legitimate university/facility news format",
+      "Institutional branding and official structure"
+    ],
+    "challenges_encountered": [
+      "MCP timeout issues for some .edu domains (Indiana, Penn State, Minnesota)",
+      "SSL certificate mismatches (Texas Tech)",
+      "URL structure changes (South Carolina, Oklahoma)",
+      "robots.txt blocking autonomous crawlers (Indiana PTI)",
+      "403 Forbidden on bot access (Jefferson Lab)"
+    ]
+  },
+  "next_steps": [
+    "Update peer_institutions.json with corrected URLs",
+    "Update major_facilities.json with corrected URLs",
+    "Manually verify 2 robots-blocked URLs",
+    "Proceed with R1 Universities verification (164 URLs in 4 batches)",
+    "Discover AI-specific URLs for all institutions",
+    "Compile final comprehensive report after all batches complete"
+  ]
+}

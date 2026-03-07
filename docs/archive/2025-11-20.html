@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI University News - Thursday, November 20, 2025</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #ffffff;
+            color: #000000;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 40px;
+            line-height: 1.5;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #000;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            font-weight: bold;
+            letter-spacing: -1px;
+            margin-bottom: 5px;
+        }
+
+        .header .tagline {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .header .date {
+            font-size: 16px;
+            color: #000;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .nav {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+        }
+
+        .nav a {
+            color: #cc0000;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            font-size: 14px;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        .top-headline {
+            text-align: center;
+            border: 2px solid #000;
+            padding: 20px;
+            margin-bottom: 30px;
+            background-color: #fffbf0;
+        }
+
+        .top-headline h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .top-headline h2 a {
+            color: #cc0000;
+            text-decoration: none;
+        }
+
+        .top-headline h2 a:hover {
+            text-decoration: underline;
+        }
+
+        .top-headline .summary {
+            margin-top: 15px;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .university-section {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+        }
+
+        .university-section h3 {
+            font-size: 18px;
+            color: #000;
+            margin-bottom: 12px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #cc0000;
+        }
+
+        .article {
+            margin-bottom: 15px;
+            padding-left: 10px;
+        }
+
+        .headline {
+            margin-bottom: 3px;
+        }
+
+        .headline a {
+            color: #0000cc;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .headline a:hover {
+            text-decoration: underline;
+        }
+
+        .headline a:visited {
+            color: #551a8b;
+        }
+
+        .topics {
+            font-size: 12px;
+            color: #666;
+            font-style: italic;
+            margin-left: 8px;
+        }
+
+        .meta {
+            font-size: 12px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .summary {
+            font-size: 13px;
+            color: #333;
+            margin-top: 5px;
+            padding-left: 10px;
+            line-height: 1.5;
+        }
+
+        .no-results {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin: 40px 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #000;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .footer a {
+            color: #0000cc;
+            text-decoration: none;
+        }
+
+        .stats {
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+
+        /* Three-column layout */
+        .three-column-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .column {
+            border: 2px solid #ddd;
+            padding: 15px;
+            background-color: #fafafa;
+            min-height: 200px;
+        }
+
+        .column-title {
+            font-size: 22px;
+            color: #cc0000;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #cc0000;
+            text-align: center;
+        }
+
+        .no-articles {
+            text-align: center;
+            color: #999;
+            font-style: italic;
+            padding: 20px;
+        }
+
+        @media (max-width: 1024px) {
+            .three-column-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .header h1 { font-size: 28px; }
+            .headline a { font-size: 16px; }
+            .column { padding: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI UNIVERSITY NEWS</h1>
+        <div class="tagline">Latest AI Research & Developments from Top Universities (Last 5 Days)</div>
+        <div class="date">Updated: Thursday, November 20, 2025</div>
+    </div>
+
+    <div class="nav">
+        <a href="../index.html">TODAY</a>
+        <a href="index.html">ARCHIVE</a>
+        <a href="../how_it_works.html">HOW IT WORKS</a>
+    </div>
+
+    
+            <div class="stats">
+                <strong>Total Articles:</strong> 5 |
+                <strong>Peer:</strong> 1 |
+                <strong>R1:</strong> 0 |
+                <strong>Facilities:</strong> 4
+            </div>
+        
+            <div class="three-column-layout">
+                <div class="column"><h2 class="column-title">Peer Institutions</h2>
+<div class="university-section"><h3>University of Washington</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.washington.edu/news/2025/11/18/10-million-gift-from-charles-and-lisa-simonyi-establishes-aiuw-to-advance-artificial-intelligence-and-emerging-technologies/" target="_blank">$10M gift from Charles and Lisa Simonyi establishes AI@UW to advance artificial intelligence and emerging technologies</a>
+                                
+                            </div>
+                            <div class="meta">Published: November 18, 2025 | Crawled: November 19, 2025</div>
+                            <div class="summary">The University of Washington received a $10 million gift from Charles and Lisa Simonyi to establish AI@UW, a new initiative focused on advancing artificial intelligence research and education. Noah...</div>
+                        </div>
+                    
+</div>
+</div>
+                <div class="column"><h2 class="column-title">R1 Institutions</h2><p class="no-articles">No articles</p></div>
+                <div class="column"><h2 class="column-title">Major Facilities</h2>
+<div class="university-section"><h3>NERSC: National Energy Research Scientific Computing Center</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.nersc.gov/news-and-events/news/doudna-storage-partnership-recognized-with-hpcwire-editors-choice-award" target="_blank">Doudna Storage Partnership Recognized with HPCWire Editors' Choice Award - NERSC: National Energy Research Scientific Computing Center</a>
+                                
+                            </div>
+                            <div class="meta">Published: November 18, 2025 | Crawled: November 19, 2025</div>
+                            <div class="summary">NERSC and VAST Data have been recognized with an HPCwire Editors' Choice Award for their partnership to develop next-generation storage solutions for NERSC's upcoming Doudna supercomputer launching...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>RCAC</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.rcac.purdue.edu/news/7451" target="_blank">[RCAC Workshop] Designing Responsible AI...</a>
+                                
+                            </div>
+                            <div class="meta">Published: November 16, 2025 | Crawled: November 17, 2025</div>
+                            <div class="summary">This is a workshop announcement for a practical training session on implementing responsible AI workflows, specifically focused on operationalizing large language models (LLMs) in production...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>news.vt.edu</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.vt.edu/articles/2025/11/vtnsi-team-wins-outstanding-research-award.html" target="_blank">Virginia Tech National Security Institute team wins outstanding research award</a>
+                                
+                            </div>
+                            <div class="meta">Published: November 17, 2025 | Crawled: November 19, 2025</div>
+                            <div class="summary">Virginia Tech researchers developed an AI system using transfer learning to detect previously unseen cyber attacks, winning an Outstanding Research Award at the Intelligent Systems Conference. The...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>ou.edu</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.ou.edu/content/news/articles/2025/november/ou-it-nsf-grants-to-support-data-intensive-research" target="_blank">University of Oklahoma Awarded $2.4M in U.S. National Science Foundation Grants to Support Data-Intensive Research</a>
+                                
+                            </div>
+                            <div class="meta">Published: November 18, 2025 | Crawled: November 19, 2025</div>
+                            <div class="summary">The University of Oklahoma received $2.4M in NSF grants to establish a statewide AI consulting initiative (OneOCII-AIC) that will help research teams across Oklahoma adopt and improve AI in their...</div>
+                        </div>
+                    
+</div>
+</div>
+            </div>
+        
+
+    <div class="footer">
+        <p>Powered by AI University News Crawler</p>
+        <p>Last updated: 06:00 AM </p>
+    </div>
+</body>
+</html>

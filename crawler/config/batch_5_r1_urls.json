@@ -1,0 +1,702 @@
+[
+  {
+    "name": "Cornell University",
+    "category": "r1",
+    "url": "https://news.cornell.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "C",
+    "location": {
+      "city": "Ithaca",
+      "state": "NY",
+      "state_full": "New York",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "New York University",
+    "category": "r1",
+    "url": "https://news.nyu.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "NYU",
+    "location": {
+      "city": "New York",
+      "state": "NY",
+      "state_full": "New York",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Rensselaer Polytechnic Institute",
+    "category": "r1",
+    "url": "https://news.rpi.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "RPI",
+    "location": {
+      "city": "Troy",
+      "state": "NY",
+      "state_full": "New York",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Stony Brook University",
+    "category": "r1",
+    "url": "https://news.stonybrook.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "SB",
+    "location": {
+      "city": "Stony Brook",
+      "state": "NY",
+      "state_full": "New York",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Syracuse University",
+    "category": "r1",
+    "url": "https://news.syracuseuniversity.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "S",
+    "location": {
+      "city": "Syracuse",
+      "state": "NY",
+      "state_full": "New York",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University at Albany",
+    "category": "r1",
+    "url": "https://news.universityat.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "A",
+    "location": {
+      "city": "Albany",
+      "state": "NY",
+      "state_full": "New York",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University at Buffalo",
+    "category": "r1",
+    "url": "https://news.universityat.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "B",
+    "location": {
+      "city": "Buffalo",
+      "state": "NY",
+      "state_full": "New York",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Rochester",
+    "category": "r1",
+    "url": "https://news.universityof.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UR",
+    "location": {
+      "city": "Rochester",
+      "state": "NY",
+      "state_full": "New York",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Weill Medical College of Cornell University",
+    "category": "r1",
+    "url": "https://news.weillmedical.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "WMC",
+    "location": {
+      "city": "New York",
+      "state": "NY",
+      "state_full": "New York",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Case Western Reserve University",
+    "category": "r1",
+    "url": "https://news.case.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "CWR",
+    "location": {
+      "city": "Cleveland",
+      "state": "OH",
+      "state_full": "Ohio",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Kent State University at Kent",
+    "category": "r1",
+    "url": "https://news.kentstate.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "KSK",
+    "location": {
+      "city": "Kent",
+      "state": "OH",
+      "state_full": "Ohio",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Ohio State University-Main Campus",
+    "category": "r1",
+    "url": "https://news.ohiostate.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "Ohio State",
+    "location": {
+      "city": "Columbus",
+      "state": "OH",
+      "state_full": "Ohio",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Ohio University-Main Campus",
+    "category": "r1",
+    "url": "https://news.ohiouniversity-main.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "OUC",
+    "location": {
+      "city": "Athens",
+      "state": "OH",
+      "state_full": "Ohio",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Cincinnati-Main Campus",
+    "category": "r1",
+    "url": "https://news.universityof.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UC",
+    "location": {
+      "city": "Cincinnati",
+      "state": "OH",
+      "state_full": "Ohio",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Dayton",
+    "category": "r1",
+    "url": "https://news.universityof.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UD",
+    "location": {
+      "city": "Dayton",
+      "state": "OH",
+      "state_full": "Ohio",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Toledo",
+    "category": "r1",
+    "url": "https://news.universityof.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UT",
+    "location": {
+      "city": "Toledo",
+      "state": "OH",
+      "state_full": "Ohio",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Oklahoma State University-Main Campus",
+    "category": "r1",
+    "url": "https://news.oklahomastate.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "OSU",
+    "location": {
+      "city": "Stillwater",
+      "state": "OK",
+      "state_full": "Oklahoma",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Oregon State University",
+    "category": "r1",
+    "url": "https://news.oregonstate.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "OS",
+    "location": {
+      "city": "Corvallis",
+      "state": "OR",
+      "state_full": "Oregon",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Oregon",
+    "category": "r1",
+    "url": "https://news.oregon.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UO",
+    "location": {
+      "city": "Eugene",
+      "state": "OR",
+      "state_full": "Oregon",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Carnegie Mellon University",
+    "category": "r1",
+    "url": "https://www.cmu.edu/news/",
+    "config_file": "r1_universities.json",
+    "abbreviation": "CMU",
+    "location": {
+      "city": "Pittsburgh",
+      "state": "PA",
+      "state_full": "Pennsylvania",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Drexel University",
+    "category": "r1",
+    "url": "https://news.drexeluniversity.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "D",
+    "location": {
+      "city": "Philadelphia",
+      "state": "PA",
+      "state_full": "Pennsylvania",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Lehigh University",
+    "category": "r1",
+    "url": "https://news.lehighuniversity.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "L",
+    "location": {
+      "city": "Bethlehem",
+      "state": "PA",
+      "state_full": "Pennsylvania",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Pennsylvania State University-Main Campus",
+    "category": "r1",
+    "url": "https://news.pennsylvaniastate.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "Penn State",
+    "location": {
+      "city": "University Park",
+      "state": "PA",
+      "state_full": "Pennsylvania",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Temple University",
+    "category": "r1",
+    "url": "https://news.templeuniversity.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "T",
+    "location": {
+      "city": "Philadelphia",
+      "state": "PA",
+      "state_full": "Pennsylvania",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Pennsylvania",
+    "category": "r1",
+    "url": "https://penntoday.upenn.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UP",
+    "location": {
+      "city": "Philadelphia",
+      "state": "PA",
+      "state_full": "Pennsylvania",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Brown University",
+    "category": "r1",
+    "url": "https://news.brown.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "B",
+    "location": {
+      "city": "Providence",
+      "state": "RI",
+      "state_full": "Rhode Island",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Rhode Island",
+    "category": "r1",
+    "url": "https://news.universityof.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UR",
+    "location": {
+      "city": "Kingston",
+      "state": "RI",
+      "state_full": "Rhode Island",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Clemson University",
+    "category": "r1",
+    "url": "https://news.clemsonuniversity.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "C",
+    "location": {
+      "city": "Clemson",
+      "state": "SC",
+      "state_full": "South Carolina",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Medical University of South Carolina",
+    "category": "r1",
+    "url": "https://news.medicaluniversity.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "MSC",
+    "location": {
+      "city": "Charleston",
+      "state": "SC",
+      "state_full": "South Carolina",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "The University of Tennessee Health Science Center",
+    "category": "r1",
+    "url": "https://news.theuniversity.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "THS",
+    "location": {
+      "city": "Memphis",
+      "state": "TN",
+      "state_full": "Tennessee",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "The University of Tennessee-Knoxville",
+    "category": "r1",
+    "url": "https://news.theuniversity.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "T",
+    "location": {
+      "city": "Knoxville",
+      "state": "TN",
+      "state_full": "Tennessee",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Memphis",
+    "category": "r1",
+    "url": "https://news.universityof.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UM",
+    "location": {
+      "city": "Memphis",
+      "state": "TN",
+      "state_full": "Tennessee",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Vanderbilt University",
+    "category": "r1",
+    "url": "https://news.vanderbilt.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "V",
+    "location": {
+      "city": "Nashville",
+      "state": "TN",
+      "state_full": "Tennessee",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Baylor College of Medicine",
+    "category": "r1",
+    "url": "https://news.baylorcollege.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "BM",
+    "location": {
+      "city": "Houston",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Baylor University",
+    "category": "r1",
+    "url": "https://news.bayloruniversity.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "B",
+    "location": {
+      "city": "Waco",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Rice University",
+    "category": "r1",
+    "url": "https://news.rice.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "R",
+    "location": {
+      "city": "Houston",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Southern Methodist University",
+    "category": "r1",
+    "url": "https://news.southernmethodist.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "SM",
+    "location": {
+      "city": "Dallas",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Texas A & M University-College Station",
+    "category": "r1",
+    "url": "https://news.texasa.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "Texas A&M",
+    "location": {
+      "city": "College Station",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "The University of Texas Health Science Center at Houston",
+    "category": "r1",
+    "url": "https://news.theuniversity.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "THS",
+    "location": {
+      "city": "Houston",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "The University of Texas Health Science Center at San Antonio",
+    "category": "r1",
+    "url": "https://news.utsa.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "THS",
+    "location": {
+      "city": "San Antonio",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "The University of Texas at Arlington",
+    "category": "r1",
+    "url": "https://news.uta.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "TA",
+    "location": {
+      "city": "Arlington",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "The University of Texas at Austin",
+    "category": "r1",
+    "url": "https://www.utexas.edu/news",
+    "config_file": "r1_universities.json",
+    "abbreviation": "TA",
+    "location": {
+      "city": "Austin",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "The University of Texas at Dallas",
+    "category": "r1",
+    "url": "https://news.utdallas.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "TD",
+    "location": {
+      "city": "Richardson",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "The University of Texas at El Paso",
+    "category": "r1",
+    "url": "https://news.utep.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "TP",
+    "location": {
+      "city": "El Paso",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "The University of Texas at San Antonio",
+    "category": "r1",
+    "url": "https://news.utsa.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "TA",
+    "location": {
+      "city": "San Antonio",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Houston",
+    "category": "r1",
+    "url": "https://news.universityof.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UH",
+    "location": {
+      "city": "Houston",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of North Texas",
+    "category": "r1",
+    "url": "https://news.universityof.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UN",
+    "location": {
+      "city": "Denton",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Texas Southwestern Medical Center",
+    "category": "r1",
+    "url": "https://news.universityof.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UT",
+    "location": {
+      "city": "Dallas",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Brigham Young University",
+    "category": "r1",
+    "url": "https://news.brighamyoung.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "BY",
+    "location": {
+      "city": "Provo",
+      "state": "UT",
+      "state_full": "Utah",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Utah",
+    "category": "r1",
+    "url": "https://news.utah.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UU",
+    "location": {
+      "city": "Salt Lake City",
+      "state": "UT",
+      "state_full": "Utah",
+      "region": "West",
+      "country": "US"
+    }
+  }
+]

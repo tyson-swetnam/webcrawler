@@ -1,0 +1,878 @@
+{
+  "timestamp": "2025-11-04T13:55:42.787344+00:00",
+  "total_failed": 109,
+  "failed_urls": [
+    {
+      "config": "r1_universities.json",
+      "id": 2,
+      "name": "The University of Alabama",
+      "url": "https://news.alabama.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 3,
+      "name": "University of Alabama at Birmingham",
+      "url": "https://news.alabama.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 4,
+      "name": "University of Arkansas",
+      "url": "https://news.arkansas.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 6,
+      "name": "Northern Arizona University",
+      "url": "https://news.northernarizona.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 9,
+      "name": "San Diego State University",
+      "url": "https://news.sandiego.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 14,
+      "name": "University of California-Los Angeles",
+      "url": "https://news.ucla.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 22,
+      "name": "Colorado School of Mines",
+      "url": "https://news.coloradoschool.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 23,
+      "name": "Colorado State University-Fort Collins",
+      "url": "https://news.colostate.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 29,
+      "name": "American University",
+      "url": "https://news.americanuniversity.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 30,
+      "name": "George Washington University",
+      "url": "https://news.georgewashington.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 31,
+      "name": "Georgetown University",
+      "url": "https://news.georgetown.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 32,
+      "name": "Howard University",
+      "url": "https://news.howarduniversity.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 33,
+      "name": "The Catholic University of America",
+      "url": "https://news.thecatholic.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 34,
+      "name": "University of Delaware",
+      "url": "https://news.delaware.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 35,
+      "name": "Florida Atlantic University",
+      "url": "https://news.floridaatlantic.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 36,
+      "name": "Florida International University",
+      "url": "https://news.floridainternational.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 37,
+      "name": "Florida State University",
+      "url": "https://news.floridastate.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 38,
+      "name": "Nova Southeastern University",
+      "url": "https://news.novasoutheastern.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 40,
+      "name": "University of Florida",
+      "url": "https://news.florida.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 45,
+      "name": "Georgia State University",
+      "url": "https://news.georgiastate.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 46,
+      "name": "University of Georgia",
+      "url": "https://news.georgia.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 47,
+      "name": "University of Hawaii at Manoa",
+      "url": "https://news.hawaii.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 49,
+      "name": "University of Iowa",
+      "url": "https://news.iowa.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 50,
+      "name": "University of Idaho",
+      "url": "https://news.idaho.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 51,
+      "name": "Loyola University Chicago",
+      "url": "https://news.loyolauniversity.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 53,
+      "name": "Southern Illinois University-Carbondale",
+      "url": "https://news.southernillinois.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 55,
+      "name": "University of Illinois Chicago",
+      "url": "https://news.uic.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 58,
+      "name": "Indiana University\u2013Purdue University-Indianapolis",
+      "url": "https://news.indianauniversity\u2013purdue.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 59,
+      "name": "Purdue University-Main Campus",
+      "url": "https://news.purdueuniversity-main.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 61,
+      "name": "Kansas State University",
+      "url": "https://news.kansasstate.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 65,
+      "name": "Louisiana State University and Agricultural & Mechanical College",
+      "url": "https://news.lsu.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 68,
+      "name": "Boston College",
+      "url": "https://news.bostoncollege.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 69,
+      "name": "Boston University",
+      "url": "https://news.bu.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 70,
+      "name": "Brandeis University",
+      "url": "https://news.brandeis.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 71,
+      "name": "Harvard University",
+      "url": "https://www.harvard.edu/news",
+      "error": "HTTP 404",
+      "http_code": 404
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 73,
+      "name": "Northeastern University",
+      "url": "https://news.northeasternuniversity.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 76,
+      "name": "University of Massachusetts-Boston",
+      "url": "https://news.umb.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 77,
+      "name": "University of Massachusetts-Lowell",
+      "url": "https://news.uml.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 78,
+      "name": "Worcester Polytechnic Institute",
+      "url": "https://news.wpi.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 79,
+      "name": "Johns Hopkins University",
+      "url": "https://news.jhu.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 80,
+      "name": "University of Maryland - Baltimore",
+      "url": "https://news.maryland.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 82,
+      "name": "University of Maryland-Baltimore County",
+      "url": "https://news.maryland.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 83,
+      "name": "University of Maine",
+      "url": "https://news.maine.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 85,
+      "name": "Michigan Technological University",
+      "url": "https://news.michigantechnological.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 86,
+      "name": "University of Michigan-Ann Arbor",
+      "url": "https://news.umich.edu",
+      "error": "HTTP 403",
+      "http_code": 403
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 87,
+      "name": "Wayne State University",
+      "url": "https://news.waynestate.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 88,
+      "name": "University of Minnesota-Twin Cities",
+      "url": "https://news.minnesota.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 89,
+      "name": "Missouri University of Science and Technology",
+      "url": "https://news.missouriuniversity.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 90,
+      "name": "Saint Louis University",
+      "url": "https://news.saintlouis.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 94,
+      "name": "Mississippi State University",
+      "url": "https://news.msstate.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 97,
+      "name": "Montana State University",
+      "url": "https://news.montanastate.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 98,
+      "name": "The University of Montana",
+      "url": "https://news.montana.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 100,
+      "name": "East Carolina University",
+      "url": "https://news.eastcarolina.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 101,
+      "name": "North Carolina State University at Raleigh",
+      "url": "https://news.northcarolina.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 104,
+      "name": "North Dakota State University-Main Campus",
+      "url": "https://news.northdakota.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 109,
+      "name": "University of New Hampshire-Main Campus",
+      "url": "https://news.unh.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 112,
+      "name": "Rutgers University-New Brunswick",
+      "url": "https://news.rutgersuniversity-new.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 113,
+      "name": "New Mexico State University-Main Campus",
+      "url": "https://news.newmexico.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 116,
+      "name": "University of Nevada-Reno",
+      "url": "https://news.nevada.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 117,
+      "name": "Binghamton University",
+      "url": "https://news.binghamtonuniversity.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 118,
+      "name": "CUNY Graduate School and University Center",
+      "url": "https://news.cunygraduate.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 119,
+      "name": "Columbia University in the City of New York",
+      "url": "https://news.columbia.edu",
+      "error": "HTTP 403",
+      "http_code": 403
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 121,
+      "name": "New York University",
+      "url": "https://news.nyu.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 124,
+      "name": "Syracuse University",
+      "url": "https://news.syracuseuniversity.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 125,
+      "name": "University at Albany",
+      "url": "https://news.universityat.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 126,
+      "name": "University at Buffalo",
+      "url": "https://news.universityat.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 128,
+      "name": "Weill Medical College of Cornell University",
+      "url": "https://news.weillmedical.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 129,
+      "name": "Case Western Reserve University",
+      "url": "https://news.case.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 130,
+      "name": "Kent State University at Kent",
+      "url": "https://news.kentstate.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 131,
+      "name": "Ohio State University-Main Campus",
+      "url": "https://news.ohiostate.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 132,
+      "name": "Ohio University-Main Campus",
+      "url": "https://news.ohiouniversity-main.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 136,
+      "name": "Oklahoma State University-Main Campus",
+      "url": "https://news.oklahomastate.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 139,
+      "name": "University of Oregon",
+      "url": "https://news.oregon.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 141,
+      "name": "Drexel University",
+      "url": "https://news.drexeluniversity.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 142,
+      "name": "Lehigh University",
+      "url": "https://news.lehighuniversity.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 143,
+      "name": "Pennsylvania State University-Main Campus",
+      "url": "https://news.pennsylvaniastate.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 144,
+      "name": "Temple University",
+      "url": "https://news.templeuniversity.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 149,
+      "name": "Clemson University",
+      "url": "https://news.clemsonuniversity.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 150,
+      "name": "Medical University of South Carolina",
+      "url": "https://news.medicaluniversity.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 152,
+      "name": "The University of Tennessee Health Science Center",
+      "url": "https://news.theuniversity.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 153,
+      "name": "The University of Tennessee-Knoxville",
+      "url": "https://news.theuniversity.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 156,
+      "name": "Baylor College of Medicine",
+      "url": "https://news.baylorcollege.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 157,
+      "name": "Baylor University",
+      "url": "https://news.bayloruniversity.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 159,
+      "name": "Southern Methodist University",
+      "url": "https://news.southernmethodist.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 160,
+      "name": "Texas A & M University-College Station",
+      "url": "https://news.texasa.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 162,
+      "name": "The University of Texas Health Science Center at Houston",
+      "url": "https://news.theuniversity.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 164,
+      "name": "The University of Texas at Arlington",
+      "url": "https://news.uta.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 167,
+      "name": "The University of Texas at El Paso",
+      "url": "https://news.utep.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 172,
+      "name": "Brigham Young University",
+      "url": "https://news.brighamyoung.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 173,
+      "name": "University of Utah",
+      "url": "https://news.utah.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 175,
+      "name": "George Mason University",
+      "url": "https://news.georgemason.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 176,
+      "name": "Old Dominion University",
+      "url": "https://news.olddominion.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 178,
+      "name": "Virginia Commonwealth University",
+      "url": "https://news.virginiacommonwealth.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 180,
+      "name": "William & Mary",
+      "url": "https://news.william&.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 181,
+      "name": "University of Vermont",
+      "url": "https://news.vermont.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 183,
+      "name": "Washington State University",
+      "url": "https://news.washingtonstate.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 184,
+      "name": "University of Wisconsin-Madison",
+      "url": "https://news.wisconsin.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 185,
+      "name": "University of Wisconsin-Milwaukee",
+      "url": "https://news.wisconsin.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 186,
+      "name": "West Virginia University",
+      "url": "https://news.westvirginia.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "r1_universities.json",
+      "id": 187,
+      "name": "University of Wyoming",
+      "url": "https://news.wyoming.edu",
+      "error": "DNS or connection failed",
+      "http_code": 0
+    },
+    {
+      "config": "peer_institutions.json",
+      "id": 15,
+      "name": "University of South Carolina",
+      "url": "https://sc.edu/about/offices_and_divisions/university_communications/newsroom/",
+      "error": "HTTP 404",
+      "http_code": 404
+    },
+    {
+      "config": "peer_institutions.json",
+      "id": 16,
+      "name": "University of Oklahoma",
+      "url": "https://www.ou.edu/web/news",
+      "error": "HTTP 404",
+      "http_code": 404
+    },
+    {
+      "config": "major_facilities.json",
+      "id": 6,
+      "name": "Indiana University Pervasive Technology Institute",
+      "url": "https://pti.iu.edu/news/",
+      "error": "HTTP 404",
+      "http_code": 404
+    },
+    {
+      "config": "major_facilities.json",
+      "id": 13,
+      "name": "Pacific Northwest National Laboratory",
+      "url": "https://www.pnnl.gov/news",
+      "error": "HTTP 403",
+      "http_code": 403
+    },
+    {
+      "config": "major_facilities.json",
+      "id": 20,
+      "name": "Princeton Plasma Physics Laboratory",
+      "url": "https://www.pppl.gov/news",
+      "error": "HTTP 403",
+      "http_code": 403
+    },
+    {
+      "config": "major_facilities.json",
+      "id": 21,
+      "name": "Thomas Jefferson National Accelerator Facility",
+      "url": "https://www.jlab.org/news",
+      "error": "HTTP 403",
+      "http_code": 403
+    },
+    {
+      "config": "major_facilities.json",
+      "id": 22,
+      "name": "Savannah River National Laboratory",
+      "url": "https://www.srnl.gov/news",
+      "error": "HTTP 404",
+      "http_code": 404
+    },
+    {
+      "config": "major_facilities.json",
+      "id": 24,
+      "name": "National Center for Atmospheric Research",
+      "url": "https://news.ucar.edu/",
+      "error": "HTTP 403",
+      "http_code": 403
+    },
+    {
+      "config": "major_facilities.json",
+      "id": 25,
+      "name": "National Ecological Observatory Network",
+      "url": "https://www.neonscience.org/news",
+      "error": "HTTP 404",
+      "http_code": 404
+    }
+  ]
+}

@@ -5,16 +5,11 @@ on:
   schedule:
     - cron: '0 15 * * *'
 
-  # Rebuild on push to website branch
-  push:
-    branches:
-      - website
-    paths:
-      - 'crawler/**'
-      - 'docs/**'
-
   # Allow manual triggering
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   crawl-and-deploy:
@@ -36,10 +31,10 @@ jobs:
           - 5432:5432
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repository (main branch for latest code)
         uses: actions/checkout@v4
         with:
-          ref: website
+          ref: main
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -84,17 +79,25 @@ jobs:
           DATABASE_POOL_SIZE: 100
         run: |
           python -m crawler
+        continue-on-error: false
 
       - name: Checkout website branch
         uses: actions/checkout@v4
         with:
           ref: website
           path: website-deploy
+          token: ${{ github.token }}
 
       - name: Copy HTML output to website branch
         run: |
-          # Copy all HTML files and assets
-          cp -r output/* website-deploy/
+          # Copy docs/ (GitHub Pages output) to website deploy root
+          if [ -d docs ]; then
+            cp -r docs/* website-deploy/
+          fi
+          # Also copy output/ files if they exist
+          if [ -d output ]; then
+            cp -r output/* website-deploy/ 2>/dev/null || true
+          fi
 
           # Create a simple README for the website branch
           cat > website-deploy/README.md << 'EOF'

@@ -13,9 +13,19 @@ cd "$REPO_DIR"
 # Activate virtual environment
 source "$VENV_DIR/bin/activate"
 
+# Pull latest changes from remote before running crawler
+echo "Pulling latest changes from remote..."
+git pull origin website || echo "Warning: git pull failed, continuing anyway..."
+
 # Run the crawler
 echo "Running crawler at $DATE..."
 python -m crawler
+CRAWLER_EXIT=$?
+
+if [ $CRAWLER_EXIT -ne 0 ]; then
+    echo "Error: Crawler failed with exit code $CRAWLER_EXIT at $DATE"
+    exit $CRAWLER_EXIT
+fi
 
 # Check if there are changes to commit
 if [[ -n $(git status --porcelain) ]]; then
@@ -28,8 +38,16 @@ if [[ -n $(git status --porcelain) ]]; then
     # Create commit
     git commit -m "Daily crawler update - $DATE"
 
+    # Pull again in case there were remote changes during crawler execution
+    git pull --rebase origin website || {
+        echo "Warning: git pull --rebase failed, trying regular push..."
+    }
+
     # Push to remote
-    git push origin website
+    git push origin website || {
+        echo "Error: git push failed at $DATE"
+        exit 1
+    }
 
     echo "Changes pushed successfully at $DATE"
 else

@@ -1,236 +1,198 @@
 """
-University name mapper - maps hostnames to canonical university names.
+University name mapper to convert hostnames to canonical university names.
 
-This module provides hostname-to-canonical-name mapping to fix the issue where
-Trafilatura extracts inconsistent sitenames (e.g., "AuburnEngineers", "ou.edu", "psu.edu")
-that don't match the canonical names in our config files.
-
-The mapper loads all three config files (peer_institutions, r1_universities, major_facilities)
-and builds a lookup table based on the hostnames in their news URLs.
+This module helps standardize university names across different sources by mapping
+hostnames to canonical names from the configuration files.
 """
 
 import json
 import logging
 from pathlib import Path
+from typing import Dict, Optional
 from urllib.parse import urlparse
-from typing import Dict, Optional, Tuple
 
 logger = logging.getLogger(__name__)
 
 
 class UniversityNameMapper:
-    """
-    Maps hostnames to canonical university/facility names.
+    """Maps hostnames to canonical university names."""
 
-    This class solves the column misassignment problem by providing a reliable
-    way to get the correct university name regardless of what Trafilatura extracts
-    from the HTML.
-    """
+    # Source files to load: (filename, key_for_entries, name_field)
+    SOURCE_FILES = [
+        ("universities.json", None, "name"),               # Legacy format (list of dicts)
+        ("peer_institutions.json", "universities", "name"),
+        ("r1_universities.json", "universities", "name"),
+        ("major_facilities.json", "facilities", "name"),
+        ("national_laboratories.json", "facilities", "name"),
+        ("global_institutions.json", "universities", "name"),
+    ]
 
-    def __init__(self):
-        """Initialize the mapper by loading all config files."""
-        self.hostname_to_name: Dict[str, Tuple[str, str]] = {}  # hostname -> (canonical_name, category)
-        self._load_mappings()
-
-    def _load_mappings(self):
-        """Load mappings from all config files."""
-        config_dir = Path(__file__).parent.parent / 'config'
-
-        # Load peer institutions (27 universities)
-        self._load_config_file(
-            config_dir / 'peer_institutions.json',
-            'universities',
-            'peer'
-        )
-
-        # Load R1 universities (187 universities)
-        self._load_config_file(
-            config_dir / 'r1_universities.json',
-            'universities',
-            'r1'
-        )
-
-        # Load major facilities (27 facilities)
-        self._load_config_file(
-            config_dir / 'major_facilities.json',
-            'facilities',
-            'facility'
-        )
-
-        logger.info(f"Loaded {len(self.hostname_to_name)} hostname mappings")
-
-    def _load_config_file(self, filepath: Path, key: str, category: str):
+    def __init__(self, config_path: Optional[Path] = None):
         """
-        Load a single config file and extract hostname mappings.
+        Initialize the mapper with university configuration.
 
         Args:
-            filepath: Path to the JSON config file
-            key: Key in JSON that contains the array (e.g., 'universities' or 'facilities')
-            category: Category type ('peer', 'r1', or 'facility')
+            config_path: Path to config directory. If None, uses default location.
         """
-        if not filepath.exists():
-            logger.warning(f"Config file not found: {filepath}")
-            return
+        if config_path is None:
+            config_dir = Path(__file__).parent.parent / "config"
+        else:
+            # Support both file path (legacy) and directory path
+            config_dir = config_path if config_path.is_dir() else config_path.parent
 
-        try:
-            with open(filepath, 'r') as f:
-                data = json.load(f)
+        self.hostname_to_name: Dict[str, str] = {}
+        self._load_all_sources(config_dir)
 
-            items = data.get(key, [])
-
-            for item in items:
-                # Get canonical name
-                canonical_name = item.get('name') or item.get('canonical_name')
-                if not canonical_name:
-                    continue
-
-                # Extract hostnames from news_sources array
-                news_sources = item.get('news_sources', [])
-
-                for source in news_sources:
-                    url = source.get('url')
-                    if url:
-                        hostname = self._extract_hostname(url)
-                        if hostname:
-                            self.hostname_to_name[hostname] = (canonical_name, category)
-
-                # Also check legacy "news" field for backward compatibility
-                news = item.get('news', {})
-                if news:
-                    for url_key in ['url', 'main_url', 'ai_tag_url']:
-                        url = news.get(url_key)
-                        if url:
-                            hostname = self._extract_hostname(url)
-                            if hostname:
-                                self.hostname_to_name[hostname] = (canonical_name, category)
-
-            logger.debug(f"Loaded {len(items)} entries from {filepath.name}")
-
-        except Exception as e:
-            logger.error(f"Error loading config file {filepath}: {e}")
-
-    def _extract_hostname(self, url: str) -> Optional[str]:
+    def _load_all_sources(self, config_dir: Path) -> None:
         """
-        Extract hostname from URL.
+        Load all source configuration files and build hostname mapping.
 
         Args:
-            url: The URL to extract hostname from
+            config_dir: Path to the config directory
+        """
+        total_loaded = 0
+
+        for filename, entries_key, name_field in self.SOURCE_FILES:
+            filepath = config_dir / filename
+            if not filepath.exists():
+                continue
+
+            try:
+                with open(filepath, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+
+                # Get the entries list
+                if entries_key is None:
+                    # Legacy format: top-level list
+                    if isinstance(data, list):
+                        entries = data
+                    else:
+                        continue
+                else:
+                    entries = data.get(entries_key, [])
+
+                count = self._process_entries(entries, name_field)
+                total_loaded += count
+                logger.debug(f"Loaded {count} mappings from {filename}")
+
+            except Exception as e:
+                logger.warning(f"Failed to load {filename}: {e}")
+
+        logger.info(f"Loaded {len(self.hostname_to_name)} hostname mappings from {total_loaded} sources")
+
+    def _process_entries(self, entries: list, name_field: str) -> int:
+        """
+        Process a list of entries and add hostname mappings.
+
+        Args:
+            entries: List of source dictionaries
+            name_field: Key to use for the institution name
 
         Returns:
-            Hostname (e.g., 'news.stanford.edu') or None if invalid
+            Number of entries processed
         """
-        try:
-            parsed = urlparse(url)
-            return parsed.netloc.lower()
-        except Exception:
-            return None
+        count = 0
+        for entry in entries:
+            name = entry.get(name_field)
+            if not name:
+                continue
 
-    def get_canonical_name(self, hostname: str, fallback_sitename: Optional[str] = None) -> str:
-        """
-        Get canonical university name for a given hostname.
+            # Get URL from various formats
+            news_url = self._extract_news_url(entry)
+            if not news_url:
+                continue
 
-        This method looks up the hostname in our config files to find the correct
-        canonical name. If not found, it falls back to the sitename from Trafilatura.
+            # Parse the news URL to get the hostname
+            parsed = urlparse(news_url)
+            hostname = parsed.netloc.lower()
+            if not hostname:
+                continue
 
-        Args:
-            hostname: The hostname of the article URL (e.g., 'eng.auburn.edu')
-            fallback_sitename: Fallback name from Trafilatura if hostname not found
+            # Store full hostname mapping
+            self.hostname_to_name[hostname] = name
 
-        Returns:
-            Canonical university/facility name
+            # Also store base domain mapping (e.g., stanford.edu)
+            parts = hostname.split('.')
+            if len(parts) >= 2:
+                base_domain = '.'.join(parts[-2:])
+                if base_domain not in self.hostname_to_name:
+                    self.hostname_to_name[base_domain] = name
 
-        Examples:
-            >>> mapper.get_canonical_name('eng.auburn.edu')
-            'Auburn University'
-            >>> mapper.get_canonical_name('www.ou.edu')
-            'University of Oklahoma'
-            >>> mapper.get_canonical_name('unknown.edu', 'Unknown University')
-            'Unknown University'
-        """
-        if not hostname:
-            return fallback_sitename or 'Unknown'
+            count += 1
 
-        hostname = hostname.lower()
+        return count
 
-        # Direct lookup
-        if hostname in self.hostname_to_name:
-            canonical_name, category = self.hostname_to_name[hostname]
-            logger.debug(f"Mapped {hostname} -> {canonical_name} ({category})")
-            return canonical_name
+    @staticmethod
+    def _extract_news_url(entry: dict) -> Optional[str]:
+        """Extract the primary news URL from various source formats."""
+        # Legacy format: direct news_url field
+        if 'news_url' in entry:
+            return entry['news_url']
 
-        # Try matching any registered hostname that shares the same institutional domain
-        # This handles cases like:
-        # - eng.auburn.edu matches news.auburn.edu (both *.auburn.edu)
-        # - www.utimes.pitt.edu matches www.pittwire.pitt.edu (both *.pitt.edu)
-        parts = hostname.split('.')
-        if len(parts) >= 2:
-            # Extract institutional domain (last two parts: e.g., 'auburn.edu', 'pitt.edu')
-            institutional_domain = '.'.join(parts[-2:])
+        # Schema v3.0.0: news_sources array
+        news_sources = entry.get('news_sources', [])
+        if isinstance(news_sources, list) and news_sources:
+            # Find primary source
+            for ns in news_sources:
+                if ns.get('type') == 'primary':
+                    return ns.get('url')
+            # Fallback to first source
+            return news_sources[0].get('url')
 
-            # Search through all registered hostnames for matches
-            for registered_hostname, (canonical_name, category) in self.hostname_to_name.items():
-                registered_parts = registered_hostname.split('.')
-                if len(registered_parts) >= 2:
-                    registered_institutional_domain = '.'.join(registered_parts[-2:])
-                    if institutional_domain == registered_institutional_domain:
-                        logger.debug(f"Mapped {hostname} -> {canonical_name} ({category}) via institutional domain {institutional_domain}")
-                        return canonical_name
-
-        # Try adding 'www.' prefix
-        www_hostname = f'www.{hostname}'
-        if www_hostname in self.hostname_to_name:
-            canonical_name, category = self.hostname_to_name[www_hostname]
-            logger.debug(f"Mapped {hostname} -> {canonical_name} ({category}) via www prefix")
-            return canonical_name
-
-        # Fallback to sitename from Trafilatura
-        if fallback_sitename:
-            logger.debug(f"No mapping found for {hostname}, using fallback: {fallback_sitename}")
-            return fallback_sitename
-
-        logger.warning(f"No mapping found for {hostname} and no fallback provided")
-        return 'Unknown'
-
-    def get_category(self, hostname: str) -> Optional[str]:
-        """
-        Get the category (peer, r1, or facility) for a given hostname.
-
-        Args:
-            hostname: The hostname to look up
-
-        Returns:
-            Category string ('peer', 'r1', 'facility') or None if not found
-        """
-        hostname = hostname.lower()
-
-        if hostname in self.hostname_to_name:
-            _, category = self.hostname_to_name[hostname]
-            return category
-
-        # Try parent domain
-        parts = hostname.split('.')
-        if len(parts) > 2:
-            parent_domain = '.'.join(parts[-2:])
-            if parent_domain in self.hostname_to_name:
-                _, category = self.hostname_to_name[parent_domain]
-                return category
+        # Legacy nested format
+        if 'news' in entry:
+            news = entry['news']
+            return news.get('main_url') or news.get('url')
 
         return None
 
+    def get_canonical_name(self, hostname: str, fallback_sitename: Optional[str] = None) -> str:
+        """
+        Get the canonical university name for a given hostname.
 
-# Global instance for reuse
-_mapper_instance = None
+        Args:
+            hostname: The hostname to look up (e.g., 'news.stanford.edu')
+            fallback_sitename: Optional fallback name if hostname not found
+
+        Returns:
+            The canonical university name, fallback sitename, or the hostname if neither found
+        """
+        if not hostname:
+            return fallback_sitename or "Unknown"
+
+        # Normalize hostname
+        hostname = hostname.lower().strip()
+
+        # Try exact match first
+        if hostname in self.hostname_to_name:
+            return self.hostname_to_name[hostname]
+
+        # Try extracting base domain and matching
+        parts = hostname.split('.')
+        if len(parts) >= 2:
+            base_domain = '.'.join(parts[-2:])
+            if base_domain in self.hostname_to_name:
+                return self.hostname_to_name[base_domain]
+
+        # If no match found, use fallback or hostname
+        if fallback_sitename:
+            logger.debug(f"No mapping found for {hostname}, using fallback: {fallback_sitename}")
+            return fallback_sitename
+        else:
+            logger.debug(f"No mapping found for {hostname}, using hostname as name")
+            return hostname
+
+
+# Global mapper instance
+_mapper_instance: Optional[UniversityNameMapper] = None
 
 
 def get_mapper() -> UniversityNameMapper:
     """
     Get the global UniversityNameMapper instance.
 
-    This function implements a singleton pattern to avoid reloading
-    config files multiple times.
-
     Returns:
-        UniversityNameMapper instance
+        The singleton mapper instance
     """
     global _mapper_instance
     if _mapper_instance is None:

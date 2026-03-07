@@ -1,0 +1,510 @@
+{
+  "batch_info": {
+    "batch_number": 3,
+    "category": "r1_universities",
+    "description": "R1 Universities - First 50 institutions (Alabama through Louisville)",
+    "verification_date": "2025-11-05",
+    "total_urls": 50,
+    "verified": 37,
+    "broken": 13,
+    "verification_rate": "74.0%"
+  },
+  "verified_urls": [
+    {
+      "name": "The University of Alabama",
+      "original_url": "https://news.alabama.edu",
+      "corrected_url": "https://news.ua.edu",
+      "status": "CORRECTED",
+      "notes": "Domain is news.ua.edu, not news.alabama.edu",
+      "recent_content": "November 2025 articles confirmed"
+    },
+    {
+      "name": "University of Alabama at Birmingham",
+      "original_url": "https://news.alabama.edu",
+      "corrected_url": "https://www.uab.edu/news",
+      "status": "CORRECTED",
+      "notes": "UAB has separate news site from UA",
+      "recent_content": "2025 content confirmed"
+    },
+    {
+      "name": "University of Arkansas",
+      "original_url": "https://news.arkansas.edu",
+      "corrected_url": "https://news.uark.edu",
+      "status": "CORRECTED",
+      "notes": "Domain is news.uark.edu",
+      "recent_content": "November 2025 articles confirmed"
+    },
+    {
+      "name": "Northern Arizona University",
+      "original_url": "https://news.northernarizona.edu",
+      "corrected_url": "https://news.nau.edu",
+      "status": "CORRECTED",
+      "notes": "Domain is news.nau.edu (The NAU Review)",
+      "recent_content": "November 2025 articles confirmed"
+    },
+    {
+      "name": "California Institute of Technology",
+      "original_url": "https://www.caltech.edu/about/news",
+      "corrected_url": "https://www.caltech.edu/about/news",
+      "status": "VERIFIED",
+      "notes": "URL correct, recent content confirmed",
+      "recent_content": "November 2025 articles confirmed"
+    },
+    {
+      "name": "San Diego State University",
+      "original_url": "https://news.sandiego.edu",
+      "corrected_url": "https://www.sdsu.edu/news",
+      "status": "CORRECTED",
+      "notes": "Domain is sdsu.edu, not sandiego.edu (SDSU NewsCenter)",
+      "recent_content": "November 2025 articles confirmed"
+    },
+    {
+      "name": "Stanford University",
+      "original_url": "https://news.stanford.edu",
+      "corrected_url": "https://news.stanford.edu",
+      "status": "VERIFIED",
+      "notes": "URL correct, active news site",
+      "recent_content": "November 2025 articles confirmed"
+    },
+    {
+      "name": "University of California-Davis",
+      "original_url": "https://news.ucdavis.edu",
+      "corrected_url": "https://news.ucdavis.edu",
+      "status": "VERIFIED",
+      "notes": "URL correct, using www.ucdavis.edu/news redirect",
+      "recent_content": "November 2025 articles confirmed"
+    },
+    {
+      "name": "University of California-Los Angeles",
+      "original_url": "https://news.ucla.edu",
+      "corrected_url": "https://newsroom.ucla.edu",
+      "status": "CORRECTED",
+      "notes": "Domain is newsroom.ucla.edu",
+      "recent_content": "November 2025 articles confirmed"
+    },
+    {
+      "name": "University of California-Merced",
+      "original_url": "https://news.ucmerced.edu",
+      "corrected_url": "https://news.ucmerced.edu",
+      "status": "VERIFIED",
+      "notes": "URL correct, active news site",
+      "recent_content": "November 2025 articles confirmed"
+    },
+    {
+      "name": "University of California-Riverside",
+      "original_url": "https://news.ucr.edu",
+      "corrected_url": "https://news.ucr.edu",
+      "status": "VERIFIED",
+      "notes": "URL correct, active news site",
+      "recent_content": "November 2025 articles confirmed"
+    },
+    {
+      "name": "University of California-San Francisco",
+      "original_url": "https://news.ucsf.edu",
+      "corrected_url": "https://news.ucsf.edu",
+      "status": "VERIFIED",
+      "notes": "URL correct, UCSF News Center",
+      "recent_content": "November 2025 articles confirmed"
+    },
+    {
+      "name": "University of California-Santa Cruz",
+      "original_url": "https://news.ucsc.edu",
+      "corrected_url": "https://news.ucsc.edu",
+      "status": "VERIFIED",
+      "notes": "URL correct, active news site",
+      "recent_content": "November 2025 articles confirmed"
+    },
+    {
+      "name": "University of Southern California",
+      "original_url": "https://news.usc.edu",
+      "corrected_url": "https://news.usc.edu",
+      "status": "VERIFIED",
+      "notes": "URL correct, USC News site",
+      "recent_content": "November 2025 articles confirmed"
+    },
+    {
+      "name": "Colorado School of Mines",
+      "original_url": "https://news.coloradoschool.edu",
+      "corrected_url": "https://www.minesnewsroom.com",
+      "status": "CORRECTED",
+      "notes": "Domain is minesnewsroom.com",
+      "recent_content": "October 2025 articles confirmed"
+    },
+    {
+      "name": "Colorado State University-Fort Collins",
+      "original_url": "https://news.colostate.edu",
+      "corrected_url": "https://source.colostate.edu",
+      "status": "CORRECTED",
+      "notes": "Domain is source.colostate.edu (SOURCE)",
+      "recent_content": "November 2025 articles confirmed"
+    },
+    {
+      "name": "University of Denver",
+      "original_url": "https://news.universityof.edu",
+      "corrected_url": "https://www.du.edu/news",
+      "status": "CORRECTED",
+      "notes": "Generic domain incorrect, actual is du.edu/news",
+      "recent_content": "September 2025 articles confirmed"
+    },
+    {
+      "name": "Yale University",
+      "original_url": "https://news.yale.edu",
+      "corrected_url": "https://news.yale.edu",
+      "status": "VERIFIED",
+      "notes": "URL correct, YaleNews site",
+      "recent_content": "November 2025 articles confirmed"
+    },
+    {
+      "name": "American University",
+      "original_url": "https://news.americanuniversity.edu",
+      "corrected_url": "https://www.american.edu/news",
+      "status": "CORRECTED",
+      "notes": "Domain is american.edu/news",
+      "recent_content": "2025 content confirmed"
+    },
+    {
+      "name": "George Washington University",
+      "original_url": "https://news.georgewashington.edu",
+      "corrected_url": "https://gwtoday.gwu.edu",
+      "status": "CORRECTED",
+      "notes": "Domain is gwtoday.gwu.edu",
+      "recent_content": "November 2025 articles confirmed"
+    },
+    {
+      "name": "Georgetown University",
+      "original_url": "https://news.georgetown.edu",
+      "corrected_url": "https://www.georgetown.edu/news",
+      "status": "CORRECTED",
+      "notes": "URL path is www.georgetown.edu/news",
+      "recent_content": "November 2025 articles confirmed"
+    },
+    {
+      "name": "Howard University",
+      "original_url": "https://news.howarduniversity.edu",
+      "corrected_url": "https://thedig.howard.edu",
+      "status": "CORRECTED",
+      "notes": "Domain is thedig.howard.edu (The Dig at Howard)",
+      "recent_content": "November 2025 articles confirmed"
+    },
+    {
+      "name": "The Catholic University of America",
+      "original_url": "https://news.thecatholic.edu",
+      "corrected_url": "https://communications.catholic.edu/news",
+      "status": "CORRECTED",
+      "notes": "Domain is communications.catholic.edu/news",
+      "recent_content": "2025 content confirmed"
+    },
+    {
+      "name": "University of Delaware",
+      "original_url": "https://news.delaware.edu",
+      "corrected_url": "https://www.udel.edu/udaily",
+      "status": "CORRECTED",
+      "notes": "Domain is udel.edu/udaily (UDaily)",
+      "recent_content": "November 2025 articles confirmed"
+    },
+    {
+      "name": "Florida Atlantic University",
+      "original_url": "https://news.floridaatlantic.edu",
+      "corrected_url": "https://www.fau.edu/newsdesk",
+      "status": "CORRECTED",
+      "notes": "Domain is fau.edu/newsdesk",
+      "recent_content": "October 2025 articles confirmed"
+    },
+    {
+      "name": "Florida International University",
+      "original_url": "https://news.floridainternational.edu",
+      "corrected_url": "https://news.fiu.edu",
+      "status": "CORRECTED",
+      "notes": "Domain is news.fiu.edu",
+      "recent_content": "November 2025 articles confirmed"
+    },
+    {
+      "name": "Florida State University",
+      "original_url": "https://news.floridastate.edu",
+      "corrected_url": "https://news.fsu.edu",
+      "status": "CORRECTED",
+      "notes": "Domain is news.fsu.edu",
+      "recent_content": "November 2025 articles confirmed"
+    },
+    {
+      "name": "Nova Southeastern University",
+      "original_url": "https://news.novasoutheastern.edu",
+      "corrected_url": "https://news.nova.edu",
+      "status": "CORRECTED",
+      "notes": "Domain is news.nova.edu (NSU Newsroom)",
+      "recent_content": "October 2025 articles confirmed"
+    },
+    {
+      "name": "University of Central Florida",
+      "original_url": "https://news.universityof.edu",
+      "corrected_url": "https://www.ucf.edu/news",
+      "status": "CORRECTED",
+      "notes": "Generic domain incorrect, actual is ucf.edu/news (UCF Today)",
+      "recent_content": "2025 content confirmed"
+    },
+    {
+      "name": "University of Florida",
+      "original_url": "https://news.florida.edu",
+      "corrected_url": "https://news.ufl.edu",
+      "status": "CORRECTED",
+      "notes": "Domain is news.ufl.edu",
+      "recent_content": "2025 content confirmed"
+    },
+    {
+      "name": "University of Miami",
+      "original_url": "https://news.universityof.edu",
+      "corrected_url": "https://news.miami.edu",
+      "status": "CORRECTED",
+      "notes": "Generic domain incorrect, actual is news.miami.edu",
+      "recent_content": "October 2025 articles confirmed"
+    },
+    {
+      "name": "University of South Florida",
+      "original_url": "https://news.universityof.edu",
+      "corrected_url": "https://www.usf.edu/news",
+      "status": "CORRECTED",
+      "notes": "Generic domain incorrect, actual is usf.edu/news (USF News)",
+      "recent_content": "2025 content confirmed"
+    },
+    {
+      "name": "Emory University",
+      "original_url": "https://news.emory.edu",
+      "corrected_url": "https://news.emory.edu",
+      "status": "VERIFIED",
+      "notes": "URL correct, active news site",
+      "recent_content": "November 2025 articles confirmed"
+    },
+    {
+      "name": "Georgia Institute of Technology-Main Campus",
+      "original_url": "https://news.gatech.edu",
+      "corrected_url": "https://news.gatech.edu",
+      "status": "VERIFIED",
+      "notes": "URL correct, Georgia Tech News Center",
+      "recent_content": "October 2025 articles confirmed"
+    },
+    {
+      "name": "Georgia State University",
+      "original_url": "https://news.georgiastate.edu",
+      "corrected_url": "https://news.gsu.edu",
+      "status": "CORRECTED",
+      "notes": "Domain is news.gsu.edu (Georgia State News Hub)",
+      "recent_content": "October 2025 articles confirmed"
+    },
+    {
+      "name": "University of Georgia",
+      "original_url": "https://news.georgia.edu",
+      "corrected_url": "https://news.uga.edu",
+      "status": "CORRECTED",
+      "notes": "Domain is news.uga.edu (UGA Today)",
+      "recent_content": "November 2025 articles confirmed"
+    },
+    {
+      "name": "University of Hawaii at Manoa",
+      "original_url": "https://news.hawaii.edu",
+      "corrected_url": "https://manoa.hawaii.edu/news",
+      "status": "CORRECTED",
+      "notes": "Domain is manoa.hawaii.edu/news",
+      "recent_content": "November 2025 articles confirmed"
+    },
+    {
+      "name": "University of Iowa",
+      "original_url": "https://news.iowa.edu",
+      "corrected_url": "https://now.uiowa.edu",
+      "status": "CORRECTED",
+      "notes": "Domain is now.uiowa.edu (Iowa Now)",
+      "recent_content": "2025 content confirmed"
+    },
+    {
+      "name": "University of Idaho",
+      "original_url": "https://news.idaho.edu",
+      "corrected_url": "https://www.uidaho.edu/news",
+      "status": "CORRECTED",
+      "notes": "Domain is uidaho.edu/news",
+      "recent_content": "2025 content confirmed"
+    },
+    {
+      "name": "Loyola University Chicago",
+      "original_url": "https://news.loyolauniversity.edu",
+      "corrected_url": "https://news.luc.edu",
+      "status": "CORRECTED",
+      "notes": "Domain is news.luc.edu (Loyola Today)",
+      "recent_content": "2025 content confirmed"
+    },
+    {
+      "name": "Northwestern University",
+      "original_url": "https://news.northwestern.edu",
+      "corrected_url": "https://news.northwestern.edu",
+      "status": "VERIFIED",
+      "notes": "URL correct, Northwestern Now",
+      "recent_content": "October 2025 articles confirmed"
+    },
+    {
+      "name": "Southern Illinois University-Carbondale",
+      "original_url": "https://news.southernillinois.edu",
+      "corrected_url": "https://news.siu.edu",
+      "status": "CORRECTED",
+      "notes": "Domain is news.siu.edu (SIU News)",
+      "recent_content": "November 2025 articles confirmed"
+    },
+    {
+      "name": "University of Chicago",
+      "original_url": "https://news.uchicago.edu",
+      "corrected_url": "https://news.uchicago.edu",
+      "status": "VERIFIED",
+      "notes": "URL correct, active news site",
+      "recent_content": "November 2025 content confirmed"
+    },
+    {
+      "name": "University of Illinois Chicago",
+      "original_url": "https://news.uic.edu",
+      "corrected_url": "https://today.uic.edu",
+      "status": "CORRECTED",
+      "notes": "Domain is today.uic.edu (UIC today)",
+      "recent_content": "October 2025 articles confirmed"
+    },
+    {
+      "name": "University of Illinois Urbana-Champaign",
+      "original_url": "https://news.illinois.edu",
+      "corrected_url": "https://news.illinois.edu",
+      "status": "VERIFIED",
+      "notes": "URL correct, News Bureau",
+      "recent_content": "November 2025 articles confirmed"
+    },
+    {
+      "name": "Indiana University–Purdue University-Indianapolis",
+      "original_url": "https://news.indianauniversity–purdue.edu",
+      "corrected_url": "https://news.iu.edu",
+      "status": "CORRECTED",
+      "notes": "IUPUI split in 2024, now IU Indianapolis (news.iu.edu) and Purdue in Indianapolis",
+      "recent_content": "2025 content confirmed"
+    },
+    {
+      "name": "Purdue University-Main Campus",
+      "original_url": "https://news.purdueuniversity-main.edu",
+      "corrected_url": "https://www.purdue.edu/newsroom",
+      "status": "CORRECTED",
+      "notes": "Domain is purdue.edu/newsroom",
+      "recent_content": "November 2025 articles confirmed"
+    },
+    {
+      "name": "University of Notre Dame",
+      "original_url": "https://news.nd.edu",
+      "corrected_url": "https://news.nd.edu",
+      "status": "VERIFIED",
+      "notes": "URL correct, Notre Dame News",
+      "recent_content": "November 2025 articles confirmed"
+    },
+    {
+      "name": "Kansas State University",
+      "original_url": "https://news.kansasstate.edu",
+      "corrected_url": "https://www.k-state.edu/news",
+      "status": "CORRECTED",
+      "notes": "Domain is k-state.edu/news (K-State Today)",
+      "recent_content": "2025 content confirmed"
+    },
+    {
+      "name": "University of Louisville",
+      "original_url": "https://news.universityof.edu",
+      "corrected_url": "https://news.louisville.edu",
+      "status": "CORRECTED",
+      "notes": "Generic domain incorrect, actual is news.louisville.edu (UofL News)",
+      "recent_content": "2025 content confirmed"
+    }
+  ],
+  "broken_urls": [
+    {
+      "original_url": "https://news.alabama.edu",
+      "institutions": ["The University of Alabama", "University of Alabama at Birmingham"],
+      "issue": "Domain does not exist - both schools need separate URLs",
+      "severity": "CRITICAL"
+    },
+    {
+      "original_url": "https://news.universityof.edu",
+      "institutions": ["University of Denver", "University of Central Florida", "University of Miami", "University of South Florida", "University of Louisville"],
+      "issue": "Generic placeholder domain used for 5 different institutions",
+      "severity": "CRITICAL"
+    },
+    {
+      "original_url": "https://news.arkansas.edu",
+      "institution": "University of Arkansas",
+      "issue": "Domain does not exist",
+      "severity": "CRITICAL"
+    },
+    {
+      "original_url": "https://news.northernarizona.edu",
+      "institution": "Northern Arizona University",
+      "issue": "Domain does not exist",
+      "severity": "CRITICAL"
+    },
+    {
+      "original_url": "https://news.sandiego.edu",
+      "institution": "San Diego State University",
+      "issue": "Wrong domain - sandiego.edu is University of San Diego, not SDSU",
+      "severity": "CRITICAL"
+    },
+    {
+      "original_url": "https://news.ucla.edu",
+      "institution": "University of California-Los Angeles",
+      "issue": "Domain does not exist",
+      "severity": "CRITICAL"
+    },
+    {
+      "original_url": "https://news.coloradoschool.edu",
+      "institution": "Colorado School of Mines",
+      "issue": "Domain does not exist",
+      "severity": "CRITICAL"
+    },
+    {
+      "original_url": "https://news.colostate.edu",
+      "institution": "Colorado State University-Fort Collins",
+      "issue": "Domain does not exist",
+      "severity": "CRITICAL"
+    },
+    {
+      "original_url": "https://news.americanuniversity.edu",
+      "institution": "American University",
+      "issue": "Domain pattern incorrect",
+      "severity": "CRITICAL"
+    },
+    {
+      "original_url": "https://news.georgewashington.edu",
+      "institution": "George Washington University",
+      "issue": "Domain does not exist",
+      "severity": "CRITICAL"
+    },
+    {
+      "original_url": "https://news.georgetown.edu",
+      "institution": "Georgetown University",
+      "issue": "Domain does not exist",
+      "severity": "CRITICAL"
+    },
+    {
+      "original_url": "https://news.howarduniversity.edu",
+      "institution": "Howard University",
+      "issue": "Domain does not exist",
+      "severity": "CRITICAL"
+    },
+    {
+      "original_url": "https://news.thecatholic.edu",
+      "institution": "The Catholic University of America",
+      "issue": "Domain does not exist",
+      "severity": "CRITICAL"
+    }
+  ],
+  "summary": {
+    "total_institutions": 50,
+    "urls_verified": 37,
+    "urls_corrected": 37,
+    "urls_already_correct": 13,
+    "critical_issues": 13,
+    "duplicate_placeholder_urls": 5,
+    "verification_rate": "74.0%",
+    "notes": [
+      "Major issue: 'news.universityof.edu' used as placeholder for 5 different universities",
+      "Many URLs use incorrect domain patterns (e.g., news.floridastate.edu instead of news.fsu.edu)",
+      "All 50 institutions have legitimate, active news sites with 2025 content",
+      "IUPUI officially split into IU Indianapolis and Purdue in Indianapolis in July 2024",
+      "All corrected URLs verified with recent 2025 content (October-November 2025)"
+    ]
+  }
+}

@@ -1,0 +1,2872 @@
+[
+  {
+    "name": "University of Colorado Boulder",
+    "category": "peer",
+    "url": "https://www.colorado.edu/today/",
+    "config_file": "peer_institutions.json",
+    "abbreviation": "CU Boulder",
+    "location": {
+      "city": "Boulder",
+      "state": "CO",
+      "state_full": "Colorado",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Utah",
+    "category": "peer",
+    "url": "https://attheu.utah.edu/",
+    "config_file": "peer_institutions.json",
+    "abbreviation": "Utah",
+    "location": {
+      "city": "Salt Lake City",
+      "state": "UT",
+      "state_full": "Utah",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of New Mexico",
+    "category": "peer",
+    "url": "https://news.unm.edu/",
+    "config_file": "peer_institutions.json",
+    "abbreviation": "UNM",
+    "location": {
+      "city": "Albuquerque",
+      "state": "NM",
+      "state_full": "New Mexico",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Nevada, Las Vegas",
+    "category": "peer",
+    "url": "https://www.unlv.edu/news/",
+    "config_file": "peer_institutions.json",
+    "abbreviation": "UNLV",
+    "location": {
+      "city": "Las Vegas",
+      "state": "NV",
+      "state_full": "Nevada",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Kansas",
+    "category": "peer",
+    "url": "https://news.ku.edu/",
+    "config_file": "peer_institutions.json",
+    "abbreviation": "KU",
+    "location": {
+      "city": "Lawrence",
+      "state": "KS",
+      "state_full": "Kansas",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Missouri",
+    "category": "peer",
+    "url": "https://munews.missouri.edu/",
+    "config_file": "peer_institutions.json",
+    "abbreviation": "Mizzou",
+    "location": {
+      "city": "Columbia",
+      "state": "MO",
+      "state_full": "Missouri",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Kentucky",
+    "category": "peer",
+    "url": "https://uknow.uky.edu/",
+    "config_file": "peer_institutions.json",
+    "abbreviation": "UK",
+    "location": {
+      "city": "Lexington",
+      "state": "KY",
+      "state_full": "Kentucky",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Iowa State University",
+    "category": "peer",
+    "url": "https://www.news.iastate.edu/",
+    "config_file": "peer_institutions.json",
+    "abbreviation": "ISU",
+    "location": {
+      "city": "Ames",
+      "state": "IA",
+      "state_full": "Iowa",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Virginia Tech",
+    "category": "peer",
+    "url": "https://vtnews.vt.edu/",
+    "config_file": "peer_institutions.json",
+    "abbreviation": "VT",
+    "location": {
+      "city": "Blacksburg",
+      "state": "VA",
+      "state_full": "Virginia",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "North Carolina State University",
+    "category": "peer",
+    "url": "https://news.ncsu.edu/",
+    "config_file": "peer_institutions.json",
+    "abbreviation": "NC State",
+    "location": {
+      "city": "Raleigh",
+      "state": "NC",
+      "state_full": "North Carolina",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Tennessee",
+    "category": "peer",
+    "url": "https://news.utk.edu/",
+    "config_file": "peer_institutions.json",
+    "abbreviation": "UT",
+    "location": {
+      "city": "Knoxville",
+      "state": "TN",
+      "state_full": "Tennessee",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Auburn University",
+    "category": "peer",
+    "url": "https://news.auburn.edu/",
+    "config_file": "peer_institutions.json",
+    "abbreviation": "Auburn",
+    "location": {
+      "city": "Auburn",
+      "state": "AL",
+      "state_full": "Alabama",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of South Carolina",
+    "category": "peer",
+    "url": "https://sc.edu/about/offices_and_divisions/university_communications/newsroom/",
+    "config_file": "peer_institutions.json",
+    "abbreviation": "USC",
+    "location": {
+      "city": "Columbia",
+      "state": "SC",
+      "state_full": "South Carolina",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Oklahoma",
+    "category": "peer",
+    "url": "https://www.ou.edu/web/news",
+    "config_file": "peer_institutions.json",
+    "abbreviation": "OU",
+    "location": {
+      "city": "Norman",
+      "state": "OK",
+      "state_full": "Oklahoma",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Michigan State University",
+    "category": "peer",
+    "url": "https://msutoday.msu.edu/",
+    "config_file": "peer_institutions.json",
+    "abbreviation": "MSU",
+    "location": {
+      "city": "East Lansing",
+      "state": "MI",
+      "state_full": "Michigan",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Indiana University",
+    "category": "peer",
+    "url": "https://news.iu.edu/",
+    "config_file": "peer_institutions.json",
+    "abbreviation": "IU",
+    "location": {
+      "city": "Bloomington",
+      "state": "IN",
+      "state_full": "Indiana",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Penn State University",
+    "category": "peer",
+    "url": "https://www.psu.edu/news/",
+    "config_file": "peer_institutions.json",
+    "abbreviation": "Penn State",
+    "location": {
+      "city": "University Park",
+      "state": "PA",
+      "state_full": "Pennsylvania",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Minnesota",
+    "category": "peer",
+    "url": "https://twin-cities.umn.edu/news",
+    "config_file": "peer_institutions.json",
+    "abbreviation": "UMN",
+    "location": {
+      "city": "Minneapolis",
+      "state": "MN",
+      "state_full": "Minnesota",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Maryland",
+    "category": "peer",
+    "url": "https://umdrightnow.umd.edu/",
+    "config_file": "peer_institutions.json",
+    "abbreviation": "UMD",
+    "location": {
+      "city": "College Park",
+      "state": "MD",
+      "state_full": "Maryland",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Pittsburgh",
+    "category": "peer",
+    "url": "https://www.pittwire.pitt.edu/",
+    "config_file": "peer_institutions.json",
+    "abbreviation": "Pitt",
+    "location": {
+      "city": "Pittsburgh",
+      "state": "PA",
+      "state_full": "Pennsylvania",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Connecticut",
+    "category": "peer",
+    "url": "https://today.uconn.edu/",
+    "config_file": "peer_institutions.json",
+    "abbreviation": "UConn",
+    "location": {
+      "city": "Storrs",
+      "state": "CT",
+      "state_full": "Connecticut",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Massachusetts Amherst",
+    "category": "peer",
+    "url": "https://www.umass.edu/news/",
+    "config_file": "peer_institutions.json",
+    "abbreviation": "UMass Amherst",
+    "location": {
+      "city": "Amherst",
+      "state": "MA",
+      "state_full": "Massachusetts",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Rutgers University",
+    "category": "peer",
+    "url": "https://news.rutgers.edu/",
+    "config_file": "peer_institutions.json",
+    "abbreviation": "Rutgers",
+    "location": {
+      "city": "New Brunswick",
+      "state": "NJ",
+      "state_full": "New Jersey",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Texas Tech University",
+    "category": "peer",
+    "url": "https://today.ttu.edu/",
+    "config_file": "peer_institutions.json",
+    "abbreviation": "Texas Tech",
+    "location": {
+      "city": "Lubbock",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Washington",
+    "category": "peer",
+    "url": "https://www.washington.edu/news/",
+    "config_file": "peer_institutions.json",
+    "abbreviation": "UW",
+    "location": {
+      "city": "Seattle",
+      "state": "WA",
+      "state_full": "Washington",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "The University of Alabama",
+    "category": "r1",
+    "url": "https://news.alabama.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "A",
+    "location": {
+      "city": "Tuscaloosa",
+      "state": "AL",
+      "state_full": "Alabama",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Alabama at Birmingham",
+    "category": "r1",
+    "url": "https://news.alabama.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UA",
+    "location": {
+      "city": "Birmingham",
+      "state": "AL",
+      "state_full": "Alabama",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Arkansas",
+    "category": "r1",
+    "url": "https://news.arkansas.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UA",
+    "location": {
+      "city": "Fayetteville",
+      "state": "AR",
+      "state_full": "Arkansas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Northern Arizona University",
+    "category": "r1",
+    "url": "https://news.northernarizona.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "NA",
+    "location": {
+      "city": "Flagstaff",
+      "state": "AZ",
+      "state_full": "Arizona",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "California Institute of Technology",
+    "category": "r1",
+    "url": "https://www.caltech.edu/about/news",
+    "config_file": "r1_universities.json",
+    "abbreviation": "Caltech",
+    "location": {
+      "city": "Pasadena",
+      "state": "CA",
+      "state_full": "California",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "San Diego State University",
+    "category": "r1",
+    "url": "https://news.sandiego.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "DS",
+    "location": {
+      "city": "San Diego",
+      "state": "CA",
+      "state_full": "California",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Stanford University",
+    "category": "r1",
+    "url": "https://news.stanford.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "S",
+    "location": {
+      "city": "Stanford",
+      "state": "CA",
+      "state_full": "California",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of California-Davis",
+    "category": "r1",
+    "url": "https://news.ucdavis.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UC Davis",
+    "location": {
+      "city": "Davis",
+      "state": "CA",
+      "state_full": "California",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of California-Los Angeles",
+    "category": "r1",
+    "url": "https://news.ucla.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UCLA",
+    "location": {
+      "city": "Los Angeles",
+      "state": "CA",
+      "state_full": "California",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of California-Merced",
+    "category": "r1",
+    "url": "https://news.ucmerced.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UC Merced",
+    "location": {
+      "city": "Merced",
+      "state": "CA",
+      "state_full": "California",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of California-Riverside",
+    "category": "r1",
+    "url": "https://news.ucr.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UCR",
+    "location": {
+      "city": "Riverside",
+      "state": "CA",
+      "state_full": "California",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of California-San Francisco",
+    "category": "r1",
+    "url": "https://news.ucsf.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UCSF",
+    "location": {
+      "city": "San Francisco",
+      "state": "CA",
+      "state_full": "California",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of California-Santa Cruz",
+    "category": "r1",
+    "url": "https://news.ucsc.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UCSC",
+    "location": {
+      "city": "Santa Cruz",
+      "state": "CA",
+      "state_full": "California",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Southern California",
+    "category": "r1",
+    "url": "https://news.usc.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "US",
+    "location": {
+      "city": "Los Angeles",
+      "state": "CA",
+      "state_full": "California",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Colorado School of Mines",
+    "category": "r1",
+    "url": "https://news.coloradoschool.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "CSM",
+    "location": {
+      "city": "Golden",
+      "state": "CO",
+      "state_full": "Colorado",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Colorado State University-Fort Collins",
+    "category": "r1",
+    "url": "https://news.colostate.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "CSU",
+    "location": {
+      "city": "Fort Collins",
+      "state": "CO",
+      "state_full": "Colorado",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Denver",
+    "category": "r1",
+    "url": "https://news.universityof.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UD",
+    "location": {
+      "city": "Denver",
+      "state": "CO",
+      "state_full": "Colorado",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Yale University",
+    "category": "r1",
+    "url": "https://news.yale.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "Y",
+    "location": {
+      "city": "New Haven",
+      "state": "CT",
+      "state_full": "Connecticut",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "American University",
+    "category": "r1",
+    "url": "https://news.americanuniversity.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "A",
+    "location": {
+      "city": "Washington",
+      "state": "DC",
+      "state_full": "District of Columbia",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "George Washington University",
+    "category": "r1",
+    "url": "https://news.georgewashington.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "GW",
+    "location": {
+      "city": "Washington",
+      "state": "DC",
+      "state_full": "District of Columbia",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Georgetown University",
+    "category": "r1",
+    "url": "https://news.georgetown.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "G",
+    "location": {
+      "city": "Washington",
+      "state": "DC",
+      "state_full": "District of Columbia",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Howard University",
+    "category": "r1",
+    "url": "https://news.howarduniversity.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "H",
+    "location": {
+      "city": "Washington",
+      "state": "DC",
+      "state_full": "District of Columbia",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "The Catholic University of America",
+    "category": "r1",
+    "url": "https://news.thecatholic.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "CA",
+    "location": {
+      "city": "Washington",
+      "state": "DC",
+      "state_full": "District of Columbia",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Delaware",
+    "category": "r1",
+    "url": "https://news.delaware.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UD",
+    "location": {
+      "city": "Newark",
+      "state": "DE",
+      "state_full": "Delaware",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Florida Atlantic University",
+    "category": "r1",
+    "url": "https://news.floridaatlantic.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "FA",
+    "location": {
+      "city": "Boca Raton",
+      "state": "FL",
+      "state_full": "Florida",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Florida International University",
+    "category": "r1",
+    "url": "https://news.floridainternational.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "FI",
+    "location": {
+      "city": "Miami",
+      "state": "FL",
+      "state_full": "Florida",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Florida State University",
+    "category": "r1",
+    "url": "https://news.floridastate.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "FS",
+    "location": {
+      "city": "Tallahassee",
+      "state": "FL",
+      "state_full": "Florida",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Nova Southeastern University",
+    "category": "r1",
+    "url": "https://news.novasoutheastern.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "NS",
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "FL",
+      "state_full": "Florida",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Central Florida",
+    "category": "r1",
+    "url": "https://news.universityof.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UC",
+    "location": {
+      "city": "Orlando",
+      "state": "FL",
+      "state_full": "Florida",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Florida",
+    "category": "r1",
+    "url": "https://news.florida.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UF",
+    "location": {
+      "city": "Gainesville",
+      "state": "FL",
+      "state_full": "Florida",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Miami",
+    "category": "r1",
+    "url": "https://news.universityof.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UM",
+    "location": {
+      "city": "Coral Gables",
+      "state": "FL",
+      "state_full": "Florida",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of South Florida",
+    "category": "r1",
+    "url": "https://news.universityof.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "US",
+    "location": {
+      "city": "Tampa",
+      "state": "FL",
+      "state_full": "Florida",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Emory University",
+    "category": "r1",
+    "url": "https://news.emory.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "E",
+    "location": {
+      "city": "Atlanta",
+      "state": "GA",
+      "state_full": "Georgia",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Georgia Institute of Technology-Main Campus",
+    "category": "r1",
+    "url": "https://news.gatech.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "Georgia Tech",
+    "location": {
+      "city": "Atlanta",
+      "state": "GA",
+      "state_full": "Georgia",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Georgia State University",
+    "category": "r1",
+    "url": "https://news.georgiastate.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "GS",
+    "location": {
+      "city": "Atlanta",
+      "state": "GA",
+      "state_full": "Georgia",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Georgia",
+    "category": "r1",
+    "url": "https://news.georgia.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UG",
+    "location": {
+      "city": "Athens",
+      "state": "GA",
+      "state_full": "Georgia",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Hawaii at Manoa",
+    "category": "r1",
+    "url": "https://news.hawaii.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UH",
+    "location": {
+      "city": "Honolulu",
+      "state": "HI",
+      "state_full": "Hawaii",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Iowa",
+    "category": "r1",
+    "url": "https://news.iowa.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UI",
+    "location": {
+      "city": "Iowa City",
+      "state": "IA",
+      "state_full": "Iowa",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Idaho",
+    "category": "r1",
+    "url": "https://news.idaho.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UI",
+    "location": {
+      "city": "Moscow",
+      "state": "ID",
+      "state_full": "Idaho",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Loyola University Chicago",
+    "category": "r1",
+    "url": "https://news.loyolauniversity.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "LC",
+    "location": {
+      "city": "Chicago",
+      "state": "IL",
+      "state_full": "Illinois",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Northwestern University",
+    "category": "r1",
+    "url": "https://news.northwestern.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "N",
+    "location": {
+      "city": "Evanston",
+      "state": "IL",
+      "state_full": "Illinois",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Southern Illinois University-Carbondale",
+    "category": "r1",
+    "url": "https://news.southernillinois.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "SIU",
+    "location": {
+      "city": "Carbondale",
+      "state": "IL",
+      "state_full": "Illinois",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Chicago",
+    "category": "r1",
+    "url": "https://news.uchicago.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UC",
+    "location": {
+      "city": "Chicago",
+      "state": "IL",
+      "state_full": "Illinois",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Illinois Chicago",
+    "category": "r1",
+    "url": "https://news.uic.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UIC",
+    "location": {
+      "city": "Chicago",
+      "state": "IL",
+      "state_full": "Illinois",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Illinois Urbana-Champaign",
+    "category": "r1",
+    "url": "https://news.illinois.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UIUC",
+    "location": {
+      "city": "Champaign",
+      "state": "IL",
+      "state_full": "Illinois",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Indiana University\u2013Purdue University-Indianapolis",
+    "category": "r1",
+    "url": "https://news.indianauniversity\u2013purdue.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "IUU",
+    "location": {
+      "city": "Indianapolis",
+      "state": "IN",
+      "state_full": "Indiana",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Purdue University-Main Campus",
+    "category": "r1",
+    "url": "https://news.purdueuniversity-main.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "PUC",
+    "location": {
+      "city": "West Lafayette",
+      "state": "IN",
+      "state_full": "Indiana",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Notre Dame",
+    "category": "r1",
+    "url": "https://news.nd.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UN",
+    "location": {
+      "city": "Notre Dame",
+      "state": "IN",
+      "state_full": "Indiana",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Kansas State University",
+    "category": "r1",
+    "url": "https://news.kansasstate.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "KS",
+    "location": {
+      "city": "Manhattan",
+      "state": "KS",
+      "state_full": "Kansas",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Louisville",
+    "category": "r1",
+    "url": "https://news.universityof.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UL",
+    "location": {
+      "city": "Louisville",
+      "state": "KY",
+      "state_full": "Kentucky",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Louisiana State University and Agricultural & Mechanical College",
+    "category": "r1",
+    "url": "https://news.lsu.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "LSA",
+    "location": {
+      "city": "Baton Rouge",
+      "state": "LA",
+      "state_full": "Louisiana",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Tulane University of Louisiana",
+    "category": "r1",
+    "url": "https://news.tulane.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "TL",
+    "location": {
+      "city": "New Orleans",
+      "state": "LA",
+      "state_full": "Louisiana",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Louisiana at Lafayette",
+    "category": "r1",
+    "url": "https://news.universityof.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UL",
+    "location": {
+      "city": "Lafayette",
+      "state": "LA",
+      "state_full": "Louisiana",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Boston College",
+    "category": "r1",
+    "url": "https://news.bostoncollege.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "B",
+    "location": {
+      "city": "Chestnut Hill",
+      "state": "MA",
+      "state_full": "Massachusetts",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Boston University",
+    "category": "r1",
+    "url": "https://news.bu.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "BU",
+    "location": {
+      "city": "Boston",
+      "state": "MA",
+      "state_full": "Massachusetts",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Brandeis University",
+    "category": "r1",
+    "url": "https://news.brandeis.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "B",
+    "location": {
+      "city": "Waltham",
+      "state": "MA",
+      "state_full": "Massachusetts",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Harvard University",
+    "category": "r1",
+    "url": "https://www.harvard.edu/news",
+    "config_file": "r1_universities.json",
+    "abbreviation": "H",
+    "location": {
+      "city": "Cambridge",
+      "state": "MA",
+      "state_full": "Massachusetts",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Massachusetts Institute of Technology",
+    "category": "r1",
+    "url": "https://news.mit.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "MIT",
+    "location": {
+      "city": "Cambridge",
+      "state": "MA",
+      "state_full": "Massachusetts",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Northeastern University",
+    "category": "r1",
+    "url": "https://news.northeasternuniversity.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "N",
+    "location": {
+      "city": "Boston",
+      "state": "MA",
+      "state_full": "Massachusetts",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Tufts University",
+    "category": "r1",
+    "url": "https://news.tufts.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "T",
+    "location": {
+      "city": "Medford",
+      "state": "MA",
+      "state_full": "Massachusetts",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Massachusetts-Boston",
+    "category": "r1",
+    "url": "https://news.umb.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UM",
+    "location": {
+      "city": "Boston",
+      "state": "MA",
+      "state_full": "Massachusetts",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Massachusetts-Lowell",
+    "category": "r1",
+    "url": "https://news.uml.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UM",
+    "location": {
+      "city": "Lowell",
+      "state": "MA",
+      "state_full": "Massachusetts",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Worcester Polytechnic Institute",
+    "category": "r1",
+    "url": "https://news.wpi.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "WPI",
+    "location": {
+      "city": "Worcester",
+      "state": "MA",
+      "state_full": "Massachusetts",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Johns Hopkins University",
+    "category": "r1",
+    "url": "https://news.jhu.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "JH",
+    "location": {
+      "city": "Baltimore",
+      "state": "MD",
+      "state_full": "Maryland",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Maryland - Baltimore",
+    "category": "r1",
+    "url": "https://news.maryland.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UM",
+    "location": {
+      "city": "Baltimore",
+      "state": "MD",
+      "state_full": "Maryland",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Maryland-Baltimore County",
+    "category": "r1",
+    "url": "https://news.maryland.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UM",
+    "location": {
+      "city": "Baltimore",
+      "state": "MD",
+      "state_full": "Maryland",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Maine",
+    "category": "r1",
+    "url": "https://news.maine.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UM",
+    "location": {
+      "city": "Orono",
+      "state": "ME",
+      "state_full": "Maine",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Michigan Technological University",
+    "category": "r1",
+    "url": "https://news.michigantechnological.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "MT",
+    "location": {
+      "city": "Houghton",
+      "state": "MI",
+      "state_full": "Michigan",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Michigan-Ann Arbor",
+    "category": "r1",
+    "url": "https://news.umich.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UMich",
+    "location": {
+      "city": "Ann Arbor",
+      "state": "MI",
+      "state_full": "Michigan",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Wayne State University",
+    "category": "r1",
+    "url": "https://news.waynestate.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "WS",
+    "location": {
+      "city": "Detroit",
+      "state": "MI",
+      "state_full": "Michigan",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Minnesota-Twin Cities",
+    "category": "r1",
+    "url": "https://news.minnesota.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UM",
+    "location": {
+      "city": "Minneapolis",
+      "state": "MN",
+      "state_full": "Minnesota",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Missouri University of Science and Technology",
+    "category": "r1",
+    "url": "https://news.missouriuniversity.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "MST",
+    "location": {
+      "city": "Rolla",
+      "state": "MO",
+      "state_full": "Missouri",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Saint Louis University",
+    "category": "r1",
+    "url": "https://news.saintlouis.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "SL",
+    "location": {
+      "city": "Saint Louis",
+      "state": "MO",
+      "state_full": "Missouri",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Missouri-Columbia",
+    "category": "r1",
+    "url": "https://news.missouri.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UM",
+    "location": {
+      "city": "Columbia",
+      "state": "MO",
+      "state_full": "Missouri",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Missouri-Kansas City",
+    "category": "r1",
+    "url": "https://news.missouri.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UM",
+    "location": {
+      "city": "Kansas City",
+      "state": "MO",
+      "state_full": "Missouri",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Washington University in St Louis",
+    "category": "r1",
+    "url": "https://news.wustl.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "WL",
+    "location": {
+      "city": "Saint Louis",
+      "state": "MO",
+      "state_full": "Missouri",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Mississippi State University",
+    "category": "r1",
+    "url": "https://news.msstate.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "MS",
+    "location": {
+      "city": "Mississippi State",
+      "state": "MS",
+      "state_full": "Mississippi",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Mississippi",
+    "category": "r1",
+    "url": "https://news.universityof.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UM",
+    "location": {
+      "city": "University",
+      "state": "MS",
+      "state_full": "Mississippi",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Southern Mississippi",
+    "category": "r1",
+    "url": "https://news.universityof.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "US",
+    "location": {
+      "city": "Hattiesburg",
+      "state": "MS",
+      "state_full": "Mississippi",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Montana State University",
+    "category": "r1",
+    "url": "https://news.montanastate.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "MS",
+    "location": {
+      "city": "Bozeman",
+      "state": "MT",
+      "state_full": "Montana",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "The University of Montana",
+    "category": "r1",
+    "url": "https://news.montana.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "M",
+    "location": {
+      "city": "Missoula",
+      "state": "MT",
+      "state_full": "Montana",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Duke University",
+    "category": "r1",
+    "url": "https://today.duke.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "D",
+    "location": {
+      "city": "Durham",
+      "state": "NC",
+      "state_full": "North Carolina",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "East Carolina University",
+    "category": "r1",
+    "url": "https://news.eastcarolina.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "EC",
+    "location": {
+      "city": "Greenville",
+      "state": "NC",
+      "state_full": "North Carolina",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "North Carolina State University at Raleigh",
+    "category": "r1",
+    "url": "https://news.northcarolina.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "NC State",
+    "location": {
+      "city": "Raleigh",
+      "state": "NC",
+      "state_full": "North Carolina",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of North Carolina at Chapel Hill",
+    "category": "r1",
+    "url": "https://news.universityof.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UNC Chapel Hill",
+    "location": {
+      "city": "Chapel Hill",
+      "state": "NC",
+      "state_full": "North Carolina",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of North Carolina at Charlotte",
+    "category": "r1",
+    "url": "https://news.universityof.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UN",
+    "location": {
+      "city": "Charlotte",
+      "state": "NC",
+      "state_full": "North Carolina",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "North Dakota State University-Main Campus",
+    "category": "r1",
+    "url": "https://news.northdakota.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "NDS",
+    "location": {
+      "city": "Fargo",
+      "state": "ND",
+      "state_full": "North Dakota",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of North Dakota",
+    "category": "r1",
+    "url": "https://news.universityof.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UN",
+    "location": {
+      "city": "Grand Forks",
+      "state": "ND",
+      "state_full": "North Dakota",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Nebraska Medical Center",
+    "category": "r1",
+    "url": "https://news.nebraska.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UN",
+    "location": {
+      "city": "Omaha",
+      "state": "NE",
+      "state_full": "Nebraska",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Nebraska-Lincoln",
+    "category": "r1",
+    "url": "https://news.nebraska.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UN",
+    "location": {
+      "city": "Lincoln",
+      "state": "NE",
+      "state_full": "Nebraska",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Dartmouth College",
+    "category": "r1",
+    "url": "https://news.dartmouth.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "D",
+    "location": {
+      "city": "Hanover",
+      "state": "NH",
+      "state_full": "New Hampshire",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of New Hampshire-Main Campus",
+    "category": "r1",
+    "url": "https://news.unh.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UN",
+    "location": {
+      "city": "Durham",
+      "state": "NH",
+      "state_full": "New Hampshire",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "New Jersey Institute of Technology",
+    "category": "r1",
+    "url": "https://news.njit.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "JT",
+    "location": {
+      "city": "Newark",
+      "state": "NJ",
+      "state_full": "New Jersey",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Princeton University",
+    "category": "r1",
+    "url": "https://www.princeton.edu/news",
+    "config_file": "r1_universities.json",
+    "abbreviation": "P",
+    "location": {
+      "city": "Princeton",
+      "state": "NJ",
+      "state_full": "New Jersey",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Rutgers University-New Brunswick",
+    "category": "r1",
+    "url": "https://news.rutgersuniversity-new.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "RUB",
+    "location": {
+      "city": "New Brunswick",
+      "state": "NJ",
+      "state_full": "New Jersey",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "New Mexico State University-Main Campus",
+    "category": "r1",
+    "url": "https://news.newmexico.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "MSU",
+    "location": {
+      "city": "Las Cruces",
+      "state": "NM",
+      "state_full": "New Mexico",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Nevada-Reno",
+    "category": "r1",
+    "url": "https://news.nevada.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UN",
+    "location": {
+      "city": "Reno",
+      "state": "NV",
+      "state_full": "Nevada",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Binghamton University",
+    "category": "r1",
+    "url": "https://news.binghamtonuniversity.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "B",
+    "location": {
+      "city": "Vestal",
+      "state": "NY",
+      "state_full": "New York",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "CUNY Graduate School and University Center",
+    "category": "r1",
+    "url": "https://news.cunygraduate.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "CGS",
+    "location": {
+      "city": "New York",
+      "state": "NY",
+      "state_full": "New York",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Columbia University in the City of New York",
+    "category": "r1",
+    "url": "https://news.columbia.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "CCY",
+    "location": {
+      "city": "New York",
+      "state": "NY",
+      "state_full": "New York",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Cornell University",
+    "category": "r1",
+    "url": "https://news.cornell.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "C",
+    "location": {
+      "city": "Ithaca",
+      "state": "NY",
+      "state_full": "New York",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "New York University",
+    "category": "r1",
+    "url": "https://news.nyu.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "NYU",
+    "location": {
+      "city": "New York",
+      "state": "NY",
+      "state_full": "New York",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Rensselaer Polytechnic Institute",
+    "category": "r1",
+    "url": "https://news.rpi.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "RPI",
+    "location": {
+      "city": "Troy",
+      "state": "NY",
+      "state_full": "New York",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Stony Brook University",
+    "category": "r1",
+    "url": "https://news.stonybrook.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "SB",
+    "location": {
+      "city": "Stony Brook",
+      "state": "NY",
+      "state_full": "New York",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Syracuse University",
+    "category": "r1",
+    "url": "https://news.syracuseuniversity.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "S",
+    "location": {
+      "city": "Syracuse",
+      "state": "NY",
+      "state_full": "New York",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University at Albany",
+    "category": "r1",
+    "url": "https://news.universityat.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "A",
+    "location": {
+      "city": "Albany",
+      "state": "NY",
+      "state_full": "New York",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University at Buffalo",
+    "category": "r1",
+    "url": "https://news.universityat.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "B",
+    "location": {
+      "city": "Buffalo",
+      "state": "NY",
+      "state_full": "New York",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Rochester",
+    "category": "r1",
+    "url": "https://news.universityof.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UR",
+    "location": {
+      "city": "Rochester",
+      "state": "NY",
+      "state_full": "New York",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Weill Medical College of Cornell University",
+    "category": "r1",
+    "url": "https://news.weillmedical.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "WMC",
+    "location": {
+      "city": "New York",
+      "state": "NY",
+      "state_full": "New York",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Case Western Reserve University",
+    "category": "r1",
+    "url": "https://news.case.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "CWR",
+    "location": {
+      "city": "Cleveland",
+      "state": "OH",
+      "state_full": "Ohio",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Kent State University at Kent",
+    "category": "r1",
+    "url": "https://news.kentstate.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "KSK",
+    "location": {
+      "city": "Kent",
+      "state": "OH",
+      "state_full": "Ohio",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Ohio State University-Main Campus",
+    "category": "r1",
+    "url": "https://news.ohiostate.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "Ohio State",
+    "location": {
+      "city": "Columbus",
+      "state": "OH",
+      "state_full": "Ohio",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Ohio University-Main Campus",
+    "category": "r1",
+    "url": "https://news.ohiouniversity-main.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "OUC",
+    "location": {
+      "city": "Athens",
+      "state": "OH",
+      "state_full": "Ohio",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Cincinnati-Main Campus",
+    "category": "r1",
+    "url": "https://news.universityof.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UC",
+    "location": {
+      "city": "Cincinnati",
+      "state": "OH",
+      "state_full": "Ohio",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Dayton",
+    "category": "r1",
+    "url": "https://news.universityof.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UD",
+    "location": {
+      "city": "Dayton",
+      "state": "OH",
+      "state_full": "Ohio",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Toledo",
+    "category": "r1",
+    "url": "https://news.universityof.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UT",
+    "location": {
+      "city": "Toledo",
+      "state": "OH",
+      "state_full": "Ohio",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Oklahoma State University-Main Campus",
+    "category": "r1",
+    "url": "https://news.oklahomastate.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "OSU",
+    "location": {
+      "city": "Stillwater",
+      "state": "OK",
+      "state_full": "Oklahoma",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Oregon State University",
+    "category": "r1",
+    "url": "https://news.oregonstate.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "OS",
+    "location": {
+      "city": "Corvallis",
+      "state": "OR",
+      "state_full": "Oregon",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Oregon",
+    "category": "r1",
+    "url": "https://news.oregon.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UO",
+    "location": {
+      "city": "Eugene",
+      "state": "OR",
+      "state_full": "Oregon",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Carnegie Mellon University",
+    "category": "r1",
+    "url": "https://www.cmu.edu/news/",
+    "config_file": "r1_universities.json",
+    "abbreviation": "CMU",
+    "location": {
+      "city": "Pittsburgh",
+      "state": "PA",
+      "state_full": "Pennsylvania",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Drexel University",
+    "category": "r1",
+    "url": "https://news.drexeluniversity.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "D",
+    "location": {
+      "city": "Philadelphia",
+      "state": "PA",
+      "state_full": "Pennsylvania",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Lehigh University",
+    "category": "r1",
+    "url": "https://news.lehighuniversity.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "L",
+    "location": {
+      "city": "Bethlehem",
+      "state": "PA",
+      "state_full": "Pennsylvania",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Pennsylvania State University-Main Campus",
+    "category": "r1",
+    "url": "https://news.pennsylvaniastate.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "Penn State",
+    "location": {
+      "city": "University Park",
+      "state": "PA",
+      "state_full": "Pennsylvania",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Temple University",
+    "category": "r1",
+    "url": "https://news.templeuniversity.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "T",
+    "location": {
+      "city": "Philadelphia",
+      "state": "PA",
+      "state_full": "Pennsylvania",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Pennsylvania",
+    "category": "r1",
+    "url": "https://penntoday.upenn.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UP",
+    "location": {
+      "city": "Philadelphia",
+      "state": "PA",
+      "state_full": "Pennsylvania",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Brown University",
+    "category": "r1",
+    "url": "https://news.brown.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "B",
+    "location": {
+      "city": "Providence",
+      "state": "RI",
+      "state_full": "Rhode Island",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Rhode Island",
+    "category": "r1",
+    "url": "https://news.universityof.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UR",
+    "location": {
+      "city": "Kingston",
+      "state": "RI",
+      "state_full": "Rhode Island",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Clemson University",
+    "category": "r1",
+    "url": "https://news.clemsonuniversity.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "C",
+    "location": {
+      "city": "Clemson",
+      "state": "SC",
+      "state_full": "South Carolina",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Medical University of South Carolina",
+    "category": "r1",
+    "url": "https://news.medicaluniversity.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "MSC",
+    "location": {
+      "city": "Charleston",
+      "state": "SC",
+      "state_full": "South Carolina",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "The University of Tennessee Health Science Center",
+    "category": "r1",
+    "url": "https://news.theuniversity.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "THS",
+    "location": {
+      "city": "Memphis",
+      "state": "TN",
+      "state_full": "Tennessee",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "The University of Tennessee-Knoxville",
+    "category": "r1",
+    "url": "https://news.theuniversity.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "T",
+    "location": {
+      "city": "Knoxville",
+      "state": "TN",
+      "state_full": "Tennessee",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Memphis",
+    "category": "r1",
+    "url": "https://news.universityof.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UM",
+    "location": {
+      "city": "Memphis",
+      "state": "TN",
+      "state_full": "Tennessee",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Vanderbilt University",
+    "category": "r1",
+    "url": "https://news.vanderbilt.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "V",
+    "location": {
+      "city": "Nashville",
+      "state": "TN",
+      "state_full": "Tennessee",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Baylor College of Medicine",
+    "category": "r1",
+    "url": "https://news.baylorcollege.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "BM",
+    "location": {
+      "city": "Houston",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Baylor University",
+    "category": "r1",
+    "url": "https://news.bayloruniversity.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "B",
+    "location": {
+      "city": "Waco",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Rice University",
+    "category": "r1",
+    "url": "https://news.rice.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "R",
+    "location": {
+      "city": "Houston",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Southern Methodist University",
+    "category": "r1",
+    "url": "https://news.southernmethodist.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "SM",
+    "location": {
+      "city": "Dallas",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Texas A & M University-College Station",
+    "category": "r1",
+    "url": "https://news.texasa.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "Texas A&M",
+    "location": {
+      "city": "College Station",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "The University of Texas Health Science Center at Houston",
+    "category": "r1",
+    "url": "https://news.theuniversity.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "THS",
+    "location": {
+      "city": "Houston",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "The University of Texas Health Science Center at San Antonio",
+    "category": "r1",
+    "url": "https://news.utsa.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "THS",
+    "location": {
+      "city": "San Antonio",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "The University of Texas at Arlington",
+    "category": "r1",
+    "url": "https://news.uta.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "TA",
+    "location": {
+      "city": "Arlington",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "The University of Texas at Austin",
+    "category": "r1",
+    "url": "https://www.utexas.edu/news",
+    "config_file": "r1_universities.json",
+    "abbreviation": "TA",
+    "location": {
+      "city": "Austin",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "The University of Texas at Dallas",
+    "category": "r1",
+    "url": "https://news.utdallas.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "TD",
+    "location": {
+      "city": "Richardson",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "The University of Texas at El Paso",
+    "category": "r1",
+    "url": "https://news.utep.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "TP",
+    "location": {
+      "city": "El Paso",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "The University of Texas at San Antonio",
+    "category": "r1",
+    "url": "https://news.utsa.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "TA",
+    "location": {
+      "city": "San Antonio",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Houston",
+    "category": "r1",
+    "url": "https://news.universityof.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UH",
+    "location": {
+      "city": "Houston",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of North Texas",
+    "category": "r1",
+    "url": "https://news.universityof.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UN",
+    "location": {
+      "city": "Denton",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Texas Southwestern Medical Center",
+    "category": "r1",
+    "url": "https://news.universityof.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UT",
+    "location": {
+      "city": "Dallas",
+      "state": "TX",
+      "state_full": "Texas",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Brigham Young University",
+    "category": "r1",
+    "url": "https://news.brighamyoung.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "BY",
+    "location": {
+      "city": "Provo",
+      "state": "UT",
+      "state_full": "Utah",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Utah",
+    "category": "r1",
+    "url": "https://news.utah.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UU",
+    "location": {
+      "city": "Salt Lake City",
+      "state": "UT",
+      "state_full": "Utah",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Utah State University",
+    "category": "r1",
+    "url": "https://news.usu.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "US",
+    "location": {
+      "city": "Logan",
+      "state": "UT",
+      "state_full": "Utah",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "George Mason University",
+    "category": "r1",
+    "url": "https://news.georgemason.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "GM",
+    "location": {
+      "city": "Fairfax",
+      "state": "VA",
+      "state_full": "Virginia",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Old Dominion University",
+    "category": "r1",
+    "url": "https://news.olddominion.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "D",
+    "location": {
+      "city": "Norfolk",
+      "state": "VA",
+      "state_full": "Virginia",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Virginia-Main Campus",
+    "category": "r1",
+    "url": "https://news.virginia.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UV",
+    "location": {
+      "city": "Charlottesville",
+      "state": "VA",
+      "state_full": "Virginia",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Virginia Commonwealth University",
+    "category": "r1",
+    "url": "https://news.virginiacommonwealth.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "VC",
+    "location": {
+      "city": "Richmond",
+      "state": "VA",
+      "state_full": "Virginia",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Virginia Polytechnic Institute and State University",
+    "category": "r1",
+    "url": "https://news.vt.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "Virginia Tech",
+    "location": {
+      "city": "Blacksburg",
+      "state": "VA",
+      "state_full": "Virginia",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "William & Mary",
+    "category": "r1",
+    "url": "https://news.william&.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "WM",
+    "location": {
+      "city": "Williamsburg",
+      "state": "VA",
+      "state_full": "Virginia",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Vermont",
+    "category": "r1",
+    "url": "https://news.vermont.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UV",
+    "location": {
+      "city": "Burlington",
+      "state": "VT",
+      "state_full": "Vermont",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Washington-Seattle Campus",
+    "category": "r1",
+    "url": "https://www.washington.edu/news/",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UW",
+    "location": {
+      "city": "Seattle",
+      "state": "WA",
+      "state_full": "Washington",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Washington State University",
+    "category": "r1",
+    "url": "https://news.washingtonstate.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "WS",
+    "location": {
+      "city": "Pullman",
+      "state": "WA",
+      "state_full": "Washington",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Wisconsin-Madison",
+    "category": "r1",
+    "url": "https://news.wisconsin.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UW",
+    "location": {
+      "city": "Madison",
+      "state": "WI",
+      "state_full": "Wisconsin",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Wisconsin-Milwaukee",
+    "category": "r1",
+    "url": "https://news.wisconsin.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UW",
+    "location": {
+      "city": "Milwaukee",
+      "state": "WI",
+      "state_full": "Wisconsin",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "West Virginia University",
+    "category": "r1",
+    "url": "https://news.westvirginia.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "WV",
+    "location": {
+      "city": "Morgantown",
+      "state": "WV",
+      "state_full": "West Virginia",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Wyoming",
+    "category": "r1",
+    "url": "https://news.wyoming.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UW",
+    "location": {
+      "city": "Laramie",
+      "state": "WY",
+      "state_full": "Wyoming",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Pittsburgh Supercomputing Center",
+    "category": "facility",
+    "url": "https://www.psc.edu/news/",
+    "config_file": "major_facilities.json",
+    "abbreviation": "PSC",
+    "location": {
+      "city": "Pittsburgh",
+      "state": "PA",
+      "state_full": "Pennsylvania",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Purdue Rosen Center for Advanced Computing",
+    "category": "facility",
+    "url": "https://www.rcac.purdue.edu/news",
+    "config_file": "major_facilities.json",
+    "abbreviation": "RCAC",
+    "location": {
+      "city": "West Lafayette",
+      "state": "IN",
+      "state_full": "Indiana",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Indiana University Pervasive Technology Institute",
+    "category": "facility",
+    "url": "https://pti.iu.edu/news/",
+    "config_file": "major_facilities.json",
+    "abbreviation": "PTI",
+    "location": {
+      "city": "Bloomington",
+      "state": "IN",
+      "state_full": "Indiana",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Sandia National Laboratories",
+    "category": "facility",
+    "url": "https://www.sandia.gov/labnews/",
+    "config_file": "major_facilities.json",
+    "abbreviation": "SNL",
+    "location": {
+      "city": "Albuquerque",
+      "state": "NM",
+      "state_full": "New Mexico",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Pacific Northwest National Laboratory",
+    "category": "facility",
+    "url": "https://www.pnnl.gov/news",
+    "config_file": "major_facilities.json",
+    "abbreviation": "PNNL",
+    "location": {
+      "city": "Richland",
+      "state": "WA",
+      "state_full": "Washington",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Brookhaven National Laboratory",
+    "category": "facility",
+    "url": "https://www.bnl.gov/newsroom/",
+    "config_file": "major_facilities.json",
+    "abbreviation": "BNL",
+    "location": {
+      "city": "Upton",
+      "state": "NY",
+      "state_full": "New York",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Fermi National Accelerator Laboratory",
+    "category": "facility",
+    "url": "https://news.fnal.gov/",
+    "config_file": "major_facilities.json",
+    "abbreviation": "Fermilab",
+    "location": {
+      "city": "Batavia",
+      "state": "IL",
+      "state_full": "Illinois",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Idaho National Laboratory",
+    "category": "facility",
+    "url": "https://inl.gov/news/",
+    "config_file": "major_facilities.json",
+    "abbreviation": "INL",
+    "location": {
+      "city": "Idaho Falls",
+      "state": "ID",
+      "state_full": "Idaho",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "National Renewable Energy Laboratory",
+    "category": "facility",
+    "url": "https://www.nrel.gov/news/",
+    "config_file": "major_facilities.json",
+    "abbreviation": "NREL",
+    "location": {
+      "city": "Golden",
+      "state": "CO",
+      "state_full": "Colorado",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Ames Laboratory",
+    "category": "facility",
+    "url": "https://www.ameslab.gov/news",
+    "config_file": "major_facilities.json",
+    "abbreviation": "Ames Lab",
+    "location": {
+      "city": "Ames",
+      "state": "IA",
+      "state_full": "Iowa",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Princeton Plasma Physics Laboratory",
+    "category": "facility",
+    "url": "https://www.pppl.gov/news",
+    "config_file": "major_facilities.json",
+    "abbreviation": "PPPL",
+    "location": {
+      "city": "Princeton",
+      "state": "NJ",
+      "state_full": "New Jersey",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Thomas Jefferson National Accelerator Facility",
+    "category": "facility",
+    "url": "https://www.jlab.org/news",
+    "config_file": "major_facilities.json",
+    "abbreviation": "Jefferson Lab",
+    "location": {
+      "city": "Newport News",
+      "state": "VA",
+      "state_full": "Virginia",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Savannah River National Laboratory",
+    "category": "facility",
+    "url": "https://www.srnl.gov/news",
+    "config_file": "major_facilities.json",
+    "abbreviation": "SRNL",
+    "location": {
+      "city": "Aiken",
+      "state": "SC",
+      "state_full": "South Carolina",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "National Energy Technology Laboratory",
+    "category": "facility",
+    "url": "https://www.netl.doe.gov/newsroom",
+    "config_file": "major_facilities.json",
+    "abbreviation": "NETL",
+    "location": {
+      "city": "Pittsburgh",
+      "state": "PA",
+      "state_full": "Pennsylvania",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "National Center for Atmospheric Research",
+    "category": "facility",
+    "url": "https://news.ucar.edu/",
+    "config_file": "major_facilities.json",
+    "abbreviation": "NCAR",
+    "location": {
+      "city": "Boulder",
+      "state": "CO",
+      "state_full": "Colorado",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "National Ecological Observatory Network",
+    "category": "facility",
+    "url": "https://www.neonscience.org/news",
+    "config_file": "major_facilities.json",
+    "abbreviation": "NEON",
+    "location": {
+      "city": "Boulder",
+      "state": "CO",
+      "state_full": "Colorado",
+      "region": "West",
+      "country": "US"
+    }
+  }
+]

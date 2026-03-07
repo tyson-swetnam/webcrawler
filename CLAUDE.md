@@ -4,330 +4,158 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is an **AI University News Crawler** - a production-grade Python application that crawls US university news sites for AI-related content, leverages multiple AI APIs for analysis, and delivers intelligent summaries via Slack and email. The system is designed as a standalone Linux application with daily automated execution.
+AI University News Crawler — a Python application that crawls 241+ US university and research facility news sites for AI-related content, analyzes articles via Claude and OpenAI APIs, and publishes a daily static website to GitHub Pages.
 
-## Architecture
+**Live site:** https://tyson-swetnam.github.io/webcrawler
 
-The system follows a **producer-consumer pattern** with 6 distinct phases:
+## Running the Crawler
 
-1. **Discovery & Crawling**: Scrapy-based crawler identifies new articles from university press releases
-2. **Content Extraction**: Trafilatura extracts structured content with 95%+ accuracy
-3. **Deduplication**: PostgreSQL + Bloom filters identify truly new content
-4. **AI Analysis**: Parallel calls to Claude (Sonnet-4-5), OpenAI (GPT-4), and Gemini (2.5 Flash) for deep research
-5. **Reporting**: Generate summaries and deliver via Slack webhooks and SMTP email
-6. **Persistence**: Store results, update tracking database, log all operations
-
-### Technology Stack
-
-- **Core**: Python 3.11+ with Scrapy 2.11+
-- **Content Extraction**: Trafilatura 2.0+ with htmldate
-- **Database**: PostgreSQL 15+ for metadata/tracking, Redis 7+ for URL frontier
-- **AI APIs**: Anthropic Claude (Sonnet-4-5), OpenAI GPT-4/3.5-turbo, Google Gemini 2.5 Flash
-- **Scheduling**: Systemd timers (preferred) or cron
-- **Notifications**: Slack webhooks + Python smtplib
-- **Deployment**: Systemd service with virtual environment isolation
-
-## Project Structure
-
-```
-ai-news-crawler/
-├── crawler/                     # Main application package
-│   ├── __main__.py              # Entry point: python -m crawler
-│   ├── config/
-│   │   ├── settings.py          # Pydantic configuration
-│   │   ├── logging.yaml         # Logging configuration
-│   │   └── universities.json    # University source list
-│   ├── spiders/
-│   │   ├── university_spider.py # Main Scrapy spider
-│   │   └── discovery_spider.py  # New source discovery
-│   ├── extractors/
-│   │   ├── content.py           # Trafilatura wrapper
-│   │   └── metadata.py          # Date/author extraction
-│   ├── db/
-│   │   ├── models.py            # SQLAlchemy models
-│   │   ├── session.py           # Database connection
-│   │   └── migrations/          # Alembic migrations
-│   ├── ai/
-│   │   ├── claude.py            # Claude API client
-│   │   ├── openai_client.py     # OpenAI API client
-│   │   ├── gemini.py            # Gemini API client
-│   │   └── analyzer.py          # Multi-API orchestration
-│   ├── notifiers/
-│   │   ├── slack.py             # Slack webhook integration
-│   │   └── email.py             # SMTP email sender
-│   └── utils/
-│       ├── deduplication.py     # Bloom filter + hashing
-│       ├── rate_limiter.py      # Politeness controls
-│       └── report_generator.py  # Summary formatting
-├── tests/
-│   ├── unit/
-│   └── integration/
-├── scripts/
-│   ├── deploy.sh                # Deployment automation
-│   ├── backup.sh                # Database backup
-│   ├── discover_universities.py # Initial source discovery
-│   └── test_notifications.py    # Test Slack/email
-├── deployment/
-│   ├── ai-news-crawler.service  # Systemd service
-│   └── ai-news-crawler.timer    # Systemd timer
-└── requirements.txt
-```
-
-## Database Schema
-
-### Core Tables
-
-- **urls**: URL tracking with hash-based deduplication (SHA-256 for O(1) lookups)
-- **articles**: Extracted content with AI classification
-- **ai_analyses**: Results from Claude, OpenAI, and Gemini APIs with consensus summary
-- **notifications_sent**: Notification delivery log
-- **host_crawl_state**: Per-domain politeness tracking
-
-### Key Design Decisions
-
-- Hash-based deduplication using SHA-256 for both URL and content fingerprinting
-- Content hash stored separately from URL hash to detect article updates
-- PostgreSQL indexes optimized for common queries (recent articles, AI-related content)
-- JSONB metadata field for flexible schema evolution
-
-## Development Commands
-
-### Environment Setup
+There is only ONE production entry point:
 
 ```bash
-# Create virtual environment
-python3 -m venv venv
-source venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Copy and configure environment
-cp .env.example .env
-# Edit .env with your API keys and credentials
+source venv/bin/activate && python -m crawler
 ```
 
-### Database Setup
+This runs the complete pipeline:
+1. Scrapy crawl of university news sites (in subprocess to avoid Twisted/asyncio conflict)
+2. Content extraction via Trafilatura
+3. Deduplication via SHA-256 URL/content hashing against PostgreSQL
+4. Parallel AI analysis (Claude Haiku + OpenAI GPT-5) with consensus building
+5. HTML report generation to both `output/` and `docs/` directories
+6. Slack and email notifications
 
+Debug a single university:
 ```bash
-# Setup PostgreSQL database (run as postgres user)
-sudo -u postgres psql
-CREATE DATABASE ai_news_crawler;
-CREATE USER crawler WITH PASSWORD 'secure_password';
-GRANT ALL PRIVILEGES ON DATABASE ai_news_crawler TO crawler;
-\q
-
-# Run migrations
-alembic upgrade head
+source venv/bin/activate && scrapy crawl university_news -a start_urls='["https://news.stanford.edu"]'
 ```
 
-### Running the Crawler
+### Automated Execution
 
-**IMPORTANT:** There is only ONE production crawler entry point: `python -m crawler`
+- **Systemd timer**: Runs daily at 06:00 MST via `scripts/run_crawler_and_commit.sh` (activates venv, crawls, commits `docs/` changes, pushes to `website` branch)
+- **GitHub Actions**: `.github/workflows/daily-crawler.yml` runs at 15:00 UTC, uses ephemeral PostgreSQL, pushes to `website` branch
+- Check timer: `systemctl status ai-news-crawler.timer`
 
-This command runs the complete 6-phase pipeline:
-1. Crawl university news sites (Scrapy)
-2. Extract and deduplicate content
-3. Analyze with AI APIs (Claude + GPT + Gemini)
-4. Generate HTML reports (Drudge Report-style website)
-5. Send notifications (Slack + Email)
-6. Store results in database
+## Development Setup
 
 ```bash
-# Run the full pipeline (production command)
-python -m crawler
+python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt
+cp .env.example .env  # Edit with API keys and DATABASE_URL
+```
 
-# Test single university crawl (Scrapy only - for debugging)
-scrapy crawl university_news -a start_urls='["https://news.stanford.edu"]'
+### Code Quality
+
+```bash
+black crawler/       # Format
+flake8 crawler/      # Lint
+mypy crawler/        # Type check
 ```
 
 ### Testing
 
+No formal test suite exists. Ad-hoc test scripts are in `scripts/`:
+- `scripts/test_notifications.py` — test Slack/email delivery
+- `scripts/test_html_generator.py` — test HTML generation
+- `scripts/test_mcp_fetcher.py` — test MCP fetch fallback
+- `scripts/test_api_keys.sh` — verify API key connectivity
+- `scripts/test_database.sh` — verify DB connectivity
+
+### Database
+
+Tables are created by `Base.metadata.create_all()` in `DatabaseManager.create_tables()`. Alembic is configured but the `migrations/versions/` directory is empty. A raw SQL schema is available at `scripts/schema.sql`.
+
 ```bash
-# Run all tests
-pytest
-
-# Run unit tests only
-pytest tests/unit/
-
-# Run integration tests
-pytest tests/integration/
-
-# Test notifications (without actual crawling)
-python scripts/test_notifications.py
-
-# Test specific component
-pytest tests/unit/test_ai_clients.py -v
+# Manual setup (alternative to scripts/setup_database.sh)
+sudo -u postgres psql -c "CREATE DATABASE ai_news_crawler; CREATE USER crawler WITH PASSWORD 'pw'; GRANT ALL PRIVILEGES ON DATABASE ai_news_crawler TO crawler;"
 ```
 
-### Deployment
+## Architecture
+
+### Pipeline Flow (`crawler/__main__.py`)
+
+`cli()` → `asyncio.run(main())`:
+
+1. **Crawl**: `run_crawler()` spawns a subprocess running `CrawlerProcess` with `UniversityNewsSpider` to avoid Twisted reactor conflicts with asyncio
+2. **Retrieve**: Queries `articles` table for rows with `last_analyzed IS NULL` and recent `first_scraped`/`published_date`
+3. **AI Analysis**: `MultiAIAnalyzer.batch_analyze()` fires three async API calls per article via `asyncio.gather()`, builds consensus
+4. **Export**: `LocalExporter.export_all()` writes JSON/CSV/HTML/TXT to `output/`
+5. **Website**: `HTMLReportGenerator` generates Drudge Report-style static site to both `output/` and `docs/`
+6. **Notify**: `SlackNotifier` and `EmailNotifier` send daily reports
+
+### Key Modules
+
+| Module | Purpose |
+|--------|---------|
+| `crawler/__main__.py` | Entry point, pipeline orchestration |
+| `crawler/config/settings.py` | Pydantic Settings, all config from `.env`. Global instance: `from crawler.config.settings import settings` |
+| `crawler/spiders/university_spider.py` | Scrapy spider. Extracts content via Trafilatura `bare_extraction()`. Checks URLs against DB for dedup. Falls back to `MCPFetcher` on 403/404 |
+| `crawler/ai/analyzer.py` | `MultiAIAnalyzer` — parallel Claude + OpenAI analysis. Consensus: prefers Claude summary, majority vote on `is_ai_related`, averages relevance scores |
+| `crawler/db/models.py` | SQLAlchemy ORM: `URL`, `Article`, `AIAnalysis`, `NotificationSent`, `HostCrawlState` |
+| `crawler/db/session.py` | `DatabaseManager` — connection pooling, `create_tables()`, session management |
+| `crawler/extractors/content.py` | `ContentExtractor` (Trafilatura wrapper) + `DateExtractor` |
+| `crawler/utils/html_generator.py` | `HTMLReportGenerator` — generates the static website with three-column layout |
+| `crawler/utils/university_classifier.py` | `UniversityClassifier` — categorizes articles into Peer/R1/Facility columns |
+| `crawler/utils/university_name_mapper.py` | Maps hostnames to canonical university names (uses `universities.json`) |
+| `crawler/utils/local_exporter.py` | JSON/CSV/HTML/TXT export to `output/` |
+| `crawler/utils/deduplication.py` | SHA-256 URL/content hashing. `BloomFilter` class exists but is unused; dedup is DB-backed |
+| `crawler/notifiers/slack.py` | Slack Block Kit notifications (max 10 articles) |
+| `crawler/notifiers/email.py` | SMTP HTML+text email via SSL or TLS |
+
+### University Source Configuration
+
+Sources are split across multiple JSON files in `crawler/config/`:
+- `peer_institutions.json` (27 sources) — top-tier: MIT, Stanford, CMU, etc.
+- `r1_universities.json` (187 sources) — Carnegie R1 universities
+- `major_facilities.json` (27 sources) — national labs: Argonne, Los Alamos, NIST, etc.
+
+`settings.university_source_type = "all"` loads all three. Sources use schema v3.0.0 with `news_sources` arrays. Only entries with `verified: true` are crawled. RSS feeds are preferred over HTML when `USE_RSS_FEEDS=True`.
+
+### AI Models (Actual Defaults)
+
+Despite documentation mentioning "Sonnet-4-5", the actual defaults in `settings.py` are:
+- `claude_model`: `claude-haiku-4-5-20251001` (primary analysis)
+- `claude_haiku_model`: `claude-haiku-4-5-20251001` (fast validation)
+- `openai_model`: `gpt-5-search-api-2025-10-14` (categorization)
+
+All three run in parallel via `asyncio.gather()`. Confidence = providers_succeeded / 3. Claude responses use structured text format (SUMMARY:/KEY_POINTS:/RELEVANCE:/AI_RELATED:) parsed by `_parse_claude_response()`.
+
+### Website Generation
+
+`HTMLReportGenerator` produces a Drudge Report-style static site with:
+- **Three-column layout**: Peer Institutions | R1 Institutions | Major Facilities
+- Classification via `UniversityClassifier` fuzzy-matching against source JSON files (priority: Facility > Peer > R1)
+- **Dual output**: writes to both `output/` (local) and `docs/` (GitHub Pages, committed to `website` branch)
+- Pages: `index.html` (last 5 days), `archive/YYYY-MM-DD.html` (daily), `archive/index.html` (file-scan based)
+- Styling: `Courier New` monospace, black/white/red (`#cc0000`), responsive (single column below 1024px)
+
+### Database Tables
+
+- **urls**: URL tracking, SHA-256 `url_hash`, crawl status, content change detection via `content_hash`
+- **articles**: Extracted content, `is_ai_related` boolean, `ai_confidence_score`, `university_name`, JSONB `article_metadata`
+- **ai_analyses**: Individual provider results (Claude, OpenAI, Gemini columns — Gemini unused), consensus summary
+- **notifications_sent**: Delivery log per channel
+- **host_crawl_state**: Per-domain crawl delays, `blocked_until`
+
+Unique constraint on articles: `(url_id, content_hash)` enables detecting content updates at same URL.
+
+## Output Directories
+
+- `output/` — local output (gitignored): results JSON, CSV exports, HTML reports, daily text summaries
+- `docs/` — GitHub Pages (committed to `website` branch): `index.html`, `how_it_works.html`, `archive/`
+
+## Custom Agents
+
+`.claude/agents/url-verifier.md` — validates URLs from university news sources before content extraction.
+
+## Deployment
 
 ```bash
-# Automated deployment (recommended)
+# Full deployment from scratch
 sudo bash scripts/deploy.sh
 
-# Manual systemd service installation
-sudo cp deployment/*.service /etc/systemd/system/
-sudo cp deployment/*.timer /etc/systemd/system/
-sudo systemctl daemon-reload
-sudo systemctl enable ai-news-crawler.timer
-sudo systemctl start ai-news-crawler.timer
-
-# Check service status
-systemctl status ai-news-crawler.timer
-systemctl list-timers --all
-
-# Manual trigger
-sudo systemctl start ai-news-crawler.service
+# Manual systemd install
+sudo cp deployment/*.service deployment/*.timer /etc/systemd/system/
+sudo systemctl daemon-reload && sudo systemctl enable --now ai-news-crawler.timer
 
 # View logs
 journalctl -u ai-news-crawler -f
 ```
-
-### Database Operations
-
-```bash
-# Create new migration
-alembic revision --autogenerate -m "description"
-
-# Apply migration
-alembic upgrade head
-
-# Rollback migration
-alembic downgrade -1
-
-# Backup database
-bash scripts/backup.sh
-```
-
-### Health Monitoring
-
-```bash
-# Run health check
-python scripts/health_check.py
-
-# View recent crawl statistics (PostgreSQL query)
-psql ai_news_crawler -c "
-  SELECT COUNT(*), DATE(first_scraped)
-  FROM articles
-  WHERE is_ai_related = TRUE
-  GROUP BY DATE(first_scraped)
-  ORDER BY DATE(first_scraped) DESC
-  LIMIT 7;
-"
-```
-
-## Code Architecture Principles
-
-### Configuration Management
-
-- Use **Pydantic Settings** for type-safe configuration with validation
-- All secrets loaded from environment variables (never commit .env files)
-- Configuration class located in `crawler/config/settings.py`
-- Global settings instance: `from crawler.config.settings import settings`
-
-### Web Crawling Ethics
-
-- **Always respect robots.txt** (Scrapy setting: `ROBOTSTXT_OBEY = True`)
-- Implement per-domain rate limiting (default: 1 request/second)
-- Use descriptive User-Agent string with contact information
-- Store crawl delays in database (`host_crawl_state` table)
-- Implement exponential backoff for failed requests
-
-### AI API Integration
-
-- Use **async/await** for parallel API calls to Claude, OpenAI, and Gemini
-- Implement graceful degradation (system works if 1-2 APIs fail)
-- Claude Sonnet-4-5 is the primary/highest-quality API
-- Apply rate limiting and token limits to control costs
-- Store all API responses in `ai_analyses` table for auditing
-
-### Error Handling
-
-- Use structured JSON logging (pythonjsonlogger)
-- Log to both console and rotating file handler
-- All database operations in try/except with rollback
-- Network requests use retry logic with exponential backoff
-- Notification failures should log but not crash the pipeline
-
-### Database Patterns
-
-- Use SQLAlchemy ORM with type hints
-- All queries use prepared statements (no SQL injection risk)
-- Use hash indexes for O(1) URL lookups
-- Implement connection pooling (default: 10 connections)
-- Use database transactions for multi-table operations
-
-### Testing Standards
-
-- Unit tests for all parsing and extraction logic
-- Integration tests for full crawl workflow
-- Mock external APIs in tests (don't hit real endpoints)
-- Test edge cases: empty content, malformed HTML, encoding issues
-- Use pytest fixtures for database setup/teardown
-
-## Critical Implementation Details
-
-### Content Deduplication Strategy
-
-The system uses **two-level hashing**:
-1. **URL hash** (SHA-256): Check if URL has been seen before
-2. **Content hash** (SHA-256): Detect if article content changed
-
-This allows re-crawling URLs while detecting unchanged content.
-
-### Multi-AI Consensus Building
-
-Results from all three AI APIs are collected, but:
-- Claude Sonnet's summary is preferred (highest quality)
-- Fallback to OpenAI or Gemini if Claude fails
-- Confidence score based on how many APIs succeeded
-- All individual responses stored for future re-analysis
-
-### Politeness Implementation
-
-Per-domain crawl delays stored in `host_crawl_state` table:
-- Default: 1 second between requests
-- Respects `Crawl-delay` from robots.txt
-- Implements `blocked_until` for temporary bans
-- Uses `DomainRateLimiter` class for enforcement
-
-### Notification Format
-
-- **Slack**: Rich blocks format with clickable links, max 10 articles shown
-- **Email**: HTML format with responsive design, all articles included
-- Both channels receive identical content summaries
-- Delivery failures logged to `notifications_sent` table
-
-## Security Considerations
-
-- Never commit `.env` files (in `.gitignore`)
-- Use app passwords for Gmail SMTP (not account password)
-- Run systemd service as non-root user (`crawler`)
-- Set strict file permissions: `chmod 600 .env`
-- Database connections use SSL in production
-- API keys stored as `SecretStr` type in Pydantic settings
-- Validate all URLs before crawling (prevent SSRF attacks)
-
-## Cost Optimization
-
-Estimated monthly costs (100 articles/day):
-- Claude Sonnet: ~$9/month
-- GPT-4: ~$27/month
-- Gemini Flash: ~$0.30/month
-- **Total: ~$36/month**
-
-Optimization strategies:
-1. Use Gemini Flash for initial AI-relevance filtering
-2. Only send confirmed AI articles to expensive APIs
-3. Set max_tokens limits on all API calls
-4. Cache AI summaries to avoid reprocessing
-
-## Custom Agents
-
-This repository includes specialized Claude Code agents in `.claude/agents/`:
-
-- **python-web-crawler-architect**: Expert guidance on web crawling, schema.org extraction, and data pipeline architecture
-- **architect-agent**: Orchestrates complex development workflows and coordinates multiple specialized agents
-
-These agents are automatically available when working in this codebase and will proactively assist with relevant tasks.

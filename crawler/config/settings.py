@@ -42,8 +42,8 @@ class Settings(BaseSettings):
 
     # AI API Configuration
     claude_model: str = Field(
-        default="claude-haiku-4-5-20251001",
-        description="Claude Haiku model to use for primary analysis"
+        default="claude-sonnet-4-6",
+        description="Claude Sonnet model to use for primary analysis"
     )
     claude_haiku_model: str = Field(
         default="claude-haiku-4-5-20251001",
@@ -55,14 +55,14 @@ class Settings(BaseSettings):
 
     # Web crawling configuration
     max_concurrent_requests: int = Field(
-        default=8,
+        default=24,
         ge=1,
         le=50,
         description="Maximum concurrent HTTP requests"
     )
     crawl_delay: float = Field(
-        default=1.0,
-        ge=0.5,
+        default=0.5,
+        ge=0.25,
         description="Delay between requests to same domain (seconds)"
     )
     user_agent: str = Field(
@@ -95,9 +95,9 @@ class Settings(BaseSettings):
         default=True,
         description="Prefer RSS feeds over HTML crawling when available"
     )
-    include_unverified_sources: bool = Field(
-        default=True,
-        description="Include unverified sources in addition to verified ones (set to False to only crawl verified sources)"
+    crawler_source_files: str = Field(
+        default="",
+        description="Comma-separated list of source JSON file paths (overrides university_source_type when set)"
     )
 
     # Notification configuration
@@ -133,10 +133,10 @@ class Settings(BaseSettings):
         description="Minimum article length in characters"
     )
     max_article_age_days: int = Field(
-        default=7,
+        default=5,
         ge=1,
         le=30,
-        description="Maximum age of articles to process (in days, default: 7 for recent news only)"
+        description="Maximum age of articles to process (in days, default: 5 for recent news only)"
     )
 
     # Logging configuration
@@ -294,9 +294,16 @@ class Settings(BaseSettings):
         """
         Get list of source file paths based on configuration.
 
+        If CRAWLER_SOURCE_FILES env var is set, uses those paths exclusively.
+        Otherwise falls back to university_source_type logic.
+
         Returns:
             List of file paths to load
         """
+        # If crawler_source_files is set (e.g. by parallel subprocess), use it directly
+        if self.crawler_source_files:
+            return [p.strip() for p in self.crawler_source_files.split(",") if p.strip()]
+
         paths = []
 
         # Map source types to file paths
@@ -307,16 +314,20 @@ class Settings(BaseSettings):
             "top_universities": "crawler/config/top_universities.json",
             "peer_institutions": "crawler/config/peer_institutions.json",
             "meta_news": "crawler/config/meta_news_services.json",
-            "major_facilities": "crawler/config/major_facilities.json"
+            "major_facilities": "crawler/config/major_facilities.json",
+            "national_laboratories": "crawler/config/national_laboratories.json",
+            "global_institutions": "crawler/config/global_institutions.json"
         }
 
-        # If 'all' is specified, load all university lists plus major facilities
+        # If 'all' is specified, load all university lists plus facilities and labs
         source_type = self.university_source_type.lower()
         if source_type == "all":
             paths.extend([
-                "crawler/config/peer_institutions.json",   # Peer institutions (27)
-                "crawler/config/r1_universities.json",     # R1 institutions (187)
-                "crawler/config/major_facilities.json"     # Major research facilities (27)
+                "crawler/config/peer_institutions.json",          # Peer institutions (27)
+                "crawler/config/r1_universities.json",            # R1 institutions (187)
+                "crawler/config/major_facilities.json",           # HPC & Research Centers (10)
+                "crawler/config/national_laboratories.json",      # National Laboratories (54)
+                "crawler/config/global_institutions.json"         # Global Institutions (102)
             ])
         # If custom path is set and different from default, use it
         elif self.university_list_path != "crawler/config/universities.json":
@@ -364,10 +375,27 @@ class Settings(BaseSettings):
 
             elif source_format == "university":
                 # New university format with nested news structure
-                # Support both "news" and "news_sources" -> "primary" structures
-                news = source.get("news", {})
-                if not news and "news_sources" in source:
-                    news = source.get("news_sources", {}).get("primary", {})
+                # Schema v3.0.0: news_sources is an array of source objects
+                # Legacy: news_sources.primary or news object
+                news = {}
+
+                if "news_sources" in source:
+                    news_sources = source.get("news_sources", [])
+                    if isinstance(news_sources, list) and news_sources:
+                        # Schema v3.0.0: Find primary source in array
+                        for ns in news_sources:
+                            if ns.get("type") == "primary":
+                                news = ns
+                                break
+                        # If no primary found, use first source
+                        if not news:
+                            news = news_sources[0]
+                    elif isinstance(news_sources, dict):
+                        # Legacy format: news_sources.primary
+                        news = news_sources.get("primary", {})
+                elif "news" in source:
+                    # Legacy format: news object
+                    news = source.get("news", {})
 
                 # Determine which URL to use
                 if self.prefer_ai_tag_urls and news.get("ai_tag_url"):
@@ -410,23 +438,46 @@ class Settings(BaseSettings):
 
             elif source_format == "facility":
                 # Major research facilities format
-                news = source.get("news_sources", {}).get("primary", {})
+                # Schema v3.0.0: news_sources is an array of source objects
+                news = {}
+
+                if "news_sources" in source:
+                    news_sources = source.get("news_sources", [])
+                    if isinstance(news_sources, list) and news_sources:
+                        # Schema v3.0.0: Find primary source in array
+                        for ns in news_sources:
+                            if ns.get("type") == "primary":
+                                news = ns
+                                break
+                        # If no primary found, use first source
+                        if not news:
+                            news = news_sources[0]
+                    elif isinstance(news_sources, dict):
+                        # Legacy format: news_sources.primary
+                        news = news_sources.get("primary", {})
 
                 location_obj = source.get("location", {})
                 location = f"{location_obj.get('city', '')}, {location_obj.get('state', '')}".strip(", ")
 
+                # Use RSS feed if enabled and available (matching university handler)
+                facility_news_url = news.get("url")
+                facility_rss_feed = news.get("rss_feed")
+                if self.use_rss_feeds and facility_rss_feed and isinstance(facility_rss_feed, str):
+                    facility_news_url = facility_rss_feed
+
                 entry = {
                     "name": source.get("name"),
                     "abbreviation": source.get("abbreviation"),
-                    "news_url": news.get("url"),
+                    "news_url": facility_news_url,
                     "ai_tag_url": news.get("ai_tag_url"),
-                    "rss_feed": None,
+                    "rss_feed": facility_rss_feed,
                     "location": location,
                     "focus_areas": source.get("research_focus", []),
                     "source_type": "facility",
                     "facility_type": source.get("facility_type"),
                     "affiliated_institution": source.get("affiliated_institution"),
-                    "crawl_priority": news.get("crawl_priority", 100)
+                    "crawl_priority": news.get("crawl_priority", 100),
+                    "verified": news.get("verified", False)
                 }
 
             elif source_format == "meta_news":
@@ -453,15 +504,11 @@ class Settings(BaseSettings):
                     "description": source.get("description")
                 }
 
-            # Only add if we have a valid URL and not a placeholder domain
-            # Include verified sources, and unverified if setting allows
+            # Only add if we have a valid URL, not a placeholder domain, and is verified
             news_url = entry.get("news_url", "")
             is_verified = entry.get("verified", True)  # Default to True for legacy sources without verification field
-
-            # Include if: has URL, not placeholder, and (verified OR include_unverified setting is True)
-            if news_url and "universityof.edu" not in news_url:
-                if is_verified or self.include_unverified_sources:
-                    normalized.append(entry)
+            if news_url and "universityof.edu" not in news_url and "universityat.edu" not in news_url and "theuniversity.edu" not in news_url and is_verified:
+                normalized.append(entry)
 
         return normalized
 

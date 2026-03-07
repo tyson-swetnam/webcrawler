@@ -1,0 +1,1639 @@
+{
+  "total_urls_checked": 460,
+  "broken_ai_tag_urls": [
+    {
+      "file": "major_facilities.json",
+      "name": "Texas Advanced Computing Center",
+      "old_ai_tag_url": "https://www.tacc.utexas.edu/news/tag/artificial-intelligence",
+      "base_url": "https://www.tacc.utexas.edu/news",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "major_facilities.json",
+      "name": "Lawrence Livermore National Laboratory",
+      "old_ai_tag_url": "https://www.llnl.gov/news/topic/artificial-intelligence",
+      "base_url": "https://www.llnl.gov/news",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "major_facilities.json",
+      "name": "Los Alamos National Laboratory",
+      "old_ai_tag_url": "https://www.lanl.gov/news/tag/artificial-intelligence",
+      "base_url": "https://www.lanl.gov/news",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "major_facilities.json",
+      "name": "Oak Ridge National Laboratory",
+      "old_ai_tag_url": "https://www.ornl.gov/news/topic/artificial-intelligence",
+      "base_url": "https://www.ornl.gov/news",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "major_facilities.json",
+      "name": "Lawrence Berkeley National Laboratory",
+      "old_ai_tag_url": "https://newscenter.lbl.gov/tag/artificial-intelligence/",
+      "base_url": "https://newscenter.lbl.gov/",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "major_facilities.json",
+      "name": "SLAC National Accelerator Laboratory",
+      "old_ai_tag_url": "https://www6.slac.stanford.edu/news/topic/artificial-intelligence",
+      "base_url": "https://www6.slac.stanford.edu/news",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "major_facilities.json",
+      "name": "Fermi National Accelerator Laboratory",
+      "old_ai_tag_url": "https://news.fnal.gov/category/artificial-intelligence/",
+      "base_url": "https://news.fnal.gov/",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "peer_institutions.json",
+      "name": "Arizona State University",
+      "old_ai_tag_url": "https://newsroom.asu.edu/topics/artificial-intelligence",
+      "base_url": "https://newsroom.asu.edu/",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "peer_institutions.json",
+      "name": "University of New Mexico",
+      "old_ai_tag_url": "https://news.unm.edu/tag/artificial-intelligence/",
+      "base_url": "https://news.unm.edu/",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "peer_institutions.json",
+      "name": "University of Nevada, Las Vegas",
+      "old_ai_tag_url": "https://www.unlv.edu/news/topic/artificial-intelligence",
+      "base_url": "https://www.unlv.edu/news/",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "peer_institutions.json",
+      "name": "Indiana University",
+      "old_ai_tag_url": "https://news.iu.edu/tags/artificial-intelligence",
+      "base_url": "https://news.iu.edu/",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "peer_institutions.json",
+      "name": "University of Maryland",
+      "old_ai_tag_url": "https://umdrightnow.umd.edu/topic/artificial-intelligence",
+      "base_url": "https://umdrightnow.umd.edu/",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "peer_institutions.json",
+      "name": "University of Pittsburgh",
+      "old_ai_tag_url": "https://www.pittwire.pitt.edu/topics/artificial-intelligence",
+      "base_url": "https://www.pittwire.pitt.edu/",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "peer_institutions.json",
+      "name": "University of Massachusetts Amherst",
+      "old_ai_tag_url": "https://www.umass.edu/news/topic/artificial-intelligence",
+      "base_url": "https://www.umass.edu/news/",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "California Institute of Technology",
+      "old_ai_tag_url": "https://www.caltech.edu/about/news/topic/artificial-intelligence/",
+      "base_url": "https://www.caltech.edu/about/news",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "San Diego State University",
+      "old_ai_tag_url": "https://news.sandiego.edu/topic/artificial-intelligence/",
+      "base_url": "https://sandiego.edu/news",
+      "error": "Connection Error: HTTPSConnectionPool(host='news.sandiego.edu', port=443): Max retries exceeded with url: /topic/artif"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of California-Merced",
+      "old_ai_tag_url": "https://news.ucmerced.edu/topic/artificial-intelligence/",
+      "base_url": "https://news.ucmerced.edu",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of California-Santa Cruz",
+      "old_ai_tag_url": "https://news.ucsc.edu/topic/artificial-intelligence/",
+      "base_url": "https://news.ucsc.edu",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Yale University",
+      "old_ai_tag_url": "https://news.yale.edu/topic/artificial-intelligence/",
+      "base_url": "https://news.yale.edu",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Emory University",
+      "old_ai_tag_url": "https://news.emory.edu/topic/artificial-intelligence/",
+      "base_url": "https://news.emory.edu",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Georgia Institute of Technology-Main Campus",
+      "old_ai_tag_url": "https://news.gatech.edu/topic/artificial-intelligence/",
+      "base_url": "https://news.gatech.edu",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Northwestern University",
+      "old_ai_tag_url": "https://news.northwestern.edu/topic/artificial-intelligence/",
+      "base_url": "https://news.northwestern.edu",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Chicago",
+      "old_ai_tag_url": "https://news.uchicago.edu/topic/artificial-intelligence/",
+      "base_url": "https://news.uchicago.edu",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Illinois Urbana-Champaign",
+      "old_ai_tag_url": "https://news.illinois.edu/topic/artificial-intelligence/",
+      "base_url": "https://news.illinois.edu",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Notre Dame",
+      "old_ai_tag_url": "https://news.nd.edu/topic/artificial-intelligence/",
+      "base_url": "https://news.nd.edu",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Tulane University of Louisiana",
+      "old_ai_tag_url": "https://news.tulane.edu/topic/artificial-intelligence/",
+      "base_url": "https://news.tulane.edu",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Brandeis University",
+      "old_ai_tag_url": "https://news.brandeis.edu/topic/artificial-intelligence/",
+      "base_url": "https://brandeis.edu/news",
+      "error": "Connection Error: HTTPSConnectionPool(host='news.brandeis.edu', port=443): Max retries exceeded with url: /topic/artif"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Massachusetts Institute of Technology",
+      "old_ai_tag_url": "https://news.mit.edu/topic/artificial-intelligence/",
+      "base_url": "https://news.mit.edu",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Tufts University",
+      "old_ai_tag_url": "https://news.tufts.edu/topic/artificial-intelligence/",
+      "base_url": "https://news.tufts.edu",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Massachusetts-Boston",
+      "old_ai_tag_url": "https://news.umb.edu/topic/artificial-intelligence/",
+      "base_url": "https://umb.edu/news",
+      "error": "Connection Error: HTTPSConnectionPool(host='news.umb.edu', port=443): Max retries exceeded with url: /topic/artificial"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Massachusetts-Lowell",
+      "old_ai_tag_url": "https://news.uml.edu/topic/artificial-intelligence/",
+      "base_url": "https://uml.edu/news",
+      "error": "Connection Error: HTTPSConnectionPool(host='news.uml.edu', port=443): Max retries exceeded with url: /topic/artificial"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Worcester Polytechnic Institute",
+      "old_ai_tag_url": "https://news.wpi.edu/topic/artificial-intelligence/",
+      "base_url": "https://www.wpi.edu/news",
+      "error": "Connection Error: HTTPSConnectionPool(host='news.wpi.edu', port=443): Max retries exceeded with url: /topic/artificial"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Johns Hopkins University",
+      "old_ai_tag_url": "https://news.jhu.edu/topic/artificial-intelligence/",
+      "base_url": "https://jhu.edu/news",
+      "error": "Timeout"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Maryland - Baltimore",
+      "old_ai_tag_url": "https://news.maryland.edu/topic/artificial-intelligence/",
+      "base_url": "https://maryland.edu/news",
+      "error": "Connection Error: HTTPSConnectionPool(host='news.maryland.edu', port=443): Max retries exceeded with url: /topic/artif"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Maryland-Baltimore County",
+      "old_ai_tag_url": "https://news.maryland.edu/topic/artificial-intelligence/",
+      "base_url": "https://maryland.edu/news",
+      "error": "Connection Error: HTTPSConnectionPool(host='news.maryland.edu', port=443): Max retries exceeded with url: /topic/artif"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Maine",
+      "old_ai_tag_url": "https://news.maine.edu/topic/artificial-intelligence/",
+      "base_url": "https://maine.edu/news",
+      "error": "Connection Error: HTTPSConnectionPool(host='news.maine.edu', port=443): Max retries exceeded with url: /topic/artifici"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Minnesota-Twin Cities",
+      "old_ai_tag_url": "https://news.minnesota.edu/topic/artificial-intelligence/",
+      "base_url": "https://minnesota.edu/news",
+      "error": "Connection Error: HTTPSConnectionPool(host='news.minnesota.edu', port=443): Max retries exceeded with url: /topic/arti"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Mississippi State University",
+      "old_ai_tag_url": "https://news.msstate.edu/topic/artificial-intelligence/",
+      "base_url": "https://www.msstate.edu/news",
+      "error": "Connection Error: HTTPSConnectionPool(host='news.msstate.edu', port=443): Max retries exceeded with url: /topic/artifi"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Dartmouth College",
+      "old_ai_tag_url": "https://news.dartmouth.edu/topic/artificial-intelligence/",
+      "base_url": "https://news.dartmouth.edu",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "New Jersey Institute of Technology",
+      "old_ai_tag_url": "https://news.njit.edu/topic/artificial-intelligence/",
+      "base_url": "https://news.njit.edu",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Princeton University",
+      "old_ai_tag_url": "https://www.princeton.edu/news/topic/artificial-intelligence/",
+      "base_url": "https://www.princeton.edu/news",
+      "error": "HTTP 404 (SSL issue)"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Cornell University",
+      "old_ai_tag_url": "https://news.cornell.edu/topic/artificial-intelligence/",
+      "base_url": "https://news.cornell.edu",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Rensselaer Polytechnic Institute",
+      "old_ai_tag_url": "https://news.rpi.edu/topic/artificial-intelligence/",
+      "base_url": "https://news.rpi.edu",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Stony Brook University",
+      "old_ai_tag_url": "https://news.stonybrook.edu/topic/artificial-intelligence/",
+      "base_url": "https://news.stonybrook.edu",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Oregon State University",
+      "old_ai_tag_url": "https://news.oregonstate.edu/topic/artificial-intelligence/",
+      "base_url": "https://news.oregonstate.edu",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Carnegie Mellon University",
+      "old_ai_tag_url": "https://www.cmu.edu/news/topic/artificial-intelligence/",
+      "base_url": "https://www.cmu.edu/news/",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Brown University",
+      "old_ai_tag_url": "https://news.brown.edu/topic/artificial-intelligence/",
+      "base_url": "https://news.brown.edu",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Vanderbilt University",
+      "old_ai_tag_url": "https://news.vanderbilt.edu/topic/artificial-intelligence/",
+      "base_url": "https://news.vanderbilt.edu",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "The University of Texas at Dallas",
+      "old_ai_tag_url": "https://news.utdallas.edu/topic/artificial-intelligence/",
+      "base_url": "https://news.utdallas.edu",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Utah State University",
+      "old_ai_tag_url": "https://news.usu.edu/topic/artificial-intelligence/",
+      "base_url": "https://news.usu.edu",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Virginia-Main Campus",
+      "old_ai_tag_url": "https://news.virginia.edu/topic/artificial-intelligence/",
+      "base_url": "https://news.virginia.edu",
+      "error": "HTTP 404"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Virginia Polytechnic Institute and State University",
+      "old_ai_tag_url": "https://news.vt.edu/topic/artificial-intelligence/",
+      "base_url": "https://news.vt.edu",
+      "error": "HTTP 404"
+    }
+  ],
+  "changes_made": [
+    {
+      "file": "major_facilities.json",
+      "name": "Texas Advanced Computing Center",
+      "old_url": "https://www.tacc.utexas.edu/news/tag/artificial-intelligence",
+      "new_url": "https://www.tacc.utexas.edu/news",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "major_facilities.json",
+      "name": "Lawrence Livermore National Laboratory",
+      "old_url": "https://www.llnl.gov/news/topic/artificial-intelligence",
+      "new_url": "https://www.llnl.gov/news",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "major_facilities.json",
+      "name": "Los Alamos National Laboratory",
+      "old_url": "https://www.lanl.gov/news/tag/artificial-intelligence",
+      "new_url": "https://www.lanl.gov/news",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "major_facilities.json",
+      "name": "Oak Ridge National Laboratory",
+      "old_url": "https://www.ornl.gov/news/topic/artificial-intelligence",
+      "new_url": "https://www.ornl.gov/news",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "major_facilities.json",
+      "name": "Lawrence Berkeley National Laboratory",
+      "old_url": "https://newscenter.lbl.gov/tag/artificial-intelligence/",
+      "new_url": "https://newscenter.lbl.gov/",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "major_facilities.json",
+      "name": "SLAC National Accelerator Laboratory",
+      "old_url": "https://www6.slac.stanford.edu/news/topic/artificial-intelligence",
+      "new_url": "https://www6.slac.stanford.edu/news",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "major_facilities.json",
+      "name": "Fermi National Accelerator Laboratory",
+      "old_url": "https://news.fnal.gov/category/artificial-intelligence/",
+      "new_url": "https://news.fnal.gov/",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "peer_institutions.json",
+      "name": "Arizona State University",
+      "old_url": "https://newsroom.asu.edu/topics/artificial-intelligence",
+      "new_url": "https://newsroom.asu.edu/",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "peer_institutions.json",
+      "name": "University of New Mexico",
+      "old_url": "https://news.unm.edu/tag/artificial-intelligence/",
+      "new_url": "https://news.unm.edu/",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "peer_institutions.json",
+      "name": "University of Nevada, Las Vegas",
+      "old_url": "https://www.unlv.edu/news/topic/artificial-intelligence",
+      "new_url": "https://www.unlv.edu/news/",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "peer_institutions.json",
+      "name": "Indiana University",
+      "old_url": "https://news.iu.edu/tags/artificial-intelligence",
+      "new_url": "https://news.iu.edu/",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "peer_institutions.json",
+      "name": "University of Maryland",
+      "old_url": "https://umdrightnow.umd.edu/topic/artificial-intelligence",
+      "new_url": "https://umdrightnow.umd.edu/",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "peer_institutions.json",
+      "name": "University of Pittsburgh",
+      "old_url": "https://www.pittwire.pitt.edu/topics/artificial-intelligence",
+      "new_url": "https://www.pittwire.pitt.edu/",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "peer_institutions.json",
+      "name": "University of Massachusetts Amherst",
+      "old_url": "https://www.umass.edu/news/topic/artificial-intelligence",
+      "new_url": "https://www.umass.edu/news/",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "California Institute of Technology",
+      "old_url": "https://www.caltech.edu/about/news/topic/artificial-intelligence/",
+      "new_url": "https://www.caltech.edu/about/news",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "San Diego State University",
+      "old_url": "https://news.sandiego.edu/topic/artificial-intelligence/",
+      "new_url": "https://sandiego.edu/news",
+      "reason": "ai_tag_url failed (Connection Error: HTTPSConnectionPool(host='news.sandiego.edu', port=443): Max retries exceeded with url: /topic/artif), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of California-Merced",
+      "old_url": "https://news.ucmerced.edu/topic/artificial-intelligence/",
+      "new_url": "https://news.ucmerced.edu",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of California-Santa Cruz",
+      "old_url": "https://news.ucsc.edu/topic/artificial-intelligence/",
+      "new_url": "https://news.ucsc.edu",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Yale University",
+      "old_url": "https://news.yale.edu/topic/artificial-intelligence/",
+      "new_url": "https://news.yale.edu",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Emory University",
+      "old_url": "https://news.emory.edu/topic/artificial-intelligence/",
+      "new_url": "https://news.emory.edu",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Georgia Institute of Technology-Main Campus",
+      "old_url": "https://news.gatech.edu/topic/artificial-intelligence/",
+      "new_url": "https://news.gatech.edu",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Northwestern University",
+      "old_url": "https://news.northwestern.edu/topic/artificial-intelligence/",
+      "new_url": "https://news.northwestern.edu",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Chicago",
+      "old_url": "https://news.uchicago.edu/topic/artificial-intelligence/",
+      "new_url": "https://news.uchicago.edu",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Illinois Urbana-Champaign",
+      "old_url": "https://news.illinois.edu/topic/artificial-intelligence/",
+      "new_url": "https://news.illinois.edu",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Notre Dame",
+      "old_url": "https://news.nd.edu/topic/artificial-intelligence/",
+      "new_url": "https://news.nd.edu",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Tulane University of Louisiana",
+      "old_url": "https://news.tulane.edu/topic/artificial-intelligence/",
+      "new_url": "https://news.tulane.edu",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Brandeis University",
+      "old_url": "https://news.brandeis.edu/topic/artificial-intelligence/",
+      "new_url": "https://brandeis.edu/news",
+      "reason": "ai_tag_url failed (Connection Error: HTTPSConnectionPool(host='news.brandeis.edu', port=443): Max retries exceeded with url: /topic/artif), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Massachusetts Institute of Technology",
+      "old_url": "https://news.mit.edu/topic/artificial-intelligence/",
+      "new_url": "https://news.mit.edu",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Tufts University",
+      "old_url": "https://news.tufts.edu/topic/artificial-intelligence/",
+      "new_url": "https://news.tufts.edu",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Massachusetts-Boston",
+      "old_url": "https://news.umb.edu/topic/artificial-intelligence/",
+      "new_url": "https://umb.edu/news",
+      "reason": "ai_tag_url failed (Connection Error: HTTPSConnectionPool(host='news.umb.edu', port=443): Max retries exceeded with url: /topic/artificial), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Massachusetts-Lowell",
+      "old_url": "https://news.uml.edu/topic/artificial-intelligence/",
+      "new_url": "https://uml.edu/news",
+      "reason": "ai_tag_url failed (Connection Error: HTTPSConnectionPool(host='news.uml.edu', port=443): Max retries exceeded with url: /topic/artificial), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Worcester Polytechnic Institute",
+      "old_url": "https://news.wpi.edu/topic/artificial-intelligence/",
+      "new_url": "https://www.wpi.edu/news",
+      "reason": "ai_tag_url failed (Connection Error: HTTPSConnectionPool(host='news.wpi.edu', port=443): Max retries exceeded with url: /topic/artificial), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Johns Hopkins University",
+      "old_url": "https://news.jhu.edu/topic/artificial-intelligence/",
+      "new_url": "https://jhu.edu/news",
+      "reason": "ai_tag_url failed (Timeout), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Maryland - Baltimore",
+      "old_url": "https://news.maryland.edu/topic/artificial-intelligence/",
+      "new_url": "https://maryland.edu/news",
+      "reason": "ai_tag_url failed (Connection Error: HTTPSConnectionPool(host='news.maryland.edu', port=443): Max retries exceeded with url: /topic/artif), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Maryland-Baltimore County",
+      "old_url": "https://news.maryland.edu/topic/artificial-intelligence/",
+      "new_url": "https://maryland.edu/news",
+      "reason": "ai_tag_url failed (Connection Error: HTTPSConnectionPool(host='news.maryland.edu', port=443): Max retries exceeded with url: /topic/artif), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Maine",
+      "old_url": "https://news.maine.edu/topic/artificial-intelligence/",
+      "new_url": "https://maine.edu/news",
+      "reason": "ai_tag_url failed (Connection Error: HTTPSConnectionPool(host='news.maine.edu', port=443): Max retries exceeded with url: /topic/artifici), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Minnesota-Twin Cities",
+      "old_url": "https://news.minnesota.edu/topic/artificial-intelligence/",
+      "new_url": "https://minnesota.edu/news",
+      "reason": "ai_tag_url failed (Connection Error: HTTPSConnectionPool(host='news.minnesota.edu', port=443): Max retries exceeded with url: /topic/arti), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Mississippi State University",
+      "old_url": "https://news.msstate.edu/topic/artificial-intelligence/",
+      "new_url": "https://www.msstate.edu/news",
+      "reason": "ai_tag_url failed (Connection Error: HTTPSConnectionPool(host='news.msstate.edu', port=443): Max retries exceeded with url: /topic/artifi), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Dartmouth College",
+      "old_url": "https://news.dartmouth.edu/topic/artificial-intelligence/",
+      "new_url": "https://news.dartmouth.edu",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "New Jersey Institute of Technology",
+      "old_url": "https://news.njit.edu/topic/artificial-intelligence/",
+      "new_url": "https://news.njit.edu",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Princeton University",
+      "old_url": "https://www.princeton.edu/news/topic/artificial-intelligence/",
+      "new_url": "https://www.princeton.edu/news",
+      "reason": "ai_tag_url failed (HTTP 404 (SSL issue)), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Cornell University",
+      "old_url": "https://news.cornell.edu/topic/artificial-intelligence/",
+      "new_url": "https://news.cornell.edu",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Rensselaer Polytechnic Institute",
+      "old_url": "https://news.rpi.edu/topic/artificial-intelligence/",
+      "new_url": "https://news.rpi.edu",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Stony Brook University",
+      "old_url": "https://news.stonybrook.edu/topic/artificial-intelligence/",
+      "new_url": "https://news.stonybrook.edu",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Oregon State University",
+      "old_url": "https://news.oregonstate.edu/topic/artificial-intelligence/",
+      "new_url": "https://news.oregonstate.edu",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Carnegie Mellon University",
+      "old_url": "https://www.cmu.edu/news/topic/artificial-intelligence/",
+      "new_url": "https://www.cmu.edu/news/",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Brown University",
+      "old_url": "https://news.brown.edu/topic/artificial-intelligence/",
+      "new_url": "https://news.brown.edu",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Vanderbilt University",
+      "old_url": "https://news.vanderbilt.edu/topic/artificial-intelligence/",
+      "new_url": "https://news.vanderbilt.edu",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "The University of Texas at Dallas",
+      "old_url": "https://news.utdallas.edu/topic/artificial-intelligence/",
+      "new_url": "https://news.utdallas.edu",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Utah State University",
+      "old_url": "https://news.usu.edu/topic/artificial-intelligence/",
+      "new_url": "https://news.usu.edu",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Virginia-Main Campus",
+      "old_url": "https://news.virginia.edu/topic/artificial-intelligence/",
+      "new_url": "https://news.virginia.edu",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Virginia Polytechnic Institute and State University",
+      "old_url": "https://news.vt.edu/topic/artificial-intelligence/",
+      "new_url": "https://news.vt.edu",
+      "reason": "ai_tag_url failed (HTTP 404), using base url"
+    }
+  ],
+  "both_failed": [
+    {
+      "file": "major_facilities.json",
+      "name": "San Diego Supercomputer Center",
+      "base_url": "https://www.sdsc.edu/News/",
+      "base_error": "HTTP 404",
+      "ai_tag_url": "https://www.sdsc.edu/News/?topic=artificial-intelligence",
+      "ai_error": "HTTP 404"
+    },
+    {
+      "file": "major_facilities.json",
+      "name": "Indiana University Pervasive Technology Institute",
+      "base_url": "https://pti.iu.edu/news/",
+      "base_error": "HTTP 404",
+      "ai_tag_url": "https://pti.iu.edu/news/?topic=artificial-intelligence",
+      "ai_error": "HTTP 404"
+    },
+    {
+      "file": "major_facilities.json",
+      "name": "Argonne National Laboratory",
+      "base_url": "https://www.anl.gov/news",
+      "base_error": "HTTP 403",
+      "ai_tag_url": "https://www.anl.gov/topic/artificial-intelligence",
+      "ai_error": "HTTP 403"
+    },
+    {
+      "file": "major_facilities.json",
+      "name": "Thomas Jefferson National Accelerator Facility",
+      "base_url": "https://www.jlab.org/news",
+      "base_error": "HTTP 404",
+      "ai_tag_url": "https://www.jlab.org/news?topic=artificial-intelligence",
+      "ai_error": "HTTP 403"
+    },
+    {
+      "file": "major_facilities.json",
+      "name": "Savannah River National Laboratory",
+      "base_url": "https://www.srnl.gov/news",
+      "base_error": "HTTP 404",
+      "ai_tag_url": "https://www.srnl.gov/news?topic=artificial-intelligence",
+      "ai_error": "HTTP 404"
+    },
+    {
+      "file": "major_facilities.json",
+      "name": "National Center for Atmospheric Research",
+      "base_url": "https://news.ucar.edu/",
+      "base_error": "HTTP 403",
+      "ai_tag_url": "https://news.ucar.edu/?topic=artificial-intelligence",
+      "ai_error": "HTTP 403"
+    },
+    {
+      "file": "major_facilities.json",
+      "name": "National Ecological Observatory Network",
+      "base_url": "https://www.neonscience.org/news",
+      "base_error": "HTTP 404",
+      "ai_tag_url": "https://www.neonscience.org/news?topic=artificial-intelligence",
+      "ai_error": "HTTP 404"
+    },
+    {
+      "file": "peer_institutions.json",
+      "name": "University of South Carolina",
+      "base_url": "https://sc.edu/about/offices_and_divisions/university_communications/newsroom/",
+      "base_error": "HTTP 404",
+      "ai_tag_url": "https://sc.edu/about/offices_and_divisions/university_communications/newsroom/?topic=artificial-intelligence",
+      "ai_error": "HTTP 404"
+    },
+    {
+      "file": "peer_institutions.json",
+      "name": "University of Oklahoma",
+      "base_url": "https://www.ou.edu/web/news",
+      "base_error": "HTTP 404",
+      "ai_tag_url": "https://www.ou.edu/web/news?topics=artificial-intelligence",
+      "ai_error": "HTTP 404"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Northern Arizona University",
+      "base_url": "https://news.northernarizona.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.northernarizona.edu', port=443): Max retries exceeded with url: / (Ca",
+      "ai_tag_url": "https://news.northernarizona.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.northernarizona.edu', port=443): Max retries exceeded with url: /topi"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of California-Los Angeles",
+      "base_url": "https://news.ucla.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.ucla.edu', port=443): Max retries exceeded with url: / (Caused by Nam",
+      "ai_tag_url": "https://news.ucla.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.ucla.edu', port=443): Max retries exceeded with url: /topic/artificia"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Colorado School of Mines",
+      "base_url": "https://news.coloradoschool.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.coloradoschool.edu', port=443): Max retries exceeded with url: / (Cau",
+      "ai_tag_url": "https://news.coloradoschool.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.coloradoschool.edu', port=443): Max retries exceeded with url: /topic"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Colorado State University-Fort Collins",
+      "base_url": "https://news.colostate.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.colostate.edu', port=443): Max retries exceeded with url: / (Caused b",
+      "ai_tag_url": "https://news.colostate.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.colostate.edu', port=443): Max retries exceeded with url: /topic/arti"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Denver",
+      "base_url": "https://news.universityof.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.universityof.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "American University",
+      "base_url": "https://news.americanuniversity.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.americanuniversity.edu', port=443): Max retries exceeded with url: / ",
+      "ai_tag_url": "https://news.americanuniversity.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.americanuniversity.edu', port=443): Max retries exceeded with url: /t"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "George Washington University",
+      "base_url": "https://news.georgewashington.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.georgewashington.edu', port=443): Max retries exceeded with url: / (C",
+      "ai_tag_url": "https://news.georgewashington.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.georgewashington.edu', port=443): Max retries exceeded with url: /top"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Howard University",
+      "base_url": "https://news.howarduniversity.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.howarduniversity.edu', port=443): Max retries exceeded with url: / (C",
+      "ai_tag_url": "https://news.howarduniversity.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.howarduniversity.edu', port=443): Max retries exceeded with url: /top"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "The Catholic University of America",
+      "base_url": "https://news.thecatholic.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.thecatholic.edu', port=443): Max retries exceeded with url: / (Caused",
+      "ai_tag_url": "https://news.thecatholic.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.thecatholic.edu', port=443): Max retries exceeded with url: /topic/ar"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Delaware",
+      "base_url": "https://news.delaware.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.delaware.edu', port=443): Max retries exceeded with url: / (Caused by",
+      "ai_tag_url": "https://news.delaware.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.delaware.edu', port=443): Max retries exceeded with url: /topic/artif"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Florida Atlantic University",
+      "base_url": "https://news.floridaatlantic.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.floridaatlantic.edu', port=443): Max retries exceeded with url: / (Ca",
+      "ai_tag_url": "https://news.floridaatlantic.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.floridaatlantic.edu', port=443): Max retries exceeded with url: /topi"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Florida International University",
+      "base_url": "https://news.floridainternational.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.floridainternational.edu', port=443): Max retries exceeded with url: ",
+      "ai_tag_url": "https://news.floridainternational.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.floridainternational.edu', port=443): Max retries exceeded with url: "
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Florida State University",
+      "base_url": "https://news.floridastate.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.floridastate.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.floridastate.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.floridastate.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Nova Southeastern University",
+      "base_url": "https://news.novasoutheastern.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.novasoutheastern.edu', port=443): Max retries exceeded with url: / (C",
+      "ai_tag_url": "https://news.novasoutheastern.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.novasoutheastern.edu', port=443): Max retries exceeded with url: /top"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Central Florida",
+      "base_url": "https://news.universityof.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.universityof.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Florida",
+      "base_url": "https://news.florida.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.florida.edu', port=443): Max retries exceeded with url: / (Caused by ",
+      "ai_tag_url": "https://news.florida.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.florida.edu', port=443): Max retries exceeded with url: /topic/artifi"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Miami",
+      "base_url": "https://news.universityof.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.universityof.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of South Florida",
+      "base_url": "https://news.universityof.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.universityof.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Georgia State University",
+      "base_url": "https://news.georgiastate.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.georgiastate.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.georgiastate.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.georgiastate.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Georgia",
+      "base_url": "https://news.georgia.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.georgia.edu', port=443): Max retries exceeded with url: / (Caused by ",
+      "ai_tag_url": "https://news.georgia.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.georgia.edu', port=443): Max retries exceeded with url: /topic/artifi"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Iowa",
+      "base_url": "https://news.iowa.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.iowa.edu', port=443): Max retries exceeded with url: / (Caused by Nam",
+      "ai_tag_url": "https://news.iowa.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.iowa.edu', port=443): Max retries exceeded with url: /topic/artificia"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Loyola University Chicago",
+      "base_url": "https://news.loyolauniversity.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.loyolauniversity.edu', port=443): Max retries exceeded with url: / (C",
+      "ai_tag_url": "https://news.loyolauniversity.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.loyolauniversity.edu', port=443): Max retries exceeded with url: /top"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Southern Illinois University-Carbondale",
+      "base_url": "https://news.southernillinois.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.southernillinois.edu', port=443): Max retries exceeded with url: / (C",
+      "ai_tag_url": "https://news.southernillinois.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.southernillinois.edu', port=443): Max retries exceeded with url: /top"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Indiana University-Bloomington",
+      "base_url": "https://news.indianauniversity-bloomington.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.indianauniversity-bloomington.edu', port=443): Max retries exceeded w",
+      "ai_tag_url": "https://news.iu.edu/live/channels/158-information-technology",
+      "ai_error": "HTTP 404"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Indiana University\u2013Purdue University-Indianapolis",
+      "base_url": "https://news.indianauniversity\u2013purdue.edu",
+      "base_error": "Error: Failed to parse: https://news.indianauniversity\u2013purdue.edu",
+      "ai_tag_url": "https://news.indianauniversity\u2013purdue.edu/topic/artificial-intelligence/",
+      "ai_error": "Error: Failed to parse: https://news.indianauniversity\u2013purdue.edu/topic/artificial-intelligence/"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Purdue University-Main Campus",
+      "base_url": "https://news.purdueuniversity-main.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.purdueuniversity-main.edu', port=443): Max retries exceeded with url:",
+      "ai_tag_url": "https://news.purdueuniversity-main.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.purdueuniversity-main.edu', port=443): Max retries exceeded with url:"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Kansas State University",
+      "base_url": "https://news.kansasstate.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.kansasstate.edu', port=443): Max retries exceeded with url: / (Caused",
+      "ai_tag_url": "https://news.kansasstate.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.kansasstate.edu', port=443): Max retries exceeded with url: /topic/ar"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Louisville",
+      "base_url": "https://news.universityof.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.universityof.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Louisiana State University and Agricultural & Mechanical College",
+      "base_url": "https://news.lsu.edu",
+      "base_error": "Timeout",
+      "ai_tag_url": "https://news.lsu.edu/topic/artificial-intelligence/",
+      "ai_error": "Timeout"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Louisiana at Lafayette",
+      "base_url": "https://news.universityof.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.universityof.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Boston College",
+      "base_url": "https://news.bostoncollege.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.bostoncollege.edu', port=443): Max retries exceeded with url: / (Caus",
+      "ai_tag_url": "https://news.bostoncollege.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.bostoncollege.edu', port=443): Max retries exceeded with url: /topic/"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Northeastern University",
+      "base_url": "https://news.northeasternuniversity.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.northeasternuniversity.edu', port=443): Max retries exceeded with url",
+      "ai_tag_url": "https://news.northeasternuniversity.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.northeasternuniversity.edu', port=443): Max retries exceeded with url"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Michigan Technological University",
+      "base_url": "https://news.michigantechnological.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.michigantechnological.edu', port=443): Max retries exceeded with url:",
+      "ai_tag_url": "https://news.michigantechnological.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.michigantechnological.edu', port=443): Max retries exceeded with url:"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Michigan-Ann Arbor",
+      "base_url": "https://news.umich.edu",
+      "base_error": "HTTP 403",
+      "ai_tag_url": "https://news.umich.edu/topic/artificial-intelligence/",
+      "ai_error": "HTTP 403"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Wayne State University",
+      "base_url": "https://news.waynestate.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.waynestate.edu', port=443): Max retries exceeded with url: / (Caused ",
+      "ai_tag_url": "https://news.waynestate.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.waynestate.edu', port=443): Max retries exceeded with url: /topic/art"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Missouri University of Science and Technology",
+      "base_url": "https://news.missouriuniversity.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.missouriuniversity.edu', port=443): Max retries exceeded with url: / ",
+      "ai_tag_url": "https://news.missouriuniversity.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.missouriuniversity.edu', port=443): Max retries exceeded with url: /t"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Saint Louis University",
+      "base_url": "https://news.saintlouis.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.saintlouis.edu', port=443): Max retries exceeded with url: / (Caused ",
+      "ai_tag_url": "https://news.saintlouis.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.saintlouis.edu', port=443): Max retries exceeded with url: /topic/art"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Mississippi",
+      "base_url": "https://news.universityof.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.universityof.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Southern Mississippi",
+      "base_url": "https://news.universityof.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.universityof.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Montana State University",
+      "base_url": "https://news.montanastate.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.montanastate.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.montanastate.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.montanastate.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "The University of Montana",
+      "base_url": "https://news.montana.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.montana.edu', port=443): Max retries exceeded with url: / (Caused by ",
+      "ai_tag_url": "https://news.montana.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.montana.edu', port=443): Max retries exceeded with url: /topic/artifi"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "East Carolina University",
+      "base_url": "https://news.eastcarolina.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.eastcarolina.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.eastcarolina.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.eastcarolina.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "North Carolina State University at Raleigh",
+      "base_url": "https://news.northcarolina.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.northcarolina.edu', port=443): Max retries exceeded with url: / (Caus",
+      "ai_tag_url": "https://news.northcarolina.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.northcarolina.edu', port=443): Max retries exceeded with url: /topic/"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of North Carolina at Chapel Hill",
+      "base_url": "https://news.universityof.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.universityof.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of North Carolina at Charlotte",
+      "base_url": "https://news.universityof.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.universityof.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "North Dakota State University-Main Campus",
+      "base_url": "https://news.northdakota.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.northdakota.edu', port=443): Max retries exceeded with url: / (Caused",
+      "ai_tag_url": "https://news.northdakota.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.northdakota.edu', port=443): Max retries exceeded with url: /topic/ar"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of North Dakota",
+      "base_url": "https://news.universityof.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.universityof.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of New Hampshire-Main Campus",
+      "base_url": "https://news.unh.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.unh.edu', port=443): Max retries exceeded with url: / (Caused by Name",
+      "ai_tag_url": "https://news.unh.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.unh.edu', port=443): Max retries exceeded with url: /topic/artificial"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Rutgers University-New Brunswick",
+      "base_url": "https://news.rutgersuniversity-new.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.rutgersuniversity-new.edu', port=443): Max retries exceeded with url:",
+      "ai_tag_url": "https://news.rutgersuniversity-new.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.rutgersuniversity-new.edu', port=443): Max retries exceeded with url:"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "New Mexico State University-Main Campus",
+      "base_url": "https://news.newmexico.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.newmexico.edu', port=443): Max retries exceeded with url: / (Caused b",
+      "ai_tag_url": "https://news.newmexico.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.newmexico.edu', port=443): Max retries exceeded with url: /topic/arti"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Nevada-Reno",
+      "base_url": "https://news.nevada.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.nevada.edu', port=443): Max retries exceeded with url: / (Caused by N",
+      "ai_tag_url": "https://news.nevada.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.nevada.edu', port=443): Max retries exceeded with url: /topic/artific"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Binghamton University",
+      "base_url": "https://news.binghamtonuniversity.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.binghamtonuniversity.edu', port=443): Max retries exceeded with url: ",
+      "ai_tag_url": "https://news.binghamtonuniversity.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.binghamtonuniversity.edu', port=443): Max retries exceeded with url: "
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "CUNY Graduate School and University Center",
+      "base_url": "https://news.cunygraduate.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.cunygraduate.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.cunygraduate.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.cunygraduate.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Columbia University in the City of New York",
+      "base_url": "https://news.columbia.edu",
+      "base_error": "HTTP 403",
+      "ai_tag_url": "https://news.columbia.edu/topic/artificial-intelligence/",
+      "ai_error": "HTTP 403"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "New York University",
+      "base_url": "https://news.nyu.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.nyu.edu', port=443): Max retries exceeded with url: / (Caused by Name",
+      "ai_tag_url": "https://news.nyu.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.nyu.edu', port=443): Max retries exceeded with url: /topic/artificial"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Syracuse University",
+      "base_url": "https://news.syracuseuniversity.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.syracuseuniversity.edu', port=443): Max retries exceeded with url: / ",
+      "ai_tag_url": "https://news.syracuseuniversity.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.syracuseuniversity.edu', port=443): Max retries exceeded with url: /t"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University at Albany",
+      "base_url": "https://news.universityat.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.universityat.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.universityat.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.universityat.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University at Buffalo",
+      "base_url": "https://news.universityat.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.universityat.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.universityat.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.universityat.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Rochester",
+      "base_url": "https://news.universityof.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.universityof.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Weill Medical College of Cornell University",
+      "base_url": "https://news.weillmedical.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.weillmedical.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.weillmedical.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.weillmedical.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Case Western Reserve University",
+      "base_url": "https://news.case.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.case.edu', port=443): Max retries exceeded with url: / (Caused by Nam",
+      "ai_tag_url": "https://news.case.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.case.edu', port=443): Max retries exceeded with url: /topic/artificia"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Kent State University at Kent",
+      "base_url": "https://news.kentstate.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.kentstate.edu', port=443): Max retries exceeded with url: / (Caused b",
+      "ai_tag_url": "https://news.kentstate.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.kentstate.edu', port=443): Max retries exceeded with url: /topic/arti"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Ohio State University-Main Campus",
+      "base_url": "https://news.ohiostate.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.ohiostate.edu', port=443): Max retries exceeded with url: / (Caused b",
+      "ai_tag_url": "https://news.ohiostate.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.ohiostate.edu', port=443): Max retries exceeded with url: /topic/arti"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Ohio University-Main Campus",
+      "base_url": "https://news.ohiouniversity-main.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.ohiouniversity-main.edu', port=443): Max retries exceeded with url: /",
+      "ai_tag_url": "https://news.ohiouniversity-main.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.ohiouniversity-main.edu', port=443): Max retries exceeded with url: /"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Cincinnati-Main Campus",
+      "base_url": "https://news.universityof.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.universityof.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Dayton",
+      "base_url": "https://news.universityof.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.universityof.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Toledo",
+      "base_url": "https://news.universityof.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.universityof.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Oklahoma State University-Main Campus",
+      "base_url": "https://news.oklahomastate.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.oklahomastate.edu', port=443): Max retries exceeded with url: / (Caus",
+      "ai_tag_url": "https://news.oklahomastate.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.oklahomastate.edu', port=443): Max retries exceeded with url: /topic/"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Oregon",
+      "base_url": "https://news.oregon.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.oregon.edu', port=443): Max retries exceeded with url: / (Caused by N",
+      "ai_tag_url": "https://news.oregon.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.oregon.edu', port=443): Max retries exceeded with url: /topic/artific"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Drexel University",
+      "base_url": "https://news.drexeluniversity.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.drexeluniversity.edu', port=443): Max retries exceeded with url: / (C",
+      "ai_tag_url": "https://news.drexeluniversity.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.drexeluniversity.edu', port=443): Max retries exceeded with url: /top"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Lehigh University",
+      "base_url": "https://news.lehighuniversity.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.lehighuniversity.edu', port=443): Max retries exceeded with url: / (C",
+      "ai_tag_url": "https://news.lehighuniversity.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.lehighuniversity.edu', port=443): Max retries exceeded with url: /top"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Pennsylvania State University-Main Campus",
+      "base_url": "https://news.pennsylvaniastate.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.pennsylvaniastate.edu', port=443): Max retries exceeded with url: / (",
+      "ai_tag_url": "https://news.pennsylvaniastate.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.pennsylvaniastate.edu', port=443): Max retries exceeded with url: /to"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Temple University",
+      "base_url": "https://news.templeuniversity.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.templeuniversity.edu', port=443): Max retries exceeded with url: / (C",
+      "ai_tag_url": "https://news.templeuniversity.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.templeuniversity.edu', port=443): Max retries exceeded with url: /top"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Rhode Island",
+      "base_url": "https://news.universityof.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.universityof.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Clemson University",
+      "base_url": "https://news.clemsonuniversity.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.clemsonuniversity.edu', port=443): Max retries exceeded with url: / (",
+      "ai_tag_url": "https://news.clemsonuniversity.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.clemsonuniversity.edu', port=443): Max retries exceeded with url: /to"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Medical University of South Carolina",
+      "base_url": "https://news.medicaluniversity.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.medicaluniversity.edu', port=443): Max retries exceeded with url: / (",
+      "ai_tag_url": "https://news.medicaluniversity.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.medicaluniversity.edu', port=443): Max retries exceeded with url: /to"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "The University of Tennessee Health Science Center",
+      "base_url": "https://news.theuniversity.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.theuniversity.edu', port=443): Max retries exceeded with url: / (Caus",
+      "ai_tag_url": "https://news.theuniversity.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.theuniversity.edu', port=443): Max retries exceeded with url: /topic/"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "The University of Tennessee-Knoxville",
+      "base_url": "https://news.theuniversity.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.theuniversity.edu', port=443): Max retries exceeded with url: / (Caus",
+      "ai_tag_url": "https://news.theuniversity.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.theuniversity.edu', port=443): Max retries exceeded with url: /topic/"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Memphis",
+      "base_url": "https://news.universityof.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.universityof.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Baylor College of Medicine",
+      "base_url": "https://news.baylorcollege.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.baylorcollege.edu', port=443): Max retries exceeded with url: / (Caus",
+      "ai_tag_url": "https://news.baylorcollege.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.baylorcollege.edu', port=443): Max retries exceeded with url: /topic/"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Baylor University",
+      "base_url": "https://news.bayloruniversity.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.bayloruniversity.edu', port=443): Max retries exceeded with url: / (C",
+      "ai_tag_url": "https://news.bayloruniversity.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.bayloruniversity.edu', port=443): Max retries exceeded with url: /top"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Rice University",
+      "base_url": "https://news.rice.edu",
+      "base_error": "HTTP 406",
+      "ai_tag_url": "https://news.rice.edu/topic/artificial-intelligence/",
+      "ai_error": "HTTP 406"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Southern Methodist University",
+      "base_url": "https://news.southernmethodist.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.southernmethodist.edu', port=443): Max retries exceeded with url: / (",
+      "ai_tag_url": "https://news.southernmethodist.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.southernmethodist.edu', port=443): Max retries exceeded with url: /to"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Texas A & M University-College Station",
+      "base_url": "https://news.texasa.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.texasa.edu', port=443): Max retries exceeded with url: / (Caused by N",
+      "ai_tag_url": "https://news.texasa.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.texasa.edu', port=443): Max retries exceeded with url: /topic/artific"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "The University of Texas Health Science Center at Houston",
+      "base_url": "https://news.theuniversity.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.theuniversity.edu', port=443): Max retries exceeded with url: / (Caus",
+      "ai_tag_url": "https://news.theuniversity.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.theuniversity.edu', port=443): Max retries exceeded with url: /topic/"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "The University of Texas at Arlington",
+      "base_url": "https://news.uta.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.uta.edu', port=443): Max retries exceeded with url: / (Caused by Name",
+      "ai_tag_url": "https://news.uta.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.uta.edu', port=443): Max retries exceeded with url: /topic/artificial"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "The University of Texas at El Paso",
+      "base_url": "https://news.utep.edu",
+      "base_error": "Timeout",
+      "ai_tag_url": "https://news.utep.edu/topic/artificial-intelligence/",
+      "ai_error": "Timeout"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Houston",
+      "base_url": "https://news.universityof.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.universityof.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of North Texas",
+      "base_url": "https://news.universityof.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.universityof.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Texas Southwestern Medical Center",
+      "base_url": "https://news.universityof.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.universityof.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.universityof.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Brigham Young University",
+      "base_url": "https://news.brighamyoung.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.brighamyoung.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.brighamyoung.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.brighamyoung.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Utah",
+      "base_url": "https://news.utah.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.utah.edu', port=443): Max retries exceeded with url: / (Caused by Nam",
+      "ai_tag_url": "https://news.utah.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.utah.edu', port=443): Max retries exceeded with url: /topic/artificia"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "George Mason University",
+      "base_url": "https://news.georgemason.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.georgemason.edu', port=443): Max retries exceeded with url: / (Caused",
+      "ai_tag_url": "https://news.georgemason.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.georgemason.edu', port=443): Max retries exceeded with url: /topic/ar"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Old Dominion University",
+      "base_url": "https://news.olddominion.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.olddominion.edu', port=443): Max retries exceeded with url: / (Caused",
+      "ai_tag_url": "https://news.olddominion.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.olddominion.edu', port=443): Max retries exceeded with url: /topic/ar"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Virginia Commonwealth University",
+      "base_url": "https://news.virginiacommonwealth.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.virginiacommonwealth.edu', port=443): Max retries exceeded with url: ",
+      "ai_tag_url": "https://news.virginiacommonwealth.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.virginiacommonwealth.edu', port=443): Max retries exceeded with url: "
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "William & Mary",
+      "base_url": "https://news.william&.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.william&.edu', port=443): Max retries exceeded with url: / (Caused by",
+      "ai_tag_url": "https://news.william&.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.william&.edu', port=443): Max retries exceeded with url: /topic/artif"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Vermont",
+      "base_url": "https://news.vermont.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.vermont.edu', port=443): Max retries exceeded with url: / (Caused by ",
+      "ai_tag_url": "https://news.vermont.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.vermont.edu', port=443): Max retries exceeded with url: /topic/artifi"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "Washington State University",
+      "base_url": "https://news.washingtonstate.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.washingtonstate.edu', port=443): Max retries exceeded with url: / (Ca",
+      "ai_tag_url": "https://news.washingtonstate.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.washingtonstate.edu', port=443): Max retries exceeded with url: /topi"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Wisconsin-Madison",
+      "base_url": "https://news.wisconsin.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.wisconsin.edu', port=443): Max retries exceeded with url: / (Caused b",
+      "ai_tag_url": "https://news.wisconsin.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.wisconsin.edu', port=443): Max retries exceeded with url: /topic/arti"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Wisconsin-Milwaukee",
+      "base_url": "https://news.wisconsin.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.wisconsin.edu', port=443): Max retries exceeded with url: / (Caused b",
+      "ai_tag_url": "https://news.wisconsin.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.wisconsin.edu', port=443): Max retries exceeded with url: /topic/arti"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "West Virginia University",
+      "base_url": "https://news.westvirginia.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.westvirginia.edu', port=443): Max retries exceeded with url: / (Cause",
+      "ai_tag_url": "https://news.westvirginia.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.westvirginia.edu', port=443): Max retries exceeded with url: /topic/a"
+    },
+    {
+      "file": "r1_universities.json",
+      "name": "University of Wyoming",
+      "base_url": "https://news.wyoming.edu",
+      "base_error": "Connection Error: HTTPSConnectionPool(host='news.wyoming.edu', port=443): Max retries exceeded with url: / (Caused by ",
+      "ai_tag_url": "https://news.wyoming.edu/topic/artificial-intelligence/",
+      "ai_error": "Connection Error: HTTPSConnectionPool(host='news.wyoming.edu', port=443): Max retries exceeded with url: /topic/artifi"
+    }
+  ],
+  "files_processed": {
+    "major_facilities.json": {
+      "entries_processed": 27,
+      "changes_made": 7
+    },
+    "peer_institutions.json": {
+      "entries_processed": 16,
+      "changes_made": 7
+    },
+    "r1_universities.json": {
+      "entries_processed": 187,
+      "changes_made": 38
+    }
+  }
+}

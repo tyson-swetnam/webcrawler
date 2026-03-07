@@ -1,0 +1,198 @@
+[
+  {
+    "name": "Utah State University",
+    "category": "r1",
+    "url": "https://news.usu.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "US",
+    "location": {
+      "city": "Logan",
+      "state": "UT",
+      "state_full": "Utah",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "George Mason University",
+    "category": "r1",
+    "url": "https://news.georgemason.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "GM",
+    "location": {
+      "city": "Fairfax",
+      "state": "VA",
+      "state_full": "Virginia",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Old Dominion University",
+    "category": "r1",
+    "url": "https://news.olddominion.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "D",
+    "location": {
+      "city": "Norfolk",
+      "state": "VA",
+      "state_full": "Virginia",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Virginia-Main Campus",
+    "category": "r1",
+    "url": "https://news.virginia.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UV",
+    "location": {
+      "city": "Charlottesville",
+      "state": "VA",
+      "state_full": "Virginia",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Virginia Commonwealth University",
+    "category": "r1",
+    "url": "https://news.virginiacommonwealth.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "VC",
+    "location": {
+      "city": "Richmond",
+      "state": "VA",
+      "state_full": "Virginia",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Virginia Polytechnic Institute and State University",
+    "category": "r1",
+    "url": "https://news.vt.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "Virginia Tech",
+    "location": {
+      "city": "Blacksburg",
+      "state": "VA",
+      "state_full": "Virginia",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "William & Mary",
+    "category": "r1",
+    "url": "https://news.william&.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "WM",
+    "location": {
+      "city": "Williamsburg",
+      "state": "VA",
+      "state_full": "Virginia",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Vermont",
+    "category": "r1",
+    "url": "https://news.vermont.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UV",
+    "location": {
+      "city": "Burlington",
+      "state": "VT",
+      "state_full": "Vermont",
+      "region": "Northeast",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Washington-Seattle Campus",
+    "category": "r1",
+    "url": "https://www.washington.edu/news/",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UW",
+    "location": {
+      "city": "Seattle",
+      "state": "WA",
+      "state_full": "Washington",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "Washington State University",
+    "category": "r1",
+    "url": "https://news.washingtonstate.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "WS",
+    "location": {
+      "city": "Pullman",
+      "state": "WA",
+      "state_full": "Washington",
+      "region": "West",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Wisconsin-Madison",
+    "category": "r1",
+    "url": "https://news.wisconsin.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UW",
+    "location": {
+      "city": "Madison",
+      "state": "WI",
+      "state_full": "Wisconsin",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Wisconsin-Milwaukee",
+    "category": "r1",
+    "url": "https://news.wisconsin.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UW",
+    "location": {
+      "city": "Milwaukee",
+      "state": "WI",
+      "state_full": "Wisconsin",
+      "region": "Midwest",
+      "country": "US"
+    }
+  },
+  {
+    "name": "West Virginia University",
+    "category": "r1",
+    "url": "https://news.westvirginia.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "WV",
+    "location": {
+      "city": "Morgantown",
+      "state": "WV",
+      "state_full": "West Virginia",
+      "region": "South",
+      "country": "US"
+    }
+  },
+  {
+    "name": "University of Wyoming",
+    "category": "r1",
+    "url": "https://news.wyoming.edu",
+    "config_file": "r1_universities.json",
+    "abbreviation": "UW",
+    "location": {
+      "city": "Laramie",
+      "state": "WY",
+      "state_full": "Wyoming",
+      "region": "West",
+      "country": "US"
+    }
+  }
+]

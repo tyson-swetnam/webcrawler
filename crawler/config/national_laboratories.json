@@ -37,8 +37,16 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Exascale computing", "AI/ML", "Materials science", "Energy research"],
-      "major_systems": ["Aurora", "Polaris"]
+      "research_focus": [
+        "Exascale computing",
+        "AI/ML",
+        "Materials science",
+        "Energy research"
+      ],
+      "major_systems": [
+        "Aurora",
+        "Polaris"
+      ]
     },
     {
       "id": 2,
@@ -63,8 +71,16 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["National security", "Exascale computing", "AI/ML", "Nuclear weapons"],
-      "major_systems": ["El Capitan", "Sierra"]
+      "research_focus": [
+        "National security",
+        "Exascale computing",
+        "AI/ML",
+        "Nuclear weapons"
+      ],
+      "major_systems": [
+        "El Capitan",
+        "Sierra"
+      ]
     },
     {
       "id": 3,
@@ -86,11 +102,20 @@
           "description": "Los Alamos National Laboratory - DOE National Laboratory news and updates",
           "verified": true,
           "crawl_priority": 250,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-02-18T00:00:00+00:00",
+          "rss_feed": "https://www.lanl.gov/rss.xml"
         }
       ],
-      "research_focus": ["National security", "Nuclear science", "AI/ML", "Supercomputing"],
-      "major_systems": ["Venado", "Chicoma"]
+      "research_focus": [
+        "National security",
+        "Nuclear science",
+        "AI/ML",
+        "Supercomputing"
+      ],
+      "major_systems": [
+        "Venado",
+        "Chicoma"
+      ]
     },
     {
       "id": 4,
@@ -115,8 +140,16 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Exascale computing", "AI/ML", "Neutron science", "Materials research"],
-      "major_systems": ["Frontier", "Summit"]
+      "research_focus": [
+        "Exascale computing",
+        "AI/ML",
+        "Neutron science",
+        "Materials research"
+      ],
+      "major_systems": [
+        "Frontier",
+        "Summit"
+      ]
     },
     {
       "id": 5,
@@ -138,11 +171,20 @@
           "description": "Lawrence Berkeley National Laboratory - DOE National Laboratory news and updates",
           "verified": true,
           "crawl_priority": 250,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-02-18T00:00:00+00:00",
+          "rss_feed": "https://newscenter.lbl.gov/feed/"
         }
       ],
-      "research_focus": ["Scientific computing", "AI/ML", "Energy sciences", "Materials"],
-      "major_systems": ["Perlmutter (NERSC)", "Cori"]
+      "research_focus": [
+        "Scientific computing",
+        "AI/ML",
+        "Energy sciences",
+        "Materials"
+      ],
+      "major_systems": [
+        "Perlmutter (NERSC)",
+        "Cori"
+      ]
     },
     {
       "id": 6,
@@ -164,11 +206,20 @@
           "description": "Sandia National Laboratories - DOE National Laboratory news and updates",
           "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-02-18T00:00:00+00:00",
+          "rss_feed": "https://newsreleases.sandia.gov/feed/"
         }
       ],
-      "research_focus": ["National security", "Engineering", "Computing", "Materials science"],
-      "major_systems": ["Astra", "Vanguard"]
+      "research_focus": [
+        "National security",
+        "Engineering",
+        "Computing",
+        "Materials science"
+      ],
+      "major_systems": [
+        "Astra",
+        "Vanguard"
+      ]
     },
     {
       "id": 7,
@@ -193,8 +244,16 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Environmental science", "Energy", "National security", "Computing"],
-      "major_systems": ["Deception", "Constance"]
+      "research_focus": [
+        "Environmental science",
+        "Energy",
+        "National security",
+        "Computing"
+      ],
+      "major_systems": [
+        "Deception",
+        "Constance"
+      ]
     },
     {
       "id": 8,
@@ -219,8 +278,15 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Nuclear physics", "Materials science", "Energy sciences", "Computing"],
-      "major_systems": ["RHIC Computing Facility"]
+      "research_focus": [
+        "Nuclear physics",
+        "Materials science",
+        "Energy sciences",
+        "Computing"
+      ],
+      "major_systems": [
+        "RHIC Computing Facility"
+      ]
     },
     {
       "id": 9,
@@ -242,11 +308,20 @@
           "description": "SLAC National Accelerator Laboratory - DOE National Laboratory news and updates",
           "verified": true,
           "crawl_priority": 250,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-02-18T00:00:00+00:00",
+          "rss_feed": "https://www6.slac.stanford.edu/rss.xml"
         }
       ],
-      "research_focus": ["Particle physics", "X-ray science", "AI/ML", "Accelerators"],
-      "major_systems": ["LCLS Computing", "S3DF"]
+      "research_focus": [
+        "Particle physics",
+        "X-ray science",
+        "AI/ML",
+        "Accelerators"
+      ],
+      "major_systems": [
+        "LCLS Computing",
+        "S3DF"
+      ]
     },
     {
       "id": 10,
@@ -268,11 +343,20 @@
           "description": "Fermi National Accelerator Laboratory - DOE National Laboratory news and updates",
           "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-02-18T00:00:00+00:00",
+          "rss_feed": "https://news.fnal.gov/feed/"
         }
       ],
-      "research_focus": ["Particle physics", "Neutrinos", "AI/ML for physics", "Accelerators"],
-      "major_systems": ["Wilson Cluster", "LHC Tier-1"]
+      "research_focus": [
+        "Particle physics",
+        "Neutrinos",
+        "AI/ML for physics",
+        "Accelerators"
+      ],
+      "major_systems": [
+        "Wilson Cluster",
+        "LHC Tier-1"
+      ]
     },
     {
       "id": 11,
@@ -297,13 +381,20 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Nuclear energy", "Critical infrastructure", "National security"],
-      "major_systems": ["Sawtooth", "Lemhi"]
+      "research_focus": [
+        "Nuclear energy",
+        "Critical infrastructure",
+        "National security"
+      ],
+      "major_systems": [
+        "Sawtooth",
+        "Lemhi"
+      ]
     },
     {
       "id": 12,
-      "name": "National Renewable Energy Laboratory",
-      "abbreviation": "NREL",
+      "name": "National Laboratory of the Rockies",
+      "abbreviation": "NLR",
       "affiliated_institution": "U.S. Department of Energy",
       "facility_type": "DOE National Laboratory",
       "location": {
@@ -316,15 +407,23 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.nrel.gov/news/",
-          "description": "National Renewable Energy Laboratory - DOE National Laboratory news and updates (CRITICAL: nrel.gov currently redirects to nlr.gov - domain issue)",
-          "verified": false,
+          "url": "https://www.nlr.gov/news/",
+          "description": "National Laboratory of the Rockies (formerly NREL) - DOE National Laboratory news and updates",
+          "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Renewable energy", "AI/ML for energy", "Solar", "Wind"],
-      "major_systems": ["Eagle", "Kestrel"]
+      "research_focus": [
+        "Renewable energy",
+        "AI/ML for energy",
+        "Solar",
+        "Wind"
+      ],
+      "major_systems": [
+        "Eagle",
+        "Kestrel"
+      ]
     },
     {
       "id": 13,
@@ -349,8 +448,15 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Materials science", "Rare earth elements", "AI for materials"],
-      "major_systems": ["Condo", "Thunder"]
+      "research_focus": [
+        "Materials science",
+        "Rare earth elements",
+        "AI for materials"
+      ],
+      "major_systems": [
+        "Condo",
+        "Thunder"
+      ]
     },
     {
       "id": 14,
@@ -375,8 +481,14 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Fusion energy", "Plasma physics", "AI for fusion control"],
-      "major_systems": ["NSTX-U Computing"]
+      "research_focus": [
+        "Fusion energy",
+        "Plasma physics",
+        "AI for fusion control"
+      ],
+      "major_systems": [
+        "NSTX-U Computing"
+      ]
     },
     {
       "id": 15,
@@ -394,15 +506,21 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.jlab.org/news",
+          "url": "https://www.jlab.org/pressroom",
           "description": "Thomas Jefferson National Accelerator Facility - DOE National Laboratory news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Nuclear physics", "Accelerators", "Computing"],
-      "major_systems": ["SciComp Farm"]
+      "research_focus": [
+        "Nuclear physics",
+        "Accelerators",
+        "Computing"
+      ],
+      "major_systems": [
+        "SciComp Farm"
+      ]
     },
     {
       "id": 16,
@@ -424,10 +542,15 @@
           "description": "Savannah River National Laboratory - DOE National Laboratory news and updates",
           "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-02-18T00:00:00+00:00",
+          "rss_feed": "https://www.srnl.gov/feed/"
         }
       ],
-      "research_focus": ["Environmental management", "National security", "Materials"],
+      "research_focus": [
+        "Environmental management",
+        "National security",
+        "Materials"
+      ],
       "major_systems": []
     },
     {
@@ -453,8 +576,14 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Fossil energy", "Carbon capture", "Energy systems"],
-      "major_systems": ["Joule 2.0"]
+      "research_focus": [
+        "Fossil energy",
+        "Carbon capture",
+        "Energy systems"
+      ],
+      "major_systems": [
+        "Joule 2.0"
+      ]
     },
     {
       "id": 18,
@@ -474,12 +603,17 @@
           "type": "primary",
           "url": "https://www.battelle.org/insights/newsroom",
           "description": "Battelle Memorial Institute - DOE Lab Operator news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00",
+          "rss_feed": "https://www.battelle.org/feeds/battelle-news"
         }
       ],
-      "research_focus": ["Lab management", "Applied research", "Technology commercialization"],
+      "research_focus": [
+        "Lab management",
+        "Applied research",
+        "Technology commercialization"
+      ],
       "major_systems": []
     },
     {
@@ -498,14 +632,18 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.y12.doe.gov/news/press-releases",
+          "url": "https://www.y12.doe.gov/news/blog",
           "description": "Y-12 National Security Complex - NNSA Facility news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Nuclear security", "Weapons components", "Manufacturing"],
+      "research_focus": [
+        "Nuclear security",
+        "Weapons components",
+        "Manufacturing"
+      ],
       "major_systems": []
     },
     {
@@ -526,12 +664,16 @@
           "type": "primary",
           "url": "https://kcnsc.doe.gov/news/newsroom/",
           "description": "Kansas City National Security Campus - NNSA Facility news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Non-nuclear weapons components", "Manufacturing", "Engineering"],
+      "research_focus": [
+        "Non-nuclear weapons components",
+        "Manufacturing",
+        "Engineering"
+      ],
       "major_systems": []
     },
     {
@@ -552,12 +694,16 @@
           "type": "primary",
           "url": "https://pantex.energy.gov/news/press-releases",
           "description": "Pantex Plant - NNSA Facility news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Nuclear weapons assembly", "Dismantlement", "HE research"],
+      "research_focus": [
+        "Nuclear weapons assembly",
+        "Dismantlement",
+        "HE research"
+      ],
       "major_systems": []
     },
     {
@@ -578,12 +724,17 @@
           "type": "primary",
           "url": "https://nnss.gov/news/category/press-releases/",
           "description": "Nevada National Security Site - NNSA Test Site news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00",
+          "rss_feed": "https://nnss.gov/news/category/press-releases/feed/"
         }
       ],
-      "research_focus": ["Stockpile stewardship", "Subcritical experiments", "Emergency response"],
+      "research_focus": [
+        "Stockpile stewardship",
+        "Subcritical experiments",
+        "Emergency response"
+      ],
       "major_systems": []
     },
     {
@@ -609,7 +760,11 @@
           "last_verified": "2026-02-18T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Advanced energy research", "Breakthrough technologies", "AI for energy"],
+      "research_focus": [
+        "Advanced energy research",
+        "Breakthrough technologies",
+        "AI for energy"
+      ],
       "major_systems": []
     },
     {
@@ -630,12 +785,16 @@
           "type": "primary",
           "url": "https://www.orau.org/news/releases/index.html",
           "description": "Oak Ridge Associated Universities - DOE Consortium news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Scientific workforce", "Education", "Research partnerships"],
+      "research_focus": [
+        "Scientific workforce",
+        "Education",
+        "Research partnerships"
+      ],
       "major_systems": []
     },
     {
@@ -656,12 +815,17 @@
           "type": "primary",
           "url": "https://www.nist.gov/news-events/news",
           "description": "NIST - Commerce Dept. Lab news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Standards", "Metrology", "AI safety", "Cybersecurity"],
+      "research_focus": [
+        "Standards",
+        "Metrology",
+        "AI safety",
+        "Cybersecurity"
+      ],
       "major_systems": []
     },
     {
@@ -682,12 +846,18 @@
           "type": "primary",
           "url": "https://www.jpl.nasa.gov/news/",
           "description": "NASA JPL - NASA FFRDC news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 250,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00",
+          "rss_feed": "https://www.jpl.nasa.gov/news.rss"
         }
       ],
-      "research_focus": ["Space exploration", "AI/ML for space", "Robotics", "Data science"],
+      "research_focus": [
+        "Space exploration",
+        "AI/ML for space",
+        "Robotics",
+        "Data science"
+      ],
       "major_systems": []
     },
     {
@@ -706,14 +876,19 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.nasa.gov/ames/ames-research-center-news/",
+          "url": "https://www.nasa.gov/ames/news/",
           "description": "NASA Ames Research Center - NASA Center news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Aeronautics", "AI/ML", "Quantum computing", "Astrobiology"],
+      "research_focus": [
+        "Aeronautics",
+        "AI/ML",
+        "Quantum computing",
+        "Astrobiology"
+      ],
       "major_systems": []
     },
     {
@@ -734,12 +909,16 @@
           "type": "primary",
           "url": "https://www.nasa.gov/latest-goddard-news/",
           "description": "NASA Goddard Space Flight Center - NASA Center news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Earth science", "Space science", "AI for Earth observation"],
+      "research_focus": [
+        "Earth science",
+        "Space science",
+        "AI for Earth observation"
+      ],
       "major_systems": []
     },
     {
@@ -760,12 +939,16 @@
           "type": "primary",
           "url": "https://www.nasa.gov/langley/langley-news/",
           "description": "NASA Langley Research Center - NASA Center news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Aeronautics", "Atmospheric science", "AI/ML"],
+      "research_focus": [
+        "Aeronautics",
+        "Atmospheric science",
+        "AI/ML"
+      ],
       "major_systems": []
     },
     {
@@ -786,12 +969,16 @@
           "type": "primary",
           "url": "https://www.nasa.gov/glenn-news/",
           "description": "NASA Glenn Research Center - NASA Center news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Propulsion", "Power systems", "Communications"],
+      "research_focus": [
+        "Propulsion",
+        "Power systems",
+        "Communications"
+      ],
       "major_systems": []
     },
     {
@@ -810,14 +997,19 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.nrl.navy.mil/News/",
+          "url": "https://www.nrl.navy.mil/Media/News/",
           "description": "U.S. Naval Research Laboratory - Navy Research Lab news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["AI/ML", "Cybersecurity", "Materials", "Plasma physics"],
+      "research_focus": [
+        "AI/ML",
+        "Cybersecurity",
+        "Materials",
+        "Plasma physics"
+      ],
       "major_systems": []
     },
     {
@@ -838,12 +1030,17 @@
           "type": "primary",
           "url": "https://arl.devcom.army.mil/news/",
           "description": "DEVCOM Army Research Laboratory - Army Research Lab news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00",
+          "rss_feed": "https://arl.devcom.army.mil/news/feed/"
         }
       ],
-      "research_focus": ["AI/ML for defense", "Autonomous systems", "Computational science"],
+      "research_focus": [
+        "AI/ML for defense",
+        "Autonomous systems",
+        "Computational science"
+      ],
       "major_systems": []
     },
     {
@@ -864,12 +1061,17 @@
           "type": "primary",
           "url": "https://www.afrl.af.mil/News/",
           "description": "Air Force Research Laboratory - Air Force Lab news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["AI/ML", "Autonomy", "Directed energy", "Space"],
+      "research_focus": [
+        "AI/ML",
+        "Autonomy",
+        "Directed energy",
+        "Space"
+      ],
       "major_systems": []
     },
     {
@@ -890,12 +1092,17 @@
           "type": "primary",
           "url": "https://www.onr.navy.mil/media-center/news-releases",
           "description": "Office of Naval Research - Navy Research Funder news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Naval technology", "AI/ML", "Autonomy", "Ocean science"],
+      "research_focus": [
+        "Naval technology",
+        "AI/ML",
+        "Autonomy",
+        "Ocean science"
+      ],
       "major_systems": []
     },
     {
@@ -916,12 +1123,18 @@
           "type": "primary",
           "url": "https://www.darpa.mil/news",
           "description": "DARPA - DoD Research Agency news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 250,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00",
+          "rss_feed": "https://www.darpa.mil/news.xml"
         }
       ],
-      "research_focus": ["Breakthrough technology", "AI/ML", "Autonomy", "Cybersecurity"],
+      "research_focus": [
+        "Breakthrough technology",
+        "AI/ML",
+        "Autonomy",
+        "Cybersecurity"
+      ],
       "major_systems": []
     },
     {
@@ -940,14 +1153,19 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.iarpa.gov/",
+          "url": "https://www.iarpa.gov/newsroom",
           "description": "IARPA - Intelligence Agency news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Intelligence technology", "AI/ML", "Biometrics", "Forecasting"],
+      "research_focus": [
+        "Intelligence technology",
+        "AI/ML",
+        "Biometrics",
+        "Forecasting"
+      ],
       "major_systems": []
     },
     {
@@ -968,12 +1186,18 @@
           "type": "primary",
           "url": "https://www.nsa.gov/Press-Room/News-Highlights/",
           "description": "NSA Research Directorate - Intelligence Agency news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00",
+          "rss_feed": "https://www.nsa.gov/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=1282&max=20"
         }
       ],
-      "research_focus": ["Cryptography", "AI/ML", "Cybersecurity", "Quantum computing"],
+      "research_focus": [
+        "Cryptography",
+        "AI/ML",
+        "Cybersecurity",
+        "Quantum computing"
+      ],
       "major_systems": []
     },
     {
@@ -992,14 +1216,18 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.noaa.gov/news",
+          "url": "https://www.noaa.gov/news-release",
           "description": "NOAA Center for AI - Commerce Dept. news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Weather AI", "Climate modeling", "Ocean prediction"],
+      "research_focus": [
+        "Weather AI",
+        "Climate modeling",
+        "Ocean prediction"
+      ],
       "major_systems": []
     },
     {
@@ -1018,14 +1246,18 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.dhs.gov/science-and-technology",
+          "url": "https://www.dhs.gov/science-and-technology/newsroom",
           "description": "DHS S&T Directorate - DHS Research news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Homeland security", "AI for threat detection", "Cybersecurity"],
+      "research_focus": [
+        "Homeland security",
+        "AI for threat detection",
+        "Cybersecurity"
+      ],
       "major_systems": []
     },
     {
@@ -1044,14 +1276,19 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.nsf.gov/news",
+          "url": "https://www.nsf.gov/news/",
           "description": "National Science Foundation - Federal Funder news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Research funding", "AI policy", "STEM education", "Infrastructure"],
+      "research_focus": [
+        "Research funding",
+        "AI policy",
+        "STEM education",
+        "Infrastructure"
+      ],
       "major_systems": []
     },
     {
@@ -1072,12 +1309,17 @@
           "type": "primary",
           "url": "https://www.mitre.org/news-insights",
           "description": "MITRE Corporation - FFRDC news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Systems engineering", "AI/ML", "Cybersecurity", "Defense"],
+      "research_focus": [
+        "Systems engineering",
+        "AI/ML",
+        "Cybersecurity",
+        "Defense"
+      ],
       "major_systems": []
     },
     {
@@ -1096,14 +1338,18 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://aerospace.org/press-releases",
+          "url": "https://aerospace.org/news",
           "description": "The Aerospace Corporation - FFRDC news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Space systems", "AI for space", "National security"],
+      "research_focus": [
+        "Space systems",
+        "AI for space",
+        "National security"
+      ],
       "major_systems": []
     },
     {
@@ -1124,12 +1370,18 @@
           "type": "primary",
           "url": "https://www.rand.org/news/press.html",
           "description": "RAND Corporation - FFRDC news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00",
+          "rss_feed": "https://www.rand.org/news/press.xml"
         }
       ],
-      "research_focus": ["Policy research", "AI policy", "Defense", "Security"],
+      "research_focus": [
+        "Policy research",
+        "AI policy",
+        "Defense",
+        "Security"
+      ],
       "major_systems": []
     },
     {
@@ -1150,12 +1402,16 @@
           "type": "primary",
           "url": "https://www.ida.org/en/about-ida/ida-in-the-news",
           "description": "Institute for Defense Analyses - FFRDC news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Defense analysis", "Science and technology", "Systems evaluation"],
+      "research_focus": [
+        "Defense analysis",
+        "Science and technology",
+        "Systems evaluation"
+      ],
       "major_systems": []
     },
     {
@@ -1176,12 +1432,17 @@
           "type": "primary",
           "url": "https://www.ll.mit.edu/news",
           "description": "MIT Lincoln Laboratory - FFRDC news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 250,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["AI/ML", "Cybersecurity", "Space surveillance", "Biodefense"],
+      "research_focus": [
+        "AI/ML",
+        "Cybersecurity",
+        "Space surveillance",
+        "Biodefense"
+      ],
       "major_systems": []
     },
     {
@@ -1200,14 +1461,19 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.jhuapl.edu/news/news-releases",
+          "url": "https://www.jhuapl.edu/news",
           "description": "Johns Hopkins APL - FFRDC news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 250,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["AI/ML", "Space exploration", "Missile defense", "Cybersecurity"],
+      "research_focus": [
+        "AI/ML",
+        "Space exploration",
+        "Missile defense",
+        "Cybersecurity"
+      ],
       "major_systems": []
     },
     {
@@ -1228,12 +1494,17 @@
           "type": "primary",
           "url": "https://www.sei.cmu.edu/news-events/",
           "description": "CMU Software Engineering Institute - FFRDC news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Software engineering", "AI/ML", "Cybersecurity", "DevSecOps"],
+      "research_focus": [
+        "Software engineering",
+        "AI/ML",
+        "Cybersecurity",
+        "DevSecOps"
+      ],
       "major_systems": []
     },
     {
@@ -1254,12 +1525,16 @@
           "type": "primary",
           "url": "https://www.cna.org/our-media/press-releases/",
           "description": "Center for Naval Analyses - FFRDC news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Naval operations", "Defense analysis", "AI policy"],
+      "research_focus": [
+        "Naval operations",
+        "Defense analysis",
+        "AI policy"
+      ],
       "major_systems": []
     },
     {
@@ -1278,14 +1553,19 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.draper.com/media-center/news-releases",
+          "url": "https://www.draper.com/news",
           "description": "Draper Laboratory - FFRDC-like news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Autonomous systems", "Navigation", "AI/ML", "Space systems"],
+      "research_focus": [
+        "Autonomous systems",
+        "Navigation",
+        "AI/ML",
+        "Space systems"
+      ],
       "major_systems": []
     },
     {
@@ -1304,14 +1584,18 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.iqt.org/blog/",
+          "url": "https://www.iqt.org/knowledge-hub?content-type=Blog",
           "description": "In-Q-Tel - CIA Venture Capital news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 150,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Intelligence technology", "AI/ML startups", "Emerging tech"],
+      "research_focus": [
+        "Intelligence technology",
+        "AI/ML startups",
+        "Emerging tech"
+      ],
       "major_systems": []
     },
     {
@@ -1330,14 +1614,19 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.sri.com/about-us/press-room/",
+          "url": "https://www.sri.com/newsroom/",
           "description": "SRI International - Nonprofit R&D news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["AI/ML", "Biomedical", "Robotics", "National security"],
+      "research_focus": [
+        "AI/ML",
+        "Biomedical",
+        "Robotics",
+        "National security"
+      ],
       "major_systems": []
     },
     {
@@ -1356,14 +1645,19 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://aiinstitutes.org/",
+          "url": "https://aiinstitutes.org/news/",
           "description": "NSF AI Institutes - NSF Network news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00",
+          "rss_feed": "https://aiinstitutes.org/news/feed/"
         }
       ],
-      "research_focus": ["AI research", "AI education", "Multi-institution collaboration"],
+      "research_focus": [
+        "AI research",
+        "AI education",
+        "Multi-institution collaboration"
+      ],
       "major_systems": []
     },
     {
@@ -1382,14 +1676,18 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.nationalacademies.org/newsroom",
+          "url": "https://www.nationalacademies.org/news",
           "description": "National Academies - Advisory Body news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Science policy", "AI policy", "Research consensus"],
+      "research_focus": [
+        "Science policy",
+        "AI policy",
+        "Research consensus"
+      ],
       "major_systems": []
     },
     {
@@ -1408,14 +1706,18 @@
       "news_sources": [
         {
           "type": "primary",
-          "url": "https://www.arlis.umd.edu/",
+          "url": "https://www.arlis.umd.edu/about/news-events",
           "description": "UMD ARLIS - UARC news and updates",
-          "verified": false,
+          "verified": true,
           "crawl_priority": 100,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-03-06T00:00:00+00:00"
         }
       ],
-      "research_focus": ["Applied research", "AI for defense", "Language processing"],
+      "research_focus": [
+        "Applied research",
+        "AI for defense",
+        "Language processing"
+      ],
       "major_systems": []
     }
   ]

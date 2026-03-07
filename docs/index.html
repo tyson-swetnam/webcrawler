@@ -3,358 +3,444 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI University News - Tuesday, November 11, 2025</title>
+    <title>AI University News - Friday, March 06, 2026</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F393;</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+    
+        :root {
+            --color-bg: #ffffff;
+            --color-surface: #f8f9fa;
+            --color-surface-alt: #f1f3f5;
+            --color-surface-hover: #e9ecef;
+            --color-border: #dee2e6;
+            --color-text: #212529;
+            --color-text-secondary: #495057;
+            --color-text-muted: #868e96;
+            --color-text-faint: #adb5bd;
+            --color-link: #1a1a2e;
+            --color-link-visited: #3d3d5c;
+            --color-focus: #4dabf7;
+            --color-highlight-bg: #f8f9fa;
+
+            --color-peer: #7c3aed;
+            --color-r1: #2563eb;
+            --color-hpc: #d97706;
+            --color-lab: #059669;
+            --color-global: #dc2626;
+
+            --radius-sm: 4px;
+            --radius-md: 6px;
+            --transition-fast: 150ms ease;
+
+            --space-xs: 4px;
+            --space-sm: 8px;
+            --space-md: 16px;
+            --space-lg: 24px;
+            --space-xl: 32px;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #ffffff;
-            color: #000000;
-            max-width: 1400px;
+            font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 20px 40px;
+            padding: 0 var(--space-lg);
             line-height: 1.5;
+            font-size: 14px;
         }
 
+        :focus-visible {
+            outline: 2px solid var(--color-focus);
+            outline-offset: 2px;
+        }
+        a:focus:not(:focus-visible) { outline: none; }
+
+        /* ── Compact Header ── */
         .header {
-            text-align: center;
-            border-bottom: 3px solid #000;
-            padding-bottom: 15px;
-            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--color-border);
+            margin-bottom: var(--space-md);
+            min-height: 48px;
         }
-
         .header h1 {
-            font-size: 42px;
-            font-weight: bold;
-            letter-spacing: -1px;
-            margin-bottom: 5px;
-        }
-
-        .header .tagline {
-            font-size: 14px;
-            color: #666;
-            font-style: italic;
-        }
-
-        .header .date {
             font-size: 16px;
-            color: #000;
-            margin-top: 10px;
-            font-weight: bold;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--color-text);
+            white-space: nowrap;
         }
-
-        .nav {
-            text-align: center;
-            margin-bottom: 20px;
-            padding: 10px;
-            background-color: #f5f5f5;
-            border: 1px solid #ddd;
-        }
-
-        .nav a {
-            color: #cc0000;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 15px;
-            font-size: 14px;
-        }
-
-        .nav a:hover {
-            text-decoration: underline;
-        }
-
-        .top-headline {
-            text-align: center;
-            border: 2px solid #000;
-            padding: 20px;
-            margin-bottom: 30px;
-            background-color: #fffbf0;
-        }
-
-        .top-headline h2 {
-            font-size: 32px;
-            margin-bottom: 10px;
-            line-height: 1.2;
-        }
-
-        .top-headline h2 a {
-            color: #cc0000;
-            text-decoration: none;
-        }
-
-        .top-headline h2 a:hover {
-            text-decoration: underline;
-        }
-
-        .top-headline .summary {
-            margin-top: 15px;
-            font-size: 16px;
-            line-height: 1.5;
-            color: #333;
-        }
-
-        .university-section {
-            margin-bottom: 30px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 20px;
-        }
-
-        .university-section h3 {
-            font-size: 18px;
-            color: #000;
-            margin-bottom: 12px;
-            padding-bottom: 5px;
-            border-bottom: 2px solid #cc0000;
-        }
-
-        .article {
-            margin-bottom: 15px;
-            padding-left: 10px;
-        }
-
-        .headline {
-            margin-bottom: 3px;
-        }
-
-        .headline a {
-            color: #0000cc;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .headline a:hover {
-            text-decoration: underline;
-        }
-
-        .headline a:visited {
-            color: #551a8b;
-        }
-
-        .topics {
-            font-size: 12px;
-            color: #666;
-            font-style: italic;
-            margin-left: 8px;
-        }
-
-        .meta {
-            font-size: 12px;
-            color: #666;
-            font-style: italic;
-        }
-
-        .summary {
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
             font-size: 13px;
-            color: #333;
-            margin-top: 5px;
-            padding-left: 10px;
-            line-height: 1.5;
+            color: var(--color-text-muted);
         }
+        .header-meta {
+            white-space: nowrap;
+        }
+        .header-nav a {
+            color: var(--color-text-muted);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            transition: color var(--transition-fast);
+        }
+        .header-nav a:hover { color: var(--color-text); }
+        .header-nav a.active {
+            color: var(--color-text);
+            font-weight: 600;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            margin-top: var(--space-xl);
+            padding: var(--space-md) 0;
+            border-top: 1px solid var(--color-border);
+            font-size: 12px;
+            color: var(--color-text-muted);
+        }
+        .footer a {
+            color: var(--color-text-muted);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        .footer a:hover { color: var(--color-text); }
 
         .no-results {
             text-align: center;
-            font-size: 18px;
-            color: #666;
-            margin: 40px 0;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 2px solid #000;
-            font-size: 12px;
-            color: #666;
-        }
-
-        .footer a {
-            color: #0000cc;
-            text-decoration: none;
-        }
-
-        .stats {
-            text-align: center;
-            font-size: 14px;
-            color: #333;
-            margin-bottom: 20px;
-            padding: 10px;
-            background-color: #f9f9f9;
-        }
-
-        /* Three-column layout */
-        .three-column-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .column {
-            border: 2px solid #ddd;
-            padding: 15px;
-            background-color: #fafafa;
-            min-height: 200px;
-        }
-
-        .column-title {
-            font-size: 22px;
-            color: #cc0000;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #cc0000;
-            text-align: center;
-        }
-
-        .no-articles {
-            text-align: center;
-            color: #999;
-            font-style: italic;
-            padding: 20px;
-        }
-
-        @media (max-width: 1024px) {
-            .three-column-layout {
-                grid-template-columns: 1fr;
-            }
+            font-size: 15px;
+            color: var(--color-text-muted);
+            margin: 60px 0;
         }
 
         @media (max-width: 600px) {
-            body { padding: 10px; }
-            .header h1 { font-size: 28px; }
-            .headline a { font-size: 16px; }
-            .column { padding: 10px; }
+            body { padding: 0 var(--space-md); }
+            .header { flex-direction: column; gap: var(--space-sm); align-items: flex-start; }
+            .header-right { flex-wrap: wrap; }
         }
+        
+    
+        /* ── Stats Line ── */
+        .stats-line {
+            font-size: 13px;
+            color: var(--color-text-muted);
+            margin-bottom: var(--space-md);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            flex-wrap: wrap;
+        }
+        .stats-line .cat-dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            margin-right: 2px;
+            vertical-align: middle;
+        }
+        .dot-peer { background: var(--color-peer); }
+        .dot-r1 { background: var(--color-r1); }
+        .dot-hpc { background: var(--color-hpc); }
+        .dot-lab { background: var(--color-lab); }
+        .dot-global { background: var(--color-global); }
+
+        /* ── Tab Bar ── */
+        .tab-bar {
+            display: flex;
+            gap: 0;
+            border-bottom: 1px solid var(--color-border);
+            margin-bottom: 0;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        .tab-btn {
+            padding: 10px var(--space-md);
+            border: none;
+            background: none;
+            font-family: 'DM Sans', system-ui, sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--color-text-muted);
+            cursor: pointer;
+            white-space: nowrap;
+            border-bottom: 2px solid transparent;
+            transition: color var(--transition-fast), border-color var(--transition-fast);
+        }
+        .tab-btn:hover { color: var(--color-text-secondary); }
+        .tab-btn.active {
+            color: var(--color-text);
+            border-bottom-color: var(--color-text);
+        }
+        .tab-btn.tab-empty {
+            opacity: 0.4;
+            cursor: default;
+        }
+        .tab-count {
+            font-weight: 400;
+            font-size: 12px;
+            color: var(--color-text-faint);
+            margin-left: 3px;
+        }
+
+        /* ── Article List ── */
+        .article-list {
+            margin: 0;
+        }
+
+        /* ── University Group Subheader ── */
+        .univ-group-header {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-text-muted);
+            padding: var(--space-sm) 0 var(--space-xs) 0;
+            margin-top: var(--space-sm);
+            border-bottom: 1px solid var(--color-surface-alt);
+        }
+        .univ-group-header:first-child { margin-top: 0; }
+
+        /* ── Article Row ── */
+        .article-row {
+            display: grid;
+            grid-template-columns: 8px 1fr auto auto 20px;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: 10px var(--space-sm);
+            border-bottom: 1px solid var(--color-surface-alt);
+            cursor: pointer;
+            transition: background-color var(--transition-fast);
+            min-height: 40px;
+        }
+        .article-row:hover { background-color: var(--color-surface); }
+        .article-row .cat-dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+        }
+        .article-row .headline-link {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--color-link);
+            text-decoration: none;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .article-row .headline-link:hover { text-decoration: underline; text-underline-offset: 2px; }
+        .article-row .headline-link:visited { color: var(--color-link-visited); }
+        .article-row .univ-label {
+            font-size: 12px;
+            color: var(--color-text-muted);
+            white-space: nowrap;
+        }
+        .article-row .date-label {
+            font-size: 12px;
+            color: var(--color-text-faint);
+            white-space: nowrap;
+        }
+        .article-row .chevron {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            font-size: 10px;
+            color: var(--color-text-faint);
+            transition: transform 0.2s ease;
+        }
+        .article-row.expanded .chevron { transform: rotate(90deg); }
+
+        /* ── Article Detail (expand panel) ── */
+        .article-detail {
+            display: none;
+            padding: var(--space-sm) var(--space-md) var(--space-md) 22px;
+            border-bottom: 1px solid var(--color-surface-alt);
+            background: var(--color-surface);
+        }
+        .article-detail.open { display: block; }
+        .article-detail .summary {
+            font-size: 13px;
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+            margin-bottom: var(--space-sm);
+        }
+        .article-detail .detail-meta {
+            font-size: 12px;
+            color: var(--color-text-muted);
+            margin-bottom: var(--space-sm);
+        }
+        .article-detail .topics { margin-bottom: var(--space-sm); }
+        .topic-pill {
+            display: inline-block;
+            background: var(--color-surface-alt);
+            border-radius: var(--radius-sm);
+            padding: 2px 8px;
+            margin: 2px 3px 2px 0;
+            font-size: 11px;
+            color: var(--color-text-secondary);
+        }
+        .article-detail .detail-link a {
+            font-size: 12px;
+            color: var(--color-link);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .article-detail .detail-link a:hover { text-decoration: underline; }
+
+        /* ── Show More ── */
+        .article-overflow { display: none; }
+        .article-overflow.shown { display: grid; }
+        .show-more-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: var(--space-xs);
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-family: 'DM Sans', system-ui, sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--color-text-secondary);
+            text-align: center;
+            transition: background-color var(--transition-fast);
+        }
+        .show-more-btn:hover { background: var(--color-surface-hover); }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .article-row {
+                grid-template-columns: 6px 1fr 20px;
+                gap: var(--space-xs);
+                padding: var(--space-sm) var(--space-xs);
+            }
+            .article-row .univ-label,
+            .article-row .date-label { display: none; }
+            .article-row .headline-link {
+                white-space: normal;
+                font-size: 13px;
+            }
+            .tab-bar { gap: 0; }
+            .tab-btn { padding: 8px 10px; font-size: 12px; }
+        }
+        @media (max-width: 480px) {
+            .stats-line { font-size: 12px; }
+        }
+        
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>AI UNIVERSITY NEWS</h1>
-        <div class="tagline">Latest AI Research & Developments from Top Universities (Last 3 Days)</div>
-        <div class="date">Updated: Tuesday, November 11, 2025</div>
+        <h1>AI University News</h1>
+        <div class="header-right">
+            <span class="header-meta">79 articles &middot; Mar 06</span>
+            <span class="header-nav">
+                <a href="index.html" class="active">Today</a>
+                &middot;
+                <a href="archive/index.html">Archive</a>
+                &middot;
+                <a href="how_it_works.html">How It Works</a>
+            </span>
+        </div>
     </div>
 
-    <div class="nav">
-        <a href="index.html">TODAY</a>
-        <a href="archive/index.html">ARCHIVE</a>
-        <a href="how_it_works.html">HOW IT WORKS</a>
-    </div>
+    <div class="stats-line" data-total-articles="79">79 articles &middot; <span class="cat-dot dot-peer"></span>&nbsp;Peer&nbsp;4 &middot; <span class="cat-dot dot-r1"></span>&nbsp;R1&nbsp;56 &middot; <span class="cat-dot dot-hpc"></span>&nbsp;HPC&nbsp;2 &middot; <span class="cat-dot dot-lab"></span>&nbsp;Labs&nbsp;1 &middot; <span class="cat-dot dot-global"></span>&nbsp;Global&nbsp;16</div><div class="tab-bar"><button class="tab-btn active" data-tab="all" onclick="switchTab('all')">All<span class="tab-count">(79)</span></button><button class="tab-btn" data-tab="peer" onclick="switchTab('peer')">Peer<span class="tab-count">(4)</span></button><button class="tab-btn" data-tab="r1" onclick="switchTab('r1')">R1<span class="tab-count">(56)</span></button><button class="tab-btn" data-tab="hpc" onclick="switchTab('hpc')">HPC<span class="tab-count">(2)</span></button><button class="tab-btn" data-tab="lab" onclick="switchTab('lab')">Labs<span class="tab-count">(1)</span></button><button class="tab-btn" data-tab="global" onclick="switchTab('global')">Global<span class="tab-count">(16)</span></button></div><div class="article-list"><div class="article-row" data-category="global" onclick="toggleDetail(this)"><span class="cat-dot dot-global"></span><a class="headline-link" href="https://www.ed.ac.uk/news/nasa-robots-10-year-mission-complete" target="_blank" onclick="event.stopPropagation()">NASA robot’s 10-year mission complete | News | The University of Edinburgh</a><span class="univ-label">University of Edinburgh</span><span class="date-label">Mar 06</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="global"><div class="summary">The University of Edinburgh completed a 10-year research partnership with NASA's Valkyrie humanoid robot, one of only three prototypes worldwide, which was designed for Mars exploration and high-risk tasks. During its tenure, researchers significantly enhanced Valkyrie's capabilities using machine...</div><div class="detail-meta">Published: March 06, 2026 &middot; Crawled: March 06, 2026</div><div class="detail-link"><a href="https://www.ed.ac.uk/news/nasa-robots-10-year-mission-complete" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.ucsc.edu/2026/03/sanderson-math-talk/" target="_blank" onclick="event.stopPropagation()">Against all odds, popular math animator Grant Sanderson wooed into the redwoods</a><span class="univ-label">University of California-Santa Cruz</span><span class="date-label">Mar 05</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">This article covers a campus lecture by popular math educator Grant Sanderson (3Blue1Brown) at UC Santa Cruz, where he explained how high-dimensional geometry and linear algebra form the mathematical foundation of modern AI systems like ChatGPT and Claude. Sanderson used his signature visualization...</div><div class="detail-meta">Published: March 05, 2026 &middot; Crawled: March 06, 2026</div><div class="detail-link"><a href="https://news.ucsc.edu/2026/03/sanderson-math-talk/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.asu.edu/20260305-environment-and-sustainability-new-floodmapping-tool-has-potential-save-lives-during" target="_blank" onclick="event.stopPropagation()">New flood-mapping tool has the potential to save lives during deadly floods</a><span class="univ-label">Arizona State University Campus Immersion</span><span class="date-label">Mar 05</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Researchers at Arizona State University developed SMAGNet, an AI-powered flood-mapping system that combines radar and optical satellite data to generate accurate flood maps even when cloud cover obscures traditional imagery. The tool addresses critical limitations of existing flood-mapping methods...</div><div class="detail-meta">Published: March 05, 2026 &middot; Crawled: March 06, 2026</div><div class="detail-link"><a href="https://news.asu.edu/20260305-environment-and-sustainability-new-floodmapping-tool-has-potential-save-lives-during" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.fiu.edu/2026/everglades-restoration-strengthens-south-floridas-climate-resilience-study-finds?utm_source=main&utm_medium=feed&utm_campaign=newsroom-referrals&utm_term=homepage" target="_blank" onclick="event.stopPropagation()">Everglades restoration strengthens South Florida’s climate resilience, study finds</a><span class="univ-label">Florida International University</span><span class="date-label">Mar 05</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">A comprehensive study of South Florida's restored wetlands reveals they remove approximately 14 million metric tons of CO2 annually (equivalent to 10% of Florida's transportation emissions), resulting in an 18% net increase in greenhouse gas removal despite offsetting methane emissions. The...</div><div class="detail-meta">Published: March 05, 2026 &middot; Crawled: March 06, 2026</div><div class="detail-link"><a href="https://news.fiu.edu/2026/everglades-restoration-strengthens-south-floridas-climate-resilience-study-finds?utm_source=main&utm_medium=feed&utm_campaign=newsroom-referrals&utm_term=homepage" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://source.washu.edu/2026/03/index-provides-flu-risk-for-each-state/" target="_blank" onclick="event.stopPropagation()">Index provides flu risk for each state</a><span class="univ-label">Washington University in St Louis</span><span class="date-label">Mar 05</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Researchers at Washington University developed a machine learning-based vulnerability index that maps flu risk across U.S. states by analyzing 39 socioeconomic and health indicators from census data. Unlike traditional models relying solely on health metrics, this approach identifies non-linear...</div><div class="detail-meta">Published: March 05, 2026 &middot; Crawled: March 06, 2026</div><div class="detail-link"><a href="https://source.washu.edu/2026/03/index-provides-flu-risk-for-each-state/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://www.buffalo.edu/news/releases/2026/03/inside-higher-education-us-ai-summit-2026-buffalo.html" target="_blank" onclick="event.stopPropagation()">UB to host national artificial intelligence leaders this June</a><span class="univ-label">University at Buffalo</span><span class="date-label">Mar 05</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">The University at Buffalo will host the US AI Summit 2026 on June 3-4, bringing together national leaders from academia, industry, and policy to discuss responsible AI development for public good. The event will explore how AI can be democratically and equitably applied to healthcare, education,...</div><div class="detail-meta">Published: March 05, 2026 &middot; Crawled: March 06, 2026</div><div class="detail-link"><a href="https://www.buffalo.edu/news/releases/2026/03/inside-higher-education-us-ai-summit-2026-buffalo.html" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.northeastern.edu/2026/03/05/anthropic-supply-chain-risk/" target="_blank" onclick="event.stopPropagation()">Anthropic supply chain risk designation could chill innovation, experts say</a><span class="univ-label">Northeastern University</span><span class="date-label">Mar 05</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">The U.S. Department of War designated Anthropic as a "supply chain risk" after the AI company refused to remove ethical safeguards on its models, specifically rejecting use in fully autonomous weapons and mass domestic surveillance. This unprecedented designation of an American company signals a...</div><div class="detail-meta">Published: March 05, 2026 &middot; Crawled: March 06, 2026</div><div class="detail-link"><a href="https://news.northeastern.edu/2026/03/05/anthropic-supply-chain-risk/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://www.msstate.edu/newsroom/article/2026/03/msu-awarded-850k-darpa-advance-global-ag-security-early-threat-detection" target="_blank" onclick="event.stopPropagation()">MSU awarded $850K from DARPA to advance global ag security, early threat detection</a><span class="univ-label">Mississippi State University</span><span class="date-label">Mar 05</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Mississippi State University received $850,000 from DARPA to develop AgSENT, a prototype interface that integrates atmospheric, environmental, supply chain, biological, and societal data to provide early warnings of agricultural security threats. The interdisciplinary project aims to help...</div><div class="detail-meta">Published: March 05, 2026 &middot; Crawled: March 06, 2026</div><div class="detail-link"><a href="https://www.msstate.edu/newsroom/article/2026/03/msu-awarded-850k-darpa-advance-global-ag-security-early-threat-detection" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://www.buffalo.edu/news/releases/2026/03/HIV-antibodies-research.html" target="_blank" onclick="event.stopPropagation()">UB researchers help develop new class of powerful antibodies to treat HIV using AI</a><span class="univ-label">University at Buffalo</span><span class="date-label">Mar 05</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">UB researchers used artificial intelligence to develop personalized dosing guidelines for VRC07-523-LS, a broadly neutralizing antibody (bNAb) that can attack multiple HIV strains. By analyzing data from multiple clinical trials using a genetic algorithm, the team discovered that the antibody is...</div><div class="detail-meta">Published: March 05, 2026 &middot; Crawled: March 06, 2026</div><div class="detail-link"><a href="https://www.buffalo.edu/news/releases/2026/03/HIV-antibodies-research.html" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="lab" onclick="toggleDetail(this)"><span class="cat-dot dot-lab"></span><a class="headline-link" href="https://newscenter.lbl.gov/2026/03/05/thermodynamic-computing-advances-with-design-and-training/" target="_blank" onclick="event.stopPropagation()">Thermodynamic Computing Advances with Design and Training</a><span class="univ-label">Lawrence Berkeley National Laboratory</span><span class="date-label">Mar 05</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="lab"><div class="summary">Researchers at Berkeley Lab have developed a design and training framework for thermodynamic computers that harness thermal noise as a power source rather than suppressing it, potentially enabling energy-efficient machine learning. Their work demonstrates that thermodynamic computers can perform...</div><div class="detail-meta">Published: March 05, 2026 &middot; Crawled: March 06, 2026</div><div class="detail-link"><a href="https://newscenter.lbl.gov/2026/03/05/thermodynamic-computing-advances-with-design-and-training/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="hpc" onclick="toggleDetail(this)"><span class="cat-dot dot-hpc"></span><a class="headline-link" href="https://www.nersc.gov/news-and-events/news/thermodynamic-computing-advances-with-design-and-training" target="_blank" onclick="event.stopPropagation()">Thermodynamic Computing Advances with Design and Training - NERSC: National Energy Research Scientific Computing Center</a><span class="univ-label">NERSC</span><span class="date-label">Mar 05</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="hpc"><div class="summary">Researchers at Berkeley Lab have developed a design and training framework for thermodynamic computers that harness thermal noise as a power source rather than fighting against it, potentially drastically reducing energy consumption in machine learning. The breakthrough demonstrates that...</div><div class="detail-meta">Published: March 05, 2026 &middot; Crawled: March 06, 2026</div><div class="detail-link"><a href="https://www.nersc.gov/news-and-events/news/thermodynamic-computing-advances-with-design-and-training" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://www.uh.edu/news-events/stories/2026/march/03052026-hoskere-cold-steel-radar-defects.php" target="_blank" onclick="event.stopPropagation()">New Method Lets AI and Radar Detect Hidden Damage in Cold-Formed Steel Walls | University of Houston</a><span class="univ-label">University of Houston</span><span class="date-label">Mar 05</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Researchers at the University of Houston developed a non-destructive inspection method combining ground-penetrating radar (GPR) with artificial intelligence to detect damage in cold-formed steel structural elements hidden behind walls. The system automatically analyzes radar images to identify...</div><div class="detail-meta">Published: March 05, 2026 &middot; Crawled: March 06, 2026</div><div class="detail-link"><a href="https://www.uh.edu/news-events/stories/2026/march/03052026-hoskere-cold-steel-radar-defects.php" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.vt.edu/notices/2026/03/2026-isce-spring-forum.html" target="_blank" onclick="event.stopPropagation()">Join the conversation: ISCE spring forum on generative AI in social science</a><span class="univ-label">Virginia Polytechnic Institute and State University</span><span class="date-label">Mar 05</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Virginia Tech's Institute for Society, Culture, and Environment is hosting a spring forum examining how generative AI can be applied to social science research. The event will feature Christopher Bail discussing both the opportunities AI presents for studying human behavior and the critical...</div><div class="detail-meta">Published: March 05, 2026 &middot; Crawled: March 06, 2026</div><div class="detail-link"><a href="https://news.vt.edu/notices/2026/03/2026-isce-spring-forum.html" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://www.umass.edu/news/article/donald-snyder-wins-neaapor-best-student-paper-award" target="_blank" onclick="event.stopPropagation()">Donald Snyder Wins NEAAPOR Best Student Paper Award | UMass Amherst</a><span class="univ-label">University of Massachusetts-Amherst</span><span class="date-label">Mar 05</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Donald Snyder's award-winning paper introduces an "Ideological Personalization" scale that measures whether political thinking is abstract/symbolic versus concrete/personal. Using large language models validated against human raters, he analyzed over 60,000 open-ended survey responses from...</div><div class="detail-meta">Published: March 05, 2026 &middot; Crawled: March 06, 2026</div><div class="detail-link"><a href="https://www.umass.edu/news/article/donald-snyder-wins-neaapor-best-student-paper-award" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.uoregon.edu/content/information-services-helps-business-prof-launch-ai-courses" target="_blank" onclick="event.stopPropagation()">Information Services helps business prof launch AI courses</a><span class="univ-label">University of Oregon</span><span class="date-label">Mar 05</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">A business professor at the University of Oregon partnered with Information Services to develop practical AI courses where students build and deploy AI assistants using cloud-based tools. The collaboration overcame technical challenges around computing power and security to create scalable AI...</div><div class="detail-meta">Published: March 05, 2026 &middot; Crawled: March 06, 2026</div><div class="detail-link"><a href="https://news.uoregon.edu/content/information-services-helps-business-prof-launch-ai-courses" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="global" onclick="toggleDetail(this)"><span class="cat-dot dot-global"></span><a class="headline-link" href="https://www.tum.de/en/news-and-events/all-news/press-releases/details/how-fires-storms-and-bark-beetles-will-shape-the-future-of-europes-forests" target="_blank" onclick="event.stopPropagation()">How fires, storms, and bark beetles will shape the future of Europe’s forests</a><span class="univ-label">Technical University of Munich</span><span class="date-label">Mar 05</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="global"><div class="summary">Researchers at TUM used an AI-based simulation model trained on 135 million data points to project that forest disturbances from wildfires, storms, and bark beetles could more than double across Europe by 2100 under a 4°C warming scenario. The study reveals significant regional variations, with...</div><div class="detail-meta">Published: March 05, 2026 &middot; Crawled: March 06, 2026</div><div class="detail-link"><a href="https://www.tum.de/en/news-and-events/all-news/press-releases/details/how-fires-storms-and-bark-beetles-will-shape-the-future-of-europes-forests" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="global" onclick="toggleDetail(this)"><span class="cat-dot dot-global"></span><a class="headline-link" href="https://www.cam.ac.uk/research/news/graphene-based-artificial-skin-brings-human-like-touch-closer-to-robots" target="_blank" onclick="event.stopPropagation()">Graphene-based ‘artificial skin’ brings human-like touch closer to robots</a><span class="univ-label">University of Cambridge</span><span class="date-label">Mar 05</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="global"><div class="summary">Researchers at the University of Cambridge have developed a miniature graphene-based tactile sensor that enables robots to detect pressure, force direction, surface texture, and object slipping with human-like sensitivity. The sensor uses a composite material with liquid metal microdroplets and...</div><div class="detail-meta">Published: March 05, 2026 &middot; Crawled: March 05, 2026</div><div class="detail-link"><a href="https://www.cam.ac.uk/research/news/graphene-based-artificial-skin-brings-human-like-touch-closer-to-robots" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="global" onclick="toggleDetail(this)"><span class="cat-dot dot-global"></span><a class="headline-link" href="https://www.chula.ac.th/en/news/290788/" target="_blank" onclick="event.stopPropagation()">Chula & Tsinghua University Sign MOU to Advance Modern Library – Chulalongkorn University</a><span class="univ-label">Chulalongkorn University</span><span class="date-label">Mar 05</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="global"><div class="summary">Chulalongkorn University and Tsinghua University signed a Memorandum of Understanding to advance modern library infrastructure and academic collaboration, focusing on personnel development, knowledge infrastructure enhancement, and innovation in academic information systems. The partnership...</div><div class="detail-meta">Published: March 05, 2026 &middot; Crawled: March 05, 2026</div><div class="detail-link"><a href="https://www.chula.ac.th/en/news/290788/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="global" onclick="toggleDetail(this)"><span class="cat-dot dot-global"></span><a class="headline-link" href="https://www.isct.ac.jp/en/news/1f0h9ajix44q" target="_blank" onclick="event.stopPropagation()">Describe the vibe, see the look: An AI-based system projects makeup onto the user’s face | Science Tokyo</a><span class="univ-label">Institute of Science Tokyo</span><span class="date-label">Mar 05</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="global"><div class="summary">Researchers from Science Tokyo developed an AI-based projection makeup system that converts natural language descriptions of moods or styles into personalized makeup color suggestions displayed directly on users' faces in real time. The system combines image generation AI with dynamic projection...</div><div class="detail-meta">Published: March 05, 2026 &middot; Crawled: March 05, 2026</div><div class="detail-link"><a href="https://www.isct.ac.jp/en/news/1f0h9ajix44q" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://www.rochester.edu/newscenter/learning-makes-brain-cells-work-together-not-apart-694722/" target="_blank" onclick="event.stopPropagation()">Learning makes brain cells work together, not apart</a><span class="univ-label">University of Rochester</span><span class="date-label">Mar 05</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">A new study from the University of Rochester challenges the long-held neuroscience theory that learning increases neural efficiency by making neurons act independently. Instead, researchers found that learning increases coordination and shared information among sensory neurons, with neurons working...</div><div class="detail-meta">Published: March 05, 2026 &middot; Crawled: March 06, 2026</div><div class="detail-link"><a href="https://www.rochester.edu/newscenter/learning-makes-brain-cells-work-together-not-apart-694722/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="peer" onclick="toggleDetail(this)"><span class="cat-dot dot-peer"></span><a class="headline-link" href="https://today.uconn.edu/2026/03/uconn-engineering-offering-ai-short-course-for-workforce-development/" target="_blank" onclick="event.stopPropagation()">UConn Engineering Offering AI Short Course For Workforce Development - UConn Today</a><span class="univ-label">University of Connecticut</span><span class="date-label">Mar 05</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="peer"><div class="summary">UConn Engineering has received a grant to develop AEGIS (AI-Enabled Guided Intelligent Systems), a micro-credential program designed to train engineers in agentic AI systems without requiring computer science backgrounds. The program, launching in Summer 2026, will integrate applied AI training...</div><div class="detail-meta">Published: March 05, 2026 &middot; Crawled: March 05, 2026</div><div class="detail-link"><a href="https://today.uconn.edu/2026/03/uconn-engineering-offering-ai-short-course-for-workforce-development/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="peer" onclick="toggleDetail(this)"><span class="cat-dot dot-peer"></span><a class="headline-link" href="https://uknow.uky.edu/campus-news/uk-alt-hub-launches-new-ai-literacy-course-faculty-and-staff" target="_blank" onclick="event.stopPropagation()">UK ALT Hub launches new AI literacy course for faculty and staff</a><span class="univ-label">University of Kentucky</span><span class="date-label">Mar 04</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="peer"><div class="summary">The University of Kentucky has launched a new online AI literacy course for faculty and staff through its ALT Hub, designed to build foundational AI skills and promote responsible AI use across the institution. The six-module course covers AI vocabulary, prompting strategies, fact-checking,...</div><div class="detail-meta">Published: March 04, 2026 &middot; Crawled: March 04, 2026</div><div class="detail-link"><a href="https://uknow.uky.edu/campus-news/uk-alt-hub-launches-new-ai-literacy-course-faculty-and-staff" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="global" onclick="toggleDetail(this)"><span class="cat-dot dot-global"></span><a class="headline-link" href="https://hkust.edu.hk/news/hkust-hosts-naming-ceremony-futu-academic-pavilion" target="_blank" onclick="event.stopPropagation()">HKUST Hosts Naming Ceremony of Futu Academic Pavilion</a><span class="univ-label">Hong Kong Univ. of Science and Technology</span><span class="date-label">Mar 04</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="global"><div class="summary">HKUST received a HKD 30 million donation from Futu Securities to support research innovation and establish scholarships for outstanding students. The funding will support academic research across multiple fields and establish the "Futu Scholarship" to support 500 students in AI, computer science,...</div><div class="detail-meta">Published: March 04, 2026 &middot; Crawled: March 04, 2026</div><div class="detail-link"><a href="https://hkust.edu.hk/news/hkust-hosts-naming-ceremony-futu-academic-pavilion" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="global" onclick="toggleDetail(this)"><span class="cat-dot dot-global"></span><a class="headline-link" href="https://home.cern/news/news/physics/na62-collaboration-refines-measurement-rare-particle-decay" target="_blank" onclick="event.stopPropagation()">NA62 Collaboration refines measurement of rare particle decay</a><span class="univ-label">CERN</span><span class="date-label">Mar 04</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="global"><div class="summary">The NA62 Collaboration has refined its measurement of an extremely rare kaon decay (K+→π+νν) by 40%, achieving unprecedented precision using improved machine learning-based data analysis techniques on combined 2023-2024 datasets. The results confirm the Standard Model's predictions with high...</div><div class="detail-meta">Published: March 04, 2026 &middot; Crawled: March 04, 2026</div><div class="detail-link"><a href="https://home.cern/news/news/physics/na62-collaboration-refines-measurement-rare-particle-decay" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="global" onclick="toggleDetail(this)"><span class="cat-dot dot-global"></span><a class="headline-link" href="https://www.tum.de/en/news-and-events/all-news/press-releases/details/successful-robotics-incubator-at-tum-receives-further-funding" target="_blank" onclick="event.stopPropagation()">TUM Robotics Incubator receives further funding</a><span class="univ-label">Technical University of Munich</span><span class="date-label">Mar 04</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="global"><div class="summary">The robo.innovate robotics incubator at TUM has received extended funding of over €7 million through 2029 from the Bavarian Ministry of Economic Affairs and NEURA Robotics, validating its successful model of supporting robotics and AI startups. Since its launch in 2021, the initiative has supported...</div><div class="detail-meta">Published: March 04, 2026 &middot; Crawled: March 04, 2026</div><div class="detail-link"><a href="https://www.tum.de/en/news-and-events/all-news/press-releases/details/successful-robotics-incubator-at-tum-receives-further-funding" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="peer" onclick="toggleDetail(this)"><span class="cat-dot dot-peer"></span><a class="headline-link" href="https://msutoday.msu.edu/news/2026/03/species-in-crisis" target="_blank" onclick="event.stopPropagation()">Species in crisis</a><span class="univ-label">Michigan State University</span><span class="date-label">Mar 04</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="peer"><div class="summary">Michigan State University ecologists are using data-driven approaches and advanced technologies to address the biodiversity crisis, leveraging massive datasets from satellite imagery, camera traps, and museum records to build predictive models of ecosystem dynamics. Researchers like Lydia Beaudrot...</div><div class="detail-meta">Published: March 04, 2026 &middot; Crawled: March 04, 2026</div><div class="detail-link"><a href="https://msutoday.msu.edu/news/2026/03/species-in-crisis" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="global" onclick="toggleDetail(this)"><span class="cat-dot dot-global"></span><a class="headline-link" href="https://www.wits.ac.za/news/latest-news/research-news/2026/2026-03/wits-announces-winners-of-ai--african-music-project.html" target="_blank" onclick="event.stopPropagation()">Wits announces winners of AI & African Music Project</a><span class="univ-label">University of the Witwatersrand</span><span class="date-label">Mar 04</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="global"><div class="summary">Wits University has announced five winning teams for its AI & African Music Project, a groundbreaking initiative pairing African musicians with AI engineers to develop innovative applications of artificial intelligence in music creation, preservation, and cultural innovation. Selected from over 150...</div><div class="detail-meta">Published: March 04, 2026 &middot; Crawled: March 04, 2026</div><div class="detail-link"><a href="https://www.wits.ac.za/news/latest-news/research-news/2026/2026-03/wits-announces-winners-of-ai--african-music-project.html" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="global" onclick="toggleDetail(this)"><span class="cat-dot dot-global"></span><a class="headline-link" href="https://www.hku.hk/press/press-releases/detail/28976.html" target="_blank" onclick="event.stopPropagation()">HKU Partners with Three Leading Tech Companies to Explore New Pathways in Embodied Intelligence Innovation - Press Releases - Media - HKU</a><span class="univ-label">University of Hong Kong</span><span class="date-label">Mar 04</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="global"><div class="summary">The University of Hong Kong has partnered with three major technology companies (Unitree Robotics, Noitom Robotics, and BrainCo) to advance embodied intelligence and humanoid robotics through collaborative research. The partnership aims to bridge the gap between theoretical AI research and...</div><div class="detail-meta">Published: March 04, 2026 &middot; Crawled: March 04, 2026</div><div class="detail-link"><a href="https://www.hku.hk/press/press-releases/detail/28976.html" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://source.washu.edu/2026/03/university-introduces-ai-academic-initiative/" target="_blank" onclick="event.stopPropagation()">University introduces +AI academic initiative</a><span class="univ-label">Washington University in St Louis</span><span class="date-label">Mar 04</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Washington University in St. Louis has launched the +AI initiative, a university-wide academic program designed to integrate artificial intelligence into research and education while maintaining human creativity and institutional values. The initiative, led by Provost Mark D. West and a faculty...</div><div class="detail-meta">Published: March 04, 2026 &middot; Crawled: March 04, 2026</div><div class="detail-link"><a href="https://source.washu.edu/2026/03/university-introduces-ai-academic-initiative/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.uark.edu/articles/80849/wenchao-zhou-to-be-inducted-into-national-academy-of-inventors" target="_blank" onclick="event.stopPropagation()">Wenchao Zhou to Be Inducted Into National Academy of Inventors</a><span class="univ-label">University of Arkansas</span><span class="date-label">Mar 04</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Wenchao Zhou, an associate professor of mechanical engineering at the University of Arkansas, has been inducted into the National Academy of Inventors for his work in autonomous robotic 3D printing. His primary innovation is the Swarm Manufacturing platform, which uses teams of collaborative mobile...</div><div class="detail-meta">Published: March 04, 2026 &middot; Crawled: March 04, 2026</div><div class="detail-link"><a href="https://news.uark.edu/articles/80849/wenchao-zhou-to-be-inducted-into-national-academy-of-inventors" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://www.psu.edu/news/engineering/story/student-led-team-advances-global-emergency-response-flyer-competition" target="_blank" onclick="event.stopPropagation()">Student-led team advances in global Emergency Response Flyer competition | Penn State University</a><span class="univ-label">Pennsylvania State University-Main Campus</span><span class="date-label">Mar 04</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">A Penn State aerospace engineering team has advanced to stage two of the NASA-backed GoAERO competition with their Emergency Response Flyer prototype, an unmanned aerial vehicle designed for disaster response and emergency situations. The team will receive funding to develop their autonomous...</div><div class="detail-meta">Published: March 04, 2026 &middot; Crawled: March 05, 2026</div><div class="detail-link"><a href="https://www.psu.edu/news/engineering/story/student-led-team-advances-global-emergency-response-flyer-competition" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="hpc" onclick="toggleDetail(this)"><span class="cat-dot dot-hpc"></span><a class="headline-link" href="https://www.ncsa.illinois.edu/2026/03/04/less-is-sometimes-more/" target="_blank" onclick="event.stopPropagation()">Less is Sometimes More</a><span class="univ-label">National Center for Supercomputing Applications</span><span class="date-label">Mar 04</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="hpc"><div class="summary">Researchers at the University of Illinois Urbana-Champaign developed DELIFT, a framework that trains large language models more efficiently by intelligently selecting high-quality, non-redundant data rather than using all available data. The approach reduces computational costs and training time...</div><div class="detail-meta">Published: March 04, 2026 &middot; Crawled: March 05, 2026</div><div class="detail-link"><a href="https://www.ncsa.illinois.edu/2026/03/04/less-is-sometimes-more/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.syr.edu/2026/03/04/newhouse-assistant-professor-recognized-nationally-for-innovation-in-teaching/" target="_blank" onclick="event.stopPropagation()">Newhouse Assistant Professor Recognized Nationally for Innovation in Teaching | Syracuse University Today</a><span class="univ-label">Syracuse University</span><span class="date-label">Mar 04</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Milton Santiago, an assistant professor at Syracuse University's Newhouse School, received the 2026 Innovation in Teaching Award for his progressive approach to teaching cinematography and visual storytelling, with a focus on exploring generative AI applications in visual communications. He...</div><div class="detail-meta">Published: March 04, 2026 &middot; Crawled: March 05, 2026</div><div class="detail-link"><a href="https://news.syr.edu/2026/03/04/newhouse-assistant-professor-recognized-nationally-for-innovation-in-teaching/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.northeastern.edu/2026/03/04/green-space-smart-city-planning/" target="_blank" onclick="event.stopPropagation()">How considering green spaces at multiple scales improves city planning</a><span class="univ-label">Northeastern University</span><span class="date-label">Mar 04</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Northeastern University researchers developed a deep learning model that combines satellite imagery and Google Street View photos to create a comprehensive 3D analysis of green spaces in Washington, D.C. This tool helps urban foresters monitor and plan tree coverage at multiple scales, from...</div><div class="detail-meta">Published: March 04, 2026 &middot; Crawled: March 05, 2026</div><div class="detail-link"><a href="https://news.northeastern.edu/2026/03/04/green-space-smart-city-planning/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.ufl.edu/2026/03/ai-slop/" target="_blank" onclick="event.stopPropagation()">“AI slop” hurts consumers and creators. But high-quality AI could help both.</a><span class="univ-label">University of Florida</span><span class="date-label">Mar 04</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">A market study reveals that low-quality AI-generated content ("AI slop") currently harms both consumers and professional creators by congesting recommendation systems and making quality content harder to find. However, as generative AI tools improve in quality, they could ultimately benefit all...</div><div class="detail-meta">Published: March 04, 2026 &middot; Crawled: March 05, 2026</div><div class="detail-link"><a href="https://news.ufl.edu/2026/03/ai-slop/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://louisiana.edu/news/center-louisiana-studies-initiative-trains-ai-recordings-louisiana-french" target="_blank" onclick="event.stopPropagation()">Center for Louisiana Studies initiative trains AI on recordings of Louisiana French</a><span class="univ-label">University of Louisiana at Lafayette</span><span class="date-label">Mar 04</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">The Center for Louisiana Studies has launched the LaFLEUR Project to train AI systems on recordings of Louisiana French, addressing the problem that standard language models fail to recognize regional dialects and risk erasing local linguistic heritage. The team is building a "Ground Truth" dataset...</div><div class="detail-meta">Published: March 04, 2026 &middot; Crawled: March 05, 2026</div><div class="detail-link"><a href="https://louisiana.edu/news/center-louisiana-studies-initiative-trains-ai-recordings-louisiana-french" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.tulane.edu/news/tulane-ai-professor-speak-inventor-internet-book-fest" target="_blank" onclick="event.stopPropagation()">Tulane AI professor to speak with inventor of the World Wide Web at New Orleans Book Festival</a><span class="univ-label">Tulane University of Louisiana</span><span class="date-label">Mar 04</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Tulane AI professor Nicholas Mattei will moderate a panel discussion with Tim Berners-Lee (inventor of the World Wide Web) at the New Orleans Book Festival, focusing on how internet ideals like democratized access, trust, and openness can be maintained as AI technology rapidly advances. The...</div><div class="detail-meta">Published: March 04, 2026 &middot; Crawled: March 05, 2026</div><div class="detail-link"><a href="https://news.tulane.edu/news/tulane-ai-professor-speak-inventor-internet-book-fest" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://newsroom.ucla.edu/releases/ucla-anderson-forecast-march-2026" target="_blank" onclick="event.stopPropagation()">UCLA Anderson Forecast: Economy poised to reaccelerate as fiscal stimulus, AI investment intensify</a><span class="univ-label">University of California-Los Angeles</span><span class="date-label">Mar 04</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">The UCLA Anderson Forecast predicts U.S. economic growth will accelerate to approximately 3% in 2026, driven by fiscal stimulus, tax cuts, and substantial AI infrastructure investment. However, California's economy shows a bifurcated pattern where AI and aerospace sectors boom while traditional...</div><div class="detail-meta">Published: March 04, 2026 &middot; Crawled: March 05, 2026</div><div class="detail-link"><a href="https://newsroom.ucla.edu/releases/ucla-anderson-forecast-march-2026" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.ua.edu/2026/03/uas-alabama-mobility-and-power-center-to-integrate-honeywell-technology-in-battery-research-lab/" target="_blank" onclick="event.stopPropagation()">UA’s Alabama Mobility and Power Center to Integrate Honeywell Technology in Battery Research Lab</a><span class="univ-label">The University of Alabama</span><span class="date-label">Mar 04</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">The University of Alabama's Alabama Mobility and Power Center will integrate Honeywell's AI-powered Battery Manufacturing Excellence Platform (Battery MXP) into its new battery research lab opening in summer 2026. This collaboration aims to train the next generation of battery engineers while...</div><div class="detail-meta">Published: March 04, 2026 &middot; Crawled: March 05, 2026</div><div class="detail-link"><a href="https://news.ua.edu/2026/03/uas-alabama-mobility-and-power-center-to-integrate-honeywell-technology-in-battery-research-lab/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.asu.edu/20260304-business-and-entrepreneurship-associate-professor-explores-customer-reaction-robot-service" target="_blank" onclick="event.stopPropagation()">Professor explores customer reaction to robot service in restaurants</a><span class="univ-label">Arizona State University Campus Immersion</span><span class="date-label">Mar 04</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">This article discusses research by Jong-Hyeong Kim examining how customers perceive and respond to robot servers in restaurants, particularly focusing on the role of perceived novelty and "coolness" in driving customer loyalty. The study, conducted in South Korea where robot service is already...</div><div class="detail-meta">Published: March 04, 2026 &middot; Crawled: March 05, 2026</div><div class="detail-link"><a href="https://news.asu.edu/20260304-business-and-entrepreneurship-associate-professor-explores-customer-reaction-robot-service" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="global" onclick="toggleDetail(this)"><span class="cat-dot dot-global"></span><a class="headline-link" href="https://www.ox.ac.uk/news/2026-03-04-digital-tool-personalises-antidepressant-treatment-significantly-improves-outcomes" target="_blank" onclick="event.stopPropagation()">Digital tool that personalises antidepressant treatment significantly</a><span class="univ-label">University of Oxford</span><span class="date-label">Mar 04</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="global"><div class="summary">PETRUSHKA, an AI-driven clinical prediction tool developed by the University of Oxford, personalizes antidepressant selection by combining clinical data with patient preferences and has been proven effective in a major international trial. The tool demonstrated that patients whose treatment was...</div><div class="detail-meta">Published: March 04, 2026 &middot; Crawled: March 06, 2026</div><div class="detail-link"><a href="https://www.ox.ac.uk/news/2026-03-04-digital-tool-personalises-antidepressant-treatment-significantly-improves-outcomes" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://www.purdue.edu/newsroom/2026/Q1/purdue-radar-technology-estimates-location-orientation-radius-of-underground-pipes/" target="_blank" onclick="event.stopPropagation()">Purdue radar technology estimates location, orientation, radius of underground pipes</a><span class="univ-label">Purdue University-Main Campus</span><span class="date-label">Mar 03</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Purdue University engineers have developed a patent-pending uncertainty-aware model that improves ground-penetrating radar (GPR) data interpretation to better estimate the location, orientation, and radius of underground utility pipes. Using a Bayesian framework with variational inference and...</div><div class="detail-meta">Published: March 03, 2026 &middot; Crawled: March 04, 2026</div><div class="detail-link"><a href="https://www.purdue.edu/newsroom/2026/Q1/purdue-radar-technology-estimates-location-orientation-radius-of-underground-pipes/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://newsroom.ucla.edu/stories/opinion-ai-is-destroying-our-planet-we-must-act" target="_blank" onclick="event.stopPropagation()">Opinion: AI is destroying our planet. We must act to check its growth — and save ourselves</a><span class="univ-label">University of California-Los Angeles</span><span class="date-label">Mar 03</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">This opinion piece argues that AI's environmental and economic costs are severe and largely hidden, with data centers consuming massive amounts of energy and freshwater while contributing to climate and affordability crises. The authors contend that corporate promises of AI solving these problems...</div><div class="detail-meta">Published: March 03, 2026 &middot; Crawled: March 04, 2026</div><div class="detail-link"><a href="https://newsroom.ucla.edu/stories/opinion-ai-is-destroying-our-planet-we-must-act" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.fsu.edu/news/fsuglobal/2026/03/03/fsu-professor-leads-ai-and-entrepreneurship-program-in-thailand-sponsored-by-us-department-of-state/" target="_blank" onclick="event.stopPropagation()">FSU professor leads AI and entrepreneurship program in Thailand sponsored by US Department of State</a><span class="univ-label">Florida State University</span><span class="date-label">Mar 03</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Florida State University hosted an international forum in Thailand exploring how AI is transforming entrepreneurship education and small business development across the Indo-Pacific region. The two-day program brought together 40+ educators, policymakers, and entrepreneurs to discuss AI readiness,...</div><div class="detail-meta">Published: March 03, 2026 &middot; Crawled: March 04, 2026</div><div class="detail-link"><a href="https://news.fsu.edu/news/fsuglobal/2026/03/03/fsu-professor-leads-ai-and-entrepreneurship-program-in-thailand-sponsored-by-us-department-of-state/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.fiu.edu/2026/pitch-competitions-spotlight-fius-entrepreneurial-talent?utm_source=main&utm_medium=feed&utm_campaign=newsroom-referrals&utm_term=homepage" target="_blank" onclick="event.stopPropagation()">Pitch competitions spotlight FIU's entrepreneurial talent</a><span class="univ-label">Florida International University</span><span class="date-label">Mar 03</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Florida International University hosted three major pitch competitions where students developed entrepreneurial solutions across AI, cybersecurity, healthcare, and marketplace technologies. Winners included Mentra AI (a data protection platform), Fotochi (a photographer marketplace), and Polar Doc...</div><div class="detail-meta">Published: March 03, 2026 &middot; Crawled: March 04, 2026</div><div class="detail-link"><a href="https://news.fiu.edu/2026/pitch-competitions-spotlight-fius-entrepreneurial-talent?utm_source=main&utm_medium=feed&utm_campaign=newsroom-referrals&utm_term=homepage" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://www.ucdavis.edu/news/transformative-gift-propels-uc-davis-leadership-ag-tech" target="_blank" onclick="event.stopPropagation()">Transformative Gift Propels UC Davis’ Leadership in Ag Tech</a><span class="univ-label">University of California-Davis</span><span class="date-label">Mar 03</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">UC Davis received a $25 million gift to establish three endowed chairs and an innovation fund in agricultural engineering, with a focus on advancing agricultural technology including AI, robotics, and big data analytics. The funding will support the new Resnick Center for Agricultural Innovation...</div><div class="detail-meta">Published: March 03, 2026 &middot; Crawled: March 04, 2026</div><div class="detail-link"><a href="https://www.ucdavis.edu/news/transformative-gift-propels-uc-davis-leadership-ag-tech" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://hub.jhu.edu/2026/03/03/sloan-research-fellows/" target="_blank" onclick="event.stopPropagation()">Three from Johns Hopkins selected as Sloan Research Fellows</a><span class="univ-label">Johns Hopkins University</span><span class="date-label">Mar 03</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Three Johns Hopkins University assistant professors—Mateo Díaz, Yayuan Liu, and Soledad Villar—have been named 2026 Sloan Research Fellows, a prestigious award recognizing early-career scientists with strong leadership potential. Their research spans optimization algorithms for machine learning,...</div><div class="detail-meta">Published: March 03, 2026 &middot; Crawled: March 04, 2026</div><div class="detail-link"><a href="https://hub.jhu.edu/2026/03/03/sloan-research-fellows/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="global" onclick="toggleDetail(this)"><span class="cat-dot dot-global"></span><a class="headline-link" href="https://www.tum.de/en/news-and-events/all-news/press-releases/details/urban-trees-can-absorb-more-co2-than-cars-emit-during-summer" target="_blank" onclick="event.stopPropagation()">Urban trees can absorb more CO₂ than cars emit during summer</a><span class="univ-label">Technical University of Munich</span><span class="date-label">Mar 03</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="global"><div class="summary">Researchers at Technical University of Munich developed a high-resolution model (10-meter resolution) that maps CO₂ absorption by urban vegetation, revealing that urban trees can offset more carbon dioxide than cars emit on summer days, while grasslands act as net CO₂ sources. The study validates...</div><div class="detail-meta">Published: March 03, 2026 &middot; Crawled: March 03, 2026</div><div class="detail-link"><a href="https://www.tum.de/en/news-and-events/all-news/press-releases/details/urban-trees-can-absorb-more-co2-than-cars-emit-during-summer" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="global" onclick="toggleDetail(this)"><span class="cat-dot dot-global"></span><a class="headline-link" href="https://www.wits.ac.za/news/latest-news/research-news/2026/2026-03/little-foot-gets-a-virtual-facelift-.html" target="_blank" onclick="event.stopPropagation()">Little Foot gets a virtual facelift</a><span class="univ-label">University of the Witwatersrand</span><span class="date-label">Mar 03</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="global"><div class="summary">Researchers used high-resolution synchrotron scanning and advanced virtual reconstruction techniques to digitally reassemble the distorted facial bones of the 3.67-million-year-old Little Foot fossil, revealing unexpected similarities to East African Australopithecus specimens rather than younger...</div><div class="detail-meta">Published: March 03, 2026 &middot; Crawled: March 03, 2026</div><div class="detail-link"><a href="https://www.wits.ac.za/news/latest-news/research-news/2026/2026-03/little-foot-gets-a-virtual-facelift-.html" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://newsroom.ucla.edu/in-the-news/technologists-are-exposing-the-stunning-environmental-impacts-of-corporate-ai-and-more-media-coverage-of-ucla" target="_blank" onclick="event.stopPropagation()">Technologists are exposing the ‘stunning’ environmental impacts of corporate AI — and more media coverage of UCLA</a><span class="univ-label">University of California-Los Angeles</span><span class="date-label">Mar 03</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">UCLA professor Ramesh Srinivasan warns of the significant environmental costs of AI data centers and the surveillance risks posed by AI systems collecting personal data. The commentary advocates for responsible technology development that benefits society broadly and proposes a blueprint for more...</div><div class="detail-meta">Published: March 03, 2026 &middot; Crawled: March 03, 2026</div><div class="detail-link"><a href="https://newsroom.ucla.edu/in-the-news/technologists-are-exposing-the-stunning-environmental-impacts-of-corporate-ai-and-more-media-coverage-of-ucla" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://www.pittwire.pitt.edu/features-articles/2026/03/03/google-alert-vera-c-rubin-lsst-data-access" target="_blank" onclick="event.stopPropagation()">Pitt has partnered with Google to offer a real-time glimpse of our dynamic cosmos</a><span class="univ-label">University of Pittsburgh-Pittsburgh Campus</span><span class="date-label">Mar 03</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">University of Pittsburgh researchers partnered with Google to develop the Pitt-Google alert broker, a system that ingests, processes, and distributes astronomical data from the Vera C. Rubin Observatory's Legacy Survey of Space and Time (LSST) in real-time. The broker classifies and contextualizes...</div><div class="detail-meta">Published: March 03, 2026 &middot; Crawled: March 04, 2026</div><div class="detail-link"><a href="https://www.pittwire.pitt.edu/features-articles/2026/03/03/google-alert-vera-c-rubin-lsst-data-access" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.northeastern.edu/2026/03/03/acute-myeloid-leukemia-ai-tool/" target="_blank" onclick="event.stopPropagation()">How AI could speed treatment for patients with this deadly cancer</a><span class="univ-label">Northeastern University</span><span class="date-label">Mar 03</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Researchers at Northeastern University have developed an AI tool that could reduce the time from acute myeloid leukemia (AML) diagnosis to treatment initiation from weeks to a single night. The platform uses neural networks to analyze genetic mutations, suggest personalized drug treatments, and...</div><div class="detail-meta">Published: March 03, 2026 &middot; Crawled: March 04, 2026</div><div class="detail-link"><a href="https://news.northeastern.edu/2026/03/03/acute-myeloid-leukemia-ai-tool/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://www.umass.edu/news/article/pitumass-presents-workshop-ai-safety-and-literacy-belchertown-civil-servants" target="_blank" onclick="event.stopPropagation()">PIT@UMass Presents Workshop on AI Safety and Literacy to Belchertown Civil Servants | UMass Amherst</a><span class="univ-label">University of Massachusetts-Amherst</span><span class="date-label">Mar 03</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">PIT@UMass conducted an AI Safety and Literacy workshop for over 30 civil servants from Belchertown, Massachusetts, focusing on responsible AI implementation in municipal services. The workshop addressed how towns can leverage AI capabilities while minimizing risks through safe, fair, and...</div><div class="detail-meta">Published: March 03, 2026 &middot; Crawled: March 04, 2026</div><div class="detail-link"><a href="https://www.umass.edu/news/article/pitumass-presents-workshop-ai-safety-and-literacy-belchertown-civil-servants" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.wisc.edu/how-uw-madison-and-industry-are-working-together-to-shape-wisconsins-ai-future/" target="_blank" onclick="event.stopPropagation()">How UW–Madison and industry are working together to shape Wisconsin’s AI future</a><span class="univ-label">University of Wisconsin-Madison</span><span class="date-label">Mar 03</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">UW–Madison is establishing itself as a hub for AI expertise by partnering with industry leaders to develop practical applications and build AI literacy among students. The university's approach emphasizes hands-on learning through capstone projects where students work directly with companies to...</div><div class="detail-meta">Published: March 03, 2026 &middot; Crawled: March 04, 2026</div><div class="detail-link"><a href="https://news.wisc.edu/how-uw-madison-and-industry-are-working-together-to-shape-wisconsins-ai-future/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.wm.edu/2026/03/03/three-wm-students-to-bring-scientific-expertise-to-policymaking-in-the-commonwealth/" target="_blank" onclick="event.stopPropagation()">Three W&M students to bring scientific expertise to policymaking in the commonwealth</a><span class="univ-label">William & Mary</span><span class="date-label">Mar 03</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Three William & Mary graduate students have been selected as 2026 Commonwealth of Virginia Engineering and Science (COVES) Policy Fellows to bring scientific expertise to state policymaking. The 12-week fellowship combines a science policy bootcamp with practical placement in Virginia's legislative...</div><div class="detail-meta">Published: March 03, 2026 &middot; Crawled: March 04, 2026</div><div class="detail-link"><a href="https://news.wm.edu/2026/03/03/three-wm-students-to-bring-scientific-expertise-to-policymaking-in-the-commonwealth/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="global" onclick="toggleDetail(this)"><span class="cat-dot dot-global"></span><a class="headline-link" href="https://www.imperial.ac.uk/news/articles/medicine/nhli/2026/ai-assisted-smart-t-shirt-being-developed-to-improve-detection-of-inherited-heart-rhythm-disorders--/" target="_blank" onclick="event.stopPropagation()">AI-assisted smart T-shirt being developed to improve detection of inherited heart rhythm disorders</a><span class="univ-label">Imperial College London</span><span class="date-label">Mar 03</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="global"><div class="summary">Researchers at Imperial College are developing an AI-assisted smart T-shirt embedded with up to 50 sensors to improve detection of inherited heart rhythm disorders that are difficult to diagnose with standard ECGs. The device enables longer-term monitoring (up to a week) during normal daily...</div><div class="detail-meta">Published: March 03, 2026 &middot; Crawled: March 04, 2026</div><div class="detail-link"><a href="https://www.imperial.ac.uk/news/articles/medicine/nhli/2026/ai-assisted-smart-t-shirt-being-developed-to-improve-detection-of-inherited-heart-rhythm-disorders--/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://www.brown.edu/news/2026-03-03/aisle-ai-legislation-portal" target="_blank" onclick="event.stopPropagation()">Brown University researchers launch AI legislation tracking and analysis portal</a><span class="univ-label">Brown University</span><span class="date-label">Mar 03</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Brown University researchers have launched the AISLE Portal, a public database that aggregates and analyzes AI-related legislation from federal and state levels to help policymakers, journalists, and the public understand regulatory trends. The portal uses a framework of 159 questions across six...</div><div class="detail-meta">Published: March 03, 2026 &middot; Crawled: March 04, 2026</div><div class="detail-link"><a href="https://www.brown.edu/news/2026-03-03/aisle-ai-legislation-portal" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://home.dartmouth.edu/news/2026/03/hany-farid-awarded-mcguire-prize-digital-forensics-work" target="_blank" onclick="event.stopPropagation()">Hany Farid Awarded McGuire Prize for Digital Forensics Work</a><span class="univ-label">Dartmouth College</span><span class="date-label">Mar 03</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Hany Farid, a pioneer in digital forensics, received the 2025 McGuire Prize for developing computational techniques to detect manipulated images, audio, and video content. His work, including the widely-adopted PhotoDNA tool, addresses the critical societal challenge of distinguishing authentic...</div><div class="detail-meta">Published: March 03, 2026 &middot; Crawled: March 04, 2026</div><div class="detail-link"><a href="https://home.dartmouth.edu/news/2026/03/hany-farid-awarded-mcguire-prize-digital-forensics-work" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.ucmerced.edu/news/2026/amazon-funds-research-making-ai-more-efficient" target="_blank" onclick="event.stopPropagation()">Amazon Funds Research into Making AI More Efficient</a><span class="univ-label">University of California-Merced</span><span class="date-label">Mar 03</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Amazon has awarded research grants to two UC Merced professors to develop more efficient AI training methods using AWS Trainium chips. The projects focus on reducing computational power and memory requirements for training large language models like GPT and Gemini. This initiative aims to...</div><div class="detail-meta">Published: March 03, 2026 &middot; Crawled: March 04, 2026</div><div class="detail-link"><a href="https://news.ucmerced.edu/news/2026/amazon-funds-research-making-ai-more-efficient" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="peer" onclick="toggleDetail(this)"><span class="cat-dot dot-peer"></span><a class="headline-link" href="https://uknow.uky.edu/research/uk-host-infectious-disease-research-day-2026-march-19" target="_blank" onclick="event.stopPropagation()">UK to Host Infectious Disease Research Day 2026 March 19</a><span class="univ-label">University of Kentucky</span><span class="date-label">Mar 02</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="peer"><div class="summary">The University of Kentucky's CURE-KY consortium will host an Infectious Disease Research Day on March 19, 2026, bringing together multidisciplinary researchers to present breakthroughs in infectious disease prevention, diagnostics, and treatment. The event focuses on three key areas: infection...</div><div class="detail-meta">Published: March 02, 2026 &middot; Crawled: March 02, 2026</div><div class="detail-link"><a href="https://uknow.uky.edu/research/uk-host-infectious-disease-research-day-2026-march-19" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://www.purdue.edu/newsroom/2026/Q1/manfra-appointed-purdues-chief-quantum-officer/" target="_blank" onclick="event.stopPropagation()">Manfra appointed Purdue’s chief quantum officer</a><span class="univ-label">Purdue University-Main Campus</span><span class="date-label">Mar 02</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Purdue University appointed quantum computing expert Michael Manfra as its chief quantum officer to strategically guide the university's quantum research portfolio, educational programs, and industry partnerships. Manfra, a globally recognized researcher known for demonstrating the existence of...</div><div class="detail-meta">Published: March 02, 2026 &middot; Crawled: March 02, 2026</div><div class="detail-link"><a href="https://www.purdue.edu/newsroom/2026/Q1/manfra-appointed-purdues-chief-quantum-officer/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.fiu.edu/2026/artists-and-writers-are-often-hesitant-to-disclose-theyve-collaborated-with-ai-and-those-fears-may-be-justified?utm_source=main&utm_medium=feed&utm_campaign=newsroom-referrals&utm_term=homepage" target="_blank" onclick="event.stopPropagation()">Artists and writers are often hesitant to disclose they’ve collaborated with AI – and those fears may be justified</a><span class="univ-label">Florida International University</span><span class="date-label">Mar 02</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Research reveals that disclosing AI involvement in creative work significantly damages both established and novice creators' reputations, despite 83% of creative professionals using generative AI. While established artists receive slightly more credit for human contribution, they receive no...</div><div class="detail-meta">Published: March 02, 2026 &middot; Crawled: March 02, 2026</div><div class="detail-link"><a href="https://news.fiu.edu/2026/artists-and-writers-are-often-hesitant-to-disclose-theyve-collaborated-with-ai-and-those-fears-may-be-justified?utm_source=main&utm_medium=feed&utm_campaign=newsroom-referrals&utm_term=homepage" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://www.ucdavis.edu/news/chancell-ing-united-uc-davis-advances-our-regions-health" target="_blank" onclick="event.stopPropagation()">CHANCELL-ING: A United UC Davis Advances Our Region’s Health</a><span class="univ-label">University of California-Davis</span><span class="date-label">Mar 02</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">UC Davis highlights its cross-campus collaboration between the university and UC Davis Health that has led to medical breakthroughs, including a brain-computer interface for ALS patients and AI-based disease outbreak prediction. The institution emphasizes an integrated "One Health" approach...</div><div class="detail-meta">Published: March 02, 2026 &middot; Crawled: March 03, 2026</div><div class="detail-link"><a href="https://www.ucdavis.edu/news/chancell-ing-united-uc-davis-advances-our-regions-health" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="global" onclick="toggleDetail(this)"><span class="cat-dot dot-global"></span><a class="headline-link" href="https://news.epfl.ch/news/from-the-lab-to-everyday-life-sustainability-in-fo/" target="_blank" onclick="event.stopPropagation()">From the lab to everyday life: sustainability in focus at EPFL</a><span class="univ-label">EPFL</span><span class="date-label">Mar 02</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="global"><div class="summary">EPFL is hosting a Sustainability Days event (March 5-7, 2026) to explore the intersection of scientific progress, particularly AI, with sustainability challenges. The event will examine how AI can improve energy efficiency and resource management while addressing the resource-intensive nature of AI...</div><div class="detail-meta">Published: March 02, 2026 &middot; Crawled: March 02, 2026</div><div class="detail-link"><a href="https://news.epfl.ch/news/from-the-lab-to-everyday-life-sustainability-in-fo/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="global" onclick="toggleDetail(this)"><span class="cat-dot dot-global"></span><a class="headline-link" href="https://www.isct.ac.jp/en/news/cpbaaswv6146" target="_blank" onclick="event.stopPropagation()">Predicting cardiovascular complications in chronic kidney disease using microRNAs in blood | Science Tokyo</a><span class="univ-label">Institute of Science Tokyo</span><span class="date-label">Mar 02</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="global"><div class="summary">Researchers from Science Tokyo identified three microRNAs in circulating extracellular vesicles that can accurately predict kidney function decline and cardiovascular risk in chronic kidney disease patients. Using machine learning analysis of blood samples from 270+ patients, they developed a risk...</div><div class="detail-meta">Published: March 02, 2026 &middot; Crawled: March 02, 2026</div><div class="detail-link"><a href="https://www.isct.ac.jp/en/news/cpbaaswv6146" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://source.colostate.edu/guest-column-navigating-our-future-amid-challenges-and-opportunities/" target="_blank" onclick="event.stopPropagation()">Guest column: Navigating our future amid challenges and opportunities</a><span class="univ-label">Colorado State University-Fort Collins</span><span class="date-label">Mar 02</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">This is a message from Colorado State University's interim Provost addressing institutional challenges and opportunities, with brief mentions of AI's role in higher education transformation. The letter emphasizes community support, academic integrity, and CSU's proactive engagement with emerging...</div><div class="detail-meta">Published: March 02, 2026 &middot; Crawled: March 02, 2026</div><div class="detail-link"><a href="https://source.colostate.edu/guest-column-navigating-our-future-amid-challenges-and-opportunities/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://www.ucf.edu/news/ucf-computer-science-professor-recognized-for-contributions-to-human-computer-interaction/" target="_blank" onclick="event.stopPropagation()">UCF Computer Science Professor Recognized for Contributions to Human-Computer Interaction</a><span class="univ-label">University of Central Florida</span><span class="date-label">Mar 02</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Professor Joseph LaViola Jr. has been inducted into the ACM SIGCHI Academy for his 20+ years of pioneering work in human-computer interaction, particularly in 3D user interfaces, gesture recognition, and touch-based interfaces. His current research focuses on developing multimodal interfaces that...</div><div class="detail-meta">Published: March 02, 2026 &middot; Crawled: March 02, 2026</div><div class="detail-link"><a href="https://www.ucf.edu/news/ucf-computer-science-professor-recognized-for-contributions-to-human-computer-interaction/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://www.umass.edu/news/article/laurel-smith-doerr-study-ai-and-workplace-inequality-russell-sage-visiting-scholar" target="_blank" onclick="event.stopPropagation()">Laurel Smith-Doerr to Study AI and Workplace Inequality as Russell Sage Visiting Scholar | UMass Amherst</a><span class="univ-label">University of Massachusetts-Amherst</span><span class="date-label">Mar 02</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Laurel Smith-Doerr, a UMass Amherst sociology professor, has been awarded a prestigious Russell Sage Foundation visiting scholarship to write a book examining how AI deployment in the trucking industry affects workplace inequality and power dynamics. Her qualitative research explores how truck...</div><div class="detail-meta">Published: March 02, 2026 &middot; Crawled: March 05, 2026</div><div class="detail-link"><a href="https://www.umass.edu/news/article/laurel-smith-doerr-study-ai-and-workplace-inequality-russell-sage-visiting-scholar" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://inside.charlotte.edu/2026/03/02/unc-charlotte-honors-four-alumni-whose-leadership-is-shaping-communities-and-industries/" target="_blank" onclick="event.stopPropagation()">UNC Charlotte honors four alumni whose leadership is shaping communities and industries - Inside UNC Charlotte</a><span class="univ-label">University of North Carolina at Charlotte</span><span class="date-label">Mar 02</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">This article announces UNC Charlotte's 2026 Alumni Awards ceremony honoring four exceptional graduates, including Igor Jablokov, an AI innovator and founder of Pryon who has advanced augmented intelligence technology. The piece celebrates alumni whose leadership and innovation are shaping...</div><div class="detail-meta">Published: March 02, 2026 &middot; Crawled: March 02, 2026</div><div class="detail-link"><a href="https://inside.charlotte.edu/2026/03/02/unc-charlotte-honors-four-alumni-whose-leadership-is-shaping-communities-and-industries/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://www.ucf.edu/news/ucf-doctoral-grad-heads-to-harvard-medical-school-to-advance-ai-driven-clinical-tools/" target="_blank" onclick="event.stopPropagation()">UCF Doctoral Grad Heads to Harvard Medical School to Advance AI-Driven Clinical Tools</a><span class="univ-label">University of Central Florida</span><span class="date-label">Mar 02</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Kamalakkannan Ravi, a UCF doctoral graduate in computer engineering, is advancing trustworthy and transparent AI systems for healthcare through a research fellowship at Harvard Medical School and Boston Children's Hospital. His work focuses on developing clinical decision support tools that use...</div><div class="detail-meta">Published: March 02, 2026 &middot; Crawled: March 02, 2026</div><div class="detail-link"><a href="https://www.ucf.edu/news/ucf-doctoral-grad-heads-to-harvard-medical-school-to-advance-ai-driven-clinical-tools/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.asu.edu/20260302-university-news-be-ready-tomorrows-workplace" target="_blank" onclick="event.stopPropagation()">Be ready for tomorrow’s workplace</a><span class="univ-label">Arizona State University Campus Immersion</span><span class="date-label">Mar 02</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">This article is a promotional piece from Arizona State University highlighting workforce trends and educational programs to prepare students for future job markets. While it references AI as a transformative technology affecting 60% of businesses and 30% of U.S. working hours by 2030, the article...</div><div class="detail-meta">Published: March 02, 2026 &middot; Crawled: March 02, 2026</div><div class="detail-link"><a href="https://news.asu.edu/20260302-university-news-be-ready-tomorrows-workplace" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.asu.edu/20260302-health-and-medicine-asu-med-school-serve-community-through-health-outcomes-partnerships" target="_blank" onclick="event.stopPropagation()">ASU med school to serve community through health outcomes, partnerships</a><span class="univ-label">Arizona State University Campus Immersion</span><span class="date-label">Mar 02</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Arizona State University is launching the John Shufeldt School of Medicine and Medical Engineering designed to improve health outcomes through community partnerships rather than competing hospitals. The medical school will uniquely combine MD degrees with master's degrees in engineering,...</div><div class="detail-meta">Published: March 02, 2026 &middot; Crawled: March 02, 2026</div><div class="detail-link"><a href="https://news.asu.edu/20260302-health-and-medicine-asu-med-school-serve-community-through-health-outcomes-partnerships" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.uark.edu/articles/80844/is-dr-ai-ready-to-see-you-now-" target="_blank" onclick="event.stopPropagation()">Is Dr. AI Ready to See You Now?</a><span class="univ-label">University of Arkansas</span><span class="date-label">Mar 02</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Researchers at the University of Arkansas are applying AI and machine learning to medical diagnostics, with associate professor Will Richardson using AI models to detect masked hypertension by identifying subtle patterns in medical images that human doctors cannot perceive. While AI shows promise...</div><div class="detail-meta">Published: March 02, 2026 &middot; Crawled: March 02, 2026</div><div class="detail-link"><a href="https://news.uark.edu/articles/80844/is-dr-ai-ready-to-see-you-now-" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.njit.edu/robot-swarms-moon-njit-students-concept-wins-10k-nasa" target="_blank" onclick="event.stopPropagation()">Robot Swarms on the Moon: NJIT Student's Concept Wins $10K From NASA</a><span class="univ-label">New Jersey Institute of Technology</span><span class="date-label">Mar 02</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">An NJIT student's proposal for autonomous robot swarms capable of building and servicing a lunar base won first place in NASA's NPWEE competition and a $10,000 grant. The concept features two complementary robot types—maintenance/construction rovers and self-assembling prism-shaped units—that...</div><div class="detail-meta">Published: March 02, 2026 &middot; Crawled: March 02, 2026</div><div class="detail-link"><a href="https://news.njit.edu/robot-swarms-moon-njit-students-concept-wins-10k-nasa" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://www.uwyo.edu/news/uw-in-the-news/2026/03/uw-in-the-news.html" target="_blank" onclick="event.stopPropagation()">UW in the News</a><span class="univ-label">University of Wyoming</span><span class="date-label">Mar 02</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">This article is a news roundup from the University of Wyoming highlighting various media coverages of university research and initiatives. While most items are unrelated to AI, one project mentions using artificial intelligence-based computer vision combined with Distributed Acoustic Sensing to...</div><div class="detail-meta">Published: March 02, 2026 &middot; Crawled: March 02, 2026</div><div class="detail-link"><a href="https://www.uwyo.edu/news/uw-in-the-news/2026/03/uw-in-the-news.html" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.utk.edu/2026/03/02/the-conversation-will-ai-accelerate-or-undermine-the-way-humans-have-always-innovated/" target="_blank" onclick="event.stopPropagation()">The Conversation: Will AI Accelerate or Undermine the Way Humans Have Always Innovated?</a><span class="univ-label">The University of Tennessee-Knoxville</span><span class="date-label">Mar 02</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">The article discusses how innovation and technological advancement occur through combination and collaboration rather than individual learning alone. Using the example of experimental archaeology, it contrasts individual trial-and-error learning (reinforcement learning used by children, animals,...</div><div class="detail-meta">Published: March 02, 2026 &middot; Crawled: March 02, 2026</div><div class="detail-link"><a href="https://news.utk.edu/2026/03/02/the-conversation-will-ai-accelerate-or-undermine-the-way-humans-have-always-innovated/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://www.umass.edu/news/article/sociologys-laurel-smith-doerr-study-ai-and-workplace-inequality-russell-sage-visiting" target="_blank" onclick="event.stopPropagation()">Sociology’s Laurel Smith-Doerr to Study AI and Workplace Inequality as Russell Sage Visiting Scholar | UMass Amherst</a><span class="univ-label">University of Massachusetts-Amherst</span><span class="date-label">Mar 02</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Laurel Smith-Doerr, a sociology professor at UMass Amherst, has been awarded a prestigious Russell Sage Foundation visiting scholarship to write a book examining how AI deployment in the trucking industry affects workplace inequality and power dynamics. Her qualitative research focuses on how truck...</div><div class="detail-meta">Published: March 02, 2026 &middot; Crawled: March 02, 2026</div><div class="detail-link"><a href="https://www.umass.edu/news/article/sociologys-laurel-smith-doerr-study-ai-and-workplace-inequality-russell-sage-visiting" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.fiu.edu/2026/5-questions-with-the-chair-of-electrical-and-computer-engineering?utm_source=main&utm_medium=feed&utm_campaign=newsroom-referrals&utm_term=homepage" target="_blank" onclick="event.stopPropagation()">5 questions with the chair of Electrical and Computer Engineering</a><span class="univ-label">Florida International University</span><span class="date-label">Mar 02</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">This article features an interview with the chair of Florida International University's Electrical and Computer Engineering department discussing his vision for connecting academic research with industry applications across multiple fields including quantum computing, AI, and energy systems. The...</div><div class="detail-meta">Published: March 02, 2026 &middot; Crawled: March 02, 2026</div><div class="detail-link"><a href="https://news.fiu.edu/2026/5-questions-with-the-chair-of-electrical-and-computer-engineering?utm_source=main&utm_medium=feed&utm_campaign=newsroom-referrals&utm_term=homepage" target="_blank">Read full article &rarr;</a></div></div><div class="article-row article-overflow" data-category="r1" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.njit.edu/njit-dedicates-entire-day-ai-repurposing-all-classes-campus-wide-exploration" target="_blank" onclick="event.stopPropagation()">NJIT Dedicates an Entire Day to AI, Repurposing All Classes for a Campus-Wide Exploration</a><span class="univ-label">New Jersey Institute of Technology</span><span class="date-label">Mar 02</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">NJIT is hosting an all-campus "AI Exploration Day" on March 26 where all classes are repurposed to enable students, faculty, and staff to engage with artificial intelligence through interactive demonstrations, workshops, and discussions. The event covers diverse AI applications across disciplines...</div><div class="detail-meta">Published: March 02, 2026 &middot; Crawled: March 02, 2026</div><div class="detail-link"><a href="https://news.njit.edu/njit-dedicates-entire-day-ai-repurposing-all-classes-campus-wide-exploration" target="_blank">Read full article &rarr;</a></div></div><button class="show-more-btn" onclick="toggleMore(this)" data-expanded="false" data-show-text="Show 54 more" data-hide-text="Show fewer">Show 54 more</button></div>
 
-    
-            <div class="stats">
-                <strong>Total Articles:</strong> 8 |
-                <strong>Peer:</strong> 2 |
-                <strong>R1:</strong> 6 |
-                <strong>Facilities:</strong> 0
-            </div>
-        
-            <div class="three-column-layout">
-                <div class="column"><h2 class="column-title">Peer Institutions</h2>
-<div class="university-section"><h3>University of Massachusetts Amherst</h3>
-
-                        <div class="article">
-                            <div class="headline">
-                                <a href="https://www.umass.edu/news/article/food-scientist-jiakai-lu-awarded-grant-help-create-savory-textures-alternative-protein" target="_blank">Food Scientist Jiakai Lu Awarded Grant to Help Create Savory Textures in Alternative Protein Meat Analogs | UMass Amherst</a>
-                                
-                            </div>
-                            <div class="meta">November 11, 2025</div>
-                            <div class="summary">Researchers at UMass Amherst received a $611,000 USDA grant to develop a hybrid framework combining multiphysics simulations and machine learning to predict and improve the texture of plant-based...</div>
-                        </div>
-                    
-</div>
-<div class="university-section"><h3>University of Washington</h3>
-
-                        <div class="article">
-                            <div class="headline">
-                                <a href="https://www.washington.edu/news/the-latest-news-from-the-uw/" target="_blank">People mirror AI systems’ hiring biases, study finds</a>
-                                
-                            </div>
-                            <div class="meta">November 11, 2025</div>
-                            <div class="summary">A University of Washington study involving 528 participants demonstrated that people tend to adopt and amplify the biases present in AI hiring recommendation systems, even when they showed little...</div>
-                        </div>
-                    
-</div>
-</div>
-                <div class="column"><h2 class="column-title">R1 Institutions</h2>
-<div class="university-section"><h3>California Institute of Technology</h3>
-
-                        <div class="article">
-                            <div class="headline">
-                                <a href="https://www.caltech.edu/about/news/aiscience-conference-comes-to-caltech" target="_blank">AI+Science Conference Comes to Caltech</a>
-                                
-                            </div>
-                            <div class="meta">November 11, 2025</div>
-                            <div class="summary">Caltech and the University of Chicago are hosting the AI+Science Conference to showcase how machine learning is being integrated with scientific domains to solve complex problems across biology,...</div>
-                        </div>
-                    
-</div>
-<div class="university-section"><h3>Cornell University</h3>
-
-                        <div class="article">
-                            <div class="headline">
-                                <a href="https://news.cornell.edu/stories/2025/11/roadmap-shows-environmental-impact-ai-data-center-boom" target="_blank">‘Roadmap’ shows the environmental impact of AI data center boom | Cornell Chronicle</a>
-                                
-                            </div>
-                            <div class="meta">November 11, 2025</div>
-                            <div class="summary">Cornell researchers developed an AI-powered analytical framework to quantify the environmental impact of AI data centers across the U.S., projecting that current growth rates would generate 24-44...</div>
-                        </div>
-                    
-</div>
-<div class="university-section"><h3>Stanford University</h3>
-
-                        <div class="article">
-                            <div class="headline">
-                                <a href="https://news.stanford.edu/stories/2025/11/ai-language-models-facts-belief-human-understanding-research" target="_blank">Why AI still struggles to tell fact from belief</a>
-                                
-                            </div>
-                            <div class="meta">November 11, 2025</div>
-                            <div class="summary">Researchers at Stanford evaluated 24 advanced language models using a benchmark called KaBLE and found that even the most powerful AI systems struggle to distinguish between factual truth and false...</div>
-                        </div>
-                    
-
-                        <div class="article">
-                            <div class="headline">
-                                <a href="https://news.stanford.edu/stories/2025/11/ai-generated-political-messages-persuasion-research" target="_blank">AI rivals humans in political persuasion</a>
-                                
-                            </div>
-                            <div class="meta">November 11, 2025</div>
-                            <div class="summary">Stanford researchers found that AI-generated political messages are equally persuasive as human-written ones, and people are actually more receptive to opposing viewpoints when told they come from AI...</div>
-                        </div>
-                    
-</div>
-<div class="university-section"><h3>University of Notre Dame</h3>
-
-                        <div class="article">
-                            <div class="headline">
-                                <a href="https://news.nd.edu/news/university-of-notre-dame-and-fia-team-up-to-reduce-online-abuse-in-sports/" target="_blank">University of Notre Dame and FIA team up to reduce online abuse in sports</a>
-                                
-                            </div>
-                            <div class="meta">November 11, 2025</div>
-                            <div class="summary">The University of Notre Dame and the Fédération Internationale de l'Automobile (FIA) have launched a research collaboration to combat online abuse in sports through the United Against Online Abuse...</div>
-                        </div>
-                    
-</div>
-<div class="university-section"><h3>University of Pittsburgh-Pittsburgh Campus</h3>
-
-                        <div class="article">
-                            <div class="headline">
-                                <a href="https://www.utimes.pitt.edu/news/415-million-award-fuel" target="_blank">$41.5 million award to fuel HERL’s reimagining of wheelchairs and assistive robotic arms</a>
-                                
-                            </div>
-                            <div class="meta">November 11, 2025</div>
-                            <div class="summary">The University of Pittsburgh's Human Engineering Research Laboratories received a $41.5 million ARPA-H award to develop RAMMP (Robotic Assisted Mobility and Manipulation Platform), an advanced...</div>
-                        </div>
-                    
-</div>
-</div>
-                <div class="column"><h2 class="column-title">Major Facilities</h2><p class="no-articles">No articles</p></div>
-            </div>
-        
 
     <div class="footer">
-        <p>Powered by AI University News Crawler</p>
-        <p>Last updated: 06:10 AM </p>
+        <a href="index.html">Today</a> &middot;
+        <a href="archive/index.html">Archive</a> &middot;
+        <a href="how_it_works.html">How It Works</a> &middot;
+        <a href="https://github.com/tyson-swetnam/webcrawler" target="_blank">GitHub</a>
+        &nbsp;|&nbsp; 380 sources &middot; Updated 06:10 AM
     </div>
+<script>
+function switchTab(cat) {
+    var btns = document.querySelectorAll('.tab-btn');
+    btns.forEach(function(b) { b.classList.toggle('active', b.getAttribute('data-tab') === cat); });
+    var rows = document.querySelectorAll('.article-row');
+    var details = document.querySelectorAll('.article-detail');
+    rows.forEach(function(r) {
+        var match = (cat === 'all' || r.getAttribute('data-category') === cat);
+        if (match) {
+            r.style.removeProperty('display');
+        } else {
+            r.style.display = 'none';
+            r.classList.remove('expanded');
+        }
+    });
+    details.forEach(function(d) {
+        var match = (cat === 'all' || d.getAttribute('data-category') === cat);
+        if (!match) {
+            d.classList.remove('open');
+            d.style.display = 'none';
+        } else {
+            d.style.removeProperty('display');
+        }
+    });
+    // Reset show-more when switching tabs
+    var overflows = document.querySelectorAll('.article-overflow');
+    overflows.forEach(function(el) { el.classList.remove('shown'); });
+    var btn = document.querySelector('.show-more-btn');
+    if (btn) {
+        btn.setAttribute('data-expanded', 'false');
+        // Update count for current tab
+        var hidden = 0;
+        overflows.forEach(function(el) {
+            if (cat === 'all' || el.getAttribute('data-category') === cat) hidden++;
+        });
+        if (hidden > 0) {
+            btn.style.display = '';
+            btn.setAttribute('data-show-text', 'Show ' + hidden + ' more');
+            btn.textContent = 'Show ' + hidden + ' more';
+        } else {
+            btn.style.display = 'none';
+        }
+    }
+}
+function toggleDetail(row) {
+    var detail = row.nextElementSibling;
+    if (detail && detail.classList.contains('article-detail')) {
+        var isOpen = detail.classList.contains('open');
+        detail.classList.toggle('open');
+        row.classList.toggle('expanded');
+    }
+}
+function toggleMore(btn) {
+    var showing = btn.getAttribute('data-expanded') === 'true';
+    var activeTab = document.querySelector('.tab-btn.active');
+    var cat = activeTab ? activeTab.getAttribute('data-tab') : 'all';
+    var overflows = document.querySelectorAll('.article-overflow');
+    overflows.forEach(function(el) {
+        if (cat === 'all' || el.getAttribute('data-category') === cat) {
+            if (showing) {
+                el.classList.remove('shown');
+                // Collapse any open detail panels for hidden overflow rows
+                var next = el.nextElementSibling;
+                if (next && next.classList.contains('article-detail')) {
+                    next.classList.remove('open');
+                    el.classList.remove('expanded');
+                }
+            } else {
+                el.classList.add('shown');
+            }
+        }
+    });
+    btn.setAttribute('data-expanded', showing ? 'false' : 'true');
+    btn.textContent = showing ? btn.getAttribute('data-show-text') : btn.getAttribute('data-hide-text');
+}
+</script>
 </body>
 </html>
