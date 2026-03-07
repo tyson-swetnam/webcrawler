@@ -464,8 +464,6 @@ class HTMLReportGenerator:
         .article-detail .detail-link a:hover { text-decoration: underline; }
 
         /* ── Show More ── */
-        .article-overflow { display: none; }
-        .article-overflow.shown { display: grid; }
         .show-more-btn {
             display: block;
             width: 100%;
@@ -1137,7 +1135,7 @@ class HTMLReportGenerator:
             cat = article['_cat']
             display_name = article['_display_univ']
             dot_cls = dot_class_map.get(cat, 'dot-r1')
-            overflow_cls = ' article-overflow' if idx >= MAX_VISIBLE else ''
+            overflow_cls = ''
 
             # Short date for the row
             pub_short = ''
@@ -1246,15 +1244,34 @@ function switchTab(cat) {
         if (articleList) articleList.style.removeProperty('display');
     }
 
+    var MAX_VISIBLE = 25;
     var rows = document.querySelectorAll('.article-row');
     var details = document.querySelectorAll('.article-detail');
+
+    // Count matching articles for this tab
+    var matchCount = 0;
+    rows.forEach(function(r) {
+        if (cat === 'all' || r.getAttribute('data-category') === cat) matchCount++;
+    });
+
+    // Show/hide rows with per-tab overflow logic
+    var visibleIndex = 0;
     rows.forEach(function(r) {
         var match = (cat === 'all' || r.getAttribute('data-category') === cat);
         if (match) {
-            r.style.removeProperty('display');
+            if (matchCount <= MAX_VISIBLE || visibleIndex < MAX_VISIBLE) {
+                r.style.removeProperty('display');
+                r.classList.remove('tab-hidden');
+            } else {
+                r.style.display = 'none';
+                r.classList.add('tab-hidden');
+                r.classList.remove('expanded');
+            }
+            visibleIndex++;
         } else {
             r.style.display = 'none';
             r.classList.remove('expanded');
+            r.classList.remove('tab-hidden');
         }
     });
     details.forEach(function(d) {
@@ -1266,21 +1283,18 @@ function switchTab(cat) {
             d.style.removeProperty('display');
         }
     });
-    // Reset show-more when switching tabs
-    var overflows = document.querySelectorAll('.article-overflow');
-    overflows.forEach(function(el) { el.classList.remove('shown'); });
+
+    // Show-more button: only if this tab has more than MAX_VISIBLE articles
     var btn = document.querySelector('.show-more-btn');
     if (btn) {
-        btn.setAttribute('data-expanded', 'false');
-        // Update count for current tab
-        var hidden = 0;
-        overflows.forEach(function(el) {
-            if (cat === 'all' || el.getAttribute('data-category') === cat) hidden++;
-        });
-        if (hidden > 0) {
+        var overflow = matchCount - MAX_VISIBLE;
+        if (overflow > 0) {
             btn.style.display = '';
-            btn.setAttribute('data-show-text', 'Show ' + hidden + ' more');
-            btn.textContent = 'Show ' + hidden + ' more';
+            btn.setAttribute('data-expanded', 'false');
+            btn.setAttribute('data-show-text', 'Show ' + overflow + ' more');
+            btn.setAttribute('data-hide-text', 'Show fewer');
+            btn.textContent = 'Show ' + overflow + ' more';
+            btn.setAttribute('data-tab', cat);
         } else {
             btn.style.display = 'none';
         }
@@ -1296,27 +1310,28 @@ function toggleDetail(row) {
 }
 function toggleMore(btn) {
     var showing = btn.getAttribute('data-expanded') === 'true';
-    var activeTab = document.querySelector('.tab-btn.active');
-    var cat = activeTab ? activeTab.getAttribute('data-tab') : 'all';
-    var overflows = document.querySelectorAll('.article-overflow');
-    overflows.forEach(function(el) {
-        if (cat === 'all' || el.getAttribute('data-category') === cat) {
-            if (showing) {
-                el.classList.remove('shown');
-                // Collapse any open detail panels for hidden overflow rows
-                var next = el.nextElementSibling;
-                if (next && next.classList.contains('article-detail')) {
-                    next.classList.remove('open');
-                    el.classList.remove('expanded');
-                }
-            } else {
-                el.classList.add('shown');
+    var hidden = document.querySelectorAll('.article-row.tab-hidden');
+    hidden.forEach(function(el) {
+        if (showing) {
+            el.style.display = 'none';
+            // Collapse any open detail panels
+            var next = el.nextElementSibling;
+            if (next && next.classList.contains('article-detail')) {
+                next.classList.remove('open');
+                el.classList.remove('expanded');
             }
+        } else {
+            el.style.removeProperty('display');
         }
     });
     btn.setAttribute('data-expanded', showing ? 'false' : 'true');
     btn.textContent = showing ? btn.getAttribute('data-show-text') : btn.getAttribute('data-hide-text');
 }
+// Apply overflow logic on initial page load
+(function() {
+    var activeBtn = document.querySelector('.tab-btn.active');
+    if (activeBtn) switchTab(activeBtn.getAttribute('data-tab'));
+})();
 </script>'''
 
         return f'''<!DOCTYPE html>
