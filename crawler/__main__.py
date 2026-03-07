@@ -149,15 +149,25 @@ async def main():
 
             logger.info(f"Total articles for reporting: {len(all_recent)}")
 
-            # Phase 3.5: Editorial Curation for Top News
+            # Phase 3.5: Editorial Curation for Top News (last 7 days)
             editorial_picks = []
             if settings.enable_ai_analysis:
                 try:
                     from crawler.ai.editor import EditorialCurator
                     curator = EditorialCurator()
 
+                    # Query last 7 days of AI-related articles for editorial pool
+                    editorial_lookback = datetime.now(timezone.utc) - timedelta(days=7)
+                    editorial_articles = db.query(Article).filter(
+                        and_(
+                            Article.is_ai_related == True,
+                            Article.last_analyzed != None,
+                            Article.published_date >= editorial_lookback,
+                        )
+                    ).all()
+
                     candidates = []
-                    for art in all_recent:
+                    for art in editorial_articles:
                         analysis = db.query(AIAnalysis).filter(
                             AIAnalysis.article_id == art.article_id
                         ).order_by(AIAnalysis.analyzed_at.desc()).first()
@@ -171,12 +181,12 @@ async def main():
                             'article_metadata': art.article_metadata or {},
                         })
 
-                    logger.info("\n⭐ Phase 3.5: Editorial curation for Top News")
+                    logger.info(f"\n⭐ Phase 3.5: Editorial curation for Top News ({len(candidates)} articles from last 7 days)")
                     editorial_picks = await curator.curate_top_news(candidates)
                     if editorial_picks:
                         logger.info(f"Editorial curation selected {len(editorial_picks)} top stories")
                     else:
-                        logger.info("Editorial curation: no top stories selected (low-impact day)")
+                        logger.info("Editorial curation: no top stories selected")
                 except Exception as e:
                     logger.warning(f"Editorial curation failed (non-fatal): {e}")
 

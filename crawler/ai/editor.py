@@ -60,29 +60,32 @@ class EditorialCurator:
             return []
 
     def _select_candidates(self, articles: List[Dict]) -> List[Dict]:
-        """Filter and rank articles by impact scores for editorial consideration."""
+        """Rank articles by impact scores for editorial consideration.
+
+        All AI-related articles are included as candidates. Articles with
+        impact scores are ranked higher; articles without scores get defaults
+        so Claude can still judge importance from their summaries.
+        """
         candidates = []
 
         for art in articles:
             metadata = art.get('article_metadata') or {}
             scores = metadata.get('impact_scores', {})
 
-            scientific = float(scores.get('scientific', 1.0))
-            financial = float(scores.get('financial', 1.0))
-            partnership = float(scores.get('partnership', 1.0))
+            scientific = float(scores.get('scientific', 3.0))
+            financial = float(scores.get('financial', 3.0))
+            partnership = float(scores.get('partnership', 3.0))
             composite = (scientific + financial + partnership) / 3.0
 
-            # Include if any single score >= 6 OR composite average >= 5.0
-            if scientific >= 6 or financial >= 6 or partnership >= 6 or composite >= 5.0:
-                candidates.append({
-                    **art,
-                    '_composite': composite,
-                    '_scores': {
-                        'scientific': scientific,
-                        'financial': financial,
-                        'partnership': partnership,
-                    }
-                })
+            candidates.append({
+                **art,
+                '_composite': composite,
+                '_scores': {
+                    'scientific': scientific,
+                    'financial': financial,
+                    'partnership': partnership,
+                }
+            })
 
         # Sort by composite score descending, take top 50
         candidates.sort(key=lambda x: x['_composite'], reverse=True)
@@ -104,11 +107,11 @@ class EditorialCurator:
 
         articles_block = "\n\n".join(articles_text)
 
-        return f"""You are the Daily News Editor for an AI university news aggregator. Your job is to select the {max_picks} most important stories from today's articles and explain why each matters.
+        return f"""You are the Daily News Editor for an AI university news aggregator. Your job is to select the {max_picks} most important stories from this week's articles and explain why each matters.
 
-Select stories that represent genuine significance: major scientific breakthroughs, transformative funding announcements (hundreds of millions or billions), landmark partnerships between academia/government/industry, or important policy changes affecting AI research.
+Select stories that represent genuine significance: major scientific breakthroughs, notable funding announcements, important partnerships between academia/government/industry, policy changes affecting AI research, or novel AI applications with real-world impact.
 
-Here are today's candidate articles:
+Here are this week's candidate articles:
 
 {articles_block}
 
