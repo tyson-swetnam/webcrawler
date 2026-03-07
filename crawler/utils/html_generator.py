@@ -36,7 +36,7 @@ class HTMLReportGenerator:
         "Notre Dame": "University of Notre Dame",
     }
 
-    def __init__(self, output_dir: str = "html_output", github_pages_dir: str = None):
+    def __init__(self, output_dir: str = "html_output", github_pages_dir: str = None, editorial_picks=None):
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -45,6 +45,7 @@ class HTMLReportGenerator:
         if self.github_pages_dir:
             self.github_pages_dir.mkdir(parents=True, exist_ok=True)
 
+        self.editorial_picks = editorial_picks or []
         self.classifier = UniversityClassifier()
         self._source_count = self._count_sources()
 
@@ -502,6 +503,79 @@ class HTMLReportGenerator:
         @media (max-width: 480px) {
             .stats-line { font-size: 12px; }
         }
+
+        /* ── Top News Section ── */
+        .top-news-section { display: none; }
+        .top-news-section.active { display: block; }
+        .top-article {
+            padding: var(--space-md) var(--space-sm);
+            border-bottom: 1px solid var(--color-border);
+        }
+        .top-article-header {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-sm);
+        }
+        .top-rank {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: var(--color-text);
+            color: var(--color-bg);
+            font-size: 13px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .top-article-info { flex: 1; min-width: 0; }
+        .top-headline {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--color-link);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .top-headline:hover { text-decoration: underline; text-underline-offset: 2px; }
+        .top-headline:visited { color: var(--color-link-visited); }
+        .top-article-meta {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            flex-wrap: wrap;
+        }
+        .top-univ {
+            font-size: 12px;
+            color: var(--color-text-muted);
+        }
+        .editorial-note {
+            font-style: italic;
+            color: var(--color-text-secondary);
+            font-size: 13px;
+            line-height: 1.5;
+            padding-left: 38px;
+            margin-top: 4px;
+        }
+        .impact-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: var(--radius-sm);
+            font-size: 11px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .impact-badge.scientific { background: #dbeafe; color: #1e40af; }
+        .impact-badge.financial { background: #fef3c7; color: #92400e; }
+        .impact-badge.partnership { background: #d1fae5; color: #065f46; }
+        .impact-badge.policy { background: #ede9fe; color: #5b21b6; }
+
+        @media (max-width: 768px) {
+            .top-headline { font-size: 14px; }
+            .editorial-note { padding-left: 0; margin-top: var(--space-sm); }
+            .top-rank { min-width: 22px; height: 22px; font-size: 12px; }
+        }
         """
 
     @staticmethod
@@ -880,6 +954,7 @@ class HTMLReportGenerator:
         articles = []
         for url, (article, ai_analysis) in seen_urls.items():
             articles.append({
+                'article_id': article.article_id,
                 'url': url,
                 'title': article.title or 'Untitled',
                 'university': article.university_name,
@@ -887,7 +962,8 @@ class HTMLReportGenerator:
                 'published_date': article.published_date,
                 'summary': ai_analysis.consensus_summary if ai_analysis else None,
                 'topics': ai_analysis.claude_key_points if ai_analysis else [],
-                'category': ai_analysis.openai_category if ai_analysis else None
+                'category': ai_analysis.openai_category if ai_analysis else None,
+                'article_metadata': article.article_metadata,
             })
 
         # Re-sort by published_date descending (dict iteration lost ordering)
@@ -900,6 +976,63 @@ class HTMLReportGenerator:
         return ('<link rel="preconnect" href="https://fonts.googleapis.com">'
                 '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
                 '<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">')
+
+    def _render_top_news_section(self, articles: List[Dict]) -> str:
+        """Render the Top News editorial picks section."""
+        if not self.editorial_picks:
+            return ''
+
+        # Build article_id -> article lookup
+        article_map = {}
+        for a in articles:
+            aid = a.get('article_id')
+            if aid is not None:
+                article_map[aid] = a
+
+        # Map impact categories to CSS classes
+        category_class = {
+            'Scientific Breakthrough': 'scientific',
+            'Major Funding': 'financial',
+            'Strategic Partnership': 'partnership',
+            'Policy Impact': 'policy',
+        }
+
+        rows = []
+        for pick in self.editorial_picks:
+            article = article_map.get(pick.get('article_id'))
+            if not article:
+                continue
+
+            rank = pick.get('rank', 0)
+            note = pick.get('editorial_note', '')
+            impact_cat = pick.get('impact_category', 'Scientific Breakthrough')
+            badge_cls = category_class.get(impact_cat, 'scientific')
+            display_name = self.clean_university_name(article.get('university') or 'Unknown')
+
+            rows.append(
+                f'<div class="top-article">'
+                f'<div class="top-article-header">'
+                f'<span class="top-rank">{rank}</span>'
+                f'<div class="top-article-info">'
+                f'<a class="top-headline" href="{article["url"]}" target="_blank">{article["title"]}</a>'
+                f'<div class="top-article-meta">'
+                f'<span class="impact-badge {badge_cls}">{impact_cat}</span>'
+                f'<span class="top-univ">{display_name}</span>'
+                f'</div>'
+                f'</div>'
+                f'</div>'
+                f'<div class="editorial-note">{note}</div>'
+                f'</div>'
+            )
+
+        if not rows:
+            return ''
+
+        return (
+            '<div id="top-news-section" class="top-news-section active">'
+            + ''.join(rows)
+            + '</div>'
+        )
 
     def _render_main_page(self, articles: List[Dict], date: datetime, is_archive_page: bool = False) -> str:
         """Render main page with tabbed dense-list layout"""
@@ -951,18 +1084,23 @@ class HTMLReportGenerator:
         )
 
         # Tab bar
-        tab_labels = [
+        top_count = len(self.editorial_picks) if not is_archive_page else 0
+        tab_labels = []
+        if top_count > 0:
+            tab_labels.append(('top', 'Top News', top_count))
+        tab_labels.extend([
             ('all', 'All', total),
             ('peer', 'Peer', counts['peer']),
             ('r1', 'R1', counts['r1']),
             ('hpc', 'HPC', counts['hpc']),
             ('lab', 'Labs', counts['lab']),
             ('global', 'Global', counts['global']),
-        ]
+        ])
+        default_tab = 'top' if top_count > 0 else 'all'
         tab_buttons = []
         for tab_id, label, count in tab_labels:
-            active_cls = ' active' if tab_id == 'all' else ''
-            empty_cls = ' tab-empty' if count == 0 and tab_id != 'all' else ''
+            active_cls = ' active' if tab_id == default_tab else ''
+            empty_cls = ' tab-empty' if count == 0 and tab_id not in ('all', 'top') else ''
             tab_buttons.append(
                 f'<button class="tab-btn{active_cls}{empty_cls}" data-tab="{tab_id}" '
                 f'onclick="switchTab(\'{tab_id}\')">{label}<span class="tab-count">({count})</span></button>'
@@ -1065,12 +1203,17 @@ class HTMLReportGenerator:
                 f'Show {overflow_count} more</button>'
             )
 
-        list_html = '<div class="article-list">' + ''.join(article_rows) + show_more_html + '</div>'
+        # Hide article list initially when Top News is the default tab
+        list_hidden = ' style="display:none"' if default_tab == 'top' else ''
+        list_html = f'<div class="article-list"{list_hidden}>' + ''.join(article_rows) + show_more_html + '</div>'
+
+        # Render Top News section (empty string if no picks)
+        top_news_html = self._render_top_news_section(annotated)
 
         if not articles:
             articles_html = '<p class="no-results">No AI-related articles found for this date.</p>'
         else:
-            articles_html = stats_html + tab_bar_html + list_html
+            articles_html = stats_html + tab_bar_html + top_news_html + list_html
 
         base_css = self._get_base_css()
         main_css = self._get_main_page_css()
@@ -1085,6 +1228,20 @@ class HTMLReportGenerator:
 function switchTab(cat) {
     var btns = document.querySelectorAll('.tab-btn');
     btns.forEach(function(b) { b.classList.toggle('active', b.getAttribute('data-tab') === cat); });
+
+    // Handle Top News section visibility
+    var topSection = document.getElementById('top-news-section');
+    var articleList = document.querySelector('.article-list');
+
+    if (cat === 'top') {
+        if (topSection) topSection.classList.add('active');
+        if (articleList) articleList.style.display = 'none';
+        return;
+    } else {
+        if (topSection) topSection.classList.remove('active');
+        if (articleList) articleList.style.removeProperty('display');
+    }
+
     var rows = document.querySelectorAll('.article-row');
     var details = document.querySelectorAll('.article-detail');
     rows.forEach(function(r) {

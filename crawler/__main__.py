@@ -149,9 +149,40 @@ async def main():
 
             logger.info(f"Total articles for reporting: {len(all_recent)}")
 
+            # Phase 3.5: Editorial Curation for Top News
+            editorial_picks = []
+            if settings.enable_ai_analysis:
+                try:
+                    from crawler.ai.editor import EditorialCurator
+                    curator = EditorialCurator()
+
+                    candidates = []
+                    for art in all_recent:
+                        analysis = db.query(AIAnalysis).filter(
+                            AIAnalysis.article_id == art.article_id
+                        ).order_by(AIAnalysis.analyzed_at.desc()).first()
+                        candidates.append({
+                            'article_id': art.article_id,
+                            'title': art.title,
+                            'url': art.url.url if art.url else '',
+                            'university_name': art.university_name,
+                            'published_date': str(art.published_date) if art.published_date else '',
+                            'consensus_summary': analysis.consensus_summary if analysis else '',
+                            'article_metadata': art.article_metadata or {},
+                        })
+
+                    logger.info("\n⭐ Phase 3.5: Editorial curation for Top News")
+                    editorial_picks = await curator.curate_top_news(candidates)
+                    if editorial_picks:
+                        logger.info(f"Editorial curation selected {len(editorial_picks)} top stories")
+                    else:
+                        logger.info("Editorial curation: no top stories selected (low-impact day)")
+                except Exception as e:
+                    logger.warning(f"Editorial curation failed (non-fatal): {e}")
+
             # Phase 4: Generate and send reports
             logger.info("\n📬 Phase 4: Generating and sending notifications/exports")
-            exported_files = await send_notifications(all_recent, analyses, db)
+            exported_files = await send_notifications(all_recent, analyses, db, editorial_picks=editorial_picks)
 
         # Phase 5: Summary and statistics
         duration = (datetime.now(timezone.utc) - start_time).total_seconds()
@@ -443,6 +474,14 @@ async def run_crawl_with_analysis() -> bool:
                         article.last_analyzed = datetime.now(timezone.utc)
                         db.add(ai_analysis)
 
+                        # Store impact scores in article metadata
+                        impact_scores = analysis.get('claude', {}).get('impact_scores') if analysis.get('claude') else None
+                        if impact_scores:
+                            article.article_metadata = {
+                                **(article.article_metadata or {}),
+                                'impact_scores': impact_scores
+                            }
+
                     db.commit()
                     total_analyzed += len(batch)
                     consecutive_errors = 0
@@ -534,6 +573,14 @@ async def analyze_articles(articles, db) -> list:
             article.ai_confidence_score = analysis['consensus']['confidence']
             article.last_analyzed = datetime.now(timezone.utc)
 
+            # Store impact scores in article metadata
+            impact_scores = analysis.get('claude', {}).get('impact_scores') if analysis.get('claude') else None
+            if impact_scores:
+                article.article_metadata = {
+                    **(article.article_metadata or {}),
+                    'impact_scores': impact_scores
+                }
+
             db.add(ai_analysis)
 
         db.commit()
@@ -547,7 +594,7 @@ async def analyze_articles(articles, db) -> list:
         return []
 
 
-async def send_notifications(articles, analyses, db):
+async def send_notifications(articles, analyses, db, editorial_picks=None):
     """
     Send notifications via Slack and email, and/or export to local files.
 
@@ -555,6 +602,7 @@ async def send_notifications(articles, analyses, db):
         articles: List of Article ORM objects
         analyses: List of analysis results
         db: Database session
+        editorial_picks: Optional list of editorial top news picks
 
     Returns:
         Dictionary of exported file paths
@@ -581,7 +629,8 @@ async def send_notifications(articles, analyses, db):
             logger.info("Generating HTML report website (empty results)...")
             html_gen = HTMLReportGenerator(
                 output_dir=settings.local_output_dir,
-                github_pages_dir="docs"
+                github_pages_dir="docs",
+                editorial_picks=editorial_picks
             )
             today_file = html_gen.generate_daily_report()
             archive_file = html_gen.generate_archive_index()
@@ -638,7 +687,8 @@ async def send_notifications(articles, analyses, db):
         # Generate to both html_output/ (for local viewing) and docs/ (for GitHub Pages)
         html_gen = HTMLReportGenerator(
             output_dir=settings.local_output_dir,
-            github_pages_dir="docs"
+            github_pages_dir="docs",
+            editorial_picks=editorial_picks
         )
         today_file = html_gen.generate_daily_report()
         archive_file = html_gen.generate_archive_index()

@@ -142,7 +142,10 @@ KEY_POINTS:
 - [point 2]
 - [point 3]
 RELEVANCE: [score 1-10]
-AI_RELATED: [yes/no]"""
+AI_RELATED: [yes/no]
+SCIENTIFIC_IMPACT: [1-10, how significant is the scientific or technological innovation]
+FINANCIAL_IMPACT: [1-10, based on dollar figures: billions=9-10, hundreds of millions=7-8, tens of millions=5-6, smaller or none=1-4]
+PARTNERSHIP_IMPACT: [1-10, significance of new partnerships between academia, government, and industry]"""
 
         message = await self.claude.messages.create(
             model=settings.claude_model,
@@ -161,6 +164,11 @@ AI_RELATED: [yes/no]"""
             'key_points': parsed.get('key_points', []),
             'relevance_score': parsed.get('relevance_score', 5),
             'is_ai_related': parsed.get('is_ai_related', True),
+            'impact_scores': {
+                'scientific': parsed.get('scientific_impact', 1.0),
+                'financial': parsed.get('financial_impact', 1.0),
+                'partnership': parsed.get('partnership_impact', 1.0),
+            },
             'raw_response': response_text,
             'model': settings.claude_model
         }
@@ -172,7 +180,10 @@ AI_RELATED: [yes/no]"""
             'summary': '',
             'key_points': [],
             'relevance_score': 5,
-            'is_ai_related': True
+            'is_ai_related': True,
+            'scientific_impact': 1.0,
+            'financial_impact': 1.0,
+            'partnership_impact': 1.0,
         }
 
         current_section = None
@@ -194,9 +205,31 @@ AI_RELATED: [yes/no]"""
             elif line.startswith('AI_RELATED:'):
                 ai_text = line.replace('AI_RELATED:', '').strip().lower()
                 parsed['is_ai_related'] = ai_text.startswith('yes')
+                current_section = None
+            elif line.startswith('SCIENTIFIC_IMPACT:'):
+                try:
+                    score_text = line.replace('SCIENTIFIC_IMPACT:', '').strip()
+                    parsed['scientific_impact'] = float(score_text.split()[0].split('/')[0])
+                except (ValueError, IndexError):
+                    parsed['scientific_impact'] = 1.0
+                current_section = None
+            elif line.startswith('FINANCIAL_IMPACT:'):
+                try:
+                    score_text = line.replace('FINANCIAL_IMPACT:', '').strip()
+                    parsed['financial_impact'] = float(score_text.split()[0].split('/')[0])
+                except (ValueError, IndexError):
+                    parsed['financial_impact'] = 1.0
+                current_section = None
+            elif line.startswith('PARTNERSHIP_IMPACT:'):
+                try:
+                    score_text = line.replace('PARTNERSHIP_IMPACT:', '').strip()
+                    parsed['partnership_impact'] = float(score_text.split()[0].split('/')[0])
+                except (ValueError, IndexError):
+                    parsed['partnership_impact'] = 1.0
+                current_section = None
             elif line.startswith('-') and current_section == 'key_points':
                 parsed['key_points'].append(line[1:].strip())
-            elif current_section == 'summary' and line and not line.startswith(('KEY_POINTS', 'RELEVANCE', 'AI_RELATED')):
+            elif current_section == 'summary' and line and not line.startswith(('KEY_POINTS', 'RELEVANCE', 'AI_RELATED', 'SCIENTIFIC_IMPACT', 'FINANCIAL_IMPACT', 'PARTNERSHIP_IMPACT')):
                 parsed['summary'] += ' ' + line
 
         return parsed

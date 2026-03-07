@@ -105,14 +105,16 @@ sudo -u postgres psql -c "CREATE DATABASE ai_news_crawler; CREATE USER crawler W
 Sources are split across multiple JSON files in `crawler/config/`:
 - `peer_institutions.json` (27 sources) — top-tier: MIT, Stanford, CMU, etc.
 - `r1_universities.json` (187 sources) — Carnegie R1 universities
-- `major_facilities.json` (27 sources) — national labs: Argonne, Los Alamos, NIST, etc.
+- `major_facilities.json` (10 sources) — HPC & research centers
+- `national_laboratories.json` (54 sources) — national labs: Argonne, Los Alamos, NIST, etc.
+- `global_institutions.json` (102 sources) — international institutions
 
-`settings.university_source_type = "all"` loads all three. Sources use schema v3.0.0 with `news_sources` arrays. Only entries with `verified: true` are crawled. RSS feeds are preferred over HTML when `USE_RSS_FEEDS=True`.
+`settings.university_source_type = "all"` loads all five. Sources use schema v3.0.0 with `news_sources` arrays. Only entries with `verified: true` are crawled. RSS feeds are preferred over HTML when `USE_RSS_FEEDS=True`.
 
 ### AI Models (Actual Defaults)
 
-Despite documentation mentioning "Sonnet-4-5", the actual defaults in `settings.py` are:
-- `claude_model`: `claude-haiku-4-5-20251001` (primary analysis)
+Actual defaults in `settings.py`:
+- `claude_model`: `claude-sonnet-4-6` (primary analysis)
 - `claude_haiku_model`: `claude-haiku-4-5-20251001` (fast validation)
 - `openai_model`: `gpt-5-search-api-2025-10-14` (categorization)
 
