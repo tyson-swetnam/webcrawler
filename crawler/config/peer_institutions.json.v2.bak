@@ -1,0 +1,689 @@
+{
+  "metadata": {
+    "schema_version": "2.0.0",
+    "title": "Peer Institutions - University of Arizona Comparator Group",
+    "description": "Peer institutions for comparison and benchmarking purposes",
+    "baseline_institution": "University of Arizona",
+    "total_institutions": 27,
+    "date_compiled": "2025-11-02",
+    "last_updated": "2025-11-02"
+  },
+  "universities": [
+    {
+      "id": 1,
+      "name": "The University of Arizona",
+      "abbreviation": "UArizona",
+      "canonical_name": "University of Arizona",
+      "is_baseline": true,
+      "location": {
+        "city": "Tucson",
+        "state": "AZ",
+        "state_full": "Arizona",
+        "region": "West",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://news.arizona.edu/",
+          "ai_tag_url": "https://news.arizona.edu/tags/artificial-intelligence",
+          "verified": true,
+          "crawl_priority": 200
+        }
+      }
+    },
+    {
+      "id": 2,
+      "name": "Arizona State University",
+      "abbreviation": "ASU",
+      "canonical_name": "Arizona State University",
+      "location": {
+        "city": "Tempe",
+        "state": "AZ",
+        "state_full": "Arizona",
+        "region": "West",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://newsroom.asu.edu/",
+          "ai_tag_url": "https://newsroom.asu.edu/topics/artificial-intelligence",
+          "verified": true,
+          "crawl_priority": 200
+        }
+      }
+    },
+    {
+      "id": 3,
+      "name": "University of Colorado Boulder",
+      "abbreviation": "CU Boulder",
+      "canonical_name": "University of Colorado Boulder",
+      "location": {
+        "city": "Boulder",
+        "state": "CO",
+        "state_full": "Colorado",
+        "region": "West",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.colorado.edu/today/",
+          "ai_tag_url": "https://www.colorado.edu/today/topic/artificial-intelligence",
+          "verified": false,
+          "crawl_priority": 150
+        }
+      }
+    },
+    {
+      "id": 4,
+      "name": "University of Utah",
+      "abbreviation": "Utah",
+      "canonical_name": "University of Utah",
+      "location": {
+        "city": "Salt Lake City",
+        "state": "UT",
+        "state_full": "Utah",
+        "region": "West",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://attheu.utah.edu/",
+          "ai_tag_url": "https://attheu.utah.edu/tag/artificial-intelligence/",
+          "verified": false,
+          "crawl_priority": 150
+        }
+      }
+    },
+    {
+      "id": 5,
+      "name": "University of New Mexico",
+      "abbreviation": "UNM",
+      "canonical_name": "University of New Mexico",
+      "location": {
+        "city": "Albuquerque",
+        "state": "NM",
+        "state_full": "New Mexico",
+        "region": "West",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://news.unm.edu/",
+          "ai_tag_url": "https://news.unm.edu/tag/artificial-intelligence/",
+          "verified": false,
+          "crawl_priority": 150
+        }
+      }
+    },
+    {
+      "id": 6,
+      "name": "University of Nevada, Las Vegas",
+      "abbreviation": "UNLV",
+      "canonical_name": "University of Nevada, Las Vegas",
+      "location": {
+        "city": "Las Vegas",
+        "state": "NV",
+        "state_full": "Nevada",
+        "region": "West",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.unlv.edu/news/",
+          "ai_tag_url": "https://www.unlv.edu/news/topic/artificial-intelligence",
+          "verified": false,
+          "crawl_priority": 150
+        }
+      }
+    },
+    {
+      "id": 7,
+      "name": "University of Kansas",
+      "abbreviation": "KU",
+      "canonical_name": "University of Kansas",
+      "location": {
+        "city": "Lawrence",
+        "state": "KS",
+        "state_full": "Kansas",
+        "region": "Midwest",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://news.ku.edu/",
+          "ai_tag_url": "https://news.ku.edu/tag/artificial-intelligence",
+          "verified": false,
+          "crawl_priority": 150
+        }
+      }
+    },
+    {
+      "id": 8,
+      "name": "University of Missouri",
+      "abbreviation": "Mizzou",
+      "canonical_name": "University of Missouri",
+      "location": {
+        "city": "Columbia",
+        "state": "MO",
+        "state_full": "Missouri",
+        "region": "Midwest",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://munews.missouri.edu/",
+          "ai_tag_url": "https://munews.missouri.edu/news-releases/?topics=artificial-intelligence",
+          "verified": false,
+          "crawl_priority": 150
+        }
+      }
+    },
+    {
+      "id": 9,
+      "name": "University of Kentucky",
+      "abbreviation": "UK",
+      "canonical_name": "University of Kentucky",
+      "location": {
+        "city": "Lexington",
+        "state": "KY",
+        "state_full": "Kentucky",
+        "region": "South",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://uknow.uky.edu/",
+          "ai_tag_url": "https://uknow.uky.edu/tags/artificial-intelligence",
+          "verified": false,
+          "crawl_priority": 150
+        }
+      }
+    },
+    {
+      "id": 10,
+      "name": "Iowa State University",
+      "abbreviation": "ISU",
+      "canonical_name": "Iowa State University",
+      "location": {
+        "city": "Ames",
+        "state": "IA",
+        "state_full": "Iowa",
+        "region": "Midwest",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.news.iastate.edu/",
+          "ai_tag_url": "https://www.news.iastate.edu/news/topic/artificial-intelligence",
+          "verified": false,
+          "crawl_priority": 150
+        }
+      }
+    },
+    {
+      "id": 11,
+      "name": "Virginia Tech",
+      "abbreviation": "VT",
+      "canonical_name": "Virginia Polytechnic Institute and State University",
+      "location": {
+        "city": "Blacksburg",
+        "state": "VA",
+        "state_full": "Virginia",
+        "region": "South",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://vtnews.vt.edu/",
+          "ai_tag_url": "https://vtnews.vt.edu/tags/artificial-intelligence.html",
+          "verified": false,
+          "crawl_priority": 150
+        }
+      }
+    },
+    {
+      "id": 12,
+      "name": "North Carolina State University",
+      "abbreviation": "NC State",
+      "canonical_name": "North Carolina State University",
+      "location": {
+        "city": "Raleigh",
+        "state": "NC",
+        "state_full": "North Carolina",
+        "region": "South",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://news.ncsu.edu/",
+          "ai_tag_url": "https://news.ncsu.edu/tag/artificial-intelligence/",
+          "verified": false,
+          "crawl_priority": 150
+        }
+      }
+    },
+    {
+      "id": 13,
+      "name": "University of Tennessee",
+      "abbreviation": "UT",
+      "canonical_name": "University of Tennessee, Knoxville",
+      "location": {
+        "city": "Knoxville",
+        "state": "TN",
+        "state_full": "Tennessee",
+        "region": "South",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://news.utk.edu/",
+          "ai_tag_url": "https://news.utk.edu/tag/artificial-intelligence/",
+          "verified": false,
+          "crawl_priority": 150
+        }
+      }
+    },
+    {
+      "id": 14,
+      "name": "Auburn University",
+      "abbreviation": "Auburn",
+      "canonical_name": "Auburn University",
+      "location": {
+        "city": "Auburn",
+        "state": "AL",
+        "state_full": "Alabama",
+        "region": "South",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://news.auburn.edu/",
+          "ai_tag_url": "https://news.auburn.edu/topic/artificial-intelligence/",
+          "verified": false,
+          "crawl_priority": 150
+        }
+      }
+    },
+    {
+      "id": 15,
+      "name": "University of South Carolina",
+      "abbreviation": "USC",
+      "canonical_name": "University of South Carolina",
+      "location": {
+        "city": "Columbia",
+        "state": "SC",
+        "state_full": "South Carolina",
+        "region": "South",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://sc.edu/about/offices_and_divisions/university_communications/newsroom/",
+          "ai_tag_url": "https://sc.edu/about/offices_and_divisions/university_communications/newsroom/?topic=artificial-intelligence",
+          "verified": false,
+          "crawl_priority": 150
+        }
+      }
+    },
+    {
+      "id": 16,
+      "name": "University of Oklahoma",
+      "abbreviation": "OU",
+      "canonical_name": "University of Oklahoma",
+      "location": {
+        "city": "Norman",
+        "state": "OK",
+        "state_full": "Oklahoma",
+        "region": "South",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.ou.edu/web/news",
+          "ai_tag_url": "https://www.ou.edu/web/news?topics=artificial-intelligence",
+          "verified": false,
+          "crawl_priority": 150
+        }
+      }
+    },
+    {
+      "id": 17,
+      "name": "Michigan State University",
+      "abbreviation": "MSU",
+      "canonical_name": "Michigan State University",
+      "location": {
+        "city": "East Lansing",
+        "state": "MI",
+        "state_full": "Michigan",
+        "region": "Midwest",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://msutoday.msu.edu/",
+          "ai_tag_url": "https://msutoday.msu.edu/topic/artificial-intelligence/",
+          "verified": false,
+          "crawl_priority": 150
+        }
+      }
+    },
+    {
+      "id": 18,
+      "name": "Indiana University",
+      "abbreviation": "IU",
+      "canonical_name": "Indiana University Bloomington",
+      "location": {
+        "city": "Bloomington",
+        "state": "IN",
+        "state_full": "Indiana",
+        "region": "Midwest",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://news.iu.edu/",
+          "ai_tag_url": "https://news.iu.edu/tags/artificial-intelligence",
+          "verified": false,
+          "crawl_priority": 150
+        }
+      }
+    },
+    {
+      "id": 19,
+      "name": "Penn State University",
+      "abbreviation": "Penn State",
+      "canonical_name": "Pennsylvania State University",
+      "location": {
+        "city": "University Park",
+        "state": "PA",
+        "state_full": "Pennsylvania",
+        "region": "Northeast",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.psu.edu/news/",
+          "ai_tag_url": "https://www.psu.edu/news/?topic=artificial-intelligence",
+          "verified": false,
+          "crawl_priority": 150
+        }
+      }
+    },
+    {
+      "id": 20,
+      "name": "University of Minnesota",
+      "abbreviation": "UMN",
+      "canonical_name": "University of Minnesota Twin Cities",
+      "location": {
+        "city": "Minneapolis",
+        "state": "MN",
+        "state_full": "Minnesota",
+        "region": "Midwest",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://twin-cities.umn.edu/news",
+          "ai_tag_url": "https://twin-cities.umn.edu/news?topic=artificial-intelligence",
+          "verified": false,
+          "crawl_priority": 150
+        }
+      }
+    },
+    {
+      "id": 21,
+      "name": "University of Maryland",
+      "abbreviation": "UMD",
+      "canonical_name": "University of Maryland, College Park",
+      "location": {
+        "city": "College Park",
+        "state": "MD",
+        "state_full": "Maryland",
+        "region": "South",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://umdrightnow.umd.edu/",
+          "ai_tag_url": "https://umdrightnow.umd.edu/topic/artificial-intelligence",
+          "verified": false,
+          "crawl_priority": 150
+        }
+      }
+    },
+    {
+      "id": 22,
+      "name": "University of Pittsburgh",
+      "abbreviation": "Pitt",
+      "canonical_name": "University of Pittsburgh",
+      "location": {
+        "city": "Pittsburgh",
+        "state": "PA",
+        "state_full": "Pennsylvania",
+        "region": "Northeast",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.pittwire.pitt.edu/",
+          "ai_tag_url": "https://www.pittwire.pitt.edu/topics/artificial-intelligence",
+          "verified": false,
+          "crawl_priority": 150
+        }
+      }
+    },
+    {
+      "id": 23,
+      "name": "University of Connecticut",
+      "abbreviation": "UConn",
+      "canonical_name": "University of Connecticut",
+      "location": {
+        "city": "Storrs",
+        "state": "CT",
+        "state_full": "Connecticut",
+        "region": "Northeast",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://today.uconn.edu/",
+          "ai_tag_url": "https://today.uconn.edu/tag/artificial-intelligence/",
+          "verified": false,
+          "crawl_priority": 150
+        }
+      }
+    },
+    {
+      "id": 24,
+      "name": "University of Massachusetts Amherst",
+      "abbreviation": "UMass Amherst",
+      "canonical_name": "University of Massachusetts Amherst",
+      "location": {
+        "city": "Amherst",
+        "state": "MA",
+        "state_full": "Massachusetts",
+        "region": "Northeast",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.umass.edu/news/",
+          "ai_tag_url": "https://www.umass.edu/news/topic/artificial-intelligence",
+          "verified": false,
+          "crawl_priority": 150
+        }
+      }
+    },
+    {
+      "id": 25,
+      "name": "Rutgers University",
+      "abbreviation": "Rutgers",
+      "canonical_name": "Rutgers, The State University of New Jersey",
+      "location": {
+        "city": "New Brunswick",
+        "state": "NJ",
+        "state_full": "New Jersey",
+        "region": "Northeast",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://news.rutgers.edu/",
+          "ai_tag_url": "https://news.rutgers.edu/topic/artificial-intelligence",
+          "verified": false,
+          "crawl_priority": 150
+        }
+      }
+    },
+    {
+      "id": 26,
+      "name": "Texas Tech University",
+      "abbreviation": "Texas Tech",
+      "canonical_name": "Texas Tech University",
+      "location": {
+        "city": "Lubbock",
+        "state": "TX",
+        "state_full": "Texas",
+        "region": "South",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://today.ttu.edu/",
+          "ai_tag_url": "https://today.ttu.edu/tag/artificial-intelligence/",
+          "verified": false,
+          "crawl_priority": 150
+        }
+      }
+    },
+    {
+      "id": 27,
+      "name": "University of Washington",
+      "abbreviation": "UW",
+      "canonical_name": "University of Washington",
+      "location": {
+        "city": "Seattle",
+        "state": "WA",
+        "state_full": "Washington",
+        "region": "West",
+        "country": "US"
+      },
+      "classification": {
+        "carnegie_r1": true,
+        "institution_type": "public"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.washington.edu/news/",
+          "ai_tag_url": "https://www.washington.edu/news/topic/artificial-intelligence/",
+          "verified": false,
+          "crawl_priority": 150
+        }
+      }
+    }
+  ]
+}

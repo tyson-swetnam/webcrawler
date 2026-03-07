@@ -5,6 +5,14 @@ on:
   schedule:
     - cron: '0 15 * * *'
 
+  # Rebuild on push to website branch
+  push:
+    branches:
+      - website
+    paths:
+      - 'crawler/**'
+      - 'docs/**'
+
   # Allow manual triggering
   workflow_dispatch:
 
@@ -31,7 +39,7 @@ jobs:
       - name: Checkout repository (main branch for latest code)
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: website
 
       - name: Set up Python
         uses: actions/setup-python@v5

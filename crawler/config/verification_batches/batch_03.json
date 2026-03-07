@@ -1,0 +1,167 @@
+{
+  "batch_number": 3,
+  "total_batches": 18,
+  "urls_in_batch": 20,
+  "urls": [
+    {
+      "source": "r1_universities.json",
+      "name": "Howard University",
+      "id": 32,
+      "url": "https://news.howarduniversity.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Howard University",
+      "id": 32,
+      "url": "https://news.howarduniversity.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "The Catholic University of America",
+      "id": 33,
+      "url": "https://news.thecatholic.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "The Catholic University of America",
+      "id": 33,
+      "url": "https://news.thecatholic.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Delaware",
+      "id": 34,
+      "url": "https://news.delaware.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Delaware",
+      "id": 34,
+      "url": "https://news.delaware.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Florida Atlantic University",
+      "id": 35,
+      "url": "https://news.floridaatlantic.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Florida Atlantic University",
+      "id": 35,
+      "url": "https://news.floridaatlantic.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Florida International University",
+      "id": 36,
+      "url": "https://news.floridainternational.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Florida International University",
+      "id": 36,
+      "url": "https://news.floridainternational.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Florida State University",
+      "id": 37,
+      "url": "https://news.floridastate.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Florida State University",
+      "id": 37,
+      "url": "https://news.floridastate.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Nova Southeastern University",
+      "id": 38,
+      "url": "https://news.novasoutheastern.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Nova Southeastern University",
+      "id": 38,
+      "url": "https://news.novasoutheastern.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Florida",
+      "id": 40,
+      "url": "https://news.florida.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Florida",
+      "id": 40,
+      "url": "https://news.florida.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Emory University",
+      "id": 43,
+      "url": "https://news.emory.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Emory University",
+      "id": 43,
+      "url": "https://news.emory.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Georgia Institute of Technology-Main Campus",
+      "id": 44,
+      "url": "https://news.gatech.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Georgia Institute of Technology-Main Campus",
+      "id": 44,
+      "url": "https://news.gatech.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    }
+  ]
+}

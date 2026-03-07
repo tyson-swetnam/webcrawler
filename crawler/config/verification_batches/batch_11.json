@@ -1,0 +1,167 @@
+{
+  "batch_number": 11,
+  "total_batches": 18,
+  "urls_in_batch": 20,
+  "urls": [
+    {
+      "source": "r1_universities.json",
+      "name": "Ohio University-Main Campus",
+      "id": 132,
+      "url": "https://news.ohiouniversity-main.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Ohio University-Main Campus",
+      "id": 132,
+      "url": "https://news.ohiouniversity-main.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Oklahoma State University-Main Campus",
+      "id": 136,
+      "url": "https://news.oklahomastate.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Oklahoma State University-Main Campus",
+      "id": 136,
+      "url": "https://news.oklahomastate.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Oregon State University",
+      "id": 138,
+      "url": "https://news.oregonstate.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Oregon State University",
+      "id": 138,
+      "url": "https://news.oregonstate.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Oregon",
+      "id": 139,
+      "url": "https://news.oregon.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Oregon",
+      "id": 139,
+      "url": "https://news.oregon.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Carnegie Mellon University",
+      "id": 140,
+      "url": "https://www.cmu.edu/news/",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Carnegie Mellon University",
+      "id": 140,
+      "url": "https://www.cmu.edu/news/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Drexel University",
+      "id": 141,
+      "url": "https://news.drexeluniversity.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Drexel University",
+      "id": 141,
+      "url": "https://news.drexeluniversity.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Lehigh University",
+      "id": 142,
+      "url": "https://news.lehighuniversity.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Lehigh University",
+      "id": 142,
+      "url": "https://news.lehighuniversity.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Pennsylvania State University-Main Campus",
+      "id": 143,
+      "url": "https://news.pennsylvaniastate.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Pennsylvania State University-Main Campus",
+      "id": 143,
+      "url": "https://news.pennsylvaniastate.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Temple University",
+      "id": 144,
+      "url": "https://news.templeuniversity.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Temple University",
+      "id": 144,
+      "url": "https://news.templeuniversity.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Pennsylvania",
+      "id": 145,
+      "url": "https://penntoday.upenn.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Pennsylvania",
+      "id": 145,
+      "url": "https://penntoday.upenn.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    }
+  ]
+}

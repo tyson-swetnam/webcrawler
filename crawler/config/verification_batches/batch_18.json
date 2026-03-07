@@ -1,0 +1,87 @@
+{
+  "batch_number": 18,
+  "total_batches": 18,
+  "urls_in_batch": 10,
+  "urls": [
+    {
+      "source": "major_facilities.json",
+      "name": "Thomas Jefferson National Accelerator Facility",
+      "id": 21,
+      "url": "https://www.jlab.org/news",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "Thomas Jefferson National Accelerator Facility",
+      "id": 21,
+      "url": "https://www.jlab.org/news?topic=artificial-intelligence",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "Savannah River National Laboratory",
+      "id": 22,
+      "url": "https://www.srnl.gov/news",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "Savannah River National Laboratory",
+      "id": 22,
+      "url": "https://www.srnl.gov/news?topic=artificial-intelligence",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "National Energy Technology Laboratory",
+      "id": 23,
+      "url": "https://www.netl.doe.gov/newsroom",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "National Energy Technology Laboratory",
+      "id": 23,
+      "url": "https://www.netl.doe.gov/newsroom?topic=artificial-intelligence",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "National Center for Atmospheric Research",
+      "id": 24,
+      "url": "https://news.ucar.edu/",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "National Center for Atmospheric Research",
+      "id": 24,
+      "url": "https://news.ucar.edu/?topic=artificial-intelligence",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "National Ecological Observatory Network",
+      "id": 25,
+      "url": "https://www.neonscience.org/news",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "National Ecological Observatory Network",
+      "id": 25,
+      "url": "https://www.neonscience.org/news?topic=artificial-intelligence",
+      "type": "ai_tag",
+      "verified": false
+    }
+  ]
+}

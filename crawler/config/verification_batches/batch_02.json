@@ -1,0 +1,167 @@
+{
+  "batch_number": 2,
+  "total_batches": 18,
+  "urls_in_batch": 20,
+  "urls": [
+    {
+      "source": "r1_universities.json",
+      "name": "University of California-Riverside",
+      "id": 16,
+      "url": "https://news.ucr.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of California-Riverside",
+      "id": 16,
+      "url": "https://news.ucr.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of California-San Francisco",
+      "id": 18,
+      "url": "https://news.ucsf.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of California-San Francisco",
+      "id": 18,
+      "url": "https://news.ucsf.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of California-Santa Cruz",
+      "id": 20,
+      "url": "https://news.ucsc.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of California-Santa Cruz",
+      "id": 20,
+      "url": "https://news.ucsc.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Southern California",
+      "id": 21,
+      "url": "https://news.usc.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Southern California",
+      "id": 21,
+      "url": "https://news.usc.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Colorado School of Mines",
+      "id": 22,
+      "url": "https://news.coloradoschool.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Colorado School of Mines",
+      "id": 22,
+      "url": "https://news.coloradoschool.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Colorado State University-Fort Collins",
+      "id": 23,
+      "url": "https://news.colostate.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Colorado State University-Fort Collins",
+      "id": 23,
+      "url": "https://news.colostate.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Yale University",
+      "id": 28,
+      "url": "https://news.yale.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Yale University",
+      "id": 28,
+      "url": "https://news.yale.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "American University",
+      "id": 29,
+      "url": "https://news.americanuniversity.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "American University",
+      "id": 29,
+      "url": "https://news.americanuniversity.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "George Washington University",
+      "id": 30,
+      "url": "https://news.georgewashington.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "George Washington University",
+      "id": 30,
+      "url": "https://news.georgewashington.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Georgetown University",
+      "id": 31,
+      "url": "https://news.georgetown.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Georgetown University",
+      "id": 31,
+      "url": "https://news.georgetown.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "batch_number": 17,
+  "total_batches": 18,
+  "urls_in_batch": 20,
+  "urls": [
+    {
+      "source": "major_facilities.json",
+      "name": "Purdue Rosen Center for Advanced Computing",
+      "id": 5,
+      "url": "https://www.rcac.purdue.edu/news",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "Purdue Rosen Center for Advanced Computing",
+      "id": 5,
+      "url": "https://www.rcac.purdue.edu/news?topic=ai",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "Indiana University Pervasive Technology Institute",
+      "id": 6,
+      "url": "https://pti.iu.edu/news/",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "Indiana University Pervasive Technology Institute",
+      "id": 6,
+      "url": "https://pti.iu.edu/news/?topic=artificial-intelligence",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "Sandia National Laboratories",
+      "id": 12,
+      "url": "https://www.sandia.gov/labnews/",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "Sandia National Laboratories",
+      "id": 12,
+      "url": "https://www.sandia.gov/labnews/?topic=artificial-intelligence",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "Pacific Northwest National Laboratory",
+      "id": 13,
+      "url": "https://www.pnnl.gov/news",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "Pacific Northwest National Laboratory",
+      "id": 13,
+      "url": "https://www.pnnl.gov/news?topic=artificial-intelligence",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "Brookhaven National Laboratory",
+      "id": 14,
+      "url": "https://www.bnl.gov/newsroom/",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "Brookhaven National Laboratory",
+      "id": 14,
+      "url": "https://www.bnl.gov/newsroom/news.php?a=artificial-intelligence",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "Fermi National Accelerator Laboratory",
+      "id": 16,
+      "url": "https://news.fnal.gov/",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "Fermi National Accelerator Laboratory",
+      "id": 16,
+      "url": "https://news.fnal.gov/category/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "Idaho National Laboratory",
+      "id": 17,
+      "url": "https://inl.gov/news/",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "Idaho National Laboratory",
+      "id": 17,
+      "url": "https://inl.gov/news/?topic=artificial-intelligence",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "National Renewable Energy Laboratory",
+      "id": 18,
+      "url": "https://www.nrel.gov/news/",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "National Renewable Energy Laboratory",
+      "id": 18,
+      "url": "https://www.nrel.gov/news/?topic=artificial-intelligence",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "Ames Laboratory",
+      "id": 19,
+      "url": "https://www.ameslab.gov/news",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "Ames Laboratory",
+      "id": 19,
+      "url": "https://www.ameslab.gov/news?topic=artificial-intelligence",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "Princeton Plasma Physics Laboratory",
+      "id": 20,
+      "url": "https://www.pppl.gov/news",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "major_facilities.json",
+      "name": "Princeton Plasma Physics Laboratory",
+      "id": 20,
+      "url": "https://www.pppl.gov/news?topic=artificial-intelligence",
+      "type": "ai_tag",
+      "verified": false
+    }
+  ]
+}

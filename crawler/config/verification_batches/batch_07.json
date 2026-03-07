@@ -1,0 +1,167 @@
+{
+  "batch_number": 7,
+  "total_batches": 18,
+  "urls_in_batch": 20,
+  "urls": [
+    {
+      "source": "r1_universities.json",
+      "name": "University of Maine",
+      "id": 83,
+      "url": "https://news.maine.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Maine",
+      "id": 83,
+      "url": "https://news.maine.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Michigan Technological University",
+      "id": 85,
+      "url": "https://news.michigantechnological.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Michigan Technological University",
+      "id": 85,
+      "url": "https://news.michigantechnological.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Michigan-Ann Arbor",
+      "id": 86,
+      "url": "https://news.umich.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Michigan-Ann Arbor",
+      "id": 86,
+      "url": "https://news.umich.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Wayne State University",
+      "id": 87,
+      "url": "https://news.waynestate.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Wayne State University",
+      "id": 87,
+      "url": "https://news.waynestate.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Minnesota-Twin Cities",
+      "id": 88,
+      "url": "https://news.minnesota.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Minnesota-Twin Cities",
+      "id": 88,
+      "url": "https://news.minnesota.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Missouri University of Science and Technology",
+      "id": 89,
+      "url": "https://news.missouriuniversity.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Missouri University of Science and Technology",
+      "id": 89,
+      "url": "https://news.missouriuniversity.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Saint Louis University",
+      "id": 90,
+      "url": "https://news.saintlouis.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Saint Louis University",
+      "id": 90,
+      "url": "https://news.saintlouis.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Missouri-Columbia",
+      "id": 91,
+      "url": "https://news.missouri.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Missouri-Columbia",
+      "id": 91,
+      "url": "https://news.missouri.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Missouri-Kansas City",
+      "id": 92,
+      "url": "https://news.missouri.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Missouri-Kansas City",
+      "id": 92,
+      "url": "https://news.missouri.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Washington University in St Louis",
+      "id": 93,
+      "url": "https://news.wustl.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Washington University in St Louis",
+      "id": 93,
+      "url": "https://news.wustl.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    }
+  ]
+}

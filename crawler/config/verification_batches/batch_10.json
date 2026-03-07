@@ -1,0 +1,167 @@
+{
+  "batch_number": 10,
+  "total_batches": 18,
+  "urls_in_batch": 20,
+  "urls": [
+    {
+      "source": "r1_universities.json",
+      "name": "New York University",
+      "id": 121,
+      "url": "https://news.nyu.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "New York University",
+      "id": 121,
+      "url": "https://news.nyu.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Rensselaer Polytechnic Institute",
+      "id": 122,
+      "url": "https://news.rpi.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Rensselaer Polytechnic Institute",
+      "id": 122,
+      "url": "https://news.rpi.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Stony Brook University",
+      "id": 123,
+      "url": "https://news.stonybrook.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Stony Brook University",
+      "id": 123,
+      "url": "https://news.stonybrook.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Syracuse University",
+      "id": 124,
+      "url": "https://news.syracuseuniversity.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Syracuse University",
+      "id": 124,
+      "url": "https://news.syracuseuniversity.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University at Albany",
+      "id": 125,
+      "url": "https://news.universityat.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University at Albany",
+      "id": 125,
+      "url": "https://news.universityat.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University at Buffalo",
+      "id": 126,
+      "url": "https://news.universityat.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University at Buffalo",
+      "id": 126,
+      "url": "https://news.universityat.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Weill Medical College of Cornell University",
+      "id": 128,
+      "url": "https://news.weillmedical.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Weill Medical College of Cornell University",
+      "id": 128,
+      "url": "https://news.weillmedical.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Case Western Reserve University",
+      "id": 129,
+      "url": "https://news.case.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Case Western Reserve University",
+      "id": 129,
+      "url": "https://news.case.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Kent State University at Kent",
+      "id": 130,
+      "url": "https://news.kentstate.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Kent State University at Kent",
+      "id": 130,
+      "url": "https://news.kentstate.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Ohio State University-Main Campus",
+      "id": 131,
+      "url": "https://news.ohiostate.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Ohio State University-Main Campus",
+      "id": 131,
+      "url": "https://news.ohiostate.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    }
+  ]
+}

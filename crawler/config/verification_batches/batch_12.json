@@ -1,0 +1,167 @@
+{
+  "batch_number": 12,
+  "total_batches": 18,
+  "urls_in_batch": 20,
+  "urls": [
+    {
+      "source": "r1_universities.json",
+      "name": "Brown University",
+      "id": 147,
+      "url": "https://news.brown.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Brown University",
+      "id": 147,
+      "url": "https://news.brown.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Clemson University",
+      "id": 149,
+      "url": "https://news.clemsonuniversity.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Clemson University",
+      "id": 149,
+      "url": "https://news.clemsonuniversity.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Medical University of South Carolina",
+      "id": 150,
+      "url": "https://news.medicaluniversity.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Medical University of South Carolina",
+      "id": 150,
+      "url": "https://news.medicaluniversity.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "The University of Tennessee Health Science Center",
+      "id": 152,
+      "url": "https://news.theuniversity.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "The University of Tennessee Health Science Center",
+      "id": 152,
+      "url": "https://news.theuniversity.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "The University of Tennessee-Knoxville",
+      "id": 153,
+      "url": "https://news.theuniversity.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "The University of Tennessee-Knoxville",
+      "id": 153,
+      "url": "https://news.theuniversity.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Vanderbilt University",
+      "id": 155,
+      "url": "https://news.vanderbilt.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Vanderbilt University",
+      "id": 155,
+      "url": "https://news.vanderbilt.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Baylor College of Medicine",
+      "id": 156,
+      "url": "https://news.baylorcollege.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Baylor College of Medicine",
+      "id": 156,
+      "url": "https://news.baylorcollege.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Baylor University",
+      "id": 157,
+      "url": "https://news.bayloruniversity.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Baylor University",
+      "id": 157,
+      "url": "https://news.bayloruniversity.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Rice University",
+      "id": 158,
+      "url": "https://news.rice.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Rice University",
+      "id": 158,
+      "url": "https://news.rice.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Southern Methodist University",
+      "id": 159,
+      "url": "https://news.southernmethodist.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Southern Methodist University",
+      "id": 159,
+      "url": "https://news.southernmethodist.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    }
+  ]
+}

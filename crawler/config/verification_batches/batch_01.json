@@ -1,0 +1,167 @@
+{
+  "batch_number": 1,
+  "total_batches": 18,
+  "urls_in_batch": 20,
+  "urls": [
+    {
+      "source": "r1_universities.json",
+      "name": "The University of Alabama",
+      "id": 2,
+      "url": "https://news.alabama.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "The University of Alabama",
+      "id": 2,
+      "url": "https://news.alabama.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Alabama at Birmingham",
+      "id": 3,
+      "url": "https://news.alabama.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Alabama at Birmingham",
+      "id": 3,
+      "url": "https://news.alabama.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Arkansas",
+      "id": 4,
+      "url": "https://news.arkansas.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Arkansas",
+      "id": 4,
+      "url": "https://news.arkansas.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Northern Arizona University",
+      "id": 6,
+      "url": "https://news.northernarizona.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Northern Arizona University",
+      "id": 6,
+      "url": "https://news.northernarizona.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "California Institute of Technology",
+      "id": 8,
+      "url": "https://www.caltech.edu/about/news",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "California Institute of Technology",
+      "id": 8,
+      "url": "https://www.caltech.edu/about/news/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "San Diego State University",
+      "id": 9,
+      "url": "https://news.sandiego.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "San Diego State University",
+      "id": 9,
+      "url": "https://news.sandiego.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Stanford University",
+      "id": 10,
+      "url": "https://news.stanford.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "Stanford University",
+      "id": 10,
+      "url": "https://news.stanford.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of California-Davis",
+      "id": 12,
+      "url": "https://news.ucdavis.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of California-Davis",
+      "id": 12,
+      "url": "https://news.ucdavis.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of California-Los Angeles",
+      "id": 14,
+      "url": "https://news.ucla.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of California-Los Angeles",
+      "id": 14,
+      "url": "https://news.ucla.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of California-Merced",
+      "id": 15,
+      "url": "https://news.ucmerced.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of California-Merced",
+      "id": 15,
+      "url": "https://news.ucmerced.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    }
+  ]
+}

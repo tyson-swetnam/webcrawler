@@ -1,0 +1,167 @@
+{
+  "batch_number": 15,
+  "total_batches": 18,
+  "urls_in_batch": 20,
+  "urls": [
+    {
+      "source": "r1_universities.json",
+      "name": "University of Wisconsin-Madison",
+      "id": 184,
+      "url": "https://news.wisconsin.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Wisconsin-Madison",
+      "id": 184,
+      "url": "https://news.wisconsin.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Wisconsin-Milwaukee",
+      "id": 185,
+      "url": "https://news.wisconsin.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Wisconsin-Milwaukee",
+      "id": 185,
+      "url": "https://news.wisconsin.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "West Virginia University",
+      "id": 186,
+      "url": "https://news.westvirginia.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "West Virginia University",
+      "id": 186,
+      "url": "https://news.westvirginia.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Wyoming",
+      "id": 187,
+      "url": "https://news.wyoming.edu",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "r1_universities.json",
+      "name": "University of Wyoming",
+      "id": 187,
+      "url": "https://news.wyoming.edu/topic/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "peer_institutions.json",
+      "name": "University of New Mexico",
+      "id": 5,
+      "url": "https://news.unm.edu/",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "peer_institutions.json",
+      "name": "University of New Mexico",
+      "id": 5,
+      "url": "https://news.unm.edu/tag/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "peer_institutions.json",
+      "name": "University of Nevada, Las Vegas",
+      "id": 6,
+      "url": "https://www.unlv.edu/news/",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "peer_institutions.json",
+      "name": "University of Nevada, Las Vegas",
+      "id": 6,
+      "url": "https://www.unlv.edu/news/topic/artificial-intelligence",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "peer_institutions.json",
+      "name": "University of Missouri",
+      "id": 8,
+      "url": "https://munews.missouri.edu/",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "peer_institutions.json",
+      "name": "University of Missouri",
+      "id": 8,
+      "url": "https://munews.missouri.edu/news-releases/?topics=artificial-intelligence",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "peer_institutions.json",
+      "name": "North Carolina State University",
+      "id": 12,
+      "url": "https://news.ncsu.edu/",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "peer_institutions.json",
+      "name": "North Carolina State University",
+      "id": 12,
+      "url": "https://news.ncsu.edu/tag/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "peer_institutions.json",
+      "name": "University of Tennessee, Knoxville",
+      "id": 13,
+      "url": "https://news.utk.edu/",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "peer_institutions.json",
+      "name": "University of Tennessee, Knoxville",
+      "id": 13,
+      "url": "https://news.utk.edu/tag/artificial-intelligence/",
+      "type": "ai_tag",
+      "verified": false
+    },
+    {
+      "source": "peer_institutions.json",
+      "name": "University of South Carolina",
+      "id": 15,
+      "url": "https://sc.edu/about/offices_and_divisions/university_communications/newsroom/",
+      "type": "primary",
+      "verified": false
+    },
+    {
+      "source": "peer_institutions.json",
+      "name": "University of South Carolina",
+      "id": 15,
+      "url": "https://sc.edu/about/offices_and_divisions/university_communications/newsroom/?topic=artificial-intelligence",
+      "type": "ai_tag",
+      "verified": false
+    }
+  ]
+}

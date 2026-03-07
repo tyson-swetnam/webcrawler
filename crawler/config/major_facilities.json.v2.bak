@@ -1,0 +1,692 @@
+{
+  "metadata": {
+    "schema_version": "2.0.0",
+    "title": "Major Research Facilities - NSF and DOE National Labs",
+    "description": "NSF-funded supercomputing centers and DOE national laboratories operating major research infrastructure",
+    "total_facilities": 27,
+    "date_compiled": "2025-11-02",
+    "last_updated": "2025-11-02",
+    "data_sources": [
+      "NSF Advanced Cyberinfrastructure Coordination Ecosystem: Services & Support",
+      "U.S. Department of Energy Office of Science National Laboratories",
+      "NSF Major Facilities Directory"
+    ]
+  },
+  "facilities": [
+    {
+      "id": 1,
+      "name": "Texas Advanced Computing Center",
+      "abbreviation": "TACC",
+      "affiliated_institution": "The University of Texas at Austin",
+      "facility_type": "NSF Supercomputing Center",
+      "location": {
+        "city": "Austin",
+        "state": "TX",
+        "state_full": "Texas",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.tacc.utexas.edu/news",
+          "ai_tag_url": "https://www.tacc.utexas.edu/news/tag/artificial-intelligence",
+          "verified": true,
+          "crawl_priority": 200,
+          "notes": "Major HPC facility, hosts Frontera supercomputer"
+        }
+      },
+      "research_focus": ["High-performance computing", "AI/ML", "Data science", "Visualization"],
+      "major_systems": ["Frontera", "Stampede3", "Lonestar6"]
+    },
+    {
+      "id": 2,
+      "name": "San Diego Supercomputer Center",
+      "abbreviation": "SDSC",
+      "affiliated_institution": "University of California, San Diego",
+      "facility_type": "NSF Supercomputing Center",
+      "location": {
+        "city": "San Diego",
+        "state": "CA",
+        "state_full": "California",
+        "region": "West",
+        "country": "US"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.sdsc.edu/News/",
+          "ai_tag_url": "https://www.sdsc.edu/News/?topic=artificial-intelligence",
+          "verified": true,
+          "crawl_priority": 200,
+          "notes": "Leading data-intensive computing center"
+        }
+      },
+      "research_focus": ["Data-intensive computing", "AI/ML", "Cloud computing", "Data science"],
+      "major_systems": ["Expanse", "Voyager"]
+    },
+    {
+      "id": 3,
+      "name": "Pittsburgh Supercomputing Center",
+      "abbreviation": "PSC",
+      "affiliated_institution": "Carnegie Mellon University, University of Pittsburgh",
+      "facility_type": "NSF Supercomputing Center",
+      "location": {
+        "city": "Pittsburgh",
+        "state": "PA",
+        "state_full": "Pennsylvania",
+        "region": "Northeast",
+        "country": "US"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.psc.edu/news/",
+          "ai_tag_url": "https://www.psc.edu/news/?topic=ai",
+          "verified": false,
+          "crawl_priority": 200,
+          "notes": "Joint facility of CMU and Pitt"
+        }
+      },
+      "research_focus": ["Scientific computing", "AI/ML", "Data analytics", "Biomedical computing"],
+      "major_systems": ["Bridges-2", "Neocortex"]
+    },
+    {
+      "id": 4,
+      "name": "National Center for Supercomputing Applications",
+      "abbreviation": "NCSA",
+      "affiliated_institution": "University of Illinois Urbana-Champaign",
+      "facility_type": "NSF Supercomputing Center",
+      "location": {
+        "city": "Urbana",
+        "state": "IL",
+        "state_full": "Illinois",
+        "region": "Midwest",
+        "country": "US"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.ncsa.illinois.edu/news/",
+          "ai_tag_url": "https://www.ncsa.illinois.edu/news/tag/artificial-intelligence/",
+          "verified": true,
+          "crawl_priority": 200,
+          "notes": "Historic HPC center, birthplace of NCSA Mosaic"
+        }
+      },
+      "research_focus": ["Supercomputing", "AI/ML", "Data science", "Visualization"],
+      "major_systems": ["Delta", "HAL"]
+    },
+    {
+      "id": 5,
+      "name": "Purdue Rosen Center for Advanced Computing",
+      "abbreviation": "RCAC",
+      "affiliated_institution": "Purdue University",
+      "facility_type": "University Research Computing",
+      "location": {
+        "city": "West Lafayette",
+        "state": "IN",
+        "state_full": "Indiana",
+        "region": "Midwest",
+        "country": "US"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.rcac.purdue.edu/news",
+          "ai_tag_url": "https://www.rcac.purdue.edu/news?topic=ai",
+          "verified": false,
+          "crawl_priority": 150,
+          "notes": "Major university research computing facility"
+        }
+      },
+      "research_focus": ["Research computing", "AI/ML", "Data management"],
+      "major_systems": ["Anvil", "Bell"]
+    },
+    {
+      "id": 6,
+      "name": "Indiana University Pervasive Technology Institute",
+      "abbreviation": "PTI",
+      "affiliated_institution": "Indiana University",
+      "facility_type": "University Research Computing",
+      "location": {
+        "city": "Bloomington",
+        "state": "IN",
+        "state_full": "Indiana",
+        "region": "Midwest",
+        "country": "US"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://pti.iu.edu/news/",
+          "ai_tag_url": "https://pti.iu.edu/news/?topic=artificial-intelligence",
+          "verified": false,
+          "crawl_priority": 150,
+          "notes": "Advanced cyberinfrastructure"
+        }
+      },
+      "research_focus": ["Cyberinfrastructure", "Data science", "Networking"],
+      "major_systems": ["Jetstream2", "Big Red 200"]
+    },
+    {
+      "id": 7,
+      "name": "Argonne National Laboratory",
+      "abbreviation": "ANL",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Lemont",
+        "state": "IL",
+        "state_full": "Illinois",
+        "region": "Midwest",
+        "country": "US"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.anl.gov/news",
+          "ai_tag_url": "https://www.anl.gov/topic/artificial-intelligence",
+          "verified": true,
+          "crawl_priority": 250,
+          "notes": "Hosts Aurora exascale system"
+        }
+      },
+      "research_focus": ["Exascale computing", "AI/ML", "Materials science", "Energy research"],
+      "major_systems": ["Aurora", "Polaris"]
+    },
+    {
+      "id": 8,
+      "name": "Lawrence Livermore National Laboratory",
+      "abbreviation": "LLNL",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Livermore",
+        "state": "CA",
+        "state_full": "California",
+        "region": "West",
+        "country": "US"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.llnl.gov/news",
+          "ai_tag_url": "https://www.llnl.gov/news/topic/artificial-intelligence",
+          "verified": true,
+          "crawl_priority": 250,
+          "notes": "Hosts El Capitan exascale system"
+        }
+      },
+      "research_focus": ["National security", "Exascale computing", "AI/ML", "Nuclear weapons"],
+      "major_systems": ["El Capitan", "Sierra"]
+    },
+    {
+      "id": 9,
+      "name": "Los Alamos National Laboratory",
+      "abbreviation": "LANL",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Los Alamos",
+        "state": "NM",
+        "state_full": "New Mexico",
+        "region": "West",
+        "country": "US"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.lanl.gov/news",
+          "ai_tag_url": "https://www.lanl.gov/news/tag/artificial-intelligence",
+          "verified": true,
+          "crawl_priority": 250,
+          "notes": "Historic Manhattan Project site"
+        }
+      },
+      "research_focus": ["National security", "Nuclear science", "AI/ML", "Supercomputing"],
+      "major_systems": ["Venado", "Chicoma"]
+    },
+    {
+      "id": 10,
+      "name": "Oak Ridge National Laboratory",
+      "abbreviation": "ORNL",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Oak Ridge",
+        "state": "TN",
+        "state_full": "Tennessee",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.ornl.gov/news",
+          "ai_tag_url": "https://www.ornl.gov/news/topic/artificial-intelligence",
+          "verified": true,
+          "crawl_priority": 250,
+          "notes": "Hosts Frontier exascale system"
+        }
+      },
+      "research_focus": ["Exascale computing", "AI/ML", "Neutron science", "Materials research"],
+      "major_systems": ["Frontier", "Summit"]
+    },
+    {
+      "id": 11,
+      "name": "Lawrence Berkeley National Laboratory",
+      "abbreviation": "LBNL",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Berkeley",
+        "state": "CA",
+        "state_full": "California",
+        "region": "West",
+        "country": "US"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://newscenter.lbl.gov/",
+          "ai_tag_url": "https://newscenter.lbl.gov/tag/artificial-intelligence/",
+          "verified": true,
+          "crawl_priority": 250,
+          "notes": "Operates NERSC supercomputing facility"
+        }
+      },
+      "research_focus": ["Scientific computing", "AI/ML", "Energy sciences", "Materials"],
+      "major_systems": ["Perlmutter (NERSC)", "Cori"]
+    },
+    {
+      "id": 12,
+      "name": "Sandia National Laboratories",
+      "abbreviation": "SNL",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Albuquerque",
+        "state": "NM",
+        "state_full": "New Mexico",
+        "region": "West",
+        "country": "US"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.sandia.gov/labnews/",
+          "ai_tag_url": "https://www.sandia.gov/labnews/?topic=artificial-intelligence",
+          "verified": false,
+          "crawl_priority": 200,
+          "notes": "Engineering and national security research"
+        }
+      },
+      "research_focus": ["National security", "Engineering", "Computing", "Materials science"],
+      "major_systems": ["Astra", "Vanguard"]
+    },
+    {
+      "id": 13,
+      "name": "Pacific Northwest National Laboratory",
+      "abbreviation": "PNNL",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Richland",
+        "state": "WA",
+        "state_full": "Washington",
+        "region": "West",
+        "country": "US"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.pnnl.gov/news",
+          "ai_tag_url": "https://www.pnnl.gov/news?topic=artificial-intelligence",
+          "verified": false,
+          "crawl_priority": 200,
+          "notes": "Chemistry, biology, and computing"
+        }
+      },
+      "research_focus": ["Environmental science", "Energy", "National security", "Computing"],
+      "major_systems": ["Deception", "Constance"]
+    },
+    {
+      "id": 14,
+      "name": "Brookhaven National Laboratory",
+      "abbreviation": "BNL",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Upton",
+        "state": "NY",
+        "state_full": "New York",
+        "region": "Northeast",
+        "country": "US"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.bnl.gov/newsroom/",
+          "ai_tag_url": "https://www.bnl.gov/newsroom/news.php?a=artificial-intelligence",
+          "verified": false,
+          "crawl_priority": 200,
+          "notes": "High-energy physics and nuclear science"
+        }
+      },
+      "research_focus": ["Nuclear physics", "Materials science", "Energy sciences", "Computing"],
+      "major_systems": ["RHIC Computing Facility"]
+    },
+    {
+      "id": 15,
+      "name": "SLAC National Accelerator Laboratory",
+      "abbreviation": "SLAC",
+      "affiliated_institution": "Stanford University / U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Menlo Park",
+        "state": "CA",
+        "state_full": "California",
+        "region": "West",
+        "country": "US"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www6.slac.stanford.edu/news",
+          "ai_tag_url": "https://www6.slac.stanford.edu/news/topic/artificial-intelligence",
+          "verified": true,
+          "crawl_priority": 250,
+          "notes": "Particle physics and photon science"
+        }
+      },
+      "research_focus": ["Particle physics", "X-ray science", "AI/ML", "Accelerators"],
+      "major_systems": ["LCLS Computing", "S3DF"]
+    },
+    {
+      "id": 16,
+      "name": "Fermi National Accelerator Laboratory",
+      "abbreviation": "Fermilab",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Batavia",
+        "state": "IL",
+        "state_full": "Illinois",
+        "region": "Midwest",
+        "country": "US"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://news.fnal.gov/",
+          "ai_tag_url": "https://news.fnal.gov/category/artificial-intelligence/",
+          "verified": false,
+          "crawl_priority": 200,
+          "notes": "High-energy particle physics"
+        }
+      },
+      "research_focus": ["Particle physics", "Neutrinos", "AI/ML for physics", "Accelerators"],
+      "major_systems": ["Wilson Cluster", "LHC Tier-1"]
+    },
+    {
+      "id": 17,
+      "name": "Idaho National Laboratory",
+      "abbreviation": "INL",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Idaho Falls",
+        "state": "ID",
+        "state_full": "Idaho",
+        "region": "West",
+        "country": "US"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://inl.gov/news/",
+          "ai_tag_url": "https://inl.gov/news/?topic=artificial-intelligence",
+          "verified": false,
+          "crawl_priority": 150,
+          "notes": "Nuclear energy research"
+        }
+      },
+      "research_focus": ["Nuclear energy", "Critical infrastructure", "National security"],
+      "major_systems": ["Sawtooth", "Lemhi"]
+    },
+    {
+      "id": 18,
+      "name": "National Renewable Energy Laboratory",
+      "abbreviation": "NREL",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Golden",
+        "state": "CO",
+        "state_full": "Colorado",
+        "region": "West",
+        "country": "US"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.nrel.gov/news/",
+          "ai_tag_url": "https://www.nrel.gov/news/?topic=artificial-intelligence",
+          "verified": false,
+          "crawl_priority": 200,
+          "notes": "Renewable energy and efficiency"
+        }
+      },
+      "research_focus": ["Renewable energy", "AI/ML for energy", "Solar", "Wind"],
+      "major_systems": ["Eagle", "Kestrel"]
+    },
+    {
+      "id": 19,
+      "name": "Ames Laboratory",
+      "abbreviation": "Ames Lab",
+      "affiliated_institution": "Iowa State University / U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Ames",
+        "state": "IA",
+        "state_full": "Iowa",
+        "region": "Midwest",
+        "country": "US"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.ameslab.gov/news",
+          "ai_tag_url": "https://www.ameslab.gov/news?topic=artificial-intelligence",
+          "verified": false,
+          "crawl_priority": 150,
+          "notes": "Materials science research"
+        }
+      },
+      "research_focus": ["Materials science", "Rare earth elements", "AI for materials"],
+      "major_systems": ["Condo", "Thunder"]
+    },
+    {
+      "id": 20,
+      "name": "Princeton Plasma Physics Laboratory",
+      "abbreviation": "PPPL",
+      "affiliated_institution": "Princeton University / U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Princeton",
+        "state": "NJ",
+        "state_full": "New Jersey",
+        "region": "Northeast",
+        "country": "US"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.pppl.gov/news",
+          "ai_tag_url": "https://www.pppl.gov/news?topic=artificial-intelligence",
+          "verified": false,
+          "crawl_priority": 150,
+          "notes": "Fusion energy research"
+        }
+      },
+      "research_focus": ["Fusion energy", "Plasma physics", "AI for fusion control"],
+      "major_systems": ["NSTX-U Computing"]
+    },
+    {
+      "id": 21,
+      "name": "Thomas Jefferson National Accelerator Facility",
+      "abbreviation": "Jefferson Lab",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Newport News",
+        "state": "VA",
+        "state_full": "Virginia",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.jlab.org/news",
+          "ai_tag_url": "https://www.jlab.org/news?topic=artificial-intelligence",
+          "verified": false,
+          "crawl_priority": 150,
+          "notes": "Nuclear physics research"
+        }
+      },
+      "research_focus": ["Nuclear physics", "Accelerators", "Computing"],
+      "major_systems": ["SciComp Farm"]
+    },
+    {
+      "id": 22,
+      "name": "Savannah River National Laboratory",
+      "abbreviation": "SRNL",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Aiken",
+        "state": "SC",
+        "state_full": "South Carolina",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.srnl.gov/news",
+          "ai_tag_url": "https://www.srnl.gov/news?topic=artificial-intelligence",
+          "verified": false,
+          "crawl_priority": 100,
+          "notes": "Environmental management"
+        }
+      },
+      "research_focus": ["Environmental management", "National security", "Materials"],
+      "major_systems": []
+    },
+    {
+      "id": 23,
+      "name": "National Energy Technology Laboratory",
+      "abbreviation": "NETL",
+      "affiliated_institution": "U.S. Department of Energy",
+      "facility_type": "DOE National Laboratory",
+      "location": {
+        "city": "Pittsburgh",
+        "state": "PA",
+        "state_full": "Pennsylvania",
+        "region": "Northeast",
+        "country": "US"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.netl.doe.gov/newsroom",
+          "ai_tag_url": "https://www.netl.doe.gov/newsroom?topic=artificial-intelligence",
+          "verified": false,
+          "crawl_priority": 100,
+          "notes": "Fossil energy and carbon management"
+        }
+      },
+      "research_focus": ["Fossil energy", "Carbon capture", "Energy systems"],
+      "major_systems": ["Joule 2.0"]
+    },
+    {
+      "id": 24,
+      "name": "National Center for Atmospheric Research",
+      "abbreviation": "NCAR",
+      "affiliated_institution": "NSF / University Corporation for Atmospheric Research",
+      "facility_type": "NSF Research Center",
+      "location": {
+        "city": "Boulder",
+        "state": "CO",
+        "state_full": "Colorado",
+        "region": "West",
+        "country": "US"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://news.ucar.edu/",
+          "ai_tag_url": "https://news.ucar.edu/?topic=artificial-intelligence",
+          "verified": false,
+          "crawl_priority": 200,
+          "notes": "Atmospheric and climate research"
+        }
+      },
+      "research_focus": ["Climate science", "Weather prediction", "AI/ML for climate", "Supercomputing"],
+      "major_systems": ["Derecho", "Casper"]
+    },
+    {
+      "id": 25,
+      "name": "National Ecological Observatory Network",
+      "abbreviation": "NEON",
+      "affiliated_institution": "NSF / Battelle",
+      "facility_type": "NSF Research Infrastructure",
+      "location": {
+        "city": "Boulder",
+        "state": "CO",
+        "state_full": "Colorado",
+        "region": "West",
+        "country": "US"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.neonscience.org/news",
+          "ai_tag_url": "https://www.neonscience.org/news?topic=artificial-intelligence",
+          "verified": false,
+          "crawl_priority": 100,
+          "notes": "Continental-scale ecological observation"
+        }
+      },
+      "research_focus": ["Ecology", "Environmental science", "Data science", "AI/ML"],
+      "major_systems": []
+    },
+    {
+      "id": 26,
+      "name": "National Center for Computational Sciences",
+      "abbreviation": "NCCS",
+      "affiliated_institution": "Oak Ridge National Laboratory",
+      "facility_type": "DOE Computing Facility",
+      "location": {
+        "city": "Oak Ridge",
+        "state": "TN",
+        "state_full": "Tennessee",
+        "region": "South",
+        "country": "US"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.olcf.ornl.gov/news/",
+          "ai_tag_url": "https://www.olcf.ornl.gov/tag/artificial-intelligence/",
+          "verified": true,
+          "crawl_priority": 250,
+          "notes": "Oak Ridge Leadership Computing Facility"
+        }
+      },
+      "research_focus": ["Leadership computing", "Exascale systems", "AI/ML"],
+      "major_systems": ["Frontier", "Summit"]
+    },
+    {
+      "id": 27,
+      "name": "NERSC",
+      "abbreviation": "NERSC",
+      "affiliated_institution": "Lawrence Berkeley National Laboratory",
+      "facility_type": "DOE Computing Facility",
+      "location": {
+        "city": "Berkeley",
+        "state": "CA",
+        "state_full": "California",
+        "region": "West",
+        "country": "US"
+      },
+      "news_sources": {
+        "primary": {
+          "url": "https://www.nersc.gov/news/",
+          "ai_tag_url": "https://www.nersc.gov/news/?topic=artificial-intelligence",
+          "verified": true,
+          "crawl_priority": 250,
+          "notes": "National Energy Research Scientific Computing Center"
+        }
+      },
+      "research_focus": ["Scientific computing", "AI/ML for science", "Data management"],
+      "major_systems": ["Perlmutter", "Cori"]
+    }
+  ]
+}
