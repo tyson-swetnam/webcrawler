@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI University News - Saturday, March 07, 2026</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F393;</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+    
+        :root {
+            --color-bg: #ffffff;
+            --color-surface: #f8f9fa;
+            --color-surface-alt: #f1f3f5;
+            --color-surface-hover: #e9ecef;
+            --color-border: #dee2e6;
+            --color-text: #212529;
+            --color-text-secondary: #495057;
+            --color-text-muted: #868e96;
+            --color-text-faint: #adb5bd;
+            --color-link: #1a1a2e;
+            --color-link-visited: #3d3d5c;
+            --color-focus: #4dabf7;
+            --color-highlight-bg: #f8f9fa;
+
+            --color-peer: #7c3aed;
+            --color-r1: #2563eb;
+            --color-hpc: #d97706;
+            --color-lab: #059669;
+            --color-global: #dc2626;
+
+            --radius-sm: 4px;
+            --radius-md: 6px;
+            --transition-fast: 150ms ease;
+
+            --space-xs: 4px;
+            --space-sm: 8px;
+            --space-md: 16px;
+            --space-lg: 24px;
+            --space-xl: 32px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-lg);
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--color-focus);
+            outline-offset: 2px;
+        }
+        a:focus:not(:focus-visible) { outline: none; }
+
+        /* ── Compact Header ── */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--color-border);
+            margin-bottom: var(--space-md);
+            min-height: 48px;
+        }
+        .header h1 {
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--color-text);
+            white-space: nowrap;
+        }
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            font-size: 13px;
+            color: var(--color-text-muted);
+        }
+        .header-meta {
+            white-space: nowrap;
+        }
+        .header-nav a {
+            color: var(--color-text-muted);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            transition: color var(--transition-fast);
+        }
+        .header-nav a:hover { color: var(--color-text); }
+        .header-nav a.active {
+            color: var(--color-text);
+            font-weight: 600;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            margin-top: var(--space-xl);
+            padding: var(--space-md) 0;
+            border-top: 1px solid var(--color-border);
+            font-size: 12px;
+            color: var(--color-text-muted);
+        }
+        .footer a {
+            color: var(--color-text-muted);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        .footer a:hover { color: var(--color-text); }
+
+        .no-results {
+            text-align: center;
+            font-size: 15px;
+            color: var(--color-text-muted);
+            margin: 60px 0;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 0 var(--space-md); }
+            .header { flex-direction: column; gap: var(--space-sm); align-items: flex-start; }
+            .header-right { flex-wrap: wrap; }
+        }
+        
+    
+        /* ── Stats Line ── */
+        .stats-line {
+            font-size: 13px;
+            color: var(--color-text-muted);
+            margin-bottom: var(--space-md);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            flex-wrap: wrap;
+        }
+        .stats-line .cat-dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            margin-right: 2px;
+            vertical-align: middle;
+        }
+        .dot-peer { background: var(--color-peer); }
+        .dot-r1 { background: var(--color-r1); }
+        .dot-hpc { background: var(--color-hpc); }
+        .dot-lab { background: var(--color-lab); }
+        .dot-global { background: var(--color-global); }
+
+        /* ── Tab Bar ── */
+        .tab-bar {
+            display: flex;
+            gap: 0;
+            border-bottom: 1px solid var(--color-border);
+            margin-bottom: 0;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        .tab-btn {
+            padding: 10px var(--space-md);
+            border: none;
+            background: none;
+            font-family: 'DM Sans', system-ui, sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--color-text-muted);
+            cursor: pointer;
+            white-space: nowrap;
+            border-bottom: 2px solid transparent;
+            transition: color var(--transition-fast), border-color var(--transition-fast);
+        }
+        .tab-btn:hover { color: var(--color-text-secondary); }
+        .tab-btn.active {
+            color: var(--color-text);
+            border-bottom-color: var(--color-text);
+        }
+        .tab-btn.tab-empty {
+            opacity: 0.4;
+            cursor: default;
+        }
+        .tab-count {
+            font-weight: 400;
+            font-size: 12px;
+            color: var(--color-text-faint);
+            margin-left: 3px;
+        }
+
+        /* ── Article List ── */
+        .article-list {
+            margin: 0;
+        }
+
+        /* ── University Group Subheader ── */
+        .univ-group-header {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-text-muted);
+            padding: var(--space-sm) 0 var(--space-xs) 0;
+            margin-top: var(--space-sm);
+            border-bottom: 1px solid var(--color-surface-alt);
+        }
+        .univ-group-header:first-child { margin-top: 0; }
+
+        /* ── Article Row ── */
+        .article-row {
+            display: grid;
+            grid-template-columns: 8px 1fr auto auto 20px;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: 10px var(--space-sm);
+            border-bottom: 1px solid var(--color-surface-alt);
+            cursor: pointer;
+            transition: background-color var(--transition-fast);
+            min-height: 40px;
+        }
+        .article-row:hover { background-color: var(--color-surface); }
+        .article-row .cat-dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+        }
+        .article-row .headline-link {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--color-link);
+            text-decoration: none;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .article-row .headline-link:hover { text-decoration: underline; text-underline-offset: 2px; }
+        .article-row .headline-link:visited { color: var(--color-link-visited); }
+        .article-row .univ-label {
+            font-size: 12px;
+            color: var(--color-text-muted);
+            white-space: nowrap;
+        }
+        .article-row .date-label {
+            font-size: 12px;
+            color: var(--color-text-faint);
+            white-space: nowrap;
+        }
+        .article-row .chevron {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            font-size: 10px;
+            color: var(--color-text-faint);
+            transition: transform 0.2s ease;
+        }
+        .article-row.expanded .chevron { transform: rotate(90deg); }
+
+        /* ── Article Detail (expand panel) ── */
+        .article-detail {
+            display: none;
+            padding: var(--space-sm) var(--space-md) var(--space-md) 22px;
+            border-bottom: 1px solid var(--color-surface-alt);
+            background: var(--color-surface);
+        }
+        .article-detail.open { display: block; }
+        .article-detail .summary {
+            font-size: 13px;
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+            margin-bottom: var(--space-sm);
+        }
+        .article-detail .detail-meta {
+            font-size: 12px;
+            color: var(--color-text-muted);
+            margin-bottom: var(--space-sm);
+        }
+        .article-detail .topics { margin-bottom: var(--space-sm); }
+        .topic-pill {
+            display: inline-block;
+            background: var(--color-surface-alt);
+            border-radius: var(--radius-sm);
+            padding: 2px 8px;
+            margin: 2px 3px 2px 0;
+            font-size: 11px;
+            color: var(--color-text-secondary);
+        }
+        .article-detail .detail-link a {
+            font-size: 12px;
+            color: var(--color-link);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .article-detail .detail-link a:hover { text-decoration: underline; }
+
+        /* ── Show More ── */
+        .article-overflow { display: none; }
+        .article-overflow.shown { display: grid; }
+        .show-more-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: var(--space-xs);
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-family: 'DM Sans', system-ui, sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--color-text-secondary);
+            text-align: center;
+            transition: background-color var(--transition-fast);
+        }
+        .show-more-btn:hover { background: var(--color-surface-hover); }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .article-row {
+                grid-template-columns: 6px 1fr 20px;
+                gap: var(--space-xs);
+                padding: var(--space-sm) var(--space-xs);
+            }
+            .article-row .univ-label,
+            .article-row .date-label { display: none; }
+            .article-row .headline-link {
+                white-space: normal;
+                font-size: 13px;
+            }
+            .tab-bar { gap: 0; }
+            .tab-btn { padding: 8px 10px; font-size: 12px; }
+        }
+        @media (max-width: 480px) {
+            .stats-line { font-size: 12px; }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI University News</h1>
+        <div class="header-right">
+            <span class="header-meta">0 articles &middot; Mar 07</span>
+            <span class="header-nav">
+                <a href="../index.html">Today</a>
+                &middot;
+                <a href="index.html">Archive</a>
+                &middot;
+                <a href="../how_it_works.html">How It Works</a>
+            </span>
+        </div>
+    </div>
+
+    <p class="no-results">No AI-related articles found for this date.</p>
+
+
+    <div class="footer">
+        <a href="../index.html">Today</a> &middot;
+        <a href="index.html">Archive</a> &middot;
+        <a href="../how_it_works.html">How It Works</a> &middot;
+        <a href="https://github.com/tyson-swetnam/webcrawler" target="_blank">GitHub</a>
+        &nbsp;|&nbsp; 380 sources &middot; Updated 03:46 PM
+    </div>
+<script>
+function switchTab(cat) {
+    var btns = document.querySelectorAll('.tab-btn');
+    btns.forEach(function(b) { b.classList.toggle('active', b.getAttribute('data-tab') === cat); });
+    var rows = document.querySelectorAll('.article-row');
+    var details = document.querySelectorAll('.article-detail');
+    rows.forEach(function(r) {
+        var match = (cat === 'all' || r.getAttribute('data-category') === cat);
+        if (match) {
+            r.style.removeProperty('display');
+        } else {
+            r.style.display = 'none';
+            r.classList.remove('expanded');
+        }
+    });
+    details.forEach(function(d) {
+        var match = (cat === 'all' || d.getAttribute('data-category') === cat);
+        if (!match) {
+            d.classList.remove('open');
+            d.style.display = 'none';
+        } else {
+            d.style.removeProperty('display');
+        }
+    });
+    // Reset show-more when switching tabs
+    var overflows = document.querySelectorAll('.article-overflow');
+    overflows.forEach(function(el) { el.classList.remove('shown'); });
+    var btn = document.querySelector('.show-more-btn');
+    if (btn) {
+        btn.setAttribute('data-expanded', 'false');
+        // Update count for current tab
+        var hidden = 0;
+        overflows.forEach(function(el) {
+            if (cat === 'all' || el.getAttribute('data-category') === cat) hidden++;
+        });
+        if (hidden > 0) {
+            btn.style.display = '';
+            btn.setAttribute('data-show-text', 'Show ' + hidden + ' more');
+            btn.textContent = 'Show ' + hidden + ' more';
+        } else {
+            btn.style.display = 'none';
+        }
+    }
+}
+function toggleDetail(row) {
+    var detail = row.nextElementSibling;
+    if (detail && detail.classList.contains('article-detail')) {
+        var isOpen = detail.classList.contains('open');
+        detail.classList.toggle('open');
+        row.classList.toggle('expanded');
+    }
+}
+function toggleMore(btn) {
+    var showing = btn.getAttribute('data-expanded') === 'true';
+    var activeTab = document.querySelector('.tab-btn.active');
+    var cat = activeTab ? activeTab.getAttribute('data-tab') : 'all';
+    var overflows = document.querySelectorAll('.article-overflow');
+    overflows.forEach(function(el) {
+        if (cat === 'all' || el.getAttribute('data-category') === cat) {
+            if (showing) {
+                el.classList.remove('shown');
+                // Collapse any open detail panels for hidden overflow rows
+                var next = el.nextElementSibling;
+                if (next && next.classList.contains('article-detail')) {
+                    next.classList.remove('open');
+                    el.classList.remove('expanded');
+                }
+            } else {
+                el.classList.add('shown');
+            }
+        }
+    });
+    btn.setAttribute('data-expanded', showing ? 'false' : 'true');
+    btn.textContent = showing ? btn.getAttribute('data-show-text') : btn.getAttribute('data-hide-text');
+}
+</script>
+</body>
+</html>

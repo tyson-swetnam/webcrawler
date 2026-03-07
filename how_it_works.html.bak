@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works - AI University News</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #ffffff;
+            color: #000000;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 40px;
+            line-height: 1.6;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #000;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            font-weight: bold;
+            letter-spacing: -1px;
+            margin-bottom: 5px;
+        }
+
+        .header .tagline {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .nav {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+        }
+
+        .nav a {
+            color: #cc0000;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            font-size: 14px;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            padding: 20px 0;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #cc0000;
+            margin: 30px 0 15px 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #cc0000;
+        }
+
+        h3 {
+            font-size: 20px;
+            color: #000;
+            margin: 20px 0 10px 0;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .highlight-box {
+            background-color: #fffbf0;
+            border: 2px solid #cc0000;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #000;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .footer a {
+            color: #0000cc;
+            text-decoration: none;
+        }
+
+        .sources-section {
+            margin: 20px 0;
+        }
+
+        details {
+            margin: 15px 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-size: 18px;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border-radius: 3px;
+            user-select: none;
+        }
+
+        summary:hover {
+            background-color: #e8e8e8;
+        }
+
+        .source-list {
+            margin: 15px 0 0 20px;
+            list-style-type: disc;
+            column-count: 3;
+            column-gap: 20px;
+        }
+
+        .source-list li {
+            margin-bottom: 8px;
+            break-inside: avoid;
+        }
+
+        .source-list a {
+            color: #0000cc;
+            text-decoration: none;
+        }
+
+        .source-list a:hover {
+            text-decoration: underline;
+            color: #cc0000;
+        }
+
+        .source-list a:visited {
+            color: #551a8b;
+        }
+
+        @media (max-width: 1200px) {
+            .source-list {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .source-list {
+                column-count: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI UNIVERSITY NEWS</h1>
+        <div class="tagline">How It Works</div>
+    </div>
+
+    <div class="nav">
+        <a href="index.html">TODAY</a>
+        <a href="archive/index.html">ARCHIVE</a>
+        <a href="how_it_works.html">HOW IT WORKS</a>
+    </div>
+
+    <div class="content">
+        <h2>Overview</h2>
+        <p>
+            AI University News is an automated web crawler that monitors press releases and news articles from
+            top US universities and major research facilities, focusing specifically on AI-related research and
+            developments. The system runs daily to discover, analyze, and report the latest AI breakthroughs
+            from the academic world.
+        </p>
+
+        <div class="highlight-box">
+            <strong>What makes this unique:</strong> Unlike general news aggregators, this crawler specifically
+            targets university press offices and applies multi-AI analysis to identify truly significant AI research,
+            filtering out noise and delivering high-quality, relevant content.
+        </div>
+
+        <h2>How the Crawler Works</h2>
+
+        <h3>Phase 1: Discovery & Crawling</h3>
+        <p>
+            The crawler visits official news and press release pages from:
+        </p>
+        <ul>
+            <li><strong>Peer Institutions:</strong> Top-tier research universities (MIT, Stanford, Carnegie Mellon, etc.)</li>
+            <li><strong>R1 Universities:</strong> All Carnegie R1 research universities across the United States</li>
+            <li><strong>Major Facilities:</strong> National labs and research centers (Argonne, Los Alamos, NIST, etc.)</li>
+        </ul>
+        <p>
+            Using the Scrapy framework, the system respectfully crawls these sites following robots.txt rules,
+            implementing politeness delays between requests, and using proper identification.
+        </p>
+
+        <h3>Phase 2: Content Extraction</h3>
+        <p>
+            When new articles are discovered, the crawler uses Trafilatura (a state-of-the-art content extraction
+            library) to extract clean article text, metadata, publication dates, and author information with
+            95%+ accuracy.
+        </p>
+
+        <h3>Phase 3: Deduplication</h3>
+        <p>
+            The system maintains a PostgreSQL database tracking every URL and content hash to ensure:
+        </p>
+        <ul>
+            <li>No duplicate URLs are processed</li>
+            <li>Updated articles are detected through content hash comparison</li>
+            <li>Fast O(1) lookups using SHA-256 hashing</li>
+        </ul>
+
+        <h3>Phase 4: AI Analysis</h3>
+        <p>
+            This is where the magic happens. Each new article is analyzed by three different AI systems:
+        </p>
+        <ul>
+            <li><strong>Claude (Sonnet-4-5):</strong> Primary analysis for deep research understanding</li>
+            <li><strong>OpenAI (GPT-4):</strong> Secondary analysis for categorization and validation</li>
+            <li><strong>Google Gemini (2.5 Flash):</strong> Fast initial filtering and topic extraction</li>
+        </ul>
+        <p>
+            The system builds a consensus summary from all three AI engines, with Claude's analysis taking priority
+            due to its superior research comprehension. Articles are classified by relevance, key topics are extracted,
+            and confidence scores are assigned.
+        </p>
+
+        <h3>Phase 5: Categorization & Organization</h3>
+        <p>
+            Articles are automatically organized into three categories:
+        </p>
+        <ul>
+            <li><strong>Peer Institutions:</strong> Elite research universities with the highest AI research output</li>
+            <li><strong>R1 Institutions:</strong> Other top-tier research universities</li>
+            <li><strong>Major Facilities:</strong> Government labs and national research centers</li>
+        </ul>
+
+        <h3>Phase 6: Publishing</h3>
+        <p>
+            The crawler automatically generates this website with:
+        </p>
+        <ul>
+            <li><strong>Today's Page:</strong> Latest articles from the past 3 days</li>
+            <li><strong>Archive:</strong> Historical daily reports accessible by date</li>
+            <li><strong>Three-Column Layout:</strong> Easy browsing by institution category</li>
+        </ul>
+        <p>
+            Results can also be delivered via Slack webhooks and email notifications for real-time updates.
+        </p>
+
+        <h2>Technical Architecture</h2>
+
+        <h3>Technology Stack</h3>
+        <ul>
+            <li><strong>Language:</strong> Python 3.11+</li>
+            <li><strong>Crawling:</strong> Scrapy 2.11+ with custom spiders</li>
+            <li><strong>Content Extraction:</strong> Trafilatura 2.0+ with htmldate</li>
+            <li><strong>Database:</strong> PostgreSQL 15+ for metadata and tracking</li>
+            <li><strong>AI APIs:</strong> Anthropic Claude, OpenAI GPT, Google Gemini</li>
+            <li><strong>Deployment:</strong> Systemd service with daily automated runs</li>
+        </ul>
+
+        <h3>Ethical Crawling</h3>
+        <p>
+            This crawler follows web crawling best practices:
+        </p>
+        <ul>
+            <li>Always respects robots.txt directives</li>
+            <li>Implements per-domain rate limiting (1 request/second default)</li>
+            <li>Uses descriptive User-Agent with contact information</li>
+            <li>Implements exponential backoff for failed requests</li>
+            <li>Never attempts to bypass access controls or paywalls</li>
+        </ul>
+
+        <h2>Cost & Efficiency</h2>
+        <p>
+            The system is designed to be cost-effective:
+        </p>
+        <ul>
+            <li><strong>Estimated monthly cost:</strong> ~$36/month for AI API usage (100 articles/day)</li>
+            <li><strong>Optimization:</strong> Uses fast Gemini Flash for initial filtering before expensive Claude/GPT-4 calls</li>
+            <li><strong>Caching:</strong> All AI responses stored to avoid reprocessing</li>
+            <li><strong>Smart limits:</strong> Token limits and max articles per run prevent runaway costs</li>
+        </ul>
+
+        <h2>Source Code</h2>
+        <p>
+            This is an open-source project. The complete source code, documentation, and deployment guides
+            are available on GitHub. The system is designed as a standalone Linux application that can be
+            deployed on any server with Python 3.11+ and PostgreSQL.
+        </p>
+
+        
+        <h2>Complete Source List</h2>
+        <p>
+            This crawler monitors 210 sources across three categories:
+        </p>
+
+        <div class="sources-section">
+            
+                <details>
+                    <summary><strong>Peer Institutions</strong> (23 sources)</summary>
+                    <ul class="source-list">
+                        <li><a href="https://newsroom.asu.edu/" target="_blank">Arizona State University</a></li><li><a href="https://news.asu.edu/" target="_blank">Arizona State University Campus Immersion</a></li><li><a href="https://news.iu.edu/" target="_blank">Indiana University</a></li><li><a href="https://news.iu.edu/live/channels/158-information-technology" target="_blank">Indiana University-Bloomington</a></li><li><a href="https://news.indianauniversity–purdue.edu/topic/artificial-intelligence/" target="_blank">Indiana University–Purdue University-Indianapolis</a></li><li><a href="https://news.medicaluniversity.edu/topic/artificial-intelligence/" target="_blank">Medical University of South Carolina</a></li><li><a href="https://news.ncsu.edu/tag/artificial-intelligence/" target="_blank">North Carolina State University</a></li><li><a href="https://news.northcarolina.edu/topic/artificial-intelligence/" target="_blank">North Carolina State University at Raleigh</a></li><li><a href="https://www.psu.edu/news/?topic=artificial-intelligence" target="_blank">Penn State University</a></li><li><a href="https://news.rutgers.edu/topic/artificial-intelligence" target="_blank">Rutgers University</a></li><li><a href="https://news.rutgersuniversity-new.edu/topic/artificial-intelligence/" target="_blank">Rutgers University-New Brunswick</a></li><li><a href="https://artificialintelligence.arizona.edu/news" target="_blank">University of Arizona</a></li><li><a href="https://umdrightnow.umd.edu/" target="_blank">University of Maryland</a></li><li><a href="https://www.umass.edu/news/" target="_blank">University of Massachusetts Amherst</a></li><li><a href="https://twin-cities.umn.edu/news?topic=artificial-intelligence" target="_blank">University of Minnesota</a></li><li><a href="https://munews.missouri.edu/news-releases/?topics=artificial-intelligence" target="_blank">University of Missouri</a></li><li><a href="https://www.unlv.edu/news/" target="_blank">University of Nevada, Las Vegas</a></li><li><a href="https://news.unm.edu/" target="_blank">University of New Mexico</a></li><li><a href="https://www.ou.edu/web/news?topics=artificial-intelligence" target="_blank">University of Oklahoma</a></li><li><a href="https://www.pittwire.pitt.edu/" target="_blank">University of Pittsburgh</a></li><li><a href="https://sc.edu/about/offices_and_divisions/university_communications/newsroom/?topic=artificial-intelligence" target="_blank">University of South Carolina</a></li><li><a href="https://news.utk.edu/tag/artificial-intelligence/" target="_blank">University of Tennessee</a></li><li><a href="https://www.washington.edu/news/topic/artificial-intelligence/" target="_blank">University of Washington</a></li>
+                    </ul>
+                </details>
+            
+            
+                <details>
+                    <summary><strong>R1 Universities</strong> (160 sources)</summary>
+                    <ul class="source-list">
+                        <li><a href="https://news.americanuniversity.edu/topic/artificial-intelligence/" target="_blank">American University</a></li><li><a href="https://eng.auburn.edu/news/" target="_blank">Auburn University</a></li><li><a href="https://news.baylorcollege.edu/topic/artificial-intelligence/" target="_blank">Baylor College of Medicine</a></li><li><a href="https://news.bayloruniversity.edu/topic/artificial-intelligence/" target="_blank">Baylor University</a></li><li><a href="https://news.binghamtonuniversity.edu/topic/artificial-intelligence/" target="_blank">Binghamton University</a></li><li><a href="https://news.bostoncollege.edu/topic/artificial-intelligence/" target="_blank">Boston College</a></li><li><a href="https://bu.edu/news/topic/artificial-intelligence" target="_blank">Boston University</a></li><li><a href="https://brandeis.edu/news" target="_blank">Brandeis University</a></li><li><a href="https://news.brighamyoung.edu/topic/artificial-intelligence/" target="_blank">Brigham Young University</a></li><li><a href="https://news.brown.edu" target="_blank">Brown University</a></li><li><a href="https://news.cunygraduate.edu/topic/artificial-intelligence/" target="_blank">CUNY Graduate School and University Center</a></li><li><a href="https://www.caltech.edu/about/news" target="_blank">California Institute of Technology</a></li><li><a href="https://www.cmu.edu/news/" target="_blank">Carnegie Mellon University</a></li><li><a href="https://news.case.edu/topic/artificial-intelligence/" target="_blank">Case Western Reserve University</a></li><li><a href="https://news.clemsonuniversity.edu/topic/artificial-intelligence/" target="_blank">Clemson University</a></li><li><a href="https://news.coloradoschool.edu/topic/artificial-intelligence/" target="_blank">Colorado School of Mines</a></li><li><a href="https://news.colostate.edu/topic/artificial-intelligence/" target="_blank">Colorado State University-Fort Collins</a></li><li><a href="https://news.columbia.edu/topic/artificial-intelligence/" target="_blank">Columbia University in the City of New York</a></li><li><a href="https://news.cornell.edu" target="_blank">Cornell University</a></li><li><a href="https://news.dartmouth.edu" target="_blank">Dartmouth College</a></li><li><a href="https://news.drexeluniversity.edu/topic/artificial-intelligence/" target="_blank">Drexel University</a></li><li><a href="https://today.duke.edu/topic/artificial-intelligence/" target="_blank">Duke University</a></li><li><a href="https://news.eastcarolina.edu/topic/artificial-intelligence/" target="_blank">East Carolina University</a></li><li><a href="https://news.emory.edu" target="_blank">Emory University</a></li><li><a href="https://news.floridaatlantic.edu/topic/artificial-intelligence/" target="_blank">Florida Atlantic University</a></li><li><a href="https://news.floridainternational.edu/topic/artificial-intelligence/" target="_blank">Florida International University</a></li><li><a href="https://news.floridastate.edu/topic/artificial-intelligence/" target="_blank">Florida State University</a></li><li><a href="https://news.georgemason.edu/topic/artificial-intelligence/" target="_blank">George Mason University</a></li><li><a href="https://news.georgewashington.edu/topic/artificial-intelligence/" target="_blank">George Washington University</a></li><li><a href="https://georgetown.edu/news/tag/artificial-intelligence" target="_blank">Georgetown University</a></li><li><a href="https://news.gatech.edu" target="_blank">Georgia Institute of Technology-Main Campus</a></li><li><a href="https://news.georgiastate.edu/topic/artificial-intelligence/" target="_blank">Georgia State University</a></li><li><a href="https://news.harvard.edu/topic/artificial-intelligence" target="_blank">Harvard University</a></li><li><a href="https://news.howarduniversity.edu/topic/artificial-intelligence/" target="_blank">Howard University</a></li><li><a href="https://news.las.iastate.edu/" target="_blank">Iowa State University</a></li><li><a href="https://jhu.edu/news" target="_blank">Johns Hopkins University</a></li><li><a href="https://news.kansasstate.edu/topic/artificial-intelligence/" target="_blank">Kansas State University</a></li><li><a href="https://news.kentstate.edu/topic/artificial-intelligence/" target="_blank">Kent State University at Kent</a></li><li><a href="https://news.lehighuniversity.edu/topic/artificial-intelligence/" target="_blank">Lehigh University</a></li><li><a href="https://news.lsu.edu/topic/artificial-intelligence/" target="_blank">Louisiana State University and Agricultural & Mechanical College</a></li><li><a href="https://news.loyolauniversity.edu/topic/artificial-intelligence/" target="_blank">Loyola University Chicago</a></li><li><a href="https://news.mit.edu" target="_blank">Massachusetts Institute of Technology</a></li><li><a href="https://msutoday.msu.edu/" target="_blank">Michigan State University</a></li><li><a href="https://news.michigantechnological.edu/topic/artificial-intelligence/" target="_blank">Michigan Technological University</a></li><li><a href="https://www.msstate.edu/news" target="_blank">Mississippi State University</a></li><li><a href="https://news.missouriuniversity.edu/topic/artificial-intelligence/" target="_blank">Missouri University of Science and Technology</a></li><li><a href="https://news.montanastate.edu/topic/artificial-intelligence/" target="_blank">Montana State University</a></li><li><a href="https://news.njit.edu" target="_blank">New Jersey Institute of Technology</a></li><li><a href="https://news.newmexico.edu/topic/artificial-intelligence/" target="_blank">New Mexico State University-Main Campus</a></li><li><a href="https://news.nyu.edu/topic/artificial-intelligence/" target="_blank">New York University</a></li><li><a href="https://news.northdakota.edu/topic/artificial-intelligence/" target="_blank">North Dakota State University-Main Campus</a></li><li><a href="https://news.northeasternuniversity.edu/topic/artificial-intelligence/" target="_blank">Northeastern University</a></li><li><a href="https://news.northernarizona.edu/topic/artificial-intelligence/" target="_blank">Northern Arizona University</a></li><li><a href="https://news.northwestern.edu" target="_blank">Northwestern University</a></li><li><a href="https://news.novasoutheastern.edu/topic/artificial-intelligence/" target="_blank">Nova Southeastern University</a></li><li><a href="https://news.ohiostate.edu/topic/artificial-intelligence/" target="_blank">Ohio State University-Main Campus</a></li><li><a href="https://news.ohiouniversity-main.edu/topic/artificial-intelligence/" target="_blank">Ohio University-Main Campus</a></li><li><a href="https://news.oklahomastate.edu/topic/artificial-intelligence/" target="_blank">Oklahoma State University-Main Campus</a></li><li><a href="https://news.olddominion.edu/topic/artificial-intelligence/" target="_blank">Old Dominion University</a></li><li><a href="https://news.oregonstate.edu" target="_blank">Oregon State University</a></li><li><a href="https://news.pennsylvaniastate.edu/topic/artificial-intelligence/" target="_blank">Pennsylvania State University-Main Campus</a></li><li><a href="https://www.princeton.edu/news" target="_blank">Princeton University</a></li><li><a href="https://news.purdueuniversity-main.edu/topic/artificial-intelligence/" target="_blank">Purdue University-Main Campus</a></li><li><a href="https://news.rpi.edu" target="_blank">Rensselaer Polytechnic Institute</a></li><li><a href="https://news.rice.edu/topic/artificial-intelligence/" target="_blank">Rice University</a></li><li><a href="https://news.saintlouis.edu/topic/artificial-intelligence/" target="_blank">Saint Louis University</a></li><li><a href="https://sandiego.edu/news" target="_blank">San Diego State University</a></li><li><a href="https://news.southernillinois.edu/topic/artificial-intelligence/" target="_blank">Southern Illinois University-Carbondale</a></li><li><a href="https://news.southernmethodist.edu/topic/artificial-intelligence/" target="_blank">Southern Methodist University</a></li><li><a href="https://news.stanford.edu/topic/artificial-intelligence/" target="_blank">Stanford University</a></li><li><a href="https://news.stonybrook.edu" target="_blank">Stony Brook University</a></li><li><a href="https://news.syracuseuniversity.edu/topic/artificial-intelligence/" target="_blank">Syracuse University</a></li><li><a href="https://news.templeuniversity.edu/topic/artificial-intelligence/" target="_blank">Temple University</a></li><li><a href="https://news.texasa.edu/topic/artificial-intelligence/" target="_blank">Texas A & M University-College Station</a></li><li><a href="https://www.ttu.edu/now/" target="_blank">Texas Tech University</a></li><li><a href="https://news.thecatholic.edu/topic/artificial-intelligence/" target="_blank">The Catholic University of America</a></li><li><a href="https://alabama.edu/news/topic/artificial-intelligence" target="_blank">The University of Alabama</a></li><li><a href="https://news.montana.edu/topic/artificial-intelligence/" target="_blank">The University of Montana</a></li><li><a href="https://news.theuniversity.edu/topic/artificial-intelligence/" target="_blank">The University of Tennessee Health Science Center</a></li><li><a href="https://news.theuniversity.edu/topic/artificial-intelligence/" target="_blank">The University of Tennessee-Knoxville</a></li><li><a href="https://news.theuniversity.edu/topic/artificial-intelligence/" target="_blank">The University of Texas Health Science Center at Houston</a></li><li><a href="https://news.utsa.edu/topic/artificial-intelligence/" target="_blank">The University of Texas Health Science Center at San Antonio</a></li><li><a href="https://news.uta.edu/topic/artificial-intelligence/" target="_blank">The University of Texas at Arlington</a></li><li><a href="https://www.utexas.edu/news/topic/artificial-intelligence/" target="_blank">The University of Texas at Austin</a></li><li><a href="https://news.utdallas.edu" target="_blank">The University of Texas at Dallas</a></li><li><a href="https://news.utep.edu/topic/artificial-intelligence/" target="_blank">The University of Texas at El Paso</a></li><li><a href="https://news.utsa.edu/topic/artificial-intelligence/" target="_blank">The University of Texas at San Antonio</a></li><li><a href="https://news.tufts.edu" target="_blank">Tufts University</a></li><li><a href="https://news.tulane.edu" target="_blank">Tulane University of Louisiana</a></li><li><a href="https://news.universityat.edu/topic/artificial-intelligence/" target="_blank">University at Albany</a></li><li><a href="https://news.universityat.edu/topic/artificial-intelligence/" target="_blank">University at Buffalo</a></li><li><a href="https://alabama.edu/news/topic/artificial-intelligence" target="_blank">University of Alabama at Birmingham</a></li><li><a href="https://arkansas.edu/news/topic/artificial-intelligence" target="_blank">University of Arkansas</a></li><li><a href="https://news.berkeley.edu/topics/artificial-intelligence/" target="_blank">University of California-Berkeley</a></li><li><a href="https://news.ucdavis.edu/topic/artificial-intelligence/" target="_blank">University of California-Davis</a></li><li><a href="https://news.uci.edu/" target="_blank">University of California-Irvine</a></li><li><a href="https://news.ucla.edu/topic/artificial-intelligence/" target="_blank">University of California-Los Angeles</a></li><li><a href="https://news.ucmerced.edu" target="_blank">University of California-Merced</a></li><li><a href="https://news.ucr.edu/topic/artificial-intelligence/" target="_blank">University of California-Riverside</a></li><li><a href="https://today.ucsd.edu/" target="_blank">University of California-San Diego</a></li><li><a href="https://news.ucsf.edu/topic/artificial-intelligence/" target="_blank">University of California-San Francisco</a></li><li><a href="https://news.ucsb.edu/topics/artificial-intelligence" target="_blank">University of California-Santa Barbara</a></li><li><a href="https://news.ucsc.edu" target="_blank">University of California-Santa Cruz</a></li><li><a href="https://news.uchicago.edu" target="_blank">University of Chicago</a></li><li><a href="https://www.colorado.edu/today/" target="_blank">University of Colorado Boulder</a></li><li><a href="https://news.ucdenver.edu/" target="_blank">University of Colorado Denver/Anschutz Medical Campus</a></li><li><a href="https://today.uconn.edu/" target="_blank">University of Connecticut</a></li><li><a href="https://news.delaware.edu/topic/artificial-intelligence/" target="_blank">University of Delaware</a></li><li><a href="https://news.florida.edu/topic/artificial-intelligence/" target="_blank">University of Florida</a></li><li><a href="https://news.georgia.edu/topic/artificial-intelligence/" target="_blank">University of Georgia</a></li><li><a href="https://hawaii.edu/news/topic/artificial-intelligence" target="_blank">University of Hawaii at Manoa</a></li><li><a href="https://idaho.edu/news/topic/artificial-intelligence" target="_blank">University of Idaho</a></li><li><a href="https://uic.edu/news/topic/artificial-intelligence" target="_blank">University of Illinois Chicago</a></li><li><a href="https://news.illinois.edu" target="_blank">University of Illinois Urbana-Champaign</a></li><li><a href="https://news.iowa.edu/topic/artificial-intelligence/" target="_blank">University of Iowa</a></li><li><a href="https://news.ku.edu/" target="_blank">University of Kansas</a></li><li><a href="https://uknow.uky.edu/campus-news" target="_blank">University of Kentucky</a></li><li><a href="https://maine.edu/news" target="_blank">University of Maine</a></li><li><a href="https://maryland.edu/news" target="_blank">University of Maryland - Baltimore</a></li><li><a href="https://today.umd.edu/" target="_blank">University of Maryland - College Park</a></li><li><a href="https://maryland.edu/news" target="_blank">University of Maryland-Baltimore County</a></li><li><a href="https://www.umass.edu/ai/news" target="_blank">University of Massachusetts-Amherst</a></li><li><a href="https://umb.edu/news" target="_blank">University of Massachusetts-Boston</a></li><li><a href="https://uml.edu/news" target="_blank">University of Massachusetts-Lowell</a></li><li><a href="https://news.umich.edu/topic/artificial-intelligence/" target="_blank">University of Michigan-Ann Arbor</a></li><li><a href="https://minnesota.edu/news" target="_blank">University of Minnesota-Twin Cities</a></li><li><a href="https://news.missouri.edu/topic/artificial-intelligence/" target="_blank">University of Missouri-Columbia</a></li><li><a href="https://news.missouri.edu/topic/artificial-intelligence/" target="_blank">University of Missouri-Kansas City</a></li><li><a href="https://news.nebraska.edu/topic/artificial-intelligence/" target="_blank">University of Nebraska Medical Center</a></li><li><a href="https://news.nebraska.edu/topic/artificial-intelligence/" target="_blank">University of Nebraska-Lincoln</a></li><li><a href="https://www.unlv.edu/news" target="_blank">University of Nevada-Las Vegas</a></li><li><a href="https://news.nevada.edu/topic/artificial-intelligence/" target="_blank">University of Nevada-Reno</a></li><li><a href="https://news.unh.edu/topic/artificial-intelligence/" target="_blank">University of New Hampshire-Main Campus</a></li><li><a href="https://news.unm.edu/" target="_blank">University of New Mexico-Main Campus</a></li><li><a href="https://news.nd.edu" target="_blank">University of Notre Dame</a></li><li><a href="https://www.ou.edu/news" target="_blank">University of Oklahoma-Norman Campus</a></li><li><a href="https://news.oregon.edu/topic/artificial-intelligence/" target="_blank">University of Oregon</a></li><li><a href="https://penntoday.upenn.edu/topic/artificial-intelligence/" target="_blank">University of Pennsylvania</a></li><li><a href="https://www.utimes.pitt.edu/" target="_blank">University of Pittsburgh-Pittsburgh Campus</a></li><li><a href="https://sc.edu/uofsc/posts/" target="_blank">University of South Carolina-Columbia</a></li><li><a href="https://news.usc.edu/topic/artificial-intelligence/" target="_blank">University of Southern California</a></li><li><a href="https://news.utah.edu/topic/artificial-intelligence/" target="_blank">University of Utah</a></li><li><a href="https://news.vermont.edu/topic/artificial-intelligence/" target="_blank">University of Vermont</a></li><li><a href="https://news.virginia.edu" target="_blank">University of Virginia-Main Campus</a></li><li><a href="https://www.washington.edu/news/topic/artificial-intelligence/" target="_blank">University of Washington-Seattle Campus</a></li><li><a href="https://news.wisconsin.edu/topic/artificial-intelligence/" target="_blank">University of Wisconsin-Madison</a></li><li><a href="https://news.wisconsin.edu/topic/artificial-intelligence/" target="_blank">University of Wisconsin-Milwaukee</a></li><li><a href="https://news.wyoming.edu/topic/artificial-intelligence/" target="_blank">University of Wyoming</a></li><li><a href="https://news.usu.edu" target="_blank">Utah State University</a></li><li><a href="https://news.vanderbilt.edu" target="_blank">Vanderbilt University</a></li><li><a href="https://news.virginiacommonwealth.edu/topic/artificial-intelligence/" target="_blank">Virginia Commonwealth University</a></li><li><a href="https://news.vt.edu" target="_blank">Virginia Polytechnic Institute and State University</a></li><li><a href="https://news.washingtonstate.edu/topic/artificial-intelligence/" target="_blank">Washington State University</a></li><li><a href="https://news.wustl.edu/topic/artificial-intelligence/" target="_blank">Washington University in St Louis</a></li><li><a href="https://news.waynestate.edu/topic/artificial-intelligence/" target="_blank">Wayne State University</a></li><li><a href="https://news.weillmedical.edu/topic/artificial-intelligence/" target="_blank">Weill Medical College of Cornell University</a></li><li><a href="https://news.westvirginia.edu/topic/artificial-intelligence/" target="_blank">West Virginia University</a></li><li><a href="https://news.william&.edu/topic/artificial-intelligence/" target="_blank">William & Mary</a></li><li><a href="https://www.wpi.edu/news" target="_blank">Worcester Polytechnic Institute</a></li><li><a href="https://news.yale.edu" target="_blank">Yale University</a></li>
+                    </ul>
+                </details>
+            
+            
+                <details>
+                    <summary><strong>Major Research Facilities</strong> (27 sources)</summary>
+                    <ul class="source-list">
+                        <li><a href="https://www.ameslab.gov/news" target="_blank">Ames Laboratory</a></li><li><a href="https://www.anl.gov/news" target="_blank">Argonne National Laboratory</a></li><li><a href="https://www.bnl.gov/newsroom/" target="_blank">Brookhaven National Laboratory</a></li><li><a href="https://news.fnal.gov/" target="_blank">Fermi National Accelerator Laboratory</a></li><li><a href="https://inl.gov/news/" target="_blank">Idaho National Laboratory</a></li><li><a href="https://pti.iu.edu/news/" target="_blank">Indiana University Pervasive Technology Institute</a></li><li><a href="https://newscenter.lbl.gov/" target="_blank">Lawrence Berkeley National Laboratory</a></li><li><a href="https://www.llnl.gov/news" target="_blank">Lawrence Livermore National Laboratory</a></li><li><a href="https://www.lanl.gov/news" target="_blank">Los Alamos National Laboratory</a></li><li><a href="https://www.nersc.gov/news/" target="_blank">NERSC</a></li><li><a href="https://news.ucar.edu/" target="_blank">National Center for Atmospheric Research</a></li><li><a href="https://www.olcf.ornl.gov/news/" target="_blank">National Center for Computational Sciences</a></li><li><a href="https://www.ncsa.illinois.edu/news/" target="_blank">National Center for Supercomputing Applications</a></li><li><a href="https://www.neonscience.org/news" target="_blank">National Ecological Observatory Network</a></li><li><a href="https://www.netl.doe.gov/newsroom" target="_blank">National Energy Technology Laboratory</a></li><li><a href="https://www.nrel.gov/news/" target="_blank">National Renewable Energy Laboratory</a></li><li><a href="https://www.ornl.gov/news" target="_blank">Oak Ridge National Laboratory</a></li><li><a href="https://www.pnnl.gov/news" target="_blank">Pacific Northwest National Laboratory</a></li><li><a href="https://www.psc.edu/news/" target="_blank">Pittsburgh Supercomputing Center</a></li><li><a href="https://www.pppl.gov/news" target="_blank">Princeton Plasma Physics Laboratory</a></li><li><a href="https://www.rcac.purdue.edu/news" target="_blank">Purdue Rosen Center for Advanced Computing</a></li><li><a href="https://www6.slac.stanford.edu/news" target="_blank">SLAC National Accelerator Laboratory</a></li><li><a href="https://www.sdsc.edu/News/" target="_blank">San Diego Supercomputer Center</a></li><li><a href="https://www.sandia.gov/labnews/" target="_blank">Sandia National Laboratories</a></li><li><a href="https://www.srnl.gov/news" target="_blank">Savannah River National Laboratory</a></li><li><a href="https://www.tacc.utexas.edu/news" target="_blank">Texas Advanced Computing Center</a></li><li><a href="https://www.jlab.org/news" target="_blank">Thomas Jefferson National Accelerator Facility</a></li>
+                    </ul>
+                </details>
+            
+        </div>
+        
+
+        <h2>Updates & Schedule</h2>
+        <p>
+            The crawler runs automatically once per day (typically early morning UTC) and this website updates
+            immediately after each run completes. The archive preserves all historical daily reports for
+            research and trend analysis.
+        </p>
+    </div>
+
+    <div class="footer">
+        <p>Powered by AI University News Crawler</p>
+        <p>Open source project - Built with Scrapy, PostgreSQL, and multi-AI analysis</p>
+    </div>
+</body>
+</html>

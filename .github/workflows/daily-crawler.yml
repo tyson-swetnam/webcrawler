@@ -47,6 +47,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Install Pagefind
+        run: npm install -g pagefind@latest
+
       - name: Set up database
         env:
           DATABASE_URL: postgresql://crawler:github_actions_temp@localhost:5432/ai_news_crawler

@@ -149,9 +149,50 @@ async def main():
 
             logger.info(f"Total articles for reporting: {len(all_recent)}")
 
+            # Phase 3.5: Editorial Curation for Top News (last 7 days)
+            editorial_picks = []
+            if settings.enable_ai_analysis:
+                try:
+                    from crawler.ai.editor import EditorialCurator
+                    curator = EditorialCurator()
+
+                    # Query last 7 days of AI-related articles for editorial pool
+                    editorial_lookback = datetime.now(timezone.utc) - timedelta(days=7)
+                    editorial_articles = db.query(Article).filter(
+                        and_(
+                            Article.is_ai_related == True,
+                            Article.last_analyzed != None,
+                            Article.published_date >= editorial_lookback,
+                        )
+                    ).all()
+
+                    candidates = []
+                    for art in editorial_articles:
+                        analysis = db.query(AIAnalysis).filter(
+                            AIAnalysis.article_id == art.article_id
+                        ).order_by(AIAnalysis.analyzed_at.desc()).first()
+                        candidates.append({
+                            'article_id': art.article_id,
+                            'title': art.title,
+                            'url': art.url.url if art.url else '',
+                            'university_name': art.university_name,
+                            'published_date': str(art.published_date) if art.published_date else '',
+                            'consensus_summary': analysis.consensus_summary if analysis else '',
+                            'article_metadata': art.article_metadata or {},
+                        })
+
+                    logger.info(f"\n⭐ Phase 3.5: Editorial curation for Top News ({len(candidates)} articles from last 7 days)")
+                    editorial_picks = await curator.curate_top_news(candidates)
+                    if editorial_picks:
+                        logger.info(f"Editorial curation selected {len(editorial_picks)} top stories")
+                    else:
+                        logger.info("Editorial curation: no top stories selected")
+                except Exception as e:
+                    logger.warning(f"Editorial curation failed (non-fatal): {e}")
+
             # Phase 4: Generate and send reports
             logger.info("\n📬 Phase 4: Generating and sending notifications/exports")
-            exported_files = await send_notifications(all_recent, analyses, db)
+            exported_files = await send_notifications(all_recent, analyses, db, editorial_picks=editorial_picks)
 
         # Phase 5: Summary and statistics
         duration = (datetime.now(timezone.utc) - start_time).total_seconds()
@@ -443,6 +484,14 @@ async def run_crawl_with_analysis() -> bool:
                         article.last_analyzed = datetime.now(timezone.utc)
                         db.add(ai_analysis)
 
+                        # Store impact scores in article metadata
+                        impact_scores = analysis.get('claude', {}).get('impact_scores') if analysis.get('claude') else None
+                        if impact_scores:
+                            article.article_metadata = {
+                                **(article.article_metadata or {}),
+                                'impact_scores': impact_scores
+                            }
+
                     db.commit()
                     total_analyzed += len(batch)
                     consecutive_errors = 0
@@ -534,6 +583,14 @@ async def analyze_articles(articles, db) -> list:
             article.ai_confidence_score = analysis['consensus']['confidence']
             article.last_analyzed = datetime.now(timezone.utc)
 
+            # Store impact scores in article metadata
+            impact_scores = analysis.get('claude', {}).get('impact_scores') if analysis.get('claude') else None
+            if impact_scores:
+                article.article_metadata = {
+                    **(article.article_metadata or {}),
+                    'impact_scores': impact_scores
+                }
+
             db.add(ai_analysis)
 
         db.commit()
@@ -547,7 +604,7 @@ async def analyze_articles(articles, db) -> list:
         return []
 
 
-async def send_notifications(articles, analyses, db):
+async def send_notifications(articles, analyses, db, editorial_picks=None):
     """
     Send notifications via Slack and email, and/or export to local files.
 
@@ -555,6 +612,7 @@ async def send_notifications(articles, analyses, db):
         articles: List of Article ORM objects
         analyses: List of analysis results
         db: Database session
+        editorial_picks: Optional list of editorial top news picks
 
     Returns:
         Dictionary of exported file paths
@@ -581,7 +639,8 @@ async def send_notifications(articles, analyses, db):
             logger.info("Generating HTML report website (empty results)...")
             html_gen = HTMLReportGenerator(
                 output_dir=settings.local_output_dir,
-                github_pages_dir="docs"
+                github_pages_dir="docs",
+                editorial_picks=editorial_picks
             )
             today_file = html_gen.generate_daily_report()
             archive_file = html_gen.generate_archive_index()
@@ -638,16 +697,45 @@ async def send_notifications(articles, analyses, db):
         # Generate to both html_output/ (for local viewing) and docs/ (for GitHub Pages)
         html_gen = HTMLReportGenerator(
             output_dir=settings.local_output_dir,
-            github_pages_dir="docs"
+            github_pages_dir="docs",
+            editorial_picks=editorial_picks
         )
         today_file = html_gen.generate_daily_report()
-        archive_file = html_gen.generate_archive_index()
-        how_it_works_file = html_gen.generate_how_it_works()
         logger.info(f"✅ HTML report generated: {today_file}")
+        exported_files['html'] = today_file
+
+        # Generate Pagefind search index (non-fatal)
+        popular_topics = []
+        try:
+            import subprocess as _sp
+            import tempfile
+            import shutil
+
+            staging_dir = tempfile.mkdtemp(prefix='pagefind_stubs_')
+            stub_count, popular_topics = html_gen.generate_search_stubs(staging_dir)
+            logger.info(f"Generated {stub_count} search stubs")
+
+            pagefind_output = str(Path("docs") / "pagefind")
+            result = _sp.run(
+                ["pagefind", "--site", staging_dir, "--output-path", pagefind_output],
+                capture_output=True, text=True, timeout=120
+            )
+            if result.returncode == 0:
+                logger.info(f"✅ Pagefind index built at {pagefind_output}")
+            else:
+                logger.warning(f"Pagefind failed: {result.stderr}")
+
+            shutil.rmtree(staging_dir, ignore_errors=True)
+        except FileNotFoundError:
+            logger.warning("pagefind CLI not found, skipping search index")
+        except Exception as e:
+            logger.warning(f"Search index generation failed (non-fatal): {e}")
+
+        archive_file = html_gen.generate_archive_index(popular_topics=popular_topics)
+        how_it_works_file = html_gen.generate_how_it_works()
         logger.info(f"✅ Archive index generated: {archive_file}")
         logger.info(f"✅ How It Works page generated: {how_it_works_file}")
         logger.info(f"✅ GitHub Pages output: docs/")
-        exported_files['html'] = today_file
         exported_files['html_archive'] = archive_file
         exported_files['html_how_it_works'] = how_it_works_file
     except Exception as e:
