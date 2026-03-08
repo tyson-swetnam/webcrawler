@@ -1,55 +1,79 @@
 {
   "stats": {
-    "urls_discovered": 5893,
-    "urls_crawled": 4990,
+    "urls_discovered": 6277,
+    "urls_crawled": 3755,
     "articles_extracted": 0,
     "duplicates_skipped": 0,
-    "errors": 32,
-    "mcp_fallback_attempts": 32,
-    "mcp_fallback_successes": 29
+    "errors": 245,
+    "mcp_fallback_attempts": 240,
+    "mcp_fallback_successes": 23
   },
-  "sources_attempted": 78,
+  "sources_attempted": 119,
   "sources_succeeded": 0,
   "domain_stats": {
-    "www.gmu.edu": {
+    "kcnsc.doe.gov": {
+      "urls": 0,
+      "articles": 0,
+      "errors": 1
+    },
+    "news.ucar.edu": {
       "urls": 0,
       "articles": 0,
       "errors": 10
     },
-    "www.brandeis.edu": {
+    "news.epfl.ch": {
       "urls": 0,
       "articles": 0,
       "errors": 1
     },
-    "www.fau.edu": {
+    "english.cas.cn": {
+      "urls": 0,
+      "articles": 0,
+      "errors": 4
+    },
+    "www.bristol.ac.uk": {
+      "urls": 0,
+      "articles": 0,
+      "errors": 6
+    },
+    "www.dhs.gov": {
       "urls": 0,
       "articles": 0,
       "errors": 1
     },
-    "www.ou.edu": {
+    "www.nsa.gov": {
       "urls": 0,
       "articles": 0,
-      "errors": 16
+      "errors": 20
     },
-    "www.umass.edu": {
+    "www.tu.berlin": {
       "urls": 0,
       "articles": 0,
-      "errors": 3
+      "errors": 14
     },
-    "www.uthouston.edu": {
+    "www.turing.ac.uk": {
+      "urls": 0,
+      "articles": 0,
+      "errors": 186
+    },
+    "www.univie.ac.at": {
       "urls": 0,
       "articles": 0,
       "errors": 1
     }
   },
   "failed_domains": [
-    "www.gmu.edu",
-    "www.brandeis.edu",
-    "www.fau.edu",
-    "www.ou.edu",
-    "www.umass.edu",
-    "www.uthouston.edu"
+    "kcnsc.doe.gov",
+    "news.ucar.edu",
+    "news.epfl.ch",
+    "english.cas.cn",
+    "www.bristol.ac.uk",
+    "www.dhs.gov",
+    "www.nsa.gov",
+    "www.tu.berlin",
+    "www.turing.ac.uk",
+    "www.univie.ac.at"
   ],
   "closed_reason": "finished",
-  "timestamp": "2026-03-08T03:51:44.748706+00:00"
+  "timestamp": "2026-03-08T15:23:38.852335+00:00"
 }
