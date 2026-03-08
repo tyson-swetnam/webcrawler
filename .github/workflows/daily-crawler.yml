@@ -102,6 +102,11 @@ jobs:
           if [ -d output ]; then
             cp -r output/* website-deploy/ 2>/dev/null || true
           fi
+          # Copy pagefind to docs/ for GitHub Pages (source path: /docs)
+          if [ -d docs/pagefind ]; then
+            mkdir -p website-deploy/docs
+            cp -r docs/pagefind website-deploy/docs/
+          fi
 
           # Create a simple README for the website branch
           cat > website-deploy/README.md << 'EOF'
