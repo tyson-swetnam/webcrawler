@@ -974,33 +974,40 @@ class HTMLReportGenerator:
         stub_count = 0
         topic_counts = {}
 
+        # Regex to match article-row + article-detail pairs from generated HTML.
+        # Works on both old format (no data-title attrs) and new format.
+        article_block_re = re.compile(
+            r'<div class="article-row[^"]*"[^>]*data-category="([^"]*)"[^>]*>'
+            r'.*?<a class="headline-link" href="([^"]*)"[^>]*>([^<]*)</a>'
+            r'.*?<span class="univ-label">([^<]*)</span>'
+            r'.*?<div class="article-detail[^"]*"[^>]*>(.*?)</div>\s*</div>',
+            re.DOTALL
+        )
+        summary_re = re.compile(r'<div class="summary">([^<]*(?:<[^/][^<]*)*?)</div>')
+        topic_pill_re = re.compile(r'<span class="topic-pill">([^<]+)</span>')
+
         for html_file in sorted(archive_dir.glob("20*.html")):
             date_str = html_file.stem  # e.g. "2026-03-07"
             content = html_file.read_text(encoding='utf-8')
 
-            # Parse articles from the well-structured generated HTML
-            # Each article is a pair: .article-row div followed by .article-detail div
-            row_pattern = re.compile(
-                r'<div class="article-row[^"]*"'
-                r'[^>]*data-category="([^"]*)"'
-                r'[^>]*data-title="([^"]*)"'
-                r'[^>]*data-university="([^"]*)"'
-                r'[^>]*data-summary="([^"]*)"'
-                r'[^>]*data-topics="([^"]*)"'
-                r'[^>]*>.*?'
-                r'<a class="headline-link" href="([^"]*)"',
-                re.DOTALL
-            )
-
-            for m in row_pattern.finditer(content):
+            for m in article_block_re.finditer(content):
                 cat = html_mod.unescape(m.group(1))
-                title = html_mod.unescape(m.group(2))
-                university = html_mod.unescape(m.group(3))
-                summary = html_mod.unescape(m.group(4))
-                topics_str = html_mod.unescape(m.group(5))
-                url = html_mod.unescape(m.group(6))
+                url = html_mod.unescape(m.group(2))
+                title = html_mod.unescape(m.group(3))
+                university = html_mod.unescape(m.group(4))
+                detail_html = m.group(5)
 
-                topics = [t.strip() for t in topics_str.split('|') if t.strip()]
+                # Extract summary from detail panel
+                summary = ''
+                sm = summary_re.search(detail_html)
+                if sm:
+                    # Strip any nested tags from summary
+                    summary = re.sub(r'<[^>]+>', '', sm.group(1)).strip()
+                    if len(summary) > 200:
+                        summary = summary[:200].rsplit(' ', 1)[0] + '...'
+
+                # Extract topics from detail panel
+                topics = [html_mod.unescape(t) for t in topic_pill_re.findall(detail_html)]
 
                 # Track topic frequency
                 for t in topics:

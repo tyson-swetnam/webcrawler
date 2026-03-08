@@ -1,14 +1,14 @@
 {
   "stats": {
-    "urls_discovered": 5840,
-    "urls_crawled": 4941,
+    "urls_discovered": 5893,
+    "urls_crawled": 4990,
     "articles_extracted": 0,
     "duplicates_skipped": 0,
     "errors": 32,
     "mcp_fallback_attempts": 32,
     "mcp_fallback_successes": 29
   },
-  "sources_attempted": 77,
+  "sources_attempted": 78,
   "sources_succeeded": 0,
   "domain_stats": {
     "www.gmu.edu": {
@@ -21,15 +21,15 @@
       "articles": 0,
       "errors": 1
     },
-    "www.ou.edu": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 16
-    },
     "www.fau.edu": {
       "urls": 0,
       "articles": 0,
       "errors": 1
+    },
+    "www.ou.edu": {
+      "urls": 0,
+      "articles": 0,
+      "errors": 16
     },
     "www.umass.edu": {
       "urls": 0,
@@ -45,11 +45,11 @@
   "failed_domains": [
     "www.gmu.edu",
     "www.brandeis.edu",
-    "www.ou.edu",
     "www.fau.edu",
+    "www.ou.edu",
     "www.umass.edu",
     "www.uthouston.edu"
   ],
   "closed_reason": "finished",
-  "timestamp": "2026-03-08T00:32:10.124487+00:00"
+  "timestamp": "2026-03-08T03:51:44.748706+00:00"
 }
