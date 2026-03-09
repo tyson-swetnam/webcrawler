@@ -279,49 +279,6 @@
       "news_url": "https://news.nau.edu"
     },
     {
-      "id": 7,
-      "name": "University of Arizona",
-      "abbreviation": "UA",
-      "canonical_name": "University of Arizona",
-      "location": {
-        "city": "Tucson",
-        "state": "AZ",
-        "state_full": "Arizona",
-        "region": "West",
-        "country": "US"
-      },
-      "classification": {
-        "carnegie_r1": true,
-        "institution_type": "public",
-        "year_classified": 2025
-      },
-      "domains": {
-        "primary": "arizona.edu",
-        "news_domains": [
-          "news.arizona.edu"
-        ]
-      },
-      "news_sources": [
-        {
-          "type": "primary",
-          "url": "https://news.arizona.edu",
-          "description": "University of Arizona official news and press releases",
-          "verified": true,
-          "crawl_priority": 100,
-          "last_verified": "2025-11-05T13:44:26.950973+00:00",
-          "rss_feed": "https://news.arizona.edu/rss.xml"
-        }
-      ],
-      "data_quality": {
-        "completeness_score": 0.5,
-        "last_updated": "2025-11-02T07:37:25Z",
-        "verified_by": "automated_generation",
-        "verification_status": "verified",
-        "needs_manual_review": false,
-        "last_verified": "2025-11-03T01:35:02.045845+00:00"
-      }
-    },
-    {
       "id": 8,
       "name": "California Institute of Technology",
       "abbreviation": "Caltech",
