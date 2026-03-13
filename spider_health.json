@@ -1,12 +1,12 @@
 {
   "stats": {
-    "urls_discovered": 5874,
-    "urls_crawled": 4939,
+    "urls_discovered": 5983,
+    "urls_crawled": 5036,
     "articles_extracted": 0,
     "duplicates_skipped": 0,
-    "errors": 31,
-    "mcp_fallback_attempts": 31,
-    "mcp_fallback_successes": 25
+    "errors": 33,
+    "mcp_fallback_attempts": 33,
+    "mcp_fallback_successes": 27
   },
   "sources_attempted": 78,
   "sources_succeeded": 0,
@@ -34,7 +34,7 @@
     "www.umass.edu": {
       "urls": 0,
       "articles": 0,
-      "errors": 2
+      "errors": 4
     },
     "www.uthouston.edu": {
       "urls": 0,
@@ -51,5 +51,5 @@
     "www.uthouston.edu"
   ],
   "closed_reason": "finished",
-  "timestamp": "2026-03-12T15:45:50.109816+00:00"
+  "timestamp": "2026-03-13T15:41:08.228173+00:00"
 }
