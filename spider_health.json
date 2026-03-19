@@ -1,21 +1,16 @@
 {
   "stats": {
-    "urls_discovered": 5908,
-    "urls_crawled": 4995,
+    "urls_discovered": 5899,
+    "urls_crawled": 4968,
     "articles_extracted": 0,
     "duplicates_skipped": 0,
-    "errors": 32,
+    "errors": 31,
     "mcp_fallback_attempts": 31,
     "mcp_fallback_successes": 28
   },
   "sources_attempted": 78,
   "sources_succeeded": 0,
   "domain_stats": {
-    "news.vt.edu": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 1
-    },
     "www.gmu.edu": {
       "urls": 0,
       "articles": 0,
@@ -48,7 +43,6 @@
     }
   },
   "failed_domains": [
-    "news.vt.edu",
     "www.gmu.edu",
     "www.brandeis.edu",
     "www.fau.edu",
@@ -57,5 +51,5 @@
     "www.uthouston.edu"
   ],
   "closed_reason": "finished",
-  "timestamp": "2026-03-18T15:53:46.856924+00:00"
+  "timestamp": "2026-03-19T15:42:25.530446+00:00"
 }
