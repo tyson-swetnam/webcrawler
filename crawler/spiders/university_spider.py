@@ -109,9 +109,13 @@ class UniversityNewsSpider(scrapy.Spider):
                 r'/research/',
                 r'/stories?/',
                 r'/articles?/',
-                r'/\d{4}/\d{2}/',
+                r'/\d{4}/\d{2}/',   # year/month URLs (e.g. /2026/03/)
+                r'/\d{4}/[a-z]',    # year/slug URLs — MIT style (e.g. /2026/generative-ai-...)
                 r'/posts?/',
                 r'/features?/',
+                r'/today/',          # CMU Today (today.cmu.edu/today/story/...)
+                r'/gazette/',        # Harvard Gazette
+                r'/releases?/',
             ),
             deny=(
                 r'/(tag|category|author|archive|section|search|login|admin|calendar|events|galleries)/',

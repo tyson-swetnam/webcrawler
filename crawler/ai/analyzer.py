@@ -1,8 +1,8 @@
 """
 Multi-AI analysis engine for article classification and summarization.
 
-This module orchestrates parallel AI analysis using Claude (Sonnet and Haiku) and OpenAI
-to provide high-quality, consensus-based article summaries and relevance scoring.
+Uses Claude Sonnet as the primary deep-analysis model and Claude Haiku
+for fast validation/filtering. OpenAI has been removed.
 """
 
 import asyncio
@@ -12,7 +12,6 @@ from datetime import datetime
 import logging
 
 from anthropic import AsyncAnthropic
-from openai import AsyncOpenAI
 
 from crawler.config.settings import settings
 
@@ -21,108 +20,85 @@ logger = logging.getLogger(__name__)
 
 class MultiAIAnalyzer:
     """
-    Orchestrate parallel AI analysis across multiple providers.
+    Orchestrate parallel AI analysis using Claude Sonnet + Claude Haiku.
 
-    Uses Claude Sonnet-4-5 as primary analyzer with Claude Haiku and OpenAI
-    for additional validation and consensus building.
+    Sonnet handles deep analysis; Haiku provides fast cross-validation.
+    Confidence = 0.5 (Haiku only), 1.0 (both succeed).
     """
 
     def __init__(self):
-        """Initialize AI API clients."""
+        """Initialize Anthropic client (single client for both Sonnet and Haiku)."""
         try:
-            # Initialize Anthropic Claude (single client for both Sonnet and Haiku)
             self.claude = AsyncAnthropic(api_key=settings.anthropic_api_key)
-
-            # Initialize OpenAI
-            self.openai = AsyncOpenAI(api_key=settings.openai_api_key)
-
-            logger.info("Initialized MultiAIAnalyzer with Claude (Sonnet + Haiku) and OpenAI")
-
+            logger.info(
+                f"Initialized MultiAIAnalyzer with Claude Sonnet ({settings.claude_model}) "
+                f"+ Haiku ({settings.claude_haiku_model})"
+            )
         except Exception as e:
-            logger.error(f"Failed to initialize AI clients: {e}")
+            logger.error(f"Failed to initialize AI client: {e}")
             raise
 
     async def analyze_article(self, article: Dict[str, Any]) -> Dict[str, Any]:
         """
-        Analyze single article with all AI providers in parallel.
-
-        Args:
-            article: Article dictionary with title, content, etc.
+        Analyze a single article with Sonnet + Haiku in parallel.
 
         Returns:
-            Dictionary with results from all providers plus consensus
+            Dictionary with claude, haiku, and consensus results.
         """
         start_time = datetime.utcnow()
 
-        # Create analysis tasks for parallel execution
-        tasks = [
+        claude_result, haiku_result = await asyncio.gather(
             self._safe_claude_analyze(article),
-            self._safe_openai_analyze(article),
-            self._safe_haiku_analyze(article)
-        ]
+            self._safe_haiku_analyze(article),
+        )
 
-        # Execute in parallel
-        claude_result, openai_result, haiku_result = await asyncio.gather(*tasks)
+        consensus = self.build_consensus(claude_result, haiku_result)
 
-        # Build consensus
-        consensus = self.build_consensus(claude_result, openai_result, haiku_result)
-
-        # Calculate processing time
         processing_time = (datetime.utcnow() - start_time).total_seconds() * 1000
 
         result = {
             'article_id': article.get('article_id'),
             'claude': claude_result,
-            'openai': openai_result,
+            'openai': None,   # kept for DB schema compatibility
             'haiku': haiku_result,
             'consensus': consensus,
-            'processing_time_ms': int(processing_time)
+            'processing_time_ms': int(processing_time),
         }
 
         logger.info(
             f"Analyzed article {article.get('article_id')} in {processing_time:.0f}ms "
-            f"(providers: {consensus['providers_count']}/3)"
+            f"(providers: {consensus['providers_count']}/2)"
         )
-
         return result
 
+    # ------------------------------------------------------------------ #
+    #  Safe wrappers
+    # ------------------------------------------------------------------ #
+
     async def _safe_claude_analyze(self, article: Dict[str, Any]) -> Optional[Dict[str, Any]]:
-        """Safely execute Claude analysis with error handling."""
         try:
             return await self.claude_analyze(article)
         except Exception as e:
-            logger.error(f"Claude analysis failed: {e}")
-            return None
-
-    async def _safe_openai_analyze(self, article: Dict[str, Any]) -> Optional[Dict[str, Any]]:
-        """Safely execute OpenAI analysis with error handling."""
-        try:
-            return await self.openai_analyze(article)
-        except Exception as e:
-            logger.error(f"OpenAI analysis failed: {e}")
+            logger.error(f"Claude Sonnet analysis failed: {e}")
             return None
 
     async def _safe_haiku_analyze(self, article: Dict[str, Any]) -> Optional[Dict[str, Any]]:
-        """Safely execute Claude Haiku analysis with error handling."""
         try:
             return await self.haiku_analyze(article)
         except Exception as e:
             logger.error(f"Claude Haiku analysis failed: {e}")
             return None
 
+    # ------------------------------------------------------------------ #
+    #  Claude Sonnet — deep analysis
+    # ------------------------------------------------------------------ #
+
     async def claude_analyze(self, article: Dict[str, Any]) -> Dict[str, Any]:
         """
-        Deep analysis with Claude Sonnet-4-5.
+        Deep analysis with Claude Sonnet.
 
         Provides comprehensive summary, key findings, and relevance scoring.
-
-        Args:
-            article: Article data
-
-        Returns:
-            Analysis results from Claude
         """
-        # Truncate content to fit token limits
         content = article.get('content', '')[:4000]
 
         prompt = f"""Analyze this AI research article and provide:
@@ -151,12 +127,10 @@ PARTNERSHIP_IMPACT: [1-10, significance of new partnerships between academia, go
             model=settings.claude_model,
             max_tokens=settings.max_ai_tokens,
             temperature=0.3,
-            messages=[{"role": "user", "content": prompt}]
+            messages=[{"role": "user", "content": prompt}],
         )
 
         response_text = message.content[0].text
-
-        # Parse structured response
         parsed = self._parse_claude_response(response_text)
 
         return {
@@ -170,7 +144,7 @@ PARTNERSHIP_IMPACT: [1-10, significance of new partnerships between academia, go
                 'partnership': parsed.get('partnership_impact', 1.0),
             },
             'raw_response': response_text,
-            'model': settings.claude_model
+            'model': settings.claude_model,
         }
 
     def _parse_claude_response(self, response: str) -> Dict[str, Any]:
@@ -229,109 +203,24 @@ PARTNERSHIP_IMPACT: [1-10, significance of new partnerships between academia, go
                 current_section = None
             elif line.startswith('-') and current_section == 'key_points':
                 parsed['key_points'].append(line[1:].strip())
-            elif current_section == 'summary' and line and not line.startswith(('KEY_POINTS', 'RELEVANCE', 'AI_RELATED', 'SCIENTIFIC_IMPACT', 'FINANCIAL_IMPACT', 'PARTNERSHIP_IMPACT')):
+            elif (
+                current_section == 'summary'
+                and line
+                and not line.startswith(
+                    ('KEY_POINTS', 'RELEVANCE', 'AI_RELATED',
+                     'SCIENTIFIC_IMPACT', 'FINANCIAL_IMPACT', 'PARTNERSHIP_IMPACT')
+                )
+            ):
                 parsed['summary'] += ' ' + line
 
         return parsed
 
-    async def openai_analyze(self, article: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        Categorization and summarization with GPT-4.
-
-        Args:
-            article: Article data
-
-        Returns:
-            Analysis results from OpenAI
-        """
-        content = article.get('content', '')[:4000]
-
-        # Build request parameters (some models like GPT-5 don't support temperature)
-        request_params = {
-            "model": settings.openai_model,
-            "messages": [
-                {
-                    "role": "system",
-                    "content": "You are an AI research analyst. Categorize articles and provide concise summaries."
-                },
-                {
-                    "role": "user",
-                    "content": f"""Analyze this article:
-
-Title: {article.get('title', 'Untitled')}
-Content: {content}
-
-Provide:
-1. A 2-sentence summary
-2. Primary category (Machine Learning, NLP, Computer Vision, Robotics, AI Ethics, or Other)
-3. Is this AI-related? (yes/no)"""
-                }
-            ],
-            "max_tokens": 500
-        }
-
-        # Only add temperature for models that support it (not GPT-5)
-        if not settings.openai_model.startswith("gpt-5"):
-            request_params["temperature"] = 0.3
-
-        response = await self.openai.chat.completions.create(**request_params)
-
-        response_text = response.choices[0].message.content
-
-        # Parse category and AI-related flag
-        category = self._extract_category(response_text)
-        is_ai_related = self._parse_openai_ai_related(response_text)
-
-        return {
-            'summary': response_text,
-            'category': category,
-            'is_ai_related': is_ai_related,
-            'model': settings.openai_model
-        }
-
-    def _extract_category(self, text: str) -> str:
-        """Extract category from OpenAI response."""
-        categories = [
-            'Machine Learning',
-            'NLP',
-            'Computer Vision',
-            'Robotics',
-            'AI Ethics'
-        ]
-
-        text_lower = text.lower()
-        for category in categories:
-            if category.lower() in text_lower:
-                return category
-
-        return 'Other'
-
-    def _parse_openai_ai_related(self, response_text: str) -> bool:
-        """Parse AI-related flag from OpenAI structured response.
-
-        Looks for yes/no after "3." or "AI-related" markers instead of
-        naive substring matching which false-positives on words like
-        "know", "innovation", "technology".
-        """
-        match = re.search(
-            r'(?:3\.\s*(?:Is this )?)?AI[- ]related.*?\b(yes|no)\b',
-            response_text, re.IGNORECASE
-        )
-        if match:
-            return match.group(1).lower() == 'yes'
-        # Conservative default: treat as AI-related to avoid filtering out
-        return True
+    # ------------------------------------------------------------------ #
+    #  Claude Haiku — fast validation
+    # ------------------------------------------------------------------ #
 
     async def haiku_analyze(self, article: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        Fast processing with Claude Haiku.
-
-        Args:
-            article: Article data
-
-        Returns:
-            Analysis results from Claude Haiku
-        """
+        """Fast processing with Claude Haiku for cross-validation."""
         content = article.get('content', '')[:3000]
 
         prompt = f"""Briefly summarize this AI article in 2-3 sentences and indicate if it's truly AI-related:
@@ -347,12 +236,11 @@ AI_RELATED: [yes/no]"""
             model=settings.claude_haiku_model,
             max_tokens=settings.max_haiku_tokens,
             temperature=0.3,
-            messages=[{"role": "user", "content": prompt}]
+            messages=[{"role": "user", "content": prompt}],
         )
 
         response_text = message.content[0].text
 
-        # Parse response
         is_ai_related = True
         summary = response_text
 
@@ -366,121 +254,115 @@ AI_RELATED: [yes/no]"""
         return {
             'summary': summary,
             'is_ai_related': is_ai_related,
-            'model': settings.claude_haiku_model
+            'model': settings.claude_haiku_model,
         }
+
+    # ------------------------------------------------------------------ #
+    #  Consensus builder
+    # ------------------------------------------------------------------ #
 
     def build_consensus(
         self,
         claude_result: Optional[Dict],
-        openai_result: Optional[Dict],
-        haiku_result: Optional[Dict]
+        haiku_result: Optional[Dict],
+        # kept for call-site compatibility; ignored
+        openai_result: Optional[Dict] = None,
     ) -> Dict[str, Any]:
         """
-        Synthesize results from multiple AI providers.
+        Synthesize results from Claude Sonnet + Haiku.
 
-        Args:
-            claude_result: Claude Sonnet analysis results
-            openai_result: OpenAI analysis results
-            haiku_result: Claude Haiku analysis results
-
-        Returns:
-            Consensus summary and metadata
+        Confidence:
+          - 1.0 → both providers succeeded and agree
+          - 0.8 → both succeeded but disagree (majority wins)
+          - 0.5 → only one provider succeeded
+          - 0.0 → all failed
         """
         summaries = []
         is_ai_votes = []
         relevance_scores = []
 
-        # Collect successful results
         if claude_result:
             summaries.append(('claude', claude_result.get('summary', '')))
             is_ai_votes.append(claude_result.get('is_ai_related', True))
             relevance_scores.append(claude_result.get('relevance_score', 5))
 
-        if openai_result:
-            summaries.append(('openai', openai_result.get('summary', '')))
-            is_ai_votes.append(openai_result.get('is_ai_related', True))
-
         if haiku_result:
             summaries.append(('haiku', haiku_result.get('summary', '')))
             is_ai_votes.append(haiku_result.get('is_ai_related', True))
 
-        # Determine consensus summary (prefer Claude)
-        consensus_summary = "Analysis unavailable"
-        if summaries:
-            # Use Claude if available, otherwise first available
-            for provider, summary in summaries:
-                if provider == 'claude':
-                    consensus_summary = summary
-                    break
-            else:
-                consensus_summary = summaries[0][1]
-
-        # If no providers succeeded, return explicitly uncertain results
         if not summaries:
             logger.warning("All AI providers failed — returning uncertain consensus")
             return {
-                'summary': consensus_summary,
+                'summary': 'Analysis unavailable',
                 'is_ai_related': None,
                 'relevance_score': 0,
                 'providers_count': 0,
                 'confidence': 0.0,
             }
 
-        # Determine AI-related consensus (majority vote)
+        # Prefer Claude Sonnet summary; fall back to Haiku
+        consensus_summary = next(
+            (s for p, s in summaries if p == 'claude'),
+            summaries[0][1]
+        )
+
+        # Majority vote on AI-related
         is_ai_related = sum(is_ai_votes) > len(is_ai_votes) / 2
 
-        # Average relevance score
-        avg_relevance = sum(relevance_scores) / len(relevance_scores) if relevance_scores else 5.0
+        # Agreement bonus
+        providers_count = len(summaries)
+        if providers_count == 2:
+            agreement = is_ai_votes[0] == is_ai_votes[1]
+            confidence = 1.0 if agreement else 0.8
+        else:
+            confidence = 0.5  # single provider
+
+        avg_relevance = (
+            sum(relevance_scores) / len(relevance_scores) if relevance_scores else 5.0
+        )
 
         return {
             'summary': consensus_summary,
             'is_ai_related': is_ai_related,
             'relevance_score': avg_relevance,
-            'providers_count': len(summaries),
-            'confidence': len(summaries) / 3.0  # 0.33, 0.67, or 1.0
+            'providers_count': providers_count,
+            'confidence': confidence,
         }
+
+    # ------------------------------------------------------------------ #
+    #  Batch + quick-check helpers
+    # ------------------------------------------------------------------ #
 
     async def batch_analyze(
         self,
         articles: List[Dict[str, Any]],
-        max_concurrent: int = 5
+        max_concurrent: int = 5,
     ) -> List[Dict[str, Any]]:
-        """
-        Analyze multiple articles with rate limiting.
-
-        Args:
-            articles: List of article dictionaries
-            max_concurrent: Maximum concurrent API requests
-
-        Returns:
-            List of analysis results
-        """
+        """Analyze multiple articles with rate limiting."""
         semaphore = asyncio.Semaphore(max_concurrent)
 
         async def analyze_with_limit(article):
             async with semaphore:
                 return await self.analyze_article(article)
 
-        tasks = [analyze_with_limit(article) for article in articles]
-        results = await asyncio.gather(*tasks)
-
+        results = await asyncio.gather(*[analyze_with_limit(a) for a in articles])
         logger.info(f"Batch analyzed {len(articles)} articles")
         return results
 
     async def is_ai_related(self, article: Dict[str, Any]) -> bool:
-        """
-        Quick check if article is AI-related using Claude Haiku (fast and cost-effective).
-
-        Args:
-            article: Article data
-
-        Returns:
-            True if AI-related, False otherwise
-        """
+        """Quick AI-relevance check using Claude Haiku."""
         try:
             result = await self.haiku_analyze(article)
             return result.get('is_ai_related', False)
         except Exception as e:
             logger.error(f"AI relevance check failed: {e}")
-            # Default to True to avoid filtering out potential AI articles
-            return True
+            return True  # default to True to avoid false negatives
+
+    # ------------------------------------------------------------------ #
+    #  Stub kept for any call-sites that still reference openai_analyze
+    # ------------------------------------------------------------------ #
+
+    async def openai_analyze(self, article: Dict[str, Any]) -> None:  # type: ignore[override]
+        """OpenAI removed — returns None for backward compatibility."""
+        logger.debug("openai_analyze called but OpenAI is disabled; returning None")
+        return None

@@ -36,9 +36,12 @@ class Settings(BaseSettings):
         description="Redis connection string for caching"
     )
 
-    # AI API Keys (SecretStr prevents logging)
+    # AI API Keys
     anthropic_api_key: str = Field(..., description="Anthropic Claude API key")
-    openai_api_key: str = Field(..., description="OpenAI API key")
+    openai_api_key: str = Field(
+        default="",
+        description="OpenAI API key (unused — analysis uses Claude only)"
+    )
 
     # AI API Configuration
     claude_model: str = Field(
@@ -47,9 +50,12 @@ class Settings(BaseSettings):
     )
     claude_haiku_model: str = Field(
         default="claude-haiku-4-5-20251001",
-        description="Claude Haiku model to use for fast processing"
+        description="Claude Haiku model to use for fast validation"
     )
-    openai_model: str = Field(default="gpt-5-search-api-2025-10-14", description="OpenAI model to use")
+    openai_model: str = Field(
+        default="",
+        description="OpenAI model (unused — kept for config compatibility)"
+    )
     max_ai_tokens: int = Field(default=1024, description="Maximum tokens for AI responses")
     max_haiku_tokens: int = Field(default=512, description="Maximum tokens for Haiku responses")
 

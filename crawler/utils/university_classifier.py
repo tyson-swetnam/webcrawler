@@ -98,7 +98,15 @@ class UniversityClassifier:
             data = json.load(f)
 
         universities = data.get('universities', [])
-        return {univ['name'].lower() for univ in universities}
+        names = set()
+        for univ in universities:
+            names.add(univ['name'].lower())
+            # Also index by canonical_name and abbreviation for fuzzy robustness
+            if univ.get('canonical_name'):
+                names.add(univ['canonical_name'].lower())
+            if univ.get('abbreviation'):
+                names.add(univ['abbreviation'].lower())
+        return names
 
     def _load_r1_institutions(self) -> Set[str]:
         """Load R1 institution names from r1_universities.json"""

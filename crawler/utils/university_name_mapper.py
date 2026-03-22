@@ -80,6 +80,63 @@ class UniversityNameMapper:
 
         logger.info(f"Loaded {len(self.hostname_to_name)} hostname mappings from {total_loaded} sources")
 
+        # High-priority overrides — applied last so they always win.
+        # Needed when a lab subdomain (e.g. ll.mit.edu) gets processed before
+        # the main news subdomain and pollutes the base-domain mapping.
+        OVERRIDES: Dict[str, str] = {
+            # MIT
+            "news.mit.edu": "Massachusetts Institute of Technology",
+            "www.mit.edu": "Massachusetts Institute of Technology",
+            "mit.edu": "Massachusetts Institute of Technology",
+            "www.csail.mit.edu": "Massachusetts Institute of Technology",
+            "csail.mit.edu": "Massachusetts Institute of Technology",
+            "www.eecs.mit.edu": "Massachusetts Institute of Technology",
+            # Stanford
+            "news.stanford.edu": "Stanford University",
+            "stanford.edu": "Stanford University",
+            "hai.stanford.edu": "Stanford University",
+            "engineering.stanford.edu": "Stanford University",
+            # CMU
+            "www.cmu.edu": "Carnegie Mellon University",
+            "cmu.edu": "Carnegie Mellon University",
+            "today.cmu.edu": "Carnegie Mellon University",
+            "news.cmu.edu": "Carnegie Mellon University",
+            "www.cs.cmu.edu": "Carnegie Mellon University",
+            # Berkeley
+            "news.berkeley.edu": "University of California-Berkeley",
+            "berkeley.edu": "University of California-Berkeley",
+            # Caltech
+            "www.caltech.edu": "California Institute of Technology",
+            "caltech.edu": "California Institute of Technology",
+            # Georgia Tech
+            "news.gatech.edu": "Georgia Institute of Technology",
+            "gatech.edu": "Georgia Institute of Technology",
+            # UMich
+            "news.umich.edu": "University of Michigan-Ann Arbor",
+            "umich.edu": "University of Michigan-Ann Arbor",
+            # Yale
+            "news.yale.edu": "Yale University",
+            "yale.edu": "Yale University",
+            # Cornell
+            "news.cornell.edu": "Cornell University",
+            "cornell.edu": "Cornell University",
+            # Columbia
+            "news.columbia.edu": "Columbia University in the City of New York",
+            "columbia.edu": "Columbia University in the City of New York",
+            # UW
+            "www.washington.edu": "University of Washington-Seattle Campus",
+            "washington.edu": "University of Washington-Seattle Campus",
+            "cs.washington.edu": "University of Washington-Seattle Campus",
+            # UIUC
+            "news.illinois.edu": "University of Illinois Urbana-Champaign",
+            "illinois.edu": "University of Illinois Urbana-Champaign",
+            # Harvard
+            "news.harvard.edu": "Harvard University",
+            "harvard.edu": "Harvard University",
+            "www.harvard.edu": "Harvard University",
+        }
+        self.hostname_to_name.update(OVERRIDES)
+
     def _process_entries(self, entries: list, name_field: str) -> int:
         """
         Process a list of entries and add hostname mappings.
