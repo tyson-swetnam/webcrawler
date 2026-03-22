@@ -91,17 +91,37 @@ def normalize_url(url: str) -> str:
 
 def check_url_seen(db: Session, url_hash: str) -> bool:
     """
-    Check if URL hash exists in database.
+    Check if a URL has already been successfully crawled and yielded an article.
+
+    Returns True only when the URL exists AND has a linked article with content —
+    meaning we already successfully extracted it. URLs that were crawled but
+    failed extraction (status='failed'/'excluded', no article) return False
+    so they get re-attempted on the next run.
 
     Args:
         db: Database session
         url_hash: SHA-256 hash of URL
 
     Returns:
-        True if URL already exists, False otherwise
+        True if URL was already successfully extracted, False otherwise
     """
-    exists = db.query(URL).filter(URL.url_hash == url_hash).first() is not None
-    return exists
+    from crawler.db.models import Article
+    from sqlalchemy import exists as sa_exists
+
+    url_obj = db.query(URL).filter(URL.url_hash == url_hash).first()
+    if url_obj is None:
+        return False  # Never seen
+
+    # If the URL failed or was excluded, allow re-attempt
+    if url_obj.status in ('failed', 'excluded', 'pending', None):
+        return False
+
+    # URL was crawled — check if we actually got an article out of it
+    has_article = db.query(
+        sa_exists().where(Article.url_id == url_obj.url_id)
+    ).scalar()
+
+    return bool(has_article)
 
 
 def check_content_duplicate(db: Session, content_hash: str) -> Optional[Article]:

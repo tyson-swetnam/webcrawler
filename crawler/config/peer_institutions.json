@@ -810,18 +810,19 @@
       },
       "news_sources": [
         {
-          "type": "primary",
+          "type": "secondary",
           "url": "https://news.stanford.edu",
           "description": "Stanford News Service",
-          "verified": true,
-          "crawl_priority": 300
+          "verified": false,
+          "crawl_priority": 100,
+          "notes": "Blocked by Cloudflare \u2014 use HAI feed instead"
         },
         {
-          "type": "secondary",
+          "type": "primary",
           "url": "https://hai.stanford.edu/news",
-          "description": "Stanford HAI News",
+          "description": "Stanford HAI News (news.stanford.edu blocks crawlers)",
           "verified": true,
-          "crawl_priority": 280
+          "crawl_priority": 300
         }
       ]
     },
@@ -933,7 +934,8 @@
           "url": "https://news.gatech.edu",
           "description": "Georgia Tech News Center",
           "verified": true,
-          "crawl_priority": 280
+          "crawl_priority": 280,
+          "rss_feed": "https://news.gatech.edu/rss.xml"
         }
       ]
     },

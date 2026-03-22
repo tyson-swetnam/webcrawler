@@ -6,7 +6,13 @@
     "total_institutions": 102,
     "date_compiled": "2026-02-18",
     "last_updated": "2026-02-18T00:00:00+00:00",
-    "regions": ["Europe", "Asia", "Australia/NZ", "South America", "Africa"]
+    "regions": [
+      "Europe",
+      "Asia",
+      "Australia/NZ",
+      "South America",
+      "Africa"
+    ]
   },
   "universities": [
     {
@@ -253,9 +259,10 @@
           "type": "primary",
           "url": "https://www.turing.ac.uk/news",
           "description": "Alan Turing Institute news and press releases",
-          "verified": true,
+          "verified": false,
           "crawl_priority": 200,
-          "last_verified": "2026-02-18T00:00:00+00:00"
+          "last_verified": "2026-02-18T00:00:00+00:00",
+          "notes": "Disabled 2026-03-21: 403 errors on all requests (rate-limiting/blocking). Re-verify before re-enabling."
         }
       ]
     },
