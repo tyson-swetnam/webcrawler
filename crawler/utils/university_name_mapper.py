@@ -134,6 +134,14 @@ class UniversityNameMapper:
             "news.harvard.edu": "Harvard University",
             "harvard.edu": "Harvard University",
             "www.harvard.edu": "Harvard University",
+            # University of Arizona
+            "news.arizona.edu": "University of Arizona",
+            "arizona.edu": "University of Arizona",
+            "www.arizona.edu": "University of Arizona",
+            # University of New Mexico
+            "news.unm.edu": "University of New Mexico-Main Campus",
+            "unm.edu": "University of New Mexico-Main Campus",
+            "www.unm.edu": "University of New Mexico-Main Campus",
         }
         self.hostname_to_name.update(OVERRIDES)
 

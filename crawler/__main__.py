@@ -479,7 +479,24 @@ async def run_crawl_with_analysis() -> bool:
                             relevance_score=analysis["consensus"].get("relevance_score"),
                             processing_time_ms=analysis.get("processing_time_ms"),
                         )
-                        article.is_ai_related = analysis["consensus"]["is_ai_related"]
+                        ai_related = analysis["consensus"]["is_ai_related"]
+                        # Keyword backstop — if Claude says no but title/content
+                        # contains clear AI terms, override to True
+                        if not ai_related:
+                            ai_keywords = [
+                                'artificial intelligence', ' ai ', ' ai,', ' ai.', ' ai:', '(ai)',
+                                'machine learning', 'deep learning', 'neural network',
+                                'large language model', 'llm', 'chatgpt', 'generative ai',
+                                'natural language processing', 'nlp', 'computer vision',
+                                'robotics', 'autonomous', 'algorithm'
+                            ]
+                            text_check = (
+                                (article.title or '') + ' ' + (article.content or '')
+                            ).lower()
+                            if any(kw in text_check for kw in ai_keywords):
+                                ai_related = True
+                                logger.info(f"Keyword override: marking '{article.title}' as AI-related")
+                        article.is_ai_related = ai_related
                         article.ai_confidence_score = analysis["consensus"]["confidence"]
                         article.last_analyzed = datetime.now(timezone.utc)
                         db.add(ai_analysis)
@@ -578,8 +595,23 @@ async def analyze_articles(articles, db) -> list:
                 processing_time_ms=analysis.get('processing_time_ms')
             )
 
-            # Update article with AI results
-            article.is_ai_related = analysis['consensus']['is_ai_related']
+            # Update article with AI results (keyword backstop override)
+            ai_related = analysis['consensus']['is_ai_related']
+            if not ai_related:
+                ai_keywords = [
+                    'artificial intelligence', ' ai ', ' ai,', ' ai.', ' ai:', '(ai)',
+                    'machine learning', 'deep learning', 'neural network',
+                    'large language model', 'llm', 'chatgpt', 'generative ai',
+                    'natural language processing', 'nlp', 'computer vision',
+                    'robotics', 'autonomous', 'algorithm'
+                ]
+                text_check = (
+                    (article.title or '') + ' ' + (article.content or '')
+                ).lower()
+                if any(kw in text_check for kw in ai_keywords):
+                    ai_related = True
+                    logger.info(f"Keyword override: marking '{article.title}' as AI-related")
+            article.is_ai_related = ai_related
             article.ai_confidence_score = analysis['consensus']['confidence']
             article.last_analyzed = datetime.now(timezone.utc)
 

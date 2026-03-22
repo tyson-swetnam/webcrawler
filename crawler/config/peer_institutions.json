@@ -15,7 +15,7 @@
   "universities": [
     {
       "id": 1,
-      "name": "The University of Arizona",
+      "name": "University of Arizona",
       "abbreviation": "UArizona",
       "canonical_name": "University of Arizona",
       "is_baseline": true,
@@ -37,7 +37,8 @@
           "description": "The University of Arizona official news and press releases",
           "verified": true,
           "crawl_priority": 200,
-          "last_verified": "2025-11-05T13:44:26.945415+00:00"
+          "last_verified": "2025-11-05T13:44:26.945415+00:00",
+          "rss_feed": "https://news.arizona.edu/rss.xml"
         }
       ]
     },
