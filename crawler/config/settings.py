@@ -108,17 +108,17 @@ class Settings(BaseSettings):
 
     # Notification configuration
     slack_webhook_url: str = Field(
-        ...,
-        description="Slack webhook URL for notifications"
+        default="",
+        description="Slack webhook URL for notifications (unused — notifications disabled)"
     )
-    email_from: str = Field(..., description="Email sender address")
+    email_from: str = Field(default="", description="Email sender address (unused)")
     email_to: List[str] = Field(
-        ...,
-        description="List of email recipient addresses"
+        default=[],
+        description="List of email recipient addresses (unused)"
     )
     smtp_host: str = Field(default="smtp.gmail.com", description="SMTP server hostname")
     smtp_port: int = Field(default=465, description="SMTP server port")
-    smtp_password: str = Field(..., description="SMTP password (use app password for Gmail)")
+    smtp_password: str = Field(default="", description="SMTP password (unused)")
     smtp_use_ssl: bool = Field(default=True, description="Use SSL for SMTP connection")
 
     # Scheduling configuration
@@ -165,11 +165,11 @@ class Settings(BaseSettings):
         description="Enable AI analysis of articles"
     )
     enable_slack_notifications: bool = Field(
-        default=True,
+        default=False,
         description="Enable Slack notifications"
     )
     enable_email_notifications: bool = Field(
-        default=True,
+        default=False,
         description="Enable email notifications"
     )
 
