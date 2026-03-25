@@ -1,25 +1,20 @@
 {
   "stats": {
-    "urls_discovered": 5851,
-    "urls_crawled": 4940,
+    "urls_discovered": 5880,
+    "urls_crawled": 4955,
     "articles_extracted": 0,
     "duplicates_skipped": 0,
-    "errors": 32,
-    "mcp_fallback_attempts": 32,
-    "mcp_fallback_successes": 28
+    "errors": 34,
+    "mcp_fallback_attempts": 33,
+    "mcp_fallback_successes": 29
   },
-  "sources_attempted": 76,
+  "sources_attempted": 77,
   "sources_succeeded": 0,
   "domain_stats": {
     "www.gmu.edu": {
       "urls": 0,
       "articles": 0,
       "errors": 10
-    },
-    "www.albany.edu": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 1
     },
     "www.brandeis.edu": {
       "urls": 0,
@@ -39,23 +34,28 @@
     "www.umass.edu": {
       "urls": 0,
       "articles": 0,
-      "errors": 2
+      "errors": 3
     },
     "www.uthouston.edu": {
       "urls": 0,
       "articles": 0,
       "errors": 1
+    },
+    "www.uab.edu": {
+      "urls": 0,
+      "articles": 0,
+      "errors": 2
     }
   },
   "failed_domains": [
     "www.gmu.edu",
-    "www.albany.edu",
     "www.brandeis.edu",
     "www.fau.edu",
     "www.ou.edu",
     "www.umass.edu",
-    "www.uthouston.edu"
+    "www.uthouston.edu",
+    "www.uab.edu"
   ],
   "closed_reason": "finished",
-  "timestamp": "2026-03-24T15:51:30.078008+00:00"
+  "timestamp": "2026-03-25T15:53:44.607017+00:00"
 }
