@@ -1,14 +1,14 @@
 {
   "stats": {
-    "urls_discovered": 5975,
-    "urls_crawled": 5001,
+    "urls_discovered": 5883,
+    "urls_crawled": 4933,
     "articles_extracted": 0,
     "duplicates_skipped": 0,
-    "errors": 33,
-    "mcp_fallback_attempts": 33,
-    "mcp_fallback_successes": 29
+    "errors": 32,
+    "mcp_fallback_attempts": 32,
+    "mcp_fallback_successes": 28
   },
-  "sources_attempted": 78,
+  "sources_attempted": 76,
   "sources_succeeded": 0,
   "domain_stats": {
     "www.gmu.edu": {
@@ -39,7 +39,7 @@
     "www.umass.edu": {
       "urls": 0,
       "articles": 0,
-      "errors": 3
+      "errors": 2
     },
     "www.uthouston.edu": {
       "urls": 0,
@@ -57,5 +57,5 @@
     "www.uthouston.edu"
   ],
   "closed_reason": "finished",
-  "timestamp": "2026-03-31T15:53:57.476279+00:00"
+  "timestamp": "2026-04-01T15:56:27.742133+00:00"
 }
