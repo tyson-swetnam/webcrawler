@@ -1,14 +1,14 @@
 {
   "stats": {
-    "urls_discovered": 6019,
-    "urls_crawled": 5060,
+    "urls_discovered": 5960,
+    "urls_crawled": 5004,
     "articles_extracted": 0,
     "duplicates_skipped": 0,
-    "errors": 34,
+    "errors": 33,
     "mcp_fallback_attempts": 33,
     "mcp_fallback_successes": 29
   },
-  "sources_attempted": 77,
+  "sources_attempted": 76,
   "sources_succeeded": 0,
   "domain_stats": {
     "www.gmu.edu": {
@@ -21,17 +21,12 @@
       "articles": 0,
       "errors": 1
     },
-    "www.fau.edu": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 1
-    },
     "www.ou.edu": {
       "urls": 0,
       "articles": 0,
       "errors": 16
     },
-    "www.uh.edu": {
+    "www.fau.edu": {
       "urls": 0,
       "articles": 0,
       "errors": 1
@@ -41,12 +36,12 @@
       "articles": 0,
       "errors": 3
     },
-    "www.uthouston.edu": {
+    "www.uh.edu": {
       "urls": 0,
       "articles": 0,
       "errors": 1
     },
-    "www.du.edu": {
+    "www.uthouston.edu": {
       "urls": 0,
       "articles": 0,
       "errors": 1
@@ -55,13 +50,12 @@
   "failed_domains": [
     "www.gmu.edu",
     "www.brandeis.edu",
-    "www.fau.edu",
     "www.ou.edu",
-    "www.uh.edu",
+    "www.fau.edu",
     "www.umass.edu",
-    "www.uthouston.edu",
-    "www.du.edu"
+    "www.uh.edu",
+    "www.uthouston.edu"
   ],
   "closed_reason": "finished",
-  "timestamp": "2026-04-02T15:48:40.168900+00:00"
+  "timestamp": "2026-04-03T15:41:04.119173+00:00"
 }
