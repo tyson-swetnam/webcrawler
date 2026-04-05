@@ -327,12 +327,17 @@ async def _run_spider_subprocess(group_name: str, source_files: list[str]) -> bo
     try:
         stdout, stderr = await asyncio.wait_for(
             proc.communicate(),
-            timeout=3600,  # 60 min per group
+            timeout=1200,  # 20 min max per spider group
         )
     except asyncio.TimeoutError:
-        logger.error(f"[{group_name}] Spider timed out after 60 minutes")
-        proc.kill()
-        await proc.wait()
+        logger.warning(f"[{group_name}] Spider timed out after 20 minutes, terminating...")
+        proc.terminate()
+        try:
+            await asyncio.wait_for(proc.wait(), timeout=10)
+        except asyncio.TimeoutError:
+            logger.warning(f"[{group_name}] Spider did not terminate gracefully, killing...")
+            proc.kill()
+            await proc.wait()
         return False
 
     if stdout:
