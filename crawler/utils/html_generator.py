@@ -903,8 +903,22 @@ class HTMLReportGenerator:
         ensuring all generated archives appear in the index regardless of whether they
         contain AI-related articles.
         """
+        # Regex to extract article-row data attributes
+        article_row_re = re.compile(
+            r'<div class="article-row[^"]*"[^>]*'
+            r'data-category="([^"]*)"[^>]*'
+            r'data-title="([^"]*)"[^>]*'
+            r'data-university="([^"]*)"[^>]*'
+            r'data-summary="([^"]*)"[^>]*'
+            r'[^>]*>.*?'
+            r'<a class="headline-link" href="([^"]*)"',
+            re.DOTALL
+        )
+
         # Collect archive files from both output directories
         archive_files = {}
+        # articles_by_date: date_str -> list of {title, url, university, summary, category}
+        articles_by_date = {}
 
         for base_dir in [self.output_dir, self.github_pages_dir]:
             if base_dir is None:
@@ -928,6 +942,19 @@ class HTMLReportGenerator:
                     # Fallback: count article divs
                     count = len(re.findall(r'<div class="article">', content))
 
+                # Extract article metadata for search
+                articles = []
+                for m in article_row_re.finditer(content):
+                    articles.append({
+                        'date': date_str,
+                        'category': html_mod.unescape(m.group(1)),
+                        'title': html_mod.unescape(m.group(2)),
+                        'university': html_mod.unescape(m.group(3)),
+                        'summary': html_mod.unescape(m.group(4))[:200],
+                        'url': html_mod.unescape(m.group(5)),
+                    })
+                articles_by_date[date_str] = articles
+
                 try:
                     date_obj = datetime.strptime(date_str, '%Y-%m-%d').date()
                     archive_files[date_str] = (date_obj, count)
@@ -937,7 +964,11 @@ class HTMLReportGenerator:
         # Sort by date descending
         dates = sorted(archive_files.values(), key=lambda x: x[0], reverse=True)
 
-        html = self._render_archive_page(dates, popular_topics=popular_topics or [])
+        html = self._render_archive_page(
+            dates,
+            popular_topics=popular_topics or [],
+            articles_by_date=articles_by_date,
+        )
 
         archive_dir = self.output_dir / "archive"
         archive_dir.mkdir(exist_ok=True)
@@ -1587,8 +1618,10 @@ function clearSearch() {
 </body>
 </html>'''
 
-    def _render_archive_page(self, dates: List, popular_topics: list = None) -> str:
-        """Render archive index page with monthly groups and bar chart"""
+    def _render_archive_page(self, dates: List, popular_topics: list = None, articles_by_date: dict = None) -> str:
+        """Render archive index page with monthly groups, bar chart, and client-side search"""
+        articles_by_date = articles_by_date or {}
+
         # Group by month
         monthly_groups = OrderedDict()
         max_count = max((count for _, count in dates if count > 0), default=1)
@@ -1611,22 +1644,23 @@ function clearSearch() {
 
                 rows = []
                 for date_obj, count in entries:
-                    filename = f"{date_obj.strftime('%Y-%m-%d')}.html"
+                    date_str = date_obj.strftime('%Y-%m-%d')
+                    filename = f"{date_str}.html"
                     short_date = date_obj.strftime('%a, %b %d')
                     bar_width = (count / max_count * 100) if count > 0 else 0
                     row_class = "archive-row" if count > 0 else "archive-row archive-row-empty"
 
                     rows.append(f'''
-                <a href="{filename}" class="{row_class}">
+                <a href="{filename}" class="{row_class}" data-date="{date_str}">
                     <span class="archive-date">{short_date}</span>
                     <span class="archive-bar-container">
                         <span class="archive-bar" style="width: {bar_width:.1f}%"></span>
                     </span>
-                    <span class="archive-count">{count}</span>
+                    <span class="archive-count" data-orig-count="{count}">{count}</span>
                 </a>''')
 
                 groups_html.append(f'''
-            <div class="archive-month">
+            <div class="archive-month" data-month="{year}-{month:02d}">
                 <h2 class="month-heading">{heading}</h2>
                 {''.join(rows)}
             </div>''')
@@ -1641,32 +1675,56 @@ function clearSearch() {
         # Build popular topics pills
         topics_list = popular_topics or []
         topic_pills = ''.join(
-            f'<span class="topic-pill topic-pill-clickable" onclick="searchTopic(this)">{html_mod.escape(name)}</span>'
+            f'<span class="topic-pill topic-pill-clickable" onclick="archiveSearchTopic(this)">{html_mod.escape(name)}</span>'
             for name, _count in topics_list
         )
         topics_section = ''
         if topic_pills:
             topics_section = f'<div class="popular-topics">{topic_pills}</div>'
 
+        # Embed all article data as JSON for client-side search
+        # Build flat list: [{date, title, url, university, summary, category}, ...]
+        all_articles = []
+        for date_str_key in sorted(articles_by_date.keys(), reverse=True):
+            for art in articles_by_date[date_str_key]:
+                all_articles.append(art)
+        articles_json = json.dumps(all_articles, ensure_ascii=False, separators=(',', ':'))
+
         search_section = f'''
     <div class="search-section">
-        <div id="search"></div>
+        <div class="archive-search-bar">
+            <input type="text" id="archive-search-input" placeholder="Search articles across all dates..." autocomplete="off" aria-label="Search all archived articles">
+            <button id="archive-search-clear" class="clear-search-btn" style="display:none" onclick="archiveClearSearch()">&times;</button>
+        </div>
         {topics_section}
+    </div>
+    <div id="archive-search-results" style="display:none">
+        <div id="archive-results-header" class="archive-results-header"></div>
+        <div id="archive-results-list" class="archive-results-list"></div>
     </div>'''
 
-        # Pagefind CSS overrides
-        pagefind_css = """
-        /* ── Pagefind UI Overrides ── */
-        :root {
-            --pagefind-ui-scale: 0.9;
-            --pagefind-ui-primary: var(--color-text);
-            --pagefind-ui-text: var(--color-text-secondary);
-            --pagefind-ui-background: var(--color-bg);
-            --pagefind-ui-border: var(--color-border);
-            --pagefind-ui-tag: var(--color-surface-alt);
-            --pagefind-ui-border-width: 1px;
-            --pagefind-ui-border-radius: 6px;
-            --pagefind-ui-font: 'DM Sans', system-ui, sans-serif;
+        search_css = """
+        /* ── Archive Search ── */
+        .archive-search-bar {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0;
+        }
+        #archive-search-input {
+            width: 100%;
+            padding: 8px 36px 8px 12px;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            font-size: 14px;
+            font-family: inherit;
+            background: var(--color-bg);
+            color: var(--color-text);
+            outline: none;
+            transition: border-color var(--transition-fast);
+        }
+        #archive-search-input:focus {
+            border-color: var(--color-focus);
         }
         .search-section {
             margin-bottom: var(--space-xl);
@@ -1684,40 +1742,226 @@ function clearSearch() {
         .topic-pill-clickable:hover {
             background: var(--color-border);
         }
+        /* ── Search results panel ── */
+        .archive-results-header {
+            font-size: 13px;
+            color: var(--color-text-muted);
+            margin-bottom: var(--space-sm);
+            padding-bottom: var(--space-sm);
+            border-bottom: 1px solid var(--color-border);
+        }
+        .archive-results-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            margin-bottom: var(--space-xl);
+        }
+        .search-result-item {
+            display: grid;
+            grid-template-columns: 90px 1fr;
+            gap: var(--space-sm);
+            padding: 7px var(--space-md);
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            color: var(--color-text);
+            transition: background-color var(--transition-fast);
+        }
+        .search-result-item:hover {
+            background: var(--color-surface);
+        }
+        .search-result-date {
+            font-size: 12px;
+            color: var(--color-text-muted);
+            white-space: nowrap;
+            padding-top: 1px;
+        }
+        .search-result-title {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--color-link);
+            line-height: 1.4;
+        }
+        .search-result-title:hover {
+            text-decoration: underline;
+        }
+        .search-result-meta {
+            font-size: 12px;
+            color: var(--color-text-muted);
+            margin-top: 2px;
+        }
+        /* ── Archive row highlight on search ── */
+        .archive-row.search-match {
+            background: var(--color-surface);
+            outline: 1px solid var(--color-border);
+        }
+        .archive-row.search-match .archive-date {
+            color: var(--color-text);
+            font-weight: 600;
+        }
+        .archive-row.search-match .archive-bar {
+            background: var(--color-text);
+        }
+        .archive-row.search-no-match {
+            opacity: 0.25;
+        }
+        .search-badge {
+            display: inline-block;
+            background: var(--color-text);
+            color: var(--color-bg);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 1px 5px;
+            border-radius: 10px;
+            margin-left: 4px;
+            vertical-align: middle;
+        }
         """
 
-        # Pagefind JS — plain string to avoid f-string brace issues
-        pagefind_js = '''<script>
-window.addEventListener('DOMContentLoaded', function() {
-    if (typeof PagefindUI === 'undefined') return;
-    new PagefindUI({
-        element: "#search",
-        showSubResults: false,
-        showImages: false,
-        pageSize: 15,
-        excerptLength: 40,
-        openFilters: ["category"],
-        showEmptyFilters: false,
-        translations: {
-            placeholder: "Search AI news articles...",
-            zero_results: "No articles found for [SEARCH_TERM]"
-        },
-        processResult: function(result) {
-            if (result.meta && result.meta.url) {
-                result.url = result.meta.url;
-            }
-            return result;
-        }
-    });
-});
-function searchTopic(pill) {
-    var input = document.querySelector('.pagefind-ui--input');
-    if (input) {
-        input.value = pill.textContent;
-        input.dispatchEvent(new Event('input', { bubbles: true }));
+        # Inline JS (plain string — no f-string braces inside)
+        search_js = (
+            '<script>\n'
+            'var _archiveArticles = ' + articles_json + ';\n'
+            r"""
+var _archiveSearchTimer = null;
+
+function archiveSearchTopic(pill) {
+    var inp = document.getElementById('archive-search-input');
+    if (inp) {
+        inp.value = pill.textContent.trim();
+        inp.dispatchEvent(new Event('input', {bubbles: true}));
+        inp.focus();
     }
 }
-</script>'''
+
+function archiveClearSearch() {
+    var inp = document.getElementById('archive-search-input');
+    if (inp) { inp.value = ''; inp.dispatchEvent(new Event('input', {bubbles: true})); inp.focus(); }
+}
+
+function _archiveNorm(s) {
+    return (s || '').toLowerCase();
+}
+
+function _highlight(text, terms) {
+    if (!terms.length) return _esc(text);
+    var re = new RegExp('(' + terms.map(function(t){
+        return t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+    }).join('|') + ')', 'gi');
+    return _esc(text).replace(re, '<mark>$1</mark>');
+}
+
+function _esc(s) {
+    return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function archiveDoSearch(query) {
+    var inp = document.getElementById('archive-search-input');
+    var clearBtn = document.getElementById('archive-search-clear');
+    var resultsDiv = document.getElementById('archive-search-results');
+    var resultsList = document.getElementById('archive-results-list');
+    var resultsHeader = document.getElementById('archive-results-header');
+
+    query = (query || '').trim();
+
+    if (clearBtn) clearBtn.style.display = query ? 'block' : 'none';
+
+    // Reset all archive rows
+    document.querySelectorAll('.archive-row').forEach(function(row) {
+        row.classList.remove('search-match', 'search-no-match');
+        var countEl = row.querySelector('.archive-count');
+        if (countEl) {
+            // remove badge if present
+            var badge = countEl.querySelector('.search-badge');
+            if (badge) countEl.removeChild(badge);
+            // restore original count text
+            var orig = countEl.getAttribute('data-orig-count');
+            if (orig !== null) countEl.firstChild.textContent = orig;
+        }
+    });
+
+    document.querySelectorAll('.archive-month').forEach(function(m) {
+        m.style.display = '';
+    });
+
+    if (!query) {
+        if (resultsDiv) resultsDiv.style.display = 'none';
+        return;
+    }
+
+    var terms = query.toLowerCase().split(/\s+/).filter(Boolean);
+
+    // Search articles
+    var matched = _archiveArticles.filter(function(a) {
+        var haystack = _archiveNorm(a.title) + ' ' + _archiveNorm(a.university) + ' ' + _archiveNorm(a.summary) + ' ' + _archiveNorm(a.category);
+        return terms.every(function(t) { return haystack.indexOf(t) !== -1; });
+    });
+
+    // Group matches by date
+    var byDate = {};
+    matched.forEach(function(a) {
+        if (!byDate[a.date]) byDate[a.date] = [];
+        byDate[a.date].push(a);
+    });
+
+    // Highlight archive rows
+    document.querySelectorAll('.archive-row[data-date]').forEach(function(row) {
+        var d = row.getAttribute('data-date');
+        if (byDate[d] && byDate[d].length > 0) {
+            row.classList.add('search-match');
+            var countEl = row.querySelector('.archive-count');
+            if (countEl) {
+                var badge = document.createElement('span');
+                badge.className = 'search-badge';
+                badge.textContent = byDate[d].length;
+                countEl.appendChild(badge);
+            }
+        } else {
+            row.classList.add('search-no-match');
+        }
+    });
+
+    // Hide months with zero matches
+    document.querySelectorAll('.archive-month').forEach(function(monthDiv) {
+        var anyMatch = monthDiv.querySelector('.archive-row.search-match');
+        monthDiv.style.display = anyMatch ? '' : 'none';
+    });
+
+    // Render results list
+    if (resultsDiv) resultsDiv.style.display = 'block';
+    if (resultsHeader) {
+        resultsHeader.textContent = matched.length + ' article' + (matched.length !== 1 ? 's' : '') + ' matching \u201c' + query + '\u201d';
+    }
+    if (resultsList) {
+        if (matched.length === 0) {
+            resultsList.innerHTML = '<p style="color:var(--color-text-muted);font-size:13px;padding:8px 16px">No articles found.</p>';
+        } else {
+            resultsList.innerHTML = matched.slice(0, 100).map(function(a) {
+                return '<a class="search-result-item" href="' + _esc(a.url) + '" target="_blank" rel="noopener">'
+                    + '<span class="search-result-date">' + _esc(a.date) + '</span>'
+                    + '<span>'
+                    + '<div class="search-result-title">' + _highlight(a.title, terms) + '</div>'
+                    + '<div class="search-result-meta">' + _esc(a.university) + '</div>'
+                    + '</span>'
+                    + '</a>';
+            }).join('');
+            if (matched.length > 100) {
+                resultsList.innerHTML += '<p style="color:var(--color-text-muted);font-size:12px;padding:4px 16px">Showing first 100 of ' + matched.length + ' results.</p>';
+            }
+        }
+    }
+}
+
+(function() {
+    var inp = document.getElementById('archive-search-input');
+    if (!inp) return;
+    inp.addEventListener('input', function() {
+        clearTimeout(_archiveSearchTimer);
+        _archiveSearchTimer = setTimeout(function() { archiveDoSearch(inp.value); }, 180);
+    });
+})();
+</script>
+"""
+        )
 
         return f'''<!DOCTYPE html>
 <html lang="en">
@@ -1727,11 +1971,10 @@ function searchTopic(pill) {
     <title>Archive - AI University News</title>
     {favicon}
     {fonts}
-    <link href="../pagefind/pagefind-ui.css" rel="stylesheet">
     <style>
     {base_css}
     {archive_css}
-    {pagefind_css}
+    {search_css}
     </style>
 </head>
 <body>
@@ -1741,8 +1984,7 @@ function searchTopic(pill) {
     {''.join(groups_html)}
 
 {footer_html}
-<script src="../pagefind/pagefind-ui.js"></script>
-{pagefind_js}
+{search_js}
 </body>
 </html>'''
 
