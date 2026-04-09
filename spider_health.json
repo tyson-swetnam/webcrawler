@@ -1,20 +1,40 @@
 {
   "stats": {
-    "urls_discovered": 5652,
-    "urls_crawled": 4724,
+    "urls_discovered": 5294,
+    "urls_crawled": 4402,
     "articles_extracted": 0,
     "duplicates_skipped": 0,
-    "errors": 31,
-    "mcp_fallback_attempts": 31,
-    "mcp_fallback_successes": 28
+    "errors": 64,
+    "mcp_fallback_attempts": 21,
+    "mcp_fallback_successes": 18
   },
-  "sources_attempted": 77,
+  "sources_attempted": 69,
   "sources_succeeded": 0,
   "domain_stats": {
-    "www.gmu.edu": {
+    "news.ufl.edu": {
       "urls": 0,
       "articles": 0,
-      "errors": 10
+      "errors": 38
+    },
+    "www.uic.edu": {
+      "urls": 0,
+      "articles": 0,
+      "errors": 5
+    },
+    "www.uthouston.edu": {
+      "urls": 0,
+      "articles": 0,
+      "errors": 1
+    },
+    "www.umass.edu": {
+      "urls": 0,
+      "articles": 0,
+      "errors": 2
+    },
+    "www.ou.edu": {
+      "urls": 0,
+      "articles": 0,
+      "errors": 16
     },
     "www.brandeis.edu": {
       "urls": 0,
@@ -25,31 +45,17 @@
       "urls": 0,
       "articles": 0,
       "errors": 1
-    },
-    "www.ou.edu": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 16
-    },
-    "www.umass.edu": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 2
-    },
-    "www.uthouston.edu": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 1
     }
   },
   "failed_domains": [
-    "www.gmu.edu",
-    "www.brandeis.edu",
-    "www.fau.edu",
-    "www.ou.edu",
+    "news.ufl.edu",
+    "www.uic.edu",
+    "www.uthouston.edu",
     "www.umass.edu",
-    "www.uthouston.edu"
+    "www.ou.edu",
+    "www.brandeis.edu",
+    "www.fau.edu"
   ],
   "closed_reason": "finished",
-  "timestamp": "2026-04-08T15:57:05.448527+00:00"
+  "timestamp": "2026-04-09T16:00:21.507675+00:00"
 }
