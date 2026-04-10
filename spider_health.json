@@ -1,20 +1,25 @@
 {
   "stats": {
-    "urls_discovered": 5294,
-    "urls_crawled": 4402,
+    "urls_discovered": 5368,
+    "urls_crawled": 4481,
     "articles_extracted": 0,
     "duplicates_skipped": 0,
-    "errors": 64,
-    "mcp_fallback_attempts": 21,
-    "mcp_fallback_successes": 18
+    "errors": 53,
+    "mcp_fallback_attempts": 32,
+    "mcp_fallback_successes": 29
   },
-  "sources_attempted": 69,
+  "sources_attempted": 70,
   "sources_succeeded": 0,
   "domain_stats": {
     "news.ufl.edu": {
       "urls": 0,
       "articles": 0,
-      "errors": 38
+      "errors": 16
+    },
+    "www.gmu.edu": {
+      "urls": 0,
+      "articles": 0,
+      "errors": 10
     },
     "www.uic.edu": {
       "urls": 0,
@@ -26,15 +31,15 @@
       "articles": 0,
       "errors": 1
     },
-    "www.umass.edu": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 2
-    },
     "www.ou.edu": {
       "urls": 0,
       "articles": 0,
       "errors": 16
+    },
+    "www.umass.edu": {
+      "urls": 0,
+      "articles": 0,
+      "errors": 3
     },
     "www.brandeis.edu": {
       "urls": 0,
@@ -49,13 +54,14 @@
   },
   "failed_domains": [
     "news.ufl.edu",
+    "www.gmu.edu",
     "www.uic.edu",
     "www.uthouston.edu",
-    "www.umass.edu",
     "www.ou.edu",
+    "www.umass.edu",
     "www.brandeis.edu",
     "www.fau.edu"
   ],
   "closed_reason": "finished",
-  "timestamp": "2026-04-09T16:00:21.507675+00:00"
+  "timestamp": "2026-04-10T15:44:55.795536+00:00"
 }
