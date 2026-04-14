@@ -1,21 +1,16 @@
 {
   "stats": {
-    "urls_discovered": 4922,
-    "urls_crawled": 3129,
+    "urls_discovered": 4837,
+    "urls_crawled": 3134,
     "articles_extracted": 0,
     "duplicates_skipped": 0,
-    "errors": 97,
-    "mcp_fallback_attempts": 78,
-    "mcp_fallback_successes": 4
+    "errors": 45,
+    "mcp_fallback_attempts": 40,
+    "mcp_fallback_successes": 8
   },
-  "sources_attempted": 101,
+  "sources_attempted": 94,
   "sources_succeeded": 0,
   "domain_stats": {
-    "www.anl.gov": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 1
-    },
     "www.nsa.gov": {
       "urls": 0,
       "articles": 0,
@@ -36,32 +31,17 @@
       "articles": 0,
       "errors": 10
     },
-    "www.turing.ac.uk": {
+    "www.anl.gov": {
       "urls": 0,
       "articles": 0,
-      "errors": 42
+      "errors": 1
     },
-    "jornal.unicamp.br": {
+    "www.bristol.ac.uk": {
       "urls": 0,
       "articles": 0,
-      "errors": 13
+      "errors": 6
     },
     "news.epfl.ch": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 1
-    },
-    "www.ip-paris.fr": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 1
-    },
-    "www.dhs.gov": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 1
-    },
-    "en.snu.ac.kr": {
       "urls": 0,
       "articles": 0,
       "errors": 1
@@ -73,19 +53,15 @@
     }
   },
   "failed_domains": [
-    "www.anl.gov",
     "www.nsa.gov",
     "www.univie.ac.at",
     "kcnsc.doe.gov",
     "news.ucar.edu",
-    "www.turing.ac.uk",
-    "jornal.unicamp.br",
+    "www.anl.gov",
+    "www.bristol.ac.uk",
     "news.epfl.ch",
-    "www.ip-paris.fr",
-    "www.dhs.gov",
-    "en.snu.ac.kr",
     "english.cas.cn"
   ],
   "closed_reason": "finished",
-  "timestamp": "2026-04-13T15:45:55.145122+00:00"
+  "timestamp": "2026-04-14T15:40:38.080749+00:00"
 }
