@@ -1,16 +1,21 @@
 {
   "stats": {
-    "urls_discovered": 4837,
-    "urls_crawled": 3134,
+    "urls_discovered": 5015,
+    "urls_crawled": 3305,
     "articles_extracted": 0,
     "duplicates_skipped": 0,
-    "errors": 45,
-    "mcp_fallback_attempts": 40,
-    "mcp_fallback_successes": 8
+    "errors": 53,
+    "mcp_fallback_attempts": 35,
+    "mcp_fallback_successes": 3
   },
-  "sources_attempted": 94,
+  "sources_attempted": 101,
   "sources_succeeded": 0,
   "domain_stats": {
+    "www.anl.gov": {
+      "urls": 0,
+      "articles": 0,
+      "errors": 1
+    },
     "www.nsa.gov": {
       "urls": 0,
       "articles": 0,
@@ -31,17 +36,17 @@
       "articles": 0,
       "errors": 10
     },
-    "www.anl.gov": {
+    "jornal.unicamp.br": {
+      "urls": 0,
+      "articles": 0,
+      "errors": 13
+    },
+    "news.epfl.ch": {
       "urls": 0,
       "articles": 0,
       "errors": 1
     },
-    "www.bristol.ac.uk": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 6
-    },
-    "news.epfl.ch": {
+    "www.dhs.gov": {
       "urls": 0,
       "articles": 0,
       "errors": 1
@@ -53,15 +58,16 @@
     }
   },
   "failed_domains": [
+    "www.anl.gov",
     "www.nsa.gov",
     "www.univie.ac.at",
     "kcnsc.doe.gov",
     "news.ucar.edu",
-    "www.anl.gov",
-    "www.bristol.ac.uk",
+    "jornal.unicamp.br",
     "news.epfl.ch",
+    "www.dhs.gov",
     "english.cas.cn"
   ],
   "closed_reason": "finished",
-  "timestamp": "2026-04-14T15:40:38.080749+00:00"
+  "timestamp": "2026-04-15T15:42:56.399178+00:00"
 }
