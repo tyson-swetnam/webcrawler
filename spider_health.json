@@ -1,26 +1,16 @@
 {
   "stats": {
-    "urls_discovered": 5015,
-    "urls_crawled": 3305,
+    "urls_discovered": 5076,
+    "urls_crawled": 3219,
     "articles_extracted": 0,
     "duplicates_skipped": 0,
-    "errors": 53,
-    "mcp_fallback_attempts": 35,
+    "errors": 61,
+    "mcp_fallback_attempts": 56,
     "mcp_fallback_successes": 3
   },
-  "sources_attempted": 101,
+  "sources_attempted": 102,
   "sources_succeeded": 0,
   "domain_stats": {
-    "www.anl.gov": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 1
-    },
-    "www.nsa.gov": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 20
-    },
     "www.univie.ac.at": {
       "urls": 0,
       "articles": 0,
@@ -36,10 +26,10 @@
       "articles": 0,
       "errors": 10
     },
-    "jornal.unicamp.br": {
+    "www.turing.ac.uk": {
       "urls": 0,
       "articles": 0,
-      "errors": 13
+      "errors": 42
     },
     "news.epfl.ch": {
       "urls": 0,
@@ -58,16 +48,14 @@
     }
   },
   "failed_domains": [
-    "www.anl.gov",
-    "www.nsa.gov",
     "www.univie.ac.at",
     "kcnsc.doe.gov",
     "news.ucar.edu",
-    "jornal.unicamp.br",
+    "www.turing.ac.uk",
     "news.epfl.ch",
     "www.dhs.gov",
     "english.cas.cn"
   ],
   "closed_reason": "finished",
-  "timestamp": "2026-04-15T15:42:56.399178+00:00"
+  "timestamp": "2026-04-16T15:50:09.240207+00:00"
 }
