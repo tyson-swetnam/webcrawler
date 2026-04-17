@@ -1,61 +1,73 @@
 {
   "stats": {
-    "urls_discovered": 5076,
-    "urls_crawled": 3219,
+    "urls_discovered": 5407,
+    "urls_crawled": 4533,
     "articles_extracted": 0,
     "duplicates_skipped": 0,
-    "errors": 61,
-    "mcp_fallback_attempts": 56,
-    "mcp_fallback_successes": 3
+    "errors": 80,
+    "mcp_fallback_attempts": 31,
+    "mcp_fallback_successes": 29
   },
-  "sources_attempted": 102,
+  "sources_attempted": 72,
   "sources_succeeded": 0,
   "domain_stats": {
-    "www.univie.ac.at": {
+    "news.ufl.edu": {
       "urls": 0,
       "articles": 0,
-      "errors": 1
+      "errors": 34
     },
-    "kcnsc.doe.gov": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 1
-    },
-    "news.ucar.edu": {
+    "news.unl.edu": {
       "urls": 0,
       "articles": 0,
       "errors": 10
     },
-    "www.turing.ac.uk": {
+    "www.gmu.edu": {
       "urls": 0,
       "articles": 0,
-      "errors": 42
+      "errors": 10
     },
-    "news.epfl.ch": {
+    "www.uic.edu": {
+      "urls": 0,
+      "articles": 0,
+      "errors": 5
+    },
+    "blog.oneill.indianapolis.iu.edu": {
       "urls": 0,
       "articles": 0,
       "errors": 1
     },
-    "www.dhs.gov": {
+    "www.ou.edu": {
+      "urls": 0,
+      "articles": 0,
+      "errors": 16
+    },
+    "www.umass.edu": {
+      "urls": 0,
+      "articles": 0,
+      "errors": 2
+    },
+    "www.brandeis.edu": {
       "urls": 0,
       "articles": 0,
       "errors": 1
     },
-    "english.cas.cn": {
+    "www.fau.edu": {
       "urls": 0,
       "articles": 0,
-      "errors": 4
+      "errors": 1
     }
   },
   "failed_domains": [
-    "www.univie.ac.at",
-    "kcnsc.doe.gov",
-    "news.ucar.edu",
-    "www.turing.ac.uk",
-    "news.epfl.ch",
-    "www.dhs.gov",
-    "english.cas.cn"
+    "news.ufl.edu",
+    "news.unl.edu",
+    "www.gmu.edu",
+    "www.uic.edu",
+    "blog.oneill.indianapolis.iu.edu",
+    "www.ou.edu",
+    "www.umass.edu",
+    "www.brandeis.edu",
+    "www.fau.edu"
   ],
   "closed_reason": "finished",
-  "timestamp": "2026-04-16T15:50:09.240207+00:00"
+  "timestamp": "2026-04-17T15:50:36.735064+00:00"
 }
