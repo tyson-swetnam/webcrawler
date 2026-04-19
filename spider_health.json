@@ -1,85 +1,67 @@
 {
   "stats": {
-    "urls_discovered": 5332,
-    "urls_crawled": 4399,
+    "urls_discovered": 5157,
+    "urls_crawled": 3384,
     "articles_extracted": 0,
     "duplicates_skipped": 0,
-    "errors": 93,
-    "mcp_fallback_attempts": 33,
-    "mcp_fallback_successes": 30
+    "errors": 64,
+    "mcp_fallback_attempts": 34,
+    "mcp_fallback_successes": 3
   },
-  "sources_attempted": 68,
+  "sources_attempted": 100,
   "sources_succeeded": 0,
   "domain_stats": {
-    "news.ufl.edu": {
+    "www.nsa.gov": {
       "urls": 0,
       "articles": 0,
-      "errors": 40
+      "errors": 20
     },
-    "news.unl.edu": {
+    "www.univie.ac.at": {
       "urls": 0,
       "articles": 0,
-      "errors": 9
+      "errors": 1
     },
-    "www.gmu.edu": {
+    "kcnsc.doe.gov": {
+      "urls": 0,
+      "articles": 0,
+      "errors": 1
+    },
+    "news.ucar.edu": {
       "urls": 0,
       "articles": 0,
       "errors": 10
     },
-    "www.uic.edu": {
+    "www.fraunhofer.de": {
       "urls": 0,
       "articles": 0,
-      "errors": 5
+      "errors": 25
     },
-    "news.illinois.edu": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 6
-    },
-    "blog.oneill.indianapolis.iu.edu": {
+    "news.epfl.ch": {
       "urls": 0,
       "articles": 0,
       "errors": 1
     },
-    "www.ou.edu": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 16
-    },
-    "www.umass.edu": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 3
-    },
-    "www.brandeis.edu": {
+    "www.dhs.gov": {
       "urls": 0,
       "articles": 0,
       "errors": 1
     },
-    "www.fau.edu": {
+    "english.cas.cn": {
       "urls": 0,
       "articles": 0,
-      "errors": 1
-    },
-    "news.lehigh.edu": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 1
+      "errors": 4
     }
   },
   "failed_domains": [
-    "news.ufl.edu",
-    "news.unl.edu",
-    "www.gmu.edu",
-    "www.uic.edu",
-    "news.illinois.edu",
-    "blog.oneill.indianapolis.iu.edu",
-    "www.ou.edu",
-    "www.umass.edu",
-    "www.brandeis.edu",
-    "www.fau.edu",
-    "news.lehigh.edu"
+    "www.nsa.gov",
+    "www.univie.ac.at",
+    "kcnsc.doe.gov",
+    "news.ucar.edu",
+    "www.fraunhofer.de",
+    "news.epfl.ch",
+    "www.dhs.gov",
+    "english.cas.cn"
   ],
   "closed_reason": "finished",
-  "timestamp": "2026-04-18T15:39:56.259123+00:00"
+  "timestamp": "2026-04-19T15:28:16.069384+00:00"
 }
