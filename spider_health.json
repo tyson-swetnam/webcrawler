@@ -1,14 +1,14 @@
 {
   "stats": {
-    "urls_discovered": 5157,
-    "urls_crawled": 3384,
+    "urls_discovered": 4815,
+    "urls_crawled": 3286,
     "articles_extracted": 0,
     "duplicates_skipped": 0,
-    "errors": 64,
-    "mcp_fallback_attempts": 34,
+    "errors": 103,
+    "mcp_fallback_attempts": 76,
     "mcp_fallback_successes": 3
   },
-  "sources_attempted": 100,
+  "sources_attempted": 105,
   "sources_succeeded": 0,
   "domain_stats": {
     "www.nsa.gov": {
@@ -31,10 +31,15 @@
       "articles": 0,
       "errors": 10
     },
+    "www.turing.ac.uk": {
+      "urls": 0,
+      "articles": 0,
+      "errors": 42
+    },
     "www.fraunhofer.de": {
       "urls": 0,
       "articles": 0,
-      "errors": 25
+      "errors": 22
     },
     "news.epfl.ch": {
       "urls": 0,
@@ -57,11 +62,12 @@
     "www.univie.ac.at",
     "kcnsc.doe.gov",
     "news.ucar.edu",
+    "www.turing.ac.uk",
     "www.fraunhofer.de",
     "news.epfl.ch",
     "www.dhs.gov",
     "english.cas.cn"
   ],
   "closed_reason": "finished",
-  "timestamp": "2026-04-19T15:28:16.069384+00:00"
+  "timestamp": "2026-04-20T15:44:10.005736+00:00"
 }
