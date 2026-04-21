@@ -1,73 +1,73 @@
 {
   "stats": {
-    "urls_discovered": 4815,
-    "urls_crawled": 3286,
+    "urls_discovered": 5309,
+    "urls_crawled": 4426,
     "articles_extracted": 0,
     "duplicates_skipped": 0,
-    "errors": 103,
-    "mcp_fallback_attempts": 76,
-    "mcp_fallback_successes": 3
+    "errors": 79,
+    "mcp_fallback_attempts": 30,
+    "mcp_fallback_successes": 27
   },
-  "sources_attempted": 105,
+  "sources_attempted": 71,
   "sources_succeeded": 0,
   "domain_stats": {
-    "www.nsa.gov": {
+    "news.ufl.edu": {
       "urls": 0,
       "articles": 0,
-      "errors": 20
+      "errors": 39
     },
-    "www.univie.ac.at": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 1
-    },
-    "kcnsc.doe.gov": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 1
-    },
-    "news.ucar.edu": {
+    "www.gmu.edu": {
       "urls": 0,
       "articles": 0,
       "errors": 10
     },
-    "www.turing.ac.uk": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 42
-    },
-    "www.fraunhofer.de": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 22
-    },
-    "news.epfl.ch": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 1
-    },
-    "www.dhs.gov": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 1
-    },
-    "english.cas.cn": {
+    "www.uic.edu": {
       "urls": 0,
       "articles": 0,
       "errors": 4
+    },
+    "news.illinois.edu": {
+      "urls": 0,
+      "articles": 0,
+      "errors": 6
+    },
+    "blog.oneill.indianapolis.iu.edu": {
+      "urls": 0,
+      "articles": 0,
+      "errors": 1
+    },
+    "www.ou.edu": {
+      "urls": 0,
+      "articles": 0,
+      "errors": 16
+    },
+    "www.brandeis.edu": {
+      "urls": 0,
+      "articles": 0,
+      "errors": 1
+    },
+    "www.fau.edu": {
+      "urls": 0,
+      "articles": 0,
+      "errors": 1
+    },
+    "news.lehigh.edu": {
+      "urls": 0,
+      "articles": 0,
+      "errors": 1
     }
   },
   "failed_domains": [
-    "www.nsa.gov",
-    "www.univie.ac.at",
-    "kcnsc.doe.gov",
-    "news.ucar.edu",
-    "www.turing.ac.uk",
-    "www.fraunhofer.de",
-    "news.epfl.ch",
-    "www.dhs.gov",
-    "english.cas.cn"
+    "news.ufl.edu",
+    "www.gmu.edu",
+    "www.uic.edu",
+    "news.illinois.edu",
+    "blog.oneill.indianapolis.iu.edu",
+    "www.ou.edu",
+    "www.brandeis.edu",
+    "www.fau.edu",
+    "news.lehigh.edu"
   ],
   "closed_reason": "finished",
-  "timestamp": "2026-04-20T15:44:10.005736+00:00"
+  "timestamp": "2026-04-21T15:56:59.030816+00:00"
 }
