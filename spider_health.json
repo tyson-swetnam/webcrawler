@@ -1,12 +1,12 @@
 {
   "stats": {
-    "urls_discovered": 5309,
-    "urls_crawled": 4426,
+    "urls_discovered": 5386,
+    "urls_crawled": 4501,
     "articles_extracted": 0,
     "duplicates_skipped": 0,
-    "errors": 79,
-    "mcp_fallback_attempts": 30,
-    "mcp_fallback_successes": 27
+    "errors": 58,
+    "mcp_fallback_attempts": 32,
+    "mcp_fallback_successes": 30
   },
   "sources_attempted": 71,
   "sources_succeeded": 0,
@@ -14,22 +14,12 @@
     "news.ufl.edu": {
       "urls": 0,
       "articles": 0,
-      "errors": 39
+      "errors": 26
     },
     "www.gmu.edu": {
       "urls": 0,
       "articles": 0,
       "errors": 10
-    },
-    "www.uic.edu": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 4
-    },
-    "news.illinois.edu": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 6
     },
     "blog.oneill.indianapolis.iu.edu": {
       "urls": 0,
@@ -41,6 +31,11 @@
       "articles": 0,
       "errors": 16
     },
+    "www.umass.edu": {
+      "urls": 0,
+      "articles": 0,
+      "errors": 3
+    },
     "www.brandeis.edu": {
       "urls": 0,
       "articles": 0,
@@ -50,24 +45,17 @@
       "urls": 0,
       "articles": 0,
       "errors": 1
-    },
-    "news.lehigh.edu": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 1
     }
   },
   "failed_domains": [
     "news.ufl.edu",
     "www.gmu.edu",
-    "www.uic.edu",
-    "news.illinois.edu",
     "blog.oneill.indianapolis.iu.edu",
     "www.ou.edu",
+    "www.umass.edu",
     "www.brandeis.edu",
-    "www.fau.edu",
-    "news.lehigh.edu"
+    "www.fau.edu"
   ],
   "closed_reason": "finished",
-  "timestamp": "2026-04-21T15:56:59.030816+00:00"
+  "timestamp": "2026-04-22T15:55:52.687779+00:00"
 }
