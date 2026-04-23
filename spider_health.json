@@ -1,21 +1,16 @@
 {
   "stats": {
-    "urls_discovered": 5386,
-    "urls_crawled": 4501,
+    "urls_discovered": 5594,
+    "urls_crawled": 4675,
     "articles_extracted": 0,
     "duplicates_skipped": 0,
-    "errors": 58,
+    "errors": 32,
     "mcp_fallback_attempts": 32,
     "mcp_fallback_successes": 30
   },
-  "sources_attempted": 71,
+  "sources_attempted": 78,
   "sources_succeeded": 0,
   "domain_stats": {
-    "news.ufl.edu": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 26
-    },
     "www.gmu.edu": {
       "urls": 0,
       "articles": 0,
@@ -48,7 +43,6 @@
     }
   },
   "failed_domains": [
-    "news.ufl.edu",
     "www.gmu.edu",
     "blog.oneill.indianapolis.iu.edu",
     "www.ou.edu",
@@ -57,5 +51,5 @@
     "www.fau.edu"
   ],
   "closed_reason": "finished",
-  "timestamp": "2026-04-22T15:55:52.687779+00:00"
+  "timestamp": "2026-04-23T16:03:34.791118+00:00"
 }
