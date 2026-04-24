@@ -1,14 +1,14 @@
 {
   "stats": {
     "urls_discovered": 5594,
-    "urls_crawled": 4675,
+    "urls_crawled": 4677,
     "articles_extracted": 0,
     "duplicates_skipped": 0,
     "errors": 32,
     "mcp_fallback_attempts": 32,
     "mcp_fallback_successes": 30
   },
-  "sources_attempted": 78,
+  "sources_attempted": 77,
   "sources_succeeded": 0,
   "domain_stats": {
     "www.gmu.edu": {
@@ -21,15 +21,15 @@
       "articles": 0,
       "errors": 1
     },
-    "www.ou.edu": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 16
-    },
     "www.umass.edu": {
       "urls": 0,
       "articles": 0,
       "errors": 3
+    },
+    "www.ou.edu": {
+      "urls": 0,
+      "articles": 0,
+      "errors": 16
     },
     "www.brandeis.edu": {
       "urls": 0,
@@ -45,11 +45,11 @@
   "failed_domains": [
     "www.gmu.edu",
     "blog.oneill.indianapolis.iu.edu",
-    "www.ou.edu",
     "www.umass.edu",
+    "www.ou.edu",
     "www.brandeis.edu",
     "www.fau.edu"
   ],
   "closed_reason": "finished",
-  "timestamp": "2026-04-23T16:03:34.791118+00:00"
+  "timestamp": "2026-04-24T15:54:16.094745+00:00"
 }
