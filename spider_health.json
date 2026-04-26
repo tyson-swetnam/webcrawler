@@ -1,14 +1,14 @@
 {
   "stats": {
-    "urls_discovered": 5652,
-    "urls_crawled": 4717,
+    "urls_discovered": 5564,
+    "urls_crawled": 4617,
     "articles_extracted": 0,
     "duplicates_skipped": 0,
     "errors": 33,
     "mcp_fallback_attempts": 33,
-    "mcp_fallback_successes": 30
+    "mcp_fallback_successes": 27
   },
-  "sources_attempted": 77,
+  "sources_attempted": 78,
   "sources_succeeded": 0,
   "domain_stats": {
     "www.gmu.edu": {
@@ -57,5 +57,5 @@
     "www.fau.edu"
   ],
   "closed_reason": "finished",
-  "timestamp": "2026-04-25T15:41:09.126219+00:00"
+  "timestamp": "2026-04-26T15:41:14.635980+00:00"
 }
