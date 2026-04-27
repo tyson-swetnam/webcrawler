@@ -1,14 +1,14 @@
 {
   "stats": {
-    "urls_discovered": 5564,
-    "urls_crawled": 4617,
+    "urls_discovered": 5611,
+    "urls_crawled": 4665,
     "articles_extracted": 0,
     "duplicates_skipped": 0,
-    "errors": 33,
-    "mcp_fallback_attempts": 33,
-    "mcp_fallback_successes": 27
+    "errors": 32,
+    "mcp_fallback_attempts": 32,
+    "mcp_fallback_successes": 30
   },
-  "sources_attempted": 78,
+  "sources_attempted": 77,
   "sources_succeeded": 0,
   "domain_stats": {
     "www.gmu.edu": {
@@ -16,17 +16,7 @@
       "articles": 0,
       "errors": 10
     },
-    "www.umass.edu": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 3
-    },
     "blog.oneill.indianapolis.iu.edu": {
-      "urls": 0,
-      "articles": 0,
-      "errors": 1
-    },
-    "www.albany.edu": {
       "urls": 0,
       "articles": 0,
       "errors": 1
@@ -35,6 +25,11 @@
       "urls": 0,
       "articles": 0,
       "errors": 16
+    },
+    "www.umass.edu": {
+      "urls": 0,
+      "articles": 0,
+      "errors": 3
     },
     "www.brandeis.edu": {
       "urls": 0,
@@ -49,13 +44,12 @@
   },
   "failed_domains": [
     "www.gmu.edu",
-    "www.umass.edu",
     "blog.oneill.indianapolis.iu.edu",
-    "www.albany.edu",
     "www.ou.edu",
+    "www.umass.edu",
     "www.brandeis.edu",
     "www.fau.edu"
   ],
   "closed_reason": "finished",
-  "timestamp": "2026-04-26T15:41:14.635980+00:00"
+  "timestamp": "2026-04-27T16:01:48.904500+00:00"
 }
