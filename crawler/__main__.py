@@ -94,6 +94,20 @@ async def main():
         db_manager.create_tables()
         logger.info("Database tables verified/created")
 
+        # Phase 0: Hydrate Postgres from the durable Parquet store.
+        # No-op when Postgres already has data (e.g. local persistent DB).
+        # Critical for ephemeral environments like GitHub Actions, where the
+        # Parquet file in docs/data/ is the only carrier of historical state.
+        try:
+            from crawler.storage import ParquetStore
+            parquet_store = ParquetStore("docs/data")
+            with db_manager.session_scope() as db:
+                hydrated = parquet_store.hydrate_postgres(db)
+                if hydrated:
+                    logger.info(f"📦 Phase 0: Hydrated {hydrated} articles from Parquet store")
+        except Exception as e:
+            logger.warning(f"Phase 0 hydration failed (non-fatal): {e}", exc_info=True)
+
         # Phase 1+2: Crawl and analyze concurrently
         logger.info("\n📡 Phase 1: Crawling university news sites (parallel spiders + overlapping AI analysis)")
         crawl_success = await run_crawl_with_analysis()
@@ -212,8 +226,24 @@ async def main():
                 except Exception as e:
                     logger.warning(f"Editorial curation failed (non-fatal): {e}")
 
-            # Phase 4: Generate and send reports
-            logger.info("\n📬 Phase 4: Generating and sending notifications/exports")
+            # Phase 4: Snapshot Postgres → durable Parquet store.
+            # Must run after editorial curation so the picks get stamped onto
+            # the same snapshot. The website branch carries this file forward
+            # across runs (including ephemeral GH Actions DBs).
+            try:
+                from crawler.storage import ParquetStore
+                parquet_store = ParquetStore("docs/data")
+                exported = parquet_store.export_from_postgres(db)
+                if exported:
+                    logger.info(f"📦 Phase 4a: Exported {exported} articles to {parquet_store.articles_path}")
+                if editorial_picks:
+                    stamped = parquet_store.save_editorial_picks(editorial_picks)
+                    logger.info(f"📦 Phase 4a: Stamped {stamped} editorial picks onto Parquet snapshot")
+            except Exception as e:
+                logger.warning(f"Parquet export failed (non-fatal): {e}", exc_info=True)
+
+            # Phase 4b: Generate and send reports
+            logger.info("\n📬 Phase 4b: Generating and sending notifications/exports")
             exported_files = await send_notifications(all_recent, analyses, db, editorial_picks=editorial_picks)
 
         # Phase 5: Summary and statistics

@@ -57,23 +57,32 @@ jobs:
           # Database tables are created automatically by SQLAlchemy
           echo "Database ready at $DATABASE_URL"
 
-      - name: Seed persisted Top News snapshot from website branch
+      - name: Seed durable data from website branch
         run: |
-          # Pulls the Top News snapshot from the deployed website branch so
-          # the Top News tab survives an empty crawl on the ephemeral DB.
-          # The snapshot may live at /data/top_news.json (from GH Actions
-          # copy step) or /docs/data/top_news.json (from local systemd
-          # commits). Try both. Best-effort: a missing file is fine.
+          # The crawler's source of truth (articles.parquet) and the Top News
+          # snapshot live on the deployed website branch — pull them into
+          # the workspace so the ephemeral Postgres can be hydrated and so
+          # the Top News tab survives an empty crawl. The website branch
+          # holds these at /data/* (from GH Actions copy) or /docs/data/*
+          # (from local systemd commits) — try both. Best-effort: missing
+          # files are fine on first run.
           mkdir -p docs/data
           git fetch origin website --depth=1 || true
-          if git show origin/website:docs/data/top_news.json > docs/data/top_news.json 2>/dev/null; then
-            echo "Seeded snapshot from docs/data/ on website branch"
-          elif git show origin/website:data/top_news.json > docs/data/top_news.json 2>/dev/null; then
-            echo "Seeded snapshot from data/ (root) on website branch"
-          else
-            rm -f docs/data/top_news.json
-            echo "No previous Top News snapshot found on website branch (first run)"
-          fi
+
+          fetch_one() {
+            local name="$1"
+            if git show "origin/website:docs/data/$name" > "docs/data/$name" 2>/dev/null; then
+              echo "Seeded docs/data/$name from docs/data/ on website branch"
+            elif git show "origin/website:data/$name" > "docs/data/$name" 2>/dev/null; then
+              echo "Seeded docs/data/$name from data/ (root) on website branch"
+            else
+              rm -f "docs/data/$name"
+              echo "No previous docs/data/$name found (first run)"
+            fi
+          }
+
+          fetch_one articles.parquet
+          fetch_one top_news.json
 
       - name: Run crawler
         env:

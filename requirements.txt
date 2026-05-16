@@ -11,6 +11,8 @@ psycopg2-binary>=2.9.10  # Python 3.13 compatible
 sqlalchemy>=2.0.23
 alembic>=1.12.1
 redis>=5.0.1
+duckdb>=1.1.0  # source-of-truth Parquet store + analytics
+pyarrow>=15.0.0  # Arrow schema for DuckDB writes
 
 # AI APIs
 anthropic>=0.8.1
