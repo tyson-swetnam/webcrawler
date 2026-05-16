@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics — AI University News</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F4CA;</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+    :root {
+        --color-bg: #ffffff;
+        --color-surface: #f8f9fa;
+        --color-surface-alt: #f1f3f5;
+        --color-surface-hover: #e9ecef;
+        --color-border: #dee2e6;
+        --color-text: #212529;
+        --color-text-secondary: #495057;
+        --color-text-muted: #868e96;
+        --color-text-faint: #adb5bd;
+        --color-link: #1a1a2e;
+        --color-link-visited: #3d3d5c;
+        --color-focus: #4dabf7;
+
+        --color-peer: #7c3aed;
+        --color-r1: #2563eb;
+        --color-hpc: #d97706;
+        --color-lab: #059669;
+        --color-global: #dc2626;
+
+        --color-scientific: #1e40af;
+        --color-financial: #92400e;
+        --color-partnership: #065f46;
+        --color-policy: #5b21b6;
+
+        --radius-sm: 4px;
+        --radius-md: 6px;
+        --transition-fast: 150ms ease;
+
+        --space-xs: 4px;
+        --space-sm: 8px;
+        --space-md: 16px;
+        --space-lg: 24px;
+        --space-xl: 32px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+        background: var(--color-bg);
+        color: var(--color-text);
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 var(--space-lg);
+        line-height: 1.5;
+        font-size: 14px;
+    }
+
+    :focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+    a:focus:not(:focus-visible) { outline: none; }
+
+    .header {
+        display: flex; justify-content: space-between; align-items: center;
+        padding: 12px 0; border-bottom: 1px solid var(--color-border);
+        margin-bottom: var(--space-md); min-height: 48px;
+    }
+    .header h1 { font-size: 16px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; }
+    .header-right { display: flex; align-items: center; gap: var(--space-md); font-size: 13px; color: var(--color-text-muted); }
+    .header-nav a { color: var(--color-text-muted); text-decoration: none; font-size: 13px; font-weight: 500; transition: color var(--transition-fast); }
+    .header-nav a:hover { color: var(--color-text); }
+    .header-nav a.active { color: var(--color-text); font-weight: 600; }
+
+    .footer {
+        text-align: center; margin-top: var(--space-xl); padding: var(--space-md) 0;
+        border-top: 1px solid var(--color-border); font-size: 12px; color: var(--color-text-muted);
+    }
+    .footer a { color: var(--color-text-muted); text-decoration: none; }
+    .footer a:hover { color: var(--color-text); }
+
+    /* ── Loading / error states ── */
+    .status-box {
+        margin: var(--space-xl) 0;
+        padding: var(--space-lg);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        background: var(--color-surface);
+        text-align: center;
+        color: var(--color-text-muted);
+        font-size: 14px;
+    }
+    .status-box.error { border-color: #fecaca; background: #fef2f2; color: #991b1b; text-align: left; }
+    .status-box code { font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 12px; background: rgba(0,0,0,0.05); padding: 1px 4px; border-radius: 3px; }
+    .spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid var(--color-border); border-top-color: var(--color-text); border-radius: 50%; animation: spin 0.8s linear infinite; vertical-align: middle; margin-right: 6px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── Dashboard grid ── */
+    .meta-bar {
+        display: flex; flex-wrap: wrap; gap: var(--space-md);
+        font-size: 13px; color: var(--color-text-muted);
+        padding: var(--space-sm) 0 var(--space-md);
+    }
+    .meta-bar .stat { display: inline-flex; align-items: baseline; gap: 4px; }
+    .meta-bar .stat strong { color: var(--color-text); font-size: 15px; font-weight: 600; }
+
+    .panels {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-md);
+        margin-bottom: var(--space-lg);
+    }
+    .panel {
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        padding: var(--space-md);
+        background: var(--color-bg);
+        min-height: 280px;
+    }
+    .panel.wide { grid-column: 1 / -1; }
+    .panel h2 {
+        font-size: 13px; font-weight: 600; text-transform: uppercase;
+        letter-spacing: 0.05em; color: var(--color-text-secondary);
+        margin-bottom: var(--space-sm); padding-bottom: var(--space-xs);
+        border-bottom: 1px solid var(--color-surface-alt);
+    }
+    .panel-meta { font-size: 12px; color: var(--color-text-faint); margin-bottom: var(--space-sm); }
+    .panel-body { min-height: 220px; }
+    .panel-body.table-body { padding: 0; }
+
+    /* ── Tables ── */
+    table.data { width: 100%; border-collapse: collapse; font-size: 13px; }
+    table.data th, table.data td {
+        text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--color-surface-alt);
+    }
+    table.data th {
+        font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em;
+        color: var(--color-text-muted); background: var(--color-surface);
+        position: sticky; top: 0;
+    }
+    table.data td.num { text-align: right; font-variant-numeric: tabular-nums; color: var(--color-text-secondary); }
+    table.data tr:hover td { background: var(--color-surface); }
+
+    /* ── SVG / Plot styling ── */
+    .panel-body svg { max-width: 100%; height: auto; }
+    .panel-body figure { margin: 0; }
+
+    /* ── SQL playground ── */
+    .sql-panel { grid-column: 1 / -1; }
+    .sql-controls { display: flex; flex-wrap: wrap; gap: var(--space-sm); align-items: center; margin-bottom: var(--space-sm); }
+    .sql-controls select, .sql-controls button {
+        font-family: 'DM Sans', system-ui, sans-serif;
+        font-size: 13px;
+        padding: 6px 10px;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-sm);
+        background: var(--color-bg);
+        color: var(--color-text);
+        cursor: pointer;
+    }
+    .sql-controls button { background: var(--color-text); color: var(--color-bg); border-color: var(--color-text); font-weight: 600; }
+    .sql-controls button:hover { background: var(--color-text-secondary); }
+    .sql-controls button:disabled { opacity: 0.5; cursor: not-allowed; }
+    .sql-input {
+        width: 100%;
+        font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+        font-size: 13px;
+        line-height: 1.5;
+        padding: 10px 12px;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-sm);
+        background: var(--color-surface);
+        color: var(--color-text);
+        resize: vertical;
+        min-height: 100px;
+        margin-bottom: var(--space-sm);
+    }
+    .sql-results {
+        max-height: 420px;
+        overflow: auto;
+        border: 1px solid var(--color-surface-alt);
+        border-radius: var(--radius-sm);
+        background: var(--color-bg);
+    }
+    .sql-results .empty { padding: var(--space-md); color: var(--color-text-faint); font-size: 13px; text-align: center; }
+    .sql-results .error-text {
+        padding: var(--space-md);
+        font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+        font-size: 12px;
+        color: #991b1b;
+        background: #fef2f2;
+        white-space: pre-wrap;
+    }
+    .sql-results .meta { padding: 6px 10px; font-size: 12px; color: var(--color-text-muted); border-bottom: 1px solid var(--color-surface-alt); background: var(--color-surface); }
+
+    @media (max-width: 900px) {
+        .panels { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+        body { padding: 0 var(--space-md); }
+        .header { flex-direction: column; gap: var(--space-sm); align-items: flex-start; }
+    }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI University News — Analytics</h1>
+        <div class="header-right">
+            <span class="header-nav">
+                <a href="index.html">Today</a>
+                &middot;
+                <a href="archive/index.html">Archive</a>
+                &middot;
+                <a href="analytics.html" class="active">Analytics</a>
+                &middot;
+                <a href="how_it_works.html">How It Works</a>
+            </span>
+        </div>
+    </div>
+
+    <div id="loading" class="status-box">
+        <span class="spinner"></span>Loading DuckDB-WASM and articles.parquet…
+    </div>
+
+    <div id="dashboard" style="display:none">
+        <div class="meta-bar" id="meta-bar"></div>
+
+        <div class="panels">
+            <section class="panel">
+                <h2>Themes over time</h2>
+                <div class="panel-meta" id="meta-themes-time">Weekly counts, last 90 days</div>
+                <div class="panel-body" id="chart-themes-time"></div>
+            </section>
+
+            <section class="panel">
+                <h2>Impact category distribution</h2>
+                <div class="panel-meta" id="meta-impact">Editorial picks over time</div>
+                <div class="panel-body" id="chart-impact"></div>
+            </section>
+
+            <section class="panel">
+                <h2>University leaderboard</h2>
+                <div class="panel-meta" id="meta-univ">Top 20, last 30 days</div>
+                <div class="panel-body table-body" id="chart-universities"></div>
+            </section>
+
+            <section class="panel">
+                <h2>Articles per day</h2>
+                <div class="panel-meta" id="meta-daily">Last 60 days</div>
+                <div class="panel-body" id="chart-articles"></div>
+            </section>
+
+            <section class="panel sql-panel">
+                <h2>SQL playground</h2>
+                <div class="panel-meta">Query the full articles table directly. Powered by DuckDB-WASM.</div>
+                <div class="sql-controls">
+                    <label for="example-query" style="color: var(--color-text-muted); font-size: 12px;">Example:</label>
+                    <select id="example-query" aria-label="Example queries"></select>
+                    <button id="run-sql" type="button">Run query</button>
+                    <span id="sql-status" style="color: var(--color-text-faint); font-size: 12px;"></span>
+                </div>
+                <textarea id="sql-input" class="sql-input" spellcheck="false" aria-label="SQL query"></textarea>
+                <div id="sql-results" class="sql-results"><div class="empty">Run a query to see results.</div></div>
+            </section>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="index.html">Today</a> &middot;
+        <a href="archive/index.html">Archive</a> &middot;
+        <a href="analytics.html">Analytics</a> &middot;
+        <a href="how_it_works.html">How It Works</a> &middot;
+        <a href="https://github.com/tyson-swetnam/webcrawler" target="_blank">GitHub</a>
+    </div>
+
+    <script type="module">
+    import * as duckdb from "https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.29.0/+esm";
+    import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm";
+
+    // ── Pre-canned example queries ──────────────────────────────────────
+    const EXAMPLES = [
+        {
+            label: "Top themes overall",
+            sql: `SELECT theme, COUNT(*) AS articles
+FROM (SELECT UNNEST(themes) AS theme FROM articles WHERE is_ai_related)
+GROUP BY 1
+ORDER BY 2 DESC;`
+        },
+        {
+            label: "Top themes — last 30 days",
+            sql: `SELECT theme, COUNT(*) AS articles
+FROM (
+  SELECT UNNEST(themes) AS theme
+  FROM articles
+  WHERE is_ai_related
+    AND published_date >= CURRENT_DATE - INTERVAL 30 DAY
+)
+GROUP BY 1
+ORDER BY 2 DESC;`
+        },
+        {
+            label: "Theme trend — weekly counts",
+            sql: `SELECT
+  date_trunc('week', published_date) AS week,
+  theme,
+  COUNT(*) AS articles
+FROM (
+  SELECT published_date, UNNEST(themes) AS theme
+  FROM articles
+  WHERE is_ai_related
+    AND published_date >= CURRENT_DATE - INTERVAL 90 DAY
+)
+GROUP BY 1, 2
+ORDER BY 1 DESC, 3 DESC;`
+        },
+        {
+            label: "Top universities — last 30 days",
+            sql: `SELECT university_name, COUNT(*) AS articles
+FROM articles
+WHERE is_ai_related
+  AND published_date >= CURRENT_DATE - INTERVAL 30 DAY
+  AND university_name IS NOT NULL
+  AND university_name != ''
+GROUP BY 1
+ORDER BY 2 DESC
+LIMIT 20;`
+        },
+        {
+            label: "Editorial picks — most recent",
+            sql: `SELECT
+  editorial_pick_rank AS rank,
+  editorial_impact_category AS category,
+  university_name AS university,
+  title,
+  url
+FROM articles
+WHERE editorial_pick_rank IS NOT NULL
+ORDER BY editorial_picked_at DESC, editorial_pick_rank ASC
+LIMIT 50;`
+        },
+        {
+            label: "Impact-score leaders",
+            sql: `SELECT
+  university_name,
+  title,
+  ROUND(impact_scientific, 1) AS sci,
+  ROUND(impact_financial, 1) AS fin,
+  ROUND(impact_partnership, 1) AS part,
+  ROUND((impact_scientific + impact_financial + impact_partnership) / 3, 2) AS composite
+FROM articles
+WHERE is_ai_related AND impact_scientific IS NOT NULL
+ORDER BY composite DESC
+LIMIT 30;`
+        },
+        {
+            label: "Theme co-occurrence (which themes appear together)",
+            sql: `WITH theme_pairs AS (
+  SELECT a AS theme_a, b AS theme_b
+  FROM articles, UNNEST(themes) AS t1(a), UNNEST(themes) AS t2(b)
+  WHERE a < b
+)
+SELECT theme_a, theme_b, COUNT(*) AS together
+FROM theme_pairs
+GROUP BY 1, 2
+ORDER BY 3 DESC
+LIMIT 25;`
+        },
+        {
+            label: "Universities heaviest in a single theme",
+            sql: `SELECT
+  university_name,
+  theme,
+  COUNT(*) AS articles
+FROM (
+  SELECT university_name, UNNEST(themes) AS theme
+  FROM articles
+  WHERE is_ai_related AND university_name IS NOT NULL AND university_name != ''
+)
+GROUP BY 1, 2
+ORDER BY 3 DESC
+LIMIT 30;`
+        },
+    ];
+
+    // ── Theme display labels (mirrors crawler/config/themes.json) ───────
+    const THEME_LABELS = {
+        biomedical_ai: "Biomedical AI",
+        neuroscience_ai: "Neuroscience & BCI",
+        robotics: "Robotics",
+        autonomous_vehicles: "Autonomous Vehicles",
+        nlp_llms: "NLP & LLMs",
+        computer_vision: "Computer Vision",
+        generative_ai: "Generative AI",
+        ai_ethics: "AI Ethics & Fairness",
+        ai_safety: "AI Safety & Alignment",
+        ai_policy: "AI Policy & Governance",
+        climate_ai: "Climate & Environment",
+        agriculture_ai: "Agriculture & Food",
+        education_ai: "AI in Education",
+        materials_ai: "Materials & Chemistry",
+        physics_ai: "Physics & Astronomy",
+        hpc_systems: "HPC & AI Systems",
+        ai_security: "AI & Cybersecurity",
+        ai_partnerships: "Partnerships & Industry",
+        ai_funding: "Funding & Awards",
+        ai_workforce: "Workforce & Training",
+        explainable_ai: "Explainable AI",
+        general_ai: "General / Other",
+    };
+    const labelFor = (id) => THEME_LABELS[id] || id;
+
+    // ── DuckDB bootstrap ────────────────────────────────────────────────
+    let conn = null;
+
+    async function bootstrap() {
+        const bundles = duckdb.getJsDelivrBundles();
+        const bundle = await duckdb.selectBundle(bundles);
+        const workerUrl = URL.createObjectURL(
+            new Blob([`importScripts("${bundle.mainWorker}");`], { type: "text/javascript" })
+        );
+        const worker = new Worker(workerUrl);
+        const db = new duckdb.AsyncDuckDB(new duckdb.ConsoleLogger(), worker);
+        await db.instantiate(bundle.mainModule, bundle.pthreadWorker);
+        URL.revokeObjectURL(workerUrl);
+
+        // Register the Parquet file via HTTP so DuckDB-WASM range-fetches it
+        // instead of loading the whole file into memory. Critical once the
+        // file grows beyond a few MB.
+        const parquetUrl = new URL("./data/articles.parquet", location.href).toString();
+        await db.registerFileURL(
+            "articles.parquet",
+            parquetUrl,
+            duckdb.DuckDBDataProtocol.HTTP,
+            false
+        );
+
+        const c = await db.connect();
+        // HEAD-check by selecting count — fails cleanly if file missing/empty
+        await c.query("CREATE VIEW articles AS SELECT * FROM 'articles.parquet'");
+        return c;
+    }
+
+    function showError(message, detail) {
+        const box = document.getElementById("loading");
+        box.classList.add("error");
+        box.innerHTML = `<strong>Could not load analytics data.</strong><br>${message}` +
+            (detail ? `<br><br><code>${detail}</code>` : "");
+    }
+
+    // ── Query helpers ───────────────────────────────────────────────────
+    async function queryRows(sql) {
+        const result = await conn.query(sql);
+        return result.toArray().map((r) => r.toJSON());
+    }
+
+    function fmtInt(n) { return Number(n).toLocaleString(); }
+
+    // ── Panel: meta bar ─────────────────────────────────────────────────
+    async function renderMetaBar() {
+        const [{ total }] = await queryRows("SELECT COUNT(*) AS total FROM articles");
+        const [{ ai_total }] = await queryRows("SELECT COUNT(*) AS ai_total FROM articles WHERE is_ai_related");
+        const [{ unis }] = await queryRows("SELECT COUNT(DISTINCT university_name) AS unis FROM articles WHERE university_name IS NOT NULL AND university_name != ''");
+        const [{ first, last }] = await queryRows("SELECT MIN(published_date) AS first, MAX(published_date) AS last FROM articles WHERE published_date IS NOT NULL");
+        const [{ picks }] = await queryRows("SELECT COUNT(*) AS picks FROM articles WHERE editorial_pick_rank IS NOT NULL");
+
+        const range = (first && last) ? `${first} → ${last}` : "—";
+        document.getElementById("meta-bar").innerHTML = `
+            <span class="stat"><strong>${fmtInt(total)}</strong> articles</span>
+            <span class="stat"><strong>${fmtInt(ai_total)}</strong> AI-related</span>
+            <span class="stat"><strong>${fmtInt(unis)}</strong> universities</span>
+            <span class="stat"><strong>${fmtInt(picks)}</strong> editorial picks</span>
+            <span class="stat">Range: <strong>${range}</strong></span>
+        `;
+    }
+
+    // ── Panel: themes over time (stacked area, weekly) ──────────────────
+    async function renderThemesOverTime() {
+        const rows = await queryRows(`
+            SELECT
+              date_trunc('week', published_date)::DATE AS week,
+              theme,
+              COUNT(*)::INT AS n
+            FROM (
+              SELECT published_date, UNNEST(themes) AS theme
+              FROM articles
+              WHERE is_ai_related
+                AND published_date >= CURRENT_DATE - INTERVAL 90 DAY
+                AND themes IS NOT NULL
+            )
+            GROUP BY 1, 2
+            ORDER BY 1, 2
+        `);
+        const container = document.getElementById("chart-themes-time");
+        if (rows.length === 0) {
+            container.innerHTML = `<div class="status-box" style="margin:0">No theme data yet — themes are tagged on the next crawl.</div>`;
+            return;
+        }
+
+        // Limit to top-8 themes by volume so the legend stays readable
+        const totals = new Map();
+        for (const r of rows) totals.set(r.theme, (totals.get(r.theme) || 0) + r.n);
+        const topThemes = [...totals.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8).map(([t]) => t);
+        const filtered = rows
+            .filter((r) => topThemes.includes(r.theme))
+            .map((r) => ({ week: new Date(r.week), theme: labelFor(r.theme), n: r.n }));
+
+        const chart = Plot.plot({
+            width: 600, height: 260,
+            marginLeft: 40, marginBottom: 30, marginRight: 8, marginTop: 8,
+            x: { type: "time", label: null },
+            y: { label: "articles" },
+            color: { legend: true, columns: 4, scheme: "tableau10" },
+            marks: [
+                Plot.areaY(filtered, {
+                    x: "week", y: "n", fill: "theme",
+                    curve: "monotone-x", stroke: "white", strokeWidth: 0.5,
+                }),
+                Plot.ruleY([0]),
+            ],
+        });
+        container.replaceChildren(chart);
+    }
+
+    // ── Panel: impact category distribution (bar) ───────────────────────
+    async function renderImpactDistribution() {
+        const rows = await queryRows(`
+            SELECT
+              editorial_impact_category AS category,
+              COUNT(*)::INT AS n
+            FROM articles
+            WHERE editorial_pick_rank IS NOT NULL AND editorial_impact_category IS NOT NULL
+            GROUP BY 1
+            ORDER BY 2 DESC
+        `);
+        const container = document.getElementById("chart-impact");
+        if (rows.length === 0) {
+            container.innerHTML = `<div class="status-box" style="margin:0">No editorial picks yet. Once curation runs, impact-category breakdown appears here.</div>`;
+            return;
+        }
+
+        const CAT_COLOR = {
+            "Scientific Breakthrough": "var(--color-scientific)",
+            "Major Funding": "var(--color-financial)",
+            "Strategic Partnership": "var(--color-partnership)",
+            "Policy Impact": "var(--color-policy)",
+        };
+
+        const chart = Plot.plot({
+            width: 600, height: 260,
+            marginLeft: 180, marginBottom: 30, marginRight: 16, marginTop: 8,
+            x: { label: "picks", grid: true },
+            y: { label: null, domain: rows.map((r) => r.category) },
+            marks: [
+                Plot.barX(rows, {
+                    x: "n", y: "category",
+                    fill: (d) => CAT_COLOR[d.category] || "#888",
+                }),
+                Plot.text(rows, {
+                    x: "n", y: "category", text: "n",
+                    dx: 6, textAnchor: "start", fontSize: 12, fill: "var(--color-text-muted)",
+                }),
+                Plot.ruleX([0]),
+            ],
+        });
+        container.replaceChildren(chart);
+    }
+
+    // ── Panel: university leaderboard (table) ───────────────────────────
+    async function renderUniversityLeaderboard() {
+        const rows = await queryRows(`
+            SELECT
+              university_name AS university,
+              COUNT(*)::INT AS articles,
+              COUNT(*) FILTER (WHERE editorial_pick_rank IS NOT NULL)::INT AS picks
+            FROM articles
+            WHERE is_ai_related
+              AND published_date >= CURRENT_DATE - INTERVAL 30 DAY
+              AND university_name IS NOT NULL AND university_name != ''
+            GROUP BY 1
+            ORDER BY articles DESC
+            LIMIT 20
+        `);
+        const container = document.getElementById("chart-universities");
+        if (rows.length === 0) {
+            container.innerHTML = `<div class="status-box" style="margin:0">No articles in the last 30 days yet.</div>`;
+            return;
+        }
+        const html = `
+            <table class="data">
+                <thead><tr><th>#</th><th>University</th><th class="num">Articles</th><th class="num">Top picks</th></tr></thead>
+                <tbody>
+                ${rows.map((r, i) => `
+                    <tr>
+                        <td>${i + 1}</td>
+                        <td>${escapeHTML(r.university)}</td>
+                        <td class="num">${fmtInt(r.articles)}</td>
+                        <td class="num">${r.picks > 0 ? fmtInt(r.picks) : "—"}</td>
+                    </tr>
+                `).join("")}
+                </tbody>
+            </table>
+        `;
+        container.innerHTML = html;
+    }
+
+    // ── Panel: articles per day (bar) ───────────────────────────────────
+    async function renderArticlesPerDay() {
+        const rows = await queryRows(`
+            SELECT published_date::DATE AS day, COUNT(*)::INT AS n
+            FROM articles
+            WHERE is_ai_related
+              AND published_date >= CURRENT_DATE - INTERVAL 60 DAY
+            GROUP BY 1
+            ORDER BY 1
+        `);
+        const container = document.getElementById("chart-articles");
+        if (rows.length === 0) {
+            container.innerHTML = `<div class="status-box" style="margin:0">No data yet.</div>`;
+            return;
+        }
+        const data = rows.map((r) => ({ day: new Date(r.day), n: r.n }));
+
+        const chart = Plot.plot({
+            width: 600, height: 260,
+            marginLeft: 40, marginBottom: 30, marginRight: 8, marginTop: 8,
+            x: { type: "time", label: null },
+            y: { label: "articles", grid: true },
+            marks: [
+                Plot.rectY(data, { x: "day", y: "n", interval: "day", fill: "var(--color-r1)" }),
+                Plot.ruleY([0]),
+            ],
+        });
+        container.replaceChildren(chart);
+    }
+
+    // ── SQL playground ──────────────────────────────────────────────────
+    function wireUpSqlPlayground() {
+        const select = document.getElementById("example-query");
+        const input = document.getElementById("sql-input");
+        const runBtn = document.getElementById("run-sql");
+        const results = document.getElementById("sql-results");
+        const status = document.getElementById("sql-status");
+
+        // Populate examples
+        select.innerHTML = `<option value="">—</option>` +
+            EXAMPLES.map((ex, i) => `<option value="${i}">${escapeHTML(ex.label)}</option>`).join("");
+        select.value = "0";
+        input.value = EXAMPLES[0].sql;
+
+        select.addEventListener("change", () => {
+            const idx = parseInt(select.value, 10);
+            if (!isNaN(idx) && EXAMPLES[idx]) input.value = EXAMPLES[idx].sql;
+        });
+
+        runBtn.addEventListener("click", async () => {
+            const sql = input.value.trim();
+            if (!sql) return;
+            runBtn.disabled = true;
+            status.textContent = "Running…";
+            results.innerHTML = `<div class="empty"><span class="spinner"></span>Querying…</div>`;
+            const t0 = performance.now();
+            try {
+                const rows = await queryRows(sql);
+                const dt = Math.round(performance.now() - t0);
+                renderSqlResults(rows, dt);
+                status.textContent = `${rows.length} rows · ${dt}ms`;
+            } catch (e) {
+                results.innerHTML = `<div class="error-text">${escapeHTML(String(e.message || e))}</div>`;
+                status.textContent = "error";
+            } finally {
+                runBtn.disabled = false;
+            }
+        });
+
+        input.addEventListener("keydown", (e) => {
+            // Cmd/Ctrl+Enter to run
+            if ((e.metaKey || e.ctrlKey) && e.key === "Enter") {
+                e.preventDefault();
+                runBtn.click();
+            }
+        });
+    }
+
+    function renderSqlResults(rows, ms) {
+        const results = document.getElementById("sql-results");
+        if (rows.length === 0) {
+            results.innerHTML = `<div class="meta">0 rows · ${ms}ms</div><div class="empty">No rows returned.</div>`;
+            return;
+        }
+        const cols = Object.keys(rows[0]);
+        const truncated = rows.slice(0, 500); // cap render for browser perf
+        const cellVal = (v) => {
+            if (v === null || v === undefined) return "<span style='color:var(--color-text-faint)'>NULL</span>";
+            if (Array.isArray(v)) return escapeHTML(v.join(", "));
+            if (typeof v === "object") return escapeHTML(JSON.stringify(v));
+            const s = String(v);
+            // Render URLs as clickable links
+            if (s.match(/^https?:\/\//)) {
+                return `<a href="${escapeAttr(s)}" target="_blank" rel="noopener" style="color:var(--color-link)">${escapeHTML(s.length > 60 ? s.slice(0, 57) + "…" : s)}</a>`;
+            }
+            return escapeHTML(s);
+        };
+        const isNumCol = (col) =>
+            truncated.every((r) => r[col] === null || r[col] === undefined || typeof r[col] === "number" || typeof r[col] === "bigint");
+
+        const meta = `<div class="meta">${fmtInt(rows.length)} rows · ${ms}ms${rows.length > 500 ? " · showing first 500" : ""}</div>`;
+        const head = `<thead><tr>${cols.map((c) => `<th class="${isNumCol(c) ? "num" : ""}">${escapeHTML(c)}</th>`).join("")}</tr></thead>`;
+        const body = `<tbody>${truncated.map((r) =>
+            `<tr>${cols.map((c) => `<td class="${isNumCol(c) ? "num" : ""}">${cellVal(r[c])}</td>`).join("")}</tr>`
+        ).join("")}</tbody>`;
+        results.innerHTML = `${meta}<table class="data">${head}${body}</table>`;
+    }
+
+    // ── Utilities ────────────────────────────────────────────────────────
+    function escapeHTML(s) {
+        return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    }
+    function escapeAttr(s) { return escapeHTML(s); }
+
+    // ── Init ────────────────────────────────────────────────────────────
+    (async () => {
+        try {
+            conn = await bootstrap();
+        } catch (e) {
+            console.error(e);
+            const msg = String(e.message || e);
+            if (msg.includes("404") || msg.includes("Failed to fetch") || msg.includes("HTTP Error") || msg.toLowerCase().includes("no such file")) {
+                showError(
+                    "No <code>articles.parquet</code> found at <code>./data/articles.parquet</code>. " +
+                    "It is generated on each crawl run; check back after the next daily update.",
+                    msg
+                );
+            } else {
+                showError("DuckDB-WASM failed to start.", msg);
+            }
+            return;
+        }
+
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("dashboard").style.display = "block";
+
+        // Render panels — one failing chart shouldn't kill the page.
+        for (const [name, fn] of [
+            ["meta", renderMetaBar],
+            ["themes-time", renderThemesOverTime],
+            ["impact", renderImpactDistribution],
+            ["universities", renderUniversityLeaderboard],
+            ["articles-per-day", renderArticlesPerDay],
+        ]) {
+            try {
+                await fn();
+            } catch (e) {
+                console.error(`Panel '${name}' failed:`, e);
+            }
+        }
+
+        wireUpSqlPlayground();
+    })();
+    </script>
+</body>
+</html>

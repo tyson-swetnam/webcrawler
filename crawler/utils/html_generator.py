@@ -802,9 +802,19 @@ class HTMLReportGenerator:
                        active_page: str = None, is_archive: bool = False) -> str:
         """Compact single-row header with title left, meta + nav right"""
         if is_archive:
-            urls = {"today": "../index.html", "archive": "index.html", "how_it_works": "../how_it_works.html"}
+            urls = {
+                "today": "../index.html",
+                "archive": "index.html",
+                "analytics": "../analytics.html",
+                "how_it_works": "../how_it_works.html",
+            }
         else:
-            urls = {"today": "index.html", "archive": "archive/index.html", "how_it_works": "how_it_works.html"}
+            urls = {
+                "today": "index.html",
+                "archive": "archive/index.html",
+                "analytics": "analytics.html",
+                "how_it_works": "how_it_works.html",
+            }
 
         def cls(page):
             return ' class="active"' if page == active_page else ''
@@ -820,6 +830,8 @@ class HTMLReportGenerator:
                 &middot;
                 <a href="{urls['archive']}"{cls('archive')}>Archive</a>
                 &middot;
+                <a href="{urls['analytics']}"{cls('analytics')}>Analytics</a>
+                &middot;
                 <a href="{urls['how_it_works']}"{cls('how_it_works')}>How It Works</a>
             </span>
         </div>
@@ -827,9 +839,19 @@ class HTMLReportGenerator:
 
     def _render_footer(self, is_archive: bool = False, timestamp: str = None) -> str:
         if is_archive:
-            urls = {"today": "../index.html", "archive": "index.html", "how_it_works": "../how_it_works.html"}
+            urls = {
+                "today": "../index.html",
+                "archive": "index.html",
+                "analytics": "../analytics.html",
+                "how_it_works": "../how_it_works.html",
+            }
         else:
-            urls = {"today": "index.html", "archive": "archive/index.html", "how_it_works": "how_it_works.html"}
+            urls = {
+                "today": "index.html",
+                "archive": "archive/index.html",
+                "analytics": "analytics.html",
+                "how_it_works": "how_it_works.html",
+            }
 
         ts = timestamp or datetime.now().strftime('%I:%M %p')
 
@@ -837,6 +859,7 @@ class HTMLReportGenerator:
     <div class="footer">
         <a href="{urls['today']}">Today</a> &middot;
         <a href="{urls['archive']}">Archive</a> &middot;
+        <a href="{urls['analytics']}">Analytics</a> &middot;
         <a href="{urls['how_it_works']}">How It Works</a> &middot;
         <a href="https://github.com/tyson-swetnam/webcrawler" target="_blank">GitHub</a>
         &nbsp;|&nbsp; {self._source_count} sources &middot; Updated {ts}
