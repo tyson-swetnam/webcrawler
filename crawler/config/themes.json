@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "description": "Fixed taxonomy of AI-research themes used to tag every article during Claude analysis. Closed-vocabulary tagging keeps the analytics dashboard's charts comparable across time. Add new themes here (with stable ids — never rename existing ids) and run a backfill to retag historical articles.",
+  "themes": [
+    {
+      "id": "biomedical_ai",
+      "label": "Biomedical AI",
+      "description": "AI applied to medicine, drug discovery, diagnostics, genomics, clinical trials, biology."
+    },
+    {
+      "id": "neuroscience_ai",
+      "label": "Neuroscience & BCI",
+      "description": "Brain-computer interfaces, computational neuroscience, AI-decoded neural signals."
+    },
+    {
+      "id": "robotics",
+      "label": "Robotics",
+      "description": "Robots, mechatronics, embodied AI, drones, prosthetics, manipulation, mobility."
+    },
+    {
+      "id": "autonomous_vehicles",
+      "label": "Autonomous Vehicles",
+      "description": "Self-driving cars, drones with autonomy, autonomous shipping, navigation systems."
+    },
+    {
+      "id": "nlp_llms",
+      "label": "NLP & LLMs",
+      "description": "Large language models, chatbots, machine translation, text understanding, retrieval-augmented generation."
+    },
+    {
+      "id": "computer_vision",
+      "label": "Computer Vision",
+      "description": "Image and video understanding, object detection, segmentation, medical imaging analysis."
+    },
+    {
+      "id": "generative_ai",
+      "label": "Generative AI",
+      "description": "Image, audio, video, or 3D generation; diffusion models; creative AI; deepfakes."
+    },
+    {
+      "id": "ai_ethics",
+      "label": "AI Ethics & Fairness",
+      "description": "Bias, fairness, accountability, responsible AI, sociotechnical critiques, equity."
+    },
+    {
+      "id": "ai_safety",
+      "label": "AI Safety & Alignment",
+      "description": "Alignment, red-teaming, model robustness, adversarial attacks, content safety."
+    },
+    {
+      "id": "ai_policy",
+      "label": "AI Policy & Governance",
+      "description": "Regulation, government policy, AI in national security/defense, export controls, legal frameworks."
+    },
+    {
+      "id": "climate_ai",
+      "label": "Climate & Environment",
+      "description": "Climate modeling, weather, environmental monitoring, sustainability, conservation, ocean/forest science."
+    },
+    {
+      "id": "agriculture_ai",
+      "label": "Agriculture & Food",
+      "description": "Precision agriculture, crop modeling, food systems, agricultural security."
+    },
+    {
+      "id": "education_ai",
+      "label": "AI in Education",
+      "description": "AI for teaching and learning, ChatGPT-in-classroom, academic-integrity policies, ed-tech."
+    },
+    {
+      "id": "materials_ai",
+      "label": "Materials & Chemistry",
+      "description": "AI-driven materials discovery, computational chemistry, energy materials, novel compounds."
+    },
+    {
+      "id": "physics_ai",
+      "label": "Physics & Astronomy",
+      "description": "AI applied to physics, astronomy, particle physics, cosmology, scientific simulation."
+    },
+    {
+      "id": "hpc_systems",
+      "label": "HPC & AI Systems",
+      "description": "Supercomputing, AI infrastructure, GPU/TPU clusters, distributed training, AI hardware/chips, thermodynamic or neuromorphic computing."
+    },
+    {
+      "id": "ai_security",
+      "label": "AI & Cybersecurity",
+      "description": "AI for cybersecurity, threat detection, AI-assisted defense or attack, vulnerability discovery."
+    },
+    {
+      "id": "ai_partnerships",
+      "label": "Partnerships & Industry",
+      "description": "Industry-academia collaborations, MOUs, cloud-provider partnerships, joint research centers."
+    },
+    {
+      "id": "ai_funding",
+      "label": "Funding & Awards",
+      "description": "Grants, awards, named professorships, philanthropic gifts, federal funding announcements."
+    },
+    {
+      "id": "ai_workforce",
+      "label": "Workforce & Training",
+      "description": "AI workforce development, micro-credentials, professional training, AI literacy initiatives."
+    },
+    {
+      "id": "explainable_ai",
+      "label": "Explainable AI",
+      "description": "Interpretability, model explanation, mechanistic understanding, transparency tools."
+    },
+    {
+      "id": "general_ai",
+      "label": "General / Other",
+      "description": "AI news that doesn't fit any specific theme above (broad announcements, events, opinion pieces)."
+    }
+  ]
+}

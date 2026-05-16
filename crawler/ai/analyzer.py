@@ -6,7 +6,9 @@ to provide high-quality, consensus-based article summaries and relevance scoring
 """
 
 import asyncio
+import json
 import re
+from pathlib import Path
 from typing import List, Dict, Optional, Any
 from datetime import datetime
 import logging
@@ -17,6 +19,36 @@ from openai import AsyncOpenAI
 from crawler.config.settings import settings
 
 logger = logging.getLogger(__name__)
+
+
+def _load_theme_taxonomy() -> Dict[str, Any]:
+    """Load the fixed theme taxonomy from crawler/config/themes.json.
+
+    The taxonomy is closed-vocabulary — Claude must pick from these ids,
+    so the dashboard's theme charts stay comparable across runs.
+    """
+    path = Path(__file__).parent.parent / "config" / "themes.json"
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as e:
+        logger.warning(f"Could not load themes.json ({e}); falling back to empty taxonomy")
+        return {"version": 0, "themes": []}
+
+
+THEME_TAXONOMY = _load_theme_taxonomy()
+THEME_IDS = {t["id"] for t in THEME_TAXONOMY.get("themes", [])}
+
+
+def _build_themes_prompt_block() -> str:
+    """Render the taxonomy as a compact block for the Claude prompt."""
+    themes = THEME_TAXONOMY.get("themes", [])
+    if not themes:
+        return ""
+    lines = [f"- {t['id']}: {t['description']}" for t in themes]
+    return "\n".join(lines)
+
+
+_THEMES_PROMPT_BLOCK = _build_themes_prompt_block()
 
 
 class MultiAIAnalyzer:
@@ -131,9 +163,13 @@ class MultiAIAnalyzer:
 2. 3-5 key points or innovations (as a bullet list)
 3. Relevance score (1-10 scale) indicating how significant this AI research is
 4. Whether this is truly AI-related (yes/no)
+5. 1-5 theme tags from the fixed taxonomy below — pick the BEST matches; use general_ai only if nothing else fits
 
 Article Title: {article.get('title', 'Untitled')}
 Content: {content}
+
+Theme taxonomy (use these exact ids, snake_case, comma-separated):
+{_THEMES_PROMPT_BLOCK}
 
 Provide structured output in this format:
 SUMMARY: [your 2-3 sentence summary]
@@ -143,6 +179,7 @@ KEY_POINTS:
 - [point 3]
 RELEVANCE: [score 1-10]
 AI_RELATED: [yes/no]
+THEMES: [comma-separated ids from the taxonomy above, e.g. biomedical_ai, robotics]
 SCIENTIFIC_IMPACT: [1-10, how significant is the scientific or technological innovation]
 FINANCIAL_IMPACT: [1-10, based on dollar figures: billions=9-10, hundreds of millions=7-8, tens of millions=5-6, smaller or none=1-4]
 PARTNERSHIP_IMPACT: [1-10, significance of new partnerships between academia, government, and industry]"""
@@ -164,6 +201,7 @@ PARTNERSHIP_IMPACT: [1-10, significance of new partnerships between academia, go
             'key_points': parsed.get('key_points', []),
             'relevance_score': parsed.get('relevance_score', 5),
             'is_ai_related': parsed.get('is_ai_related', True),
+            'themes': parsed.get('themes', []),
             'impact_scores': {
                 'scientific': parsed.get('scientific_impact', 1.0),
                 'financial': parsed.get('financial_impact', 1.0),
@@ -181,10 +219,19 @@ PARTNERSHIP_IMPACT: [1-10, significance of new partnerships between academia, go
             'key_points': [],
             'relevance_score': 5,
             'is_ai_related': True,
+            'themes': [],
             'scientific_impact': 1.0,
             'financial_impact': 1.0,
             'partnership_impact': 1.0,
         }
+
+        # Section header strings used both as line-start markers and as
+        # "stop tokens" for the summary continuation rule below. Keeping them
+        # in a tuple here means adding a new section in one place only.
+        section_markers = (
+            'KEY_POINTS', 'RELEVANCE', 'AI_RELATED', 'THEMES',
+            'SCIENTIFIC_IMPACT', 'FINANCIAL_IMPACT', 'PARTNERSHIP_IMPACT',
+        )
 
         current_section = None
 
@@ -205,6 +252,9 @@ PARTNERSHIP_IMPACT: [1-10, significance of new partnerships between academia, go
             elif line.startswith('AI_RELATED:'):
                 ai_text = line.replace('AI_RELATED:', '').strip().lower()
                 parsed['is_ai_related'] = ai_text.startswith('yes')
+                current_section = None
+            elif line.startswith('THEMES:'):
+                parsed['themes'] = self._parse_themes(line.replace('THEMES:', ''))
                 current_section = None
             elif line.startswith('SCIENTIFIC_IMPACT:'):
                 try:
@@ -229,10 +279,28 @@ PARTNERSHIP_IMPACT: [1-10, significance of new partnerships between academia, go
                 current_section = None
             elif line.startswith('-') and current_section == 'key_points':
                 parsed['key_points'].append(line[1:].strip())
-            elif current_section == 'summary' and line and not line.startswith(('KEY_POINTS', 'RELEVANCE', 'AI_RELATED', 'SCIENTIFIC_IMPACT', 'FINANCIAL_IMPACT', 'PARTNERSHIP_IMPACT')):
+            elif current_section == 'summary' and line and not line.startswith(section_markers):
                 parsed['summary'] += ' ' + line
 
         return parsed
+
+    @staticmethod
+    def _parse_themes(raw: str) -> List[str]:
+        """Parse the THEMES: line and return validated, deduplicated theme ids.
+
+        Drops tokens not in the taxonomy so charts only ever see valid ids.
+        Strips brackets/quotes that Claude sometimes adds around the list.
+        """
+        cleaned = raw.strip().strip('[]').strip()
+        if not cleaned:
+            return []
+        tokens = re.split(r'[,\s]+', cleaned)
+        seen = []
+        for token in tokens:
+            tid = token.strip().strip('"\'').lower()
+            if tid and tid in THEME_IDS and tid not in seen:
+                seen.append(tid)
+        return seen[:5]  # cap at 5 themes per article
 
     async def openai_analyze(self, article: Dict[str, Any]) -> Dict[str, Any]:
         """
