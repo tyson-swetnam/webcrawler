@@ -239,6 +239,10 @@ async def main():
                 if editorial_picks:
                     stamped = parquet_store.save_editorial_picks(editorial_picks)
                     logger.info(f"📦 Phase 4a: Stamped {stamped} editorial picks onto Parquet snapshot")
+                # Pre-aggregate themes for fast dashboard rendering
+                theme_rows = parquet_store.export_themes_daily()
+                if theme_rows:
+                    logger.info(f"📦 Phase 4a: Pre-aggregated {theme_rows} (date, theme) rows for the dashboard")
             except Exception as e:
                 logger.warning(f"Parquet export failed (non-fatal): {e}", exc_info=True)
 
@@ -536,12 +540,18 @@ async def run_crawl_with_analysis() -> bool:
                         article.last_analyzed = datetime.now(timezone.utc)
                         db.add(ai_analysis)
 
-                        # Store impact scores in article metadata
-                        impact_scores = analysis.get('claude', {}).get('impact_scores') if analysis.get('claude') else None
-                        if impact_scores:
+                        # Store Claude-derived metadata (impact scores + themes)
+                        # on article_metadata so it flows into the Parquet store.
+                        claude_payload = analysis.get('claude') or {}
+                        meta_update = {}
+                        if claude_payload.get('impact_scores'):
+                            meta_update['impact_scores'] = claude_payload['impact_scores']
+                        if claude_payload.get('themes'):
+                            meta_update['themes'] = list(claude_payload['themes'])
+                        if meta_update:
                             article.article_metadata = {
                                 **(article.article_metadata or {}),
-                                'impact_scores': impact_scores
+                                **meta_update,
                             }
 
                     db.commit()
@@ -635,12 +645,18 @@ async def analyze_articles(articles, db) -> list:
             article.ai_confidence_score = analysis['consensus']['confidence']
             article.last_analyzed = datetime.now(timezone.utc)
 
-            # Store impact scores in article metadata
-            impact_scores = analysis.get('claude', {}).get('impact_scores') if analysis.get('claude') else None
-            if impact_scores:
+            # Store Claude-derived metadata (impact scores + themes) on
+            # article_metadata so it flows into the Parquet store.
+            claude_payload = analysis.get('claude') or {}
+            meta_update = {}
+            if claude_payload.get('impact_scores'):
+                meta_update['impact_scores'] = claude_payload['impact_scores']
+            if claude_payload.get('themes'):
+                meta_update['themes'] = list(claude_payload['themes'])
+            if meta_update:
                 article.article_metadata = {
                     **(article.article_metadata or {}),
-                    'impact_scores': impact_scores
+                    **meta_update,
                 }
 
             db.add(ai_analysis)
