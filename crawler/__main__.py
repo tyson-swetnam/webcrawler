@@ -239,6 +239,10 @@ async def main():
                 if editorial_picks:
                     stamped = parquet_store.save_editorial_picks(editorial_picks)
                     logger.info(f"📦 Phase 4a: Stamped {stamped} editorial picks onto Parquet snapshot")
+                # Pre-aggregate themes for fast dashboard rendering
+                theme_rows = parquet_store.export_themes_daily()
+                if theme_rows:
+                    logger.info(f"📦 Phase 4a: Pre-aggregated {theme_rows} (date, theme) rows for the dashboard")
             except Exception as e:
                 logger.warning(f"Parquet export failed (non-fatal): {e}", exc_info=True)
 

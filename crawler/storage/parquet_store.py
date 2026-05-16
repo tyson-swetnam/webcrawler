@@ -85,6 +85,7 @@ class ParquetStore:
         self.data_dir = Path(data_dir)
         self.data_dir.mkdir(parents=True, exist_ok=True)
         self.articles_path = self.data_dir / "articles.parquet"
+        self.themes_daily_path = self.data_dir / "themes_daily.parquet"
 
     # ────────────────────────────── EXPORT ────────────────────────────────
 
@@ -177,6 +178,55 @@ class ParquetStore:
             self.articles_path,
         )
         return len(rows)
+
+    def export_themes_daily(self) -> int:
+        """Pre-aggregate themes per published day into themes_daily.parquet.
+
+        The dashboard's themes-over-time chart prefers this file because the
+        scan is ~22 themes × N days instead of UNNEST-ing the full articles
+        table. Built directly from articles.parquet (already on disk after
+        export_from_postgres()), so no Postgres roundtrip needed.
+
+        Returns the number of (date, theme) pairs written.
+        """
+        if not self.articles_path.exists():
+            logger.info("export_themes_daily: no articles.parquet yet, skipping")
+            return 0
+
+        tmp = self.themes_daily_path.with_suffix(".parquet.tmp")
+        con = duckdb.connect()
+        try:
+            con.execute(
+                f"""
+                COPY (
+                    SELECT
+                        CAST(published_date AS DATE) AS date,
+                        theme,
+                        COUNT(*)::INT AS n
+                    FROM (
+                        SELECT published_date, UNNEST(themes) AS theme
+                        FROM read_parquet('{self.articles_path}')
+                        WHERE is_ai_related
+                          AND published_date IS NOT NULL
+                          AND themes IS NOT NULL
+                          AND len(themes) > 0
+                    )
+                    GROUP BY 1, 2
+                    ORDER BY 1, 2
+                ) TO '{tmp}' (FORMAT 'parquet', COMPRESSION 'zstd')
+                """
+            )
+            (rowcount,) = con.execute(f"SELECT COUNT(*) FROM read_parquet('{tmp}')").fetchone()
+        finally:
+            con.close()
+
+        tmp.replace(self.themes_daily_path)
+        logger.info(
+            "export_themes_daily: wrote %d (date, theme) pairs to %s",
+            rowcount,
+            self.themes_daily_path,
+        )
+        return int(rowcount)
 
     def save_editorial_picks(self, picks: List[dict]) -> int:
         """Stamp editorial-pick columns onto the existing Parquet snapshot.

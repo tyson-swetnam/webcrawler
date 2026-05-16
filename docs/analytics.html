@@ -411,6 +411,7 @@ LIMIT 30;`
 
     // ── DuckDB bootstrap ────────────────────────────────────────────────
     let conn = null;
+    let HAS_THEMES_DAILY = false;
 
     async function bootstrap() {
         const bundles = duckdb.getJsDelivrBundles();
@@ -423,20 +424,31 @@ LIMIT 30;`
         await db.instantiate(bundle.mainModule, bundle.pthreadWorker);
         URL.revokeObjectURL(workerUrl);
 
-        // Register the Parquet file via HTTP so DuckDB-WASM range-fetches it
-        // instead of loading the whole file into memory. Critical once the
-        // file grows beyond a few MB.
-        const parquetUrl = new URL("./data/articles.parquet", location.href).toString();
-        await db.registerFileURL(
-            "articles.parquet",
-            parquetUrl,
-            duckdb.DuckDBDataProtocol.HTTP,
-            false
-        );
+        // Register parquet files via HTTP so DuckDB-WASM range-fetches
+        // instead of pulling everything into memory. Articles is required;
+        // themes_daily is an optional pre-aggregated view used by the
+        // themes-over-time chart for a cheaper scan.
+        const articlesUrl = new URL("./data/articles.parquet", location.href).toString();
+        await db.registerFileURL("articles.parquet", articlesUrl, duckdb.DuckDBDataProtocol.HTTP, false);
 
         const c = await db.connect();
-        // HEAD-check by selecting count — fails cleanly if file missing/empty
+        // Required: fails cleanly if articles file is missing or empty
         await c.query("CREATE VIEW articles AS SELECT * FROM 'articles.parquet'");
+
+        // Optional pre-aggregate. Probe via HEAD; register only if available.
+        const themesDailyUrl = new URL("./data/themes_daily.parquet", location.href).toString();
+        try {
+            const head = await fetch(themesDailyUrl, { method: "HEAD" });
+            if (head.ok) {
+                await db.registerFileURL("themes_daily.parquet", themesDailyUrl, duckdb.DuckDBDataProtocol.HTTP, false);
+                await c.query("CREATE VIEW themes_daily AS SELECT * FROM 'themes_daily.parquet'");
+                HAS_THEMES_DAILY = true;
+                console.info("themes_daily.parquet registered — themes chart will use the pre-aggregate");
+            }
+        } catch (e) {
+            // Network/CORS hiccup — fall back to scanning articles directly
+            console.warn("themes_daily.parquet probe failed; falling back to articles scan", e);
+        }
         return c;
     }
 
@@ -475,7 +487,18 @@ LIMIT 30;`
 
     // ── Panel: themes over time (stacked area, weekly) ──────────────────
     async function renderThemesOverTime() {
-        const rows = await queryRows(`
+        // Prefer the pre-aggregate when available — scan is ~22 themes × N
+        // days instead of UNNEST-ing the full articles table.
+        const sql = HAS_THEMES_DAILY ? `
+            SELECT
+              date_trunc('week', date)::DATE AS week,
+              theme,
+              SUM(n)::INT AS n
+            FROM themes_daily
+            WHERE date >= CURRENT_DATE - INTERVAL 90 DAY
+            GROUP BY 1, 2
+            ORDER BY 1, 2
+        ` : `
             SELECT
               date_trunc('week', published_date)::DATE AS week,
               theme,
@@ -489,7 +512,15 @@ LIMIT 30;`
             )
             GROUP BY 1, 2
             ORDER BY 1, 2
-        `);
+        `;
+        const rows = await queryRows(sql);
+        // Show the data source in the panel meta so we know which path ran
+        const metaEl = document.getElementById("meta-themes-time");
+        if (metaEl) {
+            metaEl.textContent = HAS_THEMES_DAILY
+                ? "Weekly counts, last 90 days (themes_daily pre-aggregate)"
+                : "Weekly counts, last 90 days";
+        }
         const container = document.getElementById("chart-themes-time");
         if (rows.length === 0) {
             container.innerHTML = `<div class="status-box" style="margin:0">No theme data yet — themes are tagged on the next crawl.</div>`;
