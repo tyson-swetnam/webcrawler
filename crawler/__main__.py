@@ -142,12 +142,11 @@ async def main():
             ).limit(settings.max_articles_per_run).all()
 
             if not all_recent:
-                logger.info("No articles found to report on.")
-                logger.info("\n📬 Phase 4: Generating HTML reports")
-                await send_notifications([], [], db)
-                return 0
-
-            logger.info(f"Total articles for reporting: {len(all_recent)}")
+                logger.info("No new articles found in lookback window. "
+                           "Falling through to editorial curation against the past 7 days "
+                           "so the Top News tab still renders.")
+            else:
+                logger.info(f"Total articles for reporting: {len(all_recent)}")
 
             # Phase 3.5: Editorial Curation for Top News (last 7 days)
             editorial_picks = []
@@ -185,6 +184,29 @@ async def main():
                     editorial_picks = await curator.curate_top_news(candidates)
                     if editorial_picks:
                         logger.info(f"Editorial curation selected {len(editorial_picks)} top stories")
+                        # Persist picks so the Top News tab survives empty
+                        # crawls, API failures, and ephemeral-DB runs.
+                        try:
+                            articles_by_id = {
+                                c['article_id']: {
+                                    'title': c.get('title', ''),
+                                    'url': c.get('url', ''),
+                                    'university': c.get('university_name', ''),
+                                    'published_date': c.get('published_date', ''),
+                                }
+                                for c in candidates
+                            }
+                            snapshot_gen = HTMLReportGenerator(
+                                output_dir=settings.local_output_dir,
+                                github_pages_dir="docs",
+                            )
+                            snap_path = snapshot_gen.save_top_news_snapshot(
+                                editorial_picks, articles_by_id
+                            )
+                            if snap_path:
+                                logger.info(f"Saved Top News snapshot: {snap_path}")
+                        except Exception as e:
+                            logger.warning(f"Failed to save Top News snapshot (non-fatal): {e}")
                     else:
                         logger.info("Editorial curation: no top stories selected")
                 except Exception as e:

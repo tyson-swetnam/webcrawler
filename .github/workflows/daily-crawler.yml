@@ -57,6 +57,24 @@ jobs:
           # Database tables are created automatically by SQLAlchemy
           echo "Database ready at $DATABASE_URL"
 
+      - name: Seed persisted Top News snapshot from website branch
+        run: |
+          # Pulls the Top News snapshot from the deployed website branch so
+          # the Top News tab survives an empty crawl on the ephemeral DB.
+          # The snapshot may live at /data/top_news.json (from GH Actions
+          # copy step) or /docs/data/top_news.json (from local systemd
+          # commits). Try both. Best-effort: a missing file is fine.
+          mkdir -p docs/data
+          git fetch origin website --depth=1 || true
+          if git show origin/website:docs/data/top_news.json > docs/data/top_news.json 2>/dev/null; then
+            echo "Seeded snapshot from docs/data/ on website branch"
+          elif git show origin/website:data/top_news.json > docs/data/top_news.json 2>/dev/null; then
+            echo "Seeded snapshot from data/ (root) on website branch"
+          else
+            rm -f docs/data/top_news.json
+            echo "No previous Top News snapshot found on website branch (first run)"
+          fi
+
       - name: Run crawler
         env:
           DATABASE_URL: postgresql://crawler:github_actions_temp@localhost:5432/ai_news_crawler
