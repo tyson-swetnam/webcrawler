@@ -57,6 +57,33 @@ jobs:
           # Database tables are created automatically by SQLAlchemy
           echo "Database ready at $DATABASE_URL"
 
+      - name: Seed durable data from website branch
+        run: |
+          # The crawler's source of truth (articles.parquet) and the Top News
+          # snapshot live on the deployed website branch — pull them into
+          # the workspace so the ephemeral Postgres can be hydrated and so
+          # the Top News tab survives an empty crawl. The website branch
+          # holds these at /data/* (from GH Actions copy) or /docs/data/*
+          # (from local systemd commits) — try both. Best-effort: missing
+          # files are fine on first run.
+          mkdir -p docs/data
+          git fetch origin website --depth=1 || true
+
+          fetch_one() {
+            local name="$1"
+            if git show "origin/website:docs/data/$name" > "docs/data/$name" 2>/dev/null; then
+              echo "Seeded docs/data/$name from docs/data/ on website branch"
+            elif git show "origin/website:data/$name" > "docs/data/$name" 2>/dev/null; then
+              echo "Seeded docs/data/$name from data/ (root) on website branch"
+            else
+              rm -f "docs/data/$name"
+              echo "No previous docs/data/$name found (first run)"
+            fi
+          }
+
+          fetch_one articles.parquet
+          fetch_one top_news.json
+
       - name: Run crawler
         env:
           DATABASE_URL: postgresql://crawler:github_actions_temp@localhost:5432/ai_news_crawler

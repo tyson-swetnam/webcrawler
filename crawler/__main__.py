@@ -94,6 +94,20 @@ async def main():
         db_manager.create_tables()
         logger.info("Database tables verified/created")
 
+        # Phase 0: Hydrate Postgres from the durable Parquet store.
+        # No-op when Postgres already has data (e.g. local persistent DB).
+        # Critical for ephemeral environments like GitHub Actions, where the
+        # Parquet file in docs/data/ is the only carrier of historical state.
+        try:
+            from crawler.storage import ParquetStore
+            parquet_store = ParquetStore("docs/data")
+            with db_manager.session_scope() as db:
+                hydrated = parquet_store.hydrate_postgres(db)
+                if hydrated:
+                    logger.info(f"📦 Phase 0: Hydrated {hydrated} articles from Parquet store")
+        except Exception as e:
+            logger.warning(f"Phase 0 hydration failed (non-fatal): {e}", exc_info=True)
+
         # Phase 1+2: Crawl and analyze concurrently
         logger.info("\n📡 Phase 1: Crawling university news sites (parallel spiders + overlapping AI analysis)")
         crawl_success = await run_crawl_with_analysis()
@@ -142,12 +156,11 @@ async def main():
             ).limit(settings.max_articles_per_run).all()
 
             if not all_recent:
-                logger.info("No articles found to report on.")
-                logger.info("\n📬 Phase 4: Generating HTML reports")
-                await send_notifications([], [], db)
-                return 0
-
-            logger.info(f"Total articles for reporting: {len(all_recent)}")
+                logger.info("No new articles found in lookback window. "
+                           "Falling through to editorial curation against the past 7 days "
+                           "so the Top News tab still renders.")
+            else:
+                logger.info(f"Total articles for reporting: {len(all_recent)}")
 
             # Phase 3.5: Editorial Curation for Top News (last 7 days)
             editorial_picks = []
@@ -185,13 +198,56 @@ async def main():
                     editorial_picks = await curator.curate_top_news(candidates)
                     if editorial_picks:
                         logger.info(f"Editorial curation selected {len(editorial_picks)} top stories")
+                        # Persist picks so the Top News tab survives empty
+                        # crawls, API failures, and ephemeral-DB runs.
+                        try:
+                            articles_by_id = {
+                                c['article_id']: {
+                                    'title': c.get('title', ''),
+                                    'url': c.get('url', ''),
+                                    'university': c.get('university_name', ''),
+                                    'published_date': c.get('published_date', ''),
+                                }
+                                for c in candidates
+                            }
+                            snapshot_gen = HTMLReportGenerator(
+                                output_dir=settings.local_output_dir,
+                                github_pages_dir="docs",
+                            )
+                            snap_path = snapshot_gen.save_top_news_snapshot(
+                                editorial_picks, articles_by_id
+                            )
+                            if snap_path:
+                                logger.info(f"Saved Top News snapshot: {snap_path}")
+                        except Exception as e:
+                            logger.warning(f"Failed to save Top News snapshot (non-fatal): {e}")
                     else:
                         logger.info("Editorial curation: no top stories selected")
                 except Exception as e:
                     logger.warning(f"Editorial curation failed (non-fatal): {e}")
 
-            # Phase 4: Generate and send reports
-            logger.info("\n📬 Phase 4: Generating and sending notifications/exports")
+            # Phase 4a: Snapshot Postgres → durable Parquet store.
+            # Must run after editorial curation so the picks get stamped onto
+            # the same snapshot. The website branch carries this file forward
+            # across runs (including ephemeral GH Actions DBs).
+            try:
+                from crawler.storage import ParquetStore
+                parquet_store = ParquetStore("docs/data")
+                exported = parquet_store.export_from_postgres(db)
+                if exported:
+                    logger.info(f"📦 Phase 4a: Exported {exported} articles to {parquet_store.articles_path}")
+                if editorial_picks:
+                    stamped = parquet_store.save_editorial_picks(editorial_picks)
+                    logger.info(f"📦 Phase 4a: Stamped {stamped} editorial picks onto Parquet snapshot")
+                # Pre-aggregate themes for fast dashboard rendering
+                theme_rows = parquet_store.export_themes_daily()
+                if theme_rows:
+                    logger.info(f"📦 Phase 4a: Pre-aggregated {theme_rows} (date, theme) rows for the dashboard")
+            except Exception as e:
+                logger.warning(f"Parquet export failed (non-fatal): {e}", exc_info=True)
+
+            # Phase 4b: Generate and send reports
+            logger.info("\n📬 Phase 4b: Generating and sending notifications/exports")
             exported_files = await send_notifications(all_recent, analyses, db, editorial_picks=editorial_picks)
 
         # Phase 5: Summary and statistics
@@ -506,12 +562,18 @@ async def run_crawl_with_analysis() -> bool:
                         article.last_analyzed = datetime.now(timezone.utc)
                         db.add(ai_analysis)
 
-                        # Store impact scores in article metadata
-                        impact_scores = analysis.get('claude', {}).get('impact_scores') if analysis.get('claude') else None
-                        if impact_scores:
+                        # Store Claude-derived metadata (impact scores + themes)
+                        # on article_metadata so it flows into the Parquet store.
+                        claude_payload = analysis.get('claude') or {}
+                        meta_update = {}
+                        if claude_payload.get('impact_scores'):
+                            meta_update['impact_scores'] = claude_payload['impact_scores']
+                        if claude_payload.get('themes'):
+                            meta_update['themes'] = list(claude_payload['themes'])
+                        if meta_update:
                             article.article_metadata = {
                                 **(article.article_metadata or {}),
-                                'impact_scores': impact_scores
+                                **meta_update,
                             }
 
                     db.commit()
@@ -620,12 +682,18 @@ async def analyze_articles(articles, db) -> list:
             article.ai_confidence_score = analysis['consensus']['confidence']
             article.last_analyzed = datetime.now(timezone.utc)
 
-            # Store impact scores in article metadata
-            impact_scores = analysis.get('claude', {}).get('impact_scores') if analysis.get('claude') else None
-            if impact_scores:
+            # Store Claude-derived metadata (impact scores + themes) on
+            # article_metadata so it flows into the Parquet store.
+            claude_payload = analysis.get('claude') or {}
+            meta_update = {}
+            if claude_payload.get('impact_scores'):
+                meta_update['impact_scores'] = claude_payload['impact_scores']
+            if claude_payload.get('themes'):
+                meta_update['themes'] = list(claude_payload['themes'])
+            if meta_update:
                 article.article_metadata = {
                     **(article.article_metadata or {}),
-                    'impact_scores': impact_scores
+                    **meta_update,
                 }
 
             db.add(ai_analysis)

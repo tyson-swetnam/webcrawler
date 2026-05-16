@@ -50,6 +50,7 @@ class HTMLReportGenerator:
         self.editorial_picks = editorial_picks or []
         self.classifier = UniversityClassifier()
         self._source_count = self._count_sources()
+        self._fallback_snapshot = None  # lazy-loaded persisted top-news snapshot
 
     def _count_sources(self) -> int:
         """Count total monitored sources from config files"""
@@ -801,9 +802,19 @@ class HTMLReportGenerator:
                        active_page: str = None, is_archive: bool = False) -> str:
         """Compact single-row header with title left, meta + nav right"""
         if is_archive:
-            urls = {"today": "../index.html", "archive": "index.html", "how_it_works": "../how_it_works.html"}
+            urls = {
+                "today": "../index.html",
+                "archive": "index.html",
+                "analytics": "../analytics.html",
+                "how_it_works": "../how_it_works.html",
+            }
         else:
-            urls = {"today": "index.html", "archive": "archive/index.html", "how_it_works": "how_it_works.html"}
+            urls = {
+                "today": "index.html",
+                "archive": "archive/index.html",
+                "analytics": "analytics.html",
+                "how_it_works": "how_it_works.html",
+            }
 
         def cls(page):
             return ' class="active"' if page == active_page else ''
@@ -819,6 +830,8 @@ class HTMLReportGenerator:
                 &middot;
                 <a href="{urls['archive']}"{cls('archive')}>Archive</a>
                 &middot;
+                <a href="{urls['analytics']}"{cls('analytics')}>Analytics</a>
+                &middot;
                 <a href="{urls['how_it_works']}"{cls('how_it_works')}>How It Works</a>
             </span>
         </div>
@@ -826,9 +839,19 @@ class HTMLReportGenerator:
 
     def _render_footer(self, is_archive: bool = False, timestamp: str = None) -> str:
         if is_archive:
-            urls = {"today": "../index.html", "archive": "index.html", "how_it_works": "../how_it_works.html"}
+            urls = {
+                "today": "../index.html",
+                "archive": "index.html",
+                "analytics": "../analytics.html",
+                "how_it_works": "../how_it_works.html",
+            }
         else:
-            urls = {"today": "index.html", "archive": "archive/index.html", "how_it_works": "how_it_works.html"}
+            urls = {
+                "today": "index.html",
+                "archive": "archive/index.html",
+                "analytics": "analytics.html",
+                "how_it_works": "how_it_works.html",
+            }
 
         ts = timestamp or datetime.now().strftime('%I:%M %p')
 
@@ -836,6 +859,7 @@ class HTMLReportGenerator:
     <div class="footer">
         <a href="{urls['today']}">Today</a> &middot;
         <a href="{urls['archive']}">Archive</a> &middot;
+        <a href="{urls['analytics']}">Analytics</a> &middot;
         <a href="{urls['how_it_works']}">How It Works</a> &middot;
         <a href="https://github.com/tyson-swetnam/webcrawler" target="_blank">GitHub</a>
         &nbsp;|&nbsp; {self._source_count} sources &middot; Updated {ts}
@@ -1147,13 +1171,141 @@ class HTMLReportGenerator:
                 '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
                 '<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">')
 
+    def save_top_news_snapshot(self, picks: List[Dict], articles_by_id: Dict[int, Dict]) -> Optional[Path]:
+        """Persist editorial picks + minimal article data so the Top News tab
+        survives empty crawls, API failures, and ephemeral-DB runs.
+
+        Writes to <github_pages_dir>/data/top_news.json (and the local output_dir
+        equivalent). The schema is intentionally flat to simplify a future
+        migration to Parquet/DuckDB.
+        """
+        if not picks:
+            return None
+
+        records = []
+        for pick in picks:
+            aid = pick.get('article_id')
+            article = articles_by_id.get(aid) if aid is not None else None
+            if not article:
+                continue
+            pub = article.get('published_date')
+            if hasattr(pub, 'isoformat'):
+                pub = pub.isoformat()
+            records.append({
+                'rank': pick.get('rank'),
+                'article_id': aid,
+                'editorial_note': pick.get('editorial_note', ''),
+                'impact_category': pick.get('impact_category', 'Scientific Breakthrough'),
+                'title': article.get('title', ''),
+                'url': article.get('url', ''),
+                'university': article.get('university') or article.get('university_name') or '',
+                'published_date': pub or '',
+            })
+
+        if not records:
+            return None
+
+        payload = {
+            'generated_at': datetime.now().isoformat(timespec='seconds'),
+            'picks': records,
+        }
+
+        snapshot_path = None
+        for base in [self.github_pages_dir, self.output_dir]:
+            if not base:
+                continue
+            data_dir = base / 'data'
+            data_dir.mkdir(parents=True, exist_ok=True)
+            target = data_dir / 'top_news.json'
+            target.write_text(json.dumps(payload, indent=2), encoding='utf-8')
+            if snapshot_path is None:
+                snapshot_path = target
+
+        return snapshot_path
+
+    def _load_top_news_fallback(self) -> Optional[Dict]:
+        """Load the most recent persisted snapshot. Returns the parsed payload
+        or None if no snapshot exists or is unreadable.
+        """
+        if self._fallback_snapshot is not None:
+            return self._fallback_snapshot or None
+
+        for base in [self.github_pages_dir, self.output_dir]:
+            if not base:
+                continue
+            candidate = base / 'data' / 'top_news.json'
+            if candidate.exists():
+                try:
+                    self._fallback_snapshot = json.loads(candidate.read_text(encoding='utf-8'))
+                    return self._fallback_snapshot
+                except (OSError, ValueError):
+                    continue
+
+        self._fallback_snapshot = {}
+        return None
+
+    def _render_top_news_from_snapshot(self, snapshot: Dict) -> tuple:
+        """Render the Top News section from a persisted snapshot. Used when the
+        current run has no editorial picks (e.g. curation failed or DB is empty).
+
+        Returns (html_string, matched_count).
+        """
+        picks = snapshot.get('picks') or []
+        if not picks:
+            return '', 0
+
+        category_class = {
+            'Scientific Breakthrough': 'scientific',
+            'Major Funding': 'financial',
+            'Strategic Partnership': 'partnership',
+            'Policy Impact': 'policy',
+        }
+
+        rows = []
+        for idx, pick in enumerate(picks, start=1):
+            title = pick.get('title') or 'Untitled'
+            url = pick.get('url') or '#'
+            university = self.clean_university_name(pick.get('university') or 'Unknown')
+            note = pick.get('editorial_note', '')
+            impact_cat = pick.get('impact_category', 'Scientific Breakthrough')
+            badge_cls = category_class.get(impact_cat, 'scientific')
+
+            rows.append(
+                f'<div class="top-article">'
+                f'<div class="top-article-header">'
+                f'<span class="top-rank">{idx}</span>'
+                f'<div class="top-article-info">'
+                f'<a class="top-headline" href="{url}" target="_blank">{title}</a>'
+                f'<div class="top-article-meta">'
+                f'<span class="impact-badge {badge_cls}">{impact_cat}</span>'
+                f'<span class="top-univ">{university}</span>'
+                f'</div>'
+                f'</div>'
+                f'</div>'
+                f'<div class="editorial-note">{note}</div>'
+                f'</div>'
+            )
+
+        html = (
+            '<div id="top-news-section" class="top-news-section active">'
+            + ''.join(rows)
+            + '</div>'
+        )
+        return html, len(rows)
+
     def _render_top_news_section(self, articles: List[Dict]) -> tuple:
         """Render the Top News editorial picks section.
 
         Returns:
             Tuple of (html_string, matched_count). HTML is empty string if no picks match.
         """
+        # Try in-memory picks first; if curation produced nothing this run,
+        # fall back to the most recent persisted snapshot so the tab survives
+        # empty crawls and curation API failures.
         if not self.editorial_picks:
+            snapshot = self._load_top_news_fallback()
+            if snapshot:
+                return self._render_top_news_from_snapshot(snapshot)
             return '', 0
 
         # Build article_id -> article lookup
@@ -1200,6 +1352,11 @@ class HTMLReportGenerator:
             )
 
         if not rows:
+            # Picks exist but none matched the current article set. Use the
+            # persisted snapshot so the tab still renders.
+            snapshot = self._load_top_news_fallback()
+            if snapshot:
+                return self._render_top_news_from_snapshot(snapshot)
             return '', 0
 
         html = (
@@ -1405,7 +1562,26 @@ class HTMLReportGenerator:
         )
 
         if not articles:
-            articles_html = '<p class="no-results">No AI-related articles found for this date.</p>'
+            # If today produced nothing but we have a persisted snapshot, render
+            # the Top News tab on its own so the page is still useful.
+            if not is_archive_page and top_news_html:
+                snapshot = self._load_top_news_fallback() or {}
+                snap_when = snapshot.get('generated_at', '')[:10]
+                banner = (
+                    '<p class="no-results" style="margin: 24px 0 8px 0; font-size: 14px;">'
+                    f'No new AI-related articles crawled today &middot; showing recent Top News'
+                    f'{" from " + snap_when if snap_when else ""}.'
+                    '</p>'
+                )
+                fallback_tab_bar = (
+                    '<div class="tab-bar">'
+                    f'<button class="tab-btn active" data-tab="top" onclick="switchTab(\'top\')">'
+                    f'Top News<span class="tab-count">({top_count})</span></button>'
+                    '</div>'
+                )
+                articles_html = banner + fallback_tab_bar + top_news_html
+            else:
+                articles_html = '<p class="no-results">No AI-related articles found for this date.</p>'
         else:
             articles_html = stats_html + search_bar_html + tab_bar_html + top_news_html + list_html
 
