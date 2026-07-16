@@ -32,10 +32,11 @@ jobs:
           - 5432:5432
 
     steps:
-      - name: Checkout repository (main branch for latest code)
+      # No explicit ref: scheduled runs use the default branch (main), while
+      # workflow_dispatch runs use whichever branch was selected — so the
+      # pipeline can be tested from a PR branch before merging.
+      - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          ref: main
 
       - name: Set up Python
         uses: actions/setup-python@v5
