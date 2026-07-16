@@ -168,8 +168,24 @@ async def main():
             if new_articles:
                 logger.info(f"Found {len(new_articles)} remaining unanalyzed articles")
                 if settings.enable_ai_analysis:
-                    analyses = await analyze_articles(new_articles, db)
-                    logger.info(f"Completed {len(analyses)} final AI analyses")
+                    analyses, quota_exhausted = await analyze_articles(new_articles, db)
+                    stored_count = sum(1 for a in analyses if a is not None)
+                    logger.info(f"Completed {stored_count} final AI analyses")
+                    if stored_count == 0 and not quota_exhausted:
+                        # Nothing analyzed despite pending articles, and not
+                        # because the subscription window ran out (that case
+                        # is expected and resumes next run) — fail the run
+                        # instead of publishing an empty report.
+                        logger.error(
+                            "Final analysis pass produced zero results for "
+                            f"{len(new_articles)} pending articles — failing the run"
+                        )
+                        return 1
+                    if quota_exhausted:
+                        logger.warning(
+                            "Subscription quota exhausted during final pass; "
+                            "remaining articles resume next run"
+                        )
                 else:
                     analyses = []
             else:
@@ -278,7 +294,8 @@ async def main():
 
             # Phase 4b: Generate and send reports
             logger.info("\n📬 Phase 4b: Generating and sending notifications/exports")
-            exported_files = await send_notifications(all_recent, analyses, db, editorial_picks=editorial_picks)
+            successful_analyses = [a for a in analyses if a is not None]
+            exported_files = await send_notifications(all_recent, successful_analyses, db, editorial_picks=editorial_picks)
 
         # Phase 5: Summary and statistics
         duration = (datetime.now(timezone.utc) - start_time).total_seconds()
@@ -457,8 +474,12 @@ async def run_crawler() -> bool:
             else:
                 logger.warning(f"[{name}] Spider returned failure")
 
-        logger.info(f"Crawling finished: {successes}/{len(CRAWL_GROUPS)} groups succeeded")
-        return successes > 0
+        required = max(1, len(CRAWL_GROUPS) - 1)
+        logger.info(
+            f"Crawling finished: {successes}/{len(CRAWL_GROUPS)} groups succeeded "
+            f"(need >= {required})"
+        )
+        return successes >= required
 
     except Exception as e:
         logger.error(f"Crawling failed with exception: {e}", exc_info=True)
@@ -629,20 +650,26 @@ async def run_crawl_with_analysis() -> bool:
     if failed_groups:
         logger.warning(f"Failed spider groups: {', '.join(failed_groups)}")
 
-    logger.info(f"Crawling finished: {successes}/{len(CRAWL_GROUPS)} groups succeeded")
-    return successes > 0
+    # Honest success criteria: a single surviving group out of three used to
+    # count as a green run, hiding two-thirds of the crawl being broken.
+    required = max(1, len(CRAWL_GROUPS) - 1)
+    logger.info(
+        f"Crawling finished: {successes}/{len(CRAWL_GROUPS)} groups succeeded "
+        f"(need >= {required})"
+    )
+    return successes >= required
 
 
-async def analyze_articles(articles, db) -> list:
+async def analyze_articles(articles, db) -> tuple:
     """
-    Analyze articles using multi-AI engine.
+    Analyze articles using the Claude Code analyzer.
 
     Args:
         articles: List of Article ORM objects
         db: Database session
 
     Returns:
-        List of analysis results
+        Tuple of (analysis results aligned with input, quota_exhausted flag)
     """
     try:
         analyzer = ClaudeCodeAnalyzer()
@@ -707,14 +734,17 @@ async def analyze_articles(articles, db) -> list:
             db.add(ai_analysis)
 
         db.commit()
-        logger.info(f"Stored {len(analyses)} AI analyses in database")
+        stored = sum(1 for a in analyses if a is not None)
+        logger.info(f"Stored {stored} AI analyses in database ({len(analyses) - stored} deferred)")
 
-        return analyses
+        return analyses, getattr(analyzer, "_quota_exhausted", False)
 
     except Exception as e:
+        # Roll back and re-raise: swallowing this used to publish an
+        # empty-but-green report when analysis silently failed.
         logger.error(f"AI analysis failed: {e}", exc_info=True)
         db.rollback()
-        return []
+        raise
 
 
 async def send_notifications(articles, analyses, db, editorial_picks=None):

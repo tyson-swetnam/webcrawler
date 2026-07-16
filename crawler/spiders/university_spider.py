@@ -234,6 +234,16 @@ class UniversityNewsSpider(scrapy.Spider):
             logger.error(f"Failed to load university sources: {e}")
             return []
 
+    async def start(self):
+        """Scrapy >= 2.13 entry point.
+
+        Modern Scrapy no longer calls start_requests(); its default start()
+        implementation reads only start_urls — which would silently skip the
+        whole sitemap/robots fanout below.
+        """
+        for request in self.start_requests():
+            yield request
+
     def start_requests(self):
         """Fan out discovery per source: front page/feed, sitemaps, robots.txt.
 
@@ -334,8 +344,11 @@ class UniversityNewsSpider(scrapy.Spider):
             if depth >= MAX_SITEMAP_DEPTH:
                 return
             children = list(sitemap)
-            # Prefer recently-modified child sitemaps (news CMSes date them)
-            children.sort(key=lambda e: e.get('lastmod') or '', reverse=True)
+            # Prefer recently-modified child sitemaps. Paginated CMS sitemaps
+            # (sitemap.xml?page=N) often stamp every page with the same
+            # lastmod while ordering content oldest-first — tiebreak on the
+            # page number so the newest pages win.
+            children.sort(key=self._sitemap_child_sort_key, reverse=True)
             followed = 0
             for entry in children:
                 loc = entry.get('loc')
@@ -398,6 +411,19 @@ class UniversityNewsSpider(scrapy.Spider):
             taken += 1
             if taken >= MAX_SITEMAP_URLS:
                 break
+
+    @staticmethod
+    def _sitemap_child_sort_key(entry: Dict[str, Any]) -> tuple:
+        """Sort key for sitemap-index children: (lastmod, page number)."""
+        loc = entry.get('loc') or ''
+        page = 0
+        match = re.search(r'(?:page=|[-_])(\d+)(?:\.xml(?:\.gz)?)?$', loc)
+        if match:
+            try:
+                page = int(match.group(1))
+            except ValueError:
+                page = 0
+        return (entry.get('lastmod') or '', page)
 
     @staticmethod
     def _parse_lastmod(raw: Optional[str]) -> Optional[datetime]:
@@ -790,7 +816,10 @@ class UniversityNewsSpider(scrapy.Spider):
                 university_name=canonical_name,
                 language=article_data.get('language', 'en'),
                 word_count=article_data.get('word_count'),
-                metadata={
+                # NB: the column is article_metadata — passing `metadata=`
+                # silently shadowed SQLAlchemy's Base.metadata and stored
+                # nothing at all.
+                article_metadata={
                     'categories': article_data.get('categories', []),
                     'tags': article_data.get('tags', []),
                     'hostname': article_data['hostname'],

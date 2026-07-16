@@ -56,7 +56,10 @@ class ContentExtractor:
             Dictionary with extracted content or None if extraction failed
         """
         try:
-            # Use bare_extraction for complete metadata
+            # Use bare_extraction for complete metadata.
+            # as_dict=True: trafilatura 2.x returns a Document object by
+            # default, which silently broke every extraction ('Document'
+            # object has no attribute 'get').
             result = bare_extraction(
                 html,
                 url=url,
@@ -64,6 +67,7 @@ class ContentExtractor:
                 include_comments=self.include_comments,
                 include_tables=self.include_tables,
                 output_format='python',
+                as_dict=True,
                 config=self.config
             )
 

@@ -2063,7 +2063,7 @@ function searchTopic(pill) {
 
         <h3>Phase 4: AI Analysis</h3>
         <p>
-            This is where the magic happens. Each new article is analyzed by Claude (Sonnet 4.6),
+            This is where the magic happens. New articles are analyzed in batches by Claude,
             Anthropic's frontier model for deep research understanding. Articles are classified by
             relevance, key topics are extracted, summaries are generated, and confidence scores
             are assigned.
@@ -2102,8 +2102,8 @@ function searchTopic(pill) {
             <li><strong>Crawling:</strong> Scrapy 2.11+ with custom spiders</li>
             <li><strong>Content Extraction:</strong> Trafilatura 2.0+ with htmldate</li>
             <li><strong>Database:</strong> PostgreSQL 15+ for metadata and tracking</li>
-            <li><strong>AI APIs:</strong> Anthropic Claude (Sonnet 4.6)</li>
-            <li><strong>Deployment:</strong> Systemd service with daily automated runs</li>
+            <li><strong>AI Analysis:</strong> Anthropic Claude via Claude Code</li>
+            <li><strong>Deployment:</strong> GitHub Actions with daily automated runs</li>
         </ul>
 
         <h3>Ethical Crawling</h3>
