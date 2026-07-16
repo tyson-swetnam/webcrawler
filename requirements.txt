@@ -14,9 +14,9 @@ redis>=5.0.1
 duckdb>=1.1.0  # source-of-truth Parquet store + analytics
 pyarrow>=15.0.0  # Arrow schema for DuckDB writes
 
-# AI APIs
-anthropic>=0.8.1
-openai>=1.6.1
+# AI analysis runs through the Claude Code CLI (npm install -g
+# @anthropic-ai/claude-code) authenticated with CLAUDE_CODE_OAUTH_TOKEN —
+# no Python AI SDKs required.
 
 # Configuration Management
 pydantic>=2.9.0  # Python 3.13 compatible

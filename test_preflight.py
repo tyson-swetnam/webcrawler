@@ -30,12 +30,12 @@ def test_configuration():
         print(f"  - Use RSS Feeds: {settings.use_rss_feeds}")
         print(f"  - Include Meta News: {settings.include_meta_news}")
 
-        # Check API keys
-        print(f"\n✓ API Keys Configuration:")
-        print(f"  - Anthropic API Key: {'SET' if settings.anthropic_api_key and len(settings.anthropic_api_key) > 20 else 'MISSING'}")
-        print(f"  - OpenAI API Key: {'SET' if settings.openai_api_key and len(settings.openai_api_key) > 20 else 'MISSING'}")
-        print(f"  - Claude Model: {settings.claude_model}")
-        print(f"  - OpenAI Model: {settings.openai_model}")
+        # Check AI backend (Claude Code CLI, subscription auth)
+        print(f"\n✓ AI Backend Configuration:")
+        print(f"  - CLAUDE_CODE_OAUTH_TOKEN: {'SET' if os.environ.get('CLAUDE_CODE_OAUTH_TOKEN') else 'MISSING'}")
+        print(f"  - Claude Code Model: {settings.claude_code_model}")
+        print(f"  - Articles per Prompt: {settings.ai_articles_per_prompt}")
+        print(f"  - Message Budget: {settings.ai_message_budget}")
 
         # Check crawl settings
         print(f"\n✓ Crawling Configuration:")
@@ -193,36 +193,21 @@ def test_spider_instantiation(settings):
 
 
 def test_ai_clients(settings):
-    """Test AI API clients can be instantiated."""
+    """Test the Claude Code CLI backend is available (no quota spent)."""
     print("\n" + "=" * 60)
-    print("5. AI API CONFIGURATION")
+    print("5. AI BACKEND (Claude Code CLI)")
     print("=" * 60)
 
-    results = {}
+    from crawler.ai.claude_cli import preflight
 
-    # Test Claude
-    try:
-        from anthropic import Anthropic
-        client = Anthropic(api_key=settings.anthropic_api_key)
-        print(f"\n✓ Claude client instantiated")
-        print(f"  - Model: {settings.claude_model}")
-        results['claude'] = True
-    except Exception as e:
-        print(f"\n✗ Claude client failed: {e}")
-        results['claude'] = False
+    ok, message = preflight()
+    if ok:
+        print(f"\n✓ {message}")
+        print(f"  - Model: {settings.claude_code_model}")
+    else:
+        print(f"\n✗ {message}")
 
-    # Test OpenAI
-    try:
-        from openai import OpenAI
-        client = OpenAI(api_key=settings.openai_api_key)
-        print(f"\n✓ OpenAI client instantiated")
-        print(f"  - Model: {settings.openai_model}")
-        results['openai'] = True
-    except Exception as e:
-        print(f"\n✗ OpenAI client failed: {e}")
-        results['openai'] = False
-
-    return all(results.values()), results
+    return ok, {'claude_cli': ok}
 
 
 def test_logging_setup():

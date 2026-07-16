@@ -5,9 +5,9 @@ This module provides centralized configuration with environment variable loading
 validation, and type safety for all application settings.
 """
 
-from pydantic import Field, field_validator, HttpUrl
+from pydantic import AliasChoices, Field, field_validator, model_validator, HttpUrl
 from pydantic_settings import BaseSettings, SettingsConfigDict
-from typing import List
+from typing import ClassVar, List, Optional
 from pathlib import Path
 
 
@@ -36,22 +36,31 @@ class Settings(BaseSettings):
         description="Redis connection string for caching"
     )
 
-    # AI API Keys (SecretStr prevents logging)
-    anthropic_api_key: str = Field(..., description="Anthropic Claude API key")
-    openai_api_key: str = Field(..., description="OpenAI API key")
-
-    # AI API Configuration
-    claude_model: str = Field(
-        default="claude-sonnet-4-6",
-        description="Claude Sonnet model to use for primary analysis"
+    # AI analysis via Claude Code CLI (Claude Max subscription auth).
+    # Credentials come from the CLAUDE_CODE_OAUTH_TOKEN environment variable
+    # (create once with `claude setup-token`); no API keys are required.
+    claude_code_model: str = Field(
+        default="sonnet",
+        description="Model alias or full id passed to the Claude Code CLI (--model)"
     )
-    claude_haiku_model: str = Field(
-        default="claude-haiku-4-5-20251001",
-        description="Claude Haiku model to use for fast processing"
+    ai_articles_per_prompt: int = Field(
+        default=15,
+        ge=1,
+        le=25,
+        description="Articles batched into one Claude message (quota conservation)"
     )
-    openai_model: str = Field(default="gpt-5-search-api-2025-10-14", description="OpenAI model to use")
-    max_ai_tokens: int = Field(default=1024, description="Maximum tokens for AI responses")
-    max_haiku_tokens: int = Field(default=512, description="Maximum tokens for Haiku responses")
+    ai_max_content_chars: int = Field(
+        default=1500,
+        description="Per-article content truncation inside batched prompts"
+    )
+    claude_cli_timeout: int = Field(
+        default=300,
+        description="Timeout in seconds for one Claude CLI invocation"
+    )
+    ai_message_budget: int = Field(
+        default=400,
+        description="Soft cap on subscription messages per run; analysis resumes next run"
+    )
 
     # Web crawling configuration
     max_concurrent_requests: int = Field(
@@ -66,8 +75,11 @@ class Settings(BaseSettings):
         description="Delay between requests to same domain (seconds)"
     )
     user_agent: str = Field(
-        default="AI-News-Crawler/1.0 (Research; +https://github.com/yourorg/ai-news-crawler)",
-        description="User-Agent string for HTTP requests"
+        default=(
+            "AIUniversityNewsBot/2.0 "
+            "(+https://tyson-swetnam.github.io/webcrawler; mailto:tswetnam@arizona.edu)"
+        ),
+        description="Honest, identifiable User-Agent (site + contact) for HTTP requests"
     )
     request_timeout: int = Field(
         default=30,
@@ -100,19 +112,20 @@ class Settings(BaseSettings):
         description="Comma-separated list of source JSON file paths (overrides university_source_type when set)"
     )
 
-    # Notification configuration
-    slack_webhook_url: str = Field(
-        ...,
+    # Notification configuration (all optional — validated only when the
+    # matching enable_* feature flag is on)
+    slack_webhook_url: Optional[str] = Field(
+        default=None,
         description="Slack webhook URL for notifications"
     )
-    email_from: str = Field(..., description="Email sender address")
+    email_from: Optional[str] = Field(default=None, description="Email sender address")
     email_to: List[str] = Field(
-        ...,
+        default_factory=list,
         description="List of email recipient addresses"
     )
     smtp_host: str = Field(default="smtp.gmail.com", description="SMTP server hostname")
     smtp_port: int = Field(default=465, description="SMTP server port")
-    smtp_password: str = Field(..., description="SMTP password (use app password for Gmail)")
+    smtp_password: Optional[str] = Field(default=None, description="SMTP password (use app password for Gmail)")
     smtp_use_ssl: bool = Field(default=True, description="Use SSL for SMTP connection")
 
     # Scheduling configuration
@@ -128,9 +141,10 @@ class Settings(BaseSettings):
     )
 
     # Content filtering
-    min_article_length: int = Field(
+    min_article_words: int = Field(
         default=100,
-        description="Minimum article length in characters"
+        validation_alias=AliasChoices("MIN_ARTICLE_WORDS", "MIN_ARTICLE_LENGTH"),
+        description="Minimum article length in words (MIN_ARTICLE_LENGTH kept as env alias)"
     )
     max_article_age_days: int = Field(
         default=5,
@@ -159,12 +173,12 @@ class Settings(BaseSettings):
         description="Enable AI analysis of articles"
     )
     enable_slack_notifications: bool = Field(
-        default=True,
-        description="Enable Slack notifications"
+        default=False,
+        description="Enable Slack notifications (requires SLACK_WEBHOOK_URL)"
     )
     enable_email_notifications: bool = Field(
-        default=True,
-        description="Enable email notifications"
+        default=False,
+        description="Enable email notifications (requires EMAIL_FROM/EMAIL_TO/SMTP_PASSWORD)"
     )
 
     # Local output configuration
@@ -224,6 +238,23 @@ class Settings(BaseSettings):
                 # Comma-separated format
                 return [email.strip() for email in v.split(',')]
         return v
+
+    @model_validator(mode='after')
+    def validate_notification_config(self):
+        """Require notification credentials only when the feature is enabled."""
+        if self.enable_slack_notifications and not self.slack_webhook_url:
+            raise ValueError(
+                "ENABLE_SLACK_NOTIFICATIONS=true requires SLACK_WEBHOOK_URL "
+                "(or set ENABLE_SLACK_NOTIFICATIONS=false)"
+            )
+        if self.enable_email_notifications and not (
+            self.email_from and self.email_to and self.smtp_password
+        ):
+            raise ValueError(
+                "ENABLE_EMAIL_NOTIFICATIONS=true requires EMAIL_FROM, EMAIL_TO and "
+                "SMTP_PASSWORD (or set ENABLE_EMAIL_NOTIFICATIONS=false)"
+            )
+        return self
 
     @field_validator('run_daily_at')
     @classmethod
@@ -373,112 +404,13 @@ class Settings(BaseSettings):
                     "source_type": "university"
                 }
 
-            elif source_format == "university":
-                # New university format with nested news structure
-                # Schema v3.0.0: news_sources is an array of source objects
-                # Legacy: news_sources.primary or news object
-                news = {}
-
-                if "news_sources" in source:
-                    news_sources = source.get("news_sources", [])
-                    if isinstance(news_sources, list) and news_sources:
-                        # Schema v3.0.0: Find primary source in array
-                        for ns in news_sources:
-                            if ns.get("type") == "primary":
-                                news = ns
-                                break
-                        # If no primary found, use first source
-                        if not news:
-                            news = news_sources[0]
-                    elif isinstance(news_sources, dict):
-                        # Legacy format: news_sources.primary
-                        news = news_sources.get("primary", {})
-                elif "news" in source:
-                    # Legacy format: news object
-                    news = source.get("news", {})
-
-                # Determine which URL to use
-                if self.prefer_ai_tag_urls and news.get("ai_tag_url"):
-                    primary_url = news.get("ai_tag_url")
-                    fallback_url = news.get("main_url") or news.get("url")
-                else:
-                    primary_url = news.get("main_url") or news.get("url")
-                    fallback_url = news.get("ai_tag_url")
-
-                # Use RSS feed if enabled and available
-                news_url = primary_url
-                rss_feed = None
-
-                if self.use_rss_feeds and news.get("rss_feed"):
-                    rss_feed = news.get("rss_feed")
-                    # Prefer RSS over HTML crawling
-                    if rss_feed and isinstance(rss_feed, str):
-                        news_url = rss_feed
-
-                location_obj = source.get("location", {})
-                location = f"{location_obj.get('city', '')}, {location_obj.get('state', '')}".strip(", ")
-
-                ai_research = source.get("ai_research", {})
-
-                entry = {
-                    "name": source.get("name"),
-                    "abbreviation": source.get("abbreviation"),
-                    "news_url": news_url or primary_url,
-                    "ai_tag_url": news.get("ai_tag_url"),
-                    "main_url": news.get("main_url") or news.get("url"),
-                    "rss_feed": rss_feed,
-                    "press_releases": news.get("press_releases"),
-                    "location": location,
-                    "focus_areas": ai_research.get("ai_focus_areas", []),
-                    "source_type": "university",
-                    "institution_type": source.get("classification", {}).get("institution_type"),
-                    "media_relations": source.get("media_relations", {}),
-                    "verified": news.get("verified", False)
-                }
-
-            elif source_format == "facility":
-                # Major research facilities format
-                # Schema v3.0.0: news_sources is an array of source objects
-                news = {}
-
-                if "news_sources" in source:
-                    news_sources = source.get("news_sources", [])
-                    if isinstance(news_sources, list) and news_sources:
-                        # Schema v3.0.0: Find primary source in array
-                        for ns in news_sources:
-                            if ns.get("type") == "primary":
-                                news = ns
-                                break
-                        # If no primary found, use first source
-                        if not news:
-                            news = news_sources[0]
-                    elif isinstance(news_sources, dict):
-                        # Legacy format: news_sources.primary
-                        news = news_sources.get("primary", {})
-
-                location_obj = source.get("location", {})
-                location = f"{location_obj.get('city', '')}, {location_obj.get('state', '')}".strip(", ")
-
-                # Use RSS feed if enabled and available (matching university handler)
-                facility_news_url = news.get("url")
-                facility_rss_feed = news.get("rss_feed")
-                if self.use_rss_feeds and facility_rss_feed and isinstance(facility_rss_feed, str):
-                    facility_news_url = facility_rss_feed
-
-                entry = {
-                    "name": source.get("name"),
-                    "abbreviation": source.get("abbreviation"),
-                    "news_url": facility_news_url,
-                    "ai_tag_url": news.get("ai_tag_url"),
-                    "rss_feed": facility_rss_feed,
-                    "location": location,
-                    "focus_areas": source.get("research_focus", []),
-                    "source_type": "facility",
-                    "facility_type": source.get("facility_type"),
-                    "affiliated_institution": source.get("affiliated_institution"),
-                    "crawl_priority": news.get("crawl_priority", 100),
-                    "verified": news.get("verified", False)
-                }
+            elif source_format in ("university", "facility"):
+                # Schema v3.0.0: news_sources is an ARRAY of source objects
+                # (primary, secondary, ai_tag). Emit one crawlable entry per
+                # verified source instead of only the primary — this is where
+                # most of the site's discovery coverage comes from.
+                normalized.extend(self._institution_entries(source, source_format))
+                continue
 
             elif source_format == "meta_news":
                 # Meta news services format
@@ -505,12 +437,115 @@ class Settings(BaseSettings):
                 }
 
             # Only add if we have a valid URL, not a placeholder domain, and is verified
-            news_url = entry.get("news_url", "")
-            is_verified = entry.get("verified", True)  # Default to True for legacy sources without verification field
-            if news_url and "universityof.edu" not in news_url and "universityat.edu" not in news_url and "theuniversity.edu" not in news_url and is_verified:
+            if self._is_valid_entry(entry):
                 normalized.append(entry)
 
         return normalized
+
+    @staticmethod
+    def _is_valid_entry(entry: dict) -> bool:
+        """Entry has a real (non-placeholder) URL and is verified."""
+        news_url = entry.get("news_url") or ""
+        # Default to True for legacy sources without verification field
+        is_verified = entry.get("verified", True)
+        return bool(
+            news_url
+            and "universityof.edu" not in news_url
+            and "universityat.edu" not in news_url
+            and "theuniversity.edu" not in news_url
+            and is_verified
+        )
+
+    # Max crawlable entries emitted per institution (primary + ai_tag + secondary)
+    MAX_SOURCES_PER_INSTITUTION: ClassVar[int] = 3
+
+    def _institution_entries(self, source: dict, source_format: str) -> List[dict]:
+        """Build one normalized entry per verified news_sources element.
+
+        Handles schema v3.0.0 arrays plus the legacy `news_sources.primary`
+        dict and `news` object shapes. Entries are ordered primary → ai_tag →
+        secondary, deduplicated by resolved URL, and capped per institution.
+        """
+        news_sources = source.get("news_sources")
+        ns_list: List[dict] = []
+        if isinstance(news_sources, list):
+            ns_list = [ns for ns in news_sources if isinstance(ns, dict)]
+        elif isinstance(news_sources, dict):
+            primary = news_sources.get("primary")
+            if isinstance(primary, dict):
+                ns_list = [primary]
+        elif isinstance(source.get("news"), dict):
+            ns_list = [source["news"]]
+
+        role_rank = {"primary": 0, "ai_tag": 1, "secondary": 2}
+        ns_list.sort(key=lambda ns: role_rank.get(ns.get("type"), 3))
+
+        location_obj = source.get("location", {})
+        location = f"{location_obj.get('city', '')}, {location_obj.get('state', '')}".strip(", ")
+
+        if source_format == "university":
+            ai_research = source.get("ai_research", {})
+            base = {
+                "name": source.get("name"),
+                "abbreviation": source.get("abbreviation"),
+                "location": location,
+                "focus_areas": ai_research.get("ai_focus_areas", []),
+                "source_type": "university",
+                "institution_type": source.get("classification", {}).get("institution_type"),
+                "media_relations": source.get("media_relations", {}),
+            }
+        else:
+            base = {
+                "name": source.get("name"),
+                "abbreviation": source.get("abbreviation"),
+                "location": location,
+                "focus_areas": source.get("research_focus", []),
+                "source_type": "facility",
+                "facility_type": source.get("facility_type"),
+                "affiliated_institution": source.get("affiliated_institution"),
+            }
+
+        entries: List[dict] = []
+        seen_urls: set = set()
+
+        for ns in ns_list:
+            main_url = ns.get("main_url") or ns.get("url")
+
+            # Determine which URL to use
+            if self.prefer_ai_tag_urls and ns.get("ai_tag_url"):
+                primary_url = ns.get("ai_tag_url")
+            else:
+                primary_url = main_url
+
+            # Prefer RSS over HTML crawling when enabled and available
+            news_url = primary_url
+            rss_feed = ns.get("rss_feed") if self.use_rss_feeds else None
+            if rss_feed and isinstance(rss_feed, str):
+                news_url = rss_feed
+
+            entry = {
+                **base,
+                "news_url": news_url or primary_url,
+                "ai_tag_url": ns.get("ai_tag_url"),
+                "main_url": main_url,
+                "rss_feed": rss_feed,
+                "press_releases": ns.get("press_releases"),
+                "sitemaps": ns.get("sitemaps") or source.get("sitemaps") or [],
+                "source_role": ns.get("type", "primary"),
+                "crawl_priority": ns.get("crawl_priority", 100),
+                "verified": ns.get("verified", False),
+            }
+
+            if not self._is_valid_entry(entry):
+                continue
+            if entry["news_url"] in seen_urls:
+                continue
+            seen_urls.add(entry["news_url"])
+            entries.append(entry)
+            if len(entries) >= self.MAX_SOURCES_PER_INSTITUTION:
+                break
+
+        return entries
 
     @property
     def is_production(self) -> bool:

@@ -15,7 +15,7 @@ from sqlalchemy import and_
 from crawler.config.settings import settings
 from crawler.db.session import init_db, get_db_manager
 from crawler.db.models import Article, URL, AIAnalysis, NotificationSent
-from crawler.ai.analyzer import MultiAIAnalyzer
+from crawler.ai.claude_code_analyzer import ClaudeCodeAnalyzer
 from crawler.notifiers.slack import SlackNotifier
 from crawler.notifiers.email import EmailNotifier
 from crawler.utils.local_exporter import LocalExporter
@@ -35,35 +35,58 @@ logger = logging.getLogger(__name__)
 
 
 def _log_spider_health():
-    """Read and log spider health reports if available."""
-    import json
-    health_file = Path(settings.local_output_dir) / 'spider_health.json'
-    if not health_file.exists():
-        logger.info("No spider health report found")
+    """Read and log the per-group spider health reports if available."""
+    from crawler.utils.source_health import collect_spider_reports
+
+    reports = collect_spider_reports(settings.local_output_dir)
+    if not reports:
+        logger.info("No spider health reports found")
         return
 
-    try:
-        with open(health_file) as f:
-            report = json.load(f)
+    logger.info("\n" + "=" * 50)
+    logger.info("=== CRAWL HEALTH REPORT ===")
+    totals = {}
+    failed = []
+    attempted = succeeded = 0
+    for report in reports:
+        for key, value in (report.get('stats') or {}).items():
+            if isinstance(value, (int, float)):
+                totals[key] = totals.get(key, 0) + value
+        attempted += report.get('sources_attempted', 0) or 0
+        succeeded += report.get('sources_succeeded', 0) or 0
+        failed.extend(report.get('failed_domains', []))
 
-        stats = report.get('stats', {})
-        logger.info("\n" + "=" * 50)
-        logger.info("=== CRAWL HEALTH REPORT ===")
-        logger.info(f"Sources attempted: {report.get('sources_attempted', '?')}")
-        logger.info(f"Sources succeeded: {report.get('sources_succeeded', '?')}")
-        logger.info(f"URLs discovered: {stats.get('urls_discovered', '?')}")
-        logger.info(f"URLs crawled: {stats.get('urls_crawled', '?')}")
-        logger.info(f"Articles extracted: {stats.get('articles_extracted', '?')}")
-        logger.info(f"Duplicates skipped: {stats.get('duplicates_skipped', '?')}")
-        logger.info(f"Errors: {stats.get('errors', '?')}")
+    logger.info(f"Sources attempted: {attempted}")
+    logger.info(f"Sources succeeded: {succeeded}")
+    logger.info(f"URLs discovered: {totals.get('urls_discovered', '?')}")
+    logger.info(f"  via sitemaps: {totals.get('sitemap_urls', 0)}")
+    logger.info(f"Feeds autodiscovered: {totals.get('feeds_discovered', 0)}")
+    logger.info(f"URLs crawled: {totals.get('urls_crawled', '?')}")
+    logger.info(f"Articles extracted: {totals.get('articles_extracted', '?')}")
+    logger.info(f"Duplicates skipped: {totals.get('duplicates_skipped', '?')}")
+    logger.info(f"Errors: {totals.get('errors', '?')}")
+    if failed:
+        logger.warning(f"Failed domains ({len(failed)}): {', '.join(failed[:10])}")
+    logger.info("=" * 50)
 
-        failed = report.get('failed_domains', [])
-        if failed:
-            logger.warning(f"Failed domains ({len(failed)}): {', '.join(failed[:10])}")
 
-        logger.info("=" * 50)
-    except Exception as e:
-        logger.warning(f"Could not read spider health report: {e}")
+def _update_source_health():
+    """Merge this run's spider reports into the rolling source-health file."""
+    from crawler.utils.source_health import SourceHealthTracker, collect_spider_reports
+
+    reports = collect_spider_reports(settings.local_output_dir)
+    if not reports:
+        return
+    tracker = SourceHealthTracker()
+    tracker.update_from_reports(reports)
+    tracker.save()
+    tracker.render_html(Path("docs") / "source-health.html")
+    info = tracker.summary()
+    if info["auto_disabled"]:
+        logger.warning(
+            f"Source health: {len(info['auto_disabled'])} auto-disabled domains "
+            f"(see docs/source-health.html): {', '.join(info['auto_disabled'][:10])}"
+        )
 
 
 async def main():
@@ -119,6 +142,13 @@ async def main():
         # Log spider health reports if available
         _log_spider_health()
 
+        # Feed this run's results into the rolling source-health history
+        # (auto-disables persistently dead sources, renders docs/source-health.html)
+        try:
+            _update_source_health()
+        except Exception as e:
+            logger.warning(f"Source health update failed (non-fatal): {e}")
+
         # Phase 3: Final analysis pass — pick up any articles missed during overlap
         logger.info("\n📚 Phase 3: Final analysis pass for remaining articles")
         db_manager = get_db_manager()
@@ -138,8 +168,24 @@ async def main():
             if new_articles:
                 logger.info(f"Found {len(new_articles)} remaining unanalyzed articles")
                 if settings.enable_ai_analysis:
-                    analyses = await analyze_articles(new_articles, db)
-                    logger.info(f"Completed {len(analyses)} final AI analyses")
+                    analyses, quota_exhausted = await analyze_articles(new_articles, db)
+                    stored_count = sum(1 for a in analyses if a is not None)
+                    logger.info(f"Completed {stored_count} final AI analyses")
+                    if stored_count == 0 and not quota_exhausted:
+                        # Nothing analyzed despite pending articles, and not
+                        # because the subscription window ran out (that case
+                        # is expected and resumes next run) — fail the run
+                        # instead of publishing an empty report.
+                        logger.error(
+                            "Final analysis pass produced zero results for "
+                            f"{len(new_articles)} pending articles — failing the run"
+                        )
+                        return 1
+                    if quota_exhausted:
+                        logger.warning(
+                            "Subscription quota exhausted during final pass; "
+                            "remaining articles resume next run"
+                        )
                 else:
                     analyses = []
             else:
@@ -248,7 +294,8 @@ async def main():
 
             # Phase 4b: Generate and send reports
             logger.info("\n📬 Phase 4b: Generating and sending notifications/exports")
-            exported_files = await send_notifications(all_recent, analyses, db, editorial_picks=editorial_picks)
+            successful_analyses = [a for a in analyses if a is not None]
+            exported_files = await send_notifications(all_recent, successful_analyses, db, editorial_picks=editorial_picks)
 
         # Phase 5: Summary and statistics
         duration = (datetime.now(timezone.utc) - start_time).total_seconds()
@@ -301,12 +348,18 @@ async def main():
 
 
 def _make_spider_script() -> str:
-    """Return the Python script run inside each Scrapy subprocess."""
+    """Return the Python script run inside each Scrapy subprocess.
+
+    Scrapy settings come from crawler/config/scrapy_defaults.py — the same
+    module the spider's custom_settings uses — so subprocess and in-process
+    crawls behave identically.
+    """
     return """
 import sys
 from scrapy.crawler import CrawlerProcess
 from crawler.spiders.university_spider import UniversityNewsSpider
 from crawler.config.settings import settings
+from crawler.config.scrapy_defaults import build_scrapy_settings
 from crawler.db.session import init_db, get_db_manager
 
 if __name__ == '__main__':
@@ -317,25 +370,7 @@ if __name__ == '__main__':
     )
     get_db_manager().create_tables()
 
-    process = CrawlerProcess({
-        'LOG_LEVEL': 'INFO',
-        'USER_AGENT': settings.user_agent,
-        'ROBOTSTXT_OBEY': True,
-        'CONCURRENT_REQUESTS': settings.max_concurrent_requests,
-        'DOWNLOAD_DELAY': settings.crawl_delay,
-        'CONCURRENT_REQUESTS_PER_DOMAIN': 1,
-        'AUTOTHROTTLE_ENABLED': True,
-        'AUTOTHROTTLE_START_DELAY': 0.5,
-        'AUTOTHROTTLE_MAX_DELAY': 10.0,
-        'AUTOTHROTTLE_TARGET_CONCURRENCY': 2.0,
-        'DOWNLOAD_TIMEOUT': 30,
-        'RETRY_TIMES': 3,
-        'RETRY_HTTP_CODES': [500, 502, 503, 504, 408, 429],
-        'COOKIES_ENABLED': False,
-        'DEPTH_LIMIT': 10,
-        'DEPTH_PRIORITY': 1,
-    })
-
+    process = CrawlerProcess(build_scrapy_settings())
     process.crawl(UniversityNewsSpider)
     process.start()
 """
@@ -368,6 +403,7 @@ async def _run_spider_subprocess(group_name: str, source_files: list[str]) -> bo
 
     env = os.environ.copy()
     env["CRAWLER_SOURCE_FILES"] = ",".join(source_files)
+    env["CRAWLER_GROUP_NAME"] = group_name
 
     script = _make_spider_script()
 
@@ -438,8 +474,12 @@ async def run_crawler() -> bool:
             else:
                 logger.warning(f"[{name}] Spider returned failure")
 
-        logger.info(f"Crawling finished: {successes}/{len(CRAWL_GROUPS)} groups succeeded")
-        return successes > 0
+        required = max(1, len(CRAWL_GROUPS) - 1)
+        logger.info(
+            f"Crawling finished: {successes}/{len(CRAWL_GROUPS)} groups succeeded "
+            f"(need >= {required})"
+        )
+        return successes >= required
 
     except Exception as e:
         logger.error(f"Crawling failed with exception: {e}", exc_info=True)
@@ -478,7 +518,7 @@ async def run_crawl_with_analysis() -> bool:
         # Wait for initial articles to accumulate
         await asyncio.sleep(60)
 
-        analyzer = MultiAIAnalyzer()
+        analyzer = ClaudeCodeAnalyzer()
         db_manager = get_db_manager()
         total_analyzed = 0
         consecutive_errors = 0
@@ -523,6 +563,10 @@ async def run_crawl_with_analysis() -> bool:
                     )
 
                     for i, analysis in enumerate(analyses):
+                        if analysis is None:
+                            # Failed/skipped (chunk error or quota) — leave
+                            # last_analyzed NULL so the next run retries it.
+                            continue
                         article = batch[i]
                         ai_analysis = AIAnalysis(
                             article_id=article.article_id,
@@ -555,9 +599,27 @@ async def run_crawl_with_analysis() -> bool:
                             }
 
                     db.commit()
-                    total_analyzed += len(batch)
-                    consecutive_errors = 0
+                    stored = sum(1 for a in analyses if a is not None)
+                    total_analyzed += stored
                     logger.info(f"Incremental analysis: {total_analyzed} total articles analyzed so far")
+
+                    if getattr(analyzer, "_quota_exhausted", False):
+                        logger.warning(
+                            "Incremental analysis stopping: subscription quota exhausted "
+                            f"({total_analyzed} analyzed; the rest resume next run)"
+                        )
+                        return
+
+                    if stored == 0:
+                        # Nothing stored means the whole batch failed; back off
+                        # instead of hammering the same articles.
+                        consecutive_errors += 1
+                        if consecutive_errors >= MAX_CONSECUTIVE_ERRORS:
+                            logger.error("Incremental analysis giving up after repeated empty batches")
+                            return
+                        await asyncio.sleep(30)
+                    else:
+                        consecutive_errors = 0
 
             except Exception as e:
                 consecutive_errors += 1
@@ -588,23 +650,29 @@ async def run_crawl_with_analysis() -> bool:
     if failed_groups:
         logger.warning(f"Failed spider groups: {', '.join(failed_groups)}")
 
-    logger.info(f"Crawling finished: {successes}/{len(CRAWL_GROUPS)} groups succeeded")
-    return successes > 0
+    # Honest success criteria: a single surviving group out of three used to
+    # count as a green run, hiding two-thirds of the crawl being broken.
+    required = max(1, len(CRAWL_GROUPS) - 1)
+    logger.info(
+        f"Crawling finished: {successes}/{len(CRAWL_GROUPS)} groups succeeded "
+        f"(need >= {required})"
+    )
+    return successes >= required
 
 
-async def analyze_articles(articles, db) -> list:
+async def analyze_articles(articles, db) -> tuple:
     """
-    Analyze articles using multi-AI engine.
+    Analyze articles using the Claude Code analyzer.
 
     Args:
         articles: List of Article ORM objects
         db: Database session
 
     Returns:
-        List of analysis results
+        Tuple of (analysis results aligned with input, quota_exhausted flag)
     """
     try:
-        analyzer = MultiAIAnalyzer()
+        analyzer = ClaudeCodeAnalyzer()
 
         # Convert articles to dictionaries for AI processing
         articles_data = [
@@ -625,6 +693,10 @@ async def analyze_articles(articles, db) -> list:
 
         # Store analyses in database
         for i, analysis in enumerate(analyses):
+            if analysis is None:
+                # Failed/skipped (chunk error or quota) — leave last_analyzed
+                # NULL so the next run retries it.
+                continue
             article = articles[i]
 
             # Create AI analysis record
@@ -662,14 +734,17 @@ async def analyze_articles(articles, db) -> list:
             db.add(ai_analysis)
 
         db.commit()
-        logger.info(f"Stored {len(analyses)} AI analyses in database")
+        stored = sum(1 for a in analyses if a is not None)
+        logger.info(f"Stored {stored} AI analyses in database ({len(analyses) - stored} deferred)")
 
-        return analyses
+        return analyses, getattr(analyzer, "_quota_exhausted", False)
 
     except Exception as e:
+        # Roll back and re-raise: swallowing this used to publish an
+        # empty-but-green report when analysis silently failed.
         logger.error(f"AI analysis failed: {e}", exc_info=True)
         db.rollback()
-        return []
+        raise
 
 
 async def send_notifications(articles, analyses, db, editorial_picks=None):

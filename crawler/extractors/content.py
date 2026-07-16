@@ -56,7 +56,10 @@ class ContentExtractor:
             Dictionary with extracted content or None if extraction failed
         """
         try:
-            # Use bare_extraction for complete metadata
+            # Use bare_extraction for complete metadata.
+            # as_dict=True: trafilatura 2.x returns a Document object by
+            # default, which silently broke every extraction ('Document'
+            # object has no attribute 'get').
             result = bare_extraction(
                 html,
                 url=url,
@@ -64,6 +67,7 @@ class ContentExtractor:
                 include_comments=self.include_comments,
                 include_tables=self.include_tables,
                 output_format='python',
+                as_dict=True,
                 config=self.config
             )
 
@@ -152,55 +156,6 @@ class ContentExtractor:
             return False
 
         return True
-
-
-class DateExtractor:
-    """
-    Extract and parse publication dates from HTML.
-
-    Uses htmldate library for accurate date extraction.
-    """
-
-    def __init__(self):
-        """Initialize date extractor."""
-        self.logger = logger
-
-    def extract_date(
-        self,
-        html: str,
-        url: Optional[str] = None,
-        original_date: bool = True
-    ) -> Optional[datetime]:
-        """
-        Extract publication date from HTML.
-
-        Args:
-            html: Raw HTML content
-            url: Original URL (helps with date extraction)
-            original_date: Prefer original publication date over modification date
-
-        Returns:
-            Datetime object or None if no date found
-        """
-        try:
-            from htmldate import find_date
-
-            date_str = find_date(
-                html,
-                url=url,
-                original_date=original_date,
-                outputformat='%Y-%m-%d'
-            )
-
-            if date_str:
-                return datetime.strptime(date_str, '%Y-%m-%d')
-
-            logger.debug(f"No date found for {url}")
-            return None
-
-        except Exception as e:
-            logger.error(f"Date extraction failed for {url}: {e}")
-            return None
 
 
 def extract_from_url(url: str, timeout: int = 30) -> Optional[Dict[str, Any]]:
