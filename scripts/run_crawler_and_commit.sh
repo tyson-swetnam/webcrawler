@@ -1,4 +1,12 @@
 #!/bin/bash
+#
+# ============================== DEPRECATED ===================================
+# The production scheduler is now GitHub Actions (.github/workflows/
+# daily-crawler.yml). Running this locally in parallel races the workflow on
+# the website branch. Disable the local timer with:
+#   sudo systemctl disable --now ai-news-crawler.timer
+# Kept for reference / emergency manual runs only.
+# ==============================================================================
 # Automated crawler execution with git commit/push
 # This script is executed by systemd timer
 

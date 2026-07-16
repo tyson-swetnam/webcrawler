@@ -332,8 +332,14 @@ class ParquetStore:
             return 0
 
         url_objs: dict[int, URL] = {}
-        article_objs: List[Article] = []
-        analysis_objs: List[AIAnalysis] = []
+        # Key articles by (url_id, content_hash) — the table's unique
+        # constraint. The parquet file can carry duplicate rows for the same
+        # URL+title (e.g. re-scrapes under slightly different university
+        # names), and a multi-row INSERT containing two such rows crashes
+        # hydration with an IntegrityError. Keep the freshest row per key.
+        articles_by_key: dict = {}
+        analyses_by_article: dict = {}
+        seen_article_ids: set = set()
 
         for r in rows:
             (
@@ -382,36 +388,57 @@ class ParquetStore:
                 },
             }
 
-            article_objs.append(
-                Article(
-                    article_id=int(article_id),
-                    url_id=url_id,
-                    title=title,
-                    author=author,
-                    university_name=university_name,
-                    published_date=published_date,
-                    first_scraped=first_scraped,
-                    last_analyzed=last_analyzed,
-                    is_ai_related=bool(is_ai_related),
-                    ai_confidence_score=ai_confidence_score,
-                    word_count=word_count,
-                    language=language or "en",
-                    content_hash=hashlib.sha256((title or url).encode("utf-8")).hexdigest(),
-                    article_metadata=metadata,
-                )
+            article_id = int(article_id)
+            if article_id in seen_article_ids:
+                continue
+            seen_article_ids.add(article_id)
+
+            content_hash = hashlib.sha256((title or url).encode("utf-8")).hexdigest()
+            key = (url_id, content_hash)
+            existing_row = articles_by_key.get(key)
+            if existing_row is not None:
+                # Duplicate URL+content — keep the freshest row.
+                def _freshness(analyzed, scraped):
+                    fallback = datetime.min
+                    return (analyzed or scraped or fallback, scraped or fallback)
+                candidate_fresh = _freshness(last_analyzed, first_scraped)
+                existing_fresh = _freshness(existing_row.last_analyzed, existing_row.first_scraped)
+                if candidate_fresh <= existing_fresh:
+                    continue
+                analyses_by_article.pop(existing_row.article_id, None)
+
+            articles_by_key[key] = Article(
+                article_id=article_id,
+                url_id=url_id,
+                title=title,
+                author=author,
+                university_name=university_name,
+                published_date=published_date,
+                first_scraped=first_scraped,
+                last_analyzed=last_analyzed,
+                is_ai_related=bool(is_ai_related),
+                ai_confidence_score=ai_confidence_score,
+                word_count=word_count,
+                language=language or "en",
+                content_hash=content_hash,
+                article_metadata=metadata,
             )
 
             if consensus_summary or claude_summary:
-                analysis_objs.append(
-                    AIAnalysis(
-                        article_id=int(article_id),
-                        consensus_summary=consensus_summary or None,
-                        claude_summary=claude_summary or None,
-                        claude_key_points=list(claude_key_points) if claude_key_points else None,
-                        openai_category=openai_category or None,
-                        relevance_score=relevance_score,
-                    )
+                analyses_by_article[article_id] = AIAnalysis(
+                    article_id=article_id,
+                    consensus_summary=consensus_summary or None,
+                    claude_summary=claude_summary or None,
+                    claude_key_points=list(claude_key_points) if claude_key_points else None,
+                    openai_category=openai_category or None,
+                    relevance_score=relevance_score,
                 )
+
+        article_objs = list(articles_by_key.values())
+        analysis_objs = list(analyses_by_article.values())
+        dropped = len(rows) - len(article_objs)
+        if dropped:
+            logger.info("hydrate_postgres: dropped %d duplicate parquet rows", dropped)
 
         session.bulk_save_objects(list(url_objs.values()))
         session.bulk_save_objects(article_objs)

@@ -5,9 +5,9 @@ This module provides centralized configuration with environment variable loading
 validation, and type safety for all application settings.
 """
 
-from pydantic import Field, field_validator, HttpUrl
+from pydantic import Field, field_validator, model_validator, HttpUrl
 from pydantic_settings import BaseSettings, SettingsConfigDict
-from typing import List
+from typing import List, Optional
 from pathlib import Path
 
 
@@ -36,22 +36,31 @@ class Settings(BaseSettings):
         description="Redis connection string for caching"
     )
 
-    # AI API Keys (SecretStr prevents logging)
-    anthropic_api_key: str = Field(..., description="Anthropic Claude API key")
-    openai_api_key: str = Field(..., description="OpenAI API key")
-
-    # AI API Configuration
-    claude_model: str = Field(
-        default="claude-sonnet-4-6",
-        description="Claude Sonnet model to use for primary analysis"
+    # AI analysis via Claude Code CLI (Claude Max subscription auth).
+    # Credentials come from the CLAUDE_CODE_OAUTH_TOKEN environment variable
+    # (create once with `claude setup-token`); no API keys are required.
+    claude_code_model: str = Field(
+        default="sonnet",
+        description="Model alias or full id passed to the Claude Code CLI (--model)"
     )
-    claude_haiku_model: str = Field(
-        default="claude-haiku-4-5-20251001",
-        description="Claude Haiku model to use for fast processing"
+    ai_articles_per_prompt: int = Field(
+        default=15,
+        ge=1,
+        le=25,
+        description="Articles batched into one Claude message (quota conservation)"
     )
-    openai_model: str = Field(default="gpt-5-search-api-2025-10-14", description="OpenAI model to use")
-    max_ai_tokens: int = Field(default=1024, description="Maximum tokens for AI responses")
-    max_haiku_tokens: int = Field(default=512, description="Maximum tokens for Haiku responses")
+    ai_max_content_chars: int = Field(
+        default=1500,
+        description="Per-article content truncation inside batched prompts"
+    )
+    claude_cli_timeout: int = Field(
+        default=300,
+        description="Timeout in seconds for one Claude CLI invocation"
+    )
+    ai_message_budget: int = Field(
+        default=400,
+        description="Soft cap on subscription messages per run; analysis resumes next run"
+    )
 
     # Web crawling configuration
     max_concurrent_requests: int = Field(
@@ -100,19 +109,20 @@ class Settings(BaseSettings):
         description="Comma-separated list of source JSON file paths (overrides university_source_type when set)"
     )
 
-    # Notification configuration
-    slack_webhook_url: str = Field(
-        ...,
+    # Notification configuration (all optional — validated only when the
+    # matching enable_* feature flag is on)
+    slack_webhook_url: Optional[str] = Field(
+        default=None,
         description="Slack webhook URL for notifications"
     )
-    email_from: str = Field(..., description="Email sender address")
+    email_from: Optional[str] = Field(default=None, description="Email sender address")
     email_to: List[str] = Field(
-        ...,
+        default_factory=list,
         description="List of email recipient addresses"
     )
     smtp_host: str = Field(default="smtp.gmail.com", description="SMTP server hostname")
     smtp_port: int = Field(default=465, description="SMTP server port")
-    smtp_password: str = Field(..., description="SMTP password (use app password for Gmail)")
+    smtp_password: Optional[str] = Field(default=None, description="SMTP password (use app password for Gmail)")
     smtp_use_ssl: bool = Field(default=True, description="Use SSL for SMTP connection")
 
     # Scheduling configuration
@@ -159,12 +169,12 @@ class Settings(BaseSettings):
         description="Enable AI analysis of articles"
     )
     enable_slack_notifications: bool = Field(
-        default=True,
-        description="Enable Slack notifications"
+        default=False,
+        description="Enable Slack notifications (requires SLACK_WEBHOOK_URL)"
     )
     enable_email_notifications: bool = Field(
-        default=True,
-        description="Enable email notifications"
+        default=False,
+        description="Enable email notifications (requires EMAIL_FROM/EMAIL_TO/SMTP_PASSWORD)"
     )
 
     # Local output configuration
@@ -224,6 +234,23 @@ class Settings(BaseSettings):
                 # Comma-separated format
                 return [email.strip() for email in v.split(',')]
         return v
+
+    @model_validator(mode='after')
+    def validate_notification_config(self):
+        """Require notification credentials only when the feature is enabled."""
+        if self.enable_slack_notifications and not self.slack_webhook_url:
+            raise ValueError(
+                "ENABLE_SLACK_NOTIFICATIONS=true requires SLACK_WEBHOOK_URL "
+                "(or set ENABLE_SLACK_NOTIFICATIONS=false)"
+            )
+        if self.enable_email_notifications and not (
+            self.email_from and self.email_to and self.smtp_password
+        ):
+            raise ValueError(
+                "ENABLE_EMAIL_NOTIFICATIONS=true requires EMAIL_FROM, EMAIL_TO and "
+                "SMTP_PASSWORD (or set ENABLE_EMAIL_NOTIFICATIONS=false)"
+            )
+        return self
 
     @field_validator('run_daily_at')
     @classmethod

@@ -1,3 +1,5 @@
+# DEPRECATED: production runs on GitHub Actions (.github/workflows/daily-crawler.yml).
+# Disable with: sudo systemctl disable --now ai-news-crawler.timer
 [Unit]
 Description=Timer for AI News Crawler (daily at 6:00 AM MST / 1:00 PM UTC)
 Documentation=https://github.com/tyson-swetnam/webcrawler

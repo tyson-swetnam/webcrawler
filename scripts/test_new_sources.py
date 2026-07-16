@@ -32,13 +32,6 @@ def test_source_type(source_type: str, include_meta: bool = False):
             use_rss_feeds=True,
             # Required fields (use dummy values for testing)
             database_url="postgresql://test:test@localhost/test",
-            anthropic_api_key="test-key",
-            openai_api_key="test-key",
-            gemini_api_key="test-key",
-            slack_webhook_url="https://hooks.slack.com/test",
-            email_from="test@example.com",
-            email_to=["test@example.com"],
-            smtp_password="test-password"
         )
 
         # Load sources

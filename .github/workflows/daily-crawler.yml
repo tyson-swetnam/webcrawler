@@ -14,6 +14,7 @@ permissions:
 jobs:
   crawl-and-deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 120
 
     services:
       postgres:
@@ -23,7 +24,7 @@ jobs:
           POSTGRES_USER: crawler
           POSTGRES_PASSWORD: github_actions_temp
         options: >-
-          --health-cmd pg_isready
+          --health-cmd "pg_isready -U crawler -d ai_news_crawler"
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
@@ -45,17 +46,24 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install -r requirements.txt -c constraints.txt
 
-      - name: Install Pagefind
-        run: npm install -g pagefind@latest
-
-      - name: Set up database
-        env:
-          DATABASE_URL: postgresql://crawler:github_actions_temp@localhost:5432/ai_news_crawler
+      - name: Install Pagefind and Claude Code CLI
         run: |
-          # Database tables are created automatically by SQLAlchemy
-          echo "Database ready at $DATABASE_URL"
+          # Claude Code is pinned so a CLI release can't silently change the
+          # headless JSON contract mid-schedule; bump deliberately.
+          npm install -g pagefind@latest @anthropic-ai/claude-code@2.1.211
+          claude --version
+
+      - name: Preflight Claude subscription auth
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          if [ -z "$CLAUDE_CODE_OAUTH_TOKEN" ]; then
+            echo "::error::CLAUDE_CODE_OAUTH_TOKEN secret is empty. Run 'claude setup-token' locally (requires a Claude Pro/Max subscription) and add the token as a repository secret named CLAUDE_CODE_OAUTH_TOKEN. Tokens expire after ~1 year."
+            exit 1
+          fi
+          echo "Claude subscription token present"
 
       - name: Seed durable data from website branch
         run: |
@@ -83,19 +91,14 @@ jobs:
 
           fetch_one articles.parquet
           fetch_one top_news.json
+          fetch_one source_health.json
 
       - name: Run crawler
+        timeout-minutes: 90
         env:
           DATABASE_URL: postgresql://crawler:github_actions_temp@localhost:5432/ai_news_crawler
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-          EMAIL_FROM: crawler@github-actions.local
-          EMAIL_TO: '["noreply@github.com"]'
-          SMTP_HOST: smtp.gmail.com
-          SMTP_PORT: 465
-          SMTP_PASSWORD: placeholder
-          SMTP_USE_SSL: true
           ENABLE_SLACK_NOTIFICATIONS: false
           ENABLE_EMAIL_NOTIFICATIONS: false
           ENABLE_AI_ANALYSIS: true
@@ -136,10 +139,10 @@ jobs:
           fi
 
           # Create a simple README for the website branch
-          cat > website-deploy/README.md << 'EOF'
+          cat > website-deploy/README.md << EOF
           # AI University News Aggregator
 
-          Automated daily news aggregator tracking AI research and developments from 52 US universities and research facilities.
+          Automated daily news aggregator tracking AI research and developments from 380+ universities and research facilities.
 
           **Live Site:** https://tyson-swetnam.github.io/webcrawler
 
@@ -151,14 +154,14 @@ jobs:
 
           ## Sources
 
-          - 27 Peer Institutions (Top R1 universities)
-          - 187 R1 Research Universities
-          - 27 Major Research Facilities (National Labs, Supercomputing Centers)
+          - Peer Institutions (top R1 universities)
+          - R1 Research Universities
+          - Major Research Facilities, National Laboratories, and Global Institutions
 
           ## Technology
 
           - **Crawler:** Python + Scrapy
-          - **AI Analysis:** Claude (Anthropic), GPT (OpenAI)
+          - **AI Analysis:** Claude (via Claude Code CLI, Max subscription)
           - **Deployment:** GitHub Actions + GitHub Pages
           - **Update Schedule:** Daily at 07:00 PST
           EOF
@@ -178,14 +181,38 @@ jobs:
             git commit -m "Update AI news aggregator - $(date -u +"%Y-%m-%d %H:%M UTC")
 
             Automated daily crawler run
-            - Articles scraped: $(find . -name '*.html' | wc -l) pages
             - Generated: $(date -u +"%Y-%m-%d %H:%M:%S UTC")
 
             Generated with Claude Code
             Co-Authored-By: GitHub Actions <actions@github.com>"
 
-            git push origin website
+            # Rebase + retry so we never clobber (or get rejected by) a
+            # concurrent push to the website branch.
+            for attempt in 1 2 3; do
+              if git push origin website; then
+                echo "Pushed on attempt $attempt"
+                break
+              fi
+              echo "Push attempt $attempt failed; rebasing and retrying..."
+              git pull --rebase origin website
+              sleep $((attempt * 5))
+              if [ "$attempt" = "3" ]; then
+                echo "::error::Failed to push to website branch after 3 attempts"
+                exit 1
+              fi
+            done
           fi
+
+      - name: Upload run diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: crawler-run-${{ github.run_id }}
+          path: |
+            output/
+            crawler.log
+          retention-days: 7
+          if-no-files-found: ignore
 
       - name: Summary
         run: |

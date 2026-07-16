@@ -1,3 +1,5 @@
+# DEPRECATED: production runs on GitHub Actions (.github/workflows/daily-crawler.yml).
+# Disable with: sudo systemctl disable --now ai-news-crawler.timer
 [Unit]
 Description=AI News Crawler - Daily university AI news monitoring with auto-commit
 Documentation=https://github.com/tyson-swetnam/webcrawler

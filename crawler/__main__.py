@@ -15,7 +15,7 @@ from sqlalchemy import and_
 from crawler.config.settings import settings
 from crawler.db.session import init_db, get_db_manager
 from crawler.db.models import Article, URL, AIAnalysis, NotificationSent
-from crawler.ai.analyzer import MultiAIAnalyzer
+from crawler.ai.claude_code_analyzer import ClaudeCodeAnalyzer
 from crawler.notifiers.slack import SlackNotifier
 from crawler.notifiers.email import EmailNotifier
 from crawler.utils.local_exporter import LocalExporter
@@ -478,7 +478,7 @@ async def run_crawl_with_analysis() -> bool:
         # Wait for initial articles to accumulate
         await asyncio.sleep(60)
 
-        analyzer = MultiAIAnalyzer()
+        analyzer = ClaudeCodeAnalyzer()
         db_manager = get_db_manager()
         total_analyzed = 0
         consecutive_errors = 0
@@ -523,6 +523,10 @@ async def run_crawl_with_analysis() -> bool:
                     )
 
                     for i, analysis in enumerate(analyses):
+                        if analysis is None:
+                            # Failed/skipped (chunk error or quota) — leave
+                            # last_analyzed NULL so the next run retries it.
+                            continue
                         article = batch[i]
                         ai_analysis = AIAnalysis(
                             article_id=article.article_id,
@@ -555,9 +559,27 @@ async def run_crawl_with_analysis() -> bool:
                             }
 
                     db.commit()
-                    total_analyzed += len(batch)
-                    consecutive_errors = 0
+                    stored = sum(1 for a in analyses if a is not None)
+                    total_analyzed += stored
                     logger.info(f"Incremental analysis: {total_analyzed} total articles analyzed so far")
+
+                    if getattr(analyzer, "_quota_exhausted", False):
+                        logger.warning(
+                            "Incremental analysis stopping: subscription quota exhausted "
+                            f"({total_analyzed} analyzed; the rest resume next run)"
+                        )
+                        return
+
+                    if stored == 0:
+                        # Nothing stored means the whole batch failed; back off
+                        # instead of hammering the same articles.
+                        consecutive_errors += 1
+                        if consecutive_errors >= MAX_CONSECUTIVE_ERRORS:
+                            logger.error("Incremental analysis giving up after repeated empty batches")
+                            return
+                        await asyncio.sleep(30)
+                    else:
+                        consecutive_errors = 0
 
             except Exception as e:
                 consecutive_errors += 1
@@ -604,7 +626,7 @@ async def analyze_articles(articles, db) -> list:
         List of analysis results
     """
     try:
-        analyzer = MultiAIAnalyzer()
+        analyzer = ClaudeCodeAnalyzer()
 
         # Convert articles to dictionaries for AI processing
         articles_data = [
@@ -625,6 +647,10 @@ async def analyze_articles(articles, db) -> list:
 
         # Store analyses in database
         for i, analysis in enumerate(analyses):
+            if analysis is None:
+                # Failed/skipped (chunk error or quota) — leave last_analyzed
+                # NULL so the next run retries it.
+                continue
             article = articles[i]
 
             # Create AI analysis record

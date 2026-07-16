@@ -2,25 +2,49 @@
 Editorial Curator - Claude as Daily News Editor for Top News selection.
 
 Performs batch curation of high-impact articles, selecting and ranking
-the top stories with editorial context.
+the top stories with editorial context. Runs through the Claude Code CLI
+(subscription auth) — one message per run.
 """
 
-import re
 import logging
-from typing import List, Dict, Any
+from typing import Any, Dict, List
 
-from anthropic import AsyncAnthropic
-
-from crawler.config.settings import settings
+from crawler.ai.claude_cli import ClaudeCLIError, ClaudeQuotaExhausted, run_structured_prompt
 
 logger = logging.getLogger(__name__)
+
+IMPACT_CATEGORIES = [
+    "Scientific Breakthrough",
+    "Major Funding",
+    "Strategic Partnership",
+    "Policy Impact",
+]
+
+EDITORIAL_SCHEMA: Dict[str, Any] = {
+    "type": "object",
+    "additionalProperties": False,
+    "required": ["picks"],
+    "properties": {
+        "picks": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": False,
+                "required": ["rank", "article_id", "editorial_note", "impact_category"],
+                "properties": {
+                    "rank": {"type": "integer", "minimum": 1},
+                    "article_id": {"type": "integer"},
+                    "editorial_note": {"type": "string"},
+                    "impact_category": {"type": "string", "enum": IMPACT_CATEGORIES},
+                },
+            },
+        }
+    },
+}
 
 
 class EditorialCurator:
     """Batch editorial curation — Claude as Daily News Editor."""
-
-    def __init__(self):
-        self.claude = AsyncAnthropic(api_key=settings.anthropic_api_key)
 
     async def curate_top_news(self, candidates: List[Dict], max_picks: int = 10) -> List[Dict]:
         """
@@ -41,22 +65,17 @@ class EditorialCurator:
 
         try:
             prompt = self._build_prompt(filtered, max_picks)
+            output = await run_structured_prompt(prompt, EDITORIAL_SCHEMA)
+            picks = self._validate_picks(output, {c["article_id"] for c in filtered}, max_picks)
 
-            message = await self.claude.messages.create(
-                model=settings.claude_model,
-                max_tokens=2000,
-                temperature=0.3,
-                messages=[{"role": "user", "content": prompt}]
+            logger.info(
+                f"Editorial curation: selected {len(picks)} top stories "
+                f"from {len(filtered)} candidates"
             )
-
-            response_text = message.content[0].text
-            picks = self._parse_editorial_response(response_text)
-
-            logger.info(f"Editorial curation: selected {len(picks)} top stories from {len(filtered)} candidates")
             return picks
 
-        except Exception as e:
-            logger.warning(f"Editorial curation API call failed (non-fatal): {e}")
+        except (ClaudeCLIError, ClaudeQuotaExhausted) as e:
+            logger.warning(f"Editorial curation failed (non-fatal): {e}")
             return []
 
     def _select_candidates(self, articles: List[Dict]) -> List[Dict]:
@@ -107,7 +126,7 @@ class EditorialCurator:
 
         articles_block = "\n\n".join(articles_text)
 
-        return f"""You are the Daily News Editor for an AI university news aggregator. Your job is to select the {max_picks} most important stories from this week's articles and explain why each matters.
+        return f"""You are the Daily News Editor for an AI university news aggregator. Select the {max_picks} most important stories from this week's articles and explain why each matters. Do not use any tools; judge from the provided text only.
 
 Select stories that represent genuine significance: major scientific breakthroughs, notable funding announcements, important partnerships between academia/government/industry, policy changes affecting AI research, or novel AI applications with real-world impact.
 
@@ -115,50 +134,30 @@ Here are this week's candidate articles:
 
 {articles_block}
 
-For each pick, provide output in this exact format:
+Return your picks via the structured output schema: for each pick give its rank (1 = most important), the ARTICLE_ID echoed exactly from the input, a 1-2 sentence editorial_note explaining why the story matters, and an impact_category. Only include stories that are truly significant — if fewer than {max_picks} qualify, include fewer."""
 
-PICK_1:
-ARTICLE_ID: [id]
-EDITORIAL_NOTE: [1-2 sentences explaining why this story matters]
-IMPACT_CATEGORY: [exactly one of: Scientific Breakthrough, Major Funding, Strategic Partnership, Policy Impact]
-
-PICK_2:
-ARTICLE_ID: [id]
-EDITORIAL_NOTE: [1-2 sentences explaining why this story matters]
-IMPACT_CATEGORY: [exactly one of: Scientific Breakthrough, Major Funding, Strategic Partnership, Policy Impact]
-
-Continue for up to {max_picks} picks. Only include stories that are truly significant — if fewer than {max_picks} qualify, include fewer. Rank them by importance (PICK_1 is most important)."""
-
-    def _parse_editorial_response(self, response: str) -> List[Dict]:
-        """Parse editorial picks from Claude's response."""
+    def _validate_picks(
+        self, output: Any, valid_ids: set, max_picks: int
+    ) -> List[Dict]:
+        """Validate structured picks: known ids, dense ranks, capped count."""
+        raw_picks = output.get("picks", []) if isinstance(output, dict) else output
         picks = []
+        seen_ids = set()
 
-        # Split on PICK_N: markers
-        sections = re.split(r'PICK_\d+:', response)
-
-        for i, section in enumerate(sections[1:], start=1):  # skip text before first PICK
-            pick = {'rank': i}
-
-            # Extract ARTICLE_ID
-            id_match = re.search(r'ARTICLE_ID:\s*(\d+)', section)
-            if not id_match:
+        for item in sorted(raw_picks or [], key=lambda p: p.get("rank", 999)):
+            article_id = item.get("article_id")
+            if article_id not in valid_ids or article_id in seen_ids:
                 continue
-            pick['article_id'] = int(id_match.group(1))
-
-            # Extract EDITORIAL_NOTE
-            note_match = re.search(r'EDITORIAL_NOTE:\s*(.+?)(?=\n\s*(?:IMPACT_CATEGORY|ARTICLE_ID|PICK_|$))', section, re.DOTALL)
-            if note_match:
-                pick['editorial_note'] = note_match.group(1).strip()
-            else:
-                pick['editorial_note'] = ''
-
-            # Extract IMPACT_CATEGORY
-            cat_match = re.search(r'IMPACT_CATEGORY:\s*(.+?)(?=\n|$)', section)
-            if cat_match:
-                pick['impact_category'] = cat_match.group(1).strip()
-            else:
-                pick['impact_category'] = 'Scientific Breakthrough'
-
-            picks.append(pick)
+            seen_ids.add(article_id)
+            picks.append({
+                "rank": len(picks) + 1,
+                "article_id": article_id,
+                "editorial_note": (item.get("editorial_note") or "").strip(),
+                "impact_category": item.get("impact_category")
+                if item.get("impact_category") in IMPACT_CATEGORIES
+                else "Scientific Breakthrough",
+            })
+            if len(picks) >= max_picks:
+                break
 
         return picks
