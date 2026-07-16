@@ -35,35 +35,58 @@ logger = logging.getLogger(__name__)
 
 
 def _log_spider_health():
-    """Read and log spider health reports if available."""
-    import json
-    health_file = Path(settings.local_output_dir) / 'spider_health.json'
-    if not health_file.exists():
-        logger.info("No spider health report found")
+    """Read and log the per-group spider health reports if available."""
+    from crawler.utils.source_health import collect_spider_reports
+
+    reports = collect_spider_reports(settings.local_output_dir)
+    if not reports:
+        logger.info("No spider health reports found")
         return
 
-    try:
-        with open(health_file) as f:
-            report = json.load(f)
+    logger.info("\n" + "=" * 50)
+    logger.info("=== CRAWL HEALTH REPORT ===")
+    totals = {}
+    failed = []
+    attempted = succeeded = 0
+    for report in reports:
+        for key, value in (report.get('stats') or {}).items():
+            if isinstance(value, (int, float)):
+                totals[key] = totals.get(key, 0) + value
+        attempted += report.get('sources_attempted', 0) or 0
+        succeeded += report.get('sources_succeeded', 0) or 0
+        failed.extend(report.get('failed_domains', []))
 
-        stats = report.get('stats', {})
-        logger.info("\n" + "=" * 50)
-        logger.info("=== CRAWL HEALTH REPORT ===")
-        logger.info(f"Sources attempted: {report.get('sources_attempted', '?')}")
-        logger.info(f"Sources succeeded: {report.get('sources_succeeded', '?')}")
-        logger.info(f"URLs discovered: {stats.get('urls_discovered', '?')}")
-        logger.info(f"URLs crawled: {stats.get('urls_crawled', '?')}")
-        logger.info(f"Articles extracted: {stats.get('articles_extracted', '?')}")
-        logger.info(f"Duplicates skipped: {stats.get('duplicates_skipped', '?')}")
-        logger.info(f"Errors: {stats.get('errors', '?')}")
+    logger.info(f"Sources attempted: {attempted}")
+    logger.info(f"Sources succeeded: {succeeded}")
+    logger.info(f"URLs discovered: {totals.get('urls_discovered', '?')}")
+    logger.info(f"  via sitemaps: {totals.get('sitemap_urls', 0)}")
+    logger.info(f"Feeds autodiscovered: {totals.get('feeds_discovered', 0)}")
+    logger.info(f"URLs crawled: {totals.get('urls_crawled', '?')}")
+    logger.info(f"Articles extracted: {totals.get('articles_extracted', '?')}")
+    logger.info(f"Duplicates skipped: {totals.get('duplicates_skipped', '?')}")
+    logger.info(f"Errors: {totals.get('errors', '?')}")
+    if failed:
+        logger.warning(f"Failed domains ({len(failed)}): {', '.join(failed[:10])}")
+    logger.info("=" * 50)
 
-        failed = report.get('failed_domains', [])
-        if failed:
-            logger.warning(f"Failed domains ({len(failed)}): {', '.join(failed[:10])}")
 
-        logger.info("=" * 50)
-    except Exception as e:
-        logger.warning(f"Could not read spider health report: {e}")
+def _update_source_health():
+    """Merge this run's spider reports into the rolling source-health file."""
+    from crawler.utils.source_health import SourceHealthTracker, collect_spider_reports
+
+    reports = collect_spider_reports(settings.local_output_dir)
+    if not reports:
+        return
+    tracker = SourceHealthTracker()
+    tracker.update_from_reports(reports)
+    tracker.save()
+    tracker.render_html(Path("docs") / "source-health.html")
+    info = tracker.summary()
+    if info["auto_disabled"]:
+        logger.warning(
+            f"Source health: {len(info['auto_disabled'])} auto-disabled domains "
+            f"(see docs/source-health.html): {', '.join(info['auto_disabled'][:10])}"
+        )
 
 
 async def main():
@@ -118,6 +141,13 @@ async def main():
 
         # Log spider health reports if available
         _log_spider_health()
+
+        # Feed this run's results into the rolling source-health history
+        # (auto-disables persistently dead sources, renders docs/source-health.html)
+        try:
+            _update_source_health()
+        except Exception as e:
+            logger.warning(f"Source health update failed (non-fatal): {e}")
 
         # Phase 3: Final analysis pass — pick up any articles missed during overlap
         logger.info("\n📚 Phase 3: Final analysis pass for remaining articles")
@@ -301,12 +331,18 @@ async def main():
 
 
 def _make_spider_script() -> str:
-    """Return the Python script run inside each Scrapy subprocess."""
+    """Return the Python script run inside each Scrapy subprocess.
+
+    Scrapy settings come from crawler/config/scrapy_defaults.py — the same
+    module the spider's custom_settings uses — so subprocess and in-process
+    crawls behave identically.
+    """
     return """
 import sys
 from scrapy.crawler import CrawlerProcess
 from crawler.spiders.university_spider import UniversityNewsSpider
 from crawler.config.settings import settings
+from crawler.config.scrapy_defaults import build_scrapy_settings
 from crawler.db.session import init_db, get_db_manager
 
 if __name__ == '__main__':
@@ -317,25 +353,7 @@ if __name__ == '__main__':
     )
     get_db_manager().create_tables()
 
-    process = CrawlerProcess({
-        'LOG_LEVEL': 'INFO',
-        'USER_AGENT': settings.user_agent,
-        'ROBOTSTXT_OBEY': True,
-        'CONCURRENT_REQUESTS': settings.max_concurrent_requests,
-        'DOWNLOAD_DELAY': settings.crawl_delay,
-        'CONCURRENT_REQUESTS_PER_DOMAIN': 1,
-        'AUTOTHROTTLE_ENABLED': True,
-        'AUTOTHROTTLE_START_DELAY': 0.5,
-        'AUTOTHROTTLE_MAX_DELAY': 10.0,
-        'AUTOTHROTTLE_TARGET_CONCURRENCY': 2.0,
-        'DOWNLOAD_TIMEOUT': 30,
-        'RETRY_TIMES': 3,
-        'RETRY_HTTP_CODES': [500, 502, 503, 504, 408, 429],
-        'COOKIES_ENABLED': False,
-        'DEPTH_LIMIT': 10,
-        'DEPTH_PRIORITY': 1,
-    })
-
+    process = CrawlerProcess(build_scrapy_settings())
     process.crawl(UniversityNewsSpider)
     process.start()
 """
@@ -368,6 +386,7 @@ async def _run_spider_subprocess(group_name: str, source_files: list[str]) -> bo
 
     env = os.environ.copy()
     env["CRAWLER_SOURCE_FILES"] = ",".join(source_files)
+    env["CRAWLER_GROUP_NAME"] = group_name
 
     script = _make_spider_script()
 

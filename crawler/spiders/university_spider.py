@@ -5,18 +5,23 @@ This spider crawls US university news pages to discover and extract
 AI-related articles with ethical rate limiting and politeness.
 """
 
+import gzip
 import scrapy
 from scrapy.linkextractors import LinkExtractor
-from datetime import datetime, timezone
-from typing import Dict, Any
+from scrapy.utils.sitemap import Sitemap, sitemap_urls_from_robots
+from datetime import datetime, timedelta, timezone
+from typing import Dict, Any, Optional
 from urllib.parse import urlparse
 import hashlib
 import json
 import logging
+import os
+import re
 
 import feedparser
 
 from crawler.config.settings import settings
+from crawler.config.scrapy_defaults import build_scrapy_settings
 from crawler.db.models import URL, Article
 from crawler.extractors.content import ContentExtractor
 from crawler.utils.deduplication import (
@@ -26,10 +31,26 @@ from crawler.utils.deduplication import (
     get_or_create_url,
     normalize_url
 )
-from crawler.utils.mcp_fetcher import MCPFetcher
+from crawler.utils.source_health import SourceHealthTracker
 from crawler.utils.university_name_mapper import get_mapper
 
 logger = logging.getLogger(__name__)
+
+# URL patterns that look like individual articles — used to decide whether an
+# undated sitemap URL is worth fetching.
+ARTICLE_URL_PATTERNS = (
+    r'/news/.+',
+    r'/press-releases?/.+',
+    r'/stories?/.+',
+    r'/articles?/.+',
+    r'/\d{4}/\d{2}/',
+    r'/posts?/.+',
+    r'/features?/.+',
+)
+
+MAX_SITEMAP_URLS = 50        # article URLs taken per sitemap file
+MAX_SITEMAP_CHILDREN = 5     # child sitemaps followed per sitemap index
+MAX_SITEMAP_DEPTH = 2        # sitemapindex recursion depth
 
 
 class UniversityNewsSpider(scrapy.Spider):
@@ -46,29 +67,10 @@ class UniversityNewsSpider(scrapy.Spider):
     name = 'university_news'
     allowed_domains = []  # Set dynamically from config
 
+    # Shared Scrapy config (crawler/config/scrapy_defaults.py) plus
+    # spider-specific handler/middleware overrides.
     custom_settings = {
-        'DOWNLOAD_DELAY': settings.crawl_delay,
-        'CONCURRENT_REQUESTS_PER_DOMAIN': 1,
-        'CONCURRENT_REQUESTS': settings.max_concurrent_requests,
-        'AUTOTHROTTLE_ENABLED': True,
-        'AUTOTHROTTLE_START_DELAY': 1.0,
-        'AUTOTHROTTLE_MAX_DELAY': 10.0,
-        'AUTOTHROTTLE_TARGET_CONCURRENCY': 2.0,
-        'ROBOTSTXT_OBEY': True,
-        'USER_AGENT': settings.user_agent,
-        'DOWNLOAD_TIMEOUT': settings.request_timeout,
-        'RETRY_TIMES': 3,
-        'RETRY_HTTP_CODES': [500, 502, 503, 504, 408, 429],
-
-        # Depth limiting - prevent crawling too deep into pagination
-        'DEPTH_LIMIT': 10,  # Maximum 10 levels of pagination per domain
-        'DEPTH_PRIORITY': 1,
-
-        # Compression
-        'COMPRESSION_ENABLED': True,
-
-        # Cookies
-        'COOKIES_ENABLED': False,
+        **build_scrapy_settings(),
 
         # Download handlers
         'DOWNLOAD_HANDLERS': {
@@ -94,11 +96,18 @@ class UniversityNewsSpider(scrapy.Spider):
         # Initialize content extractor
         self.content_extractor = ContentExtractor()
 
-        # Initialize MCP fetcher for fallback
-        self.mcp_fetcher = MCPFetcher()
-
         # Initialize university name mapper for fixing sitename extraction issues
         self.name_mapper = get_mapper()
+
+        # Rolling source health (auto-disables repeatedly failing domains)
+        self.health_tracker = SourceHealthTracker()
+
+        # RSS/Atom feeds discovered via <link rel="alternate"> during the run
+        self.discovered_feeds: Dict[str, str] = {}  # feed_url -> page it was found on
+        self._followed_feeds: set = set()
+
+        # Article-URL regexes for judging undated sitemap entries
+        self._article_url_res = [re.compile(p, re.IGNORECASE) for p in ARTICLE_URL_PATTERNS]
 
         # Link extractor for news pages
         self.link_extractor = LinkExtractor(
@@ -133,19 +142,22 @@ class UniversityNewsSpider(scrapy.Spider):
             deny_domains=[]
         )
 
-        # Load university sources
-        self.start_urls = self.load_university_sources()
-
-        # Statistics
+        # Statistics (initialized before source loading, which counts skips)
         self.stats = {
             'urls_discovered': 0,
             'urls_crawled': 0,
             'articles_extracted': 0,
             'duplicates_skipped': 0,
             'errors': 0,
-            'mcp_fallback_attempts': 0,
-            'mcp_fallback_successes': 0
+            'sitemap_urls': 0,
+            'feeds_discovered': 0,
+            'sources_skipped_health': 0,
         }
+
+        # Load university sources (full entries — start_requests fans out
+        # front page + sitemaps + robots.txt per source)
+        self.sources = self.load_university_sources()
+        self.start_urls = [s['news_url'] for s in self.sources]
 
         # Per-domain tracking
         self.domain_stats = {}  # hostname -> {'urls': 0, 'articles': 0, 'errors': 0}
@@ -183,30 +195,226 @@ class UniversityNewsSpider(scrapy.Spider):
 
     def load_university_sources(self) -> list:
         """
-        Load university news URLs from configuration.
+        Load university news source entries from configuration.
 
         Returns:
-            List of start URLs
+            List of normalized source dicts (news_url, rss_feed, sitemaps, ...)
         """
         try:
             universities = settings.get_university_sources()
-            urls = []
+            sources = []
 
             for univ in universities:
                 url = univ.get('news_url')
-                if url:
-                    urls.append(url)
-                    # Add domain to allowed_domains
-                    domain = urlparse(url).netloc
-                    if domain not in self.allowed_domains:
-                        self.allowed_domains.append(domain)
+                if not url:
+                    continue
 
-            logger.info(f"Loaded {len(urls)} university sources")
-            return urls
+                domain = urlparse(url).netloc
+                if self.health_tracker.should_skip(domain):
+                    self.stats['sources_skipped_health'] += 1
+                    logger.info(f"Skipping auto-disabled source: {domain} ({univ.get('name')})")
+                    continue
+
+                sources.append(univ)
+                # Add domain to allowed_domains
+                if domain not in self.allowed_domains:
+                    self.allowed_domains.append(domain)
+                for sitemap_url in univ.get('sitemaps') or []:
+                    sitemap_domain = urlparse(sitemap_url).netloc
+                    if sitemap_domain and sitemap_domain not in self.allowed_domains:
+                        self.allowed_domains.append(sitemap_domain)
+
+            logger.info(
+                f"Loaded {len(sources)} university source entries "
+                f"({self.stats['sources_skipped_health']} skipped by health tracker)"
+            )
+            return sources
 
         except Exception as e:
             logger.error(f"Failed to load university sources: {e}")
             return []
+
+    def start_requests(self):
+        """Fan out discovery per source: front page/feed, sitemaps, robots.txt.
+
+        The old behavior only requested each source's single news_url, so
+        anything not linked from the front page was invisible. Sitemaps give
+        dated coverage of the whole site; robots.txt frequently advertises
+        them.
+        """
+        seen_hosts = set()
+
+        for source in self.sources:
+            news_url = source['news_url']
+            yield scrapy.Request(
+                news_url,
+                callback=self.parse,
+                errback=self.handle_error,
+                meta={'source_name': source.get('name')},
+            )
+
+            parsed = urlparse(news_url)
+            host_root = f"{parsed.scheme}://{parsed.netloc}"
+
+            # Explicit sitemaps from the source config (schema field that was
+            # previously never read)
+            explicit_sitemaps = list(source.get('sitemaps') or [])[:MAX_SITEMAP_CHILDREN]
+            for sitemap_url in explicit_sitemaps:
+                yield scrapy.Request(
+                    sitemap_url,
+                    callback=self.parse_sitemap,
+                    errback=self.handle_sitemap_error,
+                    meta={'sitemap_depth': 0},
+                )
+
+            if parsed.netloc in seen_hosts:
+                continue
+            seen_hosts.add(parsed.netloc)
+
+            # robots.txt advertises sitemaps for most university CMSes
+            yield scrapy.Request(
+                f"{host_root}/robots.txt",
+                callback=self.parse_robots_for_sitemaps,
+                errback=self.handle_sitemap_error,
+                meta={'host_root': host_root},
+            )
+
+            # Conventional fallback location
+            if not explicit_sitemaps:
+                yield scrapy.Request(
+                    f"{host_root}/sitemap.xml",
+                    callback=self.parse_sitemap,
+                    errback=self.handle_sitemap_error,
+                    meta={'sitemap_depth': 0},
+                )
+
+    # ─────────────────────────── sitemap discovery ───────────────────────────
+
+    def parse_robots_for_sitemaps(self, response):
+        """Follow `Sitemap:` lines found in robots.txt."""
+        try:
+            sitemap_urls = list(sitemap_urls_from_robots(response.text, base_url=response.url))
+        except Exception as e:
+            self.logger.debug(f"Could not parse robots.txt at {response.url}: {e}")
+            return
+
+        for sitemap_url in sitemap_urls[:MAX_SITEMAP_CHILDREN]:
+            yield scrapy.Request(
+                sitemap_url,
+                callback=self.parse_sitemap,
+                errback=self.handle_sitemap_error,
+                meta={'sitemap_depth': 0},
+            )
+
+    def parse_sitemap(self, response):
+        """Parse a sitemap or sitemap index, yielding recent article URLs.
+
+        Entries with a <lastmod> inside the freshness window are fetched
+        directly (the date rides along in meta as a fallback published date).
+        Undated entries must look like article URLs to be worth a request.
+        """
+        depth = response.meta.get('sitemap_depth', 0)
+
+        body = response.body
+        if response.url.endswith('.gz'):
+            try:
+                body = gzip.decompress(body)
+            except OSError:
+                pass  # server may have already decoded it
+
+        try:
+            sitemap = Sitemap(body)
+        except Exception as e:
+            self.logger.debug(f"Not a parseable sitemap: {response.url} ({e})")
+            return
+
+        age_limit = datetime.now(timezone.utc) - timedelta(days=settings.max_article_age_days)
+
+        if sitemap.type == 'sitemapindex':
+            if depth >= MAX_SITEMAP_DEPTH:
+                return
+            children = list(sitemap)
+            # Prefer recently-modified child sitemaps (news CMSes date them)
+            children.sort(key=lambda e: e.get('lastmod') or '', reverse=True)
+            followed = 0
+            for entry in children:
+                loc = entry.get('loc')
+                if not loc:
+                    continue
+                lastmod = self._parse_lastmod(entry.get('lastmod'))
+                if lastmod and lastmod < age_limit:
+                    continue
+                yield scrapy.Request(
+                    loc,
+                    callback=self.parse_sitemap,
+                    errback=self.handle_sitemap_error,
+                    meta={'sitemap_depth': depth + 1},
+                )
+                followed += 1
+                if followed >= MAX_SITEMAP_CHILDREN:
+                    break
+            return
+
+        # urlset
+        taken = 0
+        entries = list(sitemap)
+        entries.sort(key=lambda e: e.get('lastmod') or '', reverse=True)
+        for entry in entries:
+            loc = entry.get('loc')
+            if not loc or self._is_navigation_page('', loc):
+                continue
+
+            lastmod = self._parse_lastmod(entry.get('lastmod'))
+            if lastmod is not None:
+                if lastmod < age_limit:
+                    continue
+            elif not any(rx.search(loc) for rx in self._article_url_res):
+                # Undated and doesn't look like an article URL — skip.
+                continue
+
+            normalized = normalize_url(loc)
+            url_hash = compute_url_hash(normalized)
+            try:
+                if check_url_seen(self.db, url_hash):
+                    self.stats['duplicates_skipped'] += 1
+                    continue
+            except Exception as e:
+                self.logger.warning(f"DB dedup check failed for {loc}, proceeding: {e}")
+                self.db.rollback()
+
+            self.stats['urls_discovered'] += 1
+            self.stats['sitemap_urls'] += 1
+            yield scrapy.Request(
+                loc,
+                callback=self.parse_article,
+                errback=self.handle_error,
+                meta={
+                    'url_hash': url_hash,
+                    'normalized_url': normalized,
+                    'discovered_via': 'sitemap',
+                    'fallback_date': lastmod.isoformat() if lastmod else None,
+                },
+            )
+            taken += 1
+            if taken >= MAX_SITEMAP_URLS:
+                break
+
+    @staticmethod
+    def _parse_lastmod(raw: Optional[str]) -> Optional[datetime]:
+        """Parse a sitemap <lastmod> value into an aware datetime."""
+        if not raw:
+            return None
+        try:
+            parsed = datetime.fromisoformat(raw.strip().replace('Z', '+00:00'))
+        except (ValueError, AttributeError):
+            return None
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=timezone.utc)
+        return parsed
+
+    def handle_sitemap_error(self, failure):
+        """Sitemap/robots fetch failures are expected (404s) — log quietly."""
+        self.logger.debug(f"Discovery request failed (non-fatal): {failure.request.url}")
 
     def _is_rss_feed(self, response) -> bool:
         """Detect if the response is an RSS/Atom feed."""
@@ -232,6 +440,22 @@ class UniversityNewsSpider(scrapy.Spider):
             link = entry.get('link')
             if not link:
                 continue
+
+            # Feed-level publication date — used both to skip stale entries
+            # here and as a fallback published_date for pages whose HTML
+            # carries no parseable date.
+            pubdate = None
+            for key in ('published_parsed', 'updated_parsed'):
+                parsed_time = entry.get(key)
+                if parsed_time:
+                    pubdate = datetime(*parsed_time[:6], tzinfo=timezone.utc)
+                    break
+
+            if pubdate is not None:
+                age_limit = datetime.now(timezone.utc) - timedelta(days=settings.max_article_age_days)
+                if pubdate < age_limit:
+                    self.logger.debug(f"Skipping stale feed entry ({pubdate.date()}): {link}")
+                    continue
 
             self.stats['urls_discovered'] += 1
 
@@ -264,7 +488,9 @@ class UniversityNewsSpider(scrapy.Spider):
                 callback=self.parse_article,
                 meta={
                     'url_hash': url_hash,
-                    'normalized_url': normalized
+                    'normalized_url': normalized,
+                    'discovered_via': 'rss',
+                    'fallback_date': pubdate.isoformat() if pubdate else None,
                 },
                 errback=self.handle_error
             )
@@ -284,6 +510,27 @@ class UniversityNewsSpider(scrapy.Spider):
         self.logger.info(f"Parsing listing page: {response.url}")
         domain = urlparse(response.url).netloc
         self.sources_attempted.add(domain)
+
+        # RSS/Atom feed autodiscovery: many newsrooms advertise a feed in
+        # <link rel="alternate"> that isn't in our config. Follow it this run
+        # and record it in docs/data/discovered_feeds.json for promotion into
+        # the source JSONs offline.
+        for href in response.css(
+            'link[rel="alternate"][type*="rss"]::attr(href), '
+            'link[rel="alternate"][type*="atom"]::attr(href)'
+        ).getall():
+            feed_url = response.urljoin(href)
+            if feed_url in self.discovered_feeds:
+                continue
+            self.discovered_feeds[feed_url] = response.url
+            self.stats['feeds_discovered'] += 1
+            if feed_url not in self._followed_feeds:
+                self._followed_feeds.add(feed_url)
+                yield scrapy.Request(
+                    feed_url,
+                    callback=self.parse,
+                    errback=self.handle_sitemap_error,
+                )
 
         # Extract article links
         for link in self.link_extractor.extract_links(response):
@@ -312,7 +559,8 @@ class UniversityNewsSpider(scrapy.Spider):
                     callback=self.parse_article,
                     meta={
                         'url_hash': url_hash,
-                        'normalized_url': normalized
+                        'normalized_url': normalized,
+                        'discovered_via': 'frontpage',
                     },
                     errback=self.handle_error
                 )
@@ -342,16 +590,12 @@ class UniversityNewsSpider(scrapy.Spider):
         Extract article content from article page.
 
         Uses Trafilatura for high-quality content extraction.
-        Supports both Scrapy-fetched and MCP-fetched content.
         """
         url_hash = response.meta['url_hash']
         normalized_url = response.meta['normalized_url']
-        is_mcp_fetched = response.meta.get('mcp_fetched', False)
+        discovered_via = response.meta.get('discovered_via', 'frontpage')
 
-        if is_mcp_fetched:
-            self.logger.info(f"Extracting article (MCP-fetched): {response.url}")
-        else:
-            self.logger.info(f"Extracting article: {response.url}")
+        self.logger.info(f"Extracting article ({discovered_via}): {response.url}")
 
         self.stats['urls_crawled'] += 1
 
@@ -370,7 +614,7 @@ class UniversityNewsSpider(scrapy.Spider):
             # Validate content quality
             if not self.content_extractor.is_content_valid(
                 extracted,
-                min_words=settings.min_article_length
+                min_words=settings.min_article_words
             ):
                 self.logger.info(f"Content quality check failed for {response.url}")
                 self._update_url_status(url_hash, 'excluded')
@@ -382,24 +626,40 @@ class UniversityNewsSpider(scrapy.Spider):
                 self._update_url_status(url_hash, 'excluded')
                 return
 
-            # Check article age - only process recent articles
-            if extracted.get('date'):
-                try:
-                    from datetime import timedelta, timezone
-                    article_date = datetime.fromisoformat(
-                        extracted['date'].replace('Z', '+00:00')
-                    )
-                    age_limit = datetime.now(timezone.utc) - timedelta(days=settings.max_article_age_days)
+            # Resolve a publication date, in order of trust:
+            # 1. Trafilatura's extracted date
+            # 2. htmldate scan of the raw HTML
+            # 3. the discovery channel's date (RSS pubDate / sitemap lastmod)
+            # Undated articles used to bypass the age filter entirely, letting
+            # years-old pages into the daily report — now no date means no
+            # article.
+            date_estimated = False
+            article_date = self._parse_article_date(extracted.get('date'))
 
-                    if article_date < age_limit:
-                        self.logger.info(
-                            f"Skipping old article ({article_date.date()}): {extracted.get('title', response.url)}"
-                        )
-                        self._update_url_status(url_hash, 'excluded')
-                        return
-                except (ValueError, AttributeError, TypeError) as e:
-                    # If date parsing fails, log but continue processing
-                    self.logger.debug(f"Could not parse article date: {e}")
+            if article_date is None:
+                article_date = self._parse_article_date(self._htmldate_fallback(response))
+                date_estimated = article_date is not None
+
+            if article_date is None and response.meta.get('fallback_date'):
+                article_date = self._parse_article_date(response.meta['fallback_date'])
+                date_estimated = article_date is not None
+
+            if article_date is None:
+                self.logger.info(
+                    f"Skipping undated article: {extracted.get('title', response.url)}"
+                )
+                self._update_url_status(url_hash, 'excluded')
+                return
+
+            age_limit = datetime.now(timezone.utc) - timedelta(days=settings.max_article_age_days)
+            if article_date < age_limit:
+                self.logger.info(
+                    f"Skipping old article ({article_date.date()}): {extracted.get('title', response.url)}"
+                )
+                self._update_url_status(url_hash, 'excluded')
+                return
+
+            extracted['date'] = article_date.isoformat()
 
             # Compute content hash for deduplication
             content_hash = compute_content_hash(extracted['text'])
@@ -424,6 +684,8 @@ class UniversityNewsSpider(scrapy.Spider):
                 'word_count': extracted.get('word_count'),
                 'categories': extracted.get('categories', []),
                 'tags': extracted.get('tags', []),
+                'date_estimated': date_estimated,
+                'discovered_via': discovered_via,
                 'extracted_at': datetime.now(timezone.utc).isoformat()
             }
 
@@ -444,6 +706,28 @@ class UniversityNewsSpider(scrapy.Spider):
             self.logger.error(f"Error parsing article {response.url}: {e}")
             self.stats['errors'] += 1
             self._update_url_status(url_hash, 'failed')
+
+    @staticmethod
+    def _parse_article_date(raw: Optional[str]) -> Optional[datetime]:
+        """Parse an ISO-ish date string into an aware datetime, else None."""
+        if not raw:
+            return None
+        try:
+            parsed = datetime.fromisoformat(str(raw).replace('Z', '+00:00'))
+        except (ValueError, AttributeError, TypeError):
+            return None
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=timezone.utc)
+        return parsed
+
+    def _htmldate_fallback(self, response) -> Optional[str]:
+        """Scan raw HTML for a publication date when Trafilatura found none."""
+        try:
+            from htmldate import find_date
+            return find_date(response.text, url=response.url, original_date=True)
+        except Exception as e:
+            self.logger.debug(f"htmldate fallback failed for {response.url}: {e}")
+            return None
 
     def _store_article(self, article_data: Dict[str, Any]):
         """
@@ -509,7 +793,9 @@ class UniversityNewsSpider(scrapy.Spider):
                 metadata={
                     'categories': article_data.get('categories', []),
                     'tags': article_data.get('tags', []),
-                    'hostname': article_data['hostname']
+                    'hostname': article_data['hostname'],
+                    'date_estimated': article_data.get('date_estimated', False),
+                    'discovered_via': article_data.get('discovered_via', 'frontpage'),
                 },
                 first_scraped=datetime.now(timezone.utc)
             )
@@ -619,10 +905,13 @@ class UniversityNewsSpider(scrapy.Spider):
 
     def handle_error(self, failure):
         """
-        Handle request errors with MCP fallback for 403/404 errors.
+        Record request errors for the health report.
 
-        Args:
-            failure: Twisted Failure object
+        (The old "MCP fallback" — a second plain HTTP request with a spoofed
+        Chrome User-Agent from the same IP — was removed: it never beat real
+        bot protection and fired even on timeouts. Retries are handled by
+        Scrapy's RetryMiddleware; persistent failures feed the source-health
+        loop, which eventually disables the source.)
         """
         url = failure.request.url
         self.logger.error(f"Request failed: {url}")
@@ -632,56 +921,6 @@ class UniversityNewsSpider(scrapy.Spider):
         if domain not in self.domain_stats:
             self.domain_stats[domain] = {'urls': 0, 'articles': 0, 'errors': 0}
         self.domain_stats[domain]['errors'] += 1
-
-        # Check if we should attempt MCP fallback
-        status_code = None
-        if hasattr(failure.value, 'response') and failure.value.response:
-            status_code = failure.value.response.status
-
-        # Try MCP fallback for 403/404 errors
-        if self.mcp_fetcher.should_use_mcp_fallback(status_code, url):
-            self.logger.info(f"Attempting MCP fallback for {url}")
-            self.stats['mcp_fallback_attempts'] += 1
-
-            try:
-                # Fetch content using MCP
-                html_content = self.mcp_fetcher.fetch_with_mcp(url)
-
-                if html_content:
-                    # Create a fake response object for processing
-                    from scrapy.http import TextResponse
-
-                    mcp_response = TextResponse(
-                        url=url,
-                        body=html_content.encode('utf-8'),
-                        encoding='utf-8',
-                        request=failure.request
-                    )
-
-                    # Copy metadata from original request
-                    if 'url_hash' in failure.request.meta:
-                        mcp_response.meta['url_hash'] = failure.request.meta['url_hash']
-                        mcp_response.meta['normalized_url'] = failure.request.meta['normalized_url']
-                    else:
-                        # Generate metadata if not present
-                        from crawler.utils.deduplication import compute_url_hash, normalize_url
-                        normalized = normalize_url(url)
-                        mcp_response.meta['url_hash'] = compute_url_hash(normalized)
-                        mcp_response.meta['normalized_url'] = normalized
-
-                    # Mark as MCP-fetched for logging
-                    mcp_response.meta['mcp_fetched'] = True
-
-                    self.stats['mcp_fallback_successes'] += 1
-                    self.logger.info(f"MCP fallback successful for {url}")
-
-                    # Process the article using normal pipeline
-                    # We need to manually call parse_article since we're in error handler
-                    # Use Scrapy's callback mechanism properly
-                    return self.parse_article(mcp_response)
-
-            except Exception as e:
-                self.logger.error(f"MCP fallback failed for {url}: {e}")
 
     def closed(self, reason):
         """
@@ -709,17 +948,41 @@ class UniversityNewsSpider(scrapy.Spider):
             'timestamp': datetime.now(timezone.utc).isoformat(),
         }
 
-        # Write health report to file for main pipeline to read
-        import os
+        # Write health report to file for main pipeline to read. Each spider
+        # group gets its own file (they used to overwrite each other's).
         stats_dir = os.environ.get('CRAWLER_STATS_DIR', 'output')
+        group_name = os.environ.get('CRAWLER_GROUP_NAME', 'default')
         os.makedirs(stats_dir, exist_ok=True)
-        stats_file = os.path.join(stats_dir, 'spider_health.json')
+        stats_file = os.path.join(stats_dir, f'spider_health_{group_name}.json')
         try:
             with open(stats_file, 'w') as f:
                 json.dump(health_report, f, indent=2)
             self.logger.info(f"Health report written to {stats_file}")
         except Exception as e:
             self.logger.error(f"Failed to write health report: {e}")
+
+        # Persist RSS/Atom feeds discovered this run as promotion suggestions
+        # (never mutates the source configs mid-run).
+        if self.discovered_feeds:
+            feeds_path = os.path.join('docs', 'data', 'discovered_feeds.json')
+            try:
+                os.makedirs(os.path.dirname(feeds_path), exist_ok=True)
+                existing = {}
+                if os.path.exists(feeds_path):
+                    with open(feeds_path) as f:
+                        existing = json.load(f)
+                for feed_url, found_on in self.discovered_feeds.items():
+                    existing.setdefault(feed_url, {
+                        'found_on': found_on,
+                        'first_seen': datetime.now(timezone.utc).isoformat(timespec='seconds'),
+                    })
+                with open(feeds_path, 'w') as f:
+                    json.dump(existing, f, indent=2, sort_keys=True)
+                self.logger.info(
+                    f"Recorded {len(self.discovered_feeds)} discovered feeds to {feeds_path}"
+                )
+            except Exception as e:
+                self.logger.error(f"Failed to write discovered feeds: {e}")
 
         # Close database session
         if self._db is not None:
@@ -730,13 +993,14 @@ class UniversityNewsSpider(scrapy.Spider):
 === SPIDER HEALTH REPORT ===
 Sources Attempted: {len(self.sources_attempted)}
 Sources Succeeded: {len(self.sources_succeeded)}
+Sources Skipped (health): {self.stats['sources_skipped_health']}
 URLs Discovered: {self.stats['urls_discovered']}
+  via sitemaps: {self.stats['sitemap_urls']}
+Feeds Autodiscovered: {self.stats['feeds_discovered']}
 URLs Crawled: {self.stats['urls_crawled']}
 Articles Extracted: {self.stats['articles_extracted']}
 Duplicates Skipped: {self.stats['duplicates_skipped']}
 Errors: {self.stats['errors']}
-MCP Fallback Attempts: {self.stats['mcp_fallback_attempts']}
-MCP Fallback Successes: {self.stats['mcp_fallback_successes']}
 Failed Domains: {', '.join(list(failed_domains.keys())[:10]) or 'None'}
 ============================
 """)
