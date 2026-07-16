@@ -8,6 +8,12 @@ on:
   # Allow manual triggering
   workflow_dispatch:
 
+  # TEMPORARY: end-to-end testing of the overhaul branch before merge.
+  # Remove this push trigger when PR #6 merges.
+  push:
+    branches:
+      - claude/fix-crawler-github-actions-tghl31
+
 permissions:
   contents: write
 
