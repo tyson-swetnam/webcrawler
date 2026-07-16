@@ -70,7 +70,20 @@ jobs:
             echo "::error::CLAUDE_CODE_OAUTH_TOKEN secret is empty. Run 'claude setup-token' locally (requires a Claude Pro/Max subscription) and add the token as a repository secret named CLAUDE_CODE_OAUTH_TOKEN. Tokens expire after ~1 year."
             exit 1
           fi
-          echo "Claude subscription token present"
+          case "$CLAUDE_CODE_OAUTH_TOKEN" in
+            sk-ant-oat*) : ;;
+            *) echo "::warning::Token does not start with 'sk-ant-oat' — make sure you pasted the long-lived token printed at the END of 'claude setup-token' (not an authorization code), with no quotes or whitespace." ;;
+          esac
+          # Live auth probe (~1 subscription message): a bad/expired token
+          # fails the run here in seconds instead of after the 25-minute
+          # crawl (observed: 401 Invalid bearer token surfacing only at the
+          # analysis phase).
+          if ! claude -p "Reply with exactly: OK" --model haiku --max-turns 1 > /tmp/claude_probe.txt 2>&1; then
+            cat /tmp/claude_probe.txt
+            echo "::error::Claude subscription auth probe FAILED. The token is invalid or expired — re-run 'claude setup-token' and update the CLAUDE_CODE_OAUTH_TOKEN repository secret (paste the raw token, no quotes/newlines)."
+            exit 1
+          fi
+          echo "Claude subscription auth verified"
 
       - name: Seed durable data from website branch
         run: |
