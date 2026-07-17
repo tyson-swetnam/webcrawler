@@ -57,6 +57,10 @@ ARTICLE_COLUMNS = [
     "editorial_note",
     "editorial_impact_category",
     "editorial_picked_at",
+    # Full text carried ONLY while an article awaits analysis, so the backlog
+    # survives ephemeral CI databases between runs. Cleared once analyzed to
+    # keep the snapshot small.
+    "pending_content",
 ]
 
 
@@ -151,6 +155,7 @@ class ParquetStore:
                     "editorial_note": None,
                     "editorial_impact_category": None,
                     "editorial_picked_at": None,
+                    "pending_content": (article.content or "") if article.last_analyzed is None else "",
                 }
             )
 
@@ -316,12 +321,19 @@ class ParquetStore:
             con.execute(
                 f"CREATE TEMP VIEW parquet_articles AS SELECT * FROM read_parquet('{self.articles_path}')"
             )
+            # Older snapshots predate the pending_content column — substitute
+            # an empty string so hydration keeps working on them.
+            available = {
+                c[0] for c in con.execute("SELECT * FROM parquet_articles LIMIT 0").description
+            }
+            content_expr = "pending_content" if "pending_content" in available else "'' AS pending_content"
             rows = con.execute(
                 "SELECT article_id, url, url_hash, hostname, title, author, "
                 "university_name, published_date, first_scraped, last_analyzed, "
                 "is_ai_related, ai_confidence_score, word_count, language, "
                 "consensus_summary, claude_summary, claude_key_points, openai_category, "
-                "relevance_score, themes, impact_scientific, impact_financial, impact_partnership "
+                "relevance_score, themes, impact_scientific, impact_financial, impact_partnership, "
+                f"{content_expr} "
                 "FROM parquet_articles"
             ).fetchall()
         finally:
@@ -366,6 +378,7 @@ class ParquetStore:
                 impact_scientific,
                 impact_financial,
                 impact_partnership,
+                pending_content,
             ) = r
 
             url_id = _stable_url_id(url)
@@ -421,6 +434,9 @@ class ParquetStore:
                 word_count=word_count,
                 language=language or "en",
                 content_hash=content_hash,
+                # Restore full text for the unanalyzed backlog so analysis
+                # can resume in a fresh (ephemeral) database.
+                content=pending_content or None,
                 article_metadata=metadata,
             )
 
@@ -576,5 +592,6 @@ def _arrow_schema():
             ("editorial_note", pa.string()),
             ("editorial_impact_category", pa.string()),
             ("editorial_picked_at", pa.string()),
+            ("pending_content", pa.string()),
         ]
     )

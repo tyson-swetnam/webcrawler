@@ -17,6 +17,12 @@ on:
 permissions:
   contents: write
 
+# Shared with backlog-processor.yml: never let two runs race each other on
+# the website branch (rebase conflicts on the binary parquet snapshot).
+concurrency:
+  group: website-publish
+  cancel-in-progress: false
+
 jobs:
   crawl-and-deploy:
     runs-on: ubuntu-latest
@@ -131,6 +137,11 @@ jobs:
           MAX_ARTICLE_AGE_DAYS: 30
           DATABASE_POOL_SIZE: 100
           USE_RSS_FEEDS: true
+          # Per-run brakes: analyze at most 1000 articles and stop analysis
+          # 70 min in so export/publish always beat the 90-min step timeout.
+          # Leftover backlog is drained by backlog-processor.yml.
+          MAX_ARTICLES_PER_RUN: 1000
+          MAX_PIPELINE_MINUTES: 70
         run: |
           python -m crawler
         continue-on-error: false
