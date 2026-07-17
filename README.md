@@ -9,8 +9,18 @@ Automated daily news aggregator tracking AI research and developments from 380+ 
 1. **Crawl** — Scrapy fans out over each source's news front page, RSS/Atom feeds, and sitemaps (explicit config, robots.txt `Sitemap:` lines, and `/sitemap.xml`), filtered by publication freshness.
 2. **Extract** — Trafilatura pulls clean article text; publication dates fall back to htmldate and the discovery channel's date (RSS pubDate / sitemap lastmod). Undated pages are excluded.
 3. **Dedupe** — SHA-256 URL and content hashing against PostgreSQL.
-4. **Analyze** — Claude (via the Claude Code CLI) classifies AI relevance, summarizes, tags themes, and scores impact — ~15 articles per prompt.
-5. **Publish** — a Drudge Report-style static site is generated to `docs/` and pushed to the `website` branch for GitHub Pages.
+4. **Analyze** — Claude (via the Claude Code CLI) classifies AI relevance, summarizes, extracts key points, tags 1–5 themes from a fixed 22-theme taxonomy, and scores scientific/financial/partnership impact — ~15 articles per prompt.
+5. **Curate** — Claude acts as daily news editor, picking up to 10 Top News stories from the past week, each with an editorial note and an impact category (Scientific Breakthrough / Major Funding / Strategic Partnership / Policy Impact).
+6. **Snapshot** — the full article history is exported to `docs/data/articles.parquet` (with a pre-aggregated `themes_daily.parquet`), which both hydrates the next run's ephemeral database and feeds the analytics dashboard.
+7. **Publish** — a static site is generated to `docs/`, a Pagefind full-text search index is built, and everything is pushed to the `website` branch for GitHub Pages.
+
+## The website
+
+- **Today** (`index.html`) — AI-related articles from the last 5 days in a dense tabbed list: **Top News**, All, Peer, R1, HPC, Labs, Global, with an inline filter box and expandable per-article summaries and topic pills.
+- **Top News** — the editorial picks, ranked, with Claude's one-line rationale and impact badge. Picks persist in `docs/data/top_news.json` so the tab survives empty crawls.
+- **Archive** — one page per day plus a monthly index with full-text search (Pagefind, with category/university/topic/date filters and popular-topic shortcuts).
+- **Analytics** (`analytics.html`) — a DuckDB-WASM dashboard that queries the parquet snapshot directly in the browser: themes over time, impact-category distribution, a university leaderboard, articles per day, and a free-form SQL playground.
+- **Source health** (`source-health.html`) — rolling per-domain crawl health with auto-disable of persistently dead sources.
 
 ## AI analysis: Claude Max subscription (no API keys)
 
@@ -28,7 +38,7 @@ Put the token in `.env` as `CLAUDE_CODE_OAUTH_TOKEN` for local runs, and add it 
 
 Notes:
 
-- Articles are batched (`AI_ARTICLES_PER_PROMPT`, default 15) so a full daily run costs a handful of subscription messages, not hundreds of API calls.
+- Articles are batched (`AI_ARTICLES_PER_PROMPT`, default 15) so a full daily run costs a handful of subscription messages, not hundreds of API calls; editorial curation adds one more structured message per run. `AI_MESSAGE_BUDGET` (default 400) soft-caps messages per run.
 - If the subscription's 5-hour/weekly usage window is exhausted mid-run, analysis stops cleanly; unanalyzed articles keep `last_analyzed = NULL` and are picked up by the next daily run.
 - When the token expires (~1 year), the workflow's preflight step fails with instructions — rerun `claude setup-token` and update the secret.
 - *Terms-of-service note:* Anthropic documents subscription OAuth as intended for "ordinary use of Claude Code". Personal, modest-volume automation on your own token (this project sends ~5–70 messages/day) is a gray area rather than explicitly sanctioned — this repo intentionally uses no third parties' credentials and does not resell access.
@@ -57,8 +67,10 @@ The crawler maintains a rolling per-domain health history (`docs/data/source_hea
 
 ## Technology
 
-- **Crawler:** Python + Scrapy (sitemap + RSS + front-page discovery)
+- **Crawler:** Python + Scrapy (sitemap + RSS + front-page discovery, three parallel spider groups)
 - **Extraction:** Trafilatura + htmldate
-- **AI Analysis:** Claude via Claude Code CLI (Max subscription auth)
+- **AI Analysis & Curation:** Claude via Claude Code CLI (Max subscription auth), structured JSON output
 - **Storage:** PostgreSQL (ephemeral in CI, hydrated from a parquet snapshot) + DuckDB/Parquet
+- **Search:** Pagefind static full-text index
+- **Analytics:** DuckDB-WASM querying parquet in the browser
 - **Deployment:** GitHub Actions → GitHub Pages (`website` branch)

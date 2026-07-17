@@ -2015,15 +2015,17 @@ function searchTopic(pill) {
         <h2>Overview</h2>
         <p>
             AI University News is an automated web crawler that monitors press releases and news articles from
-            top universities, national laboratories, and research institutions worldwide, focusing specifically on
-            AI-related research and developments. The system runs daily to discover, analyze, and report the latest
-            AI breakthroughs from academia and research labs.
+            universities, national laboratories, and research institutions worldwide, focusing specifically on
+            AI-related research and developments. Every day it discovers new articles, has Claude analyze and
+            curate them, and republishes this site — including the Top News picks, full-text search, and an
+            analytics dashboard.
         </p>
 
         <div class="highlight-box">
             <strong>What makes this unique:</strong> Unlike general news aggregators, this crawler specifically
-            targets university press offices and applies multi-AI analysis to identify truly significant AI research,
-            filtering out noise and delivering high-quality, relevant content.
+            targets university and laboratory press offices and applies Claude-powered analysis and editorial
+            curation to identify truly significant AI research, filtering out noise and delivering high-quality,
+            relevant content.
         </div>
 
         <h2>How the Crawler Works</h2>
@@ -2040,15 +2042,21 @@ function searchTopic(pill) {
             <li><strong>Global Institutions:</strong> Leading international universities and research organizations (Oxford, ETH Zurich, Tsinghua, etc.)</li>
         </ul>
         <p>
+            Discovery combines three channels per source: the news front page, RSS/Atom feeds (filtered by
+            publication freshness), and XML sitemaps (from explicit config, robots.txt, and /sitemap.xml,
+            filtered by lastmod). New RSS feeds are also autodiscovered from page metadata and suggested for
+            future runs. Articles without a discoverable publication date are excluded.
+        </p>
+        <p>
             Using the Scrapy framework, the system respectfully crawls these sites following robots.txt rules,
             implementing politeness delays between requests, and using proper identification.
         </p>
 
         <h3>Phase 2: Content Extraction</h3>
         <p>
-            When new articles are discovered, the crawler uses Trafilatura (a state-of-the-art content extraction
-            library) to extract clean article text, metadata, publication dates, and author information with
-            95%+ accuracy.
+            When new articles are discovered, the crawler uses Trafilatura (a state-of-the-art content
+            extraction library) to extract clean article text and metadata, with htmldate and the discovery
+            channel's own dates (RSS pubDate / sitemap lastmod) as publication-date fallbacks.
         </p>
 
         <h3>Phase 3: Deduplication</h3>
@@ -2060,16 +2068,31 @@ function searchTopic(pill) {
             <li>Updated articles are detected through content hash comparison</li>
             <li>Fast O(1) lookups using SHA-256 hashing</li>
         </ul>
+        <p>
+            The full article history also lives in a Parquet snapshot committed alongside the site, which
+            re-seeds the (ephemeral) database at the start of each automated run — and doubles as the data
+            source for the Analytics dashboard.
+        </p>
 
         <h3>Phase 4: AI Analysis</h3>
         <p>
-            This is where the magic happens. New articles are analyzed in batches by Claude,
-            Anthropic's frontier model for deep research understanding. Articles are classified by
-            relevance, key topics are extracted, summaries are generated, and confidence scores
-            are assigned.
+            New articles are analyzed by Claude in batches of ~15 per prompt through the Claude Code CLI,
+            returning structured JSON for every article: whether it is genuinely AI-related (with a confidence
+            score), a concise summary, key points, a 1&ndash;10 relevance score, up to five themes from a fixed
+            22-theme taxonomy (from biomedical AI to policy to HPC systems), and 1&ndash;10 impact scores along
+            scientific, financial, and partnership dimensions.
         </p>
 
-        <h3>Phase 5: Categorization &amp; Organization</h3>
+        <h3>Phase 5: Editorial Curation</h3>
+        <p>
+            After analysis, Claude acts as the daily news editor: the highest-impact articles from the past
+            week are pooled, and up to ten are selected as Top News. Each pick gets a rank, a one-to-two
+            sentence editorial note explaining why the story matters, and an impact category — Scientific
+            Breakthrough, Major Funding, Strategic Partnership, or Policy Impact. These picks power the
+            Top News tab on the front page.
+        </p>
+
+        <h3>Phase 6: Categorization &amp; Organization</h3>
         <p>
             Articles are automatically organized into five categories:
         </p>
@@ -2081,14 +2104,15 @@ function searchTopic(pill) {
             <li><strong>Global Institutions:</strong> Leading international universities and research organizations</li>
         </ul>
 
-        <h3>Phase 6: Publishing</h3>
+        <h3>Phase 7: Publishing</h3>
         <p>
-            The crawler automatically generates this website with:
+            The crawler automatically regenerates this website with:
         </p>
         <ul>
-            <li><strong>Today's Page:</strong> Latest articles from the past 3 days</li>
-            <li><strong>Archive:</strong> Historical daily reports accessible by date</li>
-            <li><strong>Five-Column Layout:</strong> Easy browsing by institution category</li>
+            <li><strong>Today's Page:</strong> Articles from the past 5 days in a tabbed list — Top News, All, and the five categories — with inline filtering and expandable summaries</li>
+            <li><strong>Archive:</strong> Historical daily reports by date, plus full-text search across every article (Pagefind, with category/university/topic/date filters)</li>
+            <li><strong>Analytics:</strong> A DuckDB-WASM dashboard that queries the Parquet snapshot directly in your browser — themes over time, impact categories, a university leaderboard, per-day volume, and a free-form SQL playground</li>
+            <li><strong>Source Health:</strong> A rolling per-domain health report; sources that fail seven consecutive runs are auto-disabled and periodically re-probed</li>
         </ul>
         <p>
             Results can also be delivered via Slack webhooks and email notifications for real-time updates.
@@ -2101,9 +2125,11 @@ function searchTopic(pill) {
             <li><strong>Language:</strong> Python 3.11+</li>
             <li><strong>Crawling:</strong> Scrapy 2.11+ with custom spiders</li>
             <li><strong>Content Extraction:</strong> Trafilatura 2.0+ with htmldate</li>
-            <li><strong>Database:</strong> PostgreSQL 15+ for metadata and tracking</li>
-            <li><strong>AI Analysis:</strong> Anthropic Claude via Claude Code</li>
-            <li><strong>Deployment:</strong> GitHub Actions with daily automated runs</li>
+            <li><strong>Database:</strong> PostgreSQL 15+ for metadata and tracking, with a DuckDB/Parquet snapshot as the durable history</li>
+            <li><strong>AI Analysis &amp; Curation:</strong> Anthropic Claude via the Claude Code CLI (structured JSON output)</li>
+            <li><strong>Search:</strong> Pagefind static full-text index</li>
+            <li><strong>Analytics:</strong> DuckDB-WASM querying Parquet in the browser</li>
+            <li><strong>Deployment:</strong> GitHub Actions with daily automated runs, published via GitHub Pages</li>
         </ul>
 
         <h3>Ethical Crawling</h3>
@@ -2120,29 +2146,30 @@ function searchTopic(pill) {
 
         <h2>Cost &amp; Efficiency</h2>
         <p>
-            The system is designed to be cost-effective:
+            There are no per-token API bills: Claude analysis runs through the Claude Code CLI authenticated
+            with a Claude Max subscription.
         </p>
         <ul>
-            <li><strong>Estimated monthly cost:</strong> ~$36/month for AI API usage (100 articles/day)</li>
-            <li><strong>Optimization:</strong> Claude Sonnet 4.6 handles all analysis in a single pass, minimizing redundant API calls</li>
-            <li><strong>Caching:</strong> All AI responses stored to avoid reprocessing</li>
-            <li><strong>Smart limits:</strong> Token limits and max articles per run prevent runaway costs</li>
+            <li><strong>Batching:</strong> ~15 articles per prompt, so a full daily run costs a handful of subscription messages rather than hundreds of API calls</li>
+            <li><strong>Budgeting:</strong> A per-run message budget caps subscription usage</li>
+            <li><strong>Resumability:</strong> If the subscription window is exhausted mid-run, unanalyzed articles are simply picked up by the next day's run</li>
+            <li><strong>Caching:</strong> Every analysis is stored, so articles are never reprocessed</li>
         </ul>
 
         <h2>Source Code</h2>
         <p>
             This is an open-source project. The complete source code, documentation, and deployment guides
-            are available on GitHub. The system is designed as a standalone Linux application that can be
-            deployed on any server with Python 3.11+ and PostgreSQL.
+            are available on GitHub. The production scheduler is a GitHub Actions workflow, but the system
+            can also run on any Linux machine with Python 3.11+ and PostgreSQL.
         </p>
 
         {sources_section}
 
         <h2>Updates &amp; Schedule</h2>
         <p>
-            The crawler runs automatically once per day (typically early morning UTC) and this website updates
-            immediately after each run completes. The archive preserves all historical daily reports for
-            research and trend analysis.
+            The crawler runs automatically once per day at 15:00 UTC via GitHub Actions, and this website
+            updates immediately after each run completes. The archive preserves all historical daily reports
+            for research and trend analysis.
         </p>
     </div>
 
