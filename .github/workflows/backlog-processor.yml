@@ -138,15 +138,15 @@ jobs:
 
       - name: Copy output to website branch
         run: |
+          # GitHub Pages serves the website branch's /docs folder — mirror
+          # the generated site there (see daily-crawler.yml for history).
           if [ -d docs ]; then
-            cp -r docs/* website-deploy/
+            mkdir -p website-deploy/docs
+            cp -r docs/* website-deploy/docs/
           fi
           if [ -d output ]; then
-            cp -r output/* website-deploy/ 2>/dev/null || true
-          fi
-          if [ -d docs/pagefind ]; then
-            mkdir -p website-deploy/docs
-            cp -r docs/pagefind website-deploy/docs/
+            mkdir -p website-deploy/output
+            cp -r output/* website-deploy/output/ 2>/dev/null || true
           fi
 
       - name: Commit and push to website branch
