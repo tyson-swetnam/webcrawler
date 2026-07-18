@@ -38,11 +38,14 @@ Analysis calls go through `claude -p --output-format json --json-schema` (headle
 - `crawler/ai/claude_cli.py` — low-level runner; raises `ClaudeQuotaExhausted` when the subscription window is used up (hard stop, not a 429)
 - `crawler/ai/claude_code_analyzer.py` — batches `AI_ARTICLES_PER_PROMPT` (15) articles per message; failed/skipped articles keep `last_analyzed = NULL` so the next run resumes them
 - `AI_MESSAGE_BUDGET` (400) soft-caps subscription messages per run
+- `MAX_PIPELINE_MINUTES` (75 default, 70 in CI) wall-clock-caps crawl+analysis so the Parquet export and site publish always run before the CI step timeout; leftovers resume later
+- `ANALYZE_ONLY=true` skips crawling and only drains the stored backlog (used by the Backlog Analyzer workflow)
 - Never pass `--bare` to the CLI — it skips OAuth token reads
 
 ### Automated Execution
 
-- **GitHub Actions is the production scheduler**: `.github/workflows/daily-crawler.yml` runs at 15:00 UTC, uses ephemeral PostgreSQL (hydrated from `docs/data/articles.parquet` on the `website` branch), installs a pinned Claude Code CLI, and pushes to the `website` branch with rebase+retry. Requires the `CLAUDE_CODE_OAUTH_TOKEN` repository secret.
+- **GitHub Actions is the production scheduler**: `.github/workflows/daily-crawler.yml` runs at 15:00 UTC, uses ephemeral PostgreSQL (hydrated from `docs/data/articles.parquet` on the `website` branch), installs a pinned Claude Code CLI, live-probes subscription auth in preflight (fast-fail on a bad/expired token), and publishes the site into `website:/docs` — the folder GitHub Pages serves — with rebase+retry. Per-run brakes (`MAX_ARTICLES_PER_RUN=1000`, `MAX_PIPELINE_MINUTES=70`) stop analysis early enough that the export/publish steps always beat the 90-minute step timeout. Requires the `CLAUDE_CODE_OAUTH_TOKEN` repository secret.
+- **Backlog draining**: `.github/workflows/backlog-processor.yml` ("Backlog Analyzer") runs crawl-free `ANALYZE_ONLY` chunks (~1,500 articles) at 03:00/09:00/21:00 UTC and re-triggers itself via `workflow_dispatch` (bounded by a `remaining_runs` budget) while backlog remains. Both workflows share the `website-publish` concurrency group so they queue instead of racing pushes to the `website` branch.
 - The systemd timer / cron scripts under `deployment/` and `scripts/` are **deprecated** (they race the workflow on the `website` branch): `sudo systemctl disable --now ai-news-crawler.timer`
 
 ## Development Setup
@@ -89,7 +92,7 @@ sudo -u postgres psql -c "CREATE DATABASE ai_news_crawler; CREATE USER crawler W
 
 1. **Hydrate**: ephemeral Postgres is seeded from `docs/data/articles.parquet` (deduped by `(url_id, content_hash)`)
 2. **Crawl**: `run_crawl_with_analysis()` spawns three spider subprocess groups (peer/r1/facilities); success requires ≥2 of 3 groups
-3. **Analyze incrementally**: `ClaudeCodeAnalyzer.batch_analyze()` processes articles while the crawl runs; a final pass catches stragglers. Zero analyses with pending articles fails the run (unless quota-exhausted, which is resumable)
+3. **Analyze incrementally**: `ClaudeCodeAnalyzer.batch_analyze()` processes articles while the crawl runs; `drain_unanalyzed()` catches stragglers afterwards. Analysis stops cleanly at the `max_pipeline_minutes` wall-clock deadline or the `max_articles_per_run` cap so later phases always run; `analyze_only` mode skips the crawl entirely (Backlog Analyzer). Zero analyses with pending articles fails the run, unless the stop was expected (quota, deadline, cap)
 4. **Source health**: per-group `spider_health_<group>.json` reports merge into `docs/data/source_health.json`; domains failing 7 consecutive runs are auto-disabled and listed on `docs/source-health.html`
 5. **Curate**: `EditorialCurator.curate_top_news()` ranks the top ~50 candidates (last 7 days, by composite impact score) and has Claude pick ≤10 Top News stories with editorial notes and impact categories; snapshot saved to `docs/data/top_news.json` so the tab survives empty runs
 6. **Snapshot**: `ParquetStore.export_from_postgres()` writes `docs/data/articles.parquet` (editorial picks stamped on), plus `export_themes_daily()` → `themes_daily.parquet` for the dashboard
@@ -109,7 +112,7 @@ sudo -u postgres psql -c "CREATE DATABASE ai_news_crawler; CREATE USER crawler W
 | `crawler/ai/claude_code_analyzer.py` | `ClaudeCodeAnalyzer` — batched structured-output analysis, resumable on quota exhaustion |
 | `crawler/ai/editor.py` | `EditorialCurator` — Top News picks via one structured CLI call |
 | `crawler/ai/themes.py` | Closed-vocabulary theme taxonomy helpers (`themes.json`, 22 theme ids) |
-| `crawler/storage/parquet_store.py` | `ParquetStore` — durable Parquet source of truth (`articles.parquet`, `themes_daily.parquet`), bi-directional Postgres sync, stable hash-derived ids |
+| `crawler/storage/parquet_store.py` | `ParquetStore` — durable Parquet source of truth (`articles.parquet`, `themes_daily.parquet`), bi-directional Postgres sync, stable hash-derived ids. `pending_content` carries full text for unanalyzed articles only, so the backlog survives ephemeral CI databases |
 | `crawler/db/models.py` | SQLAlchemy ORM: `URL`, `Article`, `AIAnalysis`, `NotificationSent`, `HostCrawlState` |
 | `crawler/db/session.py` | `DatabaseManager` — connection pooling, `create_tables()`, session management |
 | `crawler/extractors/content.py` | `ContentExtractor` (Trafilatura wrapper) |
