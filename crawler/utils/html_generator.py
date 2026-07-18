@@ -16,7 +16,15 @@ from sqlalchemy.orm import Session
 
 from crawler.db.models import Article, AIAnalysis
 from crawler.db.session import get_db
+from crawler.ai.themes import THEME_TAXONOMY
 from crawler.utils.university_classifier import UniversityClassifier
+
+# id -> human label for the closed theme taxonomy (e.g. "biomedical_ai"
+# -> "Biomedical AI"). Used for search facets and the archive topic cloud.
+THEME_LABELS = {
+    t["id"]: (t.get("label") or t["id"])
+    for t in THEME_TAXONOMY.get("themes", [])
+}
 
 
 class HTMLReportGenerator:
@@ -1008,7 +1016,7 @@ class HTMLReportGenerator:
             re.DOTALL
         )
         summary_re = re.compile(r'<div class="summary">([^<]*(?:<[^/][^<]*)*?)</div>')
-        topic_pill_re = re.compile(r'<span class="topic-pill">([^<]+)</span>')
+        themes_attr_re = re.compile(r'data-themes="([^"]*)"')
 
         for html_file in sorted(archive_dir.glob("20*.html")):
             date_str = html_file.stem  # e.g. "2026-03-07"
@@ -1030,8 +1038,18 @@ class HTMLReportGenerator:
                     if len(summary) > 200:
                         summary = summary[:200].rsplit(' ', 1)[0] + '...'
 
-                # Extract topics from detail panel
-                topics = [html_mod.unescape(t) for t in topic_pill_re.findall(detail_html)]
+                # Topic facet = theme labels from the row's data-themes
+                # attribute (closed 22-item taxonomy). Older pages carried
+                # only key-point pills — sentence fragments that made a
+                # useless, unbounded facet — so rows without data-themes
+                # simply get no topic filter.
+                topics = []
+                ta = themes_attr_re.search(m.group(0))
+                if ta and ta.group(1):
+                    topics = [
+                        html_mod.unescape(t)
+                        for t in ta.group(1).split('|') if t.strip()
+                    ]
 
                 # Track topic frequency
                 for t in topics:
@@ -1487,10 +1505,18 @@ class HTMLReportGenerator:
             data_summary = html_mod.escape(plain_summary[:200], quote=True)
             data_topics = html_mod.escape('|'.join(clean_topics), quote=True)
 
+            # Theme labels (closed taxonomy) — carried as a data attribute so
+            # the Pagefind search stubs can offer a small, meaningful topic
+            # facet instead of frequency-ranked key-point fragments.
+            theme_ids = (article.get('article_metadata') or {}).get('themes') or []
+            theme_labels = [THEME_LABELS[t] for t in theme_ids if t in THEME_LABELS]
+            data_themes = html_mod.escape('|'.join(theme_labels), quote=True)
+
             row_html = (
                 f'<div class="article-row{overflow_cls}" data-category="{cat}" '
                 f'data-title="{data_title}" data-university="{data_univ}" '
                 f'data-summary="{data_summary}" data-topics="{data_topics}" '
+                f'data-themes="{data_themes}" '
                 f'onclick="toggleDetail(this)">'
                 f'<span class="cat-dot {dot_cls}"></span>'
                 f'<a class="headline-link" href="{article["url"]}" target="_blank" onclick="event.stopPropagation()">{article["title"]}</a>'
@@ -1819,7 +1845,9 @@ function clearSearch() {
         fonts = self._get_google_fonts_link()
 
         # Build popular topics pills
-        topics_list = popular_topics or []
+        # Belt and braces: theme labels are short, but never render anything
+        # sentence-length as a "topic" even if fed stale counts.
+        topics_list = [(n, c) for n, c in (popular_topics or []) if len(n) <= 40]
         topic_pills = ''.join(
             f'<span class="topic-pill topic-pill-clickable" onclick="searchTopic(this)">{html_mod.escape(name)}</span>'
             for name, _count in topics_list
@@ -1856,6 +1884,18 @@ function clearSearch() {
             display: flex;
             flex-wrap: wrap;
             gap: 4px;
+        }
+        /* Base pill style lives in the main-page CSS, which this page does
+           not include — without it the topic cloud renders as a run-on
+           text wall. */
+        .topic-pill {
+            display: inline-block;
+            background: var(--color-surface-alt);
+            border-radius: var(--radius-sm);
+            padding: 2px 8px;
+            margin: 2px 3px 2px 0;
+            font-size: 11px;
+            color: var(--color-text-secondary);
         }
         .topic-pill-clickable {
             cursor: pointer;

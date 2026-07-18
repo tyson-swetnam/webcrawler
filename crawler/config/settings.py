@@ -165,8 +165,12 @@ class Settings(BaseSettings):
     max_article_age_days: int = Field(
         default=5,
         ge=1,
-        le=30,
-        description="Maximum age of articles to process (in days, default: 5 for recent news only)"
+        le=400,
+        description=(
+            "Maximum age of articles to process (in days, default: 5 for recent "
+            "news only). Daily CI runs use 30; the archive-backfill workflow "
+            "widens this to reach articles published during crawler outages."
+        )
     )
 
     # Logging configuration
