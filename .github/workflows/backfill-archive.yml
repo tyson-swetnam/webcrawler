@@ -1,0 +1,270 @@
+name: Archive Backfill
+
+# Backfills the archive after a crawler outage (e.g. the March–July 2026 gap):
+#
+#   1. First run (crawl=true): crawls with a WIDE discovery window
+#      (MAX_ARTICLE_AGE_DAYS derived from start_date instead of the daily
+#      run's 30), so sitemaps surface articles published while the crawler
+#      was down, then analyzes a bounded chunk of them.
+#   2. Every run: analyzes up to MAX_ARTICLES_PER_RUN backlog articles whose
+#      published_date falls inside the window, rebuilds the per-day archive
+#      pages from publication dates, reindexes search, and publishes.
+#   3. Self-chains (crawl=false) while eligible backlog remains, bounded by
+#      the remaining_runs budget.
+#
+# If a run stops on subscription-quota exhaustion the chain ends; re-dispatch
+# with the same start_date once the usage window resets to continue. The
+# nightly Backlog Analyzer only looks 30 days back, so it will NOT drain the
+# older backfill window for you.
+#
+# Manual only — no schedule.
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: 'Backfill articles published on/after this date (YYYY-MM-DD)'
+        required: true
+        default: '2026-03-10'
+      crawl:
+        description: 'Also crawl with the wide discovery window (first run); chained runs analyze only'
+        required: false
+        default: 'true'
+      remaining_runs:
+        description: 'Self-chain budget: how many more times this run may re-trigger itself'
+        required: false
+        default: '20'
+
+permissions:
+  contents: write
+  actions: write  # needed to re-trigger itself via workflow_dispatch
+
+# Shared with daily-crawler.yml and backlog-processor.yml so runs queue
+# instead of racing each other's pushes to the website branch.
+concurrency:
+  group: website-publish
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 110
+
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_DB: ai_news_crawler
+          POSTGRES_USER: crawler
+          POSTGRES_PASSWORD: github_actions_temp
+        options: >-
+          --health-cmd "pg_isready -U crawler -d ai_news_crawler"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compute backfill window
+        id: window
+        run: |
+          START="${{ github.event.inputs.start_date }}"
+          if ! date -ud "$START" +%s >/dev/null 2>&1; then
+            echo "::error::start_date '$START' is not a valid date (use YYYY-MM-DD)"
+            exit 1
+          fi
+          NOW=$(date -u +%s)
+          THEN=$(date -ud "$START" +%s)
+          AGE_DAYS=$(( (NOW - THEN) / 86400 + 1 ))
+          if [ "$AGE_DAYS" -lt 1 ]; then
+            echo "::error::start_date '$START' is in the future"
+            exit 1
+          fi
+          # settings.max_article_age_days is capped at 400
+          if [ "$AGE_DAYS" -gt 400 ]; then AGE_DAYS=400; fi
+          echo "age_days=$AGE_DAYS" >> "$GITHUB_OUTPUT"
+          echo "Backfill window: $AGE_DAYS days (articles published since $START)"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt -c constraints.txt
+
+      - name: Install Pagefind and Claude Code CLI
+        run: |
+          npm install -g pagefind@latest @anthropic-ai/claude-code@2.1.211
+          claude --version
+
+      - name: Preflight Claude subscription auth
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          if [ -z "$CLAUDE_CODE_OAUTH_TOKEN" ]; then
+            echo "::error::CLAUDE_CODE_OAUTH_TOKEN secret is empty. Run 'claude setup-token' and add it as a repository secret."
+            exit 1
+          fi
+          if ! claude -p "Reply with exactly: OK" --model haiku --max-turns 1 > /tmp/claude_probe.txt 2>&1; then
+            cat /tmp/claude_probe.txt
+            echo "::error::Claude subscription auth probe FAILED — token invalid/expired, or the usage window is exhausted. Re-dispatch this workflow later with the same start_date."
+            exit 1
+          fi
+          echo "Claude subscription auth verified"
+
+      - name: Seed durable data from website branch
+        run: |
+          mkdir -p docs/data
+          git fetch origin website --depth=1 || true
+
+          fetch_one() {
+            local name="$1"
+            if git show "origin/website:docs/data/$name" > "docs/data/$name" 2>/dev/null; then
+              echo "Seeded docs/data/$name"
+            elif git show "origin/website:data/$name" > "docs/data/$name" 2>/dev/null; then
+              echo "Seeded docs/data/$name (from root data/)"
+            else
+              rm -f "docs/data/$name"
+              echo "No previous docs/data/$name found"
+            fi
+          }
+
+          fetch_one articles.parquet
+          fetch_one top_news.json
+          fetch_one source_health.json
+
+      - name: Crawl and/or analyze backfill chunk
+        timeout-minutes: 90
+        env:
+          DATABASE_URL: postgresql://crawler:github_actions_temp@localhost:5432/ai_news_crawler
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          ANALYZE_ONLY: ${{ github.event.inputs.crawl == 'true' && 'false' || 'true' }}
+          ENABLE_AI_ANALYSIS: true
+          ENABLE_SLACK_NOTIFICATIONS: false
+          ENABLE_EMAIL_NOTIFICATIONS: false
+          SAVE_RESULTS_TO_FILE: true
+          LOCAL_OUTPUT_DIR: ./output
+          LOG_LEVEL: INFO
+          DATABASE_POOL_SIZE: 100
+          MAX_CONCURRENT_REQUESTS: 24
+          CRAWL_DELAY: 0.5
+          USE_RSS_FEEDS: true
+          # The wide window: discovery (sitemap lastmod / RSS pubDate) and
+          # analysis eligibility both honor this, so the gap months become
+          # crawlable and analyzable.
+          MAX_ARTICLE_AGE_DAYS: ${{ steps.window.outputs.age_days }}
+          MAX_ARTICLES_PER_RUN: 1500
+          MAX_PIPELINE_MINUTES: 70
+        run: |
+          python -m crawler
+
+      - name: Rebuild archive pages from publication dates
+        env:
+          DATABASE_URL: postgresql://crawler:github_actions_temp@localhost:5432/ai_news_crawler
+          LOCAL_OUTPUT_DIR: ./output
+          MAX_ARTICLE_AGE_DAYS: ${{ steps.window.outputs.age_days }}
+        run: |
+          python scripts/regenerate_all_archives.py --since "${{ github.event.inputs.start_date }}"
+
+      - name: Checkout website branch
+        uses: actions/checkout@v4
+        with:
+          ref: website
+          path: website-deploy
+          token: ${{ github.token }}
+
+      - name: Copy output to website branch
+        run: |
+          # GitHub Pages serves the website branch's /docs folder — mirror
+          # the generated site there (see daily-crawler.yml for history).
+          if [ -d docs ]; then
+            mkdir -p website-deploy/docs
+            cp -r docs/* website-deploy/docs/
+          fi
+          if [ -d output ]; then
+            mkdir -p website-deploy/output
+            cp -r output/* website-deploy/output/ 2>/dev/null || true
+          fi
+
+      - name: Commit and push to website branch
+        working-directory: ./website-deploy
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add .
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Archive backfill chunk - $(date -u +"%Y-%m-%d %H:%M UTC")"
+            for attempt in 1 2 3; do
+              if git push origin website; then
+                break
+              fi
+              echo "Push attempt $attempt failed; rebasing and retrying..."
+              git pull --rebase origin website
+              sleep $((attempt * 5))
+              if [ "$attempt" = "3" ]; then
+                echo "::error::Failed to push to website branch after 3 attempts"
+                exit 1
+              fi
+            done
+          fi
+
+      - name: Re-trigger if backfill backlog remains
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REMAINING_RUNS: ${{ github.event.inputs.remaining_runs || '20' }}
+        run: |
+          STATS=output/pipeline_stats.json
+          if [ ! -f "$STATS" ]; then
+            echo "No pipeline stats found; not re-triggering"
+            exit 0
+          fi
+          cat "$STATS"
+          PENDING=$(python3 -c "import json;print(json.load(open('$STATS'))['pending_after'])")
+          ANALYZED=$(python3 -c "import json;print(json.load(open('$STATS'))['analyzed_total'])")
+          QUOTA=$(python3 -c "import json;print(json.load(open('$STATS'))['quota_exhausted'])")
+
+          if [ "$PENDING" -le 0 ]; then
+            echo "🎉 Backfill window fully analyzed"
+            exit 0
+          fi
+          if [ "$QUOTA" = "True" ]; then
+            echo "::warning::Subscription window exhausted with $PENDING articles left. Re-dispatch this workflow with the same start_date once the window resets — the nightly Backlog Analyzer only looks 30 days back and will not finish this."
+            exit 0
+          fi
+          if [ "$ANALYZED" -le 0 ]; then
+            echo "No progress this run; not re-triggering"
+            exit 0
+          fi
+          if [ "$REMAINING_RUNS" -le 0 ]; then
+            echo "Self-chain budget exhausted; re-dispatch to continue ($PENDING articles left)"
+            exit 0
+          fi
+
+          NEXT=$((REMAINING_RUNS - 1))
+          echo "Backfill backlog remaining: $PENDING — re-triggering (chain budget left: $NEXT)"
+          curl -sf -X POST \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/backfill-archive.yml/dispatches" \
+            -d "{\"ref\": \"${{ github.ref_name }}\", \"inputs\": {\"start_date\": \"${{ github.event.inputs.start_date }}\", \"crawl\": \"false\", \"remaining_runs\": \"$NEXT\"}}"
+
+      - name: Upload run diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: backfill-run-${{ github.run_id }}
+          path: |
+            output/pipeline_stats.json
+            crawler.log
+          retention-days: 7
+          if-no-files-found: ignore
