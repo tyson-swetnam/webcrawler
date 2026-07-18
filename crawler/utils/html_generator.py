@@ -1056,7 +1056,10 @@ class HTMLReportGenerator:
                     f'  <span data-pagefind-filter="university">{html_mod.escape(university)}</span>\n'
                     f'{topic_spans}'
                     f'  <time data-pagefind-sort="date" data-pagefind-filter="date:{date_str}">{date_str}</time>\n'
-                    f'  <a data-pagefind-meta="url" href="{html_mod.escape(url)}">{html_mod.escape(title)}</a>\n'
+                    # url[href] captures the anchor's href attribute; a bare
+                    # "url" meta captures the element TEXT (the title), which
+                    # made every search result link to /archive/<title>.
+                    f'  <a data-pagefind-meta="url[href]" href="{html_mod.escape(url)}">{html_mod.escape(title)}</a>\n'
                     f'</article>\n'
                     f'</body></html>\n'
                 )
