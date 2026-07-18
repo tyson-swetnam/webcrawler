@@ -445,8 +445,10 @@
         <h2>Updates &amp; Schedule</h2>
         <p>
             The crawler runs automatically once per day at 15:00 UTC via GitHub Actions, and this website
-            updates immediately after each run completes. The archive preserves all historical daily reports
-            for research and trend analysis.
+            updates immediately after each run completes. Each run analyzes a bounded number of articles
+            within a wall-clock budget so results are always published; anything left over is drained by
+            smaller off-peak analysis runs throughout the day, so no article is lost between runs. The
+            archive preserves all historical daily reports for research and trend analysis.
         </p>
     </div>
 
@@ -457,7 +459,7 @@
         <a href="analytics.html">Analytics</a> &middot;
         <a href="how_it_works.html">How It Works</a> &middot;
         <a href="https://github.com/tyson-swetnam/webcrawler" target="_blank">GitHub</a>
-        &nbsp;|&nbsp; 379 sources &middot; Updated 05:01 PM
+        &nbsp;|&nbsp; 379 sources &middot; Updated 01:37 PM
     </div>
 </body>
 </html>

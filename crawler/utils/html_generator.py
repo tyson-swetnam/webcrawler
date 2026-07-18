@@ -2171,8 +2171,10 @@ function searchTopic(pill) {
         <h2>Updates &amp; Schedule</h2>
         <p>
             The crawler runs automatically once per day at 15:00 UTC via GitHub Actions, and this website
-            updates immediately after each run completes. The archive preserves all historical daily reports
-            for research and trend analysis.
+            updates immediately after each run completes. Each run analyzes a bounded number of articles
+            within a wall-clock budget so results are always published; anything left over is drained by
+            smaller off-peak analysis runs throughout the day, so no article is lost between runs. The
+            archive preserves all historical daily reports for research and trend analysis.
         </p>
     </div>
 
