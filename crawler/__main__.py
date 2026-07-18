@@ -105,6 +105,16 @@ async def main():
 
     start_time = datetime.now(timezone.utc)
 
+    # Wall-clock deadline for crawl+analysis so export/publish always run
+    # inside the CI step timeout. Leftover analysis resumes next run.
+    deadline = None
+    if settings.max_pipeline_minutes:
+        deadline = start_time + timedelta(minutes=settings.max_pipeline_minutes)
+        logger.info(
+            f"Pipeline analysis deadline: {settings.max_pipeline_minutes} min "
+            f"(until {deadline.strftime('%H:%M:%S')} UTC)"
+        )
+
     try:
         # Initialize database
         logger.info("Initializing database connection...")
@@ -131,66 +141,95 @@ async def main():
         except Exception as e:
             logger.warning(f"Phase 0 hydration failed (non-fatal): {e}", exc_info=True)
 
-        # Phase 1+2: Crawl and analyze concurrently
-        logger.info("\n📡 Phase 1: Crawling university news sites (parallel spiders + overlapping AI analysis)")
-        crawl_success = await run_crawl_with_analysis()
+        # Phase 1+2: Crawl and analyze concurrently (skipped in ANALYZE_ONLY
+        # mode, used by the backlog-processor workflow to drain stored
+        # articles without re-crawling).
+        analyzed_during_crawl = 0
+        if settings.analyze_only:
+            logger.info("\n🗄️ ANALYZE_ONLY mode: skipping crawl, draining the stored backlog")
+        else:
+            logger.info("\n📡 Phase 1: Crawling university news sites (parallel spiders + overlapping AI analysis)")
+            crawl_success, analyzed_during_crawl = await run_crawl_with_analysis(deadline)
 
-        if not crawl_success:
-            logger.error("Crawling phase failed")
-            return 1
+            if not crawl_success:
+                logger.error("Crawling phase failed")
+                return 1
 
-        # Log spider health reports if available
-        _log_spider_health()
+            # Log spider health reports if available
+            _log_spider_health()
 
-        # Feed this run's results into the rolling source-health history
-        # (auto-disables persistently dead sources, renders docs/source-health.html)
-        try:
-            _update_source_health()
-        except Exception as e:
-            logger.warning(f"Source health update failed (non-fatal): {e}")
+            # Feed this run's results into the rolling source-health history
+            # (auto-disables persistently dead sources, renders docs/source-health.html)
+            try:
+                _update_source_health()
+            except Exception as e:
+                logger.warning(f"Source health update failed (non-fatal): {e}")
 
-        # Phase 3: Final analysis pass — pick up any articles missed during overlap
+        # Phase 3: Final analysis pass — pick up leftovers within this run's
+        # allowance (per-run cap minus what the incremental loop already did).
         logger.info("\n📚 Phase 3: Final analysis pass for remaining articles")
         db_manager = get_db_manager()
 
         with db_manager.session_scope() as db:
+            pending_before = _pending_query(db, include_old_scrapes=True).count()
+
+        allowance = max(0, settings.max_articles_per_run - analyzed_during_crawl)
+        final_analyzed = 0
+        quota_exhausted = False
+
+        if pending_before == 0:
+            logger.info("No unanalyzed articles pending")
+        elif not settings.enable_ai_analysis:
+            logger.info(f"AI analysis disabled; {pending_before} articles left unanalyzed")
+        elif allowance == 0:
+            logger.info(
+                f"Per-run cap ({settings.max_articles_per_run}) already used during "
+                f"crawl; {pending_before} pending articles resume next run"
+            )
+        else:
+            logger.info(f"{pending_before} unanalyzed articles pending (allowance {allowance})")
+            final_analyzed, quota_exhausted, stopped_early = await drain_unanalyzed(deadline, allowance)
+            logger.info(f"Completed {final_analyzed} final AI analyses")
+            if (
+                final_analyzed == 0
+                and analyzed_during_crawl == 0
+                and not quota_exhausted
+                and not stopped_early
+            ):
+                # Nothing analyzed at all this run despite pending articles,
+                # and not because of quota/deadline/cap (those are expected
+                # and resumable) — fail instead of publishing an empty report.
+                logger.error(
+                    f"Analysis produced zero results for {pending_before} pending "
+                    "articles — failing the run"
+                )
+                return 1
+
+        # Write machine-readable run stats (the backlog-processor workflow
+        # reads pending_after to decide whether to re-trigger itself).
+        try:
+            import json as _json
+            with db_manager.session_scope() as db:
+                pending_after = _pending_query(db, include_old_scrapes=True).count()
+            stats_path = Path(settings.local_output_dir) / "pipeline_stats.json"
+            stats_path.parent.mkdir(parents=True, exist_ok=True)
+            stats_path.write_text(_json.dumps({
+                "analyzed_during_crawl": analyzed_during_crawl,
+                "analyzed_final_pass": final_analyzed,
+                "analyzed_total": analyzed_during_crawl + final_analyzed,
+                "pending_after": pending_after,
+                "quota_exhausted": quota_exhausted,
+            }, indent=2))
+            logger.info(
+                f"Run stats: {analyzed_during_crawl + final_analyzed} analyzed, "
+                f"{pending_after} still pending"
+            )
+        except Exception as e:
+            logger.warning(f"Could not write pipeline stats (non-fatal): {e}")
+
+        with db_manager.session_scope() as db:
             lookback_time = datetime.now(timezone.utc) - timedelta(days=settings.lookback_days)
             age_limit_date = (datetime.now(timezone.utc) - timedelta(days=settings.max_article_age_days)).date()
-
-            new_articles = db.query(Article).filter(
-                and_(
-                    Article.first_scraped >= lookback_time,
-                    Article.last_analyzed == None,
-                    (Article.published_date == None) | (Article.published_date >= age_limit_date)
-                )
-            ).limit(settings.max_articles_per_run).all()
-
-            if new_articles:
-                logger.info(f"Found {len(new_articles)} remaining unanalyzed articles")
-                if settings.enable_ai_analysis:
-                    analyses, quota_exhausted = await analyze_articles(new_articles, db)
-                    stored_count = sum(1 for a in analyses if a is not None)
-                    logger.info(f"Completed {stored_count} final AI analyses")
-                    if stored_count == 0 and not quota_exhausted:
-                        # Nothing analyzed despite pending articles, and not
-                        # because the subscription window ran out (that case
-                        # is expected and resumes next run) — fail the run
-                        # instead of publishing an empty report.
-                        logger.error(
-                            "Final analysis pass produced zero results for "
-                            f"{len(new_articles)} pending articles — failing the run"
-                        )
-                        return 1
-                    if quota_exhausted:
-                        logger.warning(
-                            "Subscription quota exhausted during final pass; "
-                            "remaining articles resume next run"
-                        )
-                else:
-                    analyses = []
-            else:
-                logger.info("All articles already analyzed during crawl")
-                analyses = []
 
             # Re-query all recently analyzed articles for reporting
             all_recent = db.query(Article).filter(
@@ -294,8 +333,9 @@ async def main():
 
             # Phase 4b: Generate and send reports
             logger.info("\n📬 Phase 4b: Generating and sending notifications/exports")
-            successful_analyses = [a for a in analyses if a is not None]
-            exported_files = await send_notifications(all_recent, successful_analyses, db, editorial_picks=editorial_picks)
+            # Analyses are committed to the DB per batch; the export layer
+            # reads them from the articles/ai_analyses tables via all_recent.
+            exported_files = await send_notifications(all_recent, [], db, editorial_picks=editorial_picks)
 
         # Phase 5: Summary and statistics
         duration = (datetime.now(timezone.utc) - start_time).total_seconds()
@@ -486,15 +526,160 @@ async def run_crawler() -> bool:
         return False
 
 
-async def run_crawl_with_analysis() -> bool:
+def _pending_query(db, include_old_scrapes: bool = False):
+    """Unanalyzed, analyzable articles (shared by every analysis pass).
+
+    `include_old_scrapes=True` drops the lookback filter — used when draining
+    the cross-run backlog, whose articles were scraped by earlier runs.
+    Articles without content (hydrated from pre-backlog parquet snapshots)
+    are excluded: there is nothing to analyze.
+    """
+    age_limit_date = (datetime.now(timezone.utc) - timedelta(days=settings.max_article_age_days)).date()
+    filters = [
+        Article.last_analyzed == None,
+        Article.content != None,
+        (Article.published_date == None) | (Article.published_date >= age_limit_date),
+    ]
+    if not include_old_scrapes:
+        lookback_time = datetime.now(timezone.utc) - timedelta(days=settings.lookback_days)
+        filters.append(Article.first_scraped >= lookback_time)
+    return db.query(Article).filter(and_(*filters))
+
+
+def _store_batch(db, batch, analyses) -> int:
+    """Persist one batch of analysis results; returns how many were stored.
+
+    None entries (failed/skipped articles) are left untouched so their
+    last_analyzed stays NULL and the next run resumes them.
+    """
+    stored = 0
+    for i, analysis in enumerate(analyses):
+        if analysis is None:
+            continue
+        article = batch[i]
+        ai_analysis = AIAnalysis(
+            article_id=article.article_id,
+            claude_summary=analysis.get("claude", {}).get("summary") if analysis.get("claude") else None,
+            claude_key_points=analysis.get("claude", {}).get("key_points", []) if analysis.get("claude") else None,
+            openai_summary=analysis.get("openai", {}).get("summary") if analysis.get("openai") else None,
+            openai_category=analysis.get("openai", {}).get("category") if analysis.get("openai") else None,
+            gemini_summary=analysis.get("gemini", {}).get("summary") if analysis.get("gemini") else None,
+            consensus_summary=analysis["consensus"]["summary"],
+            relevance_score=analysis["consensus"].get("relevance_score"),
+            processing_time_ms=analysis.get("processing_time_ms"),
+        )
+        article.is_ai_related = analysis["consensus"]["is_ai_related"]
+        article.ai_confidence_score = analysis["consensus"]["confidence"]
+        article.last_analyzed = datetime.now(timezone.utc)
+        db.add(ai_analysis)
+
+        # Store Claude-derived metadata (impact scores + themes) on
+        # article_metadata so it flows into the Parquet store.
+        claude_payload = analysis.get('claude') or {}
+        meta_update = {}
+        if claude_payload.get('impact_scores'):
+            meta_update['impact_scores'] = claude_payload['impact_scores']
+        if claude_payload.get('themes'):
+            meta_update['themes'] = list(claude_payload['themes'])
+        if meta_update:
+            article.article_metadata = {
+                **(article.article_metadata or {}),
+                **meta_update,
+            }
+        stored += 1
+    return stored
+
+
+def _batch_payload(batch) -> list:
+    return [
+        {
+            "article_id": art.article_id,
+            "title": art.title or "Untitled",
+            "content": art.content or "",
+            "url": art.url.url if art.url else "",
+        }
+        for art in batch
+    ]
+
+
+async def drain_unanalyzed(deadline, max_articles: int) -> tuple:
+    """Analyze up to max_articles pending articles in committed 100-row batches.
+
+    Used for the post-crawl final pass and for ANALYZE_ONLY backlog runs.
+    Stops cleanly on the wall-clock deadline, the subscription message
+    budget, or quota exhaustion — every completed batch is already
+    committed, so nothing is lost when a later run picks up the rest.
+
+    Returns (analyzed_count, quota_exhausted, stopped_early).
+    """
+    if max_articles <= 0 or not settings.enable_ai_analysis:
+        return 0, False, False
+
+    analyzer = ClaudeCodeAnalyzer()
+    db_manager = get_db_manager()
+    analyzed = 0
+    consecutive_failures = 0
+
+    while analyzed < max_articles:
+        if deadline and datetime.now(timezone.utc) >= deadline:
+            logger.warning(
+                f"Analysis deadline reached after {analyzed} articles; "
+                "the rest resume next run"
+            )
+            return analyzed, False, True
+        if analyzer.messages_used >= settings.ai_message_budget:
+            logger.warning(
+                f"Message budget ({settings.ai_message_budget}) reached after "
+                f"{analyzed} articles; the rest resume next run"
+            )
+            return analyzed, False, True
+
+        with db_manager.session_scope() as db:
+            batch = _pending_query(db, include_old_scrapes=True).limit(
+                min(100, max_articles - analyzed)
+            ).all()
+            if not batch:
+                break
+
+            analyses = await analyzer.batch_analyze(
+                _batch_payload(batch),
+                max_concurrent=settings.ai_analysis_batch_size,
+            )
+            stored = _store_batch(db, batch, analyses)
+            db.commit()
+            analyzed += stored
+            logger.info(f"Backlog analysis: {analyzed}/{max_articles} articles this run")
+
+            if getattr(analyzer, "_quota_exhausted", False):
+                logger.warning(
+                    f"Subscription quota exhausted after {analyzed} articles; "
+                    "the rest resume next run"
+                )
+                return analyzed, True, True
+
+            if stored == 0:
+                consecutive_failures += 1
+                if consecutive_failures >= 3:
+                    logger.error("Backlog analysis giving up after repeated empty batches")
+                    return analyzed, False, False
+            else:
+                consecutive_failures = 0
+
+    return analyzed, False, False
+
+
+async def run_crawl_with_analysis(deadline=None) -> tuple:
     """
     Run crawling and AI analysis concurrently.
 
     Launches all spider subprocesses, then starts analyzing articles as they
-    arrive in the database — overlapping crawl I/O with AI API calls.
+    arrive in the database — overlapping crawl I/O with AI API calls. The
+    incremental analysis loop is bounded by max_articles_per_run, the
+    subscription message budget, and the wall-clock deadline; leftovers are
+    picked up by later runs.
 
     Returns:
-        True if crawling succeeded (analysis failures are non-fatal)
+        (crawl_success, articles_analyzed_during_crawl)
     """
     crawl_tasks = [
         _run_spider_subprocess(name, files)
@@ -504,6 +689,7 @@ async def run_crawl_with_analysis() -> bool:
     # Wrap each crawl task so we can track completion
     crawl_done = asyncio.Event()
     crawl_results: list = []
+    analysis_progress = {"count": 0}
 
     async def crawl_all():
         results = await asyncio.gather(*crawl_tasks, return_exceptions=True)
@@ -511,7 +697,14 @@ async def run_crawl_with_analysis() -> bool:
         crawl_done.set()
 
     async def incremental_analysis():
-        """Analyze articles as they appear in the DB while crawling continues."""
+        """Analyze articles as they appear in the DB while crawling continues.
+
+        Bounded three ways so a huge discovery day can never starve the
+        export/publish phases (run #289 analyzed 3,500 articles and was
+        killed by the CI step timeout before anything was published):
+        per-run article cap, subscription message budget, wall-clock
+        deadline. Whatever is left resumes next run.
+        """
         if not settings.enable_ai_analysis:
             return
 
@@ -520,93 +713,61 @@ async def run_crawl_with_analysis() -> bool:
 
         analyzer = ClaudeCodeAnalyzer()
         db_manager = get_db_manager()
-        total_analyzed = 0
         consecutive_errors = 0
         MAX_CONSECUTIVE_ERRORS = 5
 
         while True:
+            if deadline and datetime.now(timezone.utc) >= deadline:
+                logger.warning(
+                    f"Incremental analysis stopping at pipeline deadline "
+                    f"({analysis_progress['count']} analyzed; the rest resume next run)"
+                )
+                return
+            remaining = settings.max_articles_per_run - analysis_progress["count"]
+            if remaining <= 0:
+                logger.info(
+                    f"Incremental analysis reached the per-run cap of "
+                    f"{settings.max_articles_per_run}; the rest resume next run"
+                )
+                return
+            if analyzer.messages_used >= settings.ai_message_budget:
+                logger.warning(
+                    f"Incremental analysis stopping at the message budget "
+                    f"({settings.ai_message_budget}); the rest resume next run"
+                )
+                return
+
             try:
                 with db_manager.session_scope() as db:
-                    lookback_time = datetime.now(timezone.utc) - timedelta(days=settings.lookback_days)
-                    age_limit_date = (datetime.now(timezone.utc) - timedelta(days=settings.max_article_age_days)).date()
-
-                    batch = db.query(Article).filter(
-                        and_(
-                            Article.first_scraped >= lookback_time,
-                            Article.last_analyzed == None,
-                            (Article.published_date == None) | (Article.published_date >= age_limit_date),
-                        )
-                    ).limit(100).all()
+                    batch = _pending_query(db).limit(min(100, remaining)).all()
 
                     if not batch:
                         if crawl_done.is_set():
-                            logger.info(f"Incremental analysis complete — {total_analyzed} articles analyzed during crawl")
+                            logger.info(
+                                f"Incremental analysis complete — "
+                                f"{analysis_progress['count']} articles analyzed during crawl"
+                            )
                             return
                         await asyncio.sleep(30)
                         continue
 
                     logger.info(f"Incremental analysis: processing {len(batch)} articles...")
 
-                    articles_data = [
-                        {
-                            "article_id": art.article_id,
-                            "title": art.title or "Untitled",
-                            "content": art.content or "",
-                            "url": art.url.url if art.url else "",
-                        }
-                        for art in batch
-                    ]
-
                     analyses = await analyzer.batch_analyze(
-                        articles_data,
+                        _batch_payload(batch),
                         max_concurrent=settings.ai_analysis_batch_size,
                     )
-
-                    for i, analysis in enumerate(analyses):
-                        if analysis is None:
-                            # Failed/skipped (chunk error or quota) — leave
-                            # last_analyzed NULL so the next run retries it.
-                            continue
-                        article = batch[i]
-                        ai_analysis = AIAnalysis(
-                            article_id=article.article_id,
-                            claude_summary=analysis.get("claude", {}).get("summary") if analysis.get("claude") else None,
-                            claude_key_points=analysis.get("claude", {}).get("key_points", []) if analysis.get("claude") else None,
-                            openai_summary=analysis.get("openai", {}).get("summary") if analysis.get("openai") else None,
-                            openai_category=analysis.get("openai", {}).get("category") if analysis.get("openai") else None,
-                            gemini_summary=analysis.get("gemini", {}).get("summary") if analysis.get("gemini") else None,
-                            consensus_summary=analysis["consensus"]["summary"],
-                            relevance_score=analysis["consensus"].get("relevance_score"),
-                            processing_time_ms=analysis.get("processing_time_ms"),
-                        )
-                        article.is_ai_related = analysis["consensus"]["is_ai_related"]
-                        article.ai_confidence_score = analysis["consensus"]["confidence"]
-                        article.last_analyzed = datetime.now(timezone.utc)
-                        db.add(ai_analysis)
-
-                        # Store Claude-derived metadata (impact scores + themes)
-                        # on article_metadata so it flows into the Parquet store.
-                        claude_payload = analysis.get('claude') or {}
-                        meta_update = {}
-                        if claude_payload.get('impact_scores'):
-                            meta_update['impact_scores'] = claude_payload['impact_scores']
-                        if claude_payload.get('themes'):
-                            meta_update['themes'] = list(claude_payload['themes'])
-                        if meta_update:
-                            article.article_metadata = {
-                                **(article.article_metadata or {}),
-                                **meta_update,
-                            }
-
+                    stored = _store_batch(db, batch, analyses)
                     db.commit()
-                    stored = sum(1 for a in analyses if a is not None)
-                    total_analyzed += stored
-                    logger.info(f"Incremental analysis: {total_analyzed} total articles analyzed so far")
+                    analysis_progress["count"] += stored
+                    logger.info(
+                        f"Incremental analysis: {analysis_progress['count']} total articles analyzed so far"
+                    )
 
                     if getattr(analyzer, "_quota_exhausted", False):
                         logger.warning(
                             "Incremental analysis stopping: subscription quota exhausted "
-                            f"({total_analyzed} analyzed; the rest resume next run)"
+                            f"({analysis_progress['count']} analyzed; the rest resume next run)"
                         )
                         return
 
@@ -657,94 +818,7 @@ async def run_crawl_with_analysis() -> bool:
         f"Crawling finished: {successes}/{len(CRAWL_GROUPS)} groups succeeded "
         f"(need >= {required})"
     )
-    return successes >= required
-
-
-async def analyze_articles(articles, db) -> tuple:
-    """
-    Analyze articles using the Claude Code analyzer.
-
-    Args:
-        articles: List of Article ORM objects
-        db: Database session
-
-    Returns:
-        Tuple of (analysis results aligned with input, quota_exhausted flag)
-    """
-    try:
-        analyzer = ClaudeCodeAnalyzer()
-
-        # Convert articles to dictionaries for AI processing
-        articles_data = [
-            {
-                'article_id': art.article_id,
-                'title': art.title or 'Untitled',
-                'content': art.content or '',
-                'url': art.url.url if art.url else ''
-            }
-            for art in articles
-        ]
-
-        # Batch analyze with rate limiting
-        analyses = await analyzer.batch_analyze(
-            articles_data,
-            max_concurrent=settings.ai_analysis_batch_size
-        )
-
-        # Store analyses in database
-        for i, analysis in enumerate(analyses):
-            if analysis is None:
-                # Failed/skipped (chunk error or quota) — leave last_analyzed
-                # NULL so the next run retries it.
-                continue
-            article = articles[i]
-
-            # Create AI analysis record
-            ai_analysis = AIAnalysis(
-                article_id=article.article_id,
-                claude_summary=analysis.get('claude', {}).get('summary') if analysis.get('claude') else None,
-                claude_key_points=analysis.get('claude', {}).get('key_points', []) if analysis.get('claude') else None,
-                openai_summary=analysis.get('openai', {}).get('summary') if analysis.get('openai') else None,
-                openai_category=analysis.get('openai', {}).get('category') if analysis.get('openai') else None,
-                gemini_summary=analysis.get('gemini', {}).get('summary') if analysis.get('gemini') else None,
-                consensus_summary=analysis['consensus']['summary'],
-                relevance_score=analysis['consensus'].get('relevance_score'),
-                processing_time_ms=analysis.get('processing_time_ms')
-            )
-
-            # Update article with AI results
-            article.is_ai_related = analysis['consensus']['is_ai_related']
-            article.ai_confidence_score = analysis['consensus']['confidence']
-            article.last_analyzed = datetime.now(timezone.utc)
-
-            # Store Claude-derived metadata (impact scores + themes) on
-            # article_metadata so it flows into the Parquet store.
-            claude_payload = analysis.get('claude') or {}
-            meta_update = {}
-            if claude_payload.get('impact_scores'):
-                meta_update['impact_scores'] = claude_payload['impact_scores']
-            if claude_payload.get('themes'):
-                meta_update['themes'] = list(claude_payload['themes'])
-            if meta_update:
-                article.article_metadata = {
-                    **(article.article_metadata or {}),
-                    **meta_update,
-                }
-
-            db.add(ai_analysis)
-
-        db.commit()
-        stored = sum(1 for a in analyses if a is not None)
-        logger.info(f"Stored {stored} AI analyses in database ({len(analyses) - stored} deferred)")
-
-        return analyses, getattr(analyzer, "_quota_exhausted", False)
-
-    except Exception as e:
-        # Roll back and re-raise: swallowing this used to publish an
-        # empty-but-green report when analysis silently failed.
-        logger.error(f"AI analysis failed: {e}", exc_info=True)
-        db.rollback()
-        raise
+    return successes >= required, analysis_progress["count"]
 
 
 async def send_notifications(articles, analyses, db, editorial_picks=None):

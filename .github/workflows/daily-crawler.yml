@@ -11,6 +11,12 @@ on:
 permissions:
   contents: write
 
+# Shared with backlog-processor.yml: never let two runs race each other on
+# the website branch (rebase conflicts on the binary parquet snapshot).
+concurrency:
+  group: website-publish
+  cancel-in-progress: false
+
 jobs:
   crawl-and-deploy:
     runs-on: ubuntu-latest
@@ -32,10 +38,11 @@ jobs:
           - 5432:5432
 
     steps:
-      - name: Checkout repository (main branch for latest code)
+      # No explicit ref: scheduled runs use the default branch (main), while
+      # workflow_dispatch runs use whichever branch was selected — so the
+      # pipeline can be tested from a PR branch before merging.
+      - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          ref: main
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -63,7 +70,20 @@ jobs:
             echo "::error::CLAUDE_CODE_OAUTH_TOKEN secret is empty. Run 'claude setup-token' locally (requires a Claude Pro/Max subscription) and add the token as a repository secret named CLAUDE_CODE_OAUTH_TOKEN. Tokens expire after ~1 year."
             exit 1
           fi
-          echo "Claude subscription token present"
+          case "$CLAUDE_CODE_OAUTH_TOKEN" in
+            sk-ant-oat*) : ;;
+            *) echo "::warning::Token does not start with 'sk-ant-oat' — make sure you pasted the long-lived token printed at the END of 'claude setup-token' (not an authorization code), with no quotes or whitespace." ;;
+          esac
+          # Live auth probe (~1 subscription message): a bad/expired token
+          # fails the run here in seconds instead of after the 25-minute
+          # crawl (observed: 401 Invalid bearer token surfacing only at the
+          # analysis phase).
+          if ! claude -p "Reply with exactly: OK" --model haiku --max-turns 1 > /tmp/claude_probe.txt 2>&1; then
+            cat /tmp/claude_probe.txt
+            echo "::error::Claude subscription auth probe FAILED. The token is invalid or expired — re-run 'claude setup-token' and update the CLAUDE_CODE_OAUTH_TOKEN repository secret (paste the raw token, no quotes/newlines)."
+            exit 1
+          fi
+          echo "Claude subscription auth verified"
 
       - name: Seed durable data from website branch
         run: |
@@ -111,6 +131,11 @@ jobs:
           MAX_ARTICLE_AGE_DAYS: 30
           DATABASE_POOL_SIZE: 100
           USE_RSS_FEEDS: true
+          # Per-run brakes: analyze at most 1000 articles and stop analysis
+          # 70 min in so export/publish always beat the 90-min step timeout.
+          # Leftover backlog is drained by backlog-processor.yml.
+          MAX_ARTICLES_PER_RUN: 1000
+          MAX_PIPELINE_MINUTES: 70
         run: |
           python -m crawler
         continue-on-error: false
@@ -124,18 +149,19 @@ jobs:
 
       - name: Copy HTML output to website branch
         run: |
-          # Copy docs/ (GitHub Pages output) to website deploy root
+          # GitHub Pages serves the website branch's /docs folder. The old
+          # copy flattened docs/* to the branch ROOT, so green CI runs never
+          # updated the live site (it kept serving the last systemd publish
+          # from docs/). Mirror the generated site into docs/ where Pages
+          # actually looks.
           if [ -d docs ]; then
-            cp -r docs/* website-deploy/
-          fi
-          # Also copy output/ files if they exist
-          if [ -d output ]; then
-            cp -r output/* website-deploy/ 2>/dev/null || true
-          fi
-          # Copy pagefind to docs/ for GitHub Pages (source path: /docs)
-          if [ -d docs/pagefind ]; then
             mkdir -p website-deploy/docs
-            cp -r docs/pagefind website-deploy/docs/
+            cp -r docs/* website-deploy/docs/
+          fi
+          # Also copy output/ files if they exist (diagnostics; not served)
+          if [ -d output ]; then
+            mkdir -p website-deploy/output
+            cp -r output/* website-deploy/output/ 2>/dev/null || true
           fi
 
           # Create a simple README for the website branch

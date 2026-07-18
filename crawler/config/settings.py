@@ -61,6 +61,22 @@ class Settings(BaseSettings):
         default=400,
         description="Soft cap on subscription messages per run; analysis resumes next run"
     )
+    max_pipeline_minutes: int = Field(
+        default=75,
+        ge=0,
+        description=(
+            "Wall-clock budget for the crawl+analysis phases (0 = unlimited). "
+            "Analysis stops at the deadline so export and website publishing "
+            "still happen inside the CI step timeout; leftovers resume next run."
+        )
+    )
+    analyze_only: bool = Field(
+        default=False,
+        description=(
+            "Skip crawling entirely and only analyze the stored backlog "
+            "(used by the backlog-processor workflow). Env: ANALYZE_ONLY"
+        )
+    )
 
     # Web crawling configuration
     max_concurrent_requests: int = Field(
