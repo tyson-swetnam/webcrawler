@@ -48,6 +48,26 @@ ARTICLE_URL_PATTERNS = (
     r'/features?/.+',
 )
 
+# Site sections that are never news articles regardless of how fresh their
+# sitemap <lastmod> is: staff directories, service catalogs, degree/course
+# catalogs, and job boards (with the Finnish/Swedish variants aalto.fi uses,
+# whose Drupal re-stamps every node daily). Anchored to the path root — with
+# an optional /xx or /xx-yy locale prefix — so news sections like
+# /news/people/... are not caught.
+_NON_ARTICLE_SECTIONS = (
+    r'/people/', r'/persons?/', r'/profiles?/', r'/staff/',
+    r'/ihmiset/', r'/personer/',
+    r'/services/', r'/palvelut/', r'/tjanster/',
+    r'/study-options/', r'/koulutustarjonta/', r'/utbildningsutbud/',
+    r'/open-positions/', r'/avoimet-tyopaikat/', r'/lediga-jobb/',
+    r'/jobs/', r'/careers/', r'/vacancies/',
+)
+NON_ARTICLE_URL_PATTERNS = tuple(
+    r'^https?://[^/]+(?:/[a-z]{2}(?:-[a-z]{2})?)?' + section
+    for section in _NON_ARTICLE_SECTIONS
+)
+_NON_ARTICLE_URL_RES = [re.compile(p, re.IGNORECASE) for p in NON_ARTICLE_URL_PATTERNS]
+
 MAX_SITEMAP_URLS = 50        # article URLs taken per sitemap file
 MAX_SITEMAP_CHILDREN = 5     # child sitemaps followed per sitemap index
 MAX_SITEMAP_DEPTH = 2        # sitemapindex recursion depth
@@ -374,15 +394,16 @@ class UniversityNewsSpider(scrapy.Spider):
         entries.sort(key=lambda e: e.get('lastmod') or '', reverse=True)
         for entry in entries:
             loc = entry.get('loc')
-            if not loc or self._is_navigation_page('', loc):
+            if not loc or self._is_non_article_url(loc):
                 continue
 
             lastmod = self._parse_lastmod(entry.get('lastmod'))
-            if lastmod is not None:
-                if lastmod < age_limit:
-                    continue
-            elif not any(rx.search(loc) for rx in self._article_url_res):
-                # Undated and doesn't look like an article URL — skip.
+            if lastmod is not None and lastmod < age_limit:
+                continue
+            if not any(rx.search(loc) for rx in self._article_url_res):
+                # A fresh <lastmod> alone is weak evidence: CMSes re-stamp
+                # every node on save (staff profiles, service pages), so the
+                # URL must look like an article regardless of date.
                 continue
 
             normalized = normalize_url(loc)
@@ -485,9 +506,9 @@ class UniversityNewsSpider(scrapy.Spider):
 
             self.stats['urls_discovered'] += 1
 
-            # Skip navigation pages
-            if self._is_navigation_page('', link):
-                self.logger.debug(f"Skipping navigation URL from feed: {link}")
+            # Skip navigation and non-article pages
+            if self._is_non_article_url(link):
+                self.logger.debug(f"Skipping non-article URL from feed: {link}")
                 continue
 
             # Dedup check
@@ -564,7 +585,7 @@ class UniversityNewsSpider(scrapy.Spider):
 
             # Pre-filter obvious listing/navigation pages by URL pattern
             # This prevents them from even entering the database
-            if self._is_navigation_page('', link.url):
+            if self._is_non_article_url(link.url):
                 self.logger.debug(f"Skipping navigation/listing page URL: {link.url}")
                 continue
 
@@ -855,9 +876,13 @@ class UniversityNewsSpider(scrapy.Spider):
         Returns:
             True if this appears to be a navigation page
         """
-        if not title:
-            return False
+        if title and self._has_navigation_title(title):
+            return True
+        return self._is_non_article_url(url)
 
+    @staticmethod
+    def _has_navigation_title(title: str) -> bool:
+        """Check whether a page title matches a generic listing-page title."""
         # Generic title patterns that indicate navigation pages
         generic_patterns = [
             r'^News\s*$',
@@ -882,12 +907,20 @@ class UniversityNewsSpider(scrapy.Spider):
             r'Archives?\s*$',  # Titles ending with "Archive" or "Archives"
         ]
 
-        import re
         for pattern in generic_patterns:
             if re.match(pattern, title, re.IGNORECASE):
                 return True
+        return False
 
-        # Check URL patterns too
+    @staticmethod
+    def _is_non_article_url(url: str) -> bool:
+        """Check whether a URL points at a listing page or a non-news section
+        (staff directory, service catalog, job board, ...) by URL alone."""
+        for rx in _NON_ARTICLE_URL_RES:
+            if rx.search(url):
+                return True
+
+        # Listing/navigation URL shapes
         url_navigation_patterns = [
             r'/news/?$',
             r'/news-events/?$',
