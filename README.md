@@ -45,7 +45,7 @@ Notes:
 
 ## Scheduling
 
-**GitHub Actions is the production scheduler** (`.github/workflows/daily-crawler.yml`, daily at 15:00 UTC, plus `workflow_dispatch` for manual runs). Each run analyzes at most 1,000 articles and stops analysis at a 70-minute wall-clock deadline, so the snapshot export and site publish always complete inside the CI timeout — leftovers are picked up later. A companion **Backlog Analyzer** workflow (`backlog-processor.yml`) drains any remaining backlog in crawl-free chunks at 03:00/09:00/21:00 UTC, re-triggering itself until the backlog is empty. The old systemd/cron runners under `deployment/` and `scripts/` are deprecated — disable any local timer with `sudo systemctl disable --now ai-news-crawler.timer` so it doesn't race the workflows on the `website` branch.
+**GitHub Actions is the production scheduler** (`.github/workflows/daily-crawler.yml`, daily at 15:00 UTC, plus `workflow_dispatch` for manual runs). Each run analyzes at most 1,000 articles and stops analysis at a 70-minute wall-clock deadline, so the snapshot export and site publish always complete inside the CI timeout — leftovers are picked up later. A companion **Backlog Analyzer** workflow (`backlog-processor.yml`) drains any remaining backlog in crawl-free chunks at 03:00/09:00/21:00 UTC, re-triggering itself until the backlog is empty.
 
 ## Development
 
