@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI University News - Saturday, December 13, 2025</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #ffffff;
+            color: #000000;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 40px;
+            line-height: 1.5;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #000;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            font-weight: bold;
+            letter-spacing: -1px;
+            margin-bottom: 5px;
+        }
+
+        .header .tagline {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .header .date {
+            font-size: 16px;
+            color: #000;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .nav {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+        }
+
+        .nav a {
+            color: #cc0000;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            font-size: 14px;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        .top-headline {
+            text-align: center;
+            border: 2px solid #000;
+            padding: 20px;
+            margin-bottom: 30px;
+            background-color: #fffbf0;
+        }
+
+        .top-headline h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .top-headline h2 a {
+            color: #cc0000;
+            text-decoration: none;
+        }
+
+        .top-headline h2 a:hover {
+            text-decoration: underline;
+        }
+
+        .top-headline .summary {
+            margin-top: 15px;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .university-section {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+        }
+
+        .university-section h3 {
+            font-size: 18px;
+            color: #000;
+            margin-bottom: 12px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #cc0000;
+        }
+
+        .article {
+            margin-bottom: 15px;
+            padding-left: 10px;
+        }
+
+        .headline {
+            margin-bottom: 3px;
+        }
+
+        .headline a {
+            color: #0000cc;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .headline a:hover {
+            text-decoration: underline;
+        }
+
+        .headline a:visited {
+            color: #551a8b;
+        }
+
+        .topics {
+            font-size: 12px;
+            color: #666;
+            font-style: italic;
+            margin-left: 8px;
+        }
+
+        .meta {
+            font-size: 12px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .summary {
+            font-size: 13px;
+            color: #333;
+            margin-top: 5px;
+            padding-left: 10px;
+            line-height: 1.5;
+        }
+
+        .no-results {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin: 40px 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #000;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .footer a {
+            color: #0000cc;
+            text-decoration: none;
+        }
+
+        .stats {
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+
+        /* Three-column layout */
+        .three-column-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .column {
+            border: 2px solid #ddd;
+            padding: 15px;
+            background-color: #fafafa;
+            min-height: 200px;
+        }
+
+        .column-title {
+            font-size: 22px;
+            color: #cc0000;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #cc0000;
+            text-align: center;
+        }
+
+        .no-articles {
+            text-align: center;
+            color: #999;
+            font-style: italic;
+            padding: 20px;
+        }
+
+        @media (max-width: 1024px) {
+            .three-column-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .header h1 { font-size: 28px; }
+            .headline a { font-size: 16px; }
+            .column { padding: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI UNIVERSITY NEWS</h1>
+        <div class="tagline">Latest AI Research & Developments from Top Universities (Last 5 Days)</div>
+        <div class="date">Updated: Saturday, December 13, 2025</div>
+    </div>
+
+    <div class="nav">
+        <a href="../index.html">TODAY</a>
+        <a href="index.html">ARCHIVE</a>
+        <a href="../how_it_works.html">HOW IT WORKS</a>
+    </div>
+
+    
+            <div class="stats">
+                <strong>Total Articles:</strong> 8 |
+                <strong>Peer:</strong> 2 |
+                <strong>R1:</strong> 0 |
+                <strong>Facilities:</strong> 6
+            </div>
+        
+            <div class="three-column-layout">
+                <div class="column"><h2 class="column-title">Peer Institutions</h2>
+<div class="university-section"><h3>University of Washington</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.washington.edu/news/2025/12/11/ai-training-cultural-values/" target="_blank">AI can pick up cultural values by mimicking how kids learn</a>
+                                
+                            </div>
+                            <div class="meta">Published: December 11, 2025 | Crawled: December 12, 2025</div>
+                            <div class="summary">Researchers at the University of Washington demonstrated that AI systems can learn culturally-specific values by observing human behavior, similar to how children absorb cultural norms. Using inverse...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.washington.edu/news/2025/12/09/ai-headphones-smart-noise-cancellation-proactive-listening/" target="_blank">AI headphones automatically learn who you’re talking to — and let you hear them better</a>
+                                
+                            </div>
+                            <div class="meta">Published: December 09, 2025 | Crawled: December 10, 2025</div>
+                            <div class="summary">Researchers at the University of Washington have developed AI-powered headphones that automatically identify and isolate conversation partners in noisy environments by detecting speech turn-taking...</div>
+                        </div>
+                    
+</div>
+</div>
+                <div class="column"><h2 class="column-title">R1 Institutions</h2><p class="no-articles">No articles</p></div>
+                <div class="column"><h2 class="column-title">Major Facilities</h2>
+<div class="university-section"><h3>Ames_Laboratory</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.ameslab.gov/news/ai-powered-national-lab-collaboration-launches-to-secure-u-s-critical-minerals-supply" target="_blank">AI-Powered National Lab collaboration launches to secure U.S. critical minerals supply</a>
+                                
+                            </div>
+                            <div class="meta">Published: December 12, 2025 | Crawled: December 13, 2025</div>
+                            <div class="summary">The CM2US initiative leverages AI across 12 U.S. Department of Energy national laboratories to accelerate critical minerals discovery, development, and supply chain optimization. The AI-driven system...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>brandeis.edu</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.brandeis.edu/stories/2025/december/lambright-computational-linguistics.html" target="_blank">AI for good: How a Brandeis master's student is using computational linguistics to improve lives</a>
+                                
+                            </div>
+                            <div class="meta">Published: December 09, 2025 | Crawled: December 10, 2025</div>
+                            <div class="summary">Ben Lambright, a Brandeis computational linguistics master's student, is developing AI-powered tools to make 3D-printable prosthetic hands more accessible and user-friendly for children. His capstone...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>lsu.edu</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.lsu.edu/mediacenter/news/2025/12/12_school_of_construction.php" target="_blank">LSU’s New School of Construction to Lead a Building Revolution</a>
+                                
+                            </div>
+                            <div class="meta">Published: December 12, 2025 | Crawled: December 13, 2025</div>
+                            <div class="summary">LSU has approved the creation of a new School of Construction within its College of Engineering, positioning Louisiana to lead industry transformation through integrated technology adoption. The...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>news.iu.edu</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.iu.edu/live/news/48166-president-whitten-outlines-progress-vision-for-ius" target="_blank">President Whitten outlines progress, vision for IU’s growing impact in State of University address</a>
+                                
+                            </div>
+                            <div class="meta">Published: December 09, 2025 | Crawled: December 10, 2025</div>
+                            <div class="summary">Indiana University President Pamela Whitten announced the institution's progress toward its 2030 strategic plan, highlighting expanded degree programs in AI and engineering, a 34% increase in...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>psu.edu</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.psu.edu/news/research/story/calcium-breast-arteries-predicts-future-cardiovascular-disease" target="_blank">Calcium in breast arteries predicts future cardiovascular disease | Penn State University</a>
+                                
+                            </div>
+                            <div class="meta">Published: December 10, 2025 | Crawled: December 12, 2025</div>
+                            <div class="summary">Researchers used AI software to detect calcium buildup in breast arteries from routine mammograms and found that the presence and progression of this calcification significantly predicts future...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>stories.tamu.edu</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://stories.tamu.edu/news/2025/12/09/meet-the-ai-powered-robotic-dog-ready-to-revolutionize-emergency-response/" target="_blank">Meet the AI-powered robotic dog ready to revolutionize emergency response</a>
+                                
+                            </div>
+                            <div class="meta">Published: December 09, 2025 | Crawled: December 10, 2025</div>
+                            <div class="summary">Texas A&M engineering students developed an AI-powered robotic dog that combines multimodal large language models (MLLM) with visual memory-based navigation for autonomous operation in unstructured...</div>
+                        </div>
+                    
+</div>
+</div>
+            </div>
+        
+
+    <div class="footer">
+        <p>Powered by AI University News Crawler</p>
+        <p>Last updated: 06:03 AM </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI University News - Thursday, February 19, 2026</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F393;</text></svg>">
+    <style>
+    
+        :root {
+            --color-bg: #ffffff;
+            --color-surface: #fafafa;
+            --color-surface-hover: #f0f0f0;
+            --color-text: #000000;
+            --color-text-secondary: #333333;
+            --color-text-muted: #666666;
+            --color-text-faint: #999999;
+            --color-accent: #cc0000;
+            --color-link: #0000cc;
+            --color-link-visited: #551a8b;
+            --color-border: #dddddd;
+            --color-border-strong: #000000;
+            --color-nav-bg: #f5f5f5;
+            --color-highlight-bg: #fffbf0;
+
+            --color-peer: #8b0000;
+            --color-peer-bg: #fff5f5;
+            --color-r1: #00008b;
+            --color-r1-bg: #f5f5ff;
+            --color-facility: #8b6914;
+            --color-facility-bg: #fffbf0;
+            --color-lab: #006400;
+            --color-lab-bg: #f0fff0;
+            --color-global: #4b0082;
+            --color-global-bg: #f8f0ff;
+
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-md: 0 2px 8px rgba(0,0,0,0.1);
+            --radius-sm: 3px;
+            --radius-md: 6px;
+            --transition-fast: 150ms ease;
+
+            --space-xs: 4px;
+            --space-sm: 8px;
+            --space-md: 16px;
+            --space-lg: 24px;
+            --space-xl: 32px;
+            --space-2xl: 48px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            max-width: 1800px;
+            margin: 0 auto;
+            padding: 20px 40px;
+            line-height: 1.5;
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--color-accent);
+            outline-offset: 2px;
+        }
+        a:focus:not(:focus-visible) { outline: none; }
+
+        /* ── Header ── */
+        .header {
+            text-align: center;
+            border-bottom: 3px solid var(--color-border-strong);
+            padding-bottom: var(--space-lg);
+            margin-bottom: var(--space-xl);
+        }
+        .header h1 {
+            font-size: 42px;
+            font-weight: bold;
+            letter-spacing: -1px;
+            margin-bottom: var(--space-sm);
+        }
+        .header .tagline {
+            font-size: 14px;
+            color: var(--color-text-muted);
+            font-style: italic;
+        }
+        .header .date {
+            font-size: 14px;
+            color: var(--color-text);
+            margin-top: var(--space-md);
+            font-weight: bold;
+            display: inline-block;
+            background: var(--color-nav-bg);
+            border-radius: var(--radius-sm);
+            padding: var(--space-xs) 12px;
+        }
+
+        /* ── Navigation ── */
+        .nav {
+            text-align: center;
+            margin-bottom: var(--space-lg);
+            padding: var(--space-sm);
+            background-color: var(--color-nav-bg);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+        }
+        .nav a {
+            color: var(--color-accent);
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 var(--space-xs);
+            font-size: 14px;
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-sm);
+            transition: background-color var(--transition-fast), color var(--transition-fast);
+            display: inline-block;
+        }
+        .nav a:hover {
+            background-color: var(--color-accent);
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .nav a.active {
+            background-color: var(--color-accent);
+            color: #ffffff;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            margin-top: var(--space-2xl);
+            padding-top: var(--space-lg);
+            border-top: 2px solid var(--color-border-strong);
+            font-size: 12px;
+            color: var(--color-text-muted);
+        }
+        .footer a {
+            color: var(--color-text-muted);
+            text-decoration: none;
+            margin: 0 var(--space-sm);
+            transition: color var(--transition-fast);
+        }
+        .footer a:hover { color: var(--color-accent); }
+        .footer .footer-nav { margin-bottom: var(--space-sm); }
+        .footer .footer-nav a { font-weight: bold; }
+        .footer .footer-meta { margin-top: var(--space-xs); }
+
+        .no-results {
+            text-align: center;
+            font-size: 18px;
+            color: var(--color-text-muted);
+            margin: 40px 0;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 10px var(--space-md); }
+            .header h1 { font-size: 28px; }
+        }
+        
+    
+        /* ── Stats Pills ── */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+            padding: var(--space-md);
+            flex-wrap: wrap;
+        }
+        .stat-pill {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: var(--space-sm) var(--space-lg);
+            background: var(--color-surface);
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--color-border-strong);
+            box-shadow: var(--shadow-sm);
+            min-width: 80px;
+        }
+        .stat-pill .stat-number {
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 1;
+        }
+        .stat-pill .stat-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            color: var(--color-text-muted);
+            letter-spacing: 1px;
+            margin-top: var(--space-xs);
+        }
+        .stat-peer { border-left-color: var(--color-peer); }
+        .stat-r1 { border-left-color: var(--color-r1); }
+        .stat-facility { border-left-color: var(--color-facility); }
+        .stat-lab { border-left-color: var(--color-lab); }
+        .stat-global { border-left-color: var(--color-global); }
+
+        /* ── Five-Column Layout ── */
+        .five-column-layout {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+            align-items: start;
+        }
+        .column {
+            border: 1px solid var(--color-border);
+            padding: var(--space-md);
+            background-color: var(--color-surface);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            min-height: 120px;
+        }
+        .column-title {
+            font-size: 16px;
+            margin-bottom: var(--space-md);
+            padding: var(--space-sm) var(--space-md);
+            border-bottom: 3px solid var(--color-accent);
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .column-peer .column-title {
+            color: var(--color-peer);
+            border-bottom-color: var(--color-peer);
+            background: var(--color-peer-bg);
+            border-radius: var(--radius-sm);
+        }
+        .column-r1 .column-title {
+            color: var(--color-r1);
+            border-bottom-color: var(--color-r1);
+            background: var(--color-r1-bg);
+            border-radius: var(--radius-sm);
+        }
+        .column-facility .column-title {
+            color: var(--color-facility);
+            border-bottom-color: var(--color-facility);
+            background: var(--color-facility-bg);
+            border-radius: var(--radius-sm);
+        }
+        .column-lab .column-title {
+            color: var(--color-lab);
+            border-bottom-color: var(--color-lab);
+            background: var(--color-lab-bg);
+            border-radius: var(--radius-sm);
+        }
+        .column-global .column-title {
+            color: var(--color-global);
+            border-bottom-color: var(--color-global);
+            background: var(--color-global-bg);
+            border-radius: var(--radius-sm);
+        }
+        .no-articles {
+            text-align: center;
+            color: var(--color-text-faint);
+            font-style: italic;
+            padding: 20px;
+        }
+
+        /* ── University Sections ── */
+        .university-section {
+            margin-bottom: var(--space-lg);
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: var(--space-md);
+        }
+        .university-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        .university-section h3 {
+            font-size: 16px;
+            color: var(--color-text);
+            margin-bottom: var(--space-sm);
+            padding-bottom: var(--space-xs);
+            border-bottom: 1px solid var(--color-accent);
+        }
+
+        /* ── Article Cards ── */
+        .article {
+            margin-bottom: 18px;
+            padding: var(--space-sm) var(--space-sm) var(--space-sm) 10px;
+            border-radius: var(--radius-sm);
+            transition: background-color var(--transition-fast);
+        }
+        .article:hover {
+            background-color: var(--color-surface-hover);
+        }
+        .headline { margin-bottom: 3px; }
+        .headline a {
+            color: var(--color-link);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .headline a:hover {
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+        .headline a:visited { color: var(--color-link-visited); }
+        .topics {
+            display: inline;
+            margin-left: var(--space-sm);
+        }
+        .topic-pill {
+            display: inline-block;
+            background: var(--color-surface-hover);
+            border-radius: 2px;
+            padding: 1px 5px;
+            margin: 0 2px;
+            font-size: 11px;
+            color: var(--color-text-muted);
+        }
+        .meta {
+            font-size: 12px;
+            color: var(--color-text-muted);
+            font-style: italic;
+        }
+        .summary {
+            font-size: 13px;
+            color: var(--color-text-secondary);
+            margin-top: 5px;
+            padding-left: 10px;
+            line-height: 1.5;
+        }
+
+        /* ── Responsive ── */
+        @media (min-width: 1025px) and (max-width: 1400px) {
+            .five-column-layout {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .five-column-layout {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 768px) {
+            .five-column-layout {
+                grid-template-columns: 1fr;
+            }
+            .column { padding: 10px; }
+            .headline a { font-size: 15px; }
+        }
+        @media (max-width: 480px) {
+            .stats {
+                flex-direction: column;
+                align-items: center;
+            }
+            .stat-pill { width: 100%; }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI UNIVERSITY NEWS</h1>
+        <div class="tagline">Latest AI Research &amp; Developments from Universities &amp; Labs Worldwide (Last 5 Days)</div>
+        <div class="date">Updated: Thursday, February 19, 2026</div>
+    </div>
+
+    <div class="nav">
+        <a href="../index.html">TODAY</a>
+        <a href="index.html">ARCHIVE</a>
+        <a href="../how_it_works.html">HOW IT WORKS</a>
+    </div>
+
+    
+            <div class="stats" data-total-articles="74">
+                <div class="stat-pill"><span class="stat-number">74</span><span class="stat-label">TOTAL</span></div>
+                <div class="stat-pill stat-peer"><span class="stat-number">12</span><span class="stat-label">PEER</span></div>
+                <div class="stat-pill stat-r1"><span class="stat-number">59</span><span class="stat-label">R1</span></div>
+                <div class="stat-pill stat-facility"><span class="stat-number">0</span><span class="stat-label">HPC</span></div>
+                <div class="stat-pill stat-lab"><span class="stat-number">3</span><span class="stat-label">LABS</span></div>
+                <div class="stat-pill stat-global"><span class="stat-number">0</span><span class="stat-label">GLOBAL</span></div>
+            </div>
+        
+            <div class="five-column-layout">
+                <div class="column column-peer"><h2 class="column-title">Peer Institutions</h2>
+<div class="university-section"><h3>Michigan State University</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://msutoday.msu.edu/news/2026/02/ai-is-a-lab-diamonds-best-friend-for-semiconductors" target="_blank">AI is lab diamond’s best friend</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">Michigan State University is using artificial intelligence to optimize the growth of high-quality laboratory diamonds for semiconductor manufacturing, receiving a $3 million NSF grant. AI analyzes...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://msutoday.msu.edu/news/2026/02/ai-is-a-lab-diamonds-best-friend-for-semiconductors" target="_blank">AI is lab diamond’s best friend</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">Michigan State University is using artificial intelligence to optimize the growth of high-quality laboratory diamonds for semiconductor manufacturing, addressing the challenge of defect formation...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://msutoday.msu.edu/news/2026/02/internationally-renowned-artists-winter-residencies-msu" target="_blank">Arts residency brings Carl Craig, Cecilie Waagner Falkenstrøm to Michigan State University</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">Michigan State University's Arts Power Up Residency program is hosting two internationally renowned artists—electronic music pioneer Carl Craig and Danish artist Cecilie Waagner Falkenstrøm—to...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://msutoday.msu.edu/news/2026/02/internationally-renowned-artists-winter-residencies-msu" target="_blank">Arts residency brings Carl Craig, Cecilie Waagner Falkenstrøm to Michigan State University</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">Michigan State University's Arts Power Up Residency program is hosting two internationally renowned artists—electronic music pioneer Carl Craig and AI artist Cecilie Waagner Falkenstrøm—to explore...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://msutoday.msu.edu/news/2026/02/msu-students-confront-the-hidden-ethical-history-of-stem" target="_blank">MSU students confront the hidden ethical history of STEM</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 15, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">MSU and Ferris State University partnered to integrate ethics education into STEM curricula by having students research the roles of STEM professionals in Nazi Germany's Holocaust, revealing how data...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://msutoday.msu.edu/news/2026/02/msu-students-confront-the-hidden-ethical-history-of-stem" target="_blank">MSU students confront the hidden ethical history of STEM</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 15, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">MSU and Ferris State University partnered to integrate ethics education into STEM curricula by having students research the role of STEM professionals in Nazi Germany's Holocaust, revealing how data...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>University of Connecticut</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://today.uconn.edu/2026/02/uconn-humanities-panel-explores-the-future-of-ai-and-work/" target="_blank">UConn Humanities Panel Explores the Future of AI and Work - UConn Today</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 19, 2026</div>
+                            <div class="summary">A UConn panel discussion examined the question "Will AI Replace Us?" by bringing together legal, political, and IT perspectives on AI's impact on employment. The speakers highlighted emerging...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://today.uconn.edu/2026/02/uconn-humanities-panel-explores-the-future-of-ai-and-work/" target="_blank">UConn Humanities Panel Explores the Future of AI and Work - UConn Today</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 19, 2026</div>
+                            <div class="summary">A UConn panel discussion examined the impact of AI on employment and workplace integration, featuring perspectives from legal, political, and IT leadership. The speakers highlighted emerging...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://today.uconn.edu/2026/02/connecticut-transportation-institute-grant-funding-drives-traffic-safety-improvement/" target="_blank">Connecticut Transportation Institute Grant Funding Drives Traffic Safety Improvement - UConn Today</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">The Connecticut Transportation Institute received $16.5 million in grants to advance traffic safety research and develop the Connecticut Roadway Safety Management System (CRSMS). The funding will...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://today.uconn.edu/2026/02/connecticut-transportation-institute-grant-funding-drives-traffic-safety-improvement/" target="_blank">Connecticut Transportation Institute Grant Funding Drives Traffic Safety Improvement - UConn Today</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">The Connecticut Transportation Institute received $16.5 million in grants to advance traffic safety research and develop the Connecticut Roadway Safety Management System (CRSMS). The funding will...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://today.uconn.edu/2026/02/researchers-launch-initiative-to-improve-power-outage-predictions-and-grid-resilience/" target="_blank">Researchers Launch Initiative to Improve Power Outage Predictions and Grid Resilience - UConn Today</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">Researchers at UAlbany and UConn are developing an AI-powered forecasting model called the North American Forecasting Weather, Outage, Load & Damage Initiative to predict storm-related power outages...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://today.uconn.edu/2026/02/researchers-launch-initiative-to-improve-power-outage-predictions-and-grid-resilience/" target="_blank">Researchers Launch Initiative to Improve Power Outage Predictions and Grid Resilience - UConn Today</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">Researchers at UAlbany and UConn are developing an AI-powered forecasting model called the North American Forecasting Weather, Outage, Load & Damage Initiative to predict storm-related power outages...</div>
+                        </div>
+                    
+</div>
+</div>
+                <div class="column column-r1"><h2 class="column-title">R1 Institutions</h2>
+<div class="university-section"><h3>Arizona State University Campus Immersion</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.asu.edu/20260217-arts-humanities-and-education-new-architecture-program-teaches-students-how-design" target="_blank">New architecture program teaches students how to design with Indigenous principles in mind</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">Arizona State University launched a new Indigenous placekeeping and design master's program that teaches students to integrate traditional Indigenous knowledge and ecological systems into...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.asu.edu/20260217-arts-humanities-and-education-new-architecture-program-teaches-students-how-design" target="_blank">New architecture program teaches students how to design with Indigenous principles in mind</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">Arizona State University launched a new Indigenous placekeeping and design master's program that teaches students to integrate traditional Indigenous knowledge and ecological systems into...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.asu.edu/20260216-science-and-technology-timeconsuming-task-conserving-jane-goodall-institute-field-notes" target="_blank">Time-consuming task of conserving Jane Goodall Institute field notes gets a boost from AI</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 16, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">Arizona State University is using AI to digitize over 60 years of handwritten field notes from Jane Goodall Institute's chimpanzee research in Tanzania. The project combines computer vision...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.asu.edu/20260216-environment-and-sustainability-will-rapid-data-center-growth-help-arizona-examining-pros" target="_blank">Will rapid data center growth help Arizona? Examining the pros and cons</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 16, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">Arizona is experiencing rapid data center growth driven by the AI arms race with China, which brings economic benefits like tax revenue and job creation but raises concerns about environmental...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.asu.edu/20260216-environment-and-sustainability-will-rapid-data-center-growth-help-arizona-examining-pros" target="_blank">Will rapid data center growth help Arizona? Examining the pros and cons</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 16, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">Arizona is experiencing rapid data center growth driven by the AI arms race with China, which brings economic benefits like tax revenue and job creation but also presents challenges including...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.asu.edu/20260216-science-and-technology-timeconsuming-task-conserving-jane-goodall-institute-field-notes" target="_blank">Time-consuming task of conserving Jane Goodall Institute field notes gets a boost from AI</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 16, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">Arizona State University is using AI and computer vision to digitize over 60 years of handwritten field notes from Jane Goodall Institute's chimpanzee research in Tanzania. The project combines...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>Case Western Reserve University</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://case.edu/news/weatherheads-michael-goldberg-and-alvisa-krasniqi-how-ai-reshaping-workforce-students" target="_blank">Weatherhead's Michael Goldberg and Alvisa Krasniqi on how AI is reshaping the workforce for students | CWRU Newsroom | Case Western Reserve University</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026</div>
+                            <div class="summary">Michael Goldberg and Alvisa Krasniqi discuss how AI is fundamentally disrupting traditional career paths, making it impossible for students to rely on single fixed professions. They argue that...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>Dartmouth College</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://home.dartmouth.edu/news/2026/02/ai-tuck" target="_blank">AI at Tuck</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026</div>
+                            <div class="summary">The article discusses Tuck School of Business's initiatives to prepare leaders for the artificial intelligence era, including curriculum development and conferences exploring AI's future. The school...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>Florida Atlantic University</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.fau.edu/newsdesk/articles/winners-of-second-cmbb-biotech-bridge-hackathon-announced.php" target="_blank">Winners of Second CMBB Biotech Bridge Hackathon Announced</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026</div>
+                            <div class="summary">Florida Atlantic University's Center for Molecular Biology and Biotechnology announced winners of its second annual Biotech Bridge Hackathon, where 60 interdisciplinary students developed innovative...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>Florida State University</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.fsu.edu/news/university-news/2026/02/17/fsus-chief-information-officer-receives-florida-orbie-award/" target="_blank">FSU's Chief Information Officer receives Florida ORBIE Award</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 19, 2026</div>
+                            
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>Florida Atlantic University</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.fau.edu/newsdesk/articles/federated-learning-model.php" target="_blank">FAU’s Federated Learning AI Model Presented at Top AI Conference</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 16, 2026 | Crawled: February 18, 2026</div>
+                            <div class="summary">FAU researchers developed pFedDB, a personalized federated learning framework that splits AI models into shared and private components to address challenges in collaborative machine learning across...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>George Mason University</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.gmu.edu/news/2026-02/george-mason-researchers-lead-statewide-study-ethical-use-ai-higher-education" target="_blank">George Mason researchers lead statewide study on ethical use of AI in higher education</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
+                            <div class="summary">George Mason University is leading a statewide research initiative funded by SCHEV to study the ethical integration of generative AI in higher education classrooms across five Virginia institutions....</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.gmu.edu/news/2026-02/mason-korea-partners-defense-organizations-advance-military-technology" target="_blank">Mason Korea partners with defense organizations to advance military technology</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
+                            <div class="summary">Mason Korea has established a partnership with Korean defense organizations to develop advanced defense information and communications technology (ICT) and C5I systems, with a specific focus on...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>Harvard University</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.harvard.edu/gazette/story/2026/02/preserving-learning-in-the-age-of-ai-shortcuts/" target="_blank">Preserving learning in the age of AI shortcuts — Harvard Gazette</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">Harvard educators discuss how to integrate generative AI into learning environments without compromising critical thinking and cognitive development. The consensus emphasizes that AI should enhance...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.harvard.edu/gazette/story/2026/02/preserving-learning-in-the-age-of-ai-shortcuts/" target="_blank">Preserving learning in the age of AI shortcuts — Harvard Gazette</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">This article discusses Harvard educators' perspectives on integrating generative AI into learning environments without replacing critical thinking skills. The experts emphasize that while AI...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>Johns Hopkins University</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://hub.jhu.edu/2026/02/19/data-science-for-social-good-fellowship-gov-ex/" target="_blank">Data Science for Social Good Fellowship comes to Johns Hopkins</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 19, 2026</div>
+                            <div class="summary">Johns Hopkins University will host the Data Science for Social Good Fellowship, a 10-week summer program that trains graduate students to apply generative AI and machine learning to solve urban...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://hub.jhu.edu/2026/02/19/data-science-for-social-good-fellowship-gov-ex/" target="_blank">Data Science for Social Good Fellowship comes to Johns Hopkins</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 19, 2026</div>
+                            <div class="summary">Johns Hopkins University will host the Data Science for Social Good Fellowship, a 10-week summer program that trains graduate students to apply generative AI and machine learning to solve urban...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>Northeastern University</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.northeastern.edu/2026/02/18/sloan-fellows-northeastern-2026/" target="_blank">Two Northeastern professors among newest Sloan Foundation fellows</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">Two Northeastern University professors, Soheil Behnezhad and Mona Minkara, have received prestigious Alfred P. Sloan Foundation fellowships for early-career research. Behnezhad works on large-scale...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.northeastern.edu/2026/02/17/writing-creatively-ai-age-english/" target="_blank">Writers find their creative strengths in the age of AI</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">Northeastern University professors are designing curricula to help creative writing students navigate AI's role in artistic creation, exploring both its capabilities and limitations. The courses...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.northeastern.edu/2026/02/16/china-ai-governance/" target="_blank">AI governance is not just top-down in China, research finds</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 16, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">Research by political scientist Xuechen Chen challenges the stereotype that China's AI governance is purely top-down and state-driven, arguing instead that traditional Chinese values and market...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>University of Notre Dame</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.nd.edu/news/new-research-from-notre-dame-theologian-and-vatican-working-group-explores-how-to-reclaim-human-agency-in-age-of-ai/" target="_blank">New research from Notre Dame theologian and Vatican working group explores how to ‘reclaim human agency’ in age of AI</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
+                            <div class="summary">A Vatican-affiliated research group led by Notre Dame theologian Paul Scherz has published a book arguing that while AI promises to enhance human agency by automating mundane tasks, technology...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>Princeton University</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.princeton.edu/news/2026/02/18/murthy-and-seung-win-wiley-prize-biomedical-sciences-connectome-mapping" target="_blank">Murthy and Seung win Wiley Prize in Biomedical Sciences for connectome mapping</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026</div>
+                            <div class="summary">Mala Murthy and Sebastian Seung, along with John White and Gerald Rubin, have been awarded the Wiley Prize for their pioneering work in connectome mapping—reconstructing the neural wiring diagrams of...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.princeton.edu/news/2026/02/17/seven-faculty-members-win-sloan-research-fellowships-early-career-researchers" target="_blank">Seven faculty members win Sloan Research Fellowships for early-career researchers</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
+                            <div class="summary">Seven Princeton faculty members have been awarded 2024 Sloan Research Fellowships, with three from Computer Science focusing on AI and networked systems. The fellowships recognize promising...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>Purdue University-Main Campus</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.purdue.edu/newsroom/2026/Q1/amd-ceo-and-global-tech-leader-lisa-su-to-headline-upcoming-presidential-lecture-on-what-will-power-ai-era/" target="_blank">AMD CEO and global tech leader Lisa Su to headline upcoming Presidential Lecture on what will power AI era</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 19, 2026</div>
+                            
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>Boston University</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.bu.edu/articles/2026/bioengineers-win-prestigious-sloan-research-fellowships/" target="_blank">Two Boston University Bioengineers Win Prestigious Sloan Research Fellowships</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
+                            <div class="summary">Two Boston University bioengineers, Brian DePasquale and Michael Economo, have won prestigious 2026 Sloan Research Fellowships for their cutting-edge work in computational neuroscience and brain...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>UC Davis</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.ucdavis.edu/news/sloan-fellowship-quantum-sciences-research" target="_blank">Sloan Fellowship for Quantum Sciences Research</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
+                            <div class="summary">Isaac Kim, an assistant professor of Computer Science, has received a 2026 Sloan Research Fellowship to advance his work on quantum entanglement through his "entanglement bootstrap program." His...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>UMass Lowell</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.uml.edu/news/stories/2026/manning-career-closet.aspx" target="_blank">New Manning Career Closet Helps Business Students Dress for Success | News</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
+                            <div class="summary">Virginia Tech's Manning School of Business launched the Manning Career Closet, a donor-funded program that provides free professional attire to business students for interviews, conferences, and...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>UNLV</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.unlv.edu/news/accomplishments/david-r-gruber-11" target="_blank">David R. Gruber</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
+                            <div class="summary">Gruber argues that language's fundamental instability—its simultaneous representation and distortion of reality—creates an insurmountable problem for AI systems seeking to establish fixed meaning and...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>University of California San Francisco</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.ucsf.edu/news/2026/02/431511/brain-may-learn-more-rare-events-repetition" target="_blank">The Brain May Learn More from Rare Events than from Repetition</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
+                            <div class="summary">UC San Francisco researchers discovered that associative learning depends more on the timing between reward-cue pairings than on repetition frequency, overturning a century-old assumption based on...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>University of California-Los Angeles</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://newsroom.ucla.edu/in-the-news/past-studies-show-how-incidents-like-ice-raids-can-revive-democrats-multiracial-coalition-and-more-media-coverage-of-ucla" target="_blank">Studies show incidents like ICE raids can revive Democrats’ multiracial coalition — and more media coverage of UCLA</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">This article is a UCLA news roundup covering multiple policy and political topics, including Democratic coalition building, environmental regulations, election security, and AI governance. Only one...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://newsroom.ucla.edu/in-the-news/past-studies-show-how-incidents-like-ice-raids-can-revive-democrats-multiracial-coalition-and-more-media-coverage-of-ucla" target="_blank">Studies show incidents like ICE raids can revive Democrats’ multiracial coalition — and more media coverage of UCLA</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">This article is a media roundup of UCLA faculty commentary on various political and policy topics, including Democratic coalition-building, vehicle emissions standards, AI regulation, local politics,...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>University of California-San Francisco</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.ucsf.edu/news/filter" target="_blank">News Search</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
+                            <div class="summary">This appears to be a news aggregation page from UCSF featuring multiple unrelated health and medical stories rather than a single research article. The content covers diverse topics including...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>University of California-Santa Cruz</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.ucsc.edu/2026/02/secure-ai-tools-now-available-to-staff/" target="_blank">Secure AI tools now available to staff</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">UC Santa Cruz has launched secure, campus-licensed access to Google Gemini Chat and Google NotebookLM for all staff, positioning these tools as safer alternatives to public AI platforms. The...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.ucsc.edu/2026/02/secure-ai-tools-now-available-to-staff/" target="_blank">Secure AI tools now available to staff</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">UC Santa Cruz has launched campus-licensed access to Google Gemini Chat and Google NotebookLM for staff, providing secure AI tools that protect user data from being used to train public models. The...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.ucsc.edu/2026/02/chattopadhyay-sloan-fellowship/" target="_blank">Ashesh Chattopadhyay wins Sloan Fellowship to build advanced AI for Earth-system modeling</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">Assistant Professor Ashesh Chattopadhyay has won a prestigious Sloan Research Fellowship to develop AI models that can accurately project extreme Earth-system events while addressing critical...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.ucsc.edu/2026/02/chattopadhyay-sloan-fellowship/" target="_blank">Ashesh Chattopadhyay wins Sloan Fellowship to build advanced AI for Earth-system modeling</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">Assistant Professor Ashesh Chattopadhyay has won a 2026 Sloan Research Fellowship to develop AI models that can accurately project extreme Earth-system events while addressing key limitations like...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>University of Central Florida</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.ucf.edu/news/science-technology/" target="_blank">Science & Technology Archives</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026</div>
+                            <div class="summary">This article highlights multiple AI and technology research initiatives at UCF, including Professor Shruti Vyas' AI model for molecular visualization to accelerate drug discovery, and Yu Tian's AI...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.ucf.edu/news/health/" target="_blank">Health & Medicine Archives</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026</div>
+                            <div class="summary">This article is a collection of health and medicine news items from UCF, highlighting various initiatives including AI applications in medical imaging through the AIM lab, nursing education funding,...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>University of Georgia</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://news.uga.edu/fourth-annual-active-learning-summit-grows-in-reach-and-impact/" target="_blank">Fourth annual Active Learning Summit grows in reach and impact - UGA Today</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 19, 2026</div>
+                            
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>University of Massachusetts-Amherst</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.umass.edu/news/article/it-program-marks-25-years-interdisciplinary-impact" target="_blank">IT Program Marks 25 Years of Interdisciplinary Impact | UMass Amherst</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">UMass Amherst's Information Technology Program celebrated its 25th anniversary, highlighting how it has trained over 2,300 students across 35+ academic departments to integrate digital skills with...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.umass.edu/news/article/it-program-marks-25-years-interdisciplinary-impact" target="_blank">IT Program Marks 25 Years of Interdisciplinary Impact | UMass Amherst</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">UMass Amherst's Information Technology Program celebrated its 25th anniversary, highlighting how it has successfully integrated digital literacy across 35+ academic departments with over 2,300...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.umass.edu/news/article/nationally-recognized-engineering-education-scholar-speak-umass-amherst-feb-26" target="_blank">Nationally Recognized Engineering Education Scholar to Speak at UMass Amherst Feb. 26 | UMass Amherst</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">UMass Amherst will host engineering education scholar Idalis Villanueva Alarcón for two seminars examining how students learn and develop as engineers. Her research integrates artificial...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.umass.edu/news/article/nationally-recognized-engineering-education-scholar-speak-umass-amherst-feb-26" target="_blank">Nationally Recognized Engineering Education Scholar to Speak at UMass Amherst Feb. 26 | UMass Amherst</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">UMass Amherst will host engineering education scholar Idalis Villanueva Alarcón for two seminars examining how students learn and develop as engineers. Her research incorporates artificial...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>University of Nevada-Las Vegas</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.unlv.edu/news/accomplishments/vishisht-mehta-2" target="_blank">Vishisht Mehta</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
+                            <div class="summary">This study demonstrates that AI-based tools significantly improve the clinical management of incidentally detected lung nodules by increasing guideline-concordant follow-up rates from 34% to 94% and...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>University of Pittsburgh-Pittsburgh Campus</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.pittwire.pitt.edu/features-articles/2026/02/17/ian-flynn-notebooklm-podcasts-agu-perspectives" target="_blank">AI-generated ‘podcasts’ are useful but prone to errors, says this Pitt researcher</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">Researchers at the University of Pittsburgh evaluated Google's NotebookLM tool for converting research papers into AI-generated podcasts, finding that while the tool produces engaging, accessible...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.pittwire.pitt.edu/features-articles/2026/02/17/ian-flynn-notebooklm-podcasts-agu-perspectives" target="_blank">AI-generated ‘podcasts’ are useful but prone to errors, says this Pitt researcher</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">Researchers at the University of Pittsburgh evaluated Google's NotebookLM tool for converting research papers into AI-generated podcast discussions, finding that while the tool produces engaging,...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>University of South Florida</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.usf.edu/engineering/news/2026/usf-expands-footprint-in-space-research.aspx" target="_blank">USF expands its footprint in space research</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026</div>
+                            <div class="summary">The University of South Florida is expanding its role in space research by joining the Florida University Space Research Consortium and launching a new aerospace engineering program. The institution...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>University of Wisconsin-Milwaukee</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://uwm.edu/news/section/computer-science-technology/" target="_blank">Computer Science & Technology Archives</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026</div>
+                            <div class="summary">This article is a collection of news briefs from UW-Milwaukee's Computer Science & Technology archives highlighting various educational programs, student achievements, and faculty initiatives. While...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://uwm.edu/news/section/engineering/" target="_blank">Engineering Archives</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026</div>
+                            <div class="summary">This article is a compilation of engineering news from the University of Wisconsin-Milwaukee covering various faculty research and student initiatives. While several projects involve AI and...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://uwm.edu/news/section/public-health/" target="_blank">Public Health Archives</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026</div>
+                            <div class="summary">This article is a compilation of public health news and initiatives from the University of Wisconsin-Milwaukee, with only one substantive AI application mentioned. The primary AI-related work...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://uwm.edu/news/section/business/" target="_blank">Business Archives</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026</div>
+                            <div class="summary">This is a collection of business news briefs from the University of Wisconsin-Milwaukee rather than a single research article. While several items mention AI (chatbots, AI outsourcing, and a student...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://uwm.edu/news/reminding-people-theyre-talking-to-chatbots-could-be-harmful-researchers-say/" target="_blank">Reminding people they’re talking to chatbots could be harmful, researchers say</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026</div>
+                            <div class="summary">Researchers argue that mandatory reminders that chatbots are not human—implemented in policies across New York and California—may be ineffective or counterproductive, potentially exacerbating mental...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>University of Wyoming</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.uwyo.edu/news/2026/02/partnership-among-uw-range-wyodot-promises-safer-roads-in-wyoming.html" target="_blank">Partnership Among UW, Range, WYDOT Promises Safer Roads in Wyoming</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026</div>
+                            <div class="summary">University of Wyoming researchers are leading a pilot project that combines Distributed Acoustic Sensing (DAS) technology with AI-based computer vision to monitor traffic and weather conditions on...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>University of Rhode Island</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.uri.edu/news/2026/02/media-advisory-uri-joins-major-league-hacking-hosts-large-scale-multi-track-hackathon/" target="_blank">Media Advisory: URI joins Major League Hacking, hosts large-scale, multi-track hackathon</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
+                            <div class="summary">The University of Rhode Island will host Hack@URI 2026, a two-day hackathon on February 21-22 featuring teams from over 60 universities competing to develop innovative solutions across six themed...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>Washington University in St Louis</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://source.washu.edu/2026/02/payne-elected-president-of-medical-informatics-organization/" target="_blank">Payne elected president of medical informatics organization</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 16, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">Philip Payne, a prominent biomedical informatics leader at WashU Medicine, has been elected president of the American Medical Informatics Association (AMIA), a 5,600-member organization. Payne is...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://source.washu.edu/2026/02/payne-elected-president-of-medical-informatics-organization/" target="_blank">Payne elected president of medical informatics organization</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 16, 2026 | Crawled: February 19, 2026</div>
+                            <div class="summary">Philip Payne, a prominent biomedical informatics leader at WashU Medicine, has been elected president of the American Medical Informatics Association, a 5,600-member organization. His leadership role...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>Texas A&M University</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://stories.tamu.edu/news/2026/02/17/navigating-ais-growing-influence-on-health-care/" target="_blank">Navigating AI’s growing influence on health care</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
+                            <div class="summary">Texas A&M's Institute for Healthcare Access is examining how AI's integration into medicine affects patient outcomes, trust, and equity. While AI offers efficiency gains in clinical decision-making...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>University of South Florida</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.usf.edu/news/listing.aspx" target="_blank">News Feed</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
+                            <div class="summary">This is a university news feed from the University of South Florida featuring multiple announcements from February 2026. While most items cover general university news, one article highlights USF...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.usf.edu/news/index.aspx" target="_blank">University of South Florida News</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
+                            <div class="summary">The University of South Florida has made significant research advances across multiple domains, including developing an AI system for air traffic control monitoring, creating a framework to train AI...</div>
+                        </div>
+                    
+</div>
+</div>
+                <div class="column column-facility"><h2 class="column-title">HPC &amp; Research Centers</h2><p class="no-articles">No articles</p></div>
+                <div class="column column-lab"><h2 class="column-title">National Laboratories</h2>
+<div class="university-section"><h3>Lawrence Berkeley National Laboratory</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://newscenter.lbl.gov/2026/02/17/what-is-a-digital-twin/" target="_blank">What Is a Digital Twin?</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
+                            <div class="summary">Digital twins are virtual, physics-based models that remain synchronized with real-world systems by integrating real-time sensor data, historical information, and AI to enable predictive simulation...</div>
+                        </div>
+                    
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://newscenter.lbl.gov/2026/02/17/science-on-the-double-how-an-ai-powered-digital-twin-accelerates-chemistry-and-materials-discoveries/" target="_blank">Science on the Double: How an AI-Powered 'Digital Twin' Accelerates Chemistry and Materials Discoveries</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 17, 2026 | Crawled: February 18, 2026</div>
+                            <div class="summary">Berkeley Lab scientists developed Digital Twin for Chemical Science (DTCS), an AI-powered platform that compresses chemical discovery timelines from months to minutes by enabling real-time analysis...</div>
+                        </div>
+                    
+</div>
+<div class="university-section"><h3>Los Alamos National Laboratory</h3>
+
+                        <div class="article">
+                            <div class="headline">
+                                <a href="https://www.lanl.gov/media/news/0218-neutron-star-data" target="_blank">AI decodes nuclear forces from neutron star explosions | LANL</a>
+                                
+                            </div>
+                            <div class="meta">Published: February 18, 2026</div>
+                            <div class="summary">Researchers at Los Alamos National Laboratory used machine learning and AI to decode nuclear forces by analyzing astrophysical data from neutron star mergers and X-ray emissions. Their framework...</div>
+                        </div>
+                    
+</div>
+</div>
+                <div class="column column-global"><h2 class="column-title">Global Institutions</h2><p class="no-articles">No articles</p></div>
+            </div>
+        
+
+
+    <div class="footer">
+        <div class="footer-nav">
+            <a href="../index.html">Today</a> &middot;
+            <a href="index.html">Archive</a> &middot;
+            <a href="../how_it_works.html">How It Works</a> &middot;
+            <a href="https://github.com/tyson-swetnam/webcrawler" target="_blank">GitHub</a>
+        </div>
+        <p>Monitoring 380 sources daily</p>
+        <p class="footer-meta">Last updated: 08:10 AM </p>
+    </div>
+</body>
+</html>

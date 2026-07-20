@@ -1,0 +1,28 @@
+# Python
+*.log
+*.pyc
+__pycache__/
+.env
+venv/
+
+# Claude-generated files and logs
+claude_thoughts/
+log/
+
+# IDEs
+.vscode/
+.idea/
+.claude/
+# Track the project-shared skills/ subdir so /crawl-and-analyze ships with the repo
+!.claude/
+.claude/*
+!.claude/skills/
+
+# Output directories (except docs/)
+html_output/
+output/
+examples/
+
+# Keep GitHub Pages directory for commit
+!docs/
+!docs/**

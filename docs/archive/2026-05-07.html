@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI University News - Thursday, May 07, 2026</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F393;</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+    
+        :root {
+            --color-bg: #ffffff;
+            --color-surface: #f8f9fa;
+            --color-surface-alt: #f1f3f5;
+            --color-surface-hover: #e9ecef;
+            --color-border: #dee2e6;
+            --color-text: #212529;
+            --color-text-secondary: #495057;
+            --color-text-muted: #868e96;
+            --color-text-faint: #adb5bd;
+            --color-link: #1a1a2e;
+            --color-link-visited: #3d3d5c;
+            --color-focus: #4dabf7;
+            --color-highlight-bg: #f8f9fa;
+
+            --color-peer: #7c3aed;
+            --color-r1: #2563eb;
+            --color-hpc: #d97706;
+            --color-lab: #059669;
+            --color-global: #dc2626;
+
+            --radius-sm: 4px;
+            --radius-md: 6px;
+            --transition-fast: 150ms ease;
+
+            --space-xs: 4px;
+            --space-sm: 8px;
+            --space-md: 16px;
+            --space-lg: 24px;
+            --space-xl: 32px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-lg);
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--color-focus);
+            outline-offset: 2px;
+        }
+        a:focus:not(:focus-visible) { outline: none; }
+
+        /* ── Compact Header ── */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--color-border);
+            margin-bottom: var(--space-md);
+            min-height: 48px;
+        }
+        .header h1 {
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--color-text);
+            white-space: nowrap;
+        }
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            font-size: 13px;
+            color: var(--color-text-muted);
+        }
+        .header-meta {
+            white-space: nowrap;
+        }
+        .header-nav a {
+            color: var(--color-text-muted);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            transition: color var(--transition-fast);
+        }
+        .header-nav a:hover { color: var(--color-text); }
+        .header-nav a.active {
+            color: var(--color-text);
+            font-weight: 600;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            margin-top: var(--space-xl);
+            padding: var(--space-md) 0;
+            border-top: 1px solid var(--color-border);
+            font-size: 12px;
+            color: var(--color-text-muted);
+        }
+        .footer a {
+            color: var(--color-text-muted);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        .footer a:hover { color: var(--color-text); }
+
+        .no-results {
+            text-align: center;
+            font-size: 15px;
+            color: var(--color-text-muted);
+            margin: 60px 0;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 0 var(--space-md); }
+            .header { flex-direction: column; gap: var(--space-sm); align-items: flex-start; }
+            .header-right { flex-wrap: wrap; }
+        }
+        
+    
+        /* ── Search Bar ── */
+        .search-bar {
+            position: relative;
+            max-width: 400px;
+            margin-bottom: var(--space-md);
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 8px 32px 8px 12px;
+            font-family: 'DM Sans', system-ui, sans-serif;
+            font-size: 13px;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            background: var(--color-bg);
+            color: var(--color-text);
+            outline: none;
+            box-sizing: border-box;
+            transition: border-color var(--transition-fast);
+        }
+        .search-bar input:focus {
+            border-color: var(--color-text-muted);
+        }
+        .search-bar input::placeholder {
+            color: var(--color-text-faint);
+        }
+        .clear-search-btn {
+            position: absolute;
+            right: 6px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            background: none;
+            font-size: 18px;
+            color: var(--color-text-muted);
+            cursor: pointer;
+            padding: 2px 6px;
+            line-height: 1;
+        }
+        .clear-search-btn:hover {
+            color: var(--color-text);
+        }
+        .search-no-results {
+            padding: var(--space-md);
+            text-align: center;
+            color: var(--color-text-muted);
+            font-size: 13px;
+            display: none;
+        }
+
+        /* ── Stats Line ── */
+        .stats-line {
+            font-size: 13px;
+            color: var(--color-text-muted);
+            margin-bottom: var(--space-md);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            flex-wrap: wrap;
+        }
+        .stats-line .cat-dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            margin-right: 2px;
+            vertical-align: middle;
+        }
+        .dot-peer { background: var(--color-peer); }
+        .dot-r1 { background: var(--color-r1); }
+        .dot-hpc { background: var(--color-hpc); }
+        .dot-lab { background: var(--color-lab); }
+        .dot-global { background: var(--color-global); }
+
+        /* ── Tab Bar ── */
+        .tab-bar {
+            display: flex;
+            gap: 0;
+            border-bottom: 1px solid var(--color-border);
+            margin-bottom: 0;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        .tab-btn {
+            padding: 10px var(--space-md);
+            border: none;
+            background: none;
+            font-family: 'DM Sans', system-ui, sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--color-text-muted);
+            cursor: pointer;
+            white-space: nowrap;
+            border-bottom: 2px solid transparent;
+            transition: color var(--transition-fast), border-color var(--transition-fast);
+        }
+        .tab-btn:hover { color: var(--color-text-secondary); }
+        .tab-btn.active {
+            color: var(--color-text);
+            border-bottom-color: var(--color-text);
+        }
+        .tab-btn.tab-empty {
+            opacity: 0.4;
+            cursor: default;
+        }
+        .tab-count {
+            font-weight: 400;
+            font-size: 12px;
+            color: var(--color-text-faint);
+            margin-left: 3px;
+        }
+
+        /* ── Article List ── */
+        .article-list {
+            margin: 0;
+        }
+
+        /* ── University Group Subheader ── */
+        .univ-group-header {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-text-muted);
+            padding: var(--space-sm) 0 var(--space-xs) 0;
+            margin-top: var(--space-sm);
+            border-bottom: 1px solid var(--color-surface-alt);
+        }
+        .univ-group-header:first-child { margin-top: 0; }
+
+        /* ── Article Row ── */
+        .article-row {
+            display: grid;
+            grid-template-columns: 8px 1fr auto auto 20px;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: 10px var(--space-sm);
+            border-bottom: 1px solid var(--color-surface-alt);
+            cursor: pointer;
+            transition: background-color var(--transition-fast);
+            min-height: 40px;
+        }
+        .article-row:hover { background-color: var(--color-surface); }
+        .article-row .cat-dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+        }
+        .article-row .headline-link {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--color-link);
+            text-decoration: none;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .article-row .headline-link:hover { text-decoration: underline; text-underline-offset: 2px; }
+        .article-row .headline-link:visited { color: var(--color-link-visited); }
+        .article-row .univ-label {
+            font-size: 12px;
+            color: var(--color-text-muted);
+            white-space: nowrap;
+        }
+        .article-row .date-label {
+            font-size: 12px;
+            color: var(--color-text-faint);
+            white-space: nowrap;
+        }
+        .article-row .chevron {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            font-size: 10px;
+            color: var(--color-text-faint);
+            transition: transform 0.2s ease;
+        }
+        .article-row.expanded .chevron { transform: rotate(90deg); }
+
+        /* ── Article Detail (expand panel) ── */
+        .article-detail {
+            display: none;
+            padding: var(--space-sm) var(--space-md) var(--space-md) 22px;
+            border-bottom: 1px solid var(--color-surface-alt);
+            background: var(--color-surface);
+        }
+        .article-detail.open { display: block; }
+        .article-detail .summary {
+            font-size: 13px;
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+            margin-bottom: var(--space-sm);
+        }
+        .article-detail .detail-meta {
+            font-size: 12px;
+            color: var(--color-text-muted);
+            margin-bottom: var(--space-sm);
+        }
+        .article-detail .topics { margin-bottom: var(--space-sm); }
+        .topic-pill {
+            display: inline-block;
+            background: var(--color-surface-alt);
+            border-radius: var(--radius-sm);
+            padding: 2px 8px;
+            margin: 2px 3px 2px 0;
+            font-size: 11px;
+            color: var(--color-text-secondary);
+        }
+        .article-detail .detail-link a {
+            font-size: 12px;
+            color: var(--color-link);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .article-detail .detail-link a:hover { text-decoration: underline; }
+
+        /* ── Show More ── */
+        .show-more-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: var(--space-xs);
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-family: 'DM Sans', system-ui, sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--color-text-secondary);
+            text-align: center;
+            transition: background-color var(--transition-fast);
+        }
+        .show-more-btn:hover { background: var(--color-surface-hover); }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .article-row {
+                grid-template-columns: 6px 1fr 20px;
+                gap: var(--space-xs);
+                padding: var(--space-sm) var(--space-xs);
+            }
+            .article-row .univ-label,
+            .article-row .date-label { display: none; }
+            .article-row .headline-link {
+                white-space: normal;
+                font-size: 13px;
+            }
+            .tab-bar { gap: 0; }
+            .tab-btn { padding: 8px 10px; font-size: 12px; }
+        }
+        @media (max-width: 480px) {
+            .stats-line { font-size: 12px; }
+        }
+
+        /* ── Top News Section ── */
+        .top-news-section { display: none; }
+        .top-news-section.active { display: block; }
+        .top-article {
+            padding: var(--space-md) var(--space-sm);
+            border-bottom: 1px solid var(--color-border);
+        }
+        .top-article-header {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-sm);
+        }
+        .top-rank {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: var(--color-text);
+            color: var(--color-bg);
+            font-size: 13px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .top-article-info { flex: 1; min-width: 0; }
+        .top-headline {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--color-link);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .top-headline:hover { text-decoration: underline; text-underline-offset: 2px; }
+        .top-headline:visited { color: var(--color-link-visited); }
+        .top-article-meta {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            flex-wrap: wrap;
+        }
+        .top-univ {
+            font-size: 12px;
+            color: var(--color-text-muted);
+        }
+        .editorial-note {
+            font-style: italic;
+            color: var(--color-text-secondary);
+            font-size: 13px;
+            line-height: 1.5;
+            padding-left: 38px;
+            margin-top: 4px;
+        }
+        .impact-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: var(--radius-sm);
+            font-size: 11px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .impact-badge.scientific { background: #dbeafe; color: #1e40af; }
+        .impact-badge.financial { background: #fef3c7; color: #92400e; }
+        .impact-badge.partnership { background: #d1fae5; color: #065f46; }
+        .impact-badge.policy { background: #ede9fe; color: #5b21b6; }
+
+        @media (max-width: 768px) {
+            .top-headline { font-size: 14px; }
+            .editorial-note { padding-left: 0; margin-top: var(--space-sm); }
+            .top-rank { min-width: 22px; height: 22px; font-size: 12px; }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI University News</h1>
+        <div class="header-right">
+            <span class="header-meta">26 articles &middot; May 07</span>
+            <span class="header-nav">
+                <a href="../index.html">Today</a>
+                &middot;
+                <a href="index.html">Archive</a>
+                &middot;
+                <a href="../analytics.html">Analytics</a>
+                &middot;
+                <a href="../how_it_works.html">How It Works</a>
+            </span>
+        </div>
+    </div>
+
+    <div class="stats-line" data-total-articles="26">26 articles &middot; <span class="cat-dot dot-peer"></span>&nbsp;Peer&nbsp;0 &middot; <span class="cat-dot dot-r1"></span>&nbsp;R1&nbsp;14 &middot; <span class="cat-dot dot-hpc"></span>&nbsp;HPC&nbsp;2 &middot; <span class="cat-dot dot-lab"></span>&nbsp;Labs&nbsp;4 &middot; <span class="cat-dot dot-global"></span>&nbsp;Global&nbsp;6</div><div class="search-bar"><input type="text" id="article-search" placeholder="Filter articles..." autocomplete="off" aria-label="Filter articles on this page"><button id="clear-search" class="clear-search-btn" style="display:none" onclick="clearSearch()">&times;</button></div><div class="tab-bar"><button class="tab-btn active" data-tab="all" onclick="switchTab('all')">All<span class="tab-count">(26)</span></button><button class="tab-btn tab-empty" data-tab="peer" onclick="switchTab('peer')">Peer<span class="tab-count">(0)</span></button><button class="tab-btn" data-tab="r1" onclick="switchTab('r1')">R1<span class="tab-count">(14)</span></button><button class="tab-btn" data-tab="hpc" onclick="switchTab('hpc')">HPC<span class="tab-count">(2)</span></button><button class="tab-btn" data-tab="lab" onclick="switchTab('lab')">Labs<span class="tab-count">(4)</span></button><button class="tab-btn" data-tab="global" onclick="switchTab('global')">Global<span class="tab-count">(6)</span></button></div><div class="article-list"><div class="article-row" data-category="global" data-title="จุฬาฯ จับมือ Google เปิดเวที “Google Gemini Arena” แข่งขัน AI ระดับภูมิภาคครั้งแรกสำหรับนิสิต - จุฬาลงกรณ์มหาวิทยาลัย" data-university="Chulalongkorn University" data-summary="Chulalongkorn University partnered with Google to launch &#x27;Google Gemini Arena,&#x27; described as the first regional AI competition for students. The page content retrieved is mostly site navigation and la" data-topics="" data-themes="Partnerships &amp; Industry|AI in Education" onclick="toggleDetail(this)"><span class="cat-dot dot-global"></span><a class="headline-link" href="https://www.chula.ac.th/event-calendar/283783/" target="_blank" onclick="event.stopPropagation()">จุฬาฯ จับมือ Google เปิดเวที “Google Gemini Arena” แข่งขัน AI ระดับภูมิภาคครั้งแรกสำหรับนิสิต - จุฬาลงกรณ์มหาวิทยาลัย</a><span class="univ-label">Chulalongkorn University</span><span class="date-label">May 07</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="global"><div class="summary">Chulalongkorn University partnered with Google to launch 'Google Gemini Arena,' described as the first regional AI competition for students. The page content retrieved is mostly site navigation and lacks substantive article details.</div><div class="detail-meta">Published: May 07, 2026 &middot; Crawled: July 18, 2026</div><div class="detail-link"><a href="https://www.chula.ac.th/event-calendar/283783/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="r1" data-title="After Dobbs, a Computer Scientist Targets Contraceptive Misinformation Online - SBU News" data-university="Stony Brook University" data-summary="Stony Brook computer scientist Ritwik Banerjee received a two-year grant to study contraceptive misinformation online, using transformer-based language models to analyze over a million social media po" data-topics="" data-themes="NLP &amp; LLMs|Funding &amp; Awards" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.stonybrook.edu/computer-science/after-dobbs-a-computer-scientist-targets-contraceptive-misinformation-online/" target="_blank" onclick="event.stopPropagation()">After Dobbs, a Computer Scientist Targets Contraceptive Misinformation Online - SBU News</a><span class="univ-label">Stony Brook University</span><span class="date-label">May 07</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Stony Brook computer scientist Ritwik Banerjee received a two-year grant to study contraceptive misinformation online, using transformer-based language models to analyze over a million social media posts and identify recurring misleading themes and framing patterns.</div><div class="detail-meta">Published: May 07, 2026 &middot; Crawled: July 18, 2026</div><div class="detail-link"><a href="https://news.stonybrook.edu/computer-science/after-dobbs-a-computer-scientist-targets-contraceptive-misinformation-online/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="global" data-title="คณะนิเทศศาสตร์ จุฬาฯ จัดเสวนาออนไลน์ “Artificial Intelligence, Social Media, and Elections in Asia” - จุฬาลงกรณ์มหาวิทยาลัย" data-university="Chulalongkorn University" data-summary="Chulalongkorn University&#x27;s Faculty of Communication Arts, with AMIC, hosted an online seminar on &#x27;Artificial Intelligence, Social Media, and Elections in Asia,&#x27; examining AI&#x27;s role in disinformation, " data-topics="" data-themes="AI Policy &amp; Governance|General / Other" onclick="toggleDetail(this)"><span class="cat-dot dot-global"></span><a class="headline-link" href="https://www.chula.ac.th/event-calendar/282985/" target="_blank" onclick="event.stopPropagation()">คณะนิเทศศาสตร์ จุฬาฯ จัดเสวนาออนไลน์ “Artificial Intelligence, Social Media, and Elections in Asia” - จุฬาลงกรณ์มหาวิทยาลัย</a><span class="univ-label">Chulalongkorn University</span><span class="date-label">May 07</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="global"><div class="summary">Chulalongkorn University's Faculty of Communication Arts, with AMIC, hosted an online seminar on 'Artificial Intelligence, Social Media, and Elections in Asia,' examining AI's role in disinformation, micro-targeting, and democratic processes across Asian elections.</div><div class="detail-meta">Published: May 07, 2026 &middot; Crawled: July 18, 2026</div><div class="detail-link"><a href="https://www.chula.ac.th/event-calendar/282985/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="r1" data-title="Games people — and machines — play: Untangling strategic reasoning to advance AI" data-university="MIT" data-summary="MIT EECS assistant professor Gabriele Farina combines game theory with machine learning, optimization, and statistics to advance strategic reasoning in AI systems, building on a lifelong fascination w" data-topics="" data-themes="General / Other|NLP &amp; LLMs" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://www.eecs.mit.edu/games-people-and-machines-play-untangling-strategic-reasoning-to-advance-ai/" target="_blank" onclick="event.stopPropagation()">Games people — and machines — play: Untangling strategic reasoning to advance AI</a><span class="univ-label">MIT</span><span class="date-label">May 07</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">MIT EECS assistant professor Gabriele Farina combines game theory with machine learning, optimization, and statistics to advance strategic reasoning in AI systems, building on a lifelong fascination with algorithms that can out-think humans.</div><div class="detail-meta">Published: May 07, 2026 &middot; Crawled: July 18, 2026</div><div class="detail-link"><a href="https://www.eecs.mit.edu/games-people-and-machines-play-untangling-strategic-reasoning-to-advance-ai/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="r1" data-title="THESIS DEFENSE: Tactile Sensing for Contact-Rich Dexterous Robotic Manipulation" data-university="MIT" data-summary="An MIT CSAIL thesis defense presents novel camera-based tactile sensors (GelSight360, RainbowSight) and robot policy-learning systems that use tactile feedback for contact-rich dexterous manipulation," data-topics="" data-themes="Robotics" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://www.csail.mit.edu/event/thesis-defense-tactile-sensing-contact-rich-dexterous-robotic-manipulation" target="_blank" onclick="event.stopPropagation()">THESIS DEFENSE: Tactile Sensing for Contact-Rich Dexterous Robotic Manipulation</a><span class="univ-label">MIT</span><span class="date-label">May 07</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">An MIT CSAIL thesis defense presents novel camera-based tactile sensors (GelSight360, RainbowSight) and robot policy-learning systems that use tactile feedback for contact-rich dexterous manipulation, including garment folding and vision-free object retrieval.</div><div class="detail-meta">Published: May 07, 2026 &middot; Crawled: July 18, 2026</div><div class="detail-link"><a href="https://www.csail.mit.edu/event/thesis-defense-tactile-sensing-contact-rich-dexterous-robotic-manipulation" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="r1" data-title="BioInnovate Conference Showcases Path from Innovation to Scale Through a Growing Ecosystem" data-university="Weill Medical College of Cornell University" data-summary="Weill Cornell Medicine&#x27;s BioInnovate Conference brought together scientists, founders, and industry/government partners to discuss turning biotech discoveries into scalable healthcare solutions, with " data-topics="" data-themes="Biomedical AI" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.weill.cornell.edu/news/2026/05/bioinnovate-conference-showcases-path-from-innovation-to-scale-through-a-growing" target="_blank" onclick="event.stopPropagation()">BioInnovate Conference Showcases Path from Innovation to Scale Through a Growing Ecosystem</a><span class="univ-label">Weill Medical College of Cornell University</span><span class="date-label">May 07</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Weill Cornell Medicine's BioInnovate Conference brought together scientists, founders, and industry/government partners to discuss turning biotech discoveries into scalable healthcare solutions, with AI in clinical trials among the topics discussed.</div><div class="detail-meta">Published: May 07, 2026 &middot; Crawled: July 18, 2026</div><div class="detail-link"><a href="https://news.weill.cornell.edu/news/2026/05/bioinnovate-conference-showcases-path-from-innovation-to-scale-through-a-growing" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="r1" data-title="Inspired by the brain, Mizzou researchers build smarter, more efficient computer hardware" data-university="University of Missouri-Columbia" data-summary="University of Missouri researchers are developing neuromorphic computing hardware that mimics the brain&#x27;s neural connections, aiming to drastically cut the energy demands of AI systems as data-center " data-topics="Led by physics professor Suchi Guha&#x27;s team" data-themes="HPC &amp; AI Systems|Materials &amp; Chemistry" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://showme.missouri.edu/2026/inspired-by-the-brain-mizzou-researchers-build-smarter-more-efficient-computer-hardware/" target="_blank" onclick="event.stopPropagation()">Inspired by the brain, Mizzou researchers build smarter, more efficient computer hardware</a><span class="univ-label">University of Missouri-Columbia</span><span class="date-label">May 07</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">University of Missouri researchers are developing neuromorphic computing hardware that mimics the brain's neural connections, aiming to drastically cut the energy demands of AI systems as data-center power use is projected to double this decade. The work focuses on brain-inspired electronic...</div><div class="topics"><span class="topic-pill">Led by physics professor Suchi Guha's team</span></div><div class="detail-meta">Published: May 07, 2026 &middot; Crawled: July 18, 2026</div><div class="detail-link"><a href="https://showme.missouri.edu/2026/inspired-by-the-brain-mizzou-researchers-build-smarter-more-efficient-computer-hardware/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="global" data-title="Professor Xiaoli Li and co‑authors receive the DASFAA 2026 10+ year best paper award for impactful contributions to predictive maintenance research - Singapore University of Technology and Design (SUTD)" data-university="Singapore Univ. of Technology and Design" data-summary="SUTD&#x27;s Professor Xiaoli Li and co-authors received the DASFAA 2026 10+ Year Best Paper Award for their 2016 paper introducing an early deep convolutional neural network regression approach for remaini" data-topics="Paper has over 1,300 citations" data-themes="HPC &amp; AI Systems|General / Other" onclick="toggleDetail(this)"><span class="cat-dot dot-global"></span><a class="headline-link" href="https://www.sutd.edu.sg/achievements-listing/professor-xiaoli-li-and-co-authors-receive-the-dasfaa-2026-10-year-best-paper-award-for-impactful-contributions-to-predictive-maintenance-research" target="_blank" onclick="event.stopPropagation()">Professor Xiaoli Li and co‑authors receive the DASFAA 2026 10+ year best paper award for impactful contributions to predictive maintenance research - Singapore University of Technology and Design (SUTD)</a><span class="univ-label">Singapore Univ. of Technology and Design</span><span class="date-label">May 07</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="global"><div class="summary">SUTD's Professor Xiaoli Li and co-authors received the DASFAA 2026 10+ Year Best Paper Award for their 2016 paper introducing an early deep convolutional neural network regression approach for remaining useful life (RUL) estimation in predictive maintenance. The paper has accumulated over 1,300...</div><div class="topics"><span class="topic-pill">Paper has over 1,300 citations</span></div><div class="detail-meta">Published: May 07, 2026 &middot; Crawled: July 18, 2026</div><div class="detail-link"><a href="https://www.sutd.edu.sg/achievements-listing/professor-xiaoli-li-and-co-authors-receive-the-dasfaa-2026-10-year-best-paper-award-for-impactful-contributions-to-predictive-maintenance-research" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="global" data-title="Artificial Intelligence (AI)" data-university="Fraunhofer Society" data-summary="Fraunhofer&#x27;s Artificial Intelligence strategic research field page discusses how smart assistance systems and AI-adjacent medical technologies support healthcare, diagnostics, and preventive care in G" data-topics="" data-themes="Biomedical AI|General / Other" onclick="toggleDetail(this)"><span class="cat-dot dot-global"></span><a class="headline-link" href="https://www.fraunhofer.de/en/research/fraunhofer-strategic-research-fields/artificial-intelligence.html" target="_blank" onclick="event.stopPropagation()">Artificial Intelligence (AI)</a><span class="univ-label">Fraunhofer Society</span><span class="date-label">May 06</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="global"><div class="summary">Fraunhofer's Artificial Intelligence strategic research field page discusses how smart assistance systems and AI-adjacent medical technologies support healthcare, diagnostics, and preventive care in Germany.</div><div class="detail-meta">Published: May 06, 2026 &middot; Crawled: July 18, 2026</div><div class="detail-link"><a href="https://www.fraunhofer.de/en/research/fraunhofer-strategic-research-fields/artificial-intelligence.html" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="r1" data-title="Teaching AI agents to ask better questions by playing &quot;Battleship&quot;" data-university="MIT" data-summary="MIT CSAIL and Harvard SEAS researchers used the game &#x27;Battleship,&#x27; reframed as a natural-language question-asking task, to study why large language models struggle to ask effective clarifying question" data-topics="" data-themes="NLP &amp; LLMs|Explainable AI" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://www.csail.mit.edu/news/teaching-ai-agents-ask-better-questions-playing-battleship" target="_blank" onclick="event.stopPropagation()">Teaching AI agents to ask better questions by playing "Battleship"</a><span class="univ-label">MIT</span><span class="date-label">May 06</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">MIT CSAIL and Harvard SEAS researchers used the game 'Battleship,' reframed as a natural-language question-asking task, to study why large language models struggle to ask effective clarifying questions in uncertain, high-stakes settings. They built a human-sourced 'BattleshipQA' dataset and...</div><div class="detail-meta">Published: May 06, 2026 &middot; Crawled: July 18, 2026</div><div class="detail-link"><a href="https://www.csail.mit.edu/news/teaching-ai-agents-ask-better-questions-playing-battleship" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="r1" data-title="Thesis Defense: Making Robust AI Safeguards Run Deep" data-university="MIT" data-summary="An MIT CSAIL thesis defense presents research on making AI safeguards robust against prompt-injection and malicious fine-tuning attacks, particularly for open-weight frontier AI systems that show emer" data-topics="" data-themes="AI Safety &amp; Alignment|AI &amp; Cybersecurity" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://www.csail.mit.edu/event/thesis-defense-making-robust-ai-safeguards-run-deep" target="_blank" onclick="event.stopPropagation()">Thesis Defense: Making Robust AI Safeguards Run Deep</a><span class="univ-label">MIT</span><span class="date-label">May 06</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">An MIT CSAIL thesis defense presents research on making AI safeguards robust against prompt-injection and malicious fine-tuning attacks, particularly for open-weight frontier AI systems that show emerging cyber, chemical, and biological risk capabilities. The talk also addresses translating AI...</div><div class="detail-meta">Published: May 06, 2026 &middot; Crawled: July 18, 2026</div><div class="detail-link"><a href="https://www.csail.mit.edu/event/thesis-defense-making-robust-ai-safeguards-run-deep" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="r1" data-title="Meir Feder: Understanding Modern Machine Learning: Architecture Based Complexity" data-university="MIT" data-summary="An MIT CSAIL seminar by Meir Feder presents an information-theoretic framework for understanding modern machine learning through architecture-based model complexity, linking generalization to spectral" data-topics="" data-themes="Explainable AI|General / Other" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://www.csail.mit.edu/event/meir-feder-understanding-modern-machine-learning-architecture-based-complexity" target="_blank" onclick="event.stopPropagation()">Meir Feder: Understanding Modern Machine Learning: Architecture Based Complexity</a><span class="univ-label">MIT</span><span class="date-label">May 06</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">An MIT CSAIL seminar by Meir Feder presents an information-theoretic framework for understanding modern machine learning through architecture-based model complexity, linking generalization to spectral properties of the Hessian and Fisher Information Matrix. The framework explains why...</div><div class="detail-meta">Published: May 06, 2026 &middot; Crawled: July 18, 2026</div><div class="detail-link"><a href="https://www.csail.mit.edu/event/meir-feder-understanding-modern-machine-learning-architecture-based-complexity" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="lab" data-title="AI-Native Software Engineering: Enduring Principles, New Pace | CMU Software Engineering Institute" data-university="CMU Software Engineering Institute" data-summary="A CMU Software Engineering Institute webcast examines how AI is accelerating software development speed while raising risks like technical debt, arguing that traditional engineering principles remain " data-topics="" data-themes="General / Other|AI in Education" onclick="toggleDetail(this)"><span class="cat-dot dot-lab"></span><a class="headline-link" href="https://www.sei.cmu.edu/events/ai-native-software-engineering-enduring-principles-new-pace/" target="_blank" onclick="event.stopPropagation()">AI-Native Software Engineering: Enduring Principles, New Pace | CMU Software Engineering Institute</a><span class="univ-label">CMU Software Engineering Institute</span><span class="date-label">May 06</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="lab"><div class="summary">A CMU Software Engineering Institute webcast examines how AI is accelerating software development speed while raising risks like technical debt, arguing that traditional engineering principles remain essential to keep AI-assisted coding production-ready.</div><div class="detail-meta">Published: May 06, 2026 &middot; Crawled: July 18, 2026</div><div class="detail-link"><a href="https://www.sei.cmu.edu/events/ai-native-software-engineering-enduring-principles-new-pace/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="r1" data-title="How to Sketch a Learning Algorithm" data-university="MIT" data-summary="An MIT CSAIL talk presents the first data-deletion scheme for deep learning models that can efficiently predict how a model&#x27;s output would change if a subset of training data were excluded, with bound" data-topics="" data-themes="Explainable AI|AI Safety &amp; Alignment" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://www.csail.mit.edu/event/how-sketch-learning-algorithm" target="_blank" onclick="event.stopPropagation()">How to Sketch a Learning Algorithm</a><span class="univ-label">MIT</span><span class="date-label">May 05</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">An MIT CSAIL talk presents the first data-deletion scheme for deep learning models that can efficiently predict how a model's output would change if a subset of training data were excluded, with bounded error and failure probability.</div><div class="detail-meta">Published: May 05, 2026 &middot; Crawled: July 18, 2026</div><div class="detail-link"><a href="https://www.csail.mit.edu/event/how-sketch-learning-algorithm" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="hpc" data-title="Seventh National Research Platform (7NRP) Workshop" data-university="San Diego Supercomputer Center" data-summary="SDSC announces the 7th National Research Platform Workshop in La Jolla (May 2026), covering NRP&#x27;s distributed compute cloud, with a major focus on AI technology in agriculture and AI education alongsi" data-topics="" data-themes="Agriculture &amp; Food|AI in Education|HPC &amp; AI Systems" onclick="toggleDetail(this)"><span class="cat-dot dot-hpc"></span><a class="headline-link" href="https://www.sdsc.edu/events/202605-7NRP-Workshop.html" target="_blank" onclick="event.stopPropagation()">Seventh National Research Platform (7NRP) Workshop</a><span class="univ-label">San Diego Supercomputer Center</span><span class="date-label">May 05</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="hpc"><div class="summary">SDSC announces the 7th National Research Platform Workshop in La Jolla (May 2026), covering NRP's distributed compute cloud, with a major focus on AI technology in agriculture and AI education alongside broader science use cases.</div><div class="detail-meta">Published: May 05, 2026 &middot; Crawled: July 18, 2026</div><div class="detail-link"><a href="https://www.sdsc.edu/events/202605-7NRP-Workshop.html" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="r1" data-title="Penn student develops a way for computer chips to run more efficiently | Penn Today" data-university="University of Pennsylvania" data-summary="A Penn undergraduate developed Fluid Silicon, a reconfigurable chip platform that monitors real-time hardware condition to boost computing efficiency and durability, partly motivated by surging AI com" data-topics="Motivated by rising AI-driven computing demand" data-themes="HPC &amp; AI Systems" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://penntoday.upenn.edu/news/penn-student-develops-way-computer-chips-run-more-efficiently" target="_blank" onclick="event.stopPropagation()">Penn student develops a way for computer chips to run more efficiently | Penn Today</a><span class="univ-label">University of Pennsylvania</span><span class="date-label">May 05</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">A Penn undergraduate developed Fluid Silicon, a reconfigurable chip platform that monitors real-time hardware condition to boost computing efficiency and durability, partly motivated by surging AI compute demand. The work earned him Penn's President's Sustainability Prize, including $100,000 for...</div><div class="topics"><span class="topic-pill">Motivated by rising AI-driven computing demand</span></div><div class="detail-meta">Published: May 05, 2026 &middot; Crawled: July 18, 2026</div><div class="detail-link"><a href="https://penntoday.upenn.edu/news/penn-student-develops-way-computer-chips-run-more-efficiently" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="r1" data-title="No Wrong Turns: From Law to the Lab" data-university="Rensselaer Polytechnic Institute" data-summary="An RPI mechanical engineering PhD student recounts transitioning from patent litigation to graduate research on shared autonomous systems, focusing on complex dynamical systems involving human-automat" data-topics="Research focus is shared autonomous systems" data-themes="Robotics" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.rpi.edu/2026/05/05/no-wrong-turns-law-lab" target="_blank" onclick="event.stopPropagation()">No Wrong Turns: From Law to the Lab</a><span class="univ-label">Rensselaer Polytechnic Institute</span><span class="date-label">May 05</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">An RPI mechanical engineering PhD student recounts transitioning from patent litigation to graduate research on shared autonomous systems, focusing on complex dynamical systems involving human-automation interaction.</div><div class="topics"><span class="topic-pill">Research focus is shared autonomous systems</span></div><div class="detail-meta">Published: May 05, 2026 &middot; Crawled: July 18, 2026</div><div class="detail-link"><a href="https://news.rpi.edu/2026/05/05/no-wrong-turns-law-lab" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="hpc" data-title="Experimental forecasts leverage strengths of AI weather models to extend the forecast" data-university="National Center for Atmospheric Research" data-summary="NSF NCAR developed an experimental AI-based forecasting tool that leverages AI weather models&#x27; strength at large-scale pattern recognition to extend severe weather hazard predictions—tornadoes, hail, " data-topics="" data-themes="Climate &amp; Environment|HPC &amp; AI Systems" onclick="toggleDetail(this)"><span class="cat-dot dot-hpc"></span><a class="headline-link" href="https://news.ucar.edu/133068/identifying-severe-weather-hazards-further-future-ai" target="_blank" onclick="event.stopPropagation()">Experimental forecasts leverage strengths of AI weather models to extend the forecast</a><span class="univ-label">National Center for Atmospheric Research</span><span class="date-label">May 04</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="hpc"><div class="summary">NSF NCAR developed an experimental AI-based forecasting tool that leverages AI weather models' strength at large-scale pattern recognition to extend severe weather hazard predictions—tornadoes, hail, damaging winds—up to a week in advance. The tool is being evaluated at NOAA's Hazardous Weather...</div><div class="detail-meta">Published: May 04, 2026 &middot; Crawled: July 18, 2026</div><div class="detail-link"><a href="https://news.ucar.edu/133068/identifying-severe-weather-hazards-further-future-ai" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="lab" data-title="Information Technology" data-university="National Academies" data-summary="The National Academies&#x27; Information Technology topic page highlights recent work on AI and cybersecurity, including a rapid expert consultation on how AI will raise near-term cyber risks while potenti" data-topics="Coverage of AI&#x27;s impact on the future of work" data-themes="AI &amp; Cybersecurity|AI Policy &amp; Governance|Workforce &amp; Training" onclick="toggleDetail(this)"><span class="cat-dot dot-lab"></span><a class="headline-link" href="https://www.nationalacademies.org/topics/information-technology" target="_blank" onclick="event.stopPropagation()">Information Technology</a><span class="univ-label">National Academies</span><span class="date-label">May 04</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="lab"><div class="summary">The National Academies' Information Technology topic page highlights recent work on AI and cybersecurity, including a rapid expert consultation on how AI will raise near-term cyber risks while potentially strengthening long-term cybersecurity, and an event on securing AI systems with participation...</div><div class="topics"><span class="topic-pill">Coverage of AI's impact on the future of work</span></div><div class="detail-meta">Published: May 04, 2026 &middot; Crawled: July 18, 2026</div><div class="detail-link"><a href="https://www.nationalacademies.org/topics/information-technology" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="global" data-title="AI fails to make inroads with cybercriminals | News | The University of Edinburgh" data-university="University of Edinburgh" data-summary="A study by researchers at Edinburgh, Cambridge, and Strathclyde analyzing over 100 million dark web forum posts found that AI has made limited inroads with cybercriminals, mainly aiding already-skille" data-topics="" data-themes="AI &amp; Cybersecurity|AI Safety &amp; Alignment" onclick="toggleDetail(this)"><span class="cat-dot dot-global"></span><a class="headline-link" href="https://www.ed.ac.uk/news/ai-fails-to-make-inroads-with-cybercriminals" target="_blank" onclick="event.stopPropagation()">AI fails to make inroads with cybercriminals | News | The University of Edinburgh</a><span class="univ-label">University of Edinburgh</span><span class="date-label">May 04</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="global"><div class="summary">A study by researchers at Edinburgh, Cambridge, and Strathclyde analyzing over 100 million dark web forum posts found that AI has made limited inroads with cybercriminals, mainly aiding already-skilled actors in social engineering and bot automation rather than lowering the skill barrier for...</div><div class="detail-meta">Published: May 04, 2026 &middot; Crawled: July 18, 2026</div><div class="detail-link"><a href="https://www.ed.ac.uk/news/ai-fails-to-make-inroads-with-cybercriminals" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="lab" data-title="Playing Cards | Lawrence Livermore National Laboratory" data-university="Lawrence Livermore National Laboratory" data-summary="A generic Lawrence Livermore National Laboratory landing page describing the lab&#x27;s broad mission of applying AI alongside experimental data and physics-based modeling to national security science. No " data-topics="" data-themes="AI Policy &amp; Governance|General / Other" onclick="toggleDetail(this)"><span class="cat-dot dot-lab"></span><a class="headline-link" href="https://www.llnl.gov/playing-cards" target="_blank" onclick="event.stopPropagation()">Playing Cards | Lawrence Livermore National Laboratory</a><span class="univ-label">Lawrence Livermore National Laboratory</span><span class="date-label">May 04</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="lab"><div class="summary">A generic Lawrence Livermore National Laboratory landing page describing the lab's broad mission of applying AI alongside experimental data and physics-based modeling to national security science. No specific research findings, project, or result is described.</div><div class="detail-meta">Published: May 04, 2026 &middot; Crawled: July 18, 2026</div><div class="detail-link"><a href="https://www.llnl.gov/playing-cards" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="global" data-title="Predeeption: the project that aims to anticipate the aging of your batteries using artificial intelligence!" data-university="INRIA" data-summary="Inria/CNRS researcher Arnaud Demortière developed AI algorithms to monitor battery health and predict aging over time, leading to the creation of the Predeeption startup with support from Inria Startu" data-topics="" data-themes="Materials &amp; Chemistry|Partnerships &amp; Industry" onclick="toggleDetail(this)"><span class="cat-dot dot-global"></span><a class="headline-link" href="https://www.inria.fr/en/predeeption-project-aims-anticipate-aging-your-batteries-using-artificial-intelligence" target="_blank" onclick="event.stopPropagation()">Predeeption: the project that aims to anticipate the aging of your batteries using artificial intelligence!</a><span class="univ-label">INRIA</span><span class="date-label">May 04</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="global"><div class="summary">Inria/CNRS researcher Arnaud Demortière developed AI algorithms to monitor battery health and predict aging over time, leading to the creation of the Predeeption startup with support from Inria Startup Studio and CNRS Innovation to address a key challenge for electric vehicles.</div><div class="detail-meta">Published: May 04, 2026 &middot; Crawled: July 18, 2026</div><div class="detail-link"><a href="https://www.inria.fr/en/predeeption-project-aims-anticipate-aging-your-batteries-using-artificial-intelligence" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="r1" data-title="ML Tea: Sources of overconfidence in language model performance: contamination, adaptivity, and beyond / Modeling mouse development using flows on trees" data-university="MIT" data-summary="An MIT CSAIL ML Tea talk examines sources of overconfidence in language model performance evaluation, including data contamination, adaptivity, and benchmark staleness, alongside a second talk on mode" data-topics="" data-themes="NLP &amp; LLMs|Explainable AI" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://www.csail.mit.edu/event/ml-tea-sources-overconfidence-language-model-performance-contamination-adaptivity-and-beyond" target="_blank" onclick="event.stopPropagation()">ML Tea: Sources of overconfidence in language model performance: contamination, adaptivity, and beyond / Modeling mouse development using flows on trees</a><span class="univ-label">MIT</span><span class="date-label">May 04</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">An MIT CSAIL ML Tea talk examines sources of overconfidence in language model performance evaluation, including data contamination, adaptivity, and benchmark staleness, alongside a second talk on modeling mouse development.</div><div class="detail-meta">Published: May 04, 2026 &middot; Crawled: July 18, 2026</div><div class="detail-link"><a href="https://www.csail.mit.edu/event/ml-tea-sources-overconfidence-language-model-performance-contamination-adaptivity-and-beyond" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="r1" data-title="Terahertz Imaging Brings New Precision to Burn Care" data-university="Stony Brook University" data-summary="Stony Brook researchers are developing a handheld terahertz imaging device to more accurately assess burn severity, using AI and machine learning to interpret imaging data and improve diagnostic accur" data-topics="" data-themes="Biomedical AI|Computer Vision" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://news.stonybrook.edu/university/terahertz-imaging-brings-new-precision-to-burn-care/" target="_blank" onclick="event.stopPropagation()">Terahertz Imaging Brings New Precision to Burn Care</a><span class="univ-label">Stony Brook University</span><span class="date-label">May 04</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">Stony Brook researchers are developing a handheld terahertz imaging device to more accurately assess burn severity, using AI and machine learning to interpret imaging data and improve diagnostic accuracy from 60% to 90-98%.</div><div class="detail-meta">Published: May 04, 2026 &middot; Crawled: July 18, 2026</div><div class="detail-link"><a href="https://news.stonybrook.edu/university/terahertz-imaging-brings-new-precision-to-burn-care/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="lab" data-title="Startup Archives - SRI" data-university="SRI International" data-summary="An SRI International startup-news archive listing multiple spinouts and ventures, several of which apply AI: Encounter AI&#x27;s voice technology for drive-throughs, Lisa Health&#x27;s AI- and wearable-sensor-b" data-topics="" data-themes="NLP &amp; LLMs|Biomedical AI|Robotics" onclick="toggleDetail(this)"><span class="cat-dot dot-lab"></span><a class="headline-link" href="https://www.sri.com/category/press/startup/" target="_blank" onclick="event.stopPropagation()">Startup Archives - SRI</a><span class="univ-label">SRI International</span><span class="date-label">May 04</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="lab"><div class="summary">An SRI International startup-news archive listing multiple spinouts and ventures, several of which apply AI: Encounter AI's voice technology for drive-throughs, Lisa Health's AI- and wearable-sensor-based menopause app, alongside non-AI items like surgical teleoperation and encryption startups.</div><div class="detail-meta">Published: May 04, 2026 &middot; Crawled: July 18, 2026</div><div class="detail-link"><a href="https://www.sri.com/category/press/startup/" target="_blank">Read full article &rarr;</a></div></div><div class="article-row" data-category="r1" data-title="The Computational Landscape of Sequential Learning and Inference" data-university="MIT" data-summary="MIT CSAIL PhD thesis presentation on the computational theory of sequential learning and inference, covering inference-time alignment with imperfect process verifiers, limits of supervised fine-tuning" data-topics="" data-themes="General / Other" onclick="toggleDetail(this)"><span class="cat-dot dot-r1"></span><a class="headline-link" href="https://www.csail.mit.edu/event/computational-landscape-sequential-learning-and-inference" target="_blank" onclick="event.stopPropagation()">The Computational Landscape of Sequential Learning and Inference</a><span class="univ-label">MIT</span><span class="date-label">May 04</span><span class="chevron">&#9654;</span></div><div class="article-detail" data-category="r1"><div class="summary">MIT CSAIL PhD thesis presentation on the computational theory of sequential learning and inference, covering inference-time alignment with imperfect process verifiers, limits of supervised fine-tuning with misspecified experts, and minimal regression oracles for reinforcement learning in Markov...</div><div class="detail-meta">Published: May 04, 2026 &middot; Crawled: July 18, 2026</div><div class="detail-link"><a href="https://www.csail.mit.edu/event/computational-landscape-sequential-learning-and-inference" target="_blank">Read full article &rarr;</a></div></div><button class="show-more-btn" onclick="toggleMore(this)" data-expanded="false" data-show-text="Show 1 more" data-hide-text="Show fewer">Show 1 more</button></div>
+
+
+    <div class="footer">
+        <a href="../index.html">Today</a> &middot;
+        <a href="index.html">Archive</a> &middot;
+        <a href="../analytics.html">Analytics</a> &middot;
+        <a href="../how_it_works.html">How It Works</a> &middot;
+        <a href="https://github.com/tyson-swetnam/webcrawler" target="_blank">GitHub</a>
+        &nbsp;|&nbsp; 379 sources &middot; Updated 10:57 PM
+    </div>
+<script>
+function switchTab(cat) {
+    var btns = document.querySelectorAll('.tab-btn');
+    btns.forEach(function(b) { b.classList.toggle('active', b.getAttribute('data-tab') === cat); });
+
+    // Handle Top News section visibility
+    var topSection = document.getElementById('top-news-section');
+    var articleList = document.querySelector('.article-list');
+
+    if (cat === 'top') {
+        if (topSection) topSection.classList.add('active');
+        if (articleList) articleList.style.display = 'none';
+        return;
+    } else {
+        if (topSection) topSection.classList.remove('active');
+        if (articleList) articleList.style.removeProperty('display');
+    }
+
+    var MAX_VISIBLE = 25;
+    var rows = document.querySelectorAll('.article-row');
+    var details = document.querySelectorAll('.article-detail');
+
+    // Count matching articles for this tab
+    var matchCount = 0;
+    rows.forEach(function(r) {
+        if (cat === 'all' || r.getAttribute('data-category') === cat) matchCount++;
+    });
+
+    // Show/hide rows with per-tab overflow logic
+    var visibleIndex = 0;
+    rows.forEach(function(r) {
+        var match = (cat === 'all' || r.getAttribute('data-category') === cat);
+        if (match) {
+            if (matchCount <= MAX_VISIBLE || visibleIndex < MAX_VISIBLE) {
+                r.style.removeProperty('display');
+                r.classList.remove('tab-hidden');
+            } else {
+                r.style.display = 'none';
+                r.classList.add('tab-hidden');
+                r.classList.remove('expanded');
+            }
+            visibleIndex++;
+        } else {
+            r.style.display = 'none';
+            r.classList.remove('expanded');
+            r.classList.remove('tab-hidden');
+        }
+    });
+    details.forEach(function(d) {
+        var match = (cat === 'all' || d.getAttribute('data-category') === cat);
+        if (!match) {
+            d.classList.remove('open');
+            d.style.display = 'none';
+        } else {
+            d.style.removeProperty('display');
+        }
+    });
+
+    // Show-more button: only if this tab has more than MAX_VISIBLE articles
+    var btn = document.querySelector('.show-more-btn');
+    if (btn) {
+        var overflow = matchCount - MAX_VISIBLE;
+        if (overflow > 0) {
+            btn.style.display = '';
+            btn.setAttribute('data-expanded', 'false');
+            btn.setAttribute('data-show-text', 'Show ' + overflow + ' more');
+            btn.setAttribute('data-hide-text', 'Show fewer');
+            btn.textContent = 'Show ' + overflow + ' more';
+            btn.setAttribute('data-tab', cat);
+        } else {
+            btn.style.display = 'none';
+        }
+    }
+}
+function toggleDetail(row) {
+    var detail = row.nextElementSibling;
+    if (detail && detail.classList.contains('article-detail')) {
+        var isOpen = detail.classList.contains('open');
+        detail.classList.toggle('open');
+        row.classList.toggle('expanded');
+    }
+}
+function toggleMore(btn) {
+    var showing = btn.getAttribute('data-expanded') === 'true';
+    var hidden = document.querySelectorAll('.article-row.tab-hidden');
+    hidden.forEach(function(el) {
+        if (showing) {
+            el.style.display = 'none';
+            // Collapse any open detail panels
+            var next = el.nextElementSibling;
+            if (next && next.classList.contains('article-detail')) {
+                next.classList.remove('open');
+                el.classList.remove('expanded');
+            }
+        } else {
+            el.style.removeProperty('display');
+        }
+    });
+    btn.setAttribute('data-expanded', showing ? 'false' : 'true');
+    btn.textContent = showing ? btn.getAttribute('data-show-text') : btn.getAttribute('data-hide-text');
+}
+// Apply overflow logic on initial page load
+(function() {
+    var activeBtn = document.querySelector('.tab-btn.active');
+    if (activeBtn) switchTab(activeBtn.getAttribute('data-tab'));
+})();
+
+// ── Client-side article search filter ──
+function filterArticles(query) {
+    var q = query.toLowerCase().trim();
+    var rows = document.querySelectorAll('.article-row');
+    var details = document.querySelectorAll('.article-detail');
+    var btn = document.querySelector('.show-more-btn');
+    var clearBtn = document.getElementById('clear-search');
+
+    if (clearBtn) clearBtn.style.display = q ? '' : 'none';
+
+    if (!q) {
+        // Re-apply current tab filter
+        var activeBtn = document.querySelector('.tab-btn.active');
+        if (activeBtn) switchTab(activeBtn.getAttribute('data-tab'));
+        return;
+    }
+
+    // Hide show-more button during search
+    if (btn) btn.style.display = 'none';
+
+    var matchCount = 0;
+    rows.forEach(function(r, i) {
+        var title = (r.getAttribute('data-title') || '').toLowerCase();
+        var univ = (r.getAttribute('data-university') || '').toLowerCase();
+        var summary = (r.getAttribute('data-summary') || '').toLowerCase();
+        var topics = (r.getAttribute('data-topics') || '').toLowerCase();
+        var haystack = title + ' ' + univ + ' ' + summary + ' ' + topics;
+        var match = haystack.indexOf(q) !== -1;
+
+        r.style.display = match ? '' : 'none';
+        r.classList.remove('tab-hidden');
+        if (!match) r.classList.remove('expanded');
+        if (match) matchCount++;
+
+        // Also hide/show corresponding detail panel
+        var detail = r.nextElementSibling;
+        if (detail && detail.classList.contains('article-detail')) {
+            if (!match) {
+                detail.classList.remove('open');
+                detail.style.display = 'none';
+            } else {
+                detail.style.removeProperty('display');
+            }
+        }
+    });
+
+    // Also hide Top News section during search
+    var topSection = document.getElementById('top-news-section');
+    if (topSection) topSection.classList.remove('active');
+    var articleList = document.querySelector('.article-list');
+    if (articleList) articleList.style.removeProperty('display');
+}
+
+function clearSearch() {
+    var input = document.getElementById('article-search');
+    if (input) { input.value = ''; input.focus(); }
+    filterArticles('');
+}
+
+(function() {
+    var input = document.getElementById('article-search');
+    if (!input) return;
+    var timer;
+    input.addEventListener('input', function() {
+        clearTimeout(timer);
+        timer = setTimeout(function() { filterArticles(input.value); }, 150);
+    });
+})();
+</script>
+</body>
+</html>
