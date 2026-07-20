@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-20T17:09:48",
+  "generated_at": "2026-07-20T21:59:21",
   "picks": [
     {
       "rank": 1,
       "article_id": 35035,
-      "editorial_note": "DARPA and the U.S. Air Force successfully flew an AI agent autonomously controlling a modified F-16 under the VENOM program, a landmark demonstration that moves autonomous air combat from simulation to live flight.",
+      "editorial_note": "DARPA and the Air Force flew an AI agent in autonomous control of an F-16, a major real-world milestone toward scalable autonomous air combat and a signal of how fast military AI autonomy is advancing.",
       "impact_category": "Scientific Breakthrough",
       "title": "DARPA and U.S. Air Force fly AI-controlled F-16, paving the way for autonomous air combat",
       "url": "https://www.darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
@@ -14,8 +14,8 @@
     {
       "rank": 2,
       "article_id": 30941,
-      "editorial_note": "Berkeley Lab's American Science Cloud, unveiled under DOE's national Genesis Mission, federates data, models, and HPC resources across the national lab system \u2014 a major piece of government AI infrastructure with implications for research nationwide.",
-      "impact_category": "Strategic Partnership",
+      "editorial_note": "Berkeley Lab detailed DOE's American Science Cloud, a federated national infrastructure unifying data, models, and HPC resources under the Genesis Mission \u2014 a foundational policy move that will shape how U.S. national labs do AI research for years.",
+      "impact_category": "Policy Impact",
       "title": "How the Genesis Mission\u2019s American Science Cloud Advances Innovation",
       "url": "https://newscenter.lbl.gov/2026/07/15/how-the-genesis-missions-american-science-cloud-advances-innovation/",
       "university": "Lawrence Berkeley National Laboratory",
@@ -24,7 +24,7 @@
     {
       "rank": 3,
       "article_id": 32957,
-      "editorial_note": "UCSF Health's new Converge accelerator, backed by venture firms Kleiner Perkins and Doerr Capital, embeds startups directly inside a live academic medical center to co-develop clinical AI \u2014 a notable new model for translating research into deployed healthcare AI.",
+      "editorial_note": "UCSF Health teamed with top-tier VCs Kleiner Perkins and Doerr Capital to launch an AI accelerator embedded directly in a live clinical environment, a novel model for turning healthcare AI research into deployed tools.",
       "impact_category": "Strategic Partnership",
       "title": "UCSF Health Partners to Launch New Model to Build Healthcare AI",
       "url": "https://www.ucsf.edu/news/2026/07/432211/ucsf-health-partners-launch-new-model-build-healthcare-ai",
@@ -34,7 +34,7 @@
     {
       "rank": 4,
       "article_id": 31382,
-      "editorial_note": "Cambridge's Whittle Laboratory convened government, industry, and research leaders to chart an AI-driven revival of UK aerospace, energy, and defence manufacturing \u2014 a high-profile signal of national industrial strategy tied to AI.",
+      "editorial_note": "Cambridge's Whittle Laboratory convened government, industry, and research leaders to chart an AI-driven revival of UK aerospace, energy, and defence manufacturing \u2014 a national industrial strategy summit with real policy weight.",
       "impact_category": "Policy Impact",
       "title": "Landmark summit at Cambridge's new Whittle Laboratory aims to reignite Britain's industrial engine in aerospace, energy and defence",
       "url": "https://www.cam.ac.uk/news/landmark-summit-at-cambridges-new-whittle-laboratory-aims-to-reignite-britains-industrial-engine-in",
@@ -44,7 +44,7 @@
     {
       "rank": 5,
       "article_id": 35009,
-      "editorial_note": "Cambridge and UC Santa Barbara researchers proved mathematically that certain problems are fundamentally unlearnable by any AI system regardless of data volume, a genuine theoretical breakthrough clarifying the limits of machine learning.",
+      "editorial_note": "Cambridge and UC Santa Barbara researchers proved certain problems are fundamentally unlearnable by any AI system regardless of data, a rare theoretical result that reframes what we should expect AI can ever achieve.",
       "impact_category": "Scientific Breakthrough",
       "title": "Testing the limits of what\u2019s possible (and what isn\u2019t) with AI",
       "url": "https://www.cam.ac.uk/research/news/testing-the-limits-of-whats-possible-and-what-isnt-with-ai",
@@ -53,28 +53,8 @@
     },
     {
       "rank": 6,
-      "article_id": 35366,
-      "editorial_note": "The National Academies convened an international consensus study on how AI-enabled tools are simultaneously accelerating biotechnology research and raising biosecurity risks \u2014 a significant policy effort shaping how AI is governed at the intersection of science and national security.",
-      "impact_category": "Policy Impact",
-      "title": "Strengthening Preparedness Against Novel Biological Threat Agents Enabled Through Artificial Intelligence and Other Emerging Technologies",
-      "url": "https://www.nationalacademies.org/projects/CHPP-LSB-25-04/event/47072",
-      "university": "National Academies",
-      "published_date": "2026-07-15"
-    },
-    {
-      "rank": 7,
-      "article_id": 37508,
-      "editorial_note": "CMU's Software Engineering Institute built frameworks for trust and assurance in AI-enabled lethal autonomous weapons under a Department of War directive, directly shaping how the military governs autonomous weapons AI.",
-      "impact_category": "Policy Impact",
-      "title": "Advancing AI for Mission Success | CMU Software Engineering Institute",
-      "url": "https://www.sei.cmu.edu/annual-reviews/2025-year-in-review/advancing-ai-for-mission-success/",
-      "university": "CMU Software Engineering Institute",
-      "published_date": "2026-07-14"
-    },
-    {
-      "rank": 8,
       "article_id": 33135,
-      "editorial_note": "Chulalongkorn University signed an MoU with NVIDIA and launched the Chula AI Center at a major symposium, a significant industry-academia partnership expanding AI research and talent development in Southeast Asia.",
+      "editorial_note": "Chulalongkorn University signed an MoU with NVIDIA and launched the Chula AI Center, a significant international academia-industry partnership expanding AI research and talent development in Southeast Asia.",
       "impact_category": "Strategic Partnership",
       "title": "\u0e08\u0e38\u0e2c\u0e32\u0e2f \u0e08\u0e31\u0e14\u0e07\u0e32\u0e19 CU \u00d7 NVAITC Symposium 2026 \u0e25\u0e07\u0e19\u0e32\u0e21 MoU \u0e40\u0e1b\u0e34\u0e14\u0e15\u0e31\u0e27 Chula AI Center",
       "url": "https://www.chula.ac.th/news/417657/",
@@ -82,9 +62,19 @@
       "published_date": "2026-07-16"
     },
     {
-      "rank": 9,
+      "rank": 7,
+      "article_id": 35366,
+      "editorial_note": "The National Academies convened an international consensus study on how AI is lowering barriers to biological threats, directly shaping forthcoming biosecurity policy and countermeasure strategy.",
+      "impact_category": "Policy Impact",
+      "title": "Strengthening Preparedness Against Novel Biological Threat Agents Enabled Through Artificial Intelligence and Other Emerging Technologies",
+      "url": "https://www.nationalacademies.org/projects/CHPP-LSB-25-04/event/47072",
+      "university": "National Academies",
+      "published_date": "2026-07-15"
+    },
+    {
+      "rank": 8,
       "article_id": 30565,
-      "editorial_note": "A major philanthropic gift from alumnus Parker Petit will fund Georgia Tech's new AI-Driven Health Innovation Center, a substantial investment aimed at applying AI to disease prediction and treatment.",
+      "editorial_note": "A major alumnus philanthropic commitment is funding Georgia Tech's new Petit Center for AI-Driven Health Innovation, a substantial capital investment aimed at using AI to predict and treat disease.",
       "impact_category": "Major Funding",
       "title": "Georgia Tech Receives Commitment to Launch New AI-Driven Health Innovation Center",
       "url": "https://news.gatech.edu/news/2026/07/16/georgia-tech-receives-commitment-launch-new-ai-driven-health-innovation-center",
@@ -92,13 +82,23 @@
       "published_date": "2026-07-16"
     },
     {
-      "rank": 10,
+      "rank": 9,
       "article_id": 30321,
-      "editorial_note": "A $2.7 million ARPA-E grant will fund Iowa State and Ames National Laboratory's MAGNUMS project, which pairs machine learning with advanced chemistry to discover stronger, more sustainable magnet materials.",
+      "editorial_note": "A $2.7 million ARPA-E grant will let Iowa State and Ames Lab use machine learning to accelerate discovery of stronger, more sustainable magnet materials, a concrete federal bet on AI-driven materials science.",
       "impact_category": "Major Funding",
       "title": "AI-powered hunt for stronger magnets earns Iowa State and Ames Lab $2.7 million grant",
       "url": "https://www.ameslab.gov/news/ai-powered-hunt-for-stronger-magnets-earns-iowa-state-and-ames-lab-2-7-million-grant",
       "university": "Ames Laboratory",
+      "published_date": "2026-07-14"
+    },
+    {
+      "rank": 10,
+      "article_id": 32298,
+      "editorial_note": "MIT CSAIL and Toyota Research Institute's SceneSmith uses AI agents to generate diverse 3D training environments for robots, addressing one of robotics' biggest bottlenecks \u2014 realistic, varied training data.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "AI agents create virtual playgrounds to help robots get crucial training data",
+      "url": "https://www.eecs.mit.edu/ai-agents-create-virtual-playgrounds-to-help-robots-get-crucial-training-data/",
+      "university": "MIT",
       "published_date": "2026-07-14"
     }
   ]
