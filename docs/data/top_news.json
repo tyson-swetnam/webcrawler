@@ -1,20 +1,10 @@
 {
-  "generated_at": "2026-07-22T16:36:35",
+  "generated_at": "2026-07-22T22:02:57",
   "picks": [
     {
       "rank": 1,
-      "article_id": 43758,
-      "editorial_note": "NASA's formal entry into the Genesis Mission \u2014 a whole-of-government initiative launched by executive order with 15+ federal agencies \u2014 signals the most significant coordinated push yet to embed AI across the U.S. federal scientific enterprise.",
-      "impact_category": "Policy Impact",
-      "title": "NASA Joins Genesis Mission to Accelerate AI-Driven Discovery - NASA",
-      "url": "https://www.nasa.gov/news-release/nasa-joins-genesis-mission-to-accelerate-ai-driven-discovery/",
-      "university": "NASA Glenn Research Center",
-      "published_date": "2026-07-22"
-    },
-    {
-      "rank": 2,
       "article_id": 43637,
-      "editorial_note": "Berkeley Lab's role leading 13 Genesis Mission projects and partnering on 30 more makes it the single largest institutional beneficiary of the DOE initiative disclosed this week, underscoring the scale of federal investment in AI-for-science infrastructure.",
+      "editorial_note": "Berkeley Lab's role leading 13 projects and partnering on 30+ more makes it the single largest node in DOE's new Genesis Mission, signaling where the federal government is placing its biggest bets on AI-for-science.",
       "impact_category": "Major Funding",
       "title": "Berkeley Lab to Lead 13 New Genesis Mission AI Projects",
       "url": "https://newscenter.lbl.gov/2026/07/22/berkeley-lab-to-lead-13-new-genesis-mission-ai-projects/",
@@ -22,39 +12,19 @@
       "published_date": "2026-07-22"
     },
     {
-      "rank": 3,
-      "article_id": 43630,
-      "editorial_note": "RIKEN's AGIS program to build generative AI foundation models purpose-built for scientific research represents a distinct international bet on AI-native science infrastructure, outside the U.S. Genesis Mission framework.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "TRIP Headquarters Advanced General Intelligence for Science Program (AGIS)",
-      "url": "https://www.riken.jp/en/research/labs/trip/agis/",
-      "university": "RIKEN",
+      "rank": 2,
+      "article_id": 43758,
+      "editorial_note": "NASA's formal entry into the whole-of-government Genesis Mission, alongside 15+ federal agencies, marks a significant expansion of the executive-order-driven initiative beyond DOE into broader federal science policy.",
+      "impact_category": "Policy Impact",
+      "title": "NASA Joins Genesis Mission to Accelerate AI-Driven Discovery - NASA",
+      "url": "https://www.nasa.gov/news-release/nasa-joins-genesis-mission-to-accelerate-ai-driven-discovery/",
+      "university": "NASA Glenn Research Center",
       "published_date": "2026-07-22"
     },
     {
-      "rank": 4,
-      "article_id": 43849,
-      "editorial_note": "CuspAI's \u00a3330 million raise at a \u00a32 billion valuation, with an Imperial College scientist as Chief Scientific Officer, is one of the largest funding events of the week for AI-driven materials discovery, blending academic expertise with serious private capital.",
-      "impact_category": "Major Funding",
-      "title": "Imperial expert leads science at \u00a32 billion AI materials company CuspAI",
-      "url": "https://www.imperial.ac.uk/news/articles/engineering/materials/2026/imperial-expert-leads-science-at-2-billion-ai-materials-company-cuspai/",
-      "university": "Imperial College London",
-      "published_date": "2026-07-21"
-    },
-    {
-      "rank": 5,
-      "article_id": 35035,
-      "editorial_note": "DARPA and the U.S. Air Force flying an AI-controlled F-16 marks a concrete technical milestone toward autonomous air combat, with implications reaching well beyond the lab into defense policy and military strategy.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "DARPA and U.S. Air Force fly AI-controlled F-16, paving the way for autonomous air combat",
-      "url": "https://www.darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
-      "university": "DARPA",
-      "published_date": "2026-07-16"
-    },
-    {
-      "rank": 6,
+      "rank": 3,
       "article_id": 43576,
-      "editorial_note": "Sandia's selection to lead six Genesis Mission projects and partner on 17 others shows the depth of national-lab involvement in the initiative, spanning AI, high-performance computing, and quantum research.",
+      "editorial_note": "Sandia's mandate to lead six projects and partner on 17 others makes it one of the largest single national-lab commitments in the Genesis Mission rollout, spanning AI, HPC, and quantum research.",
       "impact_category": "Major Funding",
       "title": "Sandia selected to lead six Genesis Mission projects, partner on 17 others",
       "url": "https://newsreleases.sandia.gov/sandia-selected-to-lead-six-genesis-mission-projects-partner-on-17-others/",
@@ -62,9 +32,29 @@
       "published_date": "2026-07-22"
     },
     {
-      "rank": 7,
+      "rank": 4,
+      "article_id": 35035,
+      "editorial_note": "DARPA and the Air Force flying an AI-controlled F-16 is a concrete operational milestone toward autonomous air combat, demonstrating AI moving from research into real-world defense systems.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "DARPA and U.S. Air Force fly AI-controlled F-16, paving the way for autonomous air combat",
+      "url": "https://www.darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
+      "university": "DARPA",
+      "published_date": "2026-07-16"
+    },
+    {
+      "rank": 5,
+      "article_id": 43849,
+      "editorial_note": "CuspAI's \u00a3330 million raise at a \u00a32 billion valuation, with an Imperial College scientist as Chief Scientific Officer, underscores the scale of private capital flowing into AI-driven materials discovery.",
+      "impact_category": "Major Funding",
+      "title": "Imperial expert leads science at \u00a32 billion AI materials company CuspAI",
+      "url": "https://www.imperial.ac.uk/news/articles/engineering/materials/2026/imperial-expert-leads-science-at-2-billion-ai-materials-company-cuspai/",
+      "university": "Imperial College London",
+      "published_date": "2026-07-21"
+    },
+    {
+      "rank": 6,
       "article_id": 43730,
-      "editorial_note": "USC's national leadership role developing AI turbulence-prediction models has direct cross-sector applications in energy and transportation, illustrating how the Genesis Mission is translating into concrete scientific tools.",
+      "editorial_note": "USC's national lead role developing AI turbulence models with cross-sector applications in energy and transportation shows the Genesis Mission funding translating into concrete scientific research programs.",
       "impact_category": "Scientific Breakthrough",
       "title": "USC leads national AI research project to accelerate scientific discovery",
       "url": "https://today.usc.edu/usc-leads-national-ai-research-project-to-accelerate-scientific-discovery/",
@@ -72,9 +62,9 @@
       "published_date": "2026-07-22"
     },
     {
-      "rank": 8,
+      "rank": 7,
       "article_id": 43714,
-      "editorial_note": "NSF's $83 million investment in AI-ready data infrastructure is a major, independent funding commitment that strengthens the research backbone supporting AI-driven science across many institutions at once.",
+      "editorial_note": "NSF's $83 million investment in AI-ready data infrastructure is a major, separate federal commitment reinforcing the research backbone that the broader Genesis Mission initiative depends on.",
       "impact_category": "Major Funding",
       "title": "NSF announces $83M investment in integrated data systems and services to advance AI-driven science and strengthen U.S. research infrastructure",
       "url": "https://www.nsf.gov/news/nsf-announces-83m-investment-integrated-data-systems",
@@ -82,23 +72,33 @@
       "published_date": "2026-07-22"
     },
     {
-      "rank": 9,
-      "article_id": 43586,
-      "editorial_note": "Fermilab's Genesis Mission awards, including AI/ML reconstruction work for particle physics, demonstrate how the initiative is accelerating fundamental science at premier physics facilities.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "U.S. Department of Energy invests in Fermilab projects to accelerate AI-enabled scientific discovery",
-      "url": "https://news.fnal.gov/2026/07/u-s-department-of-energy-invests-in-fermilab-projects-to-accelerate-ai-enabled-scientific-discovery/",
-      "university": "Fermi National Accelerator Laboratory",
-      "published_date": "2026-07-22"
-    },
-    {
-      "rank": 10,
+      "rank": 8,
       "article_id": 31382,
-      "editorial_note": "The Frank Whittle Summit at Cambridge convened UK government, industry, and research leaders to chart an AI-driven industrial strategy for aerospace, energy, and defence, reflecting a significant national policy and partnership push outside the U.S.",
+      "editorial_note": "The Frank Whittle Summit at Cambridge brought together UK government, industry, and research leaders to chart an AI-driven industrial strategy for aerospace, energy, and defence \u2014 a notable cross-sector policy and partnership moment for Britain.",
       "impact_category": "Strategic Partnership",
       "title": "Landmark summit at Cambridge's new Whittle Laboratory aims to reignite Britain's industrial engine in aerospace, energy and defence",
       "url": "https://www.cam.ac.uk/news/landmark-summit-at-cambridges-new-whittle-laboratory-aims-to-reignite-britains-industrial-engine-in",
       "university": "University of Cambridge",
+      "published_date": "2026-07-16"
+    },
+    {
+      "rank": 9,
+      "article_id": 43630,
+      "editorial_note": "RIKEN's new AGIS program to build generative AI foundation models and agents specifically for scientific research represents a major international bet on AI-native science infrastructure, paralleling the U.S. Genesis Mission.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "TRIP Headquarters Advanced General Intelligence for Science Program (AGIS)",
+      "url": "https://www.riken.jp/en/research/labs/trip/agis/",
+      "university": "RIKEN",
+      "published_date": "2026-07-22"
+    },
+    {
+      "rank": 10,
+      "article_id": 33135,
+      "editorial_note": "Chulalongkorn University's MoU with NVIDIA and launch of the Chula AI Center reflects deepening industry-academia ties driving AI talent and research development in Southeast Asia.",
+      "impact_category": "Strategic Partnership",
+      "title": "\u0e08\u0e38\u0e2c\u0e32\u0e2f \u0e08\u0e31\u0e14\u0e07\u0e32\u0e19 CU \u00d7 NVAITC Symposium 2026 \u0e25\u0e07\u0e19\u0e32\u0e21 MoU \u0e40\u0e1b\u0e34\u0e14\u0e15\u0e31\u0e27 Chula AI Center",
+      "url": "https://www.chula.ac.th/news/417657/",
+      "university": "Chulalongkorn University",
       "published_date": "2026-07-16"
     }
   ]
