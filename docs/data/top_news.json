@@ -1,20 +1,10 @@
 {
-  "generated_at": "2026-07-23T11:07:45",
+  "generated_at": "2026-07-23T16:53:32",
   "picks": [
     {
       "rank": 1,
-      "article_id": 43637,
-      "editorial_note": "Berkeley Lab's role leading 13 projects and partnering on 30+ more makes it the single largest node in DOE's new Genesis Mission, the week's dominant story tying federal AI investment to national-lab science at scale.",
-      "impact_category": "Major Funding",
-      "title": "Berkeley Lab to Lead 13 New Genesis Mission AI Projects",
-      "url": "https://newscenter.lbl.gov/2026/07/22/berkeley-lab-to-lead-13-new-genesis-mission-ai-projects/",
-      "university": "Lawrence Berkeley National Laboratory",
-      "published_date": "2026-07-22"
-    },
-    {
-      "rank": 2,
       "article_id": 43758,
-      "editorial_note": "NASA's entry brings the Genesis Mission's reach to 15+ federal agencies under a whole-of-government executive order, signaling this is a durable national AI-for-science policy shift, not a one-off DOE grant round.",
+      "editorial_note": "NASA's formal entry into the Genesis Mission \u2014 a whole-of-government initiative launched by executive order and now spanning 15+ federal agencies \u2014 signals the broadest national-policy commitment to AI-accelerated science in this batch, reshaping how federal research will be funded and coordinated for years.",
       "impact_category": "Policy Impact",
       "title": "NASA Joins Genesis Mission to Accelerate AI-Driven Discovery - NASA",
       "url": "https://www.nasa.gov/news-release/nasa-joins-genesis-mission-to-accelerate-ai-driven-discovery/",
@@ -22,19 +12,39 @@
       "published_date": "2026-07-22"
     },
     {
+      "rank": 2,
+      "article_id": 43637,
+      "editorial_note": "Berkeley Lab's role leading 13 Genesis Mission projects and partnering on 30+ more makes it the single largest institutional stake in the DOE's flagship AI-for-science program revealed this week, concentrating major federal investment in one place.",
+      "impact_category": "Major Funding",
+      "title": "Berkeley Lab to Lead 13 New Genesis Mission AI Projects",
+      "url": "https://newscenter.lbl.gov/2026/07/22/berkeley-lab-to-lead-13-new-genesis-mission-ai-projects/",
+      "university": "Lawrence Berkeley National Laboratory",
+      "published_date": "2026-07-22"
+    },
+    {
       "rank": 3,
-      "article_id": 43630,
-      "editorial_note": "RIKEN's AGIS program to build generative AI foundation models purpose-built for scientific discovery is a distinct, ambitious research bet outside the U.S. Genesis Mission wave, with the week's highest scientific-impact score.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "TRIP Headquarters Advanced General Intelligence for Science Program (AGIS)",
-      "url": "https://www.riken.jp/en/research/labs/trip/agis/",
-      "university": "RIKEN",
+      "article_id": 44125,
+      "editorial_note": "Oak Ridge National Lab leading nine Genesis Mission projects and contributing to 32 others represents another top-tier concentration of DOE AI funding, reinforcing ORNL's position as a national supercomputing and AI hub.",
+      "impact_category": "Major Funding",
+      "title": "Department of Energy selects ORNL to lead nine Genesis Mission projects | ORNL",
+      "url": "https://www.ornl.gov/news/department-energy-selects-ornl-lead-nine-genesis-mission-projects",
+      "university": "Oak Ridge National Laboratory",
       "published_date": "2026-07-22"
     },
     {
       "rank": 4,
+      "article_id": 43576,
+      "editorial_note": "Sandia's lead role on six Genesis Mission projects plus partnership on 17 more ties together AI, HPC, and quantum computing at a major weapons/energy lab, illustrating how deeply the initiative reaches into national security research infrastructure.",
+      "impact_category": "Strategic Partnership",
+      "title": "Sandia selected to lead six Genesis Mission projects, partner on 17 others",
+      "url": "https://newsreleases.sandia.gov/sandia-selected-to-lead-six-genesis-mission-projects-partner-on-17-others/",
+      "university": "Sandia National Laboratories",
+      "published_date": "2026-07-22"
+    },
+    {
+      "rank": 5,
       "article_id": 43849,
-      "editorial_note": "CuspAI's \u00a3330M raise at a \u00a32B valuation, with an Imperial College scientist as CSO, shows AI-driven materials discovery attracting serious private capital alongside the public funding surge elsewhere this week.",
+      "editorial_note": "CuspAI's \u00a3330 million raise at a \u00a32 billion valuation, with an Imperial College London scientist as Chief Scientific Officer, is a rare startup-scale funding event in this batch and shows academic AI materials expertise translating directly into major private capital.",
       "impact_category": "Major Funding",
       "title": "Imperial expert leads science at \u00a32 billion AI materials company CuspAI",
       "url": "https://www.imperial.ac.uk/news/articles/engineering/materials/2026/imperial-expert-leads-science-at-2-billion-ai-materials-company-cuspai/",
@@ -42,63 +52,53 @@
       "published_date": "2026-07-21"
     },
     {
-      "rank": 5,
-      "article_id": 43730,
-      "editorial_note": "USC's national team developing new AI turbulence-prediction models under Genesis Mission targets fundamental physics with cross-cutting applications in energy and transportation.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "USC leads national AI research project to accelerate scientific discovery",
-      "url": "https://today.usc.edu/usc-leads-national-ai-research-project-to-accelerate-scientific-discovery/",
-      "university": "University of Southern California",
-      "published_date": "2026-07-22"
-    },
-    {
       "rank": 6,
-      "article_id": 43754,
-      "editorial_note": "Florida State's four Genesis Mission projects tackle fusion-energy superconductors and quantum error correction, pairing AI methods with hard science problems central to future energy infrastructure.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Florida State University secures Department of Energy Genesis Mission awards",
-      "url": "https://news.fsu.edu/news/science-technology/2026/07/22/florida-state-university-secures-department-of-energy-genesis-mission-awards/",
-      "university": "Florida State University",
-      "published_date": "2026-07-22"
+      "article_id": 44128,
+      "editorial_note": "NSF's $20 million award to Boston University to help build a national 'cloud lab' network of 20 AI-infused remote-experiment nodes creates shared research infrastructure that will benefit institutions well beyond BU.",
+      "impact_category": "Major Funding",
+      "title": "NSF Awards Boston University $20 Million to Help Create National \u201cCloud Lab\u201d Network",
+      "url": "https://www.bu.edu/articles/2026/nsf-awards-20-million-establish-national-cloud-lab-network/",
+      "university": "Boston University",
+      "published_date": "2026-07-23"
     },
     {
       "rank": 7,
-      "article_id": 43541,
-      "editorial_note": "Iowa State's eight Genesis Mission roles illustrate how deeply the DOE initiative is drawing in land-grant research universities as core partners, not just elite labs.",
-      "impact_category": "Strategic Partnership",
-      "title": "Several Iowa State research projects selected for U.S. Department of Energy Genesis Mission",
-      "url": "https://www.news.iastate.edu/news/several-iowa-state-research-projects-selected-us-department-energy-genesis-mission",
-      "university": "Iowa State University",
+      "article_id": 43963,
+      "editorial_note": "University of Washington and Carnegie Mellon researchers, working with SLAC, are building an AI-driven data service to unify cosmology data streams \u2014 a genuine cross-institutional scientific tool with the potential to accelerate discovery across the field, not just at one lab.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "UW researchers join national effort to streamline AI-driven cosmology",
+      "url": "https://www.washington.edu/news/2026/07/22/ai-cosmology-genesis-mission/",
+      "university": "University of Washington-Seattle Campus",
       "published_date": "2026-07-22"
     },
     {
       "rank": 8,
-      "article_id": 43670,
-      "editorial_note": "SLAC's AI-driven approach to recovering critical metals from spent lithium-ion batteries links national-lab science directly to supply-chain and clean-energy priorities.",
+      "article_id": 44080,
+      "editorial_note": "Berkeley Lab's ModCon consortium is developing self-improving AI foundation models trained on DOE data and facilities \u2014 a technically ambitious effort that goes beyond typical grant-funded projects toward a new class of scientific AI infrastructure.",
       "impact_category": "Scientific Breakthrough",
-      "title": "SLAC to lead Genesis Mission AI project to recover critical metals from lithium-ion battery waste",
-      "url": "https://www6.slac.stanford.edu/news/2026-07-22-slac-lead-genesis-mission-ai-project-recover-critical-metals-lithium-ion-battery",
-      "university": "SLAC National Accelerator Laboratory",
-      "published_date": "2026-07-22"
+      "title": "Q&A: Accelerating Scientific Discovery with the Genesis Mission\u2019s ModCon",
+      "url": "https://newscenter.lbl.gov/2026/07/23/qa-accelerating-scientific-discovery-with-the-genesis-missions-modcon/",
+      "university": "Lawrence Berkeley National Laboratory",
+      "published_date": "2026-07-23"
     },
     {
       "rank": 9,
-      "article_id": 43714,
-      "editorial_note": "NSF's $83M data-infrastructure investment is a distinct, substantial funding commitment underpinning AI-ready research data nationwide, complementing but separate from the Genesis Mission awards.",
-      "impact_category": "Major Funding",
-      "title": "NSF announces $83M investment in integrated data systems and services to advance AI-driven science and strengthen U.S. research infrastructure",
-      "url": "https://www.nsf.gov/news/nsf-announces-83m-investment-integrated-data-systems",
-      "university": "National Science Foundation",
+      "article_id": 43630,
+      "editorial_note": "RIKEN's new AGIS program to build generative AI foundation models and AI agents for scientific research marks a major Japanese national push comparable in ambition to the U.S. Genesis Mission, broadening the story beyond U.S. institutions.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "TRIP Headquarters Advanced General Intelligence for Science Program (AGIS)",
+      "url": "https://www.riken.jp/en/research/labs/trip/agis/",
+      "university": "RIKEN",
       "published_date": "2026-07-22"
     },
     {
       "rank": 10,
-      "article_id": 43576,
-      "editorial_note": "Sandia's role leading six projects and partnering on 17 more shows the depth of national-lab cross-collaboration the Genesis Mission is catalyzing across the DOE complex.",
+      "article_id": 43730,
+      "editorial_note": "USC's selection to lead a national team developing AI models for turbulence prediction \u2014 with applications spanning energy and transportation \u2014 is a distinctive, high-partnership-score project illustrating tangible real-world engineering impact from the Genesis Mission.",
       "impact_category": "Strategic Partnership",
-      "title": "Sandia selected to lead six Genesis Mission projects, partner on 17 others",
-      "url": "https://newsreleases.sandia.gov/sandia-selected-to-lead-six-genesis-mission-projects-partner-on-17-others/",
-      "university": "Sandia National Laboratories",
+      "title": "USC leads national AI research project to accelerate scientific discovery",
+      "url": "https://today.usc.edu/usc-leads-national-ai-research-project-to-accelerate-scientific-discovery/",
+      "university": "University of Southern California",
       "published_date": "2026-07-22"
     }
   ]
