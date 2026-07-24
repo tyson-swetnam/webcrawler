@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-24T11:03:08",
+  "generated_at": "2026-07-24T16:57:53",
   "picks": [
     {
       "rank": 1,
       "article_id": 43637,
-      "editorial_note": "Berkeley Lab's selection to lead 13 projects and partner on 30+ more makes it the single largest anchor of DOE's new Genesis Mission, the week's dominant story combining AI, supercomputing, and quantum resources across the national lab system.",
+      "editorial_note": "Berkeley Lab's role leading 13 projects and partnering on 30+ more makes it the single largest node in DOE's new Genesis Mission, signaling where the government is placing its biggest bets on AI-for-science infrastructure.",
       "impact_category": "Major Funding",
       "title": "Berkeley Lab to Lead 13 New Genesis Mission AI Projects",
       "url": "https://newscenter.lbl.gov/2026/07/22/berkeley-lab-to-lead-13-new-genesis-mission-ai-projects/",
@@ -14,7 +14,7 @@
     {
       "rank": 2,
       "article_id": 44125,
-      "editorial_note": "Oak Ridge's role leading nine Genesis Mission projects and contributing to 32 others underscores how deeply DOE is committing its flagship computing infrastructure to AI-driven science.",
+      "editorial_note": "ORNL leading nine Genesis Mission projects and contributing to 32 others cements Oak Ridge's position as a top-tier hub for AI-driven scientific computing, alongside Berkeley and Sandia.",
       "impact_category": "Major Funding",
       "title": "Department of Energy selects ORNL to lead nine Genesis Mission projects | ORNL",
       "url": "https://www.ornl.gov/news/department-energy-selects-ornl-lead-nine-genesis-mission-projects",
@@ -23,8 +23,18 @@
     },
     {
       "rank": 3,
+      "article_id": 43576,
+      "editorial_note": "Sandia's selection to lead six projects and partner on 17 more shows the Genesis Mission spreading deeply across the national lab system, not just concentrating at a handful of flagship sites.",
+      "impact_category": "Major Funding",
+      "title": "Sandia selected to lead six Genesis Mission projects, partner on 17 others",
+      "url": "https://newsreleases.sandia.gov/sandia-selected-to-lead-six-genesis-mission-projects-partner-on-17-others/",
+      "university": "Sandia National Laboratories",
+      "published_date": "2026-07-22"
+    },
+    {
+      "rank": 4,
       "article_id": 43758,
-      "editorial_note": "NASA's entry into the Genesis Mission, alongside 15+ other federal agencies, elevates the initiative from a DOE program to a genuine whole-of-government AI strategy backed by executive order.",
+      "editorial_note": "NASA joining a whole-of-government initiative launched by executive order, alongside 15+ federal agencies, marks the Genesis Mission as a durable national AI policy priority rather than a single-agency program.",
       "impact_category": "Policy Impact",
       "title": "NASA Joins Genesis Mission to Accelerate AI-Driven Discovery - NASA",
       "url": "https://www.nasa.gov/news-release/nasa-joins-genesis-mission-to-accelerate-ai-driven-discovery/",
@@ -32,9 +42,19 @@
       "published_date": "2026-07-22"
     },
     {
-      "rank": 4,
+      "rank": 5,
+      "article_id": 43722,
+      "editorial_note": "An on-record NSF leadership statement tying the agency's mission directly to the administration's AI priorities signals sustained federal policy commitment behind the hundreds of Genesis Mission university and lab awards this week.",
+      "impact_category": "Policy Impact",
+      "title": "Statement from NSF Chief of Staff Brian Stone, performing the duties of the NSF director, on advancing the Administration's AI priorities through the Genesis Mission",
+      "url": "https://www.nsf.gov/news/statement-nsf-chief-staff-brian-stone-performing-duties-nsf-1",
+      "university": "National Science Foundation",
+      "published_date": "2026-07-22"
+    },
+    {
+      "rank": 6,
       "article_id": 43849,
-      "editorial_note": "Imperial's Aron Walsh leading science at CuspAI, freshly valued at \u00a32 billion after a \u00a3330 million raise, shows real venture capital betting big on AI-driven materials discovery spun out of academic research.",
+      "editorial_note": "A \u00a3330 million raise at a \u00a32 billion valuation for an AI materials-discovery startup co-led by an Imperial College scientist shows academic AI research translating directly into major private capital.",
       "impact_category": "Major Funding",
       "title": "Imperial expert leads science at \u00a32 billion AI materials company CuspAI",
       "url": "https://www.imperial.ac.uk/news/articles/engineering/materials/2026/imperial-expert-leads-science-at-2-billion-ai-materials-company-cuspai/",
@@ -42,63 +62,43 @@
       "published_date": "2026-07-21"
     },
     {
-      "rank": 5,
-      "article_id": 43963,
-      "editorial_note": "A UW, Carnegie Mellon, and SLAC collaboration building a unified AI-driven cosmology data service represents exactly the kind of cross-institution scientific infrastructure the Genesis Mission is meant to enable.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "UW researchers join national effort to streamline AI-driven cosmology",
-      "url": "https://www.washington.edu/news/2026/07/22/ai-cosmology-genesis-mission/",
-      "university": "University of Washington-Seattle Campus",
-      "published_date": "2026-07-22"
-    },
-    {
-      "rank": 6,
-      "article_id": 43730,
-      "editorial_note": "USC's national team developing AI models to predict turbulence has broad downstream applications in energy and transportation, a notable scientific bet with wide real-world reach.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "USC leads national AI research project to accelerate scientific discovery",
-      "url": "https://today.usc.edu/usc-leads-national-ai-research-project-to-accelerate-scientific-discovery/",
-      "university": "University of Southern California",
-      "published_date": "2026-07-22"
-    },
-    {
       "rank": 7,
-      "article_id": 44128,
-      "editorial_note": "NSF's $20 million award to Boston University to help build a national 'cloud lab' network of automated, AI-infused research nodes is a major, non-Genesis-Mission investment in shared AI research infrastructure.",
-      "impact_category": "Major Funding",
-      "title": "NSF Awards Boston University $20 Million to Help Create National \u201cCloud Lab\u201d Network",
-      "url": "https://www.bu.edu/articles/2026/nsf-awards-20-million-establish-national-cloud-lab-network/",
-      "university": "Boston University",
-      "published_date": "2026-07-23"
+      "article_id": 44430,
+      "editorial_note": "EPFL, ETH Zurich, and CSCS releasing an updated fully open, multimodal large language model trained on a national supercomputer is a rare instance of a serious open alternative to closed frontier labs.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Apertus 1.5: Building the next generation of open AI infrastructure",
+      "url": "https://news.epfl.ch/news/apertus-15-building-the-next-generation-of-open--2/",
+      "university": "EPFL",
+      "published_date": "2026-07-24"
     },
     {
       "rank": 8,
-      "article_id": 44194,
-      "editorial_note": "NEURA Robotics and RWTH Aachen's roughly 3,000-square-meter facility for training humanoid and industrial robots marks a substantial academia-industry partnership pushing 'physical AI' into real deployment.",
+      "article_id": 44472,
+      "editorial_note": "TUM and MIT deepening their AI/robotics partnership with government-backed funding and reciprocal faculty exchanges strengthens a major transatlantic research pipeline in physical AI.",
       "impact_category": "Strategic Partnership",
-      "title": "A Milestone for Physical AI | RWTH Aachen University | EN",
-      "url": "https://www.rwth-aachen.de/go/id/bsmvmj?lidx=1",
-      "university": "RWTH Aachen University",
-      "published_date": "2026-07-22"
+      "title": "TUM and MIT are expanding their strategic partnership in the fields of AI and robotics. The Bavarian Ministry of Science is providing 1.6 million.",
+      "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/tum-is-expanding-its-strategic-partnership-with-mit",
+      "university": "Technical University of Munich",
+      "published_date": "2026-07-24"
     },
     {
       "rank": 9,
-      "article_id": 44026,
-      "editorial_note": "Johns Hopkins' collaboration with the FDA on a tool that detects hidden bias in medical AI training data addresses a critical real-world safety gap as clinical AI models proliferate.",
+      "article_id": 44435,
+      "editorial_note": "A new deep-learning model revealing how 3D genome architecture differs in Alzheimer's patients is a concrete scientific advance from AI applied to biomedicine, independent of the Genesis Mission funding wave.",
       "impact_category": "Scientific Breakthrough",
-      "title": "New tool detects hidden bias in medical AI",
-      "url": "https://hub.jhu.edu/2026/07/22/new-tool-detects-hidden-bias-in-medical-ai/",
-      "university": "Johns Hopkins University",
-      "published_date": "2026-07-22"
+      "title": "AI, Single-Cell Technology Reveal How 3D Genome Differs in People With Alzheimer's Disease",
+      "url": "https://www.cs.cmu.edu/news/2026/ma-alzheimers",
+      "university": "Carnegie Mellon University",
+      "published_date": "2026-07-23"
     },
     {
       "rank": 10,
-      "article_id": 43714,
-      "editorial_note": "NSF's $83 million investment in integrated data systems and services builds foundational infrastructure meant to make scientific datasets AI-ready across the research community.",
-      "impact_category": "Major Funding",
-      "title": "NSF announces $83M investment in integrated data systems and services to advance AI-driven science and strengthen U.S. research infrastructure",
-      "url": "https://www.nsf.gov/news/nsf-announces-83m-investment-integrated-data-systems",
-      "university": "National Science Foundation",
+      "article_id": 43630,
+      "editorial_note": "RIKEN's launch of a program to build generative AI foundation models and autonomous research agents for science represents a major international counterpart to the U.S. Genesis Mission effort.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "TRIP Headquarters Advanced General Intelligence for Science Program (AGIS)",
+      "url": "https://www.riken.jp/en/research/labs/trip/agis/",
+      "university": "RIKEN",
       "published_date": "2026-07-22"
     }
   ]
