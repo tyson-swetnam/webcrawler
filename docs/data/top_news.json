@@ -1,30 +1,10 @@
 {
-  "generated_at": "2026-07-25T21:52:58",
+  "generated_at": "2026-07-26T06:11:25",
   "picks": [
     {
       "rank": 1,
-      "article_id": 43637,
-      "editorial_note": "Berkeley Lab's role leading 13 Genesis Mission projects and partnering on 30+ more makes it the single largest node in DOE's new national AI-for-science initiative, signaling where the government is concentrating its AI research investment.",
-      "impact_category": "Major Funding",
-      "title": "Berkeley Lab to Lead 13 New Genesis Mission AI Projects",
-      "url": "https://newscenter.lbl.gov/2026/07/22/berkeley-lab-to-lead-13-new-genesis-mission-ai-projects/",
-      "university": "Lawrence Berkeley National Laboratory",
-      "published_date": "2026-07-22"
-    },
-    {
-      "rank": 2,
-      "article_id": 44125,
-      "editorial_note": "ORNL leading nine Genesis Mission projects and contributing to 32 others cements the national labs as the backbone of DOE's AI push, with scale rivaling Berkeley Lab's award.",
-      "impact_category": "Major Funding",
-      "title": "Department of Energy selects ORNL to lead nine Genesis Mission projects | ORNL",
-      "url": "https://www.ornl.gov/news/department-energy-selects-ornl-lead-nine-genesis-mission-projects",
-      "university": "Oak Ridge National Laboratory",
-      "published_date": "2026-07-22"
-    },
-    {
-      "rank": 3,
       "article_id": 43758,
-      "editorial_note": "NASA's entry into the Genesis Mission, alongside 15+ federal agencies under an executive order, shows the initiative expanding from a DOE program into a genuine whole-of-government AI strategy.",
+      "editorial_note": "NASA's entry into the DOE-led Genesis Mission signals a whole-of-government commitment (15+ federal agencies, launched by executive order) to AI-accelerated science \u2014 the broadest policy signal of the week.",
       "impact_category": "Policy Impact",
       "title": "NASA Joins Genesis Mission to Accelerate AI-Driven Discovery - NASA",
       "url": "https://www.nasa.gov/news-release/nasa-joins-genesis-mission-to-accelerate-ai-driven-discovery/",
@@ -32,9 +12,29 @@
       "published_date": "2026-07-22"
     },
     {
+      "rank": 2,
+      "article_id": 43637,
+      "editorial_note": "Berkeley Lab's haul of 13 lead projects plus 30+ partnerships makes it the single largest Genesis Mission award of the week, cementing a national lab as a hub for AI-driven science.",
+      "impact_category": "Major Funding",
+      "title": "Berkeley Lab to Lead 13 New Genesis Mission AI Projects",
+      "url": "https://newscenter.lbl.gov/2026/07/22/berkeley-lab-to-lead-13-new-genesis-mission-ai-projects/",
+      "university": "Lawrence Berkeley National Laboratory",
+      "published_date": "2026-07-22"
+    },
+    {
+      "rank": 3,
+      "article_id": 44125,
+      "editorial_note": "Oak Ridge National Lab leading nine projects and contributing to 32 more shows the scale at which DOE is concentrating Genesis Mission resources at its national labs.",
+      "impact_category": "Major Funding",
+      "title": "Department of Energy selects ORNL to lead nine Genesis Mission projects | ORNL",
+      "url": "https://www.ornl.gov/news/department-energy-selects-ornl-lead-nine-genesis-mission-projects",
+      "university": "Oak Ridge National Laboratory",
+      "published_date": "2026-07-22"
+    },
+    {
       "rank": 4,
       "article_id": 43576,
-      "editorial_note": "Sandia's award to lead six Genesis Mission projects and partner on 17 more further illustrates how concentrated DOE's AI-for-science funding is among a handful of national labs.",
+      "editorial_note": "Sandia's six lead projects and 17 partnerships further underscore how deeply the national lab system is being woven into the federal AI-for-science strategy.",
       "impact_category": "Major Funding",
       "title": "Sandia selected to lead six Genesis Mission projects, partner on 17 others",
       "url": "https://newsreleases.sandia.gov/sandia-selected-to-lead-six-genesis-mission-projects-partner-on-17-others/",
@@ -43,28 +43,8 @@
     },
     {
       "rank": 5,
-      "article_id": 44386,
-      "editorial_note": "Penn State's $20M NSF award to lead a national 'programmable cloud laboratory' node represents a major infrastructure investment in autonomous, AI-driven experimentation distinct from the DOE Genesis Mission funding wave.",
-      "impact_category": "Major Funding",
-      "title": "Penn State awarded $20M to lead an NSF \u2018programmable cloud laboratory\u2019 | Penn State University",
-      "url": "https://www.psu.edu/news/research/story/penn-state-awarded-20m-lead-nsf-programmable-cloud-laboratory",
-      "university": "Pennsylvania State University-Main Campus",
-      "published_date": "2026-07-23"
-    },
-    {
-      "rank": 6,
-      "article_id": 44128,
-      "editorial_note": "Boston University's matching $20M NSF award for a biotech-focused cloud lab node shows the same national automated-science network taking shape across multiple institutions.",
-      "impact_category": "Major Funding",
-      "title": "NSF Awards Boston University $20 Million to Help Create National \u201cCloud Lab\u201d Network",
-      "url": "https://www.bu.edu/articles/2026/nsf-awards-20-million-establish-national-cloud-lab-network/",
-      "university": "Boston University",
-      "published_date": "2026-07-23"
-    },
-    {
-      "rank": 7,
       "article_id": 43849,
-      "editorial_note": "Imperial's CuspAI reaching a \u00a32 billion valuation after a \u00a3330 million raise is a rare example of academic AI materials research translating directly into a heavily-funded commercial venture.",
+      "editorial_note": "CuspAI's \u00a3330 million raise at a \u00a32 billion valuation, with an Imperial College scientist as CSO, is a major private-sector bet on AI-driven materials discovery bridging academia and industry.",
       "impact_category": "Major Funding",
       "title": "Imperial expert leads science at \u00a32 billion AI materials company CuspAI",
       "url": "https://www.imperial.ac.uk/news/articles/engineering/materials/2026/imperial-expert-leads-science-at-2-billion-ai-materials-company-cuspai/",
@@ -72,19 +52,9 @@
       "published_date": "2026-07-21"
     },
     {
-      "rank": 8,
-      "article_id": 44430,
-      "editorial_note": "EPFL, ETH Zurich, and CSCS's Apertus 1.5 release adds multimodal capability to one of the few fully open large language models trained at national-supercomputer scale, a notable counterpoint to closed frontier models.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Apertus 1.5: Building the next generation of open AI infrastructure",
-      "url": "https://news.epfl.ch/news/apertus-15-building-the-next-generation-of-open--2/",
-      "university": "EPFL",
-      "published_date": "2026-07-24"
-    },
-    {
-      "rank": 9,
+      "rank": 6,
       "article_id": 44472,
-      "editorial_note": "TUM and MIT's expanded AI and robotics partnership, backed by Bavarian government funding and reciprocal faculty exchanges, deepens a marquee transatlantic academic collaboration.",
+      "editorial_note": "TUM and MIT's expanded AI/robotics partnership, backed by \u20ac1.6M and built around researcher exchanges, deepens a flagship transatlantic academic collaboration.",
       "impact_category": "Strategic Partnership",
       "title": "TUM and MIT are expanding their strategic partnership in the fields of AI and robotics. The Bavarian Ministry of Science is providing 1.6 million.",
       "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/tum-is-expanding-its-strategic-partnership-with-mit",
@@ -92,13 +62,43 @@
       "published_date": "2026-07-24"
     },
     {
-      "rank": 10,
+      "rank": 7,
+      "article_id": 44430,
+      "editorial_note": "EPFL, ETH Zurich, and CSCS's Apertus 1.5 release advances the case for fully open, multimodal large language models trained on European public supercomputing infrastructure.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Apertus 1.5: Building the next generation of open AI infrastructure",
+      "url": "https://news.epfl.ch/news/apertus-15-building-the-next-generation-of-open--2/",
+      "university": "EPFL",
+      "published_date": "2026-07-24"
+    },
+    {
+      "rank": 8,
       "article_id": 44435,
-      "editorial_note": "CMU, Pitt, and UW researchers' deep-learning discovery linking 3D genome architecture to Alzheimer's disease is a concrete scientific finding rather than a funding announcement, demonstrating AI's direct research payoff.",
+      "editorial_note": "A new deep-learning model from CMU, Pitt, and UW linking 3D genome architecture to Alzheimer's disease is a concrete scientific advance with direct implications for understanding the disease.",
       "impact_category": "Scientific Breakthrough",
       "title": "AI, Single-Cell Technology Reveal How 3D Genome Differs in People With Alzheimer's Disease",
       "url": "https://www.cs.cmu.edu/news/2026/ma-alzheimers",
       "university": "Carnegie Mellon University",
+      "published_date": "2026-07-23"
+    },
+    {
+      "rank": 9,
+      "article_id": 44386,
+      "editorial_note": "Penn State's $20M NSF award to lead a national 'programmable cloud laboratory' node marks a major infrastructure investment in automated, AI-driven science.",
+      "impact_category": "Major Funding",
+      "title": "Penn State awarded $20M to lead an NSF \u2018programmable cloud laboratory\u2019 | Penn State University",
+      "url": "https://www.psu.edu/news/research/story/penn-state-awarded-20m-lead-nsf-programmable-cloud-laboratory",
+      "university": "Pennsylvania State University-Main Campus",
+      "published_date": "2026-07-23"
+    },
+    {
+      "rank": 10,
+      "article_id": 44128,
+      "editorial_note": "Boston University's matching $20M NSF cloud-lab award, focused on biotech, extends the same national automated-science network to a second flagship node.",
+      "impact_category": "Major Funding",
+      "title": "NSF Awards Boston University $20 Million to Help Create National \u201cCloud Lab\u201d Network",
+      "url": "https://www.bu.edu/articles/2026/nsf-awards-20-million-establish-national-cloud-lab-network/",
+      "university": "Boston University",
       "published_date": "2026-07-23"
     }
   ]
