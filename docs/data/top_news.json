@@ -1,30 +1,10 @@
 {
-  "generated_at": "2026-07-26T16:16:48",
+  "generated_at": "2026-07-26T21:57:10",
   "picks": [
     {
       "rank": 1,
-      "article_id": 43758,
-      "editorial_note": "NASA's formal entry into the Genesis Mission marks the initiative's transition from a DOE program into a true whole-of-government effort spanning 15+ federal agencies, launched by executive order \u2014 a signal of how central AI has become to U.S. science policy.",
-      "impact_category": "Policy Impact",
-      "title": "NASA Joins Genesis Mission to Accelerate AI-Driven Discovery - NASA",
-      "url": "https://www.nasa.gov/news-release/nasa-joins-genesis-mission-to-accelerate-ai-driven-discovery/",
-      "university": "NASA Glenn Research Center",
-      "published_date": "2026-07-22"
-    },
-    {
-      "rank": 2,
-      "article_id": 43849,
-      "editorial_note": "CuspAI's \u00a3330 million raise at a \u00a32 billion valuation, with an Imperial College scientist as Chief Scientific Officer, dwarfs every individual Genesis Mission award this week and shows serious private capital betting on AI-driven materials discovery.",
-      "impact_category": "Major Funding",
-      "title": "Imperial expert leads science at \u00a32 billion AI materials company CuspAI",
-      "url": "https://www.imperial.ac.uk/news/articles/engineering/materials/2026/imperial-expert-leads-science-at-2-billion-ai-materials-company-cuspai/",
-      "university": "Imperial College London",
-      "published_date": "2026-07-21"
-    },
-    {
-      "rank": 3,
       "article_id": 43637,
-      "editorial_note": "Berkeley Lab's role leading 13 Genesis Mission projects and partnering on 30+ more makes it one of the single largest institutional stakes in the national AI-for-science initiative.",
+      "editorial_note": "Berkeley Lab's role leading 13 Genesis Mission projects and partnering on 30+ more makes it the single largest concentration of DOE's new national AI-for-science initiative, signaling where federal AI research investment is concentrating.",
       "impact_category": "Major Funding",
       "title": "Berkeley Lab to Lead 13 New Genesis Mission AI Projects",
       "url": "https://newscenter.lbl.gov/2026/07/22/berkeley-lab-to-lead-13-new-genesis-mission-ai-projects/",
@@ -32,9 +12,29 @@
       "published_date": "2026-07-22"
     },
     {
+      "rank": 2,
+      "article_id": 43758,
+      "editorial_note": "NASA's formal entry into the Genesis Mission, a whole-of-government initiative launched by executive order spanning 15+ federal agencies, marks a rare cross-agency policy commitment to AI-driven scientific discovery at the national level.",
+      "impact_category": "Policy Impact",
+      "title": "NASA Joins Genesis Mission to Accelerate AI-Driven Discovery - NASA",
+      "url": "https://www.nasa.gov/news-release/nasa-joins-genesis-mission-to-accelerate-ai-driven-discovery/",
+      "university": "NASA Glenn Research Center",
+      "published_date": "2026-07-22"
+    },
+    {
+      "rank": 3,
+      "article_id": 43849,
+      "editorial_note": "CuspAI's \u00a3330 million raise at a \u00a32 billion valuation, with an Imperial College scientist as Chief Scientific Officer, shows AI-for-materials-discovery attracting serious private capital outside the government funding wave dominating this week's news.",
+      "impact_category": "Major Funding",
+      "title": "Imperial expert leads science at \u00a32 billion AI materials company CuspAI",
+      "url": "https://www.imperial.ac.uk/news/articles/engineering/materials/2026/imperial-expert-leads-science-at-2-billion-ai-materials-company-cuspai/",
+      "university": "Imperial College London",
+      "published_date": "2026-07-21"
+    },
+    {
       "rank": 4,
       "article_id": 44125,
-      "editorial_note": "Oak Ridge National Laboratory leading nine Genesis Mission projects and contributing to 32 others cements its position as a linchpin of the DOE's AI, supercomputing, and quantum strategy.",
+      "editorial_note": "Oak Ridge's leadership on nine Genesis Mission projects plus contributions to 32 others makes it one of the two anchor national labs (alongside Berkeley) for the DOE's flagship AI initiative.",
       "impact_category": "Major Funding",
       "title": "Department of Energy selects ORNL to lead nine Genesis Mission projects | ORNL",
       "url": "https://www.ornl.gov/news/department-energy-selects-ornl-lead-nine-genesis-mission-projects",
@@ -43,38 +43,8 @@
     },
     {
       "rank": 5,
-      "article_id": 44430,
-      "editorial_note": "The Apertus 1.5 release from EPFL, ETH Zurich, and CSCS adds multimodal capability to one of the few fully open large language models trained on a national supercomputer, a notable counterpoint to closed frontier models.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Apertus 1.5: Building the next generation of open AI infrastructure",
-      "url": "https://news.epfl.ch/news/apertus-15-building-the-next-generation-of-open--2/",
-      "university": "EPFL",
-      "published_date": "2026-07-24"
-    },
-    {
-      "rank": 6,
-      "article_id": 44435,
-      "editorial_note": "A new deep learning model from CMU, Pitt, and UW researchers revealed how 3D genome architecture differs in Alzheimer's disease, a concrete biomedical discovery enabled by AI rather than just AI-adjacent funding.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "AI, Single-Cell Technology Reveal How 3D Genome Differs in People With Alzheimer's Disease",
-      "url": "https://www.cs.cmu.edu/news/2026/ma-alzheimers",
-      "university": "Carnegie Mellon University",
-      "published_date": "2026-07-23"
-    },
-    {
-      "rank": 7,
-      "article_id": 44386,
-      "editorial_note": "Penn State's $20 million NSF award to lead a national 'programmable cloud laboratory' node represents a major bet on automating the scientific method itself with AI.",
-      "impact_category": "Major Funding",
-      "title": "Penn State awarded $20M to lead an NSF \u2018programmable cloud laboratory\u2019 | Penn State University",
-      "url": "https://www.psu.edu/news/research/story/penn-state-awarded-20m-lead-nsf-programmable-cloud-laboratory",
-      "university": "Pennsylvania State University-Main Campus",
-      "published_date": "2026-07-23"
-    },
-    {
-      "rank": 8,
       "article_id": 44472,
-      "editorial_note": "TUM and MIT are deepening a formal exchange program sending researchers between MIRMI and CSAIL for AI and robotics work, backed by Bavarian state funding \u2014 a concrete transatlantic academic partnership rather than a one-off grant.",
+      "editorial_note": "TUM and MIT's expanded AI/robotics partnership, with researchers rotating three months annually between CSAIL and MIRMI, is a concrete deepening of transatlantic academic collaboration backed by direct government funding.",
       "impact_category": "Strategic Partnership",
       "title": "TUM and MIT are expanding their strategic partnership in the fields of AI and robotics. The Bavarian Ministry of Science is providing 1.6 million.",
       "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/tum-is-expanding-its-strategic-partnership-with-mit",
@@ -82,23 +52,53 @@
       "published_date": "2026-07-24"
     },
     {
-      "rank": 9,
-      "article_id": 43963,
-      "editorial_note": "UW, Carnegie Mellon, and SLAC are building a shared AI-driven data service to unify cosmology datasets, a novel cross-institutional application of AI to accelerate discovery in astrophysics.",
+      "rank": 6,
+      "article_id": 44430,
+      "editorial_note": "The Apertus 1.5 release from EPFL, ETH Zurich, and CSCS adds multimodal capability to a fully open large language model trained on European supercomputing infrastructure, a notable counterweight to closed commercial AI models.",
       "impact_category": "Scientific Breakthrough",
-      "title": "UW researchers join national effort to streamline AI-driven cosmology",
-      "url": "https://www.washington.edu/news/2026/07/22/ai-cosmology-genesis-mission/",
-      "university": "University of Washington-Seattle Campus",
-      "published_date": "2026-07-22"
+      "title": "Apertus 1.5: Building the next generation of open AI infrastructure",
+      "url": "https://news.epfl.ch/news/apertus-15-building-the-next-generation-of-open--2/",
+      "university": "EPFL",
+      "published_date": "2026-07-24"
+    },
+    {
+      "rank": 7,
+      "article_id": 44435,
+      "editorial_note": "CMU researchers' finding that 3D genome architecture differs measurably in Alzheimer's patients, enabled by a new deep learning model, is a genuine scientific discovery with direct disease-mechanism implications rather than a funding announcement.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "AI, Single-Cell Technology Reveal How 3D Genome Differs in People With Alzheimer's Disease",
+      "url": "https://www.cs.cmu.edu/news/2026/ma-alzheimers",
+      "university": "Carnegie Mellon University",
+      "published_date": "2026-07-23"
+    },
+    {
+      "rank": 8,
+      "article_id": 44741,
+      "editorial_note": "UC Riverside's SAGA tool, developed with YouTube and Google DeepMind, doesn't just detect AI-generated fake videos but identifies which generator made them, a practical advance for combating disinformation at real-world scale.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "New tool identifies the sources of fake videos",
+      "url": "https://news.ucr.edu/articles/2026/07/24/new-tool-identifies-sources-fake-videos",
+      "university": "University of California-Riverside",
+      "published_date": "2026-07-24"
+    },
+    {
+      "rank": 9,
+      "article_id": 44386,
+      "editorial_note": "Penn State's $20 million NSF award to lead a national 'programmable cloud laboratory' node reflects a separate, parallel federal AI-for-science investment stream distinct from the DOE Genesis Mission awards dominating this week.",
+      "impact_category": "Major Funding",
+      "title": "Penn State awarded $20M to lead an NSF \u2018programmable cloud laboratory\u2019 | Penn State University",
+      "url": "https://www.psu.edu/news/research/story/penn-state-awarded-20m-lead-nsf-programmable-cloud-laboratory",
+      "university": "Pennsylvania State University-Main Campus",
+      "published_date": "2026-07-23"
     },
     {
       "rank": 10,
-      "article_id": 45037,
-      "editorial_note": "RWTH Aachen and NEURA Robotics are opening a 3,000-square-meter facility dedicated to physical AI and humanoid robotics, a substantial real-world infrastructure investment in embodied AI research.",
-      "impact_category": "Strategic Partnership",
-      "title": "A Milestone for Physical AI | RWTH Aachen University | EN",
-      "url": "https://www.rwth-aachen.de/go/id/bsmvmj?lidx=1",
-      "university": "RWTH Aachen University",
+      "article_id": 43630,
+      "editorial_note": "RIKEN's new Advanced General Intelligence for Science Program shows Japan mounting its own national foundation-model initiative for scientific research, mirroring the US Genesis Mission on the international stage.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "TRIP Headquarters Advanced General Intelligence for Science Program (AGIS)",
+      "url": "https://www.riken.jp/en/research/labs/trip/agis/",
+      "university": "RIKEN",
       "published_date": "2026-07-22"
     }
   ]
