@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-27T17:13:06",
+  "generated_at": "2026-07-27T22:03:58",
   "picks": [
     {
       "rank": 1,
       "article_id": 43637,
-      "editorial_note": "Berkeley Lab's leadership of 13 Genesis Mission projects plus involvement in 30 more makes it the single largest node in DOE's national AI-for-science push, signaling where the bulk of federal AI research investment is concentrating.",
+      "editorial_note": "Berkeley Lab's leadership of 13 Genesis Mission projects (plus 30+ partnerships) makes it one of the largest single-institution roles in DOE's national AI-for-science initiative, signaling where the government is concentrating its AI research bets.",
       "impact_category": "Major Funding",
       "title": "Berkeley Lab to Lead 13 New Genesis Mission AI Projects",
       "url": "https://newscenter.lbl.gov/2026/07/22/berkeley-lab-to-lead-13-new-genesis-mission-ai-projects/",
@@ -14,7 +14,7 @@
     {
       "rank": 2,
       "article_id": 44125,
-      "editorial_note": "Oak Ridge's role leading nine Genesis Mission projects and contributing to 32 others cements a second major hub for the initiative, underscoring how national labs are becoming the backbone of federally funded AI science.",
+      "editorial_note": "ORNL leading nine Genesis Mission projects and contributing to 32 more underscores the scale of DOE's push to fuse AI, supercomputing, and quantum systems across the national lab system.",
       "impact_category": "Major Funding",
       "title": "Department of Energy selects ORNL to lead nine Genesis Mission projects | ORNL",
       "url": "https://www.ornl.gov/news/department-energy-selects-ornl-lead-nine-genesis-mission-projects",
@@ -23,8 +23,18 @@
     },
     {
       "rank": 3,
+      "article_id": 43576,
+      "editorial_note": "Sandia's role leading six projects and partnering on 17 others makes it one of the top three national-lab hubs for Genesis Mission work, reinforcing the initiative's reliance on lab infrastructure over any single university.",
+      "impact_category": "Major Funding",
+      "title": "Sandia selected to lead six Genesis Mission projects, partner on 17 others",
+      "url": "https://newsreleases.sandia.gov/sandia-selected-to-lead-six-genesis-mission-projects-partner-on-17-others/",
+      "university": "Sandia National Laboratories",
+      "published_date": "2026-07-22"
+    },
+    {
+      "rank": 4,
       "article_id": 43758,
-      "editorial_note": "NASA's entry into the whole-of-government Genesis Mission, alongside 15+ other federal agencies under an executive order, shows AI-for-science is now formal U.S. policy spanning far beyond DOE.",
+      "editorial_note": "NASA's entry into the Genesis Mission, alongside 15+ federal agencies under a whole-of-government executive order, marks a significant expansion of the initiative's scope beyond DOE and its labs.",
       "impact_category": "Policy Impact",
       "title": "NASA Joins Genesis Mission to Accelerate AI-Driven Discovery - NASA",
       "url": "https://www.nasa.gov/news-release/nasa-joins-genesis-mission-to-accelerate-ai-driven-discovery/",
@@ -32,19 +42,9 @@
       "published_date": "2026-07-22"
     },
     {
-      "rank": 4,
-      "article_id": 43849,
-      "editorial_note": "CuspAI's \u00a3330 million raise at a \u00a32 billion valuation, with an Imperial College scientist as Chief Scientific Officer, is a rare AI materials-discovery startup reaching unicorn-plus scale with direct academic leadership.",
-      "impact_category": "Major Funding",
-      "title": "Imperial expert leads science at \u00a32 billion AI materials company CuspAI",
-      "url": "https://www.imperial.ac.uk/news/articles/engineering/materials/2026/imperial-expert-leads-science-at-2-billion-ai-materials-company-cuspai/",
-      "university": "Imperial College London",
-      "published_date": "2026-07-21"
-    },
-    {
       "rank": 5,
       "article_id": 44386,
-      "editorial_note": "Penn State's $20 million NSF award to lead a national 'programmable cloud laboratory' node represents a concrete, large-dollar bet on automating scientific experimentation with AI.",
+      "editorial_note": "A concrete $20M NSF award for Penn State to lead a national 'programmable cloud laboratory' node represents a distinct, well-funded push toward automating scientific experimentation with AI, separate from the DOE awards flooding this week's coverage.",
       "impact_category": "Major Funding",
       "title": "Penn State awarded $20M to lead an NSF \u2018programmable cloud laboratory\u2019 | Penn State University",
       "url": "https://www.psu.edu/news/research/story/penn-state-awarded-20m-lead-nsf-programmable-cloud-laboratory",
@@ -53,28 +53,18 @@
     },
     {
       "rank": 6,
-      "article_id": 43714,
-      "editorial_note": "NSF's $83 million investment in integrated data infrastructure is a broad, field-wide bet on the data backbone AI-driven science depends on, benefiting researchers well beyond any single institution.",
+      "article_id": 43849,
+      "editorial_note": "CuspAI's \u00a3330M raise at a \u00a32B valuation, with an Imperial College scientist as CSO, is a major industry funding event showing AI materials-discovery startups attracting serious capital outside the academic grant system.",
       "impact_category": "Major Funding",
-      "title": "NSF announces $83M investment in integrated data systems and services to advance AI-driven science and strengthen U.S. research infrastructure",
-      "url": "https://www.nsf.gov/news/nsf-announces-83m-investment-integrated-data-systems",
-      "university": "National Science Foundation",
-      "published_date": "2026-07-22"
+      "title": "Imperial expert leads science at \u00a32 billion AI materials company CuspAI",
+      "url": "https://www.imperial.ac.uk/news/articles/engineering/materials/2026/imperial-expert-leads-science-at-2-billion-ai-materials-company-cuspai/",
+      "university": "Imperial College London",
+      "published_date": "2026-07-21"
     },
     {
       "rank": 7,
-      "article_id": 44472,
-      "editorial_note": "TUM and MIT are deepening a formal AI-and-robotics partnership with reciprocal faculty exchanges, a model of sustained cross-continental academic collaboration rather than a one-off grant.",
-      "impact_category": "Strategic Partnership",
-      "title": "TUM and MIT are expanding their strategic partnership in the fields of AI and robotics. The Bavarian Ministry of Science is providing 1.6 million.",
-      "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/tum-is-expanding-its-strategic-partnership-with-mit",
-      "university": "Technical University of Munich",
-      "published_date": "2026-07-24"
-    },
-    {
-      "rank": 8,
       "article_id": 44430,
-      "editorial_note": "EPFL, ETH Zurich, and CSCS's release of Apertus 1.5 adds multimodal capability to one of the few fully open large language models trained on European supercomputing infrastructure, a notable counterpoint to closed commercial models.",
+      "editorial_note": "The release of Apertus 1.5, a fully open multimodal LLM built by EPFL, ETH Zurich, and CSCS on the Alps supercomputer, is a genuine technical advance in open AI infrastructure rather than a funding announcement.",
       "impact_category": "Scientific Breakthrough",
       "title": "Apertus 1.5: Building the next generation of open AI infrastructure",
       "url": "https://news.epfl.ch/news/apertus-15-building-the-next-generation-of-open--2/",
@@ -82,23 +72,33 @@
       "published_date": "2026-07-24"
     },
     {
+      "rank": 8,
+      "article_id": 44435,
+      "editorial_note": "A new deep learning model from CMU, Pitt, and UW researchers revealing how 3D genome architecture differs in Alzheimer's patients is a substantive scientific finding with direct disease-research implications.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "AI, Single-Cell Technology Reveal How 3D Genome Differs in People With Alzheimer's Disease",
+      "url": "https://www.cs.cmu.edu/news/2026/ma-alzheimers",
+      "university": "Carnegie Mellon University",
+      "published_date": "2026-07-23"
+    },
+    {
       "rank": 9,
+      "article_id": 44472,
+      "editorial_note": "TUM and MIT's expanded AI/robotics partnership, with reciprocal faculty exchanges funded by the Bavarian government, exemplifies deepening transatlantic academic-industry collaboration in AI research.",
+      "impact_category": "Strategic Partnership",
+      "title": "TUM and MIT are expanding their strategic partnership in the fields of AI and robotics. The Bavarian Ministry of Science is providing 1.6 million.",
+      "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/tum-is-expanding-its-strategic-partnership-with-mit",
+      "university": "Technical University of Munich",
+      "published_date": "2026-07-24"
+    },
+    {
+      "rank": 10,
       "article_id": 43630,
-      "editorial_note": "RIKEN's AGIS program to build self-improving generative foundation models for science marks a significant Japanese national push to compete at the frontier of AI-for-science research.",
+      "editorial_note": "RIKEN's launch of the Advanced General Intelligence for Science Program to build generative AI foundation models is a major national-scale scientific initiative outside the U.S. DOE ecosystem, showing global momentum in AI-for-science research.",
       "impact_category": "Scientific Breakthrough",
       "title": "TRIP Headquarters Advanced General Intelligence for Science Program (AGIS)",
       "url": "https://www.riken.jp/en/research/labs/trip/agis/",
       "university": "RIKEN",
-      "published_date": "2026-07-22"
-    },
-    {
-      "rank": 10,
-      "article_id": 45037,
-      "editorial_note": "The NEURA Gym facility at RWTH Aachen is a large-scale, purpose-built testbed for humanoid and physical AI, reflecting growing industry-academia investment in embodied AI research infrastructure.",
-      "impact_category": "Strategic Partnership",
-      "title": "A Milestone for Physical AI | RWTH Aachen University | EN",
-      "url": "https://www.rwth-aachen.de/go/id/bsmvmj?lidx=1",
-      "university": "RWTH Aachen University",
       "published_date": "2026-07-22"
     }
   ]
