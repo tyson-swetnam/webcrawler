@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-26T21:57:10",
+  "generated_at": "2026-07-27T06:36:33",
   "picks": [
     {
       "rank": 1,
       "article_id": 43637,
-      "editorial_note": "Berkeley Lab's role leading 13 Genesis Mission projects and partnering on 30+ more makes it the single largest concentration of DOE's new national AI-for-science initiative, signaling where federal AI research investment is concentrating.",
+      "editorial_note": "Berkeley Lab's role leading 13 projects and partnering on 30+ more makes it the single largest institutional footprint in DOE's new Genesis Mission, signaling where the national AI-for-science effort is centered.",
       "impact_category": "Major Funding",
       "title": "Berkeley Lab to Lead 13 New Genesis Mission AI Projects",
       "url": "https://newscenter.lbl.gov/2026/07/22/berkeley-lab-to-lead-13-new-genesis-mission-ai-projects/",
@@ -14,7 +14,7 @@
     {
       "rank": 2,
       "article_id": 43758,
-      "editorial_note": "NASA's formal entry into the Genesis Mission, a whole-of-government initiative launched by executive order spanning 15+ federal agencies, marks a rare cross-agency policy commitment to AI-driven scientific discovery at the national level.",
+      "editorial_note": "NASA's entry turns Genesis Mission into a true whole-of-government initiative spanning 15+ federal agencies, a major policy expansion of AI's role in federal science strategy.",
       "impact_category": "Policy Impact",
       "title": "NASA Joins Genesis Mission to Accelerate AI-Driven Discovery - NASA",
       "url": "https://www.nasa.gov/news-release/nasa-joins-genesis-mission-to-accelerate-ai-driven-discovery/",
@@ -23,18 +23,8 @@
     },
     {
       "rank": 3,
-      "article_id": 43849,
-      "editorial_note": "CuspAI's \u00a3330 million raise at a \u00a32 billion valuation, with an Imperial College scientist as Chief Scientific Officer, shows AI-for-materials-discovery attracting serious private capital outside the government funding wave dominating this week's news.",
-      "impact_category": "Major Funding",
-      "title": "Imperial expert leads science at \u00a32 billion AI materials company CuspAI",
-      "url": "https://www.imperial.ac.uk/news/articles/engineering/materials/2026/imperial-expert-leads-science-at-2-billion-ai-materials-company-cuspai/",
-      "university": "Imperial College London",
-      "published_date": "2026-07-21"
-    },
-    {
-      "rank": 4,
       "article_id": 44125,
-      "editorial_note": "Oak Ridge's leadership on nine Genesis Mission projects plus contributions to 32 others makes it one of the two anchor national labs (alongside Berkeley) for the DOE's flagship AI initiative.",
+      "editorial_note": "Oak Ridge's mandate to lead nine projects and contribute to 32 others shows the national labs, not just universities, anchoring the AI-for-science push at massive scale.",
       "impact_category": "Major Funding",
       "title": "Department of Energy selects ORNL to lead nine Genesis Mission projects | ORNL",
       "url": "https://www.ornl.gov/news/department-energy-selects-ornl-lead-nine-genesis-mission-projects",
@@ -42,9 +32,19 @@
       "published_date": "2026-07-22"
     },
     {
+      "rank": 4,
+      "article_id": 43849,
+      "editorial_note": "A \u00a3330 million raise at a \u00a32 billion valuation for an AI materials-discovery startup led scientifically by an Imperial professor demonstrates real market conviction behind academic AI research translating to industry.",
+      "impact_category": "Major Funding",
+      "title": "Imperial expert leads science at \u00a32 billion AI materials company CuspAI",
+      "url": "https://www.imperial.ac.uk/news/articles/engineering/materials/2026/imperial-expert-leads-science-at-2-billion-ai-materials-company-cuspai/",
+      "university": "Imperial College London",
+      "published_date": "2026-07-21"
+    },
+    {
       "rank": 5,
       "article_id": 44472,
-      "editorial_note": "TUM and MIT's expanded AI/robotics partnership, with researchers rotating three months annually between CSAIL and MIRMI, is a concrete deepening of transatlantic academic collaboration backed by direct government funding.",
+      "editorial_note": "TUM and MIT's expanded AI/robotics partnership, with faculty exchanges funded by the Bavarian government, deepens one of the most prominent transatlantic academic collaborations in robotics AI.",
       "impact_category": "Strategic Partnership",
       "title": "TUM and MIT are expanding their strategic partnership in the fields of AI and robotics. The Bavarian Ministry of Science is providing 1.6 million.",
       "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/tum-is-expanding-its-strategic-partnership-with-mit",
@@ -54,7 +54,7 @@
     {
       "rank": 6,
       "article_id": 44430,
-      "editorial_note": "The Apertus 1.5 release from EPFL, ETH Zurich, and CSCS adds multimodal capability to a fully open large language model trained on European supercomputing infrastructure, a notable counterweight to closed commercial AI models.",
+      "editorial_note": "EPFL, ETH Zurich, and CSCS's Apertus 1.5 pushes forward one of the few fully open, multimodal large language models trained on European supercomputing infrastructure, an important counterweight to closed frontier models.",
       "impact_category": "Scientific Breakthrough",
       "title": "Apertus 1.5: Building the next generation of open AI infrastructure",
       "url": "https://news.epfl.ch/news/apertus-15-building-the-next-generation-of-open--2/",
@@ -63,8 +63,18 @@
     },
     {
       "rank": 7,
+      "article_id": 43630,
+      "editorial_note": "RIKEN's AGIS program to build generative AI foundation models and agents for science represents a major new national research initiative in Japan, with the highest scientific-impact score among the week's stories.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "TRIP Headquarters Advanced General Intelligence for Science Program (AGIS)",
+      "url": "https://www.riken.jp/en/research/labs/trip/agis/",
+      "university": "RIKEN",
+      "published_date": "2026-07-22"
+    },
+    {
+      "rank": 8,
       "article_id": 44435,
-      "editorial_note": "CMU researchers' finding that 3D genome architecture differs measurably in Alzheimer's patients, enabled by a new deep learning model, is a genuine scientific discovery with direct disease-mechanism implications rather than a funding announcement.",
+      "editorial_note": "A new deep learning model revealing how 3D genome architecture differs in Alzheimer's patients is a genuine scientific discovery with direct implications for understanding neurodegenerative disease.",
       "impact_category": "Scientific Breakthrough",
       "title": "AI, Single-Cell Technology Reveal How 3D Genome Differs in People With Alzheimer's Disease",
       "url": "https://www.cs.cmu.edu/news/2026/ma-alzheimers",
@@ -72,9 +82,9 @@
       "published_date": "2026-07-23"
     },
     {
-      "rank": 8,
+      "rank": 9,
       "article_id": 44741,
-      "editorial_note": "UC Riverside's SAGA tool, developed with YouTube and Google DeepMind, doesn't just detect AI-generated fake videos but identifies which generator made them, a practical advance for combating disinformation at real-world scale.",
+      "editorial_note": "UC Riverside's SAGA tool, developed with YouTube and Google DeepMind, can trace deepfake videos to their specific generative source, a concrete real-world application addressing AI-driven misinformation.",
       "impact_category": "Scientific Breakthrough",
       "title": "New tool identifies the sources of fake videos",
       "url": "https://news.ucr.edu/articles/2026/07/24/new-tool-identifies-sources-fake-videos",
@@ -82,24 +92,14 @@
       "published_date": "2026-07-24"
     },
     {
-      "rank": 9,
+      "rank": 10,
       "article_id": 44386,
-      "editorial_note": "Penn State's $20 million NSF award to lead a national 'programmable cloud laboratory' node reflects a separate, parallel federal AI-for-science investment stream distinct from the DOE Genesis Mission awards dominating this week.",
+      "editorial_note": "Penn State's $20 million NSF award to lead a national 'programmable cloud laboratory' node establishes new automated-science infrastructure that other institutions will plug into for years to come.",
       "impact_category": "Major Funding",
       "title": "Penn State awarded $20M to lead an NSF \u2018programmable cloud laboratory\u2019 | Penn State University",
       "url": "https://www.psu.edu/news/research/story/penn-state-awarded-20m-lead-nsf-programmable-cloud-laboratory",
       "university": "Pennsylvania State University-Main Campus",
       "published_date": "2026-07-23"
-    },
-    {
-      "rank": 10,
-      "article_id": 43630,
-      "editorial_note": "RIKEN's new Advanced General Intelligence for Science Program shows Japan mounting its own national foundation-model initiative for scientific research, mirroring the US Genesis Mission on the international stage.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "TRIP Headquarters Advanced General Intelligence for Science Program (AGIS)",
-      "url": "https://www.riken.jp/en/research/labs/trip/agis/",
-      "university": "RIKEN",
-      "published_date": "2026-07-22"
     }
   ]
 }
