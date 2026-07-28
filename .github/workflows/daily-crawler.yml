@@ -85,33 +85,8 @@ jobs:
           fi
           echo "Claude subscription auth verified"
 
-      - name: Seed durable data from website branch
-        run: |
-          # The crawler's source of truth (articles.parquet) and the Top News
-          # snapshot live on the deployed website branch — pull them into
-          # the workspace so the ephemeral Postgres can be hydrated and so
-          # the Top News tab survives an empty crawl. The website branch
-          # holds these at /data/* (from GH Actions copy) or /docs/data/*
-          # (from local systemd commits) — try both. Best-effort: missing
-          # files are fine on first run.
-          mkdir -p docs/data
-          git fetch origin website --depth=1 || true
-
-          fetch_one() {
-            local name="$1"
-            if git show "origin/website:docs/data/$name" > "docs/data/$name" 2>/dev/null; then
-              echo "Seeded docs/data/$name from docs/data/ on website branch"
-            elif git show "origin/website:data/$name" > "docs/data/$name" 2>/dev/null; then
-              echo "Seeded docs/data/$name from data/ (root) on website branch"
-            else
-              rm -f "docs/data/$name"
-              echo "No previous docs/data/$name found (first run)"
-            fi
-          }
-
-          fetch_one articles.parquet
-          fetch_one top_news.json
-          fetch_one source_health.json
+      - name: Seed published state from website branch
+        run: bash scripts/seed_from_website.sh
 
       - name: Run crawler
         timeout-minutes: 90
