@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-28T05:53:50",
+  "generated_at": "2026-07-28T11:15:03",
   "picks": [
     {
       "rank": 1,
       "article_id": 43637,
-      "editorial_note": "Berkeley Lab's role leading 13 Genesis Mission projects and partnering on 30+ more makes it the single largest node in DOE's new national AI-for-science push, signaling where the federal government is placing its biggest bets.",
-      "impact_category": "Strategic Partnership",
+      "editorial_note": "Berkeley Lab's role leading 13 projects and partnering on 30+ more makes it the single largest node in the DOE's new Genesis Mission, illustrating the scale of the federal government's AI-for-science push.",
+      "impact_category": "Major Funding",
       "title": "Berkeley Lab to Lead 13 New Genesis Mission AI Projects",
       "url": "https://newscenter.lbl.gov/2026/07/22/berkeley-lab-to-lead-13-new-genesis-mission-ai-projects/",
       "university": "Lawrence Berkeley National Laboratory",
@@ -14,8 +14,8 @@
     {
       "rank": 2,
       "article_id": 44125,
-      "editorial_note": "ORNL's selection to lead nine Genesis Mission projects and contribute to 32 others cements the national labs as the backbone of the DOE's AI-supercomputing-quantum strategy.",
-      "impact_category": "Strategic Partnership",
+      "editorial_note": "Oak Ridge's selection to lead nine Genesis Mission projects while contributing to 32 others cements its position as a lead national-lab hub for AI-driven scientific discovery.",
+      "impact_category": "Major Funding",
       "title": "Department of Energy selects ORNL to lead nine Genesis Mission projects | ORNL",
       "url": "https://www.ornl.gov/news/department-energy-selects-ornl-lead-nine-genesis-mission-projects",
       "university": "Oak Ridge National Laboratory",
@@ -24,7 +24,7 @@
     {
       "rank": 3,
       "article_id": 43758,
-      "editorial_note": "NASA's entry into the Genesis Mission, alongside 15+ federal agencies under a presidential executive order, shows AI-for-science has become a whole-of-government policy priority, not just a DOE program.",
+      "editorial_note": "NASA's entry into the Genesis Mission, alongside more than 15 federal agencies, shows the initiative expanding from a DOE program into a true whole-of-government AI strategy.",
       "impact_category": "Policy Impact",
       "title": "NASA Joins Genesis Mission to Accelerate AI-Driven Discovery - NASA",
       "url": "https://www.nasa.gov/news-release/nasa-joins-genesis-mission-to-accelerate-ai-driven-discovery/",
@@ -33,18 +33,8 @@
     },
     {
       "rank": 4,
-      "article_id": 43714,
-      "editorial_note": "NSF's $83 million investment in AI-ready data infrastructure addresses a foundational bottleneck for AI-driven science across the entire research ecosystem, not just individual labs.",
-      "impact_category": "Major Funding",
-      "title": "NSF announces $83M investment in integrated data systems and services to advance AI-driven science and strengthen U.S. research infrastructure",
-      "url": "https://www.nsf.gov/news/nsf-announces-83m-investment-integrated-data-systems",
-      "university": "National Science Foundation",
-      "published_date": "2026-07-22"
-    },
-    {
-      "rank": 5,
       "article_id": 44386,
-      "editorial_note": "Penn State's $20 million NSF award to lead a 'programmable cloud laboratory' node represents one of the largest single grants in this week's news and points toward automated, remotely-run AI science becoming standard infrastructure.",
+      "editorial_note": "Penn State's $20M NSF award to lead a national 'programmable cloud laboratory' node introduces a genuinely new model for automated, remotely-run AI science infrastructure.",
       "impact_category": "Major Funding",
       "title": "Penn State awarded $20M to lead an NSF \u2018programmable cloud laboratory\u2019 | Penn State University",
       "url": "https://www.psu.edu/news/research/story/penn-state-awarded-20m-lead-nsf-programmable-cloud-laboratory",
@@ -52,9 +42,19 @@
       "published_date": "2026-07-23"
     },
     {
+      "rank": 5,
+      "article_id": 44128,
+      "editorial_note": "Boston University's matching $20M NSF cloud-lab award builds out the same 20-node automated-science network with a biotech focus, signaling a major new shared research infrastructure investment.",
+      "impact_category": "Major Funding",
+      "title": "NSF Awards Boston University $20 Million to Help Create National \u201cCloud Lab\u201d Network",
+      "url": "https://www.bu.edu/articles/2026/nsf-awards-20-million-establish-national-cloud-lab-network/",
+      "university": "Boston University",
+      "published_date": "2026-07-23"
+    },
+    {
       "rank": 6,
       "article_id": 44430,
-      "editorial_note": "Apertus 1.5 pushes forward one of the few fully open, sovereign large language models trained on European supercomputing infrastructure, adding multimodal capability that closes gaps with closed frontier models.",
+      "editorial_note": "EPFL, ETH Zurich, and CSCS's Apertus 1.5 release is a concrete technical milestone \u2014 a fully open, multimodal foundation model trained on European supercomputing infrastructure \u2014 distinct from the wave of grant announcements this week.",
       "impact_category": "Scientific Breakthrough",
       "title": "Apertus 1.5: Building the next generation of open AI infrastructure",
       "url": "https://news.epfl.ch/news/apertus-15-building-the-next-generation-of-open--2/",
@@ -63,28 +63,8 @@
     },
     {
       "rank": 7,
-      "article_id": 44472,
-      "editorial_note": "The expanded TUM-MIT partnership, with researchers rotating between institutions and Bavarian government co-funding, exemplifies deepening transatlantic academic collaboration in AI and robotics.",
-      "impact_category": "Strategic Partnership",
-      "title": "TUM and MIT are expanding their strategic partnership in the fields of AI and robotics. The Bavarian Ministry of Science is providing 1.6 million.",
-      "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/tum-is-expanding-its-strategic-partnership-with-mit",
-      "university": "Technical University of Munich",
-      "published_date": "2026-07-24"
-    },
-    {
-      "rank": 8,
-      "article_id": 43630,
-      "editorial_note": "RIKEN's AGIS program aims to build generative AI foundation models and autonomous AI research agents purpose-built for scientific discovery, a notable non-U.S. counterpart to the Genesis Mission's ambitions.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "TRIP Headquarters Advanced General Intelligence for Science Program (AGIS)",
-      "url": "https://www.riken.jp/en/research/labs/trip/agis/",
-      "university": "RIKEN",
-      "published_date": "2026-07-22"
-    },
-    {
-      "rank": 9,
       "article_id": 44435,
-      "editorial_note": "A new deep learning model revealing how 3D genome architecture differs in Alzheimer's patients demonstrates concrete AI-enabled biomedical discovery with direct disease-relevance, distinct from the wave of infrastructure-funding announcements.",
+      "editorial_note": "CMU, Pitt, and UW researchers used a new deep learning model to reveal how 3D genome architecture differs in Alzheimer's patients \u2014 an actual scientific finding with direct disease-relevance, not just funding news.",
       "impact_category": "Scientific Breakthrough",
       "title": "AI, Single-Cell Technology Reveal How 3D Genome Differs in People With Alzheimer's Disease",
       "url": "https://www.cs.cmu.edu/news/2026/ma-alzheimers",
@@ -92,13 +72,33 @@
       "published_date": "2026-07-23"
     },
     {
-      "rank": 10,
-      "article_id": 45340,
-      "editorial_note": "NEURA Robotics and RWTH Aachen's new 3,000-square-meter 'Physical AI' facility for training humanoid robots marks a tangible step from AI research toward embodied, real-world robotic applications.",
+      "rank": 8,
+      "article_id": 44080,
+      "editorial_note": "Berkeley Lab's ModCon consortium aims to build self-improving AI foundation models on DOE data and facilities, a technically ambitious effort that goes beyond a typical single-project grant.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Q&A: Accelerating Scientific Discovery with the Genesis Mission\u2019s ModCon",
+      "url": "https://newscenter.lbl.gov/2026/07/23/qa-accelerating-scientific-discovery-with-the-genesis-missions-modcon/",
+      "university": "Lawrence Berkeley National Laboratory",
+      "published_date": "2026-07-23"
+    },
+    {
+      "rank": 9,
+      "article_id": 44472,
+      "editorial_note": "TUM and MIT's expanded AI/robotics partnership, with researchers rotating between MIRMI and CSAIL and backed by new Bavarian government funding, deepens a marquee transatlantic research alliance.",
       "impact_category": "Strategic Partnership",
-      "title": "A Milestone for Physical AI | RWTH Aachen University | EN",
-      "url": "https://www.rwth-aachen.de/go/id/bsmvmj?lidx=1",
-      "university": "RWTH Aachen University",
+      "title": "TUM and MIT are expanding their strategic partnership in the fields of AI and robotics. The Bavarian Ministry of Science is providing 1.6 million.",
+      "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/tum-is-expanding-its-strategic-partnership-with-mit",
+      "university": "Technical University of Munich",
+      "published_date": "2026-07-24"
+    },
+    {
+      "rank": 10,
+      "article_id": 43714,
+      "editorial_note": "NSF's $83M investment in integrated data infrastructure underpins AI-driven science broadly across the research ecosystem, rather than funding a single institution's project.",
+      "impact_category": "Major Funding",
+      "title": "NSF announces $83M investment in integrated data systems and services to advance AI-driven science and strengthen U.S. research infrastructure",
+      "url": "https://www.nsf.gov/news/nsf-announces-83m-investment-integrated-data-systems",
+      "university": "National Science Foundation",
       "published_date": "2026-07-22"
     }
   ]
