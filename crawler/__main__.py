@@ -8,7 +8,7 @@ Entry point: python -m crawler
 import asyncio
 import sys
 import logging
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from sqlalchemy import and_
 
@@ -68,6 +68,68 @@ def _log_spider_health():
     if failed:
         logger.warning(f"Failed domains ({len(failed)}): {', '.join(failed[:10])}")
     logger.info("=" * 50)
+
+
+# Archive pages are never rendered for dates older than this. The article
+# store contains a handful of junk publication dates (as far back as 1996)
+# picked up from malformed pages; without a floor they would each get their
+# own archive page and month heading.
+ARCHIVE_FLOOR_DATE = date(2025, 10, 1)
+
+
+def _heal_archive_pages(html_gen, db, limit: int = 500) -> int:
+    """Render archive pages for dates that have articles but no page yet.
+
+    The archive index is built by scanning docs/archive/*.html, so a date
+    whose page is missing is invisible on the site even when its articles are
+    stored and analyzed. Pages go missing whenever articles are analyzed long
+    after publication — backfills, backlog drains, or any run that publishes
+    from a workspace lacking the deployed history.
+
+    Returns the number of pages generated.
+    """
+    published_dir = html_gen.github_pages_dir or html_gen.output_dir
+    if published_dir is None:
+        return 0
+
+    today = datetime.now(timezone.utc).date()
+    rows = (
+        db.query(Article.published_date)
+        .filter(
+            and_(
+                Article.is_ai_related == True,
+                Article.last_analyzed != None,
+                Article.published_date != None,
+                Article.published_date >= ARCHIVE_FLOOR_DATE,
+                Article.published_date <= today,
+            )
+        )
+        .distinct()
+        .all()
+    )
+
+    missing = [
+        d for d in sorted({r[0] for r in rows}, reverse=True)
+        if not (published_dir / "archive" / f"{d.strftime('%Y-%m-%d')}.html").exists()
+    ]
+    if not missing:
+        return 0
+
+    logger.info(f"Archive healing: {len(missing)} dates have articles but no page")
+    generated = 0
+    for d in missing[:limit]:
+        try:
+            html_gen.generate_daily_report(datetime.combine(d, datetime.min.time()))
+            generated += 1
+        except Exception as e:
+            logger.warning(f"Could not generate archive page for {d}: {e}")
+
+    if len(missing) > limit:
+        logger.warning(
+            f"Archive healing capped at {limit} pages this run; "
+            f"{len(missing) - limit} dates remain for the next run"
+        )
+    return generated
 
 
 def _update_source_health():
@@ -863,6 +925,15 @@ async def send_notifications(articles, analyses, db, editorial_picks=None):
             logger.info(f"✅ HTML report generated: {today_file}")
             exported_files['html'] = today_file
 
+            # Render any archive pages that are missing for stored articles,
+            # before indexing, so backfilled days are searchable too.
+            try:
+                healed = _heal_archive_pages(html_gen, db)
+                if healed:
+                    logger.info(f"✅ Generated {healed} missing archive pages")
+            except Exception as e:
+                logger.warning(f"Archive healing failed (non-fatal): {e}")
+
             # Generate Pagefind search index (non-fatal)
             popular_topics = []
             try:
@@ -948,6 +1019,15 @@ async def send_notifications(articles, analyses, db, editorial_picks=None):
         today_file = html_gen.generate_daily_report()
         logger.info(f"✅ HTML report generated: {today_file}")
         exported_files['html'] = today_file
+
+        # Render any archive pages that are missing for stored articles,
+        # before indexing, so backfilled days are searchable too.
+        try:
+            healed = _heal_archive_pages(html_gen, db)
+            if healed:
+                logger.info(f"✅ Generated {healed} missing archive pages")
+        except Exception as e:
+            logger.warning(f"Archive healing failed (non-fatal): {e}")
 
         # Generate Pagefind search index (non-fatal)
         popular_topics = []
