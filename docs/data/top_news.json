@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-29T16:36:37",
+  "generated_at": "2026-07-29T21:58:14",
   "picks": [
     {
       "rank": 1,
       "article_id": 46231,
-      "editorial_note": "An $874 million federal commitment to seven companies under the CHIPS and Science Act marks one of the largest government bets yet on securing the AI compute supply chain domestically.",
+      "editorial_note": "An $874 million federal commitment to semiconductor R&D under the CHIPS Act is the largest single dollar figure of the week and directly targets the compute supply chain underpinning all AI research \u2014 a policy move with outsized downstream impact on the field.",
       "impact_category": "Major Funding",
       "title": "Department of Commerce Announces Letters of Intent With 7 Companies for $874 Million to Accelerate Semiconductor R&D for the Compute Supply Chain",
       "url": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million",
@@ -14,8 +14,8 @@
     {
       "rank": 2,
       "article_id": 44080,
-      "editorial_note": "This Q&A lays out the ambition of DOE's Genesis Mission ModCon consortium \u2014 building self-improving AI models on national lab data and supercomputers \u2014 the framing initiative behind dozens of this week's university grant stories.",
-      "impact_category": "Scientific Breakthrough",
+      "editorial_note": "Berkeley Lab's explainer on the DOE Genesis Mission's ModCon consortium lays out the architecture of the biggest federal AI-for-science push in years \u2014 self-improving models trained on national lab data and facilities \u2014 providing essential context for the wave of individual Genesis Mission awards this week.",
+      "impact_category": "Policy Impact",
       "title": "Q&A: Accelerating Scientific Discovery with the Genesis Mission\u2019s ModCon",
       "url": "https://newscenter.lbl.gov/2026/07/23/qa-accelerating-scientific-discovery-with-the-genesis-missions-modcon/",
       "university": "Lawrence Berkeley National Laboratory",
@@ -23,18 +23,18 @@
     },
     {
       "rank": 3,
-      "article_id": 44608,
-      "editorial_note": "An AI agent reportedly acting autonomously to breach infrastructure during a security test is a landmark moment for AI safety and cybersecurity policy, with implications well beyond the labs involved.",
-      "impact_category": "Policy Impact",
-      "title": "OpenAI\u2019s models autonomously hacked a tech startup. It signals a seismic shift in cybersecurity",
-      "url": "https://www.unsw.edu.au/newsroom/news/2026/07/openai-models-hacked-tech-startup-seismic-shift-cybersecurity",
-      "university": "University of New South Wales",
-      "published_date": "2026-07-24"
+      "article_id": 45546,
+      "editorial_note": "Texas A&M's entry into the Genesis Mission exemplifies how deeply the DOE initiative is knitting together universities, industry, and national labs around AI and quantum computing for scientific discovery.",
+      "impact_category": "Strategic Partnership",
+      "title": "Texas A&M University joins the Genesis Mission to transform science using artificial intelligence \u2013 Texas A&M Stories",
+      "url": "https://stories.tamu.edu/news/2026/07/27/texas-am-university-joins-the-genesis-mission-to-transform-science-using-artificial-intelligence/",
+      "university": "Texas A & M University-College Station",
+      "published_date": "2026-07-27"
     },
     {
       "rank": 4,
       "article_id": 44386,
-      "editorial_note": "Penn State's $20M NSF award to lead a 'programmable cloud laboratory' node signals serious federal investment in automating scientific discovery infrastructure at national scale.",
+      "editorial_note": "A $20 million NSF award to Penn State to lead a national 'programmable cloud laboratory' node signals serious federal investment in automating scientific experimentation with AI.",
       "impact_category": "Major Funding",
       "title": "Penn State awarded $20M to lead an NSF \u2018programmable cloud laboratory\u2019 | Penn State University",
       "url": "https://www.psu.edu/news/research/story/penn-state-awarded-20m-lead-nsf-programmable-cloud-laboratory",
@@ -43,38 +43,38 @@
     },
     {
       "rank": 5,
-      "article_id": 44524,
-      "editorial_note": "USC leading or joining six separate DOE Genesis Mission projects illustrates how deeply the initiative is weaving together universities, industry, and the national labs.",
-      "impact_category": "Strategic Partnership",
-      "title": "Multiple USC-led projects receive U.S. Department of Energy Genesis Mission awards to advance AI",
-      "url": "https://today.usc.edu/multiple-usc-led-projects-receive-u-s-department-of-energy-genesis-mission-awards-to-advance-ai/",
-      "university": "University of Southern California",
-      "published_date": "2026-07-23"
+      "article_id": 44395,
+      "editorial_note": "A Pitt-led team building AI agents to automate quantum computing research for chemistry and materials science represents a genuinely novel application of agentic AI to accelerate hard science.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "A Pitt-led team plans to automate quantum computing research with a Department of Energy grant",
+      "url": "https://www.pittwire.pitt.edu/features-articles/2026/07/24/genesis-mission-ai-quantum",
+      "university": "University of Pittsburgh-Pittsburgh Campus",
+      "published_date": "2026-07-24"
     },
     {
       "rank": 6,
-      "article_id": 45546,
-      "editorial_note": "Texas A&M's entry into the Genesis Mission \u2014 with strong financial and partnership scores \u2014 underscores the initiative's rapid expansion into a truly national AI-for-science coalition.",
-      "impact_category": "Strategic Partnership",
-      "title": "Texas A&M University joins the Genesis Mission to transform science using artificial intelligence \u2013 Texas A&M Stories",
-      "url": "https://stories.tamu.edu/news/2026/07/27/texas-am-university-joins-the-genesis-mission-to-transform-science-using-artificial-intelligence/",
-      "university": "Texas A & M University-College Station",
-      "published_date": "2026-07-27"
+      "article_id": 44435,
+      "editorial_note": "CMU, Pitt, and UW researchers used a new deep learning model to reveal how 3D genome architecture differs in Alzheimer's patients \u2014 a concrete scientific advance with direct disease-relevance.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "AI, Single-Cell Technology Reveal How 3D Genome Differs in People With Alzheimer's Disease",
+      "url": "https://www.cs.cmu.edu/news/2026/ma-alzheimers",
+      "university": "Carnegie Mellon University",
+      "published_date": "2026-07-23"
     },
     {
       "rank": 7,
-      "article_id": 45691,
-      "editorial_note": "Cambridge's role in the CuspAI-led global AI Materials Foundry points to AI-driven materials discovery becoming an international, industry-backed research infrastructure rather than a single-lab effort.",
-      "impact_category": "Strategic Partnership",
-      "title": "Cambridge researchers contribute to AI Materials Foundry",
-      "url": "https://www.cam.ac.uk/research/news/cambridge-researchers-contribute-to-ai-materials-foundry",
-      "university": "University of Cambridge",
-      "published_date": "2026-07-28"
+      "article_id": 46372,
+      "editorial_note": "HKU's ClairS algorithm achieves high-accuracy cancer mutation detection across multiple cancer types using long-read sequencing, a meaningful step toward AI-assisted precision oncology.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "HKU School of Computing and Data Science research team develops ClairS, achieving high-accuracy cancer mutation detection across multiple cancer types - All News - Media - HKU",
+      "url": "https://www.hku.hk/press/news_detail_29266.html",
+      "university": "University of Hong Kong",
+      "published_date": "2026-07-26"
     },
     {
       "rank": 8,
       "article_id": 44472,
-      "editorial_note": "TUM and MIT deepening their AI and robotics partnership, backed by Bavarian government funding, shows transatlantic academic collaboration scaling up with real institutional and financial commitment.",
+      "editorial_note": "TUM and MIT are deepening a formal AI and robotics partnership with funded researcher exchanges, illustrating how leading institutions are institutionalizing cross-border AI collaboration.",
       "impact_category": "Strategic Partnership",
       "title": "TUM and MIT are expanding their strategic partnership in the fields of AI and robotics. The Bavarian Ministry of Science is providing 1.6 million.",
       "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/tum-is-expanding-its-strategic-partnership-with-mit",
@@ -83,23 +83,23 @@
     },
     {
       "rank": 9,
-      "article_id": 44435,
-      "editorial_note": "A multi-institution team using AI and single-cell technology to uncover 3D genome differences in Alzheimer's disease represents a genuine scientific advance with direct relevance to neurodegenerative disease research.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "AI, Single-Cell Technology Reveal How 3D Genome Differs in People With Alzheimer's Disease",
-      "url": "https://www.cs.cmu.edu/news/2026/ma-alzheimers",
-      "university": "Carnegie Mellon University",
-      "published_date": "2026-07-23"
+      "article_id": 44608,
+      "editorial_note": "Reports that an OpenAI agent autonomously hacked systems during a security test \u2014 without human direction \u2014 raise serious AI safety and governance questions with immediate implications for cybersecurity policy.",
+      "impact_category": "Policy Impact",
+      "title": "OpenAI\u2019s models autonomously hacked a tech startup. It signals a seismic shift in cybersecurity",
+      "url": "https://www.unsw.edu.au/newsroom/news/2026/07/openai-models-hacked-tech-startup-seismic-shift-cybersecurity",
+      "university": "University of New South Wales",
+      "published_date": "2026-07-24"
     },
     {
       "rank": 10,
-      "article_id": 44437,
-      "editorial_note": "An RPI-led PNAS study finding that leading tools like AlphaFold2 routinely produce physically implausible protein structures is a significant, field-wide check on AI's reliability in scientific research.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "AI Growing Pains Reach Scientific Labs, New RPI Study Finds",
-      "url": "https://news.rpi.edu/2026/07/24/ai-growing-pains-reach-scientific-labs-new-rpi-study-finds",
-      "university": "Rensselaer Polytechnic Institute",
-      "published_date": "2026-07-24"
+      "article_id": 45691,
+      "editorial_note": "Cambridge's contribution to CuspAI's global AI Materials Foundry reflects growing industry-academia coordination to use AI-driven design and robotic experimentation to speed up materials discovery.",
+      "impact_category": "Strategic Partnership",
+      "title": "Cambridge researchers contribute to AI Materials Foundry",
+      "url": "https://www.cam.ac.uk/research/news/cambridge-researchers-contribute-to-ai-materials-foundry",
+      "university": "University of Cambridge",
+      "published_date": "2026-07-28"
     }
   ]
 }
