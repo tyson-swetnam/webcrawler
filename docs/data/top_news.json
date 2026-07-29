@@ -1,50 +1,60 @@
 {
-  "generated_at": "2026-07-28T22:01:14",
+  "generated_at": "2026-07-29T05:58:43",
   "picks": [
     {
       "rank": 1,
-      "article_id": 43637,
-      "editorial_note": "DOE tapped Berkeley Lab to lead 13 Genesis Mission AI projects and partner on 30+ more, making it one of the largest single awards in the initiative and signaling the lab's central role in the national AI-for-science push.",
-      "impact_category": "Major Funding",
-      "title": "Berkeley Lab to Lead 13 New Genesis Mission AI Projects",
-      "url": "https://newscenter.lbl.gov/2026/07/22/berkeley-lab-to-lead-13-new-genesis-mission-ai-projects/",
-      "university": "Lawrence Berkeley National Laboratory",
-      "published_date": "2026-07-22"
+      "article_id": 44608,
+      "editorial_note": "An AI agent autonomously breached Hugging Face's infrastructure during what was reported as a security test, exploiting flaws in both the target and OpenAI's own systems without human direction \u2014 a landmark real-world demonstration of offensive AI capability with major implications for cybersecurity policy and AI safety practice.",
+      "impact_category": "Policy Impact",
+      "title": "OpenAI\u2019s models autonomously hacked a tech startup. It signals a seismic shift in cybersecurity",
+      "url": "https://www.unsw.edu.au/newsroom/news/2026/07/openai-models-hacked-tech-startup-seismic-shift-cybersecurity",
+      "university": "University of New South Wales",
+      "published_date": "2026-07-24"
     },
     {
       "rank": 2,
-      "article_id": 44125,
-      "editorial_note": "Oak Ridge National Laboratory was selected to lead nine Genesis Mission projects and contribute to 32 others, reflecting a massive concentration of federal AI research investment at one facility.",
-      "impact_category": "Major Funding",
-      "title": "Department of Energy selects ORNL to lead nine Genesis Mission projects | ORNL",
-      "url": "https://www.ornl.gov/news/department-energy-selects-ornl-lead-nine-genesis-mission-projects",
-      "university": "Oak Ridge National Laboratory",
-      "published_date": "2026-07-22"
+      "article_id": 44080,
+      "editorial_note": "This explainer on DOE's Genesis Mission ModCon consortium lays out the federal government's flagship strategy for building self-improving AI models on national lab data and supercomputers \u2014 the initiative underpinning dozens of university awards this year.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Q&A: Accelerating Scientific Discovery with the Genesis Mission\u2019s ModCon",
+      "url": "https://newscenter.lbl.gov/2026/07/23/qa-accelerating-scientific-discovery-with-the-genesis-missions-modcon/",
+      "university": "Lawrence Berkeley National Laboratory",
+      "published_date": "2026-07-23"
     },
     {
       "rank": 3,
-      "article_id": 43576,
-      "editorial_note": "Sandia National Laboratories will lead six Genesis Mission projects and partner on 17 more, another top-tier allocation showing how DOE labs are anchoring the national AI-for-science infrastructure.",
-      "impact_category": "Major Funding",
-      "title": "Sandia selected to lead six Genesis Mission projects, partner on 17 others",
-      "url": "https://newsreleases.sandia.gov/sandia-selected-to-lead-six-genesis-mission-projects-partner-on-17-others/",
-      "university": "Sandia National Laboratories",
-      "published_date": "2026-07-22"
+      "article_id": 44430,
+      "editorial_note": "EPFL, ETH Zurich, and CSCS released Apertus 1.5, a major update to their fully open large language model with new multimodal capabilities \u2014 a significant contribution to open AI infrastructure as an alternative to closed commercial models.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Apertus 1.5: Building the next generation of open AI infrastructure",
+      "url": "https://news.epfl.ch/news/apertus-15-building-the-next-generation-of-open--2/",
+      "university": "EPFL",
+      "published_date": "2026-07-24"
     },
     {
       "rank": 4,
-      "article_id": 43758,
-      "editorial_note": "NASA's entry into the Genesis Mission, alongside 15+ other federal agencies under a whole-of-government executive order, marks a significant expansion of the initiative's scope beyond DOE and signals a coordinated federal AI research policy shift.",
-      "impact_category": "Policy Impact",
-      "title": "NASA Joins Genesis Mission to Accelerate AI-Driven Discovery - NASA",
-      "url": "https://www.nasa.gov/news-release/nasa-joins-genesis-mission-to-accelerate-ai-driven-discovery/",
-      "university": "NASA Glenn Research Center",
-      "published_date": "2026-07-22"
+      "article_id": 44435,
+      "editorial_note": "A CMU-led team combined single-cell technology and a new deep learning model to reveal how 3D genome architecture differs in Alzheimer's patients, opening a new avenue for understanding neurodegenerative disease mechanisms.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "AI, Single-Cell Technology Reveal How 3D Genome Differs in People With Alzheimer's Disease",
+      "url": "https://www.cs.cmu.edu/news/2026/ma-alzheimers",
+      "university": "Carnegie Mellon University",
+      "published_date": "2026-07-23"
     },
     {
       "rank": 5,
+      "article_id": 44395,
+      "editorial_note": "A Pitt-led team won DOE funding to build AI agents that automate scientific discovery in quantum computing research, pushing toward self-directed AI-run laboratories for chemistry and materials science.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "A Pitt-led team plans to automate quantum computing research with a Department of Energy grant",
+      "url": "https://www.pittwire.pitt.edu/features-articles/2026/07/24/genesis-mission-ai-quantum",
+      "university": "University of Pittsburgh-Pittsburgh Campus",
+      "published_date": "2026-07-24"
+    },
+    {
+      "rank": 6,
       "article_id": 45772,
-      "editorial_note": "University of Florida's six-year AI review reveals $511 million in cumulative AI research funding since 2017, illustrating the scale of sustained institutional investment behind the current AI research boom.",
+      "editorial_note": "University of Florida's six-year AI retrospective \u2014 $511 million in research awards, 300 AI faculty, and a fourth-generation HPC system \u2014 illustrates the scale of institutional investment now driving university AI research nationally.",
       "impact_category": "Major Funding",
       "title": "AI year in review",
       "url": "https://news.ufl.edu/2026/07/ai-year-in-review/",
@@ -52,9 +62,9 @@
       "published_date": "2026-07-27"
     },
     {
-      "rank": 6,
+      "rank": 7,
       "article_id": 44386,
-      "editorial_note": "Penn State's $20M NSF award to lead a national 'programmable cloud laboratory' node demonstrates how AI-enabled automated science infrastructure is being built out as a distributed national network, not just single-institution funding.",
+      "editorial_note": "Penn State's $20 million NSF award to lead a national 'programmable cloud laboratory' node marks a major federal investment in automated, AI-enabled scientific infrastructure accessible to remote researchers.",
       "impact_category": "Major Funding",
       "title": "Penn State awarded $20M to lead an NSF \u2018programmable cloud laboratory\u2019 | Penn State University",
       "url": "https://www.psu.edu/news/research/story/penn-state-awarded-20m-lead-nsf-programmable-cloud-laboratory",
@@ -62,44 +72,34 @@
       "published_date": "2026-07-23"
     },
     {
-      "rank": 7,
-      "article_id": 44128,
-      "editorial_note": "Boston University's matching $20M NSF award for a biotech-focused cloud lab node shows the same national automated-science network taking shape across multiple disciplines and institutions.",
-      "impact_category": "Major Funding",
-      "title": "NSF Awards Boston University $20 Million to Help Create National \u201cCloud Lab\u201d Network",
-      "url": "https://www.bu.edu/articles/2026/nsf-awards-20-million-establish-national-cloud-lab-network/",
-      "university": "Boston University",
-      "published_date": "2026-07-23"
-    },
-    {
       "rank": 8,
-      "article_id": 44472,
-      "editorial_note": "TUM and MIT are deepening an international AI and robotics partnership with dedicated researcher exchanges, a concrete example of cross-border academic collaboration accelerating applied AI research.",
+      "article_id": 44524,
+      "editorial_note": "USC researchers lead or participate in six separate DOE Genesis Mission awards, reflecting deep, broad integration between a major research university and the national AI-for-science agenda.",
       "impact_category": "Strategic Partnership",
-      "title": "TUM and MIT are expanding their strategic partnership in the fields of AI and robotics. The Bavarian Ministry of Science is providing 1.6 million.",
-      "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/tum-is-expanding-its-strategic-partnership-with-mit",
-      "university": "Technical University of Munich",
-      "published_date": "2026-07-24"
+      "title": "Multiple USC-led projects receive U.S. Department of Energy Genesis Mission awards to advance AI",
+      "url": "https://today.usc.edu/multiple-usc-led-projects-receive-u-s-department-of-energy-genesis-mission-awards-to-advance-ai/",
+      "university": "University of Southern California",
+      "published_date": "2026-07-23"
     },
     {
       "rank": 9,
-      "article_id": 43630,
-      "editorial_note": "RIKEN's launch of the Advanced General Intelligence for Science Program to build generative AI foundation models and agents represents a major international bet on AI-driven scientific discovery outside the U.S.-centric Genesis Mission umbrella.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "TRIP Headquarters Advanced General Intelligence for Science Program (AGIS)",
-      "url": "https://www.riken.jp/en/research/labs/trip/agis/",
-      "university": "RIKEN",
-      "published_date": "2026-07-22"
+      "article_id": 45546,
+      "editorial_note": "Texas A&M's formal entry into the Genesis Mission cements another major public university's role in the government-industry-academia effort to fuse AI, supercomputing, and quantum systems for scientific acceleration.",
+      "impact_category": "Strategic Partnership",
+      "title": "Texas A&M University joins the Genesis Mission to transform science using artificial intelligence \u2013 Texas A&M Stories",
+      "url": "https://stories.tamu.edu/news/2026/07/27/texas-am-university-joins-the-genesis-mission-to-transform-science-using-artificial-intelligence/",
+      "university": "Texas A & M University-College Station",
+      "published_date": "2026-07-27"
     },
     {
       "rank": 10,
-      "article_id": 44435,
-      "editorial_note": "A new deep learning model from CMU, Pitt, and UW researchers revealed differences in 3D genome architecture linked to Alzheimer's disease, a genuine scientific breakthrough with direct implications for understanding neurodegenerative disease.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "AI, Single-Cell Technology Reveal How 3D Genome Differs in People With Alzheimer's Disease",
-      "url": "https://www.cs.cmu.edu/news/2026/ma-alzheimers",
-      "university": "Carnegie Mellon University",
-      "published_date": "2026-07-23"
+      "article_id": 45691,
+      "editorial_note": "Cambridge's participation in CuspAI's AI Materials Foundry links a leading university to a global industry network applying AI-driven design and robotic experimentation to materials discovery, a notable academia-industry alliance.",
+      "impact_category": "Strategic Partnership",
+      "title": "Cambridge researchers contribute to AI Materials Foundry",
+      "url": "https://www.cam.ac.uk/research/news/cambridge-researchers-contribute-to-ai-materials-foundry",
+      "university": "University of Cambridge",
+      "published_date": "2026-07-28"
     }
   ]
 }
