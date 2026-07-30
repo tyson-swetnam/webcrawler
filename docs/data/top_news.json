@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-30T05:48:27",
+  "generated_at": "2026-07-30T11:05:28",
   "picks": [
     {
       "rank": 1,
       "article_id": 46231,
-      "editorial_note": "An $874 million federal commitment to semiconductor R&D directly targets the compute bottleneck constraining AI progress nationwide \u2014 one of the largest single funding actions in this week's coverage with implications for the entire US AI supply chain.",
+      "editorial_note": "An $874M federal commitment to semiconductor R&D under the CHIPS and Science Act is the largest funding figure of the week and directly targets the compute supply chain that underpins all AI progress, giving it outsized national-policy significance.",
       "impact_category": "Major Funding",
       "title": "Department of Commerce Announces Letters of Intent With 7 Companies for $874 Million to Accelerate Semiconductor R&D for the Compute Supply Chain",
       "url": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million",
@@ -14,7 +14,7 @@
     {
       "rank": 2,
       "article_id": 44608,
-      "editorial_note": "An AI agent autonomously exploiting vulnerabilities to breach production systems during a security test, without human direction, is a watershed moment for AI safety and signals that regulators and industry will need to rethink cybersecurity norms for increasingly agentic models.",
+      "editorial_note": "An AI agent autonomously exploiting vulnerabilities to breach production systems during a security test is a landmark AI-safety incident that multiple universities are already treating as a turning point for cybersecurity policy and AI governance.",
       "impact_category": "Policy Impact",
       "title": "OpenAI\u2019s models autonomously hacked a tech startup. It signals a seismic shift in cybersecurity",
       "url": "https://www.unsw.edu.au/newsroom/news/2026/07/openai-models-hacked-tech-startup-seismic-shift-cybersecurity",
@@ -23,28 +23,8 @@
     },
     {
       "rank": 3,
-      "article_id": 45546,
-      "editorial_note": "Texas A&M's entry into the DOE's Genesis Mission exemplifies a new model of coordinated government-industry-academia investment in AI and supercomputing for scientific discovery, with implications reaching well beyond one campus.",
-      "impact_category": "Strategic Partnership",
-      "title": "Texas A&M University joins the Genesis Mission to transform science using artificial intelligence \u2013 Texas A&M Stories",
-      "url": "https://stories.tamu.edu/news/2026/07/27/texas-am-university-joins-the-genesis-mission-to-transform-science-using-artificial-intelligence/",
-      "university": "Texas A & M University-College Station",
-      "published_date": "2026-07-27"
-    },
-    {
-      "rank": 4,
-      "article_id": 44395,
-      "editorial_note": "Automating scientific discovery itself with AI agents \u2014 applied here to quantum computing research \u2014 represents a genuine shift in how science gets done, backed by direct DOE funding.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "A Pitt-led team plans to automate quantum computing research with a Department of Energy grant",
-      "url": "https://www.pittwire.pitt.edu/features-articles/2026/07/24/genesis-mission-ai-quantum",
-      "university": "University of Pittsburgh-Pittsburgh Campus",
-      "published_date": "2026-07-24"
-    },
-    {
-      "rank": 5,
       "article_id": 44780,
-      "editorial_note": "A concrete three-way collaboration between a university, a national lab, and an energy company using AI to solve nuclear fuel recycling tackles a real bottleneck in clean energy expansion.",
+      "editorial_note": "A three-way DOE Genesis Mission partnership between Case Western, Argonne National Lab, and Oklo to use AI for recycling used nuclear fuel pairs high scientific stakes with real energy-policy implications for the nuclear fuel cycle.",
       "impact_category": "Strategic Partnership",
       "title": "Case Western Reserve University partnering with Argonne National Laboratory on Genesis Mission grant to harness power of AI to unlock recycling of nuclear fuel | CWRU Newsroom | Case Western Reserve University",
       "url": "https://case.edu/news/case-western-reserve-university-partnering-argonne-national-laboratory-genesis-mission-grant-harness-power-ai-unlock-recycling-nuclear-fuel",
@@ -52,29 +32,19 @@
       "published_date": "2026-07-24"
     },
     {
-      "rank": 6,
-      "article_id": 45691,
-      "editorial_note": "Cambridge's participation in a global AI Materials Foundry network shows how AI-driven design and robotic experimentation are accelerating materials discovery at industrial scale, a foundational capability for next-generation technology.",
-      "impact_category": "Strategic Partnership",
-      "title": "Cambridge researchers contribute to AI Materials Foundry",
-      "url": "https://www.cam.ac.uk/research/news/cambridge-researchers-contribute-to-ai-materials-foundry",
-      "university": "University of Cambridge",
-      "published_date": "2026-07-28"
-    },
-    {
-      "rank": 7,
-      "article_id": 44430,
-      "editorial_note": "The release of Apertus 1.5, a fully open multimodal large language model trained on European supercomputing infrastructure, is a significant contribution to open AI research amid growing reliance on closed, proprietary models.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Apertus 1.5: Building the next generation of open AI infrastructure",
-      "url": "https://news.epfl.ch/news/apertus-15-building-the-next-generation-of-open--2/",
-      "university": "EPFL",
+      "rank": 4,
+      "article_id": 44395,
+      "editorial_note": "A Pitt-led DOE grant to build AI agents that automate quantum computing research represents a genuine step toward self-driving scientific discovery, one of the most technically ambitious Genesis Mission awards this week.",
+      "impact_category": "Major Funding",
+      "title": "A Pitt-led team plans to automate quantum computing research with a Department of Energy grant",
+      "url": "https://www.pittwire.pitt.edu/features-articles/2026/07/24/genesis-mission-ai-quantum",
+      "university": "University of Pittsburgh-Pittsburgh Campus",
       "published_date": "2026-07-24"
     },
     {
-      "rank": 8,
+      "rank": 5,
       "article_id": 44741,
-      "editorial_note": "A forensic tool developed with YouTube and Google DeepMind that can trace AI-generated fake videos back to their source model addresses one of the most pressing real-world harms of generative AI: the spread of undetectable synthetic media.",
+      "editorial_note": "UC Riverside's SAGA tool, developed with YouTube and Google DeepMind, doesn't just detect deepfakes but attributes them to a specific generative model \u2014 a meaningful advance for combating AI-driven disinformation at platform scale.",
       "impact_category": "Scientific Breakthrough",
       "title": "New tool identifies the sources of fake videos",
       "url": "https://news.ucr.edu/articles/2026/07/24/new-tool-identifies-sources-fake-videos",
@@ -82,9 +52,19 @@
       "published_date": "2026-07-24"
     },
     {
-      "rank": 9,
+      "rank": 6,
+      "article_id": 44430,
+      "editorial_note": "EPFL, ETH Zurich, and CSCS's Apertus 1.5 pushes open, fully transparent large language models forward with new multimodal capabilities, an important counterweight to closed commercial AI infrastructure.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Apertus 1.5: Building the next generation of open AI infrastructure",
+      "url": "https://news.epfl.ch/news/apertus-15-building-the-next-generation-of-open--2/",
+      "university": "EPFL",
+      "published_date": "2026-07-24"
+    },
+    {
+      "rank": 7,
       "article_id": 46372,
-      "editorial_note": "A deep-learning algorithm achieving high-accuracy cancer mutation detection across multiple cancer types demonstrates AI's growing clinical value in oncology diagnostics.",
+      "editorial_note": "HKU's ClairS algorithm achieves high-accuracy cancer mutation detection across multiple cancer types using long-read sequencing, a concrete clinical diagnostics advance with direct patient-care implications.",
       "impact_category": "Scientific Breakthrough",
       "title": "HKU School of Computing and Data Science research team develops ClairS, achieving high-accuracy cancer mutation detection across multiple cancer types - All News - Media - HKU",
       "url": "https://www.hku.hk/press/news_detail_29266.html",
@@ -92,9 +72,29 @@
       "published_date": "2026-07-26"
     },
     {
+      "rank": 8,
+      "article_id": 45691,
+      "editorial_note": "Cambridge joining CuspAI's global AI Materials Foundry links academic researchers into an industry-scale network for AI-driven materials design and robotic experimentation, broadening how materials science partnerships get structured.",
+      "impact_category": "Strategic Partnership",
+      "title": "Cambridge researchers contribute to AI Materials Foundry",
+      "url": "https://www.cam.ac.uk/research/news/cambridge-researchers-contribute-to-ai-materials-foundry",
+      "university": "University of Cambridge",
+      "published_date": "2026-07-28"
+    },
+    {
+      "rank": 9,
+      "article_id": 44472,
+      "editorial_note": "TUM and MIT's expanded AI-and-robotics partnership, backed by Bavarian state funding and built on researcher exchange between MIRMI and CSAIL, exemplifies deepening transatlantic academic collaboration in embodied AI.",
+      "impact_category": "Strategic Partnership",
+      "title": "TUM and MIT are expanding their strategic partnership in the fields of AI and robotics. The Bavarian Ministry of Science is providing 1.6 million.",
+      "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/tum-is-expanding-its-strategic-partnership-with-mit",
+      "university": "Technical University of Munich",
+      "published_date": "2026-07-24"
+    },
+    {
       "rank": 10,
       "article_id": 44437,
-      "editorial_note": "A PNAS study finding that widely used AI protein-structure tools like AlphaFold2 routinely violate basic physical rules is an important corrective for a scientific community increasingly dependent on these tools, with real implications for research reliability.",
+      "editorial_note": "An RPI-led PNAS study showing that leading AI protein-structure tools like AlphaFold2 routinely produce physically implausible structures is an important reality check on AI reliability in scientific labs.",
       "impact_category": "Scientific Breakthrough",
       "title": "AI Growing Pains Reach Scientific Labs, New RPI Study Finds",
       "url": "https://news.rpi.edu/2026/07/24/ai-growing-pains-reach-scientific-labs-new-rpi-study-finds",
