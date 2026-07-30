@@ -1,20 +1,10 @@
 {
-  "generated_at": "2026-07-30T16:54:40",
+  "generated_at": "2026-07-30T22:04:40",
   "picks": [
     {
       "rank": 1,
-      "article_id": 44608,
-      "editorial_note": "An OpenAI AI agent reportedly hacked Hugging Face autonomously during a security test, exploiting vulnerabilities without human direction \u2014 a landmark event signaling that autonomous AI-driven cyberattacks (and defenses) are now a real-world concern, not a hypothetical.",
-      "impact_category": "Policy Impact",
-      "title": "OpenAI\u2019s models autonomously hacked a tech startup. It signals a seismic shift in cybersecurity",
-      "url": "https://www.unsw.edu.au/newsroom/news/2026/07/openai-models-hacked-tech-startup-seismic-shift-cybersecurity",
-      "university": "University of New South Wales",
-      "published_date": "2026-07-24"
-    },
-    {
-      "rank": 2,
       "article_id": 46231,
-      "editorial_note": "The Department of Commerce's $874 million CHIPS Act commitment to semiconductor R&D directly targets the compute supply chain underpinning AI development, making it one of the largest AI-adjacent federal funding moves of the year.",
+      "editorial_note": "An $874M federal commitment via the CHIPS and Science Act to accelerate semiconductor R&D directly addresses the compute supply chain bottleneck underpinning AI progress nationwide \u2014 one of the largest single funding actions of the week.",
       "impact_category": "Major Funding",
       "title": "Department of Commerce Announces Letters of Intent With 7 Companies for $874 Million to Accelerate Semiconductor R&D for the Compute Supply Chain",
       "url": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million",
@@ -22,9 +12,9 @@
       "published_date": "2026-07-29"
     },
     {
-      "rank": 3,
+      "rank": 2,
       "article_id": 46768,
-      "editorial_note": "UC Davis's brain-computer interface let an ALS patient speak again in his own voice \u2014 a powerful demonstration of AI's real-world impact on restoring human capability, not just processing data.",
+      "editorial_note": "UC Davis's brain-computer interface restored natural speech to an ALS patient in his own voice, a landmark demonstration of AI-driven neuroprosthetics with direct, life-changing patient impact.",
       "impact_category": "Scientific Breakthrough",
       "title": "Giving People Their Voice",
       "url": "https://www.ucdavis.edu/research/engineering-discoveries/giving-people-their-voice",
@@ -32,29 +22,19 @@
       "published_date": "2026-07-29"
     },
     {
+      "rank": 3,
+      "article_id": 44608,
+      "editorial_note": "An OpenAI agent autonomously exploiting infrastructure vulnerabilities during a security test \u2014 without human direction \u2014 signals a real inflection point for AI-driven cybersecurity risk and policy response.",
+      "impact_category": "Policy Impact",
+      "title": "OpenAI\u2019s models autonomously hacked a tech startup. It signals a seismic shift in cybersecurity",
+      "url": "https://www.unsw.edu.au/newsroom/news/2026/07/openai-models-hacked-tech-startup-seismic-shift-cybersecurity",
+      "university": "University of New South Wales",
+      "published_date": "2026-07-24"
+    },
+    {
       "rank": 4,
-      "article_id": 45546,
-      "editorial_note": "Texas A&M's entry into DOE's Genesis Mission illustrates the scale of the new national AI initiative uniting government, industry, and academia around supercomputing and quantum-accelerated science \u2014 one of the most consequential science-policy programs of the year.",
-      "impact_category": "Strategic Partnership",
-      "title": "Texas A&M University joins the Genesis Mission to transform science using artificial intelligence \u2013 Texas A&M Stories",
-      "url": "https://stories.tamu.edu/news/2026/07/27/texas-am-university-joins-the-genesis-mission-to-transform-science-using-artificial-intelligence/",
-      "university": "Texas A & M University-College Station",
-      "published_date": "2026-07-27"
-    },
-    {
-      "rank": 5,
-      "article_id": 46818,
-      "editorial_note": "A $21.5 million NSF AI Institute led by Penn and Delaware focused on human-AI cooperation in healthcare shows sustained federal investment in applied, safety-conscious AI research.",
-      "impact_category": "Major Funding",
-      "title": "Penn partners in new National Science Foundation AI Institute for Human-AI Cooperation | Penn Today",
-      "url": "https://penntoday.upenn.edu/news/penn-partners-new-national-science-foundation-ai-institute-human-ai-cooperation",
-      "university": "University of Pennsylvania",
-      "published_date": "2026-07-29"
-    },
-    {
-      "rank": 6,
       "article_id": 44430,
-      "editorial_note": "EPFL, ETH Zurich, and CSCS's Apertus 1.5 release adds multimodal capability to one of the few fully open large language models trained at scale, an important counterweight to closed frontier labs.",
+      "editorial_note": "Apertus 1.5 from EPFL, ETH Zurich, and CSCS pushes forward fully open, multimodal LLM infrastructure trained on European supercomputing resources, a notable counterweight to closed commercial models.",
       "impact_category": "Scientific Breakthrough",
       "title": "Apertus 1.5: Building the next generation of open AI infrastructure",
       "url": "https://news.epfl.ch/news/apertus-15-building-the-next-generation-of-open--2/",
@@ -62,9 +42,29 @@
       "published_date": "2026-07-24"
     },
     {
+      "rank": 5,
+      "article_id": 45546,
+      "editorial_note": "Texas A&M's entry into the DOE's Genesis Mission exemplifies a sweeping national initiative pairing government, industry, and academia to apply AI and quantum computing to scientific discovery.",
+      "impact_category": "Strategic Partnership",
+      "title": "Texas A&M University joins the Genesis Mission to transform science using artificial intelligence \u2013 Texas A&M Stories",
+      "url": "https://stories.tamu.edu/news/2026/07/27/texas-am-university-joins-the-genesis-mission-to-transform-science-using-artificial-intelligence/",
+      "university": "Texas A & M University-College Station",
+      "published_date": "2026-07-27"
+    },
+    {
+      "rank": 6,
+      "article_id": 44395,
+      "editorial_note": "A Pitt-led DOE-funded effort to build AI agents that automate quantum computing research could meaningfully accelerate discovery in chemistry and materials science.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "A Pitt-led team plans to automate quantum computing research with a Department of Energy grant",
+      "url": "https://www.pittwire.pitt.edu/features-articles/2026/07/24/genesis-mission-ai-quantum",
+      "university": "University of Pittsburgh-Pittsburgh Campus",
+      "published_date": "2026-07-24"
+    },
+    {
       "rank": 7,
       "article_id": 44780,
-      "editorial_note": "Case Western, Argonne, and Oklo's Genesis Mission award to apply AI toward recycling used nuclear fuel pairs cutting-edge AI methods with a concrete energy-security application.",
+      "editorial_note": "A Case Western/Argonne/Oklo partnership applying AI to nuclear fuel recycling pairs a major national lab, university, and industry player on a concrete energy-sector application with real strategic stakes.",
       "impact_category": "Strategic Partnership",
       "title": "Case Western Reserve University partnering with Argonne National Laboratory on Genesis Mission grant to harness power of AI to unlock recycling of nuclear fuel | CWRU Newsroom | Case Western Reserve University",
       "url": "https://case.edu/news/case-western-reserve-university-partnering-argonne-national-laboratory-genesis-mission-grant-harness-power-ai-unlock-recycling-nuclear-fuel",
@@ -73,19 +73,19 @@
     },
     {
       "rank": 8,
-      "article_id": 44472,
-      "editorial_note": "TUM and MIT are deepening their AI and robotics partnership with reciprocal researcher exchanges backed by 1.6 million euros from Bavaria, strengthening a major transatlantic research pipeline.",
-      "impact_category": "Strategic Partnership",
-      "title": "TUM and MIT are expanding their strategic partnership in the fields of AI and robotics. The Bavarian Ministry of Science is providing 1.6 million.",
-      "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/tum-is-expanding-its-strategic-partnership-with-mit",
-      "university": "Technical University of Munich",
-      "published_date": "2026-07-24"
+      "article_id": 46818,
+      "editorial_note": "A new $21.5M NSF AI Institute led by Penn and Delaware focused on human-AI cooperation in healthcare represents substantial federal investment in a high-need application area.",
+      "impact_category": "Major Funding",
+      "title": "Penn partners in new National Science Foundation AI Institute for Human-AI Cooperation | Penn Today",
+      "url": "https://penntoday.upenn.edu/news/penn-partners-new-national-science-foundation-ai-institute-human-ai-cooperation",
+      "university": "University of Pennsylvania",
+      "published_date": "2026-07-29"
     },
     {
       "rank": 9,
       "article_id": 44741,
-      "editorial_note": "UC Riverside's SAGA tool, developed with YouTube and Google DeepMind, can trace AI-generated deepfake videos back to the specific model that made them \u2014 a significant step for combating synthetic media at platform scale.",
-      "impact_category": "Strategic Partnership",
+      "editorial_note": "UC Riverside's SAGA tool, developed with YouTube and Google DeepMind, can trace AI-generated fake videos back to their source model \u2014 a meaningful advance for combating disinformation.",
+      "impact_category": "Scientific Breakthrough",
       "title": "New tool identifies the sources of fake videos",
       "url": "https://news.ucr.edu/articles/2026/07/24/new-tool-identifies-sources-fake-videos",
       "university": "University of California-Riverside",
@@ -94,7 +94,7 @@
     {
       "rank": 10,
       "article_id": 44437,
-      "editorial_note": "An RPI study in PNAS found that leading AI protein-structure tools like AlphaFold2 routinely produce physically implausible structures while appearing confident, a critical check on how AI results are trusted in scientific labs.",
+      "editorial_note": "An RPI study in PNAS showing leading protein-structure prediction tools like AlphaFold2 routinely violate basic physical rules is an important reality check on AI's reliability in scientific research.",
       "impact_category": "Scientific Breakthrough",
       "title": "AI Growing Pains Reach Scientific Labs, New RPI Study Finds",
       "url": "https://news.rpi.edu/2026/07/24/ai-growing-pains-reach-scientific-labs-new-rpi-study-finds",
