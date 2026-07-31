@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-30T22:04:40",
+  "generated_at": "2026-07-31T06:19:35",
   "picks": [
     {
       "rank": 1,
       "article_id": 46231,
-      "editorial_note": "An $874M federal commitment via the CHIPS and Science Act to accelerate semiconductor R&D directly addresses the compute supply chain bottleneck underpinning AI progress nationwide \u2014 one of the largest single funding actions of the week.",
+      "editorial_note": "An $874 million federal commitment across seven companies marks one of the largest direct investments yet in shoring up the domestic semiconductor supply chain that underpins AI compute \u2014 a policy move with outsized downstream impact on AI research capacity nationwide.",
       "impact_category": "Major Funding",
       "title": "Department of Commerce Announces Letters of Intent With 7 Companies for $874 Million to Accelerate Semiconductor R&D for the Compute Supply Chain",
       "url": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million",
@@ -13,38 +13,8 @@
     },
     {
       "rank": 2,
-      "article_id": 46768,
-      "editorial_note": "UC Davis's brain-computer interface restored natural speech to an ALS patient in his own voice, a landmark demonstration of AI-driven neuroprosthetics with direct, life-changing patient impact.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Giving People Their Voice",
-      "url": "https://www.ucdavis.edu/research/engineering-discoveries/giving-people-their-voice",
-      "university": "University of California-Davis",
-      "published_date": "2026-07-29"
-    },
-    {
-      "rank": 3,
-      "article_id": 44608,
-      "editorial_note": "An OpenAI agent autonomously exploiting infrastructure vulnerabilities during a security test \u2014 without human direction \u2014 signals a real inflection point for AI-driven cybersecurity risk and policy response.",
-      "impact_category": "Policy Impact",
-      "title": "OpenAI\u2019s models autonomously hacked a tech startup. It signals a seismic shift in cybersecurity",
-      "url": "https://www.unsw.edu.au/newsroom/news/2026/07/openai-models-hacked-tech-startup-seismic-shift-cybersecurity",
-      "university": "University of New South Wales",
-      "published_date": "2026-07-24"
-    },
-    {
-      "rank": 4,
-      "article_id": 44430,
-      "editorial_note": "Apertus 1.5 from EPFL, ETH Zurich, and CSCS pushes forward fully open, multimodal LLM infrastructure trained on European supercomputing resources, a notable counterweight to closed commercial models.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Apertus 1.5: Building the next generation of open AI infrastructure",
-      "url": "https://news.epfl.ch/news/apertus-15-building-the-next-generation-of-open--2/",
-      "university": "EPFL",
-      "published_date": "2026-07-24"
-    },
-    {
-      "rank": 5,
       "article_id": 45546,
-      "editorial_note": "Texas A&M's entry into the DOE's Genesis Mission exemplifies a sweeping national initiative pairing government, industry, and academia to apply AI and quantum computing to scientific discovery.",
+      "editorial_note": "Texas A&M's entry into the DOE's Genesis Mission signals a flagship national push to fuse AI, supercomputing, and quantum computing across government, industry, and academia \u2014 a structural bet on accelerating scientific discovery at scale.",
       "impact_category": "Strategic Partnership",
       "title": "Texas A&M University joins the Genesis Mission to transform science using artificial intelligence \u2013 Texas A&M Stories",
       "url": "https://stories.tamu.edu/news/2026/07/27/texas-am-university-joins-the-genesis-mission-to-transform-science-using-artificial-intelligence/",
@@ -52,29 +22,19 @@
       "published_date": "2026-07-27"
     },
     {
-      "rank": 6,
-      "article_id": 44395,
-      "editorial_note": "A Pitt-led DOE-funded effort to build AI agents that automate quantum computing research could meaningfully accelerate discovery in chemistry and materials science.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "A Pitt-led team plans to automate quantum computing research with a Department of Energy grant",
-      "url": "https://www.pittwire.pitt.edu/features-articles/2026/07/24/genesis-mission-ai-quantum",
-      "university": "University of Pittsburgh-Pittsburgh Campus",
-      "published_date": "2026-07-24"
-    },
-    {
-      "rank": 7,
-      "article_id": 44780,
-      "editorial_note": "A Case Western/Argonne/Oklo partnership applying AI to nuclear fuel recycling pairs a major national lab, university, and industry player on a concrete energy-sector application with real strategic stakes.",
+      "rank": 3,
+      "article_id": 45691,
+      "editorial_note": "Cambridge joining CuspAI's AI Materials Foundry links a top research university to a global industrial network aimed at compressing materials discovery timelines via AI-driven design and robotic experimentation.",
       "impact_category": "Strategic Partnership",
-      "title": "Case Western Reserve University partnering with Argonne National Laboratory on Genesis Mission grant to harness power of AI to unlock recycling of nuclear fuel | CWRU Newsroom | Case Western Reserve University",
-      "url": "https://case.edu/news/case-western-reserve-university-partnering-argonne-national-laboratory-genesis-mission-grant-harness-power-ai-unlock-recycling-nuclear-fuel",
-      "university": "Case Western Reserve University",
-      "published_date": "2026-07-24"
+      "title": "Cambridge researchers contribute to AI Materials Foundry",
+      "url": "https://www.cam.ac.uk/research/news/cambridge-researchers-contribute-to-ai-materials-foundry",
+      "university": "University of Cambridge",
+      "published_date": "2026-07-28"
     },
     {
-      "rank": 8,
+      "rank": 4,
       "article_id": 46818,
-      "editorial_note": "A new $21.5M NSF AI Institute led by Penn and Delaware focused on human-AI cooperation in healthcare represents substantial federal investment in a high-need application area.",
+      "editorial_note": "A new $21.5 million NSF AI Institute for Human-AI Cooperation, led by Penn and Delaware, targets AI-clinician collaboration in healthcare \u2014 a concrete, well-funded bet on human-AI teaming with clinical stakes.",
       "impact_category": "Major Funding",
       "title": "Penn partners in new National Science Foundation AI Institute for Human-AI Cooperation | Penn Today",
       "url": "https://penntoday.upenn.edu/news/penn-partners-new-national-science-foundation-ai-institute-human-ai-cooperation",
@@ -82,24 +42,64 @@
       "published_date": "2026-07-29"
     },
     {
-      "rank": 9,
-      "article_id": 44741,
-      "editorial_note": "UC Riverside's SAGA tool, developed with YouTube and Google DeepMind, can trace AI-generated fake videos back to their source model \u2014 a meaningful advance for combating disinformation.",
+      "rank": 5,
+      "article_id": 46768,
+      "editorial_note": "UC Davis's brain-computer interface restored natural speech to an ALS patient using his own voice \u2014 a landmark scientific and human milestone showing AI's tangible power to restore lost function.",
       "impact_category": "Scientific Breakthrough",
-      "title": "New tool identifies the sources of fake videos",
-      "url": "https://news.ucr.edu/articles/2026/07/24/new-tool-identifies-sources-fake-videos",
-      "university": "University of California-Riverside",
-      "published_date": "2026-07-24"
+      "title": "Giving People Their Voice",
+      "url": "https://www.ucdavis.edu/research/engineering-discoveries/giving-people-their-voice",
+      "university": "University of California-Davis",
+      "published_date": "2026-07-29"
+    },
+    {
+      "rank": 6,
+      "article_id": 45772,
+      "editorial_note": "University of Florida's six-year AI investment tally \u2014 $511 million in research awards, 200+ courses, and a top-tier HPC cluster \u2014 illustrates the scale of institutional resourcing now underpinning university AI research.",
+      "impact_category": "Major Funding",
+      "title": "AI year in review",
+      "url": "https://news.ufl.edu/2026/07/ai-year-in-review/",
+      "university": "University of Florida",
+      "published_date": "2026-07-27"
+    },
+    {
+      "rank": 7,
+      "article_id": 46833,
+      "editorial_note": "HKU's ClairS algorithm achieves high-accuracy cancer mutation detection across multiple cancer types using long-read sequencing, a meaningful advance for AI-assisted precision oncology.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "HKU School of Computing and Data Science research team develops ClairS, achieving high-accuracy cancer mutation detection across multiple cancer types - All News - Media - HKU",
+      "url": "https://www.hku.hk/press/news_detail_29266.html",
+      "university": "University of Hong Kong",
+      "published_date": "2026-07-26"
+    },
+    {
+      "rank": 8,
+      "article_id": 45213,
+      "editorial_note": "William & Mary's Genesis Mission award to build AI foundation models for particle physics, in partnership with Jefferson Lab and Brookhaven, exemplifies how national-lab collaborations are extending foundation-model methods into fundamental physics.",
+      "impact_category": "Strategic Partnership",
+      "title": "William & Mary receives DOE Genesis Mission award to advance AI-powered particle physics",
+      "url": "https://news.wm.edu/2026/07/27/william-mary-receives-doe-genesis-mission-award-to-advance-ai-powered-particle-physics/",
+      "university": "William & Mary",
+      "published_date": "2026-07-27"
+    },
+    {
+      "rank": 9,
+      "article_id": 46589,
+      "editorial_note": "HKUST's GSCo framework lets generalist and specialist AI models collaborate on disease diagnosis, improving diagnostic accuracy \u2014 a notable architectural advance for clinical AI systems.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "HKUST Develops Novel AI Framework Enabling Efficient Collaboration between Generalist and Specialist Models for Disease Diagnosis",
+      "url": "https://hkust.edu.hk/news/hkust-develops-novel-ai-framework-enabling-efficient-collaboration-between-generalist-and",
+      "university": "Hong Kong Univ. of Science and Technology",
+      "published_date": "2026-07-30"
     },
     {
       "rank": 10,
-      "article_id": 44437,
-      "editorial_note": "An RPI study in PNAS showing leading protein-structure prediction tools like AlphaFold2 routinely violate basic physical rules is an important reality check on AI's reliability in scientific research.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "AI Growing Pains Reach Scientific Labs, New RPI Study Finds",
-      "url": "https://news.rpi.edu/2026/07/24/ai-growing-pains-reach-scientific-labs-new-rpi-study-finds",
-      "university": "Rensselaer Polytechnic Institute",
-      "published_date": "2026-07-24"
+      "article_id": 46387,
+      "editorial_note": "Wharton research showing that basic human persuasion tactics can jailbreak safety guardrails in leading LLMs exposes a fundamental weakness in current AI safety approaches, with direct implications for AI governance and deployment policy.",
+      "impact_category": "Policy Impact",
+      "title": "How basic persuasion can bypass AI safeguards | Penn Today",
+      "url": "https://penntoday.upenn.edu/news/wharton-how-basic-persuasion-can-bypass-ai-safeguards",
+      "university": "University of Pennsylvania",
+      "published_date": "2026-07-28"
     }
   ]
 }
