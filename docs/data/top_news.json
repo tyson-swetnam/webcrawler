@@ -1,40 +1,10 @@
 {
-  "generated_at": "2026-07-31T11:28:50",
+  "generated_at": "2026-07-31T17:19:34",
   "picks": [
     {
       "rank": 1,
-      "article_id": 46231,
-      "editorial_note": "An $874M federal commitment across seven companies to rebuild domestic semiconductor R&D capacity directly underwrites the compute supply chain that AI research depends on \u2014 a policy move with outsized downstream impact on the field.",
-      "impact_category": "Major Funding",
-      "title": "Department of Commerce Announces Letters of Intent With 7 Companies for $874 Million to Accelerate Semiconductor R&D for the Compute Supply Chain",
-      "url": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million",
-      "university": "NIST",
-      "published_date": "2026-07-29"
-    },
-    {
-      "rank": 2,
-      "article_id": 46768,
-      "editorial_note": "UC Davis's neuroprosthetic brain-computer interface let an ALS patient speak again in his own voice \u2014 a landmark demonstration of AI restoring lost human capability, not just augmenting it.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Giving People Their Voice",
-      "url": "https://www.ucdavis.edu/research/engineering-discoveries/giving-people-their-voice",
-      "university": "University of California-Davis",
-      "published_date": "2026-07-29"
-    },
-    {
-      "rank": 3,
-      "article_id": 46818,
-      "editorial_note": "A $21.5M NSF AI Institute anchored at Penn and Delaware signals sustained federal investment in human-AI collaboration for healthcare, one of the highest-stakes application domains for the technology.",
-      "impact_category": "Major Funding",
-      "title": "Penn partners in new National Science Foundation AI Institute for Human-AI Cooperation | Penn Today",
-      "url": "https://penntoday.upenn.edu/news/penn-partners-new-national-science-foundation-ai-institute-human-ai-cooperation",
-      "university": "University of Pennsylvania",
-      "published_date": "2026-07-29"
-    },
-    {
-      "rank": 4,
       "article_id": 45546,
-      "editorial_note": "Texas A&M's entry into the DOE's Genesis Mission exemplifies a new model of tri-sector coordination \u2014 government, industry, and academia jointly wielding AI and supercomputing on national scientific priorities.",
+      "editorial_note": "Texas A&M's entry into DOE's Genesis Mission exemplifies a sweeping national push uniting government, industry, and academia around AI, supercomputing, and quantum systems to accelerate scientific discovery \u2014 the week's dominant storyline across dozens of institutions.",
       "impact_category": "Strategic Partnership",
       "title": "Texas A&M University joins the Genesis Mission to transform science using artificial intelligence \u2013 Texas A&M Stories",
       "url": "https://stories.tamu.edu/news/2026/07/27/texas-am-university-joins-the-genesis-mission-to-transform-science-using-artificial-intelligence/",
@@ -42,9 +12,59 @@
       "published_date": "2026-07-27"
     },
     {
+      "rank": 2,
+      "article_id": 46231,
+      "editorial_note": "An $874 million federal commitment to seven companies under the CHIPS and Science Act directly targets the semiconductor supply chain underpinning AI compute \u2014 a policy-driven investment with outsized downstream impact on AI research capacity nationwide.",
+      "impact_category": "Major Funding",
+      "title": "Department of Commerce Announces Letters of Intent With 7 Companies for $874 Million to Accelerate Semiconductor R&D for the Compute Supply Chain",
+      "url": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million",
+      "university": "NIST",
+      "published_date": "2026-07-29"
+    },
+    {
+      "rank": 3,
+      "article_id": 46999,
+      "editorial_note": "Fermilab's deployment of the first AI-driven telescope marks a genuine scientific first, demonstrating how autonomous AI systems can independently direct physical scientific instruments rather than just analyze their data.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "First AI-driven telescope goes stargazing",
+      "url": "https://news.fnal.gov/2026/07/first-ai-driven-telescope-goes-stargazing/",
+      "university": "Fermi National Accelerator Laboratory",
+      "published_date": "2026-07-31"
+    },
+    {
+      "rank": 4,
+      "article_id": 46768,
+      "editorial_note": "UC Davis's brain-computer interface restoring an ALS patient's own voice is a landmark real-world application of AI, showing tangible clinical impact for people with severe neurological disease.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Giving People Their Voice",
+      "url": "https://www.ucdavis.edu/research/engineering-discoveries/giving-people-their-voice",
+      "university": "University of California-Davis",
+      "published_date": "2026-07-29"
+    },
+    {
       "rank": 5,
+      "article_id": 46818,
+      "editorial_note": "A new $21.5 million NSF AI Institute spanning Penn, Delaware, Delaware State, and Princeton signals sustained federal investment in human-AI collaboration for healthcare, backing a multi-university research infrastructure that will operate for years.",
+      "impact_category": "Major Funding",
+      "title": "Penn partners in new National Science Foundation AI Institute for Human-AI Cooperation | Penn Today",
+      "url": "https://penntoday.upenn.edu/news/penn-partners-new-national-science-foundation-ai-institute-human-ai-cooperation",
+      "university": "University of Pennsylvania",
+      "published_date": "2026-07-29"
+    },
+    {
+      "rank": 6,
+      "article_id": 47022,
+      "editorial_note": "RPI's selection for two Genesis Mission projects, including AI-guided rare-earth element discovery with a national lab, shows how the initiative is already generating concrete, high-value research applications beyond the announcement stage.",
+      "impact_category": "Strategic Partnership",
+      "title": "RPI Selected for Two U.S. Department of Energy Genesis Mission Projects",
+      "url": "https://news.rpi.edu/2026/07/31/rpi-selected-two-us-department-energy-genesis-mission-projects",
+      "university": "Rensselaer Polytechnic Institute",
+      "published_date": "2026-07-31"
+    },
+    {
+      "rank": 7,
       "article_id": 45691,
-      "editorial_note": "Cambridge's role in the CuspAI-led AI Materials Foundry links a top research university into a global industrial network aimed at collapsing materials-discovery timelines with AI-driven design and robotics.",
+      "editorial_note": "Cambridge joining CuspAI's global AI Materials Foundry links UK academic research to an international industry-driven network for AI-accelerated materials discovery, extending the AI-for-science trend beyond U.S. borders.",
       "impact_category": "Strategic Partnership",
       "title": "Cambridge researchers contribute to AI Materials Foundry",
       "url": "https://www.cam.ac.uk/research/news/cambridge-researchers-contribute-to-ai-materials-foundry",
@@ -52,19 +72,9 @@
       "published_date": "2026-07-28"
     },
     {
-      "rank": 6,
-      "article_id": 45772,
-      "editorial_note": "University of Florida's six-year tally \u2014 $511M in AI research awards and a top-tier HiPerGator supercomputer \u2014 illustrates the scale of institutional bet-making now underway in university AI infrastructure.",
-      "impact_category": "Major Funding",
-      "title": "AI year in review",
-      "url": "https://news.ufl.edu/2026/07/ai-year-in-review/",
-      "university": "University of Florida",
-      "published_date": "2026-07-27"
-    },
-    {
-      "rank": 7,
+      "rank": 8,
       "article_id": 46833,
-      "editorial_note": "HKU's ClairS algorithm brings high-accuracy cancer mutation detection to long-read sequencing across multiple cancer types, a concrete clinical-genomics advance with direct diagnostic value.",
+      "editorial_note": "HKU's ClairS algorithm achieves high-accuracy cancer mutation detection from long-read sequencing across multiple cancer types, a meaningful advance for AI-driven precision oncology diagnostics.",
       "impact_category": "Scientific Breakthrough",
       "title": "HKU School of Computing and Data Science research team develops ClairS, achieving high-accuracy cancer mutation detection across multiple cancer types - All News - Media - HKU",
       "url": "https://www.hku.hk/press/news_detail_29266.html",
@@ -72,33 +82,23 @@
       "published_date": "2026-07-26"
     },
     {
-      "rank": 8,
-      "article_id": 45213,
-      "editorial_note": "William & Mary's Genesis Mission award to build AI foundation models for particle physics, in partnership with Jefferson Lab and Brookhaven, shows AI methods moving into fundamental physics infrastructure at national-lab scale.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "William & Mary receives DOE Genesis Mission award to advance AI-powered particle physics",
-      "url": "https://news.wm.edu/2026/07/27/william-mary-receives-doe-genesis-mission-award-to-advance-ai-powered-particle-physics/",
-      "university": "William & Mary",
-      "published_date": "2026-07-27"
-    },
-    {
       "rank": 9,
-      "article_id": 46589,
-      "editorial_note": "HKUST's GSCo framework, which lets generalist and specialist AI models collaborate on disease diagnosis, points toward more accurate and efficient clinical AI architectures.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "HKUST Develops Novel AI Framework Enabling Efficient Collaboration between Generalist and Specialist Models for Disease Diagnosis",
-      "url": "https://hkust.edu.hk/news/hkust-develops-novel-ai-framework-enabling-efficient-collaboration-between-generalist-and",
-      "university": "Hong Kong Univ. of Science and Technology",
-      "published_date": "2026-07-30"
+      "article_id": 47005,
+      "editorial_note": "Nebraska's $18 million NSF MRSEC award to study AI-enabled ultra-thin quantum materials represents a major, long-horizon federal investment in the materials science underlying next-generation computing hardware.",
+      "impact_category": "Major Funding",
+      "title": "Husker team earns elite NSF award to drive next generation of materials research",
+      "url": "https://news.unl.edu/article/husker-team-earns-elite-nsf-award-to-drive-next-generation-of-materials-research",
+      "university": "University of Nebraska-Lincoln",
+      "published_date": "2026-07-28"
     },
     {
       "rank": 10,
-      "article_id": 45252,
-      "editorial_note": "UAB's EVOSYNTH framework combines evolutionary optimization with synthesis-aware design to generate multi-target drug candidates for complex diseases like cancer, a meaningful step for AI-driven drug discovery.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Researchers create a framework that could change the discovery of complex disease drug candidates",
-      "url": "https://www.uab.edu/news/research-innovation/researchers-create-a-framework-that-could-change-the-discovery-of-complex-disease-drug-candidates",
-      "university": "University of Alabama at Birmingham",
+      "article_id": 45213,
+      "editorial_note": "William & Mary's Genesis Mission award to build AI foundation models for particle physics, in partnership with Jefferson Lab and Brookhaven, illustrates how the initiative is fostering deep academic-national lab collaboration in fundamental science.",
+      "impact_category": "Strategic Partnership",
+      "title": "William & Mary receives DOE Genesis Mission award to advance AI-powered particle physics",
+      "url": "https://news.wm.edu/2026/07/27/william-mary-receives-doe-genesis-mission-award-to-advance-ai-powered-particle-physics/",
+      "university": "William & Mary",
       "published_date": "2026-07-27"
     }
   ]
