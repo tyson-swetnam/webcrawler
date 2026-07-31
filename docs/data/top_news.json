@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-31T06:19:35",
+  "generated_at": "2026-07-31T11:28:50",
   "picks": [
     {
       "rank": 1,
       "article_id": 46231,
-      "editorial_note": "An $874 million federal commitment across seven companies marks one of the largest direct investments yet in shoring up the domestic semiconductor supply chain that underpins AI compute \u2014 a policy move with outsized downstream impact on AI research capacity nationwide.",
+      "editorial_note": "An $874M federal commitment across seven companies to rebuild domestic semiconductor R&D capacity directly underwrites the compute supply chain that AI research depends on \u2014 a policy move with outsized downstream impact on the field.",
       "impact_category": "Major Funding",
       "title": "Department of Commerce Announces Letters of Intent With 7 Companies for $874 Million to Accelerate Semiconductor R&D for the Compute Supply Chain",
       "url": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million",
@@ -13,38 +13,8 @@
     },
     {
       "rank": 2,
-      "article_id": 45546,
-      "editorial_note": "Texas A&M's entry into the DOE's Genesis Mission signals a flagship national push to fuse AI, supercomputing, and quantum computing across government, industry, and academia \u2014 a structural bet on accelerating scientific discovery at scale.",
-      "impact_category": "Strategic Partnership",
-      "title": "Texas A&M University joins the Genesis Mission to transform science using artificial intelligence \u2013 Texas A&M Stories",
-      "url": "https://stories.tamu.edu/news/2026/07/27/texas-am-university-joins-the-genesis-mission-to-transform-science-using-artificial-intelligence/",
-      "university": "Texas A & M University-College Station",
-      "published_date": "2026-07-27"
-    },
-    {
-      "rank": 3,
-      "article_id": 45691,
-      "editorial_note": "Cambridge joining CuspAI's AI Materials Foundry links a top research university to a global industrial network aimed at compressing materials discovery timelines via AI-driven design and robotic experimentation.",
-      "impact_category": "Strategic Partnership",
-      "title": "Cambridge researchers contribute to AI Materials Foundry",
-      "url": "https://www.cam.ac.uk/research/news/cambridge-researchers-contribute-to-ai-materials-foundry",
-      "university": "University of Cambridge",
-      "published_date": "2026-07-28"
-    },
-    {
-      "rank": 4,
-      "article_id": 46818,
-      "editorial_note": "A new $21.5 million NSF AI Institute for Human-AI Cooperation, led by Penn and Delaware, targets AI-clinician collaboration in healthcare \u2014 a concrete, well-funded bet on human-AI teaming with clinical stakes.",
-      "impact_category": "Major Funding",
-      "title": "Penn partners in new National Science Foundation AI Institute for Human-AI Cooperation | Penn Today",
-      "url": "https://penntoday.upenn.edu/news/penn-partners-new-national-science-foundation-ai-institute-human-ai-cooperation",
-      "university": "University of Pennsylvania",
-      "published_date": "2026-07-29"
-    },
-    {
-      "rank": 5,
       "article_id": 46768,
-      "editorial_note": "UC Davis's brain-computer interface restored natural speech to an ALS patient using his own voice \u2014 a landmark scientific and human milestone showing AI's tangible power to restore lost function.",
+      "editorial_note": "UC Davis's neuroprosthetic brain-computer interface let an ALS patient speak again in his own voice \u2014 a landmark demonstration of AI restoring lost human capability, not just augmenting it.",
       "impact_category": "Scientific Breakthrough",
       "title": "Giving People Their Voice",
       "url": "https://www.ucdavis.edu/research/engineering-discoveries/giving-people-their-voice",
@@ -52,9 +22,39 @@
       "published_date": "2026-07-29"
     },
     {
+      "rank": 3,
+      "article_id": 46818,
+      "editorial_note": "A $21.5M NSF AI Institute anchored at Penn and Delaware signals sustained federal investment in human-AI collaboration for healthcare, one of the highest-stakes application domains for the technology.",
+      "impact_category": "Major Funding",
+      "title": "Penn partners in new National Science Foundation AI Institute for Human-AI Cooperation | Penn Today",
+      "url": "https://penntoday.upenn.edu/news/penn-partners-new-national-science-foundation-ai-institute-human-ai-cooperation",
+      "university": "University of Pennsylvania",
+      "published_date": "2026-07-29"
+    },
+    {
+      "rank": 4,
+      "article_id": 45546,
+      "editorial_note": "Texas A&M's entry into the DOE's Genesis Mission exemplifies a new model of tri-sector coordination \u2014 government, industry, and academia jointly wielding AI and supercomputing on national scientific priorities.",
+      "impact_category": "Strategic Partnership",
+      "title": "Texas A&M University joins the Genesis Mission to transform science using artificial intelligence \u2013 Texas A&M Stories",
+      "url": "https://stories.tamu.edu/news/2026/07/27/texas-am-university-joins-the-genesis-mission-to-transform-science-using-artificial-intelligence/",
+      "university": "Texas A & M University-College Station",
+      "published_date": "2026-07-27"
+    },
+    {
+      "rank": 5,
+      "article_id": 45691,
+      "editorial_note": "Cambridge's role in the CuspAI-led AI Materials Foundry links a top research university into a global industrial network aimed at collapsing materials-discovery timelines with AI-driven design and robotics.",
+      "impact_category": "Strategic Partnership",
+      "title": "Cambridge researchers contribute to AI Materials Foundry",
+      "url": "https://www.cam.ac.uk/research/news/cambridge-researchers-contribute-to-ai-materials-foundry",
+      "university": "University of Cambridge",
+      "published_date": "2026-07-28"
+    },
+    {
       "rank": 6,
       "article_id": 45772,
-      "editorial_note": "University of Florida's six-year AI investment tally \u2014 $511 million in research awards, 200+ courses, and a top-tier HPC cluster \u2014 illustrates the scale of institutional resourcing now underpinning university AI research.",
+      "editorial_note": "University of Florida's six-year tally \u2014 $511M in AI research awards and a top-tier HiPerGator supercomputer \u2014 illustrates the scale of institutional bet-making now underway in university AI infrastructure.",
       "impact_category": "Major Funding",
       "title": "AI year in review",
       "url": "https://news.ufl.edu/2026/07/ai-year-in-review/",
@@ -64,7 +64,7 @@
     {
       "rank": 7,
       "article_id": 46833,
-      "editorial_note": "HKU's ClairS algorithm achieves high-accuracy cancer mutation detection across multiple cancer types using long-read sequencing, a meaningful advance for AI-assisted precision oncology.",
+      "editorial_note": "HKU's ClairS algorithm brings high-accuracy cancer mutation detection to long-read sequencing across multiple cancer types, a concrete clinical-genomics advance with direct diagnostic value.",
       "impact_category": "Scientific Breakthrough",
       "title": "HKU School of Computing and Data Science research team develops ClairS, achieving high-accuracy cancer mutation detection across multiple cancer types - All News - Media - HKU",
       "url": "https://www.hku.hk/press/news_detail_29266.html",
@@ -74,8 +74,8 @@
     {
       "rank": 8,
       "article_id": 45213,
-      "editorial_note": "William & Mary's Genesis Mission award to build AI foundation models for particle physics, in partnership with Jefferson Lab and Brookhaven, exemplifies how national-lab collaborations are extending foundation-model methods into fundamental physics.",
-      "impact_category": "Strategic Partnership",
+      "editorial_note": "William & Mary's Genesis Mission award to build AI foundation models for particle physics, in partnership with Jefferson Lab and Brookhaven, shows AI methods moving into fundamental physics infrastructure at national-lab scale.",
+      "impact_category": "Scientific Breakthrough",
       "title": "William & Mary receives DOE Genesis Mission award to advance AI-powered particle physics",
       "url": "https://news.wm.edu/2026/07/27/william-mary-receives-doe-genesis-mission-award-to-advance-ai-powered-particle-physics/",
       "university": "William & Mary",
@@ -84,7 +84,7 @@
     {
       "rank": 9,
       "article_id": 46589,
-      "editorial_note": "HKUST's GSCo framework lets generalist and specialist AI models collaborate on disease diagnosis, improving diagnostic accuracy \u2014 a notable architectural advance for clinical AI systems.",
+      "editorial_note": "HKUST's GSCo framework, which lets generalist and specialist AI models collaborate on disease diagnosis, points toward more accurate and efficient clinical AI architectures.",
       "impact_category": "Scientific Breakthrough",
       "title": "HKUST Develops Novel AI Framework Enabling Efficient Collaboration between Generalist and Specialist Models for Disease Diagnosis",
       "url": "https://hkust.edu.hk/news/hkust-develops-novel-ai-framework-enabling-efficient-collaboration-between-generalist-and",
@@ -93,13 +93,13 @@
     },
     {
       "rank": 10,
-      "article_id": 46387,
-      "editorial_note": "Wharton research showing that basic human persuasion tactics can jailbreak safety guardrails in leading LLMs exposes a fundamental weakness in current AI safety approaches, with direct implications for AI governance and deployment policy.",
-      "impact_category": "Policy Impact",
-      "title": "How basic persuasion can bypass AI safeguards | Penn Today",
-      "url": "https://penntoday.upenn.edu/news/wharton-how-basic-persuasion-can-bypass-ai-safeguards",
-      "university": "University of Pennsylvania",
-      "published_date": "2026-07-28"
+      "article_id": 45252,
+      "editorial_note": "UAB's EVOSYNTH framework combines evolutionary optimization with synthesis-aware design to generate multi-target drug candidates for complex diseases like cancer, a meaningful step for AI-driven drug discovery.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Researchers create a framework that could change the discovery of complex disease drug candidates",
+      "url": "https://www.uab.edu/news/research-innovation/researchers-create-a-framework-that-could-change-the-discovery-of-complex-disease-drug-candidates",
+      "university": "University of Alabama at Birmingham",
+      "published_date": "2026-07-27"
     }
   ]
 }
