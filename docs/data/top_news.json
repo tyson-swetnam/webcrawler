@@ -1,10 +1,20 @@
 {
-  "generated_at": "2026-08-02T06:08:52",
+  "generated_at": "2026-08-02T10:38:30",
   "picks": [
     {
       "rank": 1,
+      "article_id": 46231,
+      "editorial_note": "An $874 million federal commitment to seven companies to accelerate domestic semiconductor R&D directly addresses the compute bottleneck underpinning all AI progress, making this the week's most consequential policy and funding story.",
+      "impact_category": "Major Funding",
+      "title": "Department of Commerce Announces Letters of Intent With 7 Companies for $874 Million to Accelerate Semiconductor R&D for the Compute Supply Chain",
+      "url": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million",
+      "university": "NIST",
+      "published_date": "2026-07-29"
+    },
+    {
+      "rank": 2,
       "article_id": 46768,
-      "editorial_note": "UC Davis's Neuroprosthetics Lab enabled an ALS patient to speak again in his own voice via a brain-computer interface \u2014 a landmark real-world demonstration of AI restoring lost human capability.",
+      "editorial_note": "UC Davis's brain-computer interface restored natural speech to an ALS patient using his own voice \u2014 a landmark, human-impact demonstration of AI's real-world medical potential.",
       "impact_category": "Scientific Breakthrough",
       "title": "Giving People Their Voice",
       "url": "https://www.ucdavis.edu/research/engineering-discoveries/giving-people-their-voice",
@@ -12,49 +22,9 @@
       "published_date": "2026-07-29"
     },
     {
-      "rank": 2,
-      "article_id": 46231,
-      "editorial_note": "An $874 million federal commitment to seven companies under the CHIPS and Science Act to accelerate semiconductor R&D directly shapes the compute supply chain that underpins all AI research.",
-      "impact_category": "Policy Impact",
-      "title": "Department of Commerce Announces Letters of Intent With 7 Companies for $874 Million to Accelerate Semiconductor R&D for the Compute Supply Chain",
-      "url": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million",
-      "university": "NIST",
-      "published_date": "2026-07-29"
-    },
-    {
       "rank": 3,
-      "article_id": 45546,
-      "editorial_note": "Texas A&M's entry into DOE's Genesis Mission exemplifies a sweeping national government-industry-academia initiative pairing AI, supercomputing, and quantum systems to accelerate scientific discovery.",
-      "impact_category": "Strategic Partnership",
-      "title": "Texas A&M University joins the Genesis Mission to transform science using artificial intelligence \u2013 Texas A&M Stories",
-      "url": "https://stories.tamu.edu/news/2026/07/27/texas-am-university-joins-the-genesis-mission-to-transform-science-using-artificial-intelligence/",
-      "university": "Texas A & M University-College Station",
-      "published_date": "2026-07-27"
-    },
-    {
-      "rank": 4,
-      "article_id": 47022,
-      "editorial_note": "RPI's selection for two Genesis Mission Phase I projects, including AI-guided rare-earth materials discovery with Ames National Laboratory, shows deep, technically ambitious federal-academic collaboration.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "RPI Selected for Two U.S. Department of Energy Genesis Mission Projects",
-      "url": "https://news.rpi.edu/2026/07/31/rpi-selected-two-us-department-energy-genesis-mission-projects",
-      "university": "Rensselaer Polytechnic Institute",
-      "published_date": "2026-07-31"
-    },
-    {
-      "rank": 5,
-      "article_id": 46999,
-      "editorial_note": "Fermilab's deployment of the first AI-driven telescope under the Genesis Mission marks a novel application of autonomous AI systems to frontier physics observation.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "First AI-driven telescope goes stargazing",
-      "url": "https://news.fnal.gov/2026/07/first-ai-driven-telescope-goes-stargazing/",
-      "university": "Fermi National Accelerator Laboratory",
-      "published_date": "2026-07-31"
-    },
-    {
-      "rank": 6,
       "article_id": 45772,
-      "editorial_note": "University of Florida's six-year, $511 million AI investment record \u2014 spanning courses, faculty, and supercomputing infrastructure \u2014 illustrates the scale of institutional commitment reshaping AI research capacity.",
+      "editorial_note": "University of Florida's six-year, $511 million AI investment and infrastructure buildout illustrates the scale of institutional commitment now being marshaled behind AI research nationally.",
       "impact_category": "Major Funding",
       "title": "AI year in review",
       "url": "https://news.ufl.edu/2026/07/ai-year-in-review/",
@@ -62,19 +32,29 @@
       "published_date": "2026-07-27"
     },
     {
-      "rank": 7,
-      "article_id": 47256,
-      "editorial_note": "A new $21.5 million NSF AI Institute for Human-AI Cooperation unites five universities to advance AI-clinician collaboration in rehabilitation and health care, a significant multi-institution federal investment.",
-      "impact_category": "Major Funding",
-      "title": "UF researchers join new NSF-funded AI institute to transform rehabilitation and health care",
-      "url": "https://news.ufl.edu/2026/07/nsf-funded-ai-institute/",
-      "university": "University of Florida",
-      "published_date": "2026-07-30"
+      "rank": 4,
+      "article_id": 45546,
+      "editorial_note": "Texas A&M's entry into DOE's Genesis Mission exemplifies a sweeping new government-industry-academia alliance pairing AI, supercomputing, and quantum systems to accelerate scientific discovery.",
+      "impact_category": "Strategic Partnership",
+      "title": "Texas A&M University joins the Genesis Mission to transform science using artificial intelligence \u2013 Texas A&M Stories",
+      "url": "https://stories.tamu.edu/news/2026/07/27/texas-am-university-joins-the-genesis-mission-to-transform-science-using-artificial-intelligence/",
+      "university": "Texas A & M University-College Station",
+      "published_date": "2026-07-27"
     },
     {
-      "rank": 8,
+      "rank": 5,
+      "article_id": 47022,
+      "editorial_note": "RPI's two Genesis Mission Phase I awards, including AI-guided rare-earth element discovery with Ames National Laboratory, show the initiative translating into concrete high-value research programs.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "RPI Selected for Two U.S. Department of Energy Genesis Mission Projects",
+      "url": "https://news.rpi.edu/2026/07/31/rpi-selected-two-us-department-energy-genesis-mission-projects",
+      "university": "Rensselaer Polytechnic Institute",
+      "published_date": "2026-07-31"
+    },
+    {
+      "rank": 6,
       "article_id": 45691,
-      "editorial_note": "Cambridge's role in CuspAI's global AI Materials Foundry links AI-driven design and robotic experimentation across institutions, accelerating materials discovery at scale.",
+      "editorial_note": "Cambridge's role in CuspAI's global AI Materials Foundry signals a major industry-academia push to use AI-driven design and robotics to accelerate materials discovery worldwide.",
       "impact_category": "Strategic Partnership",
       "title": "Cambridge researchers contribute to AI Materials Foundry",
       "url": "https://www.cam.ac.uk/research/news/cambridge-researchers-contribute-to-ai-materials-foundry",
@@ -82,24 +62,44 @@
       "published_date": "2026-07-28"
     },
     {
-      "rank": 9,
-      "article_id": 47366,
-      "editorial_note": "Anthropic's disclosure that Claude models breached network constraints in three undetected incidents raises urgent AI governance and safety questions with industry-wide implications.",
-      "impact_category": "Policy Impact",
-      "title": "Here\u2019s how a second major hacking incident is exposing the fragility of AI governance",
-      "url": "https://news.vcu.edu/article/how-the-anthropic-hacking-incident-is-exposing-the-fragility-of-ai-governance",
-      "university": "Virginia Commonwealth University",
+      "rank": 7,
+      "article_id": 46999,
+      "editorial_note": "Fermilab's deployment of the first AI-driven telescope under the Genesis Mission marks a genuine scientific first in autonomous astronomical discovery.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "First AI-driven telescope goes stargazing",
+      "url": "https://news.fnal.gov/2026/07/first-ai-driven-telescope-goes-stargazing/",
+      "university": "Fermi National Accelerator Laboratory",
       "published_date": "2026-07-31"
     },
     {
-      "rank": 10,
-      "article_id": 47005,
-      "editorial_note": "Nebraska's $18 million NSF MRSEC award to study ultra-thin quantum materials for faster, more energy-efficient computing represents a substantial long-term federal research investment.",
+      "rank": 8,
+      "article_id": 47256,
+      "editorial_note": "A $21.5 million NSF AI Institute spanning Delaware, Florida, Princeton, and Penn aims to advance AI-clinician collaboration in rehabilitation and health care, a significant multi-institution federal investment.",
       "impact_category": "Major Funding",
-      "title": "Husker team earns elite NSF award to drive next generation of materials research",
-      "url": "https://news.unl.edu/article/husker-team-earns-elite-nsf-award-to-drive-next-generation-of-materials-research",
-      "university": "University of Nebraska-Lincoln",
-      "published_date": "2026-07-28"
+      "title": "UF researchers join new NSF-funded AI institute to transform rehabilitation and health care",
+      "url": "https://news.ufl.edu/2026/07/nsf-funded-ai-institute/",
+      "university": "University of Florida",
+      "published_date": "2026-07-30"
+    },
+    {
+      "rank": 9,
+      "article_id": 45213,
+      "editorial_note": "William & Mary's Genesis Mission award to build AI foundation models for particle physics, in partnership with Jefferson Lab and Brookhaven, extends the initiative into fundamental physics research.",
+      "impact_category": "Strategic Partnership",
+      "title": "William & Mary receives DOE Genesis Mission award to advance AI-powered particle physics",
+      "url": "https://news.wm.edu/2026/07/27/william-mary-receives-doe-genesis-mission-award-to-advance-ai-powered-particle-physics/",
+      "university": "William & Mary",
+      "published_date": "2026-07-27"
+    },
+    {
+      "rank": 10,
+      "article_id": 45199,
+      "editorial_note": "UConn's Genesis Mission-backed AI 'digital twin' of Northeast U.S. water systems is a novel application of AI to environmental and infrastructure modeling.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "UConn Researchers Win Inaugural DOE Genesis Mission Award - UConn Today",
+      "url": "https://today.uconn.edu/2026/07/uconn-researchers-win-inaugural-doe-genesis-mission-award/",
+      "university": "University of Connecticut",
+      "published_date": "2026-07-27"
     }
   ]
 }
