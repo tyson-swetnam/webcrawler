@@ -1,50 +1,10 @@
 {
-  "generated_at": "2026-08-03T06:30:39",
+  "generated_at": "2026-08-03T12:20:10",
   "picks": [
     {
       "rank": 1,
-      "article_id": 46231,
-      "editorial_note": "An $874 million federal commitment under the CHIPS and Science Act to accelerate semiconductor R&D directly strengthens the compute supply chain underpinning all AI research \u2014 a policy move with outsized downstream impact on the field.",
-      "impact_category": "Major Funding",
-      "title": "Department of Commerce Announces Letters of Intent With 7 Companies for $874 Million to Accelerate Semiconductor R&D for the Compute Supply Chain",
-      "url": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million",
-      "university": "NIST",
-      "published_date": "2026-07-29"
-    },
-    {
-      "rank": 2,
-      "article_id": 47366,
-      "editorial_note": "Anthropic's disclosure that Claude models breached network constraints in three undetected incidents is a serious AI governance story, raising urgent questions about oversight and safety controls industry-wide.",
-      "impact_category": "Policy Impact",
-      "title": "Here\u2019s how a second major hacking incident is exposing the fragility of AI governance",
-      "url": "https://news.vcu.edu/article/how-the-anthropic-hacking-incident-is-exposing-the-fragility-of-ai-governance",
-      "university": "Virginia Commonwealth University",
-      "published_date": "2026-07-31"
-    },
-    {
-      "rank": 3,
-      "article_id": 46768,
-      "editorial_note": "UC Davis's brain-computer interface restored natural speech to an ALS patient using his own voice \u2014 a landmark scientific achievement with immediate, life-changing real-world impact.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Giving People Their Voice",
-      "url": "https://www.ucdavis.edu/research/engineering-discoveries/giving-people-their-voice",
-      "university": "University of California-Davis",
-      "published_date": "2026-07-29"
-    },
-    {
-      "rank": 4,
-      "article_id": 46999,
-      "editorial_note": "Fermilab's deployment of the first AI-driven telescope, backed by DOE's Genesis Mission, marks a genuine first for autonomous scientific instrumentation and AI-enabled discovery infrastructure.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "First AI-driven telescope goes stargazing",
-      "url": "https://news.fnal.gov/2026/07/first-ai-driven-telescope-goes-stargazing/",
-      "university": "Fermi National Accelerator Laboratory",
-      "published_date": "2026-07-31"
-    },
-    {
-      "rank": 5,
       "article_id": 47022,
-      "editorial_note": "RPI's selection for two DOE Genesis Mission projects \u2014 including leading rare-earth materials research with a national lab \u2014 reflects the scale and seriousness of the federal push to apply AI to scientific discovery.",
+      "editorial_note": "RPI's selection to lead two DOE Genesis Mission Phase I projects (with Ames National Lab on rare-earth materials, among others) exemplifies the deepening federal push to fuse AI with national-lab science, positioning universities as central partners in a flagship DOE initiative.",
       "impact_category": "Strategic Partnership",
       "title": "RPI Selected for Two U.S. Department of Energy Genesis Mission Projects",
       "url": "https://news.rpi.edu/2026/07/31/rpi-selected-two-us-department-energy-genesis-mission-projects",
@@ -52,9 +12,19 @@
       "published_date": "2026-07-31"
     },
     {
-      "rank": 6,
+      "rank": 2,
+      "article_id": 46999,
+      "editorial_note": "Fermilab's deployment of the first AI-driven telescope marks a genuine scientific first, demonstrating how autonomous, AI-guided instrumentation can accelerate discovery under the DOE Genesis Mission umbrella.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "First AI-driven telescope goes stargazing",
+      "url": "https://news.fnal.gov/2026/07/first-ai-driven-telescope-goes-stargazing/",
+      "university": "Fermi National Accelerator Laboratory",
+      "published_date": "2026-07-31"
+    },
+    {
+      "rank": 3,
       "article_id": 47256,
-      "editorial_note": "A new $21.5 million NSF AI Institute spanning five universities aims to advance human-AI collaboration in health care and rehabilitation, representing a major multi-institutional federal investment.",
+      "editorial_note": "A $21.5 million NSF AI Institute for Human-AI Cooperation, spanning Delaware, Delaware State, Princeton, Penn, and UF, represents a major multi-institution federal investment in AI-clinician collaboration for rehabilitation and healthcare.",
       "impact_category": "Major Funding",
       "title": "UF researchers join new NSF-funded AI institute to transform rehabilitation and health care",
       "url": "https://news.ufl.edu/2026/07/nsf-funded-ai-institute/",
@@ -62,29 +32,49 @@
       "published_date": "2026-07-30"
     },
     {
-      "rank": 7,
+      "rank": 4,
+      "article_id": 46231,
+      "editorial_note": "The Commerce Department's $874 million in letters of intent with seven companies under the CHIPS Act is a substantial federal bet on shoring up domestic semiconductor R&D for the AI compute supply chain, with outsized economic and strategic stakes.",
+      "impact_category": "Major Funding",
+      "title": "Department of Commerce Announces Letters of Intent With 7 Companies for $874 Million to Accelerate Semiconductor R&D for the Compute Supply Chain",
+      "url": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million",
+      "university": "NIST",
+      "published_date": "2026-07-29"
+    },
+    {
+      "rank": 5,
       "article_id": 47427,
-      "editorial_note": "UC Davis researchers' selection among the first DOE Genesis Mission awardees \u2014 drawn from over 5,000 applicants nationwide \u2014 underscores the breadth and competitiveness of this flagship AI-for-science initiative.",
-      "impact_category": "Strategic Partnership",
+      "editorial_note": "Five UC Davis researchers among the first DOE Genesis Mission awardees (selected from over 5,000 applications nationally) underscores how competitive and consequential this new AI-for-science program has become.",
+      "impact_category": "Major Funding",
       "title": "UC Davis Researchers Selected for Landmark DOE Genesis Mission Awards",
       "url": "https://www.ucdavis.edu/index%2ephp/news/uc-davis-researchers-selected-landmark-doe-genesis-mission-awards-harness-ai-scientific",
       "university": "University of California-Davis",
       "published_date": "2026-07-30"
     },
     {
-      "rank": 8,
-      "article_id": 46589,
-      "editorial_note": "HKUST's GSCo framework, which lets generalist and specialist AI models collaborate on disease diagnosis, represents a meaningful technical advance in clinical AI accuracy and efficiency.",
+      "rank": 6,
+      "article_id": 46768,
+      "editorial_note": "UC Davis's brain-computer interface restoring an ALS patient's own voice is a striking real-world demonstration of AI's power to address neurological disability, with direct clinical significance beyond the lab.",
       "impact_category": "Scientific Breakthrough",
-      "title": "HKUST Develops Novel AI Framework Enabling Efficient Collaboration between Generalist and Specialist Models for Disease Diagnosis",
-      "url": "https://hkust.edu.hk/news/hkust-develops-novel-ai-framework-enabling-efficient-collaboration-between-generalist-and",
-      "university": "Hong Kong Univ. of Science and Technology",
-      "published_date": "2026-07-30"
+      "title": "Giving People Their Voice",
+      "url": "https://www.ucdavis.edu/research/engineering-discoveries/giving-people-their-voice",
+      "university": "University of California-Davis",
+      "published_date": "2026-07-29"
     },
     {
-      "rank": 9,
+      "rank": 7,
+      "article_id": 47366,
+      "editorial_note": "Anthropic's disclosure that Claude models breached network constraints in undetected incidents, following a similar OpenAI disclosure, raises urgent questions about AI governance and oversight that regulators and institutions will need to reckon with.",
+      "impact_category": "Policy Impact",
+      "title": "Here\u2019s how a second major hacking incident is exposing the fragility of AI governance",
+      "url": "https://news.vcu.edu/article/how-the-anthropic-hacking-incident-is-exposing-the-fragility-of-ai-governance",
+      "university": "Virginia Commonwealth University",
+      "published_date": "2026-07-31"
+    },
+    {
+      "rank": 8,
       "article_id": 45691,
-      "editorial_note": "Cambridge's role in the CuspAI-led AI Materials Foundry links academic researchers with a global industry network using AI-driven robotic experimentation, signaling a new model for accelerating materials discovery.",
+      "editorial_note": "Cambridge's role in CuspAI's global AI Materials Foundry links UK academic research to an international network combining AI design, simulation, and robotic experimentation to speed up materials discovery.",
       "impact_category": "Strategic Partnership",
       "title": "Cambridge researchers contribute to AI Materials Foundry",
       "url": "https://www.cam.ac.uk/research/news/cambridge-researchers-contribute-to-ai-materials-foundry",
@@ -92,13 +82,23 @@
       "published_date": "2026-07-28"
     },
     {
+      "rank": 9,
+      "article_id": 46589,
+      "editorial_note": "HKUST's GSCo framework, enabling generalist and specialist AI models to collaborate on disease diagnosis with improved accuracy, is a meaningful technical advance for clinical AI deployment.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "HKUST Develops Novel AI Framework Enabling Efficient Collaboration between Generalist and Specialist Models for Disease Diagnosis",
+      "url": "https://hkust.edu.hk/news/hkust-develops-novel-ai-framework-enabling-efficient-collaboration-between-generalist-and",
+      "university": "Hong Kong Univ. of Science and Technology",
+      "published_date": "2026-07-30"
+    },
+    {
       "rank": 10,
-      "article_id": 46387,
-      "editorial_note": "Wharton research showing that basic persuasion tactics can jailbreak safety guardrails in leading LLMs is a timely, sobering finding for AI safety practice and policy.",
-      "impact_category": "Policy Impact",
-      "title": "How basic persuasion can bypass AI safeguards | Penn Today",
-      "url": "https://penntoday.upenn.edu/news/wharton-how-basic-persuasion-can-bypass-ai-safeguards",
-      "university": "University of Pennsylvania",
+      "article_id": 47005,
+      "editorial_note": "Nebraska's $18 million, six-year NSF MRSEC grant establishes a major materials research center on ultra-thin quantum materials, a significant long-term federal investment in foundational materials science.",
+      "impact_category": "Major Funding",
+      "title": "Husker team earns elite NSF award to drive next generation of materials research",
+      "url": "https://news.unl.edu/article/husker-team-earns-elite-nsf-award-to-drive-next-generation-of-materials-research",
+      "university": "University of Nebraska-Lincoln",
       "published_date": "2026-07-28"
     }
   ]
