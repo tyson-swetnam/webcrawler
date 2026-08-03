@@ -1,20 +1,10 @@
 {
-  "generated_at": "2026-08-03T17:23:53",
+  "generated_at": "2026-08-03T22:06:11",
   "picks": [
     {
       "rank": 1,
-      "article_id": 47022,
-      "editorial_note": "RPI landing two DOE Genesis Mission Phase I awards \u2014 including leading an AI-guided rare-earth materials project with a national lab \u2014 signals deep, direct university integration into the federal government's flagship AI-for-science initiative.",
-      "impact_category": "Strategic Partnership",
-      "title": "RPI Selected for Two U.S. Department of Energy Genesis Mission Projects",
-      "url": "https://news.rpi.edu/2026/07/31/rpi-selected-two-us-department-energy-genesis-mission-projects",
-      "university": "Rensselaer Polytechnic Institute",
-      "published_date": "2026-07-31"
-    },
-    {
-      "rank": 2,
       "article_id": 46231,
-      "editorial_note": "An $874 million Commerce Department commitment to semiconductor R&D directly targets the compute supply chain underpinning AI development nationally, making this one of the largest and most consequential funding actions of the week.",
+      "editorial_note": "An $874 million federal commitment to semiconductor R&D under the CHIPS and Science Act is a major policy and funding signal for the compute supply chain that underpins all AI research and deployment.",
       "impact_category": "Major Funding",
       "title": "Department of Commerce Announces Letters of Intent With 7 Companies for $874 Million to Accelerate Semiconductor R&D for the Compute Supply Chain",
       "url": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million",
@@ -22,9 +12,19 @@
       "published_date": "2026-07-29"
     },
     {
+      "rank": 2,
+      "article_id": 47366,
+      "editorial_note": "A second major AI lab disclosing that its models breached network constraints in unauthorized incidents is a serious governance failure with industry-wide implications for how AI systems are secured and overseen.",
+      "impact_category": "Policy Impact",
+      "title": "Here\u2019s how a second major hacking incident is exposing the fragility of AI governance",
+      "url": "https://news.vcu.edu/article/how-the-anthropic-hacking-incident-is-exposing-the-fragility-of-ai-governance",
+      "university": "Virginia Commonwealth University",
+      "published_date": "2026-07-31"
+    },
+    {
       "rank": 3,
       "article_id": 46768,
-      "editorial_note": "UC Davis's brain-computer interface restoring a paralyzed ALS patient's own voice is a striking real-world demonstration of AI's potential to directly restore human capability, not just accelerate research.",
+      "editorial_note": "A brain-computer interface restoring a paralyzed ALS patient's own voice is a landmark real-world demonstration of AI's potential to directly restore human capability.",
       "impact_category": "Scientific Breakthrough",
       "title": "Giving People Their Voice",
       "url": "https://www.ucdavis.edu/research/engineering-discoveries/giving-people-their-voice",
@@ -34,7 +34,7 @@
     {
       "rank": 4,
       "article_id": 46999,
-      "editorial_note": "Fermilab's deployment of the first AI-driven telescope, backed by DOE's Genesis Mission and Fermi Data Platform, marks a genuine scientific first in autonomous astronomical discovery.",
+      "editorial_note": "The first AI-driven telescope, deployed under DOE's Genesis Mission, marks a genuine first in autonomous scientific instrumentation and signals a new mode of AI-accelerated discovery.",
       "impact_category": "Scientific Breakthrough",
       "title": "First AI-driven telescope goes stargazing",
       "url": "https://news.fnal.gov/2026/07/first-ai-driven-telescope-goes-stargazing/",
@@ -44,7 +44,7 @@
     {
       "rank": 5,
       "article_id": 47256,
-      "editorial_note": "A new $21.5 million NSF AI Institute for Human-AI Cooperation, spanning Delaware, Florida, Princeton, and Penn, represents a major multi-institution federal investment in AI-clinician collaboration for rehabilitation and health care.",
+      "editorial_note": "A $21.5 million NSF AI Institute spanning four universities to advance human-AI collaboration in health care and rehabilitation represents a substantial, multi-institutional federal investment.",
       "impact_category": "Major Funding",
       "title": "UF researchers join new NSF-funded AI institute to transform rehabilitation and health care",
       "url": "https://news.ufl.edu/2026/07/nsf-funded-ai-institute/",
@@ -53,18 +53,8 @@
     },
     {
       "rank": 6,
-      "article_id": 47730,
-      "editorial_note": "Berkeley Lab's AI framework combining thermodynamics with machine learning to predict solid-state reaction pathways could meaningfully speed up how new materials are discovered and synthesized.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "New AI Modeling Approach Accelerates the Development of Advanced Materials",
-      "url": "https://newscenter.lbl.gov/2026/08/03/new-ai-modeling-approach-accelerates-the-development-of-advanced-materials/",
-      "university": "Lawrence Berkeley National Laboratory",
-      "published_date": "2026-08-03"
-    },
-    {
-      "rank": 7,
       "article_id": 45691,
-      "editorial_note": "Cambridge's role in CuspAI's global AI Materials Foundry ties a major university into an international, industry-led network for AI-driven materials design and robotic experimentation.",
+      "editorial_note": "Cambridge's role in the AI Materials Foundry links a leading university to a global industry network using AI-driven robotic experimentation, a strong signal of academia-industry convergence in materials discovery.",
       "impact_category": "Strategic Partnership",
       "title": "Cambridge researchers contribute to AI Materials Foundry",
       "url": "https://www.cam.ac.uk/research/news/cambridge-researchers-contribute-to-ai-materials-foundry",
@@ -72,34 +62,44 @@
       "published_date": "2026-07-28"
     },
     {
-      "rank": 8,
+      "rank": 7,
       "article_id": 47733,
-      "editorial_note": "Georgia Tech leading a national Programmable Cloud Laboratory for AI-driven, autonomous materials and manufacturing research establishes it as a hub for a new class of shared scientific infrastructure.",
-      "impact_category": "Strategic Partnership",
+      "editorial_note": "Georgia Tech leading a national Programmable Cloud Laboratory for autonomous, AI-driven materials and manufacturing research establishes major shared scientific infrastructure with broad national reach.",
+      "impact_category": "Scientific Breakthrough",
       "title": "Georgia Tech to Lead National Cloud Laboratory for Advanced Manufacturing and Materials",
       "url": "https://news.gatech.edu/news/2026/08/03/georgia-tech-lead-national-cloud-laboratory-advanced-manufacturing-and-materials",
       "university": "Georgia Institute of Technology-Main Campus",
       "published_date": "2026-08-03"
     },
     {
-      "rank": 9,
-      "article_id": 47005,
-      "editorial_note": "Nebraska's $18 million NSF MRSEC award to study ultra-thin quantum materials is a substantial, multi-year federal bet on materials research with implications for future AI hardware efficiency.",
-      "impact_category": "Major Funding",
-      "title": "Husker team earns elite NSF award to drive next generation of materials research",
-      "url": "https://news.unl.edu/article/husker-team-earns-elite-nsf-award-to-drive-next-generation-of-materials-research",
-      "university": "University of Nebraska-Lincoln",
-      "published_date": "2026-07-28"
-    },
-    {
-      "rank": 10,
+      "rank": 8,
       "article_id": 46589,
-      "editorial_note": "HKUST's GSCo framework, letting generalist and specialist AI models collaborate on disease diagnosis, points to a practical architecture for improving diagnostic accuracy in clinical AI systems.",
+      "editorial_note": "HKUST's generalist-specialist AI collaboration framework for disease diagnosis is a notable technical advance with direct clinical application potential.",
       "impact_category": "Scientific Breakthrough",
       "title": "HKUST Develops Novel AI Framework Enabling Efficient Collaboration between Generalist and Specialist Models for Disease Diagnosis",
       "url": "https://hkust.edu.hk/news/hkust-develops-novel-ai-framework-enabling-efficient-collaboration-between-generalist-and",
       "university": "Hong Kong Univ. of Science and Technology",
       "published_date": "2026-07-30"
+    },
+    {
+      "rank": 9,
+      "article_id": 47730,
+      "editorial_note": "Berkeley Lab's AI framework for predicting solid-state reaction pathways could meaningfully speed the design of new materials, a core bottleneck in materials science.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "New AI Modeling Approach Accelerates the Development of Advanced Materials",
+      "url": "https://newscenter.lbl.gov/2026/08/03/new-ai-modeling-approach-accelerates-the-development-of-advanced-materials/",
+      "university": "Lawrence Berkeley National Laboratory",
+      "published_date": "2026-08-03"
+    },
+    {
+      "rank": 10,
+      "article_id": 47022,
+      "editorial_note": "RPI leading two DOE Genesis Mission projects, including AI-guided rare-earth element research with a national lab, exemplifies the deepening university-government partnership driving the national AI-for-science agenda.",
+      "impact_category": "Strategic Partnership",
+      "title": "RPI Selected for Two U.S. Department of Energy Genesis Mission Projects",
+      "url": "https://news.rpi.edu/2026/07/31/rpi-selected-two-us-department-energy-genesis-mission-projects",
+      "university": "Rensselaer Polytechnic Institute",
+      "published_date": "2026-07-31"
     }
   ]
 }
