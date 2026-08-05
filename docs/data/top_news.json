@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-05T15:59:40",
+  "generated_at": "2026-08-05T21:28:25",
   "picks": [
     {
       "rank": 1,
       "article_id": 48189,
-      "editorial_note": "A $100M national program to expand AI compute access and build a skilled technical workforce is one of the largest single AI-research funding moves of the week, with reach across dozens of state and regional partners.",
+      "editorial_note": "A $100M NSF program to build regional AI compute hubs nationwide is one of the largest single infrastructure investments this week, aimed at democratizing access to AI compute for scientific research and workforce training.",
       "impact_category": "Major Funding",
       "title": "New NSF State and Regional AI Infrastructure Hubs will power AI-enabled scientific research across the country",
       "url": "https://www.nsf.gov/news/new-nsf-state-regional-ai-infrastructure-hubs-will-power-ai",
@@ -14,7 +14,7 @@
     {
       "rank": 2,
       "article_id": 48135,
-      "editorial_note": "NIST's formal MOU with the DOE Office of Science cements the White House-led Genesis Mission as federal policy, signaling a coordinated national push to embed AI in official science and standards work.",
+      "editorial_note": "NIST's formal MOU with the DOE Office of Science to join the White House-led Genesis Mission signals a coordinated federal policy push to embed AI across the national science and technology enterprise.",
       "impact_category": "Policy Impact",
       "title": "NIST Joins National Genesis Mission to Accelerate AI Innovation",
       "url": "https://www.nist.gov/news-events/news/2026/08/nist-joins-national-genesis-mission-accelerate-ai-innovation",
@@ -24,7 +24,7 @@
     {
       "rank": 3,
       "article_id": 46999,
-      "editorial_note": "Fermilab's deployment of the first AI-driven telescope marks a genuine technical first for autonomous scientific instrumentation, backed by the Genesis Mission's Fermi Data Platform.",
+      "editorial_note": "Fermilab's deployment of the first AI-driven telescope marks a genuine technical first in autonomous scientific observation, showcasing how AI can independently direct experimental instruments.",
       "impact_category": "Scientific Breakthrough",
       "title": "First AI-driven telescope goes stargazing",
       "url": "https://news.fnal.gov/2026/07/first-ai-driven-telescope-goes-stargazing/",
@@ -33,18 +33,8 @@
     },
     {
       "rank": 4,
-      "article_id": 47779,
-      "editorial_note": "NSF's $50M investment in two Materials Innovation Platforms gives researchers nationwide access to autonomous AI-driven materials discovery equipment, a substantial infrastructure commitment.",
-      "impact_category": "Major Funding",
-      "title": "NSF stands up 2 Materials Innovation Platforms with $50M investment",
-      "url": "https://www.nsf.gov/news/nsf-stands-2-materials-innovation-platforms-50m-investment",
-      "university": "National Science Foundation",
-      "published_date": "2026-08-03"
-    },
-    {
-      "rank": 5,
       "article_id": 48461,
-      "editorial_note": "A $24.9M NSF grant to build a nationally accessible self-driving laboratory for metals discovery pairs significant funding with a novel shared-infrastructure model for materials science.",
+      "editorial_note": "Texas A&M's $24.9M NSF-funded national self-driving laboratory for metals will give researchers nationwide shared access to robotics-and-AI-accelerated alloy discovery, a major boost for materials science infrastructure.",
       "impact_category": "Major Funding",
       "title": "Texas A&M to build self-driving laboratory for metals, open to researchers nationwide \u2013 Texas A&M Stories",
       "url": "https://stories.tamu.edu/news/2026/08/05/texas-am-to-build-self-driving-laboratory-for-metals-open-to-researchers-nationwide/",
@@ -52,9 +42,19 @@
       "published_date": "2026-08-05"
     },
     {
+      "rank": 5,
+      "article_id": 47427,
+      "editorial_note": "UC Davis researchers were among the first cohort selected for DOE's Genesis Mission, a flagship national program applying AI to accelerate discovery across energy and science \u2014 reflecting broad federal-academic alignment on AI-driven research.",
+      "impact_category": "Strategic Partnership",
+      "title": "UC Davis Researchers Selected for Landmark DOE Genesis Mission Awards",
+      "url": "https://www.ucdavis.edu/index%2ephp/news/uc-davis-researchers-selected-landmark-doe-genesis-mission-awards-harness-ai-scientific",
+      "university": "University of California-Davis",
+      "published_date": "2026-07-30"
+    },
+    {
       "rank": 6,
       "article_id": 48153,
-      "editorial_note": "Virginia Tech's $20M award to build a cloud-based, AI-enabled semiconductor lab strengthens a nationwide network of automated labs central to the federal Genesis Mission.",
+      "editorial_note": "Virginia Tech's $20M NSF grant for a cloud-based, AI-enabled semiconductor lab strengthens the national network of automated labs supporting the Genesis Mission's push for AI-accelerated chip research.",
       "impact_category": "Major Funding",
       "title": "University receives $20 million grant for cloud-based semiconductor lab",
       "url": "https://news.vt.edu/articles/2026/08/NSF-grant-semiconductor-lab.html",
@@ -63,43 +63,43 @@
     },
     {
       "rank": 7,
-      "article_id": 47256,
-      "editorial_note": "A $21.5M NSF AI Institute spanning Delaware, Delaware State, Princeton, and Penn (with UF joining) shows deep multi-institution coordination aimed at transforming rehabilitation and health care with human-AI collaboration.",
+      "article_id": 47022,
+      "editorial_note": "RPI's selection for two DOE Genesis Mission Phase I projects, including AI-guided rare-earth materials discovery, illustrates deepening university-national lab collaboration under the federal AI science initiative.",
       "impact_category": "Strategic Partnership",
+      "title": "RPI Selected for Two U.S. Department of Energy Genesis Mission Projects",
+      "url": "https://news.rpi.edu/2026/07/31/rpi-selected-two-us-department-energy-genesis-mission-projects",
+      "university": "Rensselaer Polytechnic Institute",
+      "published_date": "2026-07-31"
+    },
+    {
+      "rank": 8,
+      "article_id": 47256,
+      "editorial_note": "A new $21.5M NSF AI Institute for Human-AI Cooperation, spanning Delaware, Delaware State, Princeton, Penn, and Florida, targets real-world impact in rehabilitation and health care through cross-institutional AI research.",
+      "impact_category": "Major Funding",
       "title": "UF researchers join new NSF-funded AI institute to transform rehabilitation and health care",
       "url": "https://news.ufl.edu/2026/07/nsf-funded-ai-institute/",
       "university": "University of Florida",
       "published_date": "2026-07-30"
     },
     {
-      "rank": 8,
-      "article_id": 47733,
-      "editorial_note": "Georgia Tech's role leading a national Programmable Cloud Laboratory for advanced manufacturing extends the Genesis Mission's autonomous-experimentation infrastructure into materials and manufacturing research.",
-      "impact_category": "Strategic Partnership",
-      "title": "Georgia Tech to Lead National Cloud Laboratory for Advanced Manufacturing and Materials",
-      "url": "https://news.gatech.edu/news/2026/08/03/georgia-tech-lead-national-cloud-laboratory-advanced-manufacturing-and-materials",
-      "university": "Georgia Institute of Technology-Main Campus",
-      "published_date": "2026-08-03"
-    },
-    {
       "rank": 9,
-      "article_id": 46589,
-      "editorial_note": "HKUST's GSCo framework, letting generalist and specialist AI models collaborate on disease diagnosis, represents a meaningful architectural advance with direct clinical accuracy gains.",
+      "article_id": 48028,
+      "editorial_note": "HKU engineers' atomically thin analogue in-memory search chip offers a novel hardware approach to bypass the von Neumann bottleneck, a meaningful advance for energy-efficient AI computing.",
       "impact_category": "Scientific Breakthrough",
-      "title": "HKUST Develops Novel AI Framework Enabling Efficient Collaboration between Generalist and Specialist Models for Disease Diagnosis",
-      "url": "https://hkust.edu.hk/news/hkust-develops-novel-ai-framework-enabling-efficient-collaboration-between-generalist-and",
-      "university": "Hong Kong Univ. of Science and Technology",
-      "published_date": "2026-07-30"
+      "title": "HKU Engineering develops atomically thin \u201canalogue in-memory search\u201d chip to redefine AI computing limits with minimalist architecture - Press Releases - Media - HKU",
+      "url": "https://www.hku.hk/press/press-releases/detail/29292.html",
+      "university": "University of Hong Kong",
+      "published_date": "2026-08-04"
     },
     {
       "rank": 10,
-      "article_id": 48689,
-      "editorial_note": "HKU's atomically thin analogue in-memory search chip offers a genuine hardware breakthrough that could bypass the von Neumann bottleneck limiting today's AI computing efficiency.",
+      "article_id": 47730,
+      "editorial_note": "Lawrence Berkeley National Lab's AI framework combining thermodynamics and machine learning to predict solid-state reaction pathways could meaningfully speed up materials synthesis discovery.",
       "impact_category": "Scientific Breakthrough",
-      "title": "HKU Engineering develops atomically thin \u201canalogue in-memory search\u201d chip to redefine AI computing limits with minimalist architecture - All News - Media - HKU",
-      "url": "https://www.hku.hk/press/news_detail_29292.html",
-      "university": "University of Hong Kong",
-      "published_date": "2026-08-04"
+      "title": "New AI Modeling Approach Accelerates the Development of Advanced Materials",
+      "url": "https://newscenter.lbl.gov/2026/08/03/new-ai-modeling-approach-accelerates-the-development-of-advanced-materials/",
+      "university": "Lawrence Berkeley National Laboratory",
+      "published_date": "2026-08-03"
     }
   ]
 }
