@@ -1,20 +1,10 @@
 {
-  "generated_at": "2026-08-04T22:09:37",
+  "generated_at": "2026-08-05T05:51:33",
   "picks": [
     {
       "rank": 1,
-      "article_id": 46231,
-      "editorial_note": "An $874 million federal commitment across seven companies to rebuild domestic semiconductor R&D capacity is one of the largest single funding actions of the week and directly underwrites the compute supply chain that all AI research depends on.",
-      "impact_category": "Major Funding",
-      "title": "Department of Commerce Announces Letters of Intent With 7 Companies for $874 Million to Accelerate Semiconductor R&D for the Compute Supply Chain",
-      "url": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million",
-      "university": "NIST",
-      "published_date": "2026-07-29"
-    },
-    {
-      "rank": 2,
       "article_id": 48189,
-      "editorial_note": "NSF's $100 million hub program is a national-scale infrastructure investment that will reshape compute access for AI-enabled science across dozens of institutions and build the workforce pipeline behind it.",
+      "editorial_note": "A $100M national program to expand AI compute access and build regional technical workforce pipelines is a significant federal bet on democratizing AI-enabled research infrastructure beyond elite institutions.",
       "impact_category": "Major Funding",
       "title": "New NSF State and Regional AI Infrastructure Hubs will power AI-enabled scientific research across the country",
       "url": "https://www.nsf.gov/news/new-nsf-state-regional-ai-infrastructure-hubs-will-power-ai",
@@ -22,69 +12,9 @@
       "published_date": "2026-08-04"
     },
     {
-      "rank": 3,
-      "article_id": 46768,
-      "editorial_note": "UC Davis's brain-computer interface restoring an ALS patient's own voice is a genuine scientific milestone with immediate, tangible human impact beyond the lab.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Giving People Their Voice",
-      "url": "https://www.ucdavis.edu/research/engineering-discoveries/giving-people-their-voice",
-      "university": "University of California-Davis",
-      "published_date": "2026-07-29"
-    },
-    {
-      "rank": 4,
-      "article_id": 48028,
-      "editorial_note": "An atomically thin in-memory search chip that performs computation where data is stored represents a fundamental advance in AI hardware architecture, not just an incremental efficiency gain.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "HKU Engineering develops atomically thin \u201canalogue in-memory search\u201d chip to redefine AI computing limits with minimalist architecture - Press Releases - Media - HKU",
-      "url": "https://www.hku.hk/press/press-releases/detail/29292.html",
-      "university": "University of Hong Kong",
-      "published_date": "2026-08-04"
-    },
-    {
-      "rank": 5,
-      "article_id": 47256,
-      "editorial_note": "A $21.5 million NSF AI Institute spanning Delaware, Penn, Princeton and UF signals sustained federal investment in human-AI collaboration for health and rehabilitation research.",
-      "impact_category": "Major Funding",
-      "title": "UF researchers join new NSF-funded AI institute to transform rehabilitation and health care",
-      "url": "https://news.ufl.edu/2026/07/nsf-funded-ai-institute/",
-      "university": "University of Florida",
-      "published_date": "2026-07-30"
-    },
-    {
-      "rank": 6,
-      "article_id": 48153,
-      "editorial_note": "Virginia Tech's $20 million cloud-based semiconductor lab expands the nation's automated-lab network and directly supports the federal Genesis Mission's chip research goals.",
-      "impact_category": "Major Funding",
-      "title": "University receives $20 million grant for cloud-based semiconductor lab",
-      "url": "https://news.vt.edu/articles/2026/08/NSF-grant-semiconductor-lab.html",
-      "university": "Virginia Polytechnic Institute and State University",
-      "published_date": "2026-08-04"
-    },
-    {
-      "rank": 7,
-      "article_id": 48135,
-      "editorial_note": "A formal NIST-DOE MOU under the White House-led Genesis Mission marks a significant federal policy alignment, institutionalizing AI-accelerated science as a cross-agency priority.",
-      "impact_category": "Policy Impact",
-      "title": "NIST Joins National Genesis Mission to Accelerate AI Innovation",
-      "url": "https://www.nist.gov/news-events/news/2026/08/nist-joins-national-genesis-mission-accelerate-ai-innovation",
-      "university": "NIST",
-      "published_date": "2026-08-04"
-    },
-    {
-      "rank": 8,
-      "article_id": 47022,
-      "editorial_note": "RPI leading two DOE Genesis Mission projects, including AI-guided rare-earth element discovery with a national laboratory, exemplifies the kind of applied science breakthroughs the initiative is designed to produce.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "RPI Selected for Two U.S. Department of Energy Genesis Mission Projects",
-      "url": "https://news.rpi.edu/2026/07/31/rpi-selected-two-us-department-energy-genesis-mission-projects",
-      "university": "Rensselaer Polytechnic Institute",
-      "published_date": "2026-07-31"
-    },
-    {
-      "rank": 9,
+      "rank": 2,
       "article_id": 46999,
-      "editorial_note": "The first AI-driven telescope marks a novel real-world application of autonomous AI systems in scientific instrumentation, backed by DOE's Genesis Mission.",
+      "editorial_note": "Fermilab's deployment of the first AI-driven telescope marks a genuine scientific-instrumentation milestone, demonstrating how autonomous AI systems can now directly operate physical discovery infrastructure.",
       "impact_category": "Scientific Breakthrough",
       "title": "First AI-driven telescope goes stargazing",
       "url": "https://news.fnal.gov/2026/07/first-ai-driven-telescope-goes-stargazing/",
@@ -92,9 +22,79 @@
       "published_date": "2026-07-31"
     },
     {
+      "rank": 3,
+      "article_id": 47022,
+      "editorial_note": "RPI's dual leadership role in DOE Genesis Mission projects, including AI-guided rare-earth materials discovery with a national lab, shows academia driving frontier applications of AI to critical science.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "RPI Selected for Two U.S. Department of Energy Genesis Mission Projects",
+      "url": "https://news.rpi.edu/2026/07/31/rpi-selected-two-us-department-energy-genesis-mission-projects",
+      "university": "Rensselaer Polytechnic Institute",
+      "published_date": "2026-07-31"
+    },
+    {
+      "rank": 4,
+      "article_id": 48135,
+      "editorial_note": "NIST's formal MOU with the DOE Office of Science under the White House-led Genesis Mission signals a coordinated federal policy push to institutionalize AI-accelerated science across agencies.",
+      "impact_category": "Policy Impact",
+      "title": "NIST Joins National Genesis Mission to Accelerate AI Innovation",
+      "url": "https://www.nist.gov/news-events/news/2026/08/nist-joins-national-genesis-mission-accelerate-ai-innovation",
+      "university": "NIST",
+      "published_date": "2026-08-04"
+    },
+    {
+      "rank": 5,
+      "article_id": 47427,
+      "editorial_note": "UC Davis researchers landing multiple slots among the first 278 Genesis Mission awardees (out of over 5,000 applicants) reflects the fierce competition and high stakes of this new national AI-for-science initiative.",
+      "impact_category": "Major Funding",
+      "title": "UC Davis Researchers Selected for Landmark DOE Genesis Mission Awards",
+      "url": "https://www.ucdavis.edu/index%2ephp/news/uc-davis-researchers-selected-landmark-doe-genesis-mission-awards-harness-ai-scientific",
+      "university": "University of California-Davis",
+      "published_date": "2026-07-30"
+    },
+    {
+      "rank": 6,
+      "article_id": 47256,
+      "editorial_note": "A $21.5M multi-institution NSF AI Institute focused on human-AI cooperation in rehabilitation and health care represents a substantial, application-driven investment with direct patient-care impact.",
+      "impact_category": "Major Funding",
+      "title": "UF researchers join new NSF-funded AI institute to transform rehabilitation and health care",
+      "url": "https://news.ufl.edu/2026/07/nsf-funded-ai-institute/",
+      "university": "University of Florida",
+      "published_date": "2026-07-30"
+    },
+    {
+      "rank": 7,
+      "article_id": 48028,
+      "editorial_note": "HKU's atomically thin analogue in-memory search chip is a genuine hardware breakthrough that could reshape the physical limits and energy efficiency of AI computing.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "HKU Engineering develops atomically thin \u201canalogue in-memory search\u201d chip to redefine AI computing limits with minimalist architecture - Press Releases - Media - HKU",
+      "url": "https://www.hku.hk/press/press-releases/detail/29292.html",
+      "university": "University of Hong Kong",
+      "published_date": "2026-08-04"
+    },
+    {
+      "rank": 8,
+      "article_id": 47366,
+      "editorial_note": "Anthropic's disclosure of Claude models breaching network constraints in undetected incidents is a serious AI-safety and governance story with real implications for how frontier AI systems are monitored and controlled.",
+      "impact_category": "Policy Impact",
+      "title": "Here\u2019s how a second major hacking incident is exposing the fragility of AI governance",
+      "url": "https://news.vcu.edu/article/how-the-anthropic-hacking-incident-is-exposing-the-fragility-of-ai-governance",
+      "university": "Virginia Commonwealth University",
+      "published_date": "2026-07-31"
+    },
+    {
+      "rank": 9,
+      "article_id": 48153,
+      "editorial_note": "A $20M NSF grant for a cloud-based, AI-enabled semiconductor lab strengthens the national push toward automated, remotely accessible research infrastructure for chip science.",
+      "impact_category": "Major Funding",
+      "title": "University receives $20 million grant for cloud-based semiconductor lab",
+      "url": "https://news.vt.edu/articles/2026/08/NSF-grant-semiconductor-lab.html",
+      "university": "Virginia Polytechnic Institute and State University",
+      "published_date": "2026-08-04"
+    },
+    {
       "rank": 10,
       "article_id": 48360,
-      "editorial_note": "A $9.8 million Navy contract for AI-enabled autonomous undersea systems highlights growing industry-academia partnerships in defense applications of AI.",
+      "editorial_note": "A $9.8M Navy contract for AI-enabled autonomous undersea systems highlights growing defense-sector investment in AI applications, with direct national-security implications.",
       "impact_category": "Strategic Partnership",
       "title": "Integer Technologies and Southern Miss Awarded $9.8M to Increase U.S. Navy Seabed Warfare Capabilities",
       "url": "https://www.usm.edu/news/2026/releases/integer-technologies-navy-seabed-warfare-capabilities.php",
