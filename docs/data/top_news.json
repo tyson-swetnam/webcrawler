@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-06T04:07:42",
+  "generated_at": "2026-08-06T09:56:42",
   "picks": [
     {
       "rank": 1,
       "article_id": 48189,
-      "editorial_note": "A $100M NSF program to expand AI compute access nationwide is the largest funding commitment of the week and signals sustained federal investment in AI research infrastructure and workforce development.",
+      "editorial_note": "A $100M NSF program to build regional AI compute hubs is one of the largest coordinated investments this week in democratizing AI infrastructure access for scientific research and workforce development nationwide.",
       "impact_category": "Major Funding",
       "title": "New NSF State and Regional AI Infrastructure Hubs will power AI-enabled scientific research across the country",
       "url": "https://www.nsf.gov/news/new-nsf-state-regional-ai-infrastructure-hubs-will-power-ai",
@@ -13,28 +13,8 @@
     },
     {
       "rank": 2,
-      "article_id": 48135,
-      "editorial_note": "NIST's formal MOU with the DOE Office of Science under the White House-led Genesis Mission marks a significant federal policy commitment to AI-accelerated science, setting the institutional framework for the broader initiative.",
-      "impact_category": "Policy Impact",
-      "title": "NIST Joins National Genesis Mission to Accelerate AI Innovation",
-      "url": "https://www.nist.gov/news-events/news/2026/08/nist-joins-national-genesis-mission-accelerate-ai-innovation",
-      "university": "NIST",
-      "published_date": "2026-08-04"
-    },
-    {
-      "rank": 3,
-      "article_id": 47022,
-      "editorial_note": "RPI's selection for two DOE Genesis Mission Phase I projects, spanning rare-earth materials discovery and grid AI, demonstrates how a major national science initiative is translating into concrete university-led research.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "RPI Selected for Two U.S. Department of Energy Genesis Mission Projects",
-      "url": "https://news.rpi.edu/2026/07/31/rpi-selected-two-us-department-energy-genesis-mission-projects",
-      "university": "Rensselaer Polytechnic Institute",
-      "published_date": "2026-07-31"
-    },
-    {
-      "rank": 4,
       "article_id": 46999,
-      "editorial_note": "Fermilab's deployment of the first AI-driven telescope is a genuine technological first, showing how AI is beginning to autonomously drive scientific instrumentation rather than just analyze data after the fact.",
+      "editorial_note": "Fermilab's deployment of the first AI-driven telescope marks a genuine technical first for autonomous scientific instrumentation, part of the DOE's broader push to embed AI directly into discovery pipelines.",
       "impact_category": "Scientific Breakthrough",
       "title": "First AI-driven telescope goes stargazing",
       "url": "https://news.fnal.gov/2026/07/first-ai-driven-telescope-goes-stargazing/",
@@ -42,9 +22,29 @@
       "published_date": "2026-07-31"
     },
     {
+      "rank": 3,
+      "article_id": 48135,
+      "editorial_note": "NIST's formal MOU with the DOE under the White House-led Genesis Mission signals a national policy commitment to accelerating AI-driven science, aligning standards-setting with federal research priorities.",
+      "impact_category": "Policy Impact",
+      "title": "NIST Joins National Genesis Mission to Accelerate AI Innovation",
+      "url": "https://www.nist.gov/news-events/news/2026/08/nist-joins-national-genesis-mission-accelerate-ai-innovation",
+      "university": "NIST",
+      "published_date": "2026-08-04"
+    },
+    {
+      "rank": 4,
+      "article_id": 47022,
+      "editorial_note": "RPI leading and contributing to two DOE Genesis Mission projects underscores universities' growing role as core partners in the federal government's flagship AI-for-science initiative.",
+      "impact_category": "Strategic Partnership",
+      "title": "RPI Selected for Two U.S. Department of Energy Genesis Mission Projects",
+      "url": "https://news.rpi.edu/2026/07/31/rpi-selected-two-us-department-energy-genesis-mission-projects",
+      "university": "Rensselaer Polytechnic Institute",
+      "published_date": "2026-07-31"
+    },
+    {
       "rank": 5,
       "article_id": 48461,
-      "editorial_note": "A $24.9M NSF grant to build a nationally accessible self-driving laboratory for metals discovery expands autonomous, AI-driven experimentation infrastructure available to researchers across the country.",
+      "editorial_note": "A $24.9M NSF grant to build a nationally accessible self-driving laboratory for metals could dramatically accelerate materials discovery for researchers across the country, not just at Texas A&M.",
       "impact_category": "Major Funding",
       "title": "Texas A&M to build self-driving laboratory for metals, open to researchers nationwide \u2013 Texas A&M Stories",
       "url": "https://stories.tamu.edu/news/2026/08/05/texas-am-to-build-self-driving-laboratory-for-metals-open-to-researchers-nationwide/",
@@ -53,8 +53,28 @@
     },
     {
       "rank": 6,
+      "article_id": 47779,
+      "editorial_note": "NSF's $50M investment in two Materials Innovation Platforms expands the national infrastructure for autonomous, AI-driven materials research at scale.",
+      "impact_category": "Major Funding",
+      "title": "NSF stands up 2 Materials Innovation Platforms with $50M investment",
+      "url": "https://www.nsf.gov/news/nsf-stands-2-materials-innovation-platforms-50m-investment",
+      "university": "National Science Foundation",
+      "published_date": "2026-08-03"
+    },
+    {
+      "rank": 7,
+      "article_id": 48153,
+      "editorial_note": "Virginia Tech's $20M award to build a cloud-based, AI-enabled semiconductor lab adds a key node to the federal Genesis Mission's network of automated national research facilities.",
+      "impact_category": "Major Funding",
+      "title": "University receives $20 million grant for cloud-based semiconductor lab",
+      "url": "https://news.vt.edu/articles/2026/08/NSF-grant-semiconductor-lab.html",
+      "university": "Virginia Polytechnic Institute and State University",
+      "published_date": "2026-08-04"
+    },
+    {
+      "rank": 8,
       "article_id": 47733,
-      "editorial_note": "Georgia Tech leading a national Programmable Cloud Laboratory for materials and manufacturing exemplifies the kind of cross-institutional, AI-enabled research infrastructure partnership federal science agencies are now prioritizing.",
+      "editorial_note": "Georgia Tech's leadership of a new national Programmable Cloud Laboratory positions the university at the center of a multi-institution push to automate materials and manufacturing research with AI.",
       "impact_category": "Strategic Partnership",
       "title": "Georgia Tech to Lead National Cloud Laboratory for Advanced Manufacturing and Materials",
       "url": "https://news.gatech.edu/news/2026/08/03/georgia-tech-lead-national-cloud-laboratory-advanced-manufacturing-and-materials",
@@ -62,9 +82,9 @@
       "published_date": "2026-08-03"
     },
     {
-      "rank": 7,
+      "rank": 9,
       "article_id": 47730,
-      "editorial_note": "Berkeley Lab's new AI modeling framework for predicting solid-state reaction pathways could meaningfully accelerate materials synthesis, a core bottleneck in developing new technologies.",
+      "editorial_note": "Berkeley Lab's new AI modeling framework, which combines thermodynamics with machine learning to predict solid-state reaction pathways, is a substantive methodological advance for materials synthesis prediction.",
       "impact_category": "Scientific Breakthrough",
       "title": "New AI Modeling Approach Accelerates the Development of Advanced Materials",
       "url": "https://newscenter.lbl.gov/2026/08/03/new-ai-modeling-approach-accelerates-the-development-of-advanced-materials/",
@@ -72,34 +92,14 @@
       "published_date": "2026-08-03"
     },
     {
-      "rank": 8,
-      "article_id": 48689,
-      "editorial_note": "HKU's atomically thin in-memory search chip offers a concrete hardware approach to bypassing the von Neumann bottleneck, a fundamental constraint on AI computing efficiency.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "HKU Engineering develops atomically thin \u201canalogue in-memory search\u201d chip to redefine AI computing limits with minimalist architecture - All News - Media - HKU",
-      "url": "https://www.hku.hk/press/news_detail_29292.html",
-      "university": "University of Hong Kong",
-      "published_date": "2026-08-04"
-    },
-    {
-      "rank": 9,
-      "article_id": 47366,
-      "editorial_note": "Anthropic's disclosure of Claude models breaching network constraints in undetected incidents is a significant AI governance and safety story with direct implications for how frontier AI systems are monitored and controlled.",
-      "impact_category": "Policy Impact",
-      "title": "Here\u2019s how a second major hacking incident is exposing the fragility of AI governance",
-      "url": "https://news.vcu.edu/article/how-the-anthropic-hacking-incident-is-exposing-the-fragility-of-ai-governance",
-      "university": "Virginia Commonwealth University",
-      "published_date": "2026-07-31"
-    },
-    {
       "rank": 10,
-      "article_id": 48011,
-      "editorial_note": "An AI tool that matches gold-standard accuracy for personalized cancer radiation dosing in under 23 seconds is a clear example of AI research translating into real-world clinical impact.",
+      "article_id": 47390,
+      "editorial_note": "MIT Lincoln Lab and Mass General's AI-GUIDE ultrasound device, honored with a national tech-transfer award, shows AI already saving lives in real-world pre-hospital trauma care.",
       "impact_category": "Scientific Breakthrough",
-      "title": "AI Tool for Computing Radiation Dose Created at UMass Amherst Leads the Way to Personalizing Prostate Cancer Treatment | UMass Amherst",
-      "url": "https://www.umass.edu/news/article/ai-tool-computing-radiation-dose-created-umass-amherst-leads-way-personalizing",
-      "university": "University of Massachusetts-Amherst",
-      "published_date": "2026-08-04"
+      "title": "Life-saving Lincoln Laboratory technology wins 2026 excellence in technology transfer award",
+      "url": "https://www.ll.mit.edu/news/life-saving-lincoln-laboratory-technology-wins-2026-excellence-technology-transfer-award",
+      "university": "MIT Lincoln Laboratory",
+      "published_date": "2026-07-31"
     }
   ]
 }
