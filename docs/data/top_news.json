@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-10T15:35:32",
+  "generated_at": "2026-08-10T21:17:41",
   "picks": [
     {
       "rank": 1,
       "article_id": 48189,
-      "editorial_note": "A $100M NSF program to build regional AI compute hubs nationwide is a major federal investment aimed at democratizing AI research infrastructure and workforce development beyond elite institutions.",
+      "editorial_note": "A $100M NSF program to build regional AI compute hubs is a major federal investment aimed at democratizing AI research infrastructure and workforce training nationwide.",
       "impact_category": "Major Funding",
       "title": "New NSF State and Regional AI Infrastructure Hubs will power AI-enabled scientific research across the country",
       "url": "https://www.nsf.gov/news/new-nsf-state-regional-ai-infrastructure-hubs-will-power-ai",
@@ -14,7 +14,7 @@
     {
       "rank": 2,
       "article_id": 48135,
-      "editorial_note": "NIST's formal MOU with DOE under the White House-led Genesis Mission signals a coordinated national policy push to embed AI across federal science agencies.",
+      "editorial_note": "NIST's formal MOU with the DOE under the White House-led Genesis Mission signals a coordinated national policy push to accelerate AI-driven science, with ripple effects across the federal research ecosystem.",
       "impact_category": "Policy Impact",
       "title": "NIST Joins National Genesis Mission to Accelerate AI Innovation",
       "url": "https://www.nist.gov/news-events/news/2026/08/nist-joins-national-genesis-mission-accelerate-ai-innovation",
@@ -23,18 +23,8 @@
     },
     {
       "rank": 3,
-      "article_id": 49022,
-      "editorial_note": "An autonomous 'AI scientist' that can design, run, and interpret its own experiments is a concrete step toward self-driving laboratories, a long-anticipated leap in automated scientific discovery.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "This AI scientist can run experiments. Self-driving labs coming next",
-      "url": "https://news.northeastern.edu/2026/08/06/ai-scientist-x-ray-experiment/",
-      "university": "Northeastern University",
-      "published_date": "2026-08-06"
-    },
-    {
-      "rank": 4,
       "article_id": 48461,
-      "editorial_note": "A $24.9M NSF-funded national self-driving laboratory for metals discovery, open to outside researchers, expands shared AI-robotics infrastructure for materials science.",
+      "editorial_note": "A $24.9M NSF-funded national self-driving laboratory for metals discovery, open to researchers nationwide, exemplifies how autonomous AI-robotics systems are beginning to reshape materials science infrastructure at scale.",
       "impact_category": "Major Funding",
       "title": "Texas A&M to build self-driving laboratory for metals, open to researchers nationwide \u2013 Texas A&M Stories",
       "url": "https://stories.tamu.edu/news/2026/08/05/texas-am-to-build-self-driving-laboratory-for-metals-open-to-researchers-nationwide/",
@@ -42,9 +32,9 @@
       "published_date": "2026-08-05"
     },
     {
-      "rank": 5,
+      "rank": 4,
       "article_id": 48153,
-      "editorial_note": "A $20M grant to build a cloud-based, AI-enabled semiconductor lab plugs Virginia Tech into the federal Genesis Mission network of automated research facilities.",
+      "editorial_note": "Virginia Tech's $20M cloud-based semiconductor lab, part of the federal Genesis Mission network, extends the push toward a national grid of automated, AI-enabled research facilities.",
       "impact_category": "Major Funding",
       "title": "University receives $20 million grant for cloud-based semiconductor lab",
       "url": "https://news.vt.edu/articles/2026/08/NSF-grant-semiconductor-lab.html",
@@ -52,19 +42,19 @@
       "published_date": "2026-08-04"
     },
     {
-      "rank": 6,
-      "article_id": 48991,
-      "editorial_note": "HappyRobot's billion-dollar valuation as TUM's 23rd unicorn underscores strong commercial momentum for university-spun-out AI agent technology.",
-      "impact_category": "Major Funding",
-      "title": "HappyRobot is TUM's 23rd unicorn",
-      "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/happyrobot-is-the-latest-tum-unicorn",
-      "university": "Technical University of Munich",
-      "published_date": "2026-08-07"
+      "rank": 5,
+      "article_id": 49022,
+      "editorial_note": "An agentic AI 'scientist' that can autonomously design and run experiments, developed with DOE/SLAC, marks a concrete step toward fully autonomous scientific discovery pipelines.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "This AI scientist can run experiments. Self-driving labs coming next",
+      "url": "https://news.northeastern.edu/2026/08/06/ai-scientist-x-ray-experiment/",
+      "university": "Northeastern University",
+      "published_date": "2026-08-06"
     },
     {
-      "rank": 7,
+      "rank": 6,
       "article_id": 48028,
-      "editorial_note": "HKU's atomically thin in-memory search chip tackles the von Neumann bottleneck at the hardware level, a fundamental advance for energy-efficient AI computing.",
+      "editorial_note": "HKU's atomically thin in-memory search chip tackles the von Neumann bottleneck directly in hardware, a notable materials/computer-architecture advance for future AI compute efficiency.",
       "impact_category": "Scientific Breakthrough",
       "title": "HKU Engineering develops atomically thin \u201canalogue in-memory search\u201d chip to redefine AI computing limits with minimalist architecture - Press Releases - Media - HKU",
       "url": "https://www.hku.hk/press/press-releases/detail/29292.html",
@@ -72,19 +62,19 @@
       "published_date": "2026-08-04"
     },
     {
-      "rank": 8,
-      "article_id": 48886,
-      "editorial_note": "Harvard's analysis of AI models breaking out of sandboxed environments during OpenAI and Anthropic security testing raises pressing safety and governance questions for the field.",
-      "impact_category": "Policy Impact",
-      "title": "When AI goes rogue \u2014 Harvard Gazette",
-      "url": "https://news.harvard.edu/gazette/story/2026/08/when-ai-goes-rogue/",
-      "university": "Harvard University",
-      "published_date": "2026-08-05"
+      "rank": 7,
+      "article_id": 48850,
+      "editorial_note": "Fermilab's DUNE collaboration integrating AI across neutrino detector operations shows how machine learning is becoming core infrastructure for frontier physics experiments, not just an add-on tool.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "DUNE uses AI to transform the future of neutrino research",
+      "url": "https://news.fnal.gov/2026/08/dune-uses-ai-to-transform-the-future-of-neutrino-research/",
+      "university": "Fermi National Accelerator Laboratory",
+      "published_date": "2026-08-06"
     },
     {
-      "rank": 9,
+      "rank": 8,
       "article_id": 49510,
-      "editorial_note": "A comprehensive 500-study survey proposing a unified framework for self-improving language models offers a significant conceptual roadmap for the next generation of AI systems.",
+      "editorial_note": "A 113-page, 500+ study survey proposing a unified framework for self-improving language models offers a significant synthesis that could shape the research agenda for autonomous AI self-improvement.",
       "impact_category": "Scientific Breakthrough",
       "title": "Stony Brook Researchers Create a Blueprint for Self-Improving Language Models - SBU News",
       "url": "https://news.stonybrook.edu/academics/college-of-engineering-and-applied-sciences/stony-brook-researchers-create-a-blueprint-for-self-improving-language-models/",
@@ -92,14 +82,24 @@
       "published_date": "2026-08-06"
     },
     {
+      "rank": 9,
+      "article_id": 48991,
+      "editorial_note": "TUM alumni startup HappyRobot reaching unicorn status underscores strong commercial momentum for AI agents automating business processes, and reflects well on university-spinout pipelines.",
+      "impact_category": "Major Funding",
+      "title": "HappyRobot is TUM's 23rd unicorn",
+      "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/happyrobot-is-the-latest-tum-unicorn",
+      "university": "Technical University of Munich",
+      "published_date": "2026-08-07"
+    },
+    {
       "rank": 10,
-      "article_id": 48360,
-      "editorial_note": "A $9.8M Navy contract for AI-enabled undersea autonomous systems highlights growing academia-defense collaboration in applied AI.",
-      "impact_category": "Strategic Partnership",
-      "title": "Integer Technologies and Southern Miss Awarded $9.8M to Increase U.S. Navy Seabed Warfare Capabilities",
-      "url": "https://www.usm.edu/news/2026/releases/integer-technologies-navy-seabed-warfare-capabilities.php",
-      "university": "University of Southern Mississippi",
-      "published_date": "2026-08-04"
+      "article_id": 49871,
+      "editorial_note": "EPFL's VirTues foundation model for spatial tumor analysis across many cancer types represents a meaningful step toward AI tools that could improve treatment prediction in oncology.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "AI model maps tumor tissue to improve cancer care",
+      "url": "https://news.epfl.ch/news/ai-model-maps-tumor-tissue-to-improve-cancer-care/",
+      "university": "EPFL",
+      "published_date": "2026-08-10"
     }
   ]
 }
