@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-11T21:19:07",
+  "generated_at": "2026-08-12T03:49:04",
   "picks": [
     {
       "rank": 1,
       "article_id": 50509,
-      "editorial_note": "Purdue leading two of the first 278 awards under DOE's new Genesis Mission signals a major federal bet on AI-accelerated science, with direct implications for how national lab data (like the Electron-Ion Collider) gets processed going forward.",
+      "editorial_note": "Purdue leading two of the first Genesis Mission awards signals DOE is putting real money behind AI-accelerated science at the Electron-Ion Collider \u2014 a bellwether for how the national labs plan to fund AI research going forward.",
       "impact_category": "Major Funding",
       "title": "2 Purdue AI research projects selected among the first Genesis Mission awards",
       "url": "https://www.purdue.edu/newsroom/2026/Q3/2-purdue-ai-research-projects-selected-among-the-first-genesis-mission-awards/",
@@ -13,18 +13,8 @@
     },
     {
       "rank": 2,
-      "article_id": 48461,
-      "editorial_note": "A $24.9M NSF grant to build a national, open-access self-driving laboratory for metals discovery is a significant infrastructure investment that could accelerate materials science for researchers well beyond Texas A&M.",
-      "impact_category": "Major Funding",
-      "title": "Texas A&M to build self-driving laboratory for metals, open to researchers nationwide \u2013 Texas A&M Stories",
-      "url": "https://stories.tamu.edu/news/2026/08/05/texas-am-to-build-self-driving-laboratory-for-metals-open-to-researchers-nationwide/",
-      "university": "Texas A & M University-College Station",
-      "published_date": "2026-08-05"
-    },
-    {
-      "rank": 3,
       "article_id": 49022,
-      "editorial_note": "An agentic AI that can autonomously design, run, and interpret physical experiments \u2014 developed with SLAC \u2014 is a concrete step toward self-driving laboratories becoming operational reality rather than a research aspiration.",
+      "editorial_note": "An agentic AI that can autonomously design, run, and interpret its own experiments \u2014 developed with DOE and SLAC backing \u2014 is a concrete step toward self-driving labs, one of the most consequential near-term applications of AI in science.",
       "impact_category": "Scientific Breakthrough",
       "title": "This AI scientist can run experiments. Self-driving labs coming next",
       "url": "https://news.northeastern.edu/2026/08/06/ai-scientist-x-ray-experiment/",
@@ -32,9 +22,19 @@
       "published_date": "2026-08-06"
     },
     {
+      "rank": 3,
+      "article_id": 48850,
+      "editorial_note": "Fermilab's DUNE collaboration weaving AI/ML into neutrino detector operations shows AI moving from a research tool into core infrastructure for one of the world's flagship particle physics experiments.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "DUNE uses AI to transform the future of neutrino research",
+      "url": "https://news.fnal.gov/2026/08/dune-uses-ai-to-transform-the-future-of-neutrino-research/",
+      "university": "Fermi National Accelerator Laboratory",
+      "published_date": "2026-08-06"
+    },
+    {
       "rank": 4,
       "article_id": 48991,
-      "editorial_note": "HappyRobot crossing a $1B valuation as TUM's 23rd unicorn is a marquee financial milestone demonstrating the real commercial payoff of university-incubated AI research.",
+      "editorial_note": "TUM alumni's HappyRobot crossing a $1B valuation as the university's 23rd unicorn is a striking data point on how directly academic AI talent is converting into major commercial value.",
       "impact_category": "Major Funding",
       "title": "HappyRobot is TUM's 23rd unicorn",
       "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/happyrobot-is-the-latest-tum-unicorn",
@@ -44,7 +44,7 @@
     {
       "rank": 5,
       "article_id": 49871,
-      "editorial_note": "EPFL's VirTues foundation model for spatial tumor proteomics is a genuine scientific advance with direct potential to improve cancer treatment prediction across many tumor types.",
+      "editorial_note": "EPFL's VirTues foundation model for spatial proteomics could meaningfully improve cancer treatment prediction by modeling tumor tissue organization across cancer types \u2014 a high-value application of AI in medicine.",
       "impact_category": "Scientific Breakthrough",
       "title": "AI model maps tumor tissue to improve cancer care",
       "url": "https://news.epfl.ch/news/ai-model-maps-tumor-tissue-to-improve-cancer-care/",
@@ -53,18 +53,28 @@
     },
     {
       "rank": 6,
-      "article_id": 50205,
-      "editorial_note": "Alabama's Fermilab-partnered Genesis Mission award applies AI to sift massive particle physics datasets, another concrete example of the DOE initiative reshaping how big science is done.",
-      "impact_category": "Strategic Partnership",
-      "title": "AI meets particle physics in UA-Led Department of Energy project",
-      "url": "https://news.ua.edu/2026/08/ua-genesis-mission-award-will-create-ai-tool-for-particle-physics/",
-      "university": "The University of Alabama",
+      "article_id": 50198,
+      "editorial_note": "A deployable ML framework that predicts hardware behavior in the DIII-D tokamak has direct implications for fusion energy research, one of the highest-stakes domains where AI-driven control could accelerate progress.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Blending Fusion Science, AI to Predict DIII-D Tokamak Behavior",
+      "url": "https://www.jlab.org/news/stories/blending-fusion-science-ai-predict-diii-d-tokamak-behavior",
+      "university": "Thomas Jefferson National Accelerator Facility",
       "published_date": "2026-08-11"
     },
     {
       "rank": 7,
+      "article_id": 50259,
+      "editorial_note": "MIT and Tsinghua's GeoPT approach teaches AI simulators physical intuition via virtual mechanical interactions, a methodological advance that could broaden how reliably AI models generalize to real-world physics.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "With a feel for physics, AI models simulate a wider range of real-world scenarios",
+      "url": "https://www.csail.mit.edu/news/feel-physics-ai-models-simulate-wider-range-real-world-scenarios",
+      "university": "MIT",
+      "published_date": "2026-08-10"
+    },
+    {
+      "rank": 8,
       "article_id": 50161,
-      "editorial_note": "A $12M Army Research Laboratory grant for animal-inspired AI sensing in autonomous drones and robots reflects growing defense investment in next-generation battlefield-relevant AI systems.",
+      "editorial_note": "A $12M Army Research Lab grant for animal-inspired sensing systems is a substantial defense-funded bet on AI-powered autonomous drones and robots, with clear real-world deployment implications.",
       "impact_category": "Major Funding",
       "title": "$12M grant to build animal-inspired sensing for autonomous drones and robots | Penn State University",
       "url": "https://www.psu.edu/news/engineering/story/12m-grant-build-animal-inspired-sensing-autonomous-drones-and-robots",
@@ -72,34 +82,24 @@
       "published_date": "2026-08-10"
     },
     {
-      "rank": 8,
-      "article_id": 48841,
-      "editorial_note": "The new AI for African Population Health Unit represents a meaningful institutional commitment to building AI/ML tools tailored to underserved health contexts, with cross-continental research implications.",
-      "impact_category": "Strategic Partnership",
-      "title": "New unit a shot in the arm for healthcare research in Africa",
-      "url": "https://www.news.uct.ac.za/article/-2026-08-07-new-unit-a-shot-in-the-arm-for-healthcare-research-in-africa",
-      "university": "University of Cape Town",
-      "published_date": "2026-08-07"
+      "rank": 9,
+      "article_id": 49510,
+      "editorial_note": "A 113-page synthesis of 500+ studies proposing a unified framework for self-improving language models is a significant contribution to understanding where frontier AI capability research is headed.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Stony Brook Researchers Create a Blueprint for Self-Improving Language Models - SBU News",
+      "url": "https://news.stonybrook.edu/academics/college-of-engineering-and-applied-sciences/stony-brook-researchers-create-a-blueprint-for-self-improving-language-models/",
+      "university": "Stony Brook University",
+      "published_date": "2026-08-06"
     },
     {
-      "rank": 9,
+      "rank": 10,
       "article_id": 50267,
-      "editorial_note": "Haim Sompolinsky's Dirac Medal recognizes foundational statistical-mechanics work underpinning modern neural network theory, underscoring the deep scientific roots beneath today's AI systems.",
+      "editorial_note": "Haim Sompolinsky's Dirac Medal recognizes foundational statistical-mechanics work underpinning neural network theory, underscoring how deeply AI's theoretical roots are now being honored at the highest levels of physics.",
       "impact_category": "Scientific Breakthrough",
       "title": "The Hebrew University of Jerusalem Congratulates Prof. Haim Sompolinsky on Receiving the 2026 Dirac Medal",
       "url": "https://en.huji.ac.il/news/hebrew-university-jerusalem-congratulates-prof-haim-sompolinsky-receiving-2026",
       "university": "Hebrew University of Jerusalem",
       "published_date": "2026-08-11"
-    },
-    {
-      "rank": 10,
-      "article_id": 48850,
-      "editorial_note": "Fermilab's DUNE collaboration integrating AI across neutrino detector operations shows how machine learning is becoming core infrastructure for next-generation physics experiments.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "DUNE uses AI to transform the future of neutrino research",
-      "url": "https://news.fnal.gov/2026/08/dune-uses-ai-to-transform-the-future-of-neutrino-research/",
-      "university": "Fermi National Accelerator Laboratory",
-      "published_date": "2026-08-06"
     }
   ]
 }
