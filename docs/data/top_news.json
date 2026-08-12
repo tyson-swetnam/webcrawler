@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-12T03:49:04",
+  "generated_at": "2026-08-12T09:28:00",
   "picks": [
     {
       "rank": 1,
       "article_id": 50509,
-      "editorial_note": "Purdue leading two of the first Genesis Mission awards signals DOE is putting real money behind AI-accelerated science at the Electron-Ion Collider \u2014 a bellwether for how the national labs plan to fund AI research going forward.",
+      "editorial_note": "Purdue leading two of the first 278 DOE Genesis Mission awards marks a flagship moment for the nation's new AI-for-science initiative, directly tying university research to accelerating discovery at facilities like the Electron-Ion Collider.",
       "impact_category": "Major Funding",
       "title": "2 Purdue AI research projects selected among the first Genesis Mission awards",
       "url": "https://www.purdue.edu/newsroom/2026/Q3/2-purdue-ai-research-projects-selected-among-the-first-genesis-mission-awards/",
@@ -14,7 +14,7 @@
     {
       "rank": 2,
       "article_id": 49022,
-      "editorial_note": "An agentic AI that can autonomously design, run, and interpret its own experiments \u2014 developed with DOE and SLAC backing \u2014 is a concrete step toward self-driving labs, one of the most consequential near-term applications of AI in science.",
+      "editorial_note": "An autonomous AI 'scientist' that can design, run, and interpret its own experiments \u2014 developed with DOE and SLAC \u2014 is a genuine step toward self-driving labs that could reshape the pace of experimental science.",
       "impact_category": "Scientific Breakthrough",
       "title": "This AI scientist can run experiments. Self-driving labs coming next",
       "url": "https://news.northeastern.edu/2026/08/06/ai-scientist-x-ray-experiment/",
@@ -23,18 +23,8 @@
     },
     {
       "rank": 3,
-      "article_id": 48850,
-      "editorial_note": "Fermilab's DUNE collaboration weaving AI/ML into neutrino detector operations shows AI moving from a research tool into core infrastructure for one of the world's flagship particle physics experiments.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "DUNE uses AI to transform the future of neutrino research",
-      "url": "https://news.fnal.gov/2026/08/dune-uses-ai-to-transform-the-future-of-neutrino-research/",
-      "university": "Fermi National Accelerator Laboratory",
-      "published_date": "2026-08-06"
-    },
-    {
-      "rank": 4,
       "article_id": 48991,
-      "editorial_note": "TUM alumni's HappyRobot crossing a $1B valuation as the university's 23rd unicorn is a striking data point on how directly academic AI talent is converting into major commercial value.",
+      "editorial_note": "HappyRobot crossing a $1 billion valuation as TUM's 23rd unicorn shows university-spun AI agent technology achieving major commercial and financial validation.",
       "impact_category": "Major Funding",
       "title": "HappyRobot is TUM's 23rd unicorn",
       "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/happyrobot-is-the-latest-tum-unicorn",
@@ -42,9 +32,19 @@
       "published_date": "2026-08-07"
     },
     {
+      "rank": 4,
+      "article_id": 48850,
+      "editorial_note": "Fermilab's DUNE collaboration weaving AI across neutrino detector operations is a significant application of machine learning to one of physics' largest open experiments, with implications for how big-science collaborations run.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "DUNE uses AI to transform the future of neutrino research",
+      "url": "https://news.fnal.gov/2026/08/dune-uses-ai-to-transform-the-future-of-neutrino-research/",
+      "university": "Fermi National Accelerator Laboratory",
+      "published_date": "2026-08-06"
+    },
+    {
       "rank": 5,
       "article_id": 49871,
-      "editorial_note": "EPFL's VirTues foundation model for spatial proteomics could meaningfully improve cancer treatment prediction by modeling tumor tissue organization across cancer types \u2014 a high-value application of AI in medicine.",
+      "editorial_note": "EPFL's VirTues foundation model for spatial proteomics offers a generalizable tool for understanding tumor organization across cancer types, with direct potential to improve treatment response prediction.",
       "impact_category": "Scientific Breakthrough",
       "title": "AI model maps tumor tissue to improve cancer care",
       "url": "https://news.epfl.ch/news/ai-model-maps-tumor-tissue-to-improve-cancer-care/",
@@ -53,38 +53,18 @@
     },
     {
       "rank": 6,
-      "article_id": 50198,
-      "editorial_note": "A deployable ML framework that predicts hardware behavior in the DIII-D tokamak has direct implications for fusion energy research, one of the highest-stakes domains where AI-driven control could accelerate progress.",
+      "article_id": 50267,
+      "editorial_note": "Haim Sompolinsky's Dirac Medal recognizes foundational statistical-mechanics work underlying modern neural network theory, a rare high-level honor validating decades of AI-adjacent theoretical research.",
       "impact_category": "Scientific Breakthrough",
-      "title": "Blending Fusion Science, AI to Predict DIII-D Tokamak Behavior",
-      "url": "https://www.jlab.org/news/stories/blending-fusion-science-ai-predict-diii-d-tokamak-behavior",
-      "university": "Thomas Jefferson National Accelerator Facility",
+      "title": "The Hebrew University of Jerusalem Congratulates Prof. Haim Sompolinsky on Receiving the 2026 Dirac Medal",
+      "url": "https://en.huji.ac.il/news/hebrew-university-jerusalem-congratulates-prof-haim-sompolinsky-receiving-2026",
+      "university": "Hebrew University of Jerusalem",
       "published_date": "2026-08-11"
     },
     {
       "rank": 7,
-      "article_id": 50259,
-      "editorial_note": "MIT and Tsinghua's GeoPT approach teaches AI simulators physical intuition via virtual mechanical interactions, a methodological advance that could broaden how reliably AI models generalize to real-world physics.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "With a feel for physics, AI models simulate a wider range of real-world scenarios",
-      "url": "https://www.csail.mit.edu/news/feel-physics-ai-models-simulate-wider-range-real-world-scenarios",
-      "university": "MIT",
-      "published_date": "2026-08-10"
-    },
-    {
-      "rank": 8,
-      "article_id": 50161,
-      "editorial_note": "A $12M Army Research Lab grant for animal-inspired sensing systems is a substantial defense-funded bet on AI-powered autonomous drones and robots, with clear real-world deployment implications.",
-      "impact_category": "Major Funding",
-      "title": "$12M grant to build animal-inspired sensing for autonomous drones and robots | Penn State University",
-      "url": "https://www.psu.edu/news/engineering/story/12m-grant-build-animal-inspired-sensing-autonomous-drones-and-robots",
-      "university": "Pennsylvania State University-Main Campus",
-      "published_date": "2026-08-10"
-    },
-    {
-      "rank": 9,
       "article_id": 49510,
-      "editorial_note": "A 113-page synthesis of 500+ studies proposing a unified framework for self-improving language models is a significant contribution to understanding where frontier AI capability research is headed.",
+      "editorial_note": "A 113-page synthesis of 500+ studies proposing a unified framework for self-improving language models is likely to become a key reference point as the field pushes toward more autonomous AI systems.",
       "impact_category": "Scientific Breakthrough",
       "title": "Stony Brook Researchers Create a Blueprint for Self-Improving Language Models - SBU News",
       "url": "https://news.stonybrook.edu/academics/college-of-engineering-and-applied-sciences/stony-brook-researchers-create-a-blueprint-for-self-improving-language-models/",
@@ -92,14 +72,34 @@
       "published_date": "2026-08-06"
     },
     {
-      "rank": 10,
-      "article_id": 50267,
-      "editorial_note": "Haim Sompolinsky's Dirac Medal recognizes foundational statistical-mechanics work underpinning neural network theory, underscoring how deeply AI's theoretical roots are now being honored at the highest levels of physics.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "The Hebrew University of Jerusalem Congratulates Prof. Haim Sompolinsky on Receiving the 2026 Dirac Medal",
-      "url": "https://en.huji.ac.il/news/hebrew-university-jerusalem-congratulates-prof-haim-sompolinsky-receiving-2026",
-      "university": "Hebrew University of Jerusalem",
+      "rank": 8,
+      "article_id": 50205,
+      "editorial_note": "University of Alabama's Genesis Mission win with Fermilab to build AI tools for sifting high-energy physics data extends the DOE initiative's reach and deepens academia-national lab ties in fundamental science.",
+      "impact_category": "Strategic Partnership",
+      "title": "AI meets particle physics in UA-Led Department of Energy project",
+      "url": "https://news.ua.edu/2026/08/ua-genesis-mission-award-will-create-ai-tool-for-particle-physics/",
+      "university": "The University of Alabama",
       "published_date": "2026-08-11"
+    },
+    {
+      "rank": 9,
+      "article_id": 50161,
+      "editorial_note": "A $12 million Army Research Laboratory grant for animal-inspired AI sensing systems signals substantial defense investment in next-generation autonomous drones and ground robots.",
+      "impact_category": "Major Funding",
+      "title": "$12M grant to build animal-inspired sensing for autonomous drones and robots | Penn State University",
+      "url": "https://www.psu.edu/news/engineering/story/12m-grant-build-animal-inspired-sensing-autonomous-drones-and-robots",
+      "university": "Pennsylvania State University-Main Campus",
+      "published_date": "2026-08-10"
+    },
+    {
+      "rank": 10,
+      "article_id": 48841,
+      "editorial_note": "The new AI for African Population Health Unit pairs a national research council with a leading university to build AI/ML tools tailored to African health data, addressing a longstanding gap in global health AI research.",
+      "impact_category": "Strategic Partnership",
+      "title": "New unit a shot in the arm for healthcare research in Africa",
+      "url": "https://www.news.uct.ac.za/article/-2026-08-07-new-unit-a-shot-in-the-arm-for-healthcare-research-in-africa",
+      "university": "University of Cape Town",
+      "published_date": "2026-08-07"
     }
   ]
 }
