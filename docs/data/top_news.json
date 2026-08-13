@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-13T03:51:02",
+  "generated_at": "2026-08-13T09:28:23",
   "picks": [
     {
       "rank": 1,
       "article_id": 50509,
-      "editorial_note": "Purdue leading two of the first Genesis Mission awards signals a major new DOE national initiative putting AI at the center of scientific discovery, from particle physics to materials science.",
+      "editorial_note": "Purdue leading two of the first DOE Genesis Mission awards signals a major new federal push to use AI for accelerating scientific discovery, with real funding and infrastructure implications.",
       "impact_category": "Major Funding",
       "title": "2 Purdue AI research projects selected among the first Genesis Mission awards",
       "url": "https://www.purdue.edu/newsroom/2026/Q3/2-purdue-ai-research-projects-selected-among-the-first-genesis-mission-awards/",
@@ -14,8 +14,8 @@
     {
       "rank": 2,
       "article_id": 50205,
-      "editorial_note": "A University of Alabama-Fermilab partnership under the same Genesis Mission shows the program's reach into fundamental physics, using AI to sift massive particle-collision datasets.",
-      "impact_category": "Strategic Partnership",
+      "editorial_note": "A second Genesis Mission award, this time pairing Alabama with Fermilab, shows the new DOE AI initiative is spreading funding and partnerships across multiple institutions and scientific domains from its very first round.",
+      "impact_category": "Major Funding",
       "title": "AI meets particle physics in UA-Led Department of Energy project",
       "url": "https://news.ua.edu/2026/08/ua-genesis-mission-award-will-create-ai-tool-for-particle-physics/",
       "university": "The University of Alabama",
@@ -24,7 +24,7 @@
     {
       "rank": 3,
       "article_id": 50596,
-      "editorial_note": "A \u00a320 million MRC-funded hub at Cambridge combining stem cell models with AI could meaningfully accelerate drug development timelines, a high-value bet on AI-driven medicine.",
+      "editorial_note": "A \u00a320 million MRC-funded hub at Cambridge combining stem cell models with AI represents a substantial, well-funded bet on AI-accelerated drug development.",
       "impact_category": "Major Funding",
       "title": "Cambridge to lead new \u00a320m MRC Hub to transform development of new medicines using stem cells and AI",
       "url": "https://www.cam.ac.uk/research/news/cambridge-to-lead-new-ps20m-mrc-hub-to-transform-development-of-new-medicines-using-stem-cells-and",
@@ -33,18 +33,8 @@
     },
     {
       "rank": 4,
-      "article_id": 50668,
-      "editorial_note": "An ARPA-H-backed collaboration between SRI, Mayo Clinic, and UF to guide clinical procedures with AI-driven smart glasses represents a concrete, near-term real-world AI application in healthcare.",
-      "impact_category": "Strategic Partnership",
-      "title": "AI guides healthcare workers through blood draws, intubation, and more - SRI",
-      "url": "https://www.sri.com/press/story/ai-guides-healthcare-workers-through-blood-draws-intubation-and-more/",
-      "university": "SRI International",
-      "published_date": "2026-08-12"
-    },
-    {
-      "rank": 5,
       "article_id": 48991,
-      "editorial_note": "HappyRobot's billion-dollar valuation as TUM's 23rd unicorn is a striking financial milestone showing how quickly AI agent startups from academic spinouts are scaling.",
+      "editorial_note": "HappyRobot crossing a $1 billion valuation as TUM's 23rd unicorn is a concrete commercial validation of AI research spinning out of a major university.",
       "impact_category": "Major Funding",
       "title": "HappyRobot is TUM's 23rd unicorn",
       "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/happyrobot-is-the-latest-tum-unicorn",
@@ -52,9 +42,19 @@
       "published_date": "2026-08-07"
     },
     {
+      "rank": 5,
+      "article_id": 50668,
+      "editorial_note": "An ARPA-H-funded collaboration between SRI, Mayo Clinic, and the University of Florida to guide medical procedures with AI-enabled smart glasses is a notable real-world clinical application backed by a major federal partnership.",
+      "impact_category": "Strategic Partnership",
+      "title": "AI guides healthcare workers through blood draws, intubation, and more - SRI",
+      "url": "https://www.sri.com/press/story/ai-guides-healthcare-workers-through-blood-draws-intubation-and-more/",
+      "university": "SRI International",
+      "published_date": "2026-08-12"
+    },
+    {
       "rank": 6,
       "article_id": 50737,
-      "editorial_note": "UCLA's use of generative AI to design entirely novel proteins, building on Nobel Prize-winning techniques, represents a genuine scientific breakthrough with broad biotech implications.",
+      "editorial_note": "UCLA's use of generative AI to design entirely novel proteins, building on Nobel Prize-winning techniques, represents a genuine scientific advance with broad biomedical potential.",
       "impact_category": "Scientific Breakthrough",
       "title": "UCLA bioengineer Jason Zhang deploys AI to create proteins never before seen in nature",
       "url": "https://newsroom.ucla.edu/stories/bioengineer-jason-zhang-deploys-ai-create-proteins-never-seen-nature",
@@ -63,43 +63,43 @@
     },
     {
       "rank": 7,
-      "article_id": 50572,
-      "editorial_note": "HKU's RoboDojo, built with nearly 20 global universities including Berkeley and Tsinghua, establishes a new global standard for evaluating embodied AI robots, a significant infrastructure contribution to the field.",
+      "article_id": 49871,
+      "editorial_note": "EPFL's VirTues foundation model for spatial tumor mapping across cancer types could meaningfully improve treatment response prediction, a significant step for AI in oncology.",
       "impact_category": "Scientific Breakthrough",
-      "title": "HKU Pioneers \"RoboDojo\": The First Hong Kong-Led Unified Benchmark for Embodied AI, Setting New Global Standards for Robot Reliability - Press Releases - Media - HKU",
-      "url": "https://www.hku.hk/press/press-releases/detail/29297.html",
-      "university": "University of Hong Kong",
-      "published_date": "2026-08-12"
-    },
-    {
-      "rank": 8,
-      "article_id": 50161,
-      "editorial_note": "A $12 million Army Research Laboratory grant to Penn State for animal-inspired AI sensing in autonomous drones and robots marks a substantial defense-research investment in next-generation robotics.",
-      "impact_category": "Major Funding",
-      "title": "$12M grant to build animal-inspired sensing for autonomous drones and robots | Penn State University",
-      "url": "https://www.psu.edu/news/engineering/story/12m-grant-build-animal-inspired-sensing-autonomous-drones-and-robots",
-      "university": "Pennsylvania State University-Main Campus",
+      "title": "AI model maps tumor tissue to improve cancer care",
+      "url": "https://news.epfl.ch/news/ai-model-maps-tumor-tissue-to-improve-cancer-care/",
+      "university": "EPFL",
       "published_date": "2026-08-10"
     },
     {
-      "rank": 9,
-      "article_id": 48841,
-      "editorial_note": "The launch of a dedicated AI for African Population Health Unit at the University of Cape Town, backed by South Africa's Medical Research Council, is a notable step toward AI tools tailored to underserved health contexts.",
-      "impact_category": "Strategic Partnership",
-      "title": "New unit a shot in the arm for healthcare research in Africa",
-      "url": "https://www.news.uct.ac.za/article/-2026-08-07-new-unit-a-shot-in-the-arm-for-healthcare-research-in-africa",
-      "university": "University of Cape Town",
-      "published_date": "2026-08-07"
-    },
-    {
-      "rank": 10,
+      "rank": 8,
       "article_id": 50267,
-      "editorial_note": "Hebrew University's Haim Sompolinsky winning the 2026 Dirac Medal recognizes foundational theoretical work connecting AI and neuroscience, a prestigious honor underscoring the scientific depth behind modern AI.",
+      "editorial_note": "Prof. Sompolinsky's Dirac Medal recognizes foundational theoretical work connecting statistical mechanics and neural computation, underscoring the deep scientific roots underpinning modern AI.",
       "impact_category": "Scientific Breakthrough",
       "title": "The Hebrew University of Jerusalem Congratulates Prof. Haim Sompolinsky on Receiving the 2026 Dirac Medal",
       "url": "https://en.huji.ac.il/news/hebrew-university-jerusalem-congratulates-prof-haim-sompolinsky-receiving-2026",
       "university": "Hebrew University of Jerusalem",
       "published_date": "2026-08-11"
+    },
+    {
+      "rank": 9,
+      "article_id": 50725,
+      "editorial_note": "MIT and Tsinghua's GeoPT approach for teaching AI models physics from efficient simulations could broaden the reliability of AI in real-world physical reasoning tasks.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "With a feel for physics, AI models simulate a wider range of real-world scenarios",
+      "url": "https://www.eecs.mit.edu/with-a-feel-for-physics-ai-models-simulate-a-wider-range-of-real-world-scenarios/",
+      "university": "MIT",
+      "published_date": "2026-08-11"
+    },
+    {
+      "rank": 10,
+      "article_id": 50572,
+      "editorial_note": "HKU's RoboDojo benchmark, built with nearly 20 global universities including UC Berkeley and Tsinghua, establishes a much-needed shared standard for evaluating embodied AI robot reliability.",
+      "impact_category": "Strategic Partnership",
+      "title": "HKU Pioneers \"RoboDojo\": The First Hong Kong-Led Unified Benchmark for Embodied AI, Setting New Global Standards for Robot Reliability - Press Releases - Media - HKU",
+      "url": "https://www.hku.hk/press/press-releases/detail/29297.html",
+      "university": "University of Hong Kong",
+      "published_date": "2026-08-12"
     }
   ]
 }
