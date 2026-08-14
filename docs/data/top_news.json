@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-14T15:33:41",
+  "generated_at": "2026-08-14T21:08:37",
   "picks": [
     {
       "rank": 1,
       "article_id": 50509,
-      "editorial_note": "Purdue leading two of the first 278 DOE Genesis Mission awards signals a major new national AI-for-science initiative gaining traction at the university level, spanning particle physics data streams and beyond.",
+      "editorial_note": "Purdue leading two of the very first DOE Genesis Mission awards signals a major new federal push to use AI for accelerating scientific discovery, from particle physics data streams to broader research infrastructure \u2014 a bellwether for how national labs and universities will partner under this initiative.",
       "impact_category": "Major Funding",
       "title": "2 Purdue AI research projects selected among the first Genesis Mission awards",
       "url": "https://www.purdue.edu/newsroom/2026/Q3/2-purdue-ai-research-projects-selected-among-the-first-genesis-mission-awards/",
@@ -14,7 +14,7 @@
     {
       "rank": 2,
       "article_id": 50596,
-      "editorial_note": "A \u00a320 million MRC-funded hub combining stem cell models with AI is a substantial bet on AI-accelerated drug development, with Cambridge positioned to lead translational medicine research at scale.",
+      "editorial_note": "A \u00a320 million MRC-funded hub at Cambridge combining stem cell models with AI could meaningfully speed up early-stage drug development, one of the largest single AI-adjacent funding commitments of the week.",
       "impact_category": "Major Funding",
       "title": "Cambridge to lead new \u00a320m MRC Hub to transform development of new medicines using stem cells and AI",
       "url": "https://www.cam.ac.uk/research/news/cambridge-to-lead-new-ps20m-mrc-hub-to-transform-development-of-new-medicines-using-stem-cells-and",
@@ -23,38 +23,8 @@
     },
     {
       "rank": 3,
-      "article_id": 49871,
-      "editorial_note": "EPFL's VirTues foundation model for spatial tumor proteomics represents a genuine scientific advance that could improve cancer treatment prediction across many tumor types.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "AI model maps tumor tissue to improve cancer care",
-      "url": "https://news.epfl.ch/news/ai-model-maps-tumor-tissue-to-improve-cancer-care/",
-      "university": "EPFL",
-      "published_date": "2026-08-10"
-    },
-    {
-      "rank": 4,
-      "article_id": 50737,
-      "editorial_note": "Using generative AI to design entirely novel proteins, building on Nobel laureate David Baker's foundational techniques, pushes computational biology into genuinely new territory.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "UCLA bioengineer Jason Zhang deploys AI to create proteins never before seen in nature",
-      "url": "https://newsroom.ucla.edu/stories/bioengineer-jason-zhang-deploys-ai-create-proteins-never-seen-nature",
-      "university": "University of California-Los Angeles",
-      "published_date": "2026-08-11"
-    },
-    {
-      "rank": 5,
-      "article_id": 50572,
-      "editorial_note": "RoboDojo establishes the first unified global benchmark for embodied AI robot manipulation, built with nearly 20 universities including UC Berkeley and Tsinghua \u2014 a significant standard-setting effort for the field.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "HKU Pioneers \"RoboDojo\": The First Hong Kong-Led Unified Benchmark for Embodied AI, Setting New Global Standards for Robot Reliability - Press Releases - Media - HKU",
-      "url": "https://www.hku.hk/press/press-releases/detail/29297.html",
-      "university": "University of Hong Kong",
-      "published_date": "2026-08-12"
-    },
-    {
-      "rank": 6,
       "article_id": 50668,
-      "editorial_note": "SRI's ARPA-H-funded PARADIGM initiative with Mayo Clinic and University of Florida shows AI moving into real clinical workflows, guiding medical procedures via smart glasses and cameras.",
+      "editorial_note": "SRI's ARPA-H-backed PARADIGM system, built with Mayo Clinic and the University of Florida, shows AI moving into direct, real-time clinical guidance for procedures like blood draws and intubation \u2014 a tangible healthcare application with a strong federal-academic-industry partnership behind it.",
       "impact_category": "Strategic Partnership",
       "title": "AI guides healthcare workers through blood draws, intubation, and more - SRI",
       "url": "https://www.sri.com/press/story/ai-guides-healthcare-workers-through-blood-draws-intubation-and-more/",
@@ -62,9 +32,49 @@
       "published_date": "2026-08-12"
     },
     {
+      "rank": 4,
+      "article_id": 50572,
+      "editorial_note": "RoboDojo, built by HKU with nearly 20 global universities including Berkeley and Tsinghua, establishes a new standardized benchmark for embodied AI robot reliability \u2014 the kind of shared infrastructure that can accelerate progress across the whole field.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "HKU Pioneers \"RoboDojo\": The First Hong Kong-Led Unified Benchmark for Embodied AI, Setting New Global Standards for Robot Reliability - Press Releases - Media - HKU",
+      "url": "https://www.hku.hk/press/press-releases/detail/29297.html",
+      "university": "University of Hong Kong",
+      "published_date": "2026-08-12"
+    },
+    {
+      "rank": 5,
+      "article_id": 50737,
+      "editorial_note": "UCLA's use of generative AI to design entirely novel proteins, extending Nobel laureate David Baker's computational protein engineering work, represents a genuine scientific advance with implications for medicine and biotechnology.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "UCLA bioengineer Jason Zhang deploys AI to create proteins never before seen in nature",
+      "url": "https://newsroom.ucla.edu/stories/bioengineer-jason-zhang-deploys-ai-create-proteins-never-seen-nature",
+      "university": "University of California-Los Angeles",
+      "published_date": "2026-08-11"
+    },
+    {
+      "rank": 6,
+      "article_id": 49871,
+      "editorial_note": "EPFL's VirTues foundation model for spatial tumor proteomics could improve prediction of cancer treatment response across many tumor types, an example of AI foundation models delivering concrete clinical research value.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "AI model maps tumor tissue to improve cancer care",
+      "url": "https://news.epfl.ch/news/ai-model-maps-tumor-tissue-to-improve-cancer-care/",
+      "university": "EPFL",
+      "published_date": "2026-08-10"
+    },
+    {
       "rank": 7,
-      "article_id": 51307,
-      "editorial_note": "DOE funding to defend AI systems managing the electric grid against adversarial cyberattacks addresses a critical, underappreciated national infrastructure security gap.",
+      "article_id": 51071,
+      "editorial_note": "A university-born startup, FastFlowLM, joining semiconductor giant AMD shows academic AI research translating directly into commercial chip technology for running large language models more efficiently.",
+      "impact_category": "Strategic Partnership",
+      "title": "URI professors\u2019 startup team joined semiconductor giant AMD",
+      "url": "https://www.uri.edu/news/2026/08/uri-professors-startup-team-joined-semiconductor-giant-amd/",
+      "university": "University of Rhode Island",
+      "published_date": "2026-08-12"
+    },
+    {
+      "rank": 8,
+      "article_id": 51718,
+      "editorial_note": "A DOE Genesis Mission grant to secure the AI systems running America's electric grid against adversarial attacks addresses a critical infrastructure vulnerability with national security implications.",
       "impact_category": "Policy Impact",
       "title": "DOE Funds U of A Research to Safeguard the AI Behind America's Electric Grid",
       "url": "https://news.uark.edu/articles/82674/doe-funds-u-of-a-research-to-safeguard-the-ai-behind-america-s-electric-grid",
@@ -72,9 +82,9 @@
       "published_date": "2026-08-10"
     },
     {
-      "rank": 8,
+      "rank": 9,
       "article_id": 50161,
-      "editorial_note": "A $12 million Army Research Laboratory grant for animal-inspired AI sensing in autonomous drones and robots marks a significant defense-research investment in bio-inspired AI.",
+      "editorial_note": "A $12 million Army Research Laboratory grant to Penn State for animal-inspired sensing in autonomous drones and robots reflects continued significant defense investment in AI-powered field robotics.",
       "impact_category": "Major Funding",
       "title": "$12M grant to build animal-inspired sensing for autonomous drones and robots | Penn State University",
       "url": "https://www.psu.edu/news/engineering/story/12m-grant-build-animal-inspired-sensing-autonomous-drones-and-robots",
@@ -82,24 +92,14 @@
       "published_date": "2026-08-10"
     },
     {
-      "rank": 9,
-      "article_id": 51108,
-      "editorial_note": "UC Riverside's DOE Genesis Mission Phase I funding for AI-driven quantum error correction and national-lab data sharing extends the reach of this new federal AI-for-science program.",
-      "impact_category": "Major Funding",
-      "title": "UCR researchers join DOE effort to speed scientific discovery",
-      "url": "https://news.ucr.edu/articles/2026/08/12/ucr-researchers-join-doe-effort-speed-scientific-discovery",
-      "university": "University of California-Riverside",
-      "published_date": "2026-08-12"
-    },
-    {
       "rank": 10,
-      "article_id": 51071,
-      "editorial_note": "A university-born startup joining AMD to optimize NPU performance for large language models shows academic AI research translating directly into commercial semiconductor strategy.",
-      "impact_category": "Strategic Partnership",
-      "title": "URI professors\u2019 startup team joined semiconductor giant AMD",
-      "url": "https://www.uri.edu/news/2026/08/uri-professors-startup-team-joined-semiconductor-giant-amd/",
-      "university": "University of Rhode Island",
-      "published_date": "2026-08-12"
+      "article_id": 50198,
+      "editorial_note": "Jefferson Lab's deployable machine learning framework for predicting fusion tokamak behavior tackles a hard science problem central to making fusion energy practical, pairing AI with a high-stakes energy technology.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Blending Fusion Science, AI to Predict DIII-D Tokamak Behavior",
+      "url": "https://www.jlab.org/news/stories/blending-fusion-science-ai-predict-diii-d-tokamak-behavior",
+      "university": "Thomas Jefferson National Accelerator Facility",
+      "published_date": "2026-08-11"
     }
   ]
 }
