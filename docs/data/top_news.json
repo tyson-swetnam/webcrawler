@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-18T15:24:31",
+  "generated_at": "2026-08-18T21:07:41",
   "picks": [
     {
       "rank": 1,
       "article_id": 50596,
-      "editorial_note": "A \u00a320 million MRC-funded hub led by Cambridge pairs stem-cell-derived tissue models with AI to speed drug development \u2014 a major, well-funded bet on AI accelerating preclinical medicine.",
+      "editorial_note": "A \u00a320 million MRC-funded hub led by Cambridge combining stem-cell tissue models with AI represents one of the largest and most scientifically ambitious biomedical AI investments of the week, aiming to transform how new medicines are developed and tested.",
       "impact_category": "Major Funding",
       "title": "Cambridge to lead new \u00a320m MRC Hub to transform development of new medicines using stem cells and AI",
       "url": "https://www.cam.ac.uk/research/news/cambridge-to-lead-new-ps20m-mrc-hub-to-transform-development-of-new-medicines-using-stem-cells-and",
@@ -14,7 +14,7 @@
     {
       "rank": 2,
       "article_id": 52420,
-      "editorial_note": "Purdue's Rosen Center is a partner on over $42 million in NSF Integrated Data Systems and Services grants, building national-scale AI and data cyberinfrastructure that will underpin research well beyond one campus.",
+      "editorial_note": "Purdue's role in over $42 million of NSF Integrated Data Systems and Services grants underscores a major national investment in AI- and data-driven research cyberinfrastructure that will benefit the broader scientific community.",
       "impact_category": "Major Funding",
       "title": "Purdue enables AI- and data- cyberinfras...",
       "url": "https://www.rcac.purdue.edu/news/7791",
@@ -24,7 +24,7 @@
     {
       "rank": 3,
       "article_id": 50668,
-      "editorial_note": "SRI, Mayo Clinic, and the University of Florida are building an ARPA-H-funded AI system using smart glasses and cameras to guide healthcare workers through procedures like blood draws and intubation \u2014 a concrete, federally backed clinical AI application with real patient-safety stakes.",
+      "editorial_note": "SRI's ARPA-H-funded PARADIGM initiative with Mayo Clinic and the University of Florida shows a concrete, high-stakes application of AI guiding frontline medical procedures, backed by a strong cross-institutional government-academia partnership.",
       "impact_category": "Strategic Partnership",
       "title": "AI guides healthcare workers through blood draws, intubation, and more - SRI",
       "url": "https://www.sri.com/press/story/ai-guides-healthcare-workers-through-blood-draws-intubation-and-more/",
@@ -33,8 +33,18 @@
     },
     {
       "rank": 4,
+      "article_id": 51108,
+      "editorial_note": "UC Riverside's selection for DOE Genesis Mission Phase I funding ties university AI research directly to quantum computing error correction and national lab data infrastructure, reflecting a significant new federal AI research initiative.",
+      "impact_category": "Major Funding",
+      "title": "UCR researchers join DOE effort to speed scientific discovery",
+      "url": "https://news.ucr.edu/articles/2026/08/12/ucr-researchers-join-doe-effort-speed-scientific-discovery",
+      "university": "University of California-Riverside",
+      "published_date": "2026-08-12"
+    },
+    {
+      "rank": 5,
       "article_id": 50572,
-      "editorial_note": "HKU led nearly 20 global universities, including Berkeley and Tsinghua, in building RoboDojo, a unified benchmark for embodied AI robot manipulation \u2014 the kind of shared infrastructure that could set the standard for evaluating robot reliability worldwide.",
+      "editorial_note": "RoboDojo, developed by HKU with nearly 20 global universities including UC Berkeley and Tsinghua, establishes a new international standard benchmark for embodied AI robot reliability, a genuine scientific contribution to the field.",
       "impact_category": "Scientific Breakthrough",
       "title": "HKU Pioneers \"RoboDojo\": The First Hong Kong-Led Unified Benchmark for Embodied AI, Setting New Global Standards for Robot Reliability - Press Releases - Media - HKU",
       "url": "https://www.hku.hk/press/press-releases/detail/29297.html",
@@ -42,29 +52,9 @@
       "published_date": "2026-08-12"
     },
     {
-      "rank": 5,
-      "article_id": 51108,
-      "editorial_note": "UC Riverside researchers won DOE Genesis Mission Phase I funding to apply AI to quantum computing error correction and cross-lab data sharing, part of a new federal initiative directing AI toward scientific discovery infrastructure.",
-      "impact_category": "Policy Impact",
-      "title": "UCR researchers join DOE effort to speed scientific discovery",
-      "url": "https://news.ucr.edu/articles/2026/08/12/ucr-researchers-join-doe-effort-speed-scientific-discovery",
-      "university": "University of California-Riverside",
-      "published_date": "2026-08-12"
-    },
-    {
       "rank": 6,
-      "article_id": 52885,
-      "editorial_note": "A Kent State researcher's DOE Genesis Mission award will mine 50 years of water-quality records with AI to locate critical minerals like copper and cobalt \u2014 a striking example of a federal AI initiative aimed directly at supply-chain and resource policy priorities.",
-      "impact_category": "Policy Impact",
-      "title": "Kent State Researcher Selected for US Department of Energy Genesis Mission Award to Mine Decades of River Data for Critical Minerals; Kent State Today; July 29, 2026",
-      "url": "https://www.kent.edu/sustainability/news/kent-state-researcher-selected-us-department-energy-genesis-mission-award-mine",
-      "university": "Kent State University at Kent",
-      "published_date": "2026-08-17"
-    },
-    {
-      "rank": 7,
       "article_id": 53076,
-      "editorial_note": "Imperial College London and medical device maker Smith+Nephew launched a five-year center to translate academic computer-vision research into surgical robotics \u2014 a substantial industry-academia bridge with direct clinical commercialization potential.",
+      "editorial_note": "Imperial College London's five-year partnership with medical device maker Smith+Nephew to build a surgical robotics innovation centre exemplifies how academic AI/computer-vision research is being translated into real-world clinical technology.",
       "impact_category": "Strategic Partnership",
       "title": "New centre from Imperial and Smith+Nephew will accelerate innovation in surgical robotics",
       "url": "https://www.imperial.ac.uk/news/articles/2026/new-centre-from-imperial-and-smithnephew-will-accelerate-innovation-in-surgical-robotics/",
@@ -72,9 +62,9 @@
       "published_date": "2026-08-18"
     },
     {
-      "rank": 8,
+      "rank": 7,
       "article_id": 51071,
-      "editorial_note": "A URI-founded startup, FastFlowLM, whose NPU-optimization software for large language models joined semiconductor giant AMD \u2014 a rare case of academic spinout technology being absorbed directly into major chip industry infrastructure.",
+      "editorial_note": "A university-founded startup, FastFlowLM, joining semiconductor giant AMD to optimize NPU usage for large language models marks a notable industry validation of academic AI systems research moving into commercial hardware.",
       "impact_category": "Strategic Partnership",
       "title": "URI professors\u2019 startup team joined semiconductor giant AMD",
       "url": "https://www.uri.edu/news/2026/08/uri-professors-startup-team-joined-semiconductor-giant-amd/",
@@ -82,9 +72,19 @@
       "published_date": "2026-08-12"
     },
     {
+      "rank": 8,
+      "article_id": 52885,
+      "editorial_note": "Kent State's DOE Genesis Mission award to mine 50 years of water-quality data for critical minerals with AI illustrates a novel, resource-security-relevant application of AI within a major new federal research program.",
+      "impact_category": "Major Funding",
+      "title": "Kent State Researcher Selected for US Department of Energy Genesis Mission Award to Mine Decades of River Data for Critical Minerals; Kent State Today; July 29, 2026",
+      "url": "https://www.kent.edu/sustainability/news/kent-state-researcher-selected-us-department-energy-genesis-mission-award-mine",
+      "university": "Kent State University at Kent",
+      "published_date": "2026-08-17"
+    },
+    {
       "rank": 9,
       "article_id": 53077,
-      "editorial_note": "Imperial College London and South Korea's Seoul AI Hub signed a partnership connecting Korean AI startups with Imperial's research base, extending UK-Korea AI collaboration on an international policy-relevant footing.",
+      "editorial_note": "Imperial College London's new partnership with Seoul AI Hub to connect Korean AI startups with UK research strengthens international AI research and commercialization ties between academia and industry.",
       "impact_category": "Strategic Partnership",
       "title": "Imperial and Seoul AI Hub form partnership to develop AI research programme",
       "url": "https://www.imperial.ac.uk/news/articles/2026/imperial-and-seoul-ai-hub-form-partnership-to-develop-ai-research-programme/",
@@ -94,7 +94,7 @@
     {
       "rank": 10,
       "article_id": 51923,
-      "editorial_note": "A $912,000 NSF grant will fund Case Western Reserve-led work on resilient, energy-efficient generative AI for secure hospital robots \u2014 a well-funded push toward safer AI deployment in healthcare infrastructure.",
+      "editorial_note": "A $912,000 NSF grant to Case Western's Gourav Datta for energy-efficient generative AI supporting secure hospital robots reflects meaningful federal investment in practical, safety-critical AI infrastructure.",
       "impact_category": "Major Funding",
       "title": "Engineering\u2019s Gourav Datta receives more than $900K to further resilient and energy-efficient generative AI research | CWRU Newsroom | Case Western Reserve University",
       "url": "https://case.edu/news/engineerings-gourav-datta-receives-more-900k-further-resilient-and-energy-efficient-generative-ai-research",
