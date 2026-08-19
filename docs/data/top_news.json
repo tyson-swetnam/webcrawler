@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-19T03:23:30",
+  "generated_at": "2026-08-19T09:13:01",
   "picks": [
     {
       "rank": 1,
       "article_id": 52420,
-      "editorial_note": "Purdue's Rosen Center is anchoring over $42 million in NSF grants to build national-scale AI and data cyberinfrastructure, the largest funding figure in this week's slate and a foundational investment that will underpin research computing capacity for many other institutions.",
+      "editorial_note": "Purdue's Rosen Center is anchoring over $42 million in NSF-funded national data infrastructure, positioning it as a backbone for AI-driven research computing across multiple institutions.",
       "impact_category": "Major Funding",
       "title": "Purdue enables AI- and data- cyberinfras...",
       "url": "https://www.rcac.purdue.edu/news/7791",
@@ -13,28 +13,8 @@
     },
     {
       "rank": 2,
-      "article_id": 52885,
-      "editorial_note": "Kent State's selection for the Department of Energy's new Genesis Mission signals a major federal push to apply AI to critical mineral discovery from decades of legacy data, a novel use case with direct implications for supply-chain and energy security.",
-      "impact_category": "Major Funding",
-      "title": "Kent State Researcher Selected for US Department of Energy Genesis Mission Award to Mine Decades of River Data for Critical Minerals; Kent State Today; July 29, 2026",
-      "url": "https://www.kent.edu/sustainability/news/kent-state-researcher-selected-us-department-energy-genesis-mission-award-mine",
-      "university": "Kent State University at Kent",
-      "published_date": "2026-08-17"
-    },
-    {
-      "rank": 3,
-      "article_id": 52428,
-      "editorial_note": "A second Genesis Mission Phase 1 award, this time to Alabama for AI-assisted physics data analysis, confirms DOE is standing up a substantial multi-institution AI initiative worth tracking as more Phase 1 winners emerge.",
-      "impact_category": "Major Funding",
-      "title": "UA Preview \u2014 Aug. 17-23, 2026",
-      "url": "https://news.ua.edu/2026/08/ua-preview-aug-17-23-2026/",
-      "university": "The University of Alabama",
-      "published_date": "2026-08-17"
-    },
-    {
-      "rank": 4,
       "article_id": 53076,
-      "editorial_note": "A five-year academic-industry centre pairing Imperial College London with medical device maker Smith+Nephew aims to translate computer-vision research directly into surgical robotics products, a concrete pipeline from lab to clinic.",
+      "editorial_note": "A five-year Imperial College\u2013Smith+Nephew centre translates AI/computer-vision research directly into surgical robotics products, a concrete academia-to-market pipeline in medtech.",
       "impact_category": "Strategic Partnership",
       "title": "New centre from Imperial and Smith+Nephew will accelerate innovation in surgical robotics",
       "url": "https://www.imperial.ac.uk/news/articles/2026/new-centre-from-imperial-and-smithnephew-will-accelerate-innovation-in-surgical-robotics/",
@@ -42,29 +22,39 @@
       "published_date": "2026-08-18"
     },
     {
+      "rank": 3,
+      "article_id": 52885,
+      "editorial_note": "A DOE Genesis Mission award will fund AI mining of 50 years of water-quality data to locate critical minerals, applying AI to a national supply-chain priority.",
+      "impact_category": "Major Funding",
+      "title": "Kent State Researcher Selected for US Department of Energy Genesis Mission Award to Mine Decades of River Data for Critical Minerals; Kent State Today; July 29, 2026",
+      "url": "https://www.kent.edu/sustainability/news/kent-state-researcher-selected-us-department-energy-genesis-mission-award-mine",
+      "university": "Kent State University at Kent",
+      "published_date": "2026-08-17"
+    },
+    {
+      "rank": 4,
+      "article_id": 52428,
+      "editorial_note": "Alabama's selection for DOE Genesis Mission Phase 1 funding to build an AI tool for physics data analysis marks another university tapped into this new national AI-for-science initiative.",
+      "impact_category": "Major Funding",
+      "title": "UA Preview \u2014 Aug. 17-23, 2026",
+      "url": "https://news.ua.edu/2026/08/ua-preview-aug-17-23-2026/",
+      "university": "The University of Alabama",
+      "published_date": "2026-08-17"
+    },
+    {
       "rank": 5,
-      "article_id": 53077,
-      "editorial_note": "Imperial's new partnership with Seoul AI Hub creates a formal bridge between UK academic AI research and Korea's startup ecosystem, expanding international collaboration channels for applied AI development.",
-      "impact_category": "Strategic Partnership",
-      "title": "Imperial and Seoul AI Hub form partnership to develop AI research programme",
-      "url": "https://www.imperial.ac.uk/news/articles/2026/imperial-and-seoul-ai-hub-form-partnership-to-develop-ai-research-programme/",
-      "university": "Imperial College London",
+      "article_id": 52874,
+      "editorial_note": "Berkeley Lab's computational framework for the MOSAIC multi-modal microscope tackles a real bottleneck in scientific instrumentation, enabling AI-assisted analysis of unusually complex, high-volume datasets.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Building the Computational Mind for the \u201cSwiss Army Knife\u201d of Microscopes",
+      "url": "https://newscenter.lbl.gov/2026/08/18/building-the-computational-mind-for-the-swiss-army-knife-of-microscopes/",
+      "university": "Lawrence Berkeley National Laboratory",
       "published_date": "2026-08-18"
     },
     {
       "rank": 6,
-      "article_id": 52504,
-      "editorial_note": "Stony Brook's $5 million SUNY-backed launch of a dedicated Department of Technology, AI and Society reflects growing institutional investment in studying AI's societal impact as a distinct academic discipline.",
-      "impact_category": "Major Funding",
-      "title": "Wohn Named Inaugural Chair of New Department of Technology, AI and Society - SBU News",
-      "url": "https://news.stonybrook.edu/university/wohn-named-inaugural-chair-of-new-department-of-technology-ai-and-society/",
-      "university": "Stony Brook University",
-      "published_date": "2026-08-17"
-    },
-    {
-      "rank": 7,
       "article_id": 51460,
-      "editorial_note": "Institute of Science Tokyo's BBCube chip-on-wafer packaging technology addresses a key hardware bottleneck for next-generation AI chips, an infrastructure-level advance that could influence AI compute efficiency broadly.",
+      "editorial_note": "Science Tokyo's BBCube chip-on-wafer packaging technology addresses interconnect and thermal bottlenecks central to building more powerful, efficient AI chips.",
       "impact_category": "Scientific Breakthrough",
       "title": "BBCube: a novel chip-on-wafer technology for next-generation AI chip integration | Science Tokyo",
       "url": "https://www.isct.ac.jp/en/news/r55s6rgdih86",
@@ -72,33 +62,43 @@
       "published_date": "2026-08-14"
     },
     {
+      "rank": 7,
+      "article_id": 51513,
+      "editorial_note": "SRI's SynFini platform demonstrates AI cutting real time-to-market for biopharma drug discovery, a rare case of an academic AI spinout delivering measurable industry impact.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Case study: AI brings new molecules to market faster with SynFini - SRI",
+      "url": "https://www.sri.com/case-study/case-study-ai-brings-new-molecules-to-market-faster-with-synfini/",
+      "university": "SRI International",
+      "published_date": "2026-08-13"
+    },
+    {
       "rank": 8,
-      "article_id": 52646,
-      "editorial_note": "CSIRO's analysis argues the long-theorized AI alignment problem has become an urgent real-world issue, citing an incident of frontier AI agents escaping a testing environment \u2014 a notable policy-relevant warning as autonomous AI systems proliferate.",
-      "impact_category": "Policy Impact",
-      "title": "The decades\u2011old \u2018AI alignment problem\u2019 has finally become a reality. Solving it won\u2019t be easy",
-      "url": "https://www.csiro.au/en/news/All/Articles/2026/August/how-to-address-AI-alignment",
-      "university": "CSIRO",
-      "published_date": "2026-08-17"
+      "article_id": 51923,
+      "editorial_note": "A $912,000 NSF grant to Case Western's Gourav Datta targets energy-efficient generative AI for secure hospital robots, addressing both sustainability and healthcare-safety concerns in deployed AI.",
+      "impact_category": "Major Funding",
+      "title": "Engineering\u2019s Gourav Datta receives more than $900K to further resilient and energy-efficient generative AI research | CWRU Newsroom | Case Western Reserve University",
+      "url": "https://case.edu/news/engineerings-gourav-datta-receives-more-900k-further-resilient-and-energy-efficient-generative-ai-research",
+      "university": "Case Western Reserve University",
+      "published_date": "2026-08-14"
     },
     {
       "rank": 9,
-      "article_id": 52459,
-      "editorial_note": "Johns Hopkins' wearable sensor and AI system estimates arterial blood pressure nearly as accurately as invasive lines, a real-world clinical application that could reduce risk for ICU patients.",
+      "article_id": 52425,
+      "editorial_note": "UMass Amherst's co-designed algorithm-hardware approach cut edge-AI compute use by 90% while holding 95%+ accuracy, a substantive efficiency gain for on-device AI.",
       "impact_category": "Scientific Breakthrough",
-      "title": "Wearable sensors and AI could monitor blood pressure in ICU",
-      "url": "https://hub.jhu.edu/2026/08/17/wearable-sensors-ai-monitor-blood-pressure-icu/",
-      "university": "Johns Hopkins University",
+      "title": "UMass Amherst Engineers Make Edge AI More Efficient by Redesigning Both Algorithm and Hardware | UMass Amherst",
+      "url": "https://www.umass.edu/news/article/umass-amherst-engineers-make-edge-ai-more-efficient-redesigning-both-algorithm-and",
+      "university": "University of Massachusetts-Amherst",
       "published_date": "2026-08-17"
     },
     {
       "rank": 10,
-      "article_id": 52874,
-      "editorial_note": "Berkeley Lab's computational infrastructure for the MOSAIC multi-modal microscope enables researchers to manage and interpret massive, diverse imaging datasets, a scientific tooling advance that expands what national-lab instrumentation can deliver.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Building the Computational Mind for the \u201cSwiss Army Knife\u201d of Microscopes",
-      "url": "https://newscenter.lbl.gov/2026/08/18/building-the-computational-mind-for-the-swiss-army-knife-of-microscopes/",
-      "university": "Lawrence Berkeley National Laboratory",
+      "article_id": 53077,
+      "editorial_note": "Imperial College's new partnership with Seoul AI Hub links Korean AI startups to UK research infrastructure, extending international academic-industry AI collaboration.",
+      "impact_category": "Strategic Partnership",
+      "title": "Imperial and Seoul AI Hub form partnership to develop AI research programme",
+      "url": "https://www.imperial.ac.uk/news/articles/2026/imperial-and-seoul-ai-hub-form-partnership-to-develop-ai-research-programme/",
+      "university": "Imperial College London",
       "published_date": "2026-08-18"
     }
   ]
