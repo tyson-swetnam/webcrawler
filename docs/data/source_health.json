@@ -1,17 +1,17 @@
 {
   "domains": {
     "aerospace.org": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "aiinstitutes.org": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "arl.devcom.army.mil": {
@@ -25,35 +25,35 @@
       "consecutive_failures": 16,
       "last_seen": "2026-08-16T15:18:40+00:00",
       "last_success": null,
-      "runs_since_disabled": 31,
+      "runs_since_disabled": 32,
       "status": "auto_disabled"
     },
     "blogs.memphis.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "blogs.und.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-14T15:33:01+00:00",
-      "last_success": "2026-08-14T15:33:01+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "case.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "communications.catholic.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "deeduc.unicamp.br": {
@@ -93,8 +93,8 @@
     },
     "engineering.stanford.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -102,13 +102,13 @@
       "consecutive_failures": 10,
       "last_seen": "2026-08-14T15:33:01+00:00",
       "last_success": "2026-07-17T16:12:39+00:00",
-      "runs_since_disabled": 26,
+      "runs_since_disabled": 27,
       "status": "auto_disabled"
     },
     "english.tau.ac.il": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-17T15:19:48+00:00",
-      "last_success": "2026-08-17T15:19:48+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -120,10 +120,10 @@
       "status": "active"
     },
     "hai.stanford.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "hkust.edu.hk": {
@@ -135,22 +135,22 @@
     },
     "home.cern": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-17T15:19:48+00:00",
-      "last_success": "2026-08-17T15:19:48+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "home.dartmouth.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "hub.jhu.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -162,32 +162,32 @@
       "status": "active"
     },
     "inl.gov": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "inside.charlotte.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "jornal.unicamp.br": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "kcnsc.doe.gov": {
-      "consecutive_failures": 9,
-      "last_seen": "2026-08-12T16:03:26+00:00",
-      "last_success": "2026-07-21T17:10:57+00:00",
-      "runs_since_disabled": 21,
-      "status": "auto_disabled"
+      "consecutive_failures": 0,
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
+      "runs_since_disabled": 0,
+      "status": "active"
     },
     "library.drexel.edu": {
       "consecutive_failures": 4,
@@ -198,8 +198,8 @@
     },
     "louisiana.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-15T15:18:16+00:00",
-      "last_success": "2026-08-15T15:18:16+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -207,14 +207,14 @@
       "consecutive_failures": 10,
       "last_seen": "2026-08-16T15:18:40+00:00",
       "last_success": "2026-07-18T18:53:21+00:00",
-      "runs_since_disabled": 24,
+      "runs_since_disabled": 25,
       "status": "auto_disabled"
     },
     "msutoday.msu.edu": {
       "consecutive_failures": 7,
       "last_seen": "2026-08-14T15:33:01+00:00",
       "last_success": "2026-08-11T15:35:37+00:00",
-      "runs_since_disabled": 5,
+      "runs_since_disabled": 6,
       "status": "auto_disabled"
     },
     "my.umbc.edu": {
@@ -226,50 +226,50 @@
     },
     "my3.my.umbc.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "news.arizona.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-11T15:35:37+00:00",
-      "last_success": "2026-08-11T15:35:37+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "news.asu.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "news.berkeley.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "news.byu.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "news.caltech.edu": {
-      "consecutive_failures": 5,
-      "last_seen": "2026-08-18T15:23:56+00:00",
+      "consecutive_failures": 6,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
       "runs_since_disabled": 0,
       "status": "active"
     },
     "news.clemson.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-17T15:19:48+00:00",
-      "last_success": "2026-08-17T15:19:48+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -281,37 +281,37 @@
       "status": "active"
     },
     "news.columbia.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "news.duke.edu": {
       "consecutive_failures": 10,
       "last_seen": "2026-08-16T15:18:40+00:00",
       "last_success": "2026-07-18T18:53:21+00:00",
-      "runs_since_disabled": 24,
+      "runs_since_disabled": 25,
       "status": "auto_disabled"
     },
     "news.ecu.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "news.emory.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "news.epfl.ch": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -331,8 +331,8 @@
     },
     "news.fsu.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -344,72 +344,72 @@
       "status": "active"
     },
     "news.gsu.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "news.harvard.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "news.illinois.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "news.iu.edu": {
-      "consecutive_failures": 1,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "consecutive_failures": 0,
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "news.kaist.ac.kr": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "news.ku.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "news.lehigh.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "news.louisville.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "news.luc.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "news.miami.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -417,7 +417,7 @@
       "consecutive_failures": 8,
       "last_seen": "2026-08-17T15:19:48+00:00",
       "last_success": "2026-07-28T19:39:56+00:00",
-      "runs_since_disabled": 9,
+      "runs_since_disabled": 10,
       "status": "auto_disabled"
     },
     "news.ncsu.edu": {
@@ -436,23 +436,23 @@
     },
     "news.njit.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "news.northeastern.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "news.nova.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "news.nus.edu.sg": {
@@ -463,10 +463,10 @@
       "status": "active"
     },
     "news.okstate.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "news.oregonstate.edu": {
@@ -484,10 +484,10 @@
       "status": "active"
     },
     "news.rice.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "news.rpi.edu": {
@@ -499,16 +499,16 @@
     },
     "news.siu.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "news.stanford.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "news.stonybrook.edu": {
@@ -520,15 +520,15 @@
     },
     "news.syr.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "news.tulane.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-17T15:19:48+00:00",
-      "last_success": "2026-08-17T15:19:48+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -541,8 +541,8 @@
     },
     "news.uark.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -561,23 +561,23 @@
       "status": "active"
     },
     "news.uci.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "news.ucmerced.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "news.ucr.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -589,38 +589,38 @@
       "status": "active"
     },
     "news.ucsc.edu": {
-      "consecutive_failures": 9,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 10,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": "2026-07-18T18:53:21+00:00",
-      "runs_since_disabled": 21,
+      "runs_since_disabled": 22,
       "status": "auto_disabled"
     },
     "news.ucsd.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "news.ufl.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-16T15:18:40+00:00",
-      "last_success": "2026-08-16T15:18:40+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "news.uga.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "news.umich.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "news.unl.edu": {
@@ -632,8 +632,8 @@
     },
     "news.unm.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -652,38 +652,38 @@
       "status": "active"
     },
     "news.utdallas.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "news.utexas.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "news.uthsc.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-14T15:33:01+00:00",
-      "last_success": "2026-08-14T15:33:01+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "news.uthscsa.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "news.utk.edu": {
       "consecutive_failures": 16,
       "last_seen": "2026-08-16T15:18:40+00:00",
       "last_success": null,
-      "runs_since_disabled": 31,
+      "runs_since_disabled": 32,
       "status": "auto_disabled"
     },
     "news.utoledo.edu": {
@@ -695,50 +695,50 @@
     },
     "news.uzh.ch": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-13T15:35:58+00:00",
-      "last_success": "2026-08-13T15:35:58+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "news.vanderbilt.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "news.vcu.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "news.vt.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "news.web.baylor.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "news.weill.cornell.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "news.wisc.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-14T15:33:01+00:00",
-      "last_success": "2026-08-14T15:33:01+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -772,8 +772,8 @@
     },
     "newsreleases.sandia.gov": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -786,8 +786,8 @@
     },
     "newsroom.ucla.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -800,15 +800,15 @@
     },
     "nnss.gov": {
       "consecutive_failures": 0,
-      "last_seen": "2026-07-30T16:54:09+00:00",
-      "last_success": "2026-07-30T16:54:09+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "now.tufts.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -827,16 +827,16 @@
       "status": "active"
     },
     "pantex.energy.gov": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "penntoday.upenn.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -863,8 +863,8 @@
     },
     "seng.hkust.edu.hk": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -877,22 +877,22 @@
     },
     "source.colostate.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "source.washu.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "stories.tamu.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -912,15 +912,15 @@
     },
     "today.uconn.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "today.usc.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-15T15:18:16+00:00",
-      "last_success": "2026-08-15T15:18:16+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -940,28 +940,28 @@
     },
     "udayton.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "ufrj.br": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "uknow.uky.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "umbc.edu": {
-      "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
+      "consecutive_failures": 1,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": "2026-08-18T15:23:56+00:00",
       "runs_since_disabled": 0,
       "status": "active"
@@ -970,27 +970,27 @@
       "consecutive_failures": 16,
       "last_seen": "2026-08-16T15:18:40+00:00",
       "last_success": null,
-      "runs_since_disabled": 31,
+      "runs_since_disabled": 32,
       "status": "auto_disabled"
     },
     "uncnews.unc.edu": {
-      "consecutive_failures": 5,
-      "last_seen": "2026-08-18T15:23:56+00:00",
+      "consecutive_failures": 6,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": "2026-08-13T15:35:58+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "unilag.edu.ng": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "uwm.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -1009,16 +1009,16 @@
       "status": "active"
     },
     "wvutoday.wvu.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.aalto.fi": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -1031,30 +1031,30 @@
     },
     "www.africa.engineering.cmu.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-11T15:35:37+00:00",
-      "last_success": "2026-08-11T15:35:37+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.afrl.af.mil": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.albany.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.american.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.ameslab.gov": {
@@ -1065,38 +1065,38 @@
       "status": "active"
     },
     "www.anl.gov": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.anu.edu.au": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.aucegypt.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-04T17:11:01+00:00",
-      "last_success": "2026-08-04T17:11:01+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.auckland.ac.nz": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.battelle.org": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.bc.edu": {
@@ -1107,66 +1107,66 @@
       "status": "active"
     },
     "www.bcm.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.binghamton.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-15T15:18:16+00:00",
-      "last_success": "2026-08-15T15:18:16+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.brandeis.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.bristol.ac.uk": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.brown.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.bu.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-14T15:33:01+00:00",
-      "last_success": "2026-08-14T15:33:01+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.buffalo.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.cam.ac.uk": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-15T15:18:16+00:00",
-      "last_success": "2026-08-15T15:18:16+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.canterbury.ac.nz": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.chalmers.se": {
@@ -1178,29 +1178,29 @@
     },
     "www.chula.ac.th": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.cna.org": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.colorado.edu": {
       "consecutive_failures": 8,
       "last_seen": "2026-07-18T18:53:21+00:00",
       "last_success": null,
-      "runs_since_disabled": 31,
+      "runs_since_disabled": 32,
       "status": "auto_disabled"
     },
     "www.cs.cmu.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -1220,50 +1220,50 @@
     },
     "www.csail.mit.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.csiro.au": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.darpa.mil": {
-      "consecutive_failures": 5,
-      "last_seen": "2026-08-18T15:23:56+00:00",
+      "consecutive_failures": 6,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": "2026-08-13T15:35:58+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.dhs.gov": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.draper.com": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.du.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.ed.ac.uk": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -1275,8 +1275,8 @@
       "status": "active"
     },
     "www.fau.edu": {
-      "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
+      "consecutive_failures": 1,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": "2026-08-18T15:23:56+00:00",
       "runs_since_disabled": 0,
       "status": "active"
@@ -1289,59 +1289,59 @@
       "status": "active"
     },
     "www.gc.cuny.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.georgetown.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.gmu.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.helmholtz.de": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-14T15:33:01+00:00",
-      "last_success": "2026-08-14T15:33:01+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.helsinki.fi": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.hku.hk": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.iarpa.gov": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.ida.org": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.idaho.edu": {
@@ -1367,8 +1367,8 @@
     },
     "www.imperial.ac.uk": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -1395,8 +1395,8 @@
     },
     "www.isct.ac.jp": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-17T15:19:48+00:00",
-      "last_success": "2026-08-17T15:19:48+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -1415,30 +1415,30 @@
       "status": "active"
     },
     "www.jpl.nasa.gov": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.k-state.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-17T15:19:48+00:00",
-      "last_success": "2026-08-17T15:19:48+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.kcl.ac.uk": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-14T15:33:01+00:00",
-      "last_success": "2026-08-14T15:33:01+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.kent.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -1457,16 +1457,16 @@
       "status": "active"
     },
     "www.lanl.gov": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.ll.mit.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-13T15:35:58+00:00",
-      "last_success": "2026-08-13T15:35:58+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -1478,8 +1478,8 @@
       "status": "active"
     },
     "www.lsu.edu": {
-      "consecutive_failures": 4,
-      "last_seen": "2026-08-18T15:23:56+00:00",
+      "consecutive_failures": 5,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": "2026-08-14T15:33:01+00:00",
       "runs_since_disabled": 0,
       "status": "active"
@@ -1492,24 +1492,24 @@
       "status": "active"
     },
     "www.manchester.ac.uk": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.mitre.org": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.monash.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.mpg.de": {
@@ -1521,8 +1521,8 @@
     },
     "www.msstate.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -1535,15 +1535,15 @@
     },
     "www.nasa.gov": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.nationalacademies.org": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-13T15:35:58+00:00",
-      "last_success": "2026-08-13T15:35:58+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -1556,15 +1556,15 @@
     },
     "www.ndsu.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.nersc.gov": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-11T15:35:37+00:00",
-      "last_success": "2026-08-11T15:35:37+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -1584,15 +1584,15 @@
     },
     "www.news.uct.ac.za": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.news.uzh.ch": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -1605,57 +1605,57 @@
     },
     "www.nlr.gov": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.noaa.gov": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.northwestern.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.nrl.navy.mil": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.nsa.gov": {
       "consecutive_failures": 7,
       "last_seen": "2026-07-21T17:10:57+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.nsf.gov": {
-      "consecutive_failures": 7,
-      "last_seen": "2026-08-12T16:03:26+00:00",
-      "last_success": "2026-08-04T17:11:01+00:00",
-      "runs_since_disabled": 7,
-      "status": "auto_disabled"
+      "consecutive_failures": 0,
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
+      "runs_since_disabled": 0,
+      "status": "active"
     },
     "www.nyu.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.odu.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-14T15:33:01+00:00",
-      "last_success": "2026-08-14T15:33:01+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -1667,10 +1667,10 @@
       "status": "active"
     },
     "www.olcf.ornl.gov": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.onr.navy.mil": {
@@ -1703,37 +1703,37 @@
     },
     "www.ou.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.ox.ac.uk": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.pittwire.pitt.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-17T15:19:48+00:00",
-      "last_success": "2026-08-17T15:19:48+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.postech.ac.kr": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.pppl.gov": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.princeton.edu": {
@@ -1752,23 +1752,23 @@
     },
     "www.psu.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-17T15:19:48+00:00",
-      "last_success": "2026-08-17T15:19:48+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.purdue.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.rand.org": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.rcac.purdue.edu": {
@@ -1787,8 +1787,8 @@
     },
     "www.rochester.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -1801,8 +1801,8 @@
     },
     "www.rwth-aachen.de": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -1884,10 +1884,10 @@
       "status": "active"
     },
     "www.su.ac.za": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.sutd.edu.sg": {
@@ -1905,23 +1905,23 @@
       "status": "active"
     },
     "www.tcd.ie": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.tifr.res.in": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.tohoku.ac.jp": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -1933,16 +1933,16 @@
       "status": "active"
     },
     "www.tu.berlin": {
-      "consecutive_failures": 3,
-      "last_seen": "2026-08-18T15:23:56+00:00",
+      "consecutive_failures": 4,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": "2026-08-15T15:18:16+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.tum.de": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -1950,20 +1950,20 @@
       "consecutive_failures": 9,
       "last_seen": "2026-08-17T15:19:48+00:00",
       "last_success": "2026-07-18T18:53:21+00:00",
-      "runs_since_disabled": 23,
+      "runs_since_disabled": 24,
       "status": "auto_disabled"
     },
     "www.tuwien.at": {
-      "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
+      "consecutive_failures": 1,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": "2026-08-18T15:23:56+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.uab.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -1976,15 +1976,15 @@
     },
     "www.uc.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.ucdavis.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-12T16:03:26+00:00",
-      "last_success": "2026-08-12T16:03:26+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -2004,8 +2004,8 @@
     },
     "www.ucl.ac.uk": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -2025,8 +2025,8 @@
     },
     "www.uh.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -2039,37 +2039,37 @@
     },
     "www.umass.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.umb.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-13T15:35:58+00:00",
-      "last_success": "2026-08-13T15:35:58+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.umkc.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.uml.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.umt.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.unh.edu": {
@@ -2088,16 +2088,16 @@
     },
     "www.unicamp.br": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.unimelb.edu.au": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.universite-paris-saclay.fr": {
@@ -2108,44 +2108,44 @@
       "status": "active"
     },
     "www.univie.ac.at": {
-      "consecutive_failures": 1,
-      "last_seen": "2026-08-18T15:23:56+00:00",
+      "consecutive_failures": 2,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": "2026-08-17T15:19:48+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.unlv.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.unr.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.unsw.edu.au": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.uonbi.ac.ke": {
-      "consecutive_failures": 1,
-      "last_seen": "2026-08-16T15:18:40+00:00",
-      "last_success": "2026-08-14T15:33:01+00:00",
+      "consecutive_failures": 0,
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.uri.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -2158,16 +2158,16 @@
     },
     "www.usm.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.uta.edu": {
-      "consecutive_failures": 10,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 11,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": null,
-      "runs_since_disabled": 28,
+      "runs_since_disabled": 29,
       "status": "auto_disabled"
     },
     "www.utsa.edu": {
@@ -2179,8 +2179,8 @@
     },
     "www.utsouthwestern.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
@@ -2193,37 +2193,37 @@
     },
     "www.uvm.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-15T15:18:16+00:00",
-      "last_success": "2026-08-15T15:18:16+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.uwyo.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.washington.edu": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-13T15:35:58+00:00",
-      "last_success": "2026-08-13T15:35:58+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.wits.ac.za": {
       "consecutive_failures": 0,
-      "last_seen": "2026-08-18T15:23:56+00:00",
-      "last_success": "2026-08-18T15:23:56+00:00",
+      "last_seen": "2026-08-19T15:46:08+00:00",
+      "last_success": "2026-08-19T15:46:08+00:00",
       "runs_since_disabled": 0,
       "status": "active"
     },
     "www.wpi.edu": {
-      "consecutive_failures": 9,
-      "last_seen": "2026-08-12T16:03:26+00:00",
+      "consecutive_failures": 10,
+      "last_seen": "2026-08-19T15:46:08+00:00",
       "last_success": "2026-07-18T18:53:21+00:00",
-      "runs_since_disabled": 21,
+      "runs_since_disabled": 22,
       "status": "auto_disabled"
     },
     "www.y12.doe.gov": {
@@ -2252,5 +2252,5 @@
     "disable_after": 7,
     "probe_every": 7
   },
-  "updated_at": "2026-08-18T15:23:56+00:00"
+  "updated_at": "2026-08-19T15:46:08+00:00"
 }
