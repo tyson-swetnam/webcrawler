@@ -1,10 +1,20 @@
 {
-  "generated_at": "2026-08-19T21:09:11",
+  "generated_at": "2026-08-20T03:23:30",
   "picks": [
     {
       "rank": 1,
+      "article_id": 53518,
+      "editorial_note": "Operation Blue Skies is a landmark, government-backed and Google-led trial using AI to adjust flight paths and cut aviation's contrail-driven climate impact \u2014 a rare case of AI research moving directly into real-world climate mitigation at scale.",
+      "impact_category": "Strategic Partnership",
+      "title": "World\u2019s first trial to test if flightpath changes could cut aviation\u2019s climate impact",
+      "url": "https://www.imperial.ac.uk/news/articles/natural-sciences/physics/2026/worlds-first-trial-to-test-if-flightpath-changes-could-cut-aviations-climate-impact-/",
+      "university": "Imperial College London",
+      "published_date": "2026-08-18"
+    },
+    {
+      "rank": 2,
       "article_id": 52420,
-      "editorial_note": "Purdue's Rosen Center is a partner on over $42 million in NSF grants to build national-scale AI and data cyberinfrastructure, positioning research computing to support AI-driven science across many institutions.",
+      "editorial_note": "Purdue's role in over $42 million of NSF Integrated Data Systems and Services grants underpins national-scale AI and data cyberinfrastructure, a foundational investment that will shape research capacity well beyond one campus.",
       "impact_category": "Major Funding",
       "title": "Purdue enables AI- and data- cyberinfras...",
       "url": "https://www.rcac.purdue.edu/news/7791",
@@ -12,19 +22,9 @@
       "published_date": "2026-08-17"
     },
     {
-      "rank": 2,
-      "article_id": 53236,
-      "editorial_note": "A UK government-backed, \u00a35 million multi-institution trial will use AI flight-path adjustments to cut contrail-driven aviation warming, a rare case of AI research moving directly into real-world climate policy testing.",
-      "impact_category": "Strategic Partnership",
-      "title": "Operation Blue Skies takes off: landmark trial to test AI-driven contrail avoidance",
-      "url": "https://www.cam.ac.uk/research/news/operation-blue-skies-takes-off-landmark-trial-to-test-ai-driven-contrail-avoidance",
-      "university": "University of Cambridge",
-      "published_date": "2026-08-18"
-    },
-    {
       "rank": 3,
       "article_id": 53253,
-      "editorial_note": "Johns Hopkins and Toyota Research Institute are combining AI with high-throughput automated experiments to accelerate battery materials discovery, an industry-academia pairing aimed at a critical energy technology bottleneck.",
+      "editorial_note": "A Johns Hopkins\u2013Toyota Research Institute partnership pairs AI with high-throughput automated experiments to accelerate discovery of new battery materials, directly tying academic AI research to next-generation energy technology.",
       "impact_category": "Strategic Partnership",
       "title": "Johns Hopkins team partners with Toyota Research Institute to accelerate new battery discovery",
       "url": "https://hub.jhu.edu/2026/08/18/toyota-battery-research/",
@@ -33,28 +33,28 @@
     },
     {
       "rank": 4,
-      "article_id": 52885,
-      "editorial_note": "A Kent State researcher's DOE Genesis Mission award will use AI to mine 50 years of water-quality data for critical mineral deposits, tying AI research directly to U.S. critical-minerals supply policy.",
-      "impact_category": "Major Funding",
-      "title": "Kent State Researcher Selected for US Department of Energy Genesis Mission Award to Mine Decades of River Data for Critical Minerals; Kent State Today; July 29, 2026",
-      "url": "https://www.kent.edu/sustainability/news/kent-state-researcher-selected-us-department-energy-genesis-mission-award-mine",
-      "university": "Kent State University at Kent",
-      "published_date": "2026-08-17"
+      "article_id": 53284,
+      "editorial_note": "MIT Lincoln Laboratory's ARCADE agentic AI system is being integrated into live U.S. Air Force combat aircraft operations, marking a significant real-world deployment of AI in national defense decision-making.",
+      "impact_category": "Policy Impact",
+      "title": "Human\u2013AI mission debrief enters the Air Force through ARCADE",
+      "url": "https://www.ll.mit.edu/news/human-ai-mission-debrief-enters-air-force-through-arcade",
+      "university": "MIT Lincoln Laboratory",
+      "published_date": "2026-08-18"
     },
     {
       "rank": 5,
-      "article_id": 52428,
-      "editorial_note": "University of Alabama's selection for DOE Genesis Mission Phase 1 funding to build an AI tool for physics data analysis marks another university's entry into a flagship federal AI-for-science initiative.",
-      "impact_category": "Major Funding",
-      "title": "UA Preview \u2014 Aug. 17-23, 2026",
-      "url": "https://news.ua.edu/2026/08/ua-preview-aug-17-23-2026/",
-      "university": "The University of Alabama",
-      "published_date": "2026-08-17"
+      "article_id": 52874,
+      "editorial_note": "Berkeley Lab's computational infrastructure for the MOSAIC multi-modal microscope solves a major data-management bottleneck for combining diverse imaging techniques, enabling scientific insights that no single instrument could produce alone.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Building the Computational Mind for the \u201cSwiss Army Knife\u201d of Microscopes",
+      "url": "https://newscenter.lbl.gov/2026/08/18/building-the-computational-mind-for-the-swiss-army-knife-of-microscopes/",
+      "university": "Lawrence Berkeley National Laboratory",
+      "published_date": "2026-08-18"
     },
     {
       "rank": 6,
       "article_id": 53293,
-      "editorial_note": "MIT CSAIL's discovery of 'attribution decay' \u2014 that generative AI outputs from very large datasets can't be traced to specific training examples \u2014 has major implications for copyright disputes and AI provenance debates.",
+      "editorial_note": "MIT CSAIL's discovery of 'attribution decay' \u2014 that outputs from large generative AI models often can't be traced to specific training data \u2014 has significant implications for AI copyright, transparency, and accountability debates.",
       "impact_category": "Scientific Breakthrough",
       "title": "When AI art has no author: MIT study finds generated images often can't be traced to any training data",
       "url": "https://www.csail.mit.edu/news/when-ai-art-has-no-author-mit-study-finds-generated-images-often-cant-be-traced-any-training",
@@ -63,8 +63,28 @@
     },
     {
       "rank": 7,
+      "article_id": 52885,
+      "editorial_note": "A Kent State researcher's DOE Genesis Mission award to mine 50 years of river data for critical minerals like copper and cobalt shows AI directly supporting U.S. supply-chain and resource security priorities.",
+      "impact_category": "Major Funding",
+      "title": "Kent State Researcher Selected for US Department of Energy Genesis Mission Award to Mine Decades of River Data for Critical Minerals; Kent State Today; July 29, 2026",
+      "url": "https://www.kent.edu/sustainability/news/kent-state-researcher-selected-us-department-energy-genesis-mission-award-mine",
+      "university": "Kent State University at Kent",
+      "published_date": "2026-08-17"
+    },
+    {
+      "rank": 8,
+      "article_id": 53076,
+      "editorial_note": "A new five-year Imperial College London\u2013Smith+Nephew center aims to translate academic computer-vision research into surgical robotics products, bridging AI research and clinical practice.",
+      "impact_category": "Strategic Partnership",
+      "title": "New centre from Imperial and Smith+Nephew will accelerate innovation in surgical robotics",
+      "url": "https://www.imperial.ac.uk/news/articles/2026/new-centre-from-imperial-and-smithnephew-will-accelerate-innovation-in-surgical-robotics/",
+      "university": "Imperial College London",
+      "published_date": "2026-08-18"
+    },
+    {
+      "rank": 9,
       "article_id": 53377,
-      "editorial_note": "Tohoku University and Western Digital's new joint lab targets next-generation data storage for AI workloads, addressing an infrastructure bottleneck as AI data demands keep growing.",
+      "editorial_note": "Tohoku University and Western Digital's new joint lab targets next-generation data storage for AI workloads, addressing an infrastructure bottleneck that underlies the broader AI research and industry ecosystem.",
       "impact_category": "Strategic Partnership",
       "title": "Tohoku University Launches AI Data Infrastructure Lab with Western Digital Corporation",
       "url": "https://www.tohoku.ac.jp/en/news/university_news/tohoku_university_launches_ai_data_infrastructure_lab_with_western_digital_corporation.html",
@@ -72,33 +92,13 @@
       "published_date": "2026-08-18"
     },
     {
-      "rank": 8,
-      "article_id": 52874,
-      "editorial_note": "Berkeley Lab's computational tools for the MOSAIC multi-modal microscope enable researchers to manage and analyze the massive, heterogeneous datasets it produces, expanding what's scientifically possible with AI-assisted imaging.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Building the Computational Mind for the \u201cSwiss Army Knife\u201d of Microscopes",
-      "url": "https://newscenter.lbl.gov/2026/08/18/building-the-computational-mind-for-the-swiss-army-knife-of-microscopes/",
-      "university": "Lawrence Berkeley National Laboratory",
-      "published_date": "2026-08-18"
-    },
-    {
-      "rank": 9,
-      "article_id": 53284,
-      "editorial_note": "MIT Lincoln Laboratory's ARCADE agentic AI debriefing assistant is being integrated into U.S. Air Force Collaborative Combat Aircraft operations, a notable step of academic AI research into active military deployment.",
-      "impact_category": "Strategic Partnership",
-      "title": "Human\u2013AI mission debrief enters the Air Force through ARCADE",
-      "url": "https://www.ll.mit.edu/news/human-ai-mission-debrief-enters-air-force-through-arcade",
-      "university": "MIT Lincoln Laboratory",
-      "published_date": "2026-08-18"
-    },
-    {
       "rank": 10,
-      "article_id": 53234,
-      "editorial_note": "EPFL's STING framework shows AI agents can be manipulated into harmful behavior through multi-turn conversations rather than single bad prompts, a significant finding for AI safety and red-teaming practice.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "How attackers persuade AI agents to break the rules",
-      "url": "https://news.epfl.ch/news/how-attackers-persuade-ai-agents-to-break-the-rule/",
-      "university": "EPFL",
+      "article_id": 53570,
+      "editorial_note": "Purdue's move to require AI competency coursework across every undergraduate degree makes it one of the first major universities to embed AI literacy institution-wide, a notable policy shift in higher education.",
+      "impact_category": "Policy Impact",
+      "title": "Purdue\u2019s AI competency graduation requirement begins in every undergraduate degree program",
+      "url": "https://www.purdue.edu/newsroom/2026/Q3/purdues-ai-competency-graduation-requirement-begins-in-every-undergraduate-degree-program/",
+      "university": "Purdue University-Main Campus",
       "published_date": "2026-08-19"
     }
   ]
