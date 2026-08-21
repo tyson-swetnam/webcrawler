@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-21T09:15:04",
+  "generated_at": "2026-08-21T15:24:06",
   "picks": [
     {
       "rank": 1,
       "article_id": 53735,
-      "editorial_note": "A Fermilab-led team was selected under DOE's new Genesis Mission to build AI systems that control particle accelerators, marking one of the first major national investments applying AI directly to fundamental physics infrastructure.",
-      "impact_category": "Major Funding",
+      "editorial_note": "Fermilab's selection under DOE's Genesis Mission to build AI systems for particle accelerator control marks a flagship national investment in AI for fundamental physics infrastructure, with implications for the broader DOE lab complex.",
+      "impact_category": "Policy Impact",
       "title": "DOE selects Fermilab-led AI initiative to advance particle accelerator performance",
       "url": "https://news.fnal.gov/2026/08/doe-selects-fermilab-led-ai-initiative-to-advance-particle-accelerator-performance/",
       "university": "Fermi National Accelerator Laboratory",
@@ -14,7 +14,7 @@
     {
       "rank": 2,
       "article_id": 53518,
-      "editorial_note": "A Google-led, government-backed North Atlantic trial will use AI to adjust flight paths and cut contrail-driven climate warming \u2014 a rare case of AI research moving straight into real-world aviation policy and practice.",
+      "editorial_note": "A Google-led, multi-university trial of AI-driven flightpath changes to cut aviation's climate impact is a rare case of AI research moving directly into real-world climate mitigation at industrial scale.",
       "impact_category": "Strategic Partnership",
       "title": "World\u2019s first trial to test if flightpath changes could cut aviation\u2019s climate impact",
       "url": "https://www.imperial.ac.uk/news/articles/natural-sciences/physics/2026/worlds-first-trial-to-test-if-flightpath-changes-could-cut-aviations-climate-impact-/",
@@ -23,18 +23,18 @@
     },
     {
       "rank": 3,
-      "article_id": 53253,
-      "editorial_note": "Johns Hopkins and Toyota Research Institute are combining AI with high-throughput automated experiments to accelerate discovery of new battery materials, an industry-academia pairing with direct implications for energy storage technology.",
-      "impact_category": "Strategic Partnership",
-      "title": "Johns Hopkins team partners with Toyota Research Institute to accelerate new battery discovery",
-      "url": "https://hub.jhu.edu/2026/08/18/toyota-battery-research/",
-      "university": "Johns Hopkins University",
-      "published_date": "2026-08-18"
+      "article_id": 52420,
+      "editorial_note": "Purdue's role in over $42 million of NSF-funded national data infrastructure grants underscores the scale of federal investment building the AI/data backbone for U.S. research computing.",
+      "impact_category": "Major Funding",
+      "title": "Purdue enables AI- and data- cyberinfras...",
+      "url": "https://www.rcac.purdue.edu/news/7791",
+      "university": "Purdue Rosen Center for Advanced Computing",
+      "published_date": "2026-08-17"
     },
     {
       "rank": 4,
       "article_id": 53293,
-      "editorial_note": "MIT CSAIL's discovery of 'attribution decay' \u2014 that generative AI outputs often can't be traced to any training example \u2014 is a significant scientific finding with major implications for copyright, AI transparency, and provenance debates.",
+      "editorial_note": "MIT CSAIL's discovery of 'attribution decay' -- that generative AI outputs often can't be traced to specific training data -- has direct bearing on copyright, provenance, and AI-accountability debates.",
       "impact_category": "Scientific Breakthrough",
       "title": "When AI art has no author: MIT study finds generated images often can't be traced to any training data",
       "url": "https://www.csail.mit.edu/news/when-ai-art-has-no-author-mit-study-finds-generated-images-often-cant-be-traced-any-training",
@@ -43,62 +43,62 @@
     },
     {
       "rank": 5,
-      "article_id": 52420,
-      "editorial_note": "Purdue's Rosen Center is a partner on over $42 million in NSF grants to build national-scale AI and data cyberinfrastructure, funding that will underpin research computing capacity across many institutions.",
-      "impact_category": "Major Funding",
-      "title": "Purdue enables AI- and data- cyberinfras...",
-      "url": "https://www.rcac.purdue.edu/news/7791",
-      "university": "Purdue Rosen Center for Advanced Computing",
-      "published_date": "2026-08-17"
+      "article_id": 53253,
+      "editorial_note": "A Johns Hopkins-Toyota Research Institute partnership pairing AI with automated experimentation to accelerate battery materials discovery exemplifies high-value industry-academia R&D with clear commercial stakes.",
+      "impact_category": "Strategic Partnership",
+      "title": "Johns Hopkins team partners with Toyota Research Institute to accelerate new battery discovery",
+      "url": "https://hub.jhu.edu/2026/08/18/toyota-battery-research/",
+      "university": "Johns Hopkins University",
+      "published_date": "2026-08-18"
     },
     {
       "rank": 6,
-      "article_id": 53625,
-      "editorial_note": "NCSA and UCLA's $9 million NSF-funded iDLab will unify browser-based access to national HPC centers, directly advancing the federal NAIRR pilot's goal of democratizing AI research infrastructure.",
-      "impact_category": "Major Funding",
-      "title": "NCSA Partners with UCLA for iDLab",
-      "url": "https://www.ncsa.illinois.edu/2026/08/20/ncsa-partners-with-ucla-for-idlab/",
-      "university": "National Center for Supercomputing Applications",
-      "published_date": "2026-08-20"
-    },
-    {
-      "rank": 7,
-      "article_id": 53840,
-      "editorial_note": "University at Buffalo's recognition for AI leadership highlights its access to Empire AI, New York's $500 million state-backed AI consortium \u2014 a signal of how large state investments are reshaping university AI capacity.",
-      "impact_category": "Major Funding",
-      "title": "UB School of Management recognized for AI leadership in global business education report",
-      "url": "https://www.buffalo.edu/news/news-releases.host.html/content/shared/mgt/news/management-recognized-AI-leadership-global-business-education.detail.html",
-      "university": "University at Buffalo",
+      "article_id": 53234,
+      "editorial_note": "EPFL's STING framework shows AI agents can be manipulated into harmful behavior through extended multi-turn conversation rather than a single bad prompt, a significant finding for AI safety and red-teaming practice.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "How attackers persuade AI agents to break the rules",
+      "url": "https://news.epfl.ch/news/how-attackers-persuade-ai-agents-to-break-the-rule/",
+      "university": "EPFL",
       "published_date": "2026-08-19"
     },
     {
-      "rank": 8,
-      "article_id": 52885,
-      "editorial_note": "A Kent State researcher's DOE Genesis Mission award to mine 50 years of water-quality data for critical minerals shows federal AI funding extending into resource security, a strategically important policy area.",
-      "impact_category": "Major Funding",
-      "title": "Kent State Researcher Selected for US Department of Energy Genesis Mission Award to Mine Decades of River Data for Critical Minerals; Kent State Today; July 29, 2026",
-      "url": "https://www.kent.edu/sustainability/news/kent-state-researcher-selected-us-department-energy-genesis-mission-award-mine",
-      "university": "Kent State University at Kent",
-      "published_date": "2026-08-17"
+      "rank": 7,
+      "article_id": 53076,
+      "editorial_note": "A five-year Imperial-Smith+Nephew centre translating computer-vision research into surgical robotics shows deep-tech AI partnerships moving toward commercialized medical devices.",
+      "impact_category": "Strategic Partnership",
+      "title": "New centre from Imperial and Smith+Nephew will accelerate innovation in surgical robotics",
+      "url": "https://www.imperial.ac.uk/news/articles/2026/new-centre-from-imperial-and-smithnephew-will-accelerate-innovation-in-surgical-robotics/",
+      "university": "Imperial College London",
+      "published_date": "2026-08-18"
     },
     {
-      "rank": 9,
+      "rank": 8,
       "article_id": 53284,
-      "editorial_note": "MIT Lincoln Laboratory's ARCADE agentic AI debriefing tool is being integrated into U.S. Air Force Collaborative Combat Aircraft operations, an early example of agentic AI entering active military decision-making workflows.",
-      "impact_category": "Policy Impact",
+      "editorial_note": "MIT Lincoln Laboratory's integration of an agentic AI debriefing tool into U.S. Air Force Collaborative Combat Aircraft operations marks a notable step of AI moving into live military decision-support workflows.",
+      "impact_category": "Strategic Partnership",
       "title": "Human\u2013AI mission debrief enters the Air Force through ARCADE",
       "url": "https://www.ll.mit.edu/news/human-ai-mission-debrief-enters-air-force-through-arcade",
       "university": "MIT Lincoln Laboratory",
       "published_date": "2026-08-18"
     },
     {
-      "rank": 10,
+      "rank": 9,
       "article_id": 53963,
-      "editorial_note": "A University of Houston report projecting up to 32% growth in U.S. electricity demand by 2030, driven partly by AI data centers, underscores the infrastructure and policy planning challenges AI's growth is forcing onto national agendas.",
+      "editorial_note": "University of Houston's projection of a 32% rise in U.S. electricity demand by 2030, driven substantially by AI and data centers, spotlights the infrastructure and policy strain that AI growth is placing on the grid.",
       "impact_category": "Policy Impact",
       "title": "University of Houston Report Predicts U.S. Electricity Demand Could Rise 32% by 2030 | University of Houston",
       "url": "https://www.uh.edu/news-events/stories/2026/august/08202026-electricity-demand-increase.php",
       "university": "University of Houston",
+      "published_date": "2026-08-20"
+    },
+    {
+      "rank": 10,
+      "article_id": 53625,
+      "editorial_note": "NCSA and UCLA's $9 million NSF-funded iDLab, unifying browser-based access to national HPC centers, directly advances the national AI research infrastructure (NAIRR) agenda.",
+      "impact_category": "Major Funding",
+      "title": "NCSA Partners with UCLA for iDLab",
+      "url": "https://www.ncsa.illinois.edu/2026/08/20/ncsa-partners-with-ucla-for-idlab/",
+      "university": "National Center for Supercomputing Applications",
       "published_date": "2026-08-20"
     }
   ]
