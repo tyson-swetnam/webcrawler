@@ -1,20 +1,10 @@
 {
-  "generated_at": "2026-08-22T03:21:49",
+  "generated_at": "2026-08-22T09:09:56",
   "picks": [
     {
       "rank": 1,
-      "article_id": 53735,
-      "editorial_note": "DOE selected this Fermilab-led team under its new Genesis Mission to build AI systems that control particle accelerator performance in real time \u2014 a flagship national program applying AI to frontier physics infrastructure.",
-      "impact_category": "Major Funding",
-      "title": "DOE selects Fermilab-led AI initiative to advance particle accelerator performance",
-      "url": "https://news.fnal.gov/2026/08/doe-selects-fermilab-led-ai-initiative-to-advance-particle-accelerator-performance/",
-      "university": "Fermi National Accelerator Laboratory",
-      "published_date": "2026-08-20"
-    },
-    {
-      "rank": 2,
       "article_id": 53236,
-      "editorial_note": "A \u00a35 million UK government-backed trial will test AI-driven flight path adjustments to cut aviation's contrail-driven climate warming \u2014 a rare case of AI research moving directly into real-world climate policy and airline operations.",
+      "editorial_note": "A \u00a35M UK government-backed trial is putting AI-driven flight path adjustments into real skies to cut aviation's contrail-driven climate impact \u2014 a rare case of AI research moving directly into government climate policy and infrastructure testing.",
       "impact_category": "Policy Impact",
       "title": "Operation Blue Skies takes off: landmark trial to test AI-driven contrail avoidance",
       "url": "https://www.cam.ac.uk/research/news/operation-blue-skies-takes-off-landmark-trial-to-test-ai-driven-contrail-avoidance",
@@ -22,9 +12,29 @@
       "published_date": "2026-08-18"
     },
     {
+      "rank": 2,
+      "article_id": 53735,
+      "editorial_note": "DOE selected a Fermilab-led team for its Genesis Mission to build AI systems controlling particle accelerator performance, a flagship national investment applying AI to frontier physics infrastructure.",
+      "impact_category": "Major Funding",
+      "title": "DOE selects Fermilab-led AI initiative to advance particle accelerator performance",
+      "url": "https://news.fnal.gov/2026/08/doe-selects-fermilab-led-ai-initiative-to-advance-particle-accelerator-performance/",
+      "university": "Fermi National Accelerator Laboratory",
+      "published_date": "2026-08-20"
+    },
+    {
       "rank": 3,
+      "article_id": 53293,
+      "editorial_note": "MIT CSAIL's discovery of 'attribution decay' \u2014 that generative AI outputs from massive datasets often can't be traced to any training example \u2014 has major implications for AI copyright, authorship, and accountability debates.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "When AI art has no author: MIT study finds generated images often can't be traced to any training data",
+      "url": "https://www.csail.mit.edu/news/when-ai-art-has-no-author-mit-study-finds-generated-images-often-cant-be-traced-any-training",
+      "university": "MIT",
+      "published_date": "2026-08-18"
+    },
+    {
+      "rank": 4,
       "article_id": 52420,
-      "editorial_note": "Purdue's Rosen Center is a partner on more than $42 million in NSF grants to build national-scale AI and data cyberinfrastructure, strengthening the research backbone that other AI science depends on.",
+      "editorial_note": "Purdue's Rosen Center is a partner on over $42 million in NSF grants building national-scale AI and data cyberinfrastructure, a significant federal investment in the research computing backbone AI science depends on.",
       "impact_category": "Major Funding",
       "title": "Purdue enables AI- and data- cyberinfras...",
       "url": "https://www.rcac.purdue.edu/news/7791",
@@ -32,19 +42,9 @@
       "published_date": "2026-08-17"
     },
     {
-      "rank": 4,
-      "article_id": 53625,
-      "editorial_note": "A $9 million NSF-funded iDLab will give researchers browser-based access to national HPC centers, directly advancing the NAIRR effort to democratize AI computing infrastructure across academia.",
-      "impact_category": "Major Funding",
-      "title": "NCSA Partners with UCLA for iDLab",
-      "url": "https://www.ncsa.illinois.edu/2026/08/20/ncsa-partners-with-ucla-for-idlab/",
-      "university": "National Center for Supercomputing Applications",
-      "published_date": "2026-08-20"
-    },
-    {
       "rank": 5,
       "article_id": 53253,
-      "editorial_note": "Johns Hopkins and Toyota Research Institute are pairing AI with high-throughput automated experiments to accelerate discovery of new battery materials \u2014 a concrete industry-academia bet on AI-driven materials science.",
+      "editorial_note": "Johns Hopkins and Toyota Research Institute are combining AI with high-throughput automated experiments to accelerate battery materials discovery, a concrete industry-academia push on a technology critical to the energy transition.",
       "impact_category": "Strategic Partnership",
       "title": "Johns Hopkins team partners with Toyota Research Institute to accelerate new battery discovery",
       "url": "https://hub.jhu.edu/2026/08/18/toyota-battery-research/",
@@ -53,38 +53,28 @@
     },
     {
       "rank": 6,
-      "article_id": 53819,
-      "editorial_note": "An AI-powered coastal 'digital twin' built by Old Dominion University proved itself during actual Norfolk flooding, showing AI climate-resilience tools working under real disaster conditions rather than in simulation alone.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "When Norfolk Flooded, ODU Coastal Defense Research Faced an Unexpected Real-World Test",
-      "url": "https://www.odu.edu/article/when-norfolk-flooded-odu-coastal-defense-research-faced-an-unexpected-real-world-test",
-      "university": "Old Dominion University",
-      "published_date": "2026-08-18"
+      "article_id": 53625,
+      "editorial_note": "NCSA and UCLA's $9M NSF-funded iDLab will unify browser-based access to national HPC centers, directly advancing the NAIRR/AI research-infrastructure agenda for the broader academic community.",
+      "impact_category": "Major Funding",
+      "title": "NCSA Partners with UCLA for iDLab",
+      "url": "https://www.ncsa.illinois.edu/2026/08/20/ncsa-partners-with-ucla-for-idlab/",
+      "university": "National Center for Supercomputing Applications",
+      "published_date": "2026-08-20"
     },
     {
       "rank": 7,
-      "article_id": 54083,
-      "editorial_note": "FRONTEO and Science Tokyo are combining an AI drug-discovery platform with biomedical research expertise in a new joint research cluster, a substantive industry-academia bet on AI-accelerated pharmaceutical development.",
-      "impact_category": "Strategic Partnership",
-      "title": "FRONTEO and Science Tokyo establish industry-academia Collaborative Research Cluster for AI-driven drug discovery | Science Tokyo",
-      "url": "https://www.isct.ac.jp/en/news/0ccf71co0dak",
-      "university": "Institute of Science Tokyo",
-      "published_date": "2026-08-21"
+      "article_id": 52885,
+      "editorial_note": "A Kent State researcher's DOE Genesis Mission award to mine 50 years of water-quality data for critical minerals shows AI being applied to national supply-chain and resource security priorities.",
+      "impact_category": "Major Funding",
+      "title": "Kent State Researcher Selected for US Department of Energy Genesis Mission Award to Mine Decades of River Data for Critical Minerals; Kent State Today; July 29, 2026",
+      "url": "https://www.kent.edu/sustainability/news/kent-state-researcher-selected-us-department-energy-genesis-mission-award-mine",
+      "university": "Kent State University at Kent",
+      "published_date": "2026-08-17"
     },
     {
       "rank": 8,
-      "article_id": 53377,
-      "editorial_note": "Tohoku University and Western Digital launched a joint lab to develop next-generation data storage for AI workloads, addressing a critical infrastructure bottleneck as AI data demands grow.",
-      "impact_category": "Strategic Partnership",
-      "title": "Tohoku University Launches AI Data Infrastructure Lab with Western Digital Corporation",
-      "url": "https://www.tohoku.ac.jp/en/news/university_news/tohoku_university_launches_ai_data_infrastructure_lab_with_western_digital_corporation.html",
-      "university": "Tohoku University",
-      "published_date": "2026-08-18"
-    },
-    {
-      "rank": 9,
       "article_id": 53076,
-      "editorial_note": "Imperial College London and Smith+Nephew's five-year center will translate AI and computer-vision research into surgical robotics, a notable academia-industry pipeline from lab breakthroughs to clinical tools.",
+      "editorial_note": "Imperial College London and Smith+Nephew launched a five-year center translating AI and computer-vision research into surgical robotics, a substantial academia-industry bet on real-world medical technology.",
       "impact_category": "Strategic Partnership",
       "title": "New centre from Imperial and Smith+Nephew will accelerate innovation in surgical robotics",
       "url": "https://www.imperial.ac.uk/news/articles/2026/new-centre-from-imperial-and-smithnephew-will-accelerate-innovation-in-surgical-robotics/",
@@ -92,13 +82,23 @@
       "published_date": "2026-08-18"
     },
     {
+      "rank": 9,
+      "article_id": 53963,
+      "editorial_note": "A University of Houston report projecting up to 32% growth in U.S. electricity demand by 2030, driven partly by AI and data centers, offers hard data policymakers need for infrastructure planning amid the AI energy crunch.",
+      "impact_category": "Policy Impact",
+      "title": "University of Houston Report Predicts U.S. Electricity Demand Could Rise 32% by 2030 | University of Houston",
+      "url": "https://www.uh.edu/news-events/stories/2026/august/08202026-electricity-demand-increase.php",
+      "university": "University of Houston",
+      "published_date": "2026-08-20"
+    },
+    {
       "rank": 10,
-      "article_id": 53293,
-      "editorial_note": "MIT CSAIL's discovery of 'attribution decay' \u2014 that generative AI outputs often can't be traced to any specific training example \u2014 is a significant finding for ongoing debates over AI copyright, transparency, and provenance.",
+      "article_id": 53819,
+      "editorial_note": "Old Dominion's NASA-funded AI 'digital twin' proved its value during real flooding in Norfolk, a rare instance of AI climate-resilience research being validated under live, high-stakes conditions.",
       "impact_category": "Scientific Breakthrough",
-      "title": "When AI art has no author: MIT study finds generated images often can't be traced to any training data",
-      "url": "https://www.csail.mit.edu/news/when-ai-art-has-no-author-mit-study-finds-generated-images-often-cant-be-traced-any-training",
-      "university": "MIT",
+      "title": "When Norfolk Flooded, ODU Coastal Defense Research Faced an Unexpected Real-World Test",
+      "url": "https://www.odu.edu/article/when-norfolk-flooded-odu-coastal-defense-research-faced-an-unexpected-real-world-test",
+      "university": "Old Dominion University",
       "published_date": "2026-08-18"
     }
   ]
