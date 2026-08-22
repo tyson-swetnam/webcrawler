@@ -1,20 +1,10 @@
 {
-  "generated_at": "2026-08-22T09:09:56",
+  "generated_at": "2026-08-22T21:07:05",
   "picks": [
     {
       "rank": 1,
-      "article_id": 53236,
-      "editorial_note": "A \u00a35M UK government-backed trial is putting AI-driven flight path adjustments into real skies to cut aviation's contrail-driven climate impact \u2014 a rare case of AI research moving directly into government climate policy and infrastructure testing.",
-      "impact_category": "Policy Impact",
-      "title": "Operation Blue Skies takes off: landmark trial to test AI-driven contrail avoidance",
-      "url": "https://www.cam.ac.uk/research/news/operation-blue-skies-takes-off-landmark-trial-to-test-ai-driven-contrail-avoidance",
-      "university": "University of Cambridge",
-      "published_date": "2026-08-18"
-    },
-    {
-      "rank": 2,
       "article_id": 53735,
-      "editorial_note": "DOE selected a Fermilab-led team for its Genesis Mission to build AI systems controlling particle accelerator performance, a flagship national investment applying AI to frontier physics infrastructure.",
+      "editorial_note": "DOE's Genesis Mission selected a Fermilab-led team to build AI systems that control and optimize particle accelerator performance \u2014 a flagship national initiative applying AI directly to frontier physics infrastructure.",
       "impact_category": "Major Funding",
       "title": "DOE selects Fermilab-led AI initiative to advance particle accelerator performance",
       "url": "https://news.fnal.gov/2026/08/doe-selects-fermilab-led-ai-initiative-to-advance-particle-accelerator-performance/",
@@ -22,9 +12,19 @@
       "published_date": "2026-08-20"
     },
     {
+      "rank": 2,
+      "article_id": 53236,
+      "editorial_note": "A \u00a35 million UK government-backed trial of AI-driven flight path adjustments to cut aviation contrails is a rare case of AI research moving straight into real-world climate policy and industry practice.",
+      "impact_category": "Policy Impact",
+      "title": "Operation Blue Skies takes off: landmark trial to test AI-driven contrail avoidance",
+      "url": "https://www.cam.ac.uk/research/news/operation-blue-skies-takes-off-landmark-trial-to-test-ai-driven-contrail-avoidance",
+      "university": "University of Cambridge",
+      "published_date": "2026-08-18"
+    },
+    {
       "rank": 3,
       "article_id": 53293,
-      "editorial_note": "MIT CSAIL's discovery of 'attribution decay' \u2014 that generative AI outputs from massive datasets often can't be traced to any training example \u2014 has major implications for AI copyright, authorship, and accountability debates.",
+      "editorial_note": "MIT CSAIL's discovery of 'attribution decay' \u2014 that generative AI outputs often can't be traced to any specific training example \u2014 is a genuine scientific finding with major implications for AI copyright and provenance debates.",
       "impact_category": "Scientific Breakthrough",
       "title": "When AI art has no author: MIT study finds generated images often can't be traced to any training data",
       "url": "https://www.csail.mit.edu/news/when-ai-art-has-no-author-mit-study-finds-generated-images-often-cant-be-traced-any-training",
@@ -34,7 +34,7 @@
     {
       "rank": 4,
       "article_id": 52420,
-      "editorial_note": "Purdue's Rosen Center is a partner on over $42 million in NSF grants building national-scale AI and data cyberinfrastructure, a significant federal investment in the research computing backbone AI science depends on.",
+      "editorial_note": "Purdue's role in over $42 million of NSF Integrated Data Systems and Services grants underscores a major federal investment in building the national AI- and data-driven cyberinfrastructure academic researchers depend on.",
       "impact_category": "Major Funding",
       "title": "Purdue enables AI- and data- cyberinfras...",
       "url": "https://www.rcac.purdue.edu/news/7791",
@@ -43,18 +43,8 @@
     },
     {
       "rank": 5,
-      "article_id": 53253,
-      "editorial_note": "Johns Hopkins and Toyota Research Institute are combining AI with high-throughput automated experiments to accelerate battery materials discovery, a concrete industry-academia push on a technology critical to the energy transition.",
-      "impact_category": "Strategic Partnership",
-      "title": "Johns Hopkins team partners with Toyota Research Institute to accelerate new battery discovery",
-      "url": "https://hub.jhu.edu/2026/08/18/toyota-battery-research/",
-      "university": "Johns Hopkins University",
-      "published_date": "2026-08-18"
-    },
-    {
-      "rank": 6,
       "article_id": 53625,
-      "editorial_note": "NCSA and UCLA's $9M NSF-funded iDLab will unify browser-based access to national HPC centers, directly advancing the NAIRR/AI research-infrastructure agenda for the broader academic community.",
+      "editorial_note": "NCSA and UCLA's $9 million NSF-funded iDLab will unify browser-based access to national HPC centers, directly advancing the NAIRR/AI research-access agenda at national scale.",
       "impact_category": "Major Funding",
       "title": "NCSA Partners with UCLA for iDLab",
       "url": "https://www.ncsa.illinois.edu/2026/08/20/ncsa-partners-with-ucla-for-idlab/",
@@ -62,29 +52,9 @@
       "published_date": "2026-08-20"
     },
     {
-      "rank": 7,
-      "article_id": 52885,
-      "editorial_note": "A Kent State researcher's DOE Genesis Mission award to mine 50 years of water-quality data for critical minerals shows AI being applied to national supply-chain and resource security priorities.",
-      "impact_category": "Major Funding",
-      "title": "Kent State Researcher Selected for US Department of Energy Genesis Mission Award to Mine Decades of River Data for Critical Minerals; Kent State Today; July 29, 2026",
-      "url": "https://www.kent.edu/sustainability/news/kent-state-researcher-selected-us-department-energy-genesis-mission-award-mine",
-      "university": "Kent State University at Kent",
-      "published_date": "2026-08-17"
-    },
-    {
-      "rank": 8,
-      "article_id": 53076,
-      "editorial_note": "Imperial College London and Smith+Nephew launched a five-year center translating AI and computer-vision research into surgical robotics, a substantial academia-industry bet on real-world medical technology.",
-      "impact_category": "Strategic Partnership",
-      "title": "New centre from Imperial and Smith+Nephew will accelerate innovation in surgical robotics",
-      "url": "https://www.imperial.ac.uk/news/articles/2026/new-centre-from-imperial-and-smithnephew-will-accelerate-innovation-in-surgical-robotics/",
-      "university": "Imperial College London",
-      "published_date": "2026-08-18"
-    },
-    {
-      "rank": 9,
+      "rank": 6,
       "article_id": 53963,
-      "editorial_note": "A University of Houston report projecting up to 32% growth in U.S. electricity demand by 2030, driven partly by AI and data centers, offers hard data policymakers need for infrastructure planning amid the AI energy crunch.",
+      "editorial_note": "A University of Houston projection that AI and data centers could help drive a 32% rise in U.S. electricity demand by 2030 has direct bearing on national energy policy and the sustainability of AI's growth trajectory.",
       "impact_category": "Policy Impact",
       "title": "University of Houston Report Predicts U.S. Electricity Demand Could Rise 32% by 2030 | University of Houston",
       "url": "https://www.uh.edu/news-events/stories/2026/august/08202026-electricity-demand-increase.php",
@@ -92,14 +62,44 @@
       "published_date": "2026-08-20"
     },
     {
-      "rank": 10,
-      "article_id": 53819,
-      "editorial_note": "Old Dominion's NASA-funded AI 'digital twin' proved its value during real flooding in Norfolk, a rare instance of AI climate-resilience research being validated under live, high-stakes conditions.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "When Norfolk Flooded, ODU Coastal Defense Research Faced an Unexpected Real-World Test",
-      "url": "https://www.odu.edu/article/when-norfolk-flooded-odu-coastal-defense-research-faced-an-unexpected-real-world-test",
-      "university": "Old Dominion University",
+      "rank": 7,
+      "article_id": 53253,
+      "editorial_note": "Johns Hopkins' partnership with Toyota Research Institute pairs AI with high-throughput automated experiments to accelerate battery materials discovery \u2014 a concrete industry-academia collaboration with real materials-science payoff.",
+      "impact_category": "Strategic Partnership",
+      "title": "Johns Hopkins team partners with Toyota Research Institute to accelerate new battery discovery",
+      "url": "https://hub.jhu.edu/2026/08/18/toyota-battery-research/",
+      "university": "Johns Hopkins University",
       "published_date": "2026-08-18"
+    },
+    {
+      "rank": 8,
+      "article_id": 53284,
+      "editorial_note": "MIT Lincoln Laboratory's ARCADE agentic AI debriefing assistant is being integrated into U.S. Air Force Collaborative Combat Aircraft operations, marking a significant step of academic AI research into military deployment.",
+      "impact_category": "Policy Impact",
+      "title": "Human\u2013AI mission debrief enters the Air Force through ARCADE",
+      "url": "https://www.ll.mit.edu/news/human-ai-mission-debrief-enters-air-force-through-arcade",
+      "university": "MIT Lincoln Laboratory",
+      "published_date": "2026-08-18"
+    },
+    {
+      "rank": 9,
+      "article_id": 53076,
+      "editorial_note": "Imperial College London's five-year partnership with Smith+Nephew to accelerate surgical robotics translates academic computer-vision research into a dedicated industry innovation center with direct clinical impact.",
+      "impact_category": "Strategic Partnership",
+      "title": "New centre from Imperial and Smith+Nephew will accelerate innovation in surgical robotics",
+      "url": "https://www.imperial.ac.uk/news/articles/2026/new-centre-from-imperial-and-smithnephew-will-accelerate-innovation-in-surgical-robotics/",
+      "university": "Imperial College London",
+      "published_date": "2026-08-18"
+    },
+    {
+      "rank": 10,
+      "article_id": 53234,
+      "editorial_note": "EPFL's STING framework shows AI agents can be manipulated into harmful behavior through multi-turn conversations rather than single malicious prompts, a scientific finding with immediate relevance to AI safety and governance.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "How attackers persuade AI agents to break the rules",
+      "url": "https://news.epfl.ch/news/how-attackers-persuade-ai-agents-to-break-the-rule/",
+      "university": "EPFL",
+      "published_date": "2026-08-19"
     }
   ]
 }
