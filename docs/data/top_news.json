@@ -1,30 +1,40 @@
 {
-  "generated_at": "2026-08-23T09:09:24",
+  "generated_at": "2026-08-23T15:19:02",
   "picks": [
     {
       "rank": 1,
+      "article_id": 54678,
+      "editorial_note": "Penn's implantable Smart Neurostimulation System, the product of decades of computational memory modeling, represents a genuine breakthrough in predicting and treating memory loss \u2014 a rare case of AI research translating directly into a clinical device.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "A \u2018breakthrough\u2019 to restore memory | Penn Today",
+      "url": "https://penntoday.upenn.edu/news/penn-sas-breakthrough-restore-memory",
+      "university": "University of Pennsylvania",
+      "published_date": "2026-08-20"
+    },
+    {
+      "rank": 2,
       "article_id": 53735,
-      "editorial_note": "Fermilab was selected to lead a DOE Genesis Mission initiative applying AI to control and optimize particle accelerator performance \u2014 a flagship national program signaling how the federal government is directing AI investment toward core physical science infrastructure.",
-      "impact_category": "Policy Impact",
+      "editorial_note": "A Fermilab-led team was selected under DOE's new Genesis Mission to build AI systems that optimize particle accelerator performance, marking a major national investment in AI for fundamental physics infrastructure.",
+      "impact_category": "Major Funding",
       "title": "DOE selects Fermilab-led AI initiative to advance particle accelerator performance",
       "url": "https://news.fnal.gov/2026/08/doe-selects-fermilab-led-ai-initiative-to-advance-particle-accelerator-performance/",
       "university": "Fermi National Accelerator Laboratory",
       "published_date": "2026-08-20"
     },
     {
-      "rank": 2,
+      "rank": 3,
       "article_id": 53236,
-      "editorial_note": "A \u00a35 million UK government-backed trial will use AI-driven flight path adjustments to cut aviation's contrail-driven climate impact \u2014 a rare case of AI research moving directly into a real-world, government-funded climate intervention.",
-      "impact_category": "Scientific Breakthrough",
+      "editorial_note": "A \u00a35 million UK government-backed trial pairing Cambridge and Google-led AI models to reduce contrail-driven climate warming is a concrete, policy-relevant test of AI's role in mitigating aviation's climate impact.",
+      "impact_category": "Policy Impact",
       "title": "Operation Blue Skies takes off: landmark trial to test AI-driven contrail avoidance",
       "url": "https://www.cam.ac.uk/research/news/operation-blue-skies-takes-off-landmark-trial-to-test-ai-driven-contrail-avoidance",
       "university": "University of Cambridge",
       "published_date": "2026-08-18"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "article_id": 52420,
-      "editorial_note": "Purdue's Rosen Center is a partner on NSF Integrated Data Systems and Services grants exceeding $42 million, building national-scale AI and data cyberinfrastructure that will underpin research well beyond a single institution.",
+      "editorial_note": "Purdue's Rosen Center is a partner on NSF Integrated Data Systems and Services grants totaling over $42 million, funding national-scale AI and data cyberinfrastructure that will underpin research well beyond Purdue.",
       "impact_category": "Major Funding",
       "title": "Purdue enables AI- and data- cyberinfras...",
       "url": "https://www.rcac.purdue.edu/news/7791",
@@ -32,9 +42,9 @@
       "published_date": "2026-08-17"
     },
     {
-      "rank": 4,
+      "rank": 5,
       "article_id": 53625,
-      "editorial_note": "NCSA and UCLA's $9 million NSF-funded iDLab will unify browser-based access to national HPC centers, directly advancing the federal NAIRR initiative to democratize AI research infrastructure.",
+      "editorial_note": "NCSA and UCLA's $9 million NSF-funded iDLab will unify browser-based access to national HPC centers, directly advancing the NAIRR pilot's goal of democratizing AI research infrastructure.",
       "impact_category": "Major Funding",
       "title": "NCSA Partners with UCLA for iDLab",
       "url": "https://www.ncsa.illinois.edu/2026/08/20/ncsa-partners-with-ucla-for-idlab/",
@@ -42,9 +52,9 @@
       "published_date": "2026-08-20"
     },
     {
-      "rank": 5,
+      "rank": 6,
       "article_id": 53253,
-      "editorial_note": "Johns Hopkins and Toyota Research Institute are combining AI tools with high-throughput automated experiments to accelerate discovery of new battery materials \u2014 a concrete industry-academia push on a technology critical to the energy transition.",
+      "editorial_note": "Johns Hopkins' partnership with Toyota Research Institute applies AI and automated high-throughput experimentation to battery materials discovery, an industry-academia pairing with direct clean-energy applications.",
       "impact_category": "Strategic Partnership",
       "title": "Johns Hopkins team partners with Toyota Research Institute to accelerate new battery discovery",
       "url": "https://hub.jhu.edu/2026/08/18/toyota-battery-research/",
@@ -52,19 +62,19 @@
       "published_date": "2026-08-18"
     },
     {
-      "rank": 6,
-      "article_id": 52885,
-      "editorial_note": "A Kent State researcher's DOE Genesis Mission award will apply AI to five decades of water-quality records to locate critical minerals like copper and cobalt, tying AI research to U.S. supply-chain security priorities.",
-      "impact_category": "Major Funding",
-      "title": "Kent State Researcher Selected for US Department of Energy Genesis Mission Award to Mine Decades of River Data for Critical Minerals; Kent State Today; July 29, 2026",
-      "url": "https://www.kent.edu/sustainability/news/kent-state-researcher-selected-us-department-energy-genesis-mission-award-mine",
-      "university": "Kent State University at Kent",
-      "published_date": "2026-08-17"
+      "rank": 7,
+      "article_id": 53963,
+      "editorial_note": "A University of Houston report projecting up to 32% growth in U.S. electricity demand by 2030, driven substantially by AI and data centers, is a data point policymakers and grid planners will need to reckon with.",
+      "impact_category": "Policy Impact",
+      "title": "University of Houston Report Predicts U.S. Electricity Demand Could Rise 32% by 2030 | University of Houston",
+      "url": "https://www.uh.edu/news-events/stories/2026/august/08202026-electricity-demand-increase.php",
+      "university": "University of Houston",
+      "published_date": "2026-08-20"
     },
     {
-      "rank": 7,
+      "rank": 8,
       "article_id": 53293,
-      "editorial_note": "MIT CSAIL's discovery of 'attribution decay' \u2014 that generative AI outputs trained on massive datasets often can't be traced to specific training examples \u2014 has significant implications for ongoing AI copyright and provenance debates.",
+      "editorial_note": "MIT CSAIL's discovery of 'attribution decay' \u2014 that outputs from large generative models often can't be traced to specific training examples \u2014 has real implications for AI copyright and provenance debates.",
       "impact_category": "Scientific Breakthrough",
       "title": "When AI art has no author: MIT study finds generated images often can't be traced to any training data",
       "url": "https://www.csail.mit.edu/news/when-ai-art-has-no-author-mit-study-finds-generated-images-often-cant-be-traced-any-training",
@@ -72,34 +82,24 @@
       "published_date": "2026-08-18"
     },
     {
-      "rank": 8,
-      "article_id": 53076,
-      "editorial_note": "Imperial College London and Smith+Nephew launched a five-year center to translate computer-vision and AI research into surgical robotics, a substantial industry commitment to clinical AI application.",
-      "impact_category": "Strategic Partnership",
-      "title": "New centre from Imperial and Smith+Nephew will accelerate innovation in surgical robotics",
-      "url": "https://www.imperial.ac.uk/news/articles/2026/new-centre-from-imperial-and-smithnephew-will-accelerate-innovation-in-surgical-robotics/",
-      "university": "Imperial College London",
-      "published_date": "2026-08-18"
-    },
-    {
       "rank": 9,
-      "article_id": 54083,
-      "editorial_note": "FRONTEO and Science Tokyo formed a new industry-academia cluster pairing an established AI drug discovery platform with biomedical research capabilities, aimed at accelerating pharmaceutical discovery pipelines.",
-      "impact_category": "Strategic Partnership",
-      "title": "FRONTEO and Science Tokyo establish industry-academia Collaborative Research Cluster for AI-driven drug discovery | Science Tokyo",
-      "url": "https://www.isct.ac.jp/en/news/0ccf71co0dak",
-      "university": "Institute of Science Tokyo",
-      "published_date": "2026-08-21"
-    },
-    {
-      "rank": 10,
       "article_id": 52504,
-      "editorial_note": "Stony Brook University stood up a new Department of Technology, AI and Society backed by a $5 million SUNY grant, reflecting growing institutional investment in AI's societal and governance dimensions, not just its technical development.",
+      "editorial_note": "Stony Brook's new Department of Technology, AI and Society, backed by a $5 million SUNY grant, signals institutional investment in studying AI's societal effects, not just building the technology itself.",
       "impact_category": "Major Funding",
       "title": "Wohn Named Inaugural Chair of New Department of Technology, AI and Society - SBU News",
       "url": "https://news.stonybrook.edu/university/wohn-named-inaugural-chair-of-new-department-of-technology-ai-and-society/",
       "university": "Stony Brook University",
       "published_date": "2026-08-17"
+    },
+    {
+      "rank": 10,
+      "article_id": 53076,
+      "editorial_note": "Imperial College London and Smith+Nephew's five-year centre will translate AI and computer-vision research into surgical robotics, a partnership positioned to move academic breakthroughs into clinical practice.",
+      "impact_category": "Strategic Partnership",
+      "title": "New centre from Imperial and Smith+Nephew will accelerate innovation in surgical robotics",
+      "url": "https://www.imperial.ac.uk/news/articles/2026/new-centre-from-imperial-and-smithnephew-will-accelerate-innovation-in-surgical-robotics/",
+      "university": "Imperial College London",
+      "published_date": "2026-08-18"
     }
   ]
 }
