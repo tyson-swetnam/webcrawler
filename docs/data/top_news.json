@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-24T09:19:17",
+  "generated_at": "2026-08-24T15:28:11",
   "picks": [
     {
       "rank": 1,
       "article_id": 53518,
-      "editorial_note": "A landmark, government-backed Google-led trial across a UK/international consortium will use AI flight-path optimization to cut aviation's climate-warming contrails \u2014 a rare case of AI research moving directly into real-world environmental policy and industry practice.",
-      "impact_category": "Strategic Partnership",
+      "editorial_note": "A \u00a35M, Google-led international trial will use AI to adjust flight paths in real time and curb contrail-driven warming \u2014 a rare case of AI research moving directly into large-scale climate policy and industry practice.",
+      "impact_category": "Policy Impact",
       "title": "World\u2019s first trial to test if flightpath changes could cut aviation\u2019s climate impact",
       "url": "https://www.imperial.ac.uk/news/articles/natural-sciences/physics/2026/worlds-first-trial-to-test-if-flightpath-changes-could-cut-aviations-climate-impact-/",
       "university": "Imperial College London",
@@ -13,18 +13,8 @@
     },
     {
       "rank": 2,
-      "article_id": 54678,
-      "editorial_note": "Decades of computational memory research at Penn have culminated in an implantable neurostimulation system that predicts and treats memory loss \u2014 a genuine scientific breakthrough with direct clinical implications for dementia and brain injury patients.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "A \u2018breakthrough\u2019 to restore memory | Penn Today",
-      "url": "https://penntoday.upenn.edu/news/penn-sas-breakthrough-restore-memory",
-      "university": "University of Pennsylvania",
-      "published_date": "2026-08-20"
-    },
-    {
-      "rank": 3,
       "article_id": 53735,
-      "editorial_note": "The Department of Energy's selection of a Fermilab-led team under its Genesis Mission signals major federal investment in AI for next-generation particle accelerator science, with implications across the national lab system.",
+      "editorial_note": "Fermilab was selected to lead a DOE Genesis Mission effort applying AI to control particle accelerators, signaling a major federal bet on AI for next-generation scientific infrastructure.",
       "impact_category": "Major Funding",
       "title": "DOE selects Fermilab-led AI initiative to advance particle accelerator performance",
       "url": "https://news.fnal.gov/2026/08/doe-selects-fermilab-led-ai-initiative-to-advance-particle-accelerator-performance/",
@@ -32,9 +22,19 @@
       "published_date": "2026-08-20"
     },
     {
+      "rank": 3,
+      "article_id": 54678,
+      "editorial_note": "Decades of computational memory research at Penn have culminated in an implantable neurostimulation system that predicts and treats memory loss \u2014 a genuine translational breakthrough with direct clinical impact.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "A \u2018breakthrough\u2019 to restore memory | Penn Today",
+      "url": "https://penntoday.upenn.edu/news/penn-sas-breakthrough-restore-memory",
+      "university": "University of Pennsylvania",
+      "published_date": "2026-08-20"
+    },
+    {
       "rank": 4,
       "article_id": 53253,
-      "editorial_note": "Johns Hopkins' partnership with Toyota Research Institute pairs AI-driven experimentation with automated materials science to accelerate battery discovery \u2014 a strategic academia-industry alliance targeting a critical energy technology bottleneck.",
+      "editorial_note": "Johns Hopkins and Toyota Research Institute are pairing AI with automated high-throughput experiments to accelerate battery materials discovery, a concrete academia-industry push on a critical energy technology.",
       "impact_category": "Strategic Partnership",
       "title": "Johns Hopkins team partners with Toyota Research Institute to accelerate new battery discovery",
       "url": "https://hub.jhu.edu/2026/08/18/toyota-battery-research/",
@@ -44,7 +44,7 @@
     {
       "rank": 5,
       "article_id": 53625,
-      "editorial_note": "A $9 million NSF-funded iDLab collaboration between NCSA, UCLA, and other institutions builds shared national HPC infrastructure aligned with federal AI research priorities (NAIRR/AI Action Plan) \u2014 significant public investment in AI research capacity.",
+      "editorial_note": "A $9M NSF-funded iDLab, built with NCSA and UCLA, will unify browser-based access to national HPC centers in alignment with the national AI research resource (NAIRR) initiative \u2014 infrastructure that could broaden AI research access nationwide.",
       "impact_category": "Major Funding",
       "title": "NCSA Partners with UCLA for iDLab",
       "url": "https://www.ncsa.illinois.edu/2026/08/20/ncsa-partners-with-ucla-for-idlab/",
@@ -54,7 +54,7 @@
     {
       "rank": 6,
       "article_id": 53819,
-      "editorial_note": "An NASA-funded AI digital twin built by Old Dominion University researchers proved its worth during actual Norfolk flooding, demonstrating real-world validation of AI-driven coastal disaster response technology.",
+      "editorial_note": "Old Dominion's NASA-funded AI digital twin was put to an unplanned real-world test during actual Norfolk flooding, demonstrating rare validated performance of AI climate-resilience tools under live disaster conditions.",
       "impact_category": "Scientific Breakthrough",
       "title": "When Norfolk Flooded, ODU Coastal Defense Research Faced an Unexpected Real-World Test",
       "url": "https://www.odu.edu/article/when-norfolk-flooded-odu-coastal-defense-research-faced-an-unexpected-real-world-test",
@@ -64,7 +64,7 @@
     {
       "rank": 7,
       "article_id": 54083,
-      "editorial_note": "FRONTEO and Science Tokyo's new Collaborative Research Cluster combines an established commercial AI drug-discovery platform with academic biomedical expertise, a concrete industry-academia bet on accelerating pharmaceutical R&D.",
+      "editorial_note": "FRONTEO and Science Tokyo are combining an AI drug-discovery platform with biomedical research capabilities in a new formal industry-academia cluster, advancing AI's role in pharmaceutical R&D.",
       "impact_category": "Strategic Partnership",
       "title": "FRONTEO and Science Tokyo establish industry-academia Collaborative Research Cluster for AI-driven drug discovery | Science Tokyo",
       "url": "https://www.isct.ac.jp/en/news/0ccf71co0dak",
@@ -74,7 +74,7 @@
     {
       "rank": 8,
       "article_id": 53076,
-      "editorial_note": "Imperial College London's five-year center with medical device maker Smith+Nephew aims to translate computer-vision research into surgical robotics products, a substantial academia-industry commitment to clinical AI applications.",
+      "editorial_note": "Imperial College and Smith+Nephew launched a five-year center to translate computer-vision and AI research into surgical robotics, a substantial commercial-academic bet on AI-driven medical devices.",
       "impact_category": "Strategic Partnership",
       "title": "New centre from Imperial and Smith+Nephew will accelerate innovation in surgical robotics",
       "url": "https://www.imperial.ac.uk/news/articles/2026/new-centre-from-imperial-and-smithnephew-will-accelerate-innovation-in-surgical-robotics/",
@@ -83,22 +83,22 @@
     },
     {
       "rank": 9,
+      "article_id": 54824,
+      "editorial_note": "SLAC developed a neural-network compression method that preserves scientific detail in massive datasets, directly addressing the looming data-storage crunch facing AI-driven experimental science.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "SLAC researchers develop AI-based tool to compress data without losing detail",
+      "url": "https://www6.slac.stanford.edu/news/2026-08-24-slac-researchers-develop-ai-based-tool-compress-data-without-losing-detail",
+      "university": "SLAC National Accelerator Laboratory",
+      "published_date": "2026-08-24"
+    },
+    {
+      "rank": 10,
       "article_id": 53293,
-      "editorial_note": "MIT CSAIL's identification of 'attribution decay' \u2014 showing generative AI outputs often can't be traced to specific training data \u2014 has real bearing on ongoing copyright and AI-accountability debates.",
+      "editorial_note": "MIT CSAIL's discovery of 'attribution decay' \u2014 that generative AI outputs often can't be traced to specific training data \u2014 has significant implications for ongoing AI copyright and provenance debates.",
       "impact_category": "Scientific Breakthrough",
       "title": "When AI art has no author: MIT study finds generated images often can't be traced to any training data",
       "url": "https://www.csail.mit.edu/news/when-ai-art-has-no-author-mit-study-finds-generated-images-often-cant-be-traced-any-training",
       "university": "MIT",
-      "published_date": "2026-08-18"
-    },
-    {
-      "rank": 10,
-      "article_id": 53377,
-      "editorial_note": "Tohoku University and Western Digital's new joint lab targets next-generation data storage for AI workloads, an industry-academia partnership addressing a foundational infrastructure constraint on AI scaling.",
-      "impact_category": "Strategic Partnership",
-      "title": "Tohoku University Launches AI Data Infrastructure Lab with Western Digital Corporation",
-      "url": "https://www.tohoku.ac.jp/en/news/university_news/tohoku_university_launches_ai_data_infrastructure_lab_with_western_digital_corporation.html",
-      "university": "Tohoku University",
       "published_date": "2026-08-18"
     }
   ]
