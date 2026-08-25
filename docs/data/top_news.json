@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-25T09:15:27",
+  "generated_at": "2026-08-25T15:33:44",
   "picks": [
     {
       "rank": 1,
       "article_id": 53735,
-      "editorial_note": "Fermilab was selected under DOE's new Genesis Mission to develop AI systems that directly control and optimize particle accelerator performance \u2014 a national-scale initiative with real infrastructure stakes for the U.S. scientific enterprise.",
-      "impact_category": "Major Funding",
+      "editorial_note": "A Fermilab-led team was selected under DOE's new Genesis Mission to build AI systems that control particle accelerators in real time, a national-scale bet on AI accelerating fundamental physics infrastructure.",
+      "impact_category": "Scientific Breakthrough",
       "title": "DOE selects Fermilab-led AI initiative to advance particle accelerator performance",
       "url": "https://news.fnal.gov/2026/08/doe-selects-fermilab-led-ai-initiative-to-advance-particle-accelerator-performance/",
       "university": "Fermi National Accelerator Laboratory",
@@ -13,18 +13,8 @@
     },
     {
       "rank": 2,
-      "article_id": 54808,
-      "editorial_note": "A companion Genesis Mission award, this University of Alabama-led effort to build AI tools for sifting massive physics datasets shows DOE's AI push spanning multiple institutions in a coordinated national strategy.",
-      "impact_category": "Major Funding",
-      "title": "UA Preview \u2014 Aug. 24-30, 2026",
-      "url": "https://news.ua.edu/2026/08/ua-preview-aug-24-30-2026/",
-      "university": "The University of Alabama",
-      "published_date": "2026-08-24"
-    },
-    {
-      "rank": 3,
       "article_id": 54678,
-      "editorial_note": "Penn's implantable Smart Neurostimulation System, built on decades of computational memory modeling, represents a genuine medical breakthrough with the potential to treat memory loss in real patients.",
+      "editorial_note": "Penn's decades-long computational memory research has produced an implantable neurostimulation system that predicts and treats memory loss, a rare case of AI-driven neuroscience reaching real clinical application.",
       "impact_category": "Scientific Breakthrough",
       "title": "A \u2018breakthrough\u2019 to restore memory | Penn Today",
       "url": "https://penntoday.upenn.edu/news/penn-sas-breakthrough-restore-memory",
@@ -32,9 +22,9 @@
       "published_date": "2026-08-20"
     },
     {
-      "rank": 4,
+      "rank": 3,
       "article_id": 54824,
-      "editorial_note": "SLAC's new AI compression method addresses a looming crisis in scientific data storage, letting facilities preserve subtle experimental detail as dataset sizes explode \u2014 a practical breakthrough with broad applicability across big-science facilities.",
+      "editorial_note": "SLAC's new neural compression method tackles the looming data storage crunch at major scientific facilities without sacrificing the fine detail experiments depend on.",
       "impact_category": "Scientific Breakthrough",
       "title": "SLAC researchers develop AI-based tool to compress data without losing detail",
       "url": "https://www6.slac.stanford.edu/news/2026-08-24-slac-researchers-develop-ai-based-tool-compress-data-without-losing-detail",
@@ -42,9 +32,9 @@
       "published_date": "2026-08-24"
     },
     {
-      "rank": 5,
+      "rank": 4,
       "article_id": 53792,
-      "editorial_note": "MIT CSAIL's discovery of 'attribution decay' \u2014 that individual training examples often leave no traceable fingerprint in generative outputs \u2014 has significant implications for AI copyright and provenance debates.",
+      "editorial_note": "MIT CSAIL's discovery of 'attribution decay' in large generative models has direct bearing on ongoing AI copyright and training-data disputes, giving empirical grounding to a major policy debate.",
       "impact_category": "Scientific Breakthrough",
       "title": "When AI art has no author: Study finds generated images often can\u2019t be traced to training data",
       "url": "https://www.eecs.mit.edu/when-ai-art-has-no-author-study-finds-generated-images-often-cant-be-traced-to-training-data/",
@@ -52,19 +42,19 @@
       "published_date": "2026-08-19"
     },
     {
-      "rank": 6,
-      "article_id": 54083,
-      "editorial_note": "This industry-academia cluster pairs FRONTEO's AI drug discovery platform with Science Tokyo's biomedical expertise, a concrete step toward accelerating pharmaceutical R&D through applied AI.",
+      "rank": 5,
+      "article_id": 54808,
+      "editorial_note": "A second Genesis Mission award, this one led by Alabama, shows the DOE initiative spanning multiple institutions to apply AI to large-scale physics data analysis \u2014 evidence of a coordinated federal push rather than an isolated grant.",
       "impact_category": "Strategic Partnership",
-      "title": "FRONTEO and Science Tokyo establish industry-academia Collaborative Research Cluster for AI-driven drug discovery | Science Tokyo",
-      "url": "https://www.isct.ac.jp/en/news/0ccf71co0dak",
-      "university": "Institute of Science Tokyo",
-      "published_date": "2026-08-21"
+      "title": "UA Preview \u2014 Aug. 24-30, 2026",
+      "url": "https://news.ua.edu/2026/08/ua-preview-aug-24-30-2026/",
+      "university": "The University of Alabama",
+      "published_date": "2026-08-24"
     },
     {
-      "rank": 7,
+      "rank": 6,
       "article_id": 53625,
-      "editorial_note": "The $9M NSF-funded iDLab unifies browser-based access to national HPC centers across NCSA, UCLA and partners, directly advancing the national AI research infrastructure (NAIRR) agenda.",
+      "editorial_note": "A $9 million NSF-funded browser-based platform unifying access to national HPC centers signals serious infrastructure investment aligned with federal NAIRR/AI research-access priorities.",
       "impact_category": "Major Funding",
       "title": "NCSA Partners with UCLA for iDLab",
       "url": "https://www.ncsa.illinois.edu/2026/08/20/ncsa-partners-with-ucla-for-idlab/",
@@ -72,19 +62,29 @@
       "published_date": "2026-08-20"
     },
     {
-      "rank": 8,
-      "article_id": 53671,
-      "editorial_note": "Northeastern's photonic metasurfaces, which use light instead of electricity for machine learning computation, tackle AI's growing power-consumption crisis with a fundamentally different hardware approach.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "This engineer sees AI and its power constraints in a new light",
-      "url": "https://news.northeastern.edu/2026/08/19/photonics-ai-energy/",
-      "university": "Northeastern University",
+      "rank": 7,
+      "article_id": 53840,
+      "editorial_note": "Recognition tied to New York's $500 million Empire AI initiative highlights how state-level public investment is reshaping university AI infrastructure and competitiveness.",
+      "impact_category": "Major Funding",
+      "title": "UB School of Management recognized for AI leadership in global business education report",
+      "url": "https://www.buffalo.edu/news/news-releases.host.html/content/shared/mgt/news/management-recognized-AI-leadership-global-business-education.detail.html",
+      "university": "University at Buffalo",
       "published_date": "2026-08-19"
+    },
+    {
+      "rank": 8,
+      "article_id": 54514,
+      "editorial_note": "A CERN security analysis citing real cases of AI models attempting sabotage and deception to avoid shutdown underscores growing concern over agentic AI safety in high-stakes research environments.",
+      "impact_category": "Policy Impact",
+      "title": "Computer Security: AI \u2013 Game over, mankind? \u2013 Home",
+      "url": "https://home.cern/computer-security-ai-game-over-mankind/",
+      "university": "CERN",
+      "published_date": "2026-08-20"
     },
     {
       "rank": 9,
       "article_id": 53234,
-      "editorial_note": "EPFL's STING framework demonstrates that AI agents can be manipulated into harmful behavior through multi-turn conversation rather than single prompts, an important finding for AI safety and deployment policy.",
+      "editorial_note": "EPFL's STING framework shows AI agents can be manipulated into harmful behavior through extended multi-turn conversations, a finding with direct implications for how agentic AI systems are tested and deployed.",
       "impact_category": "Policy Impact",
       "title": "How attackers persuade AI agents to break the rules",
       "url": "https://news.epfl.ch/news/how-attackers-persuade-ai-agents-to-break-the-rule/",
@@ -93,13 +93,13 @@
     },
     {
       "rank": 10,
-      "article_id": 53963,
-      "editorial_note": "University of Houston's projection of up to 32% electricity demand growth by 2030, driven substantially by AI and data centers, carries major implications for energy policy and infrastructure planning nationwide.",
+      "article_id": 55394,
+      "editorial_note": "A five-year NSF CAREER award to redesign core web infrastructure for autonomous AI agents anticipates a near-term shift in how the internet must handle security and reliability as agents proliferate.",
       "impact_category": "Policy Impact",
-      "title": "University of Houston Report Predicts U.S. Electricity Demand Could Rise 32% by 2030 | University of Houston",
-      "url": "https://www.uh.edu/news-events/stories/2026/august/08202026-electricity-demand-increase.php",
-      "university": "University of Houston",
-      "published_date": "2026-08-20"
+      "title": "AI agents prompt redesign of web for security, privacy, reliability",
+      "url": "https://source.washu.edu/2026/08/ai-agents-prompt-redesign-of-web-for-security-privacy-reliability/",
+      "university": "Washington University in St Louis",
+      "published_date": "2026-08-25"
     }
   ]
 }
