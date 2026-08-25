@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-08-24T21:10:11",
+  "generated_at": "2026-08-25T03:24:06",
   "picks": [
     {
       "rank": 1,
-      "article_id": 53236,
-      "editorial_note": "A \u00a35M UK government-backed trial using AI to reroute flights and cut contrail formation is a rare case of AI research translating directly into measurable climate action, with Cambridge, Imperial, and Google collaborating on real flightpath changes.",
-      "impact_category": "Policy Impact",
-      "title": "Operation Blue Skies takes off: landmark trial to test AI-driven contrail avoidance",
-      "url": "https://www.cam.ac.uk/research/news/operation-blue-skies-takes-off-landmark-trial-to-test-ai-driven-contrail-avoidance",
-      "university": "University of Cambridge",
-      "published_date": "2026-08-18"
+      "article_id": 53735,
+      "editorial_note": "Fermilab's selection under DOE's new Genesis Mission to build AI systems controlling particle accelerator performance signals major federal investment in AI for fundamental physics infrastructure.",
+      "impact_category": "Major Funding",
+      "title": "DOE selects Fermilab-led AI initiative to advance particle accelerator performance",
+      "url": "https://news.fnal.gov/2026/08/doe-selects-fermilab-led-ai-initiative-to-advance-particle-accelerator-performance/",
+      "university": "Fermi National Accelerator Laboratory",
+      "published_date": "2026-08-20"
     },
     {
       "rank": 2,
       "article_id": 54678,
-      "editorial_note": "Penn's implantable Smart Neurostimulation System, built on decades of computational memory modeling, represents a genuine breakthrough toward treating memory loss with real clinical stakes.",
+      "editorial_note": "Penn's implantable Smart Neurostimulation System, built on decades of computational memory research, represents a genuine medical breakthrough with real-world potential to treat memory loss.",
       "impact_category": "Scientific Breakthrough",
       "title": "A \u2018breakthrough\u2019 to restore memory | Penn Today",
       "url": "https://penntoday.upenn.edu/news/penn-sas-breakthrough-restore-memory",
@@ -23,38 +23,8 @@
     },
     {
       "rank": 3,
-      "article_id": 53735,
-      "editorial_note": "DOE's selection of a Fermilab-led team under the national Genesis Mission initiative signals a major federal bet on AI for particle accelerator science, with implications for how national labs prioritize AI infrastructure.",
-      "impact_category": "Policy Impact",
-      "title": "DOE selects Fermilab-led AI initiative to advance particle accelerator performance",
-      "url": "https://news.fnal.gov/2026/08/doe-selects-fermilab-led-ai-initiative-to-advance-particle-accelerator-performance/",
-      "university": "Fermi National Accelerator Laboratory",
-      "published_date": "2026-08-20"
-    },
-    {
-      "rank": 4,
-      "article_id": 53293,
-      "editorial_note": "MIT CSAIL's discovery of 'attribution decay' \u2014 that generative AI outputs often can't be traced to specific training data \u2014 has direct bearing on ongoing copyright and AI-accountability debates.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "When AI art has no author: MIT study finds generated images often can't be traced to any training data",
-      "url": "https://www.csail.mit.edu/news/when-ai-art-has-no-author-mit-study-finds-generated-images-often-cant-be-traced-any-training",
-      "university": "MIT",
-      "published_date": "2026-08-18"
-    },
-    {
-      "rank": 5,
-      "article_id": 53253,
-      "editorial_note": "Johns Hopkins' partnership with Toyota Research Institute pairs AI-driven high-throughput experimentation with industry resources to accelerate battery materials discovery, a critical bottleneck for clean energy.",
-      "impact_category": "Strategic Partnership",
-      "title": "Johns Hopkins team partners with Toyota Research Institute to accelerate new battery discovery",
-      "url": "https://hub.jhu.edu/2026/08/18/toyota-battery-research/",
-      "university": "Johns Hopkins University",
-      "published_date": "2026-08-18"
-    },
-    {
-      "rank": 6,
       "article_id": 53625,
-      "editorial_note": "The $9M NSF-funded iDLab, linking NCSA, UCLA, and national HPC centers through a unified browser-based platform, expands equitable access to AI compute infrastructure nationally.",
+      "editorial_note": "A $9M NSF-funded, NCSA/UCLA-led browser-based computing environment unifying access to national HPC centers directly advances the NAIRR pilot's mission of democratizing AI research infrastructure.",
       "impact_category": "Major Funding",
       "title": "NCSA Partners with UCLA for iDLab",
       "url": "https://www.ncsa.illinois.edu/2026/08/20/ncsa-partners-with-ucla-for-idlab/",
@@ -62,9 +32,9 @@
       "published_date": "2026-08-20"
     },
     {
-      "rank": 7,
+      "rank": 4,
       "article_id": 54824,
-      "editorial_note": "SLAC's new neural-network compression method addresses a looming crisis in scientific data storage without sacrificing analytical detail, a practical win for AI-augmented experimental physics.",
+      "editorial_note": "SLAC's neural-network compression method that preserves scientific detail addresses a looming data storage crisis facing large-scale experimental facilities worldwide.",
       "impact_category": "Scientific Breakthrough",
       "title": "SLAC researchers develop AI-based tool to compress data without losing detail",
       "url": "https://www6.slac.stanford.edu/news/2026-08-24-slac-researchers-develop-ai-based-tool-compress-data-without-losing-detail",
@@ -72,34 +42,64 @@
       "published_date": "2026-08-24"
     },
     {
-      "rank": 8,
-      "article_id": 52874,
-      "editorial_note": "Berkeley Lab's computational infrastructure for the MOSAIC multi-modal microscope enables researchers to manage and interpret massive, heterogeneous imaging datasets, expanding what's scientifically observable.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Building the Computational Mind for the \u201cSwiss Army Knife\u201d of Microscopes",
-      "url": "https://newscenter.lbl.gov/2026/08/18/building-the-computational-mind-for-the-swiss-army-knife-of-microscopes/",
-      "university": "Lawrence Berkeley National Laboratory",
-      "published_date": "2026-08-18"
+      "rank": 5,
+      "article_id": 54808,
+      "editorial_note": "A second DOE Genesis Mission award, this one to Alabama for an AI tool helping physicists process massive experimental datasets, underscores the scale of the federal push into AI-for-science.",
+      "impact_category": "Major Funding",
+      "title": "UA Preview \u2014 Aug. 24-30, 2026",
+      "url": "https://news.ua.edu/2026/08/ua-preview-aug-24-30-2026/",
+      "university": "The University of Alabama",
+      "published_date": "2026-08-24"
     },
     {
-      "rank": 9,
-      "article_id": 53076,
-      "editorial_note": "Imperial College London's five-year center with Smith+Nephew aims to translate academic computer-vision research directly into surgical robotics products, a concrete academia-industry pipeline.",
-      "impact_category": "Strategic Partnership",
-      "title": "New centre from Imperial and Smith+Nephew will accelerate innovation in surgical robotics",
-      "url": "https://www.imperial.ac.uk/news/articles/2026/new-centre-from-imperial-and-smithnephew-will-accelerate-innovation-in-surgical-robotics/",
-      "university": "Imperial College London",
-      "published_date": "2026-08-18"
+      "rank": 6,
+      "article_id": 53840,
+      "editorial_note": "Recognition tied to Empire AI, New York's $500 million public AI computing initiative, highlights one of the largest state-level bets on academic AI infrastructure in the country.",
+      "impact_category": "Major Funding",
+      "title": "UB School of Management recognized for AI leadership in global business education report",
+      "url": "https://www.buffalo.edu/news/news-releases.host.html/content/shared/mgt/news/management-recognized-AI-leadership-global-business-education.detail.html",
+      "university": "University at Buffalo",
+      "published_date": "2026-08-19"
     },
     {
-      "rank": 10,
+      "rank": 7,
       "article_id": 54083,
-      "editorial_note": "FRONTEO and Science Tokyo's new research cluster combines an established AI drug-discovery platform with academic biomedical expertise, a notable industry-academia bet on AI-accelerated pharma research.",
+      "editorial_note": "FRONTEO and Science Tokyo's new industry-academia cluster pairs a commercial AI drug-discovery platform with biomedical research capacity, a concrete step toward AI-accelerated pharmaceutical development.",
       "impact_category": "Strategic Partnership",
       "title": "FRONTEO and Science Tokyo establish industry-academia Collaborative Research Cluster for AI-driven drug discovery | Science Tokyo",
       "url": "https://www.isct.ac.jp/en/news/0ccf71co0dak",
       "university": "Institute of Science Tokyo",
       "published_date": "2026-08-21"
+    },
+    {
+      "rank": 8,
+      "article_id": 53792,
+      "editorial_note": "MIT CSAIL's finding that generated images often can't be traced back to training data ('attribution decay') has real implications for ongoing AI copyright and provenance debates.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "When AI art has no author: Study finds generated images often can\u2019t be traced to training data",
+      "url": "https://www.eecs.mit.edu/when-ai-art-has-no-author-study-finds-generated-images-often-cant-be-traced-to-training-data/",
+      "university": "MIT",
+      "published_date": "2026-08-19"
+    },
+    {
+      "rank": 9,
+      "article_id": 54319,
+      "editorial_note": "Anthropic extending Claude access to every team in the world's toughest solar car race, alongside CSIRO's technical validation role, is a notable industry-academia AI partnership with global visibility.",
+      "impact_category": "Strategic Partnership",
+      "title": "World's toughest solar race unlocks AI access for all teams",
+      "url": "https://www.csiro.au/en/news/All/News/2026/August/Worlds-toughest-solar-race-unlocks-AI-access-for-all-teams",
+      "university": "CSIRO",
+      "published_date": "2026-08-21"
+    },
+    {
+      "rank": 10,
+      "article_id": 53963,
+      "editorial_note": "A University of Houston projection of up to 32% electricity demand growth by 2030, driven substantially by AI and data centers, has direct implications for energy policy and infrastructure planning.",
+      "impact_category": "Policy Impact",
+      "title": "University of Houston Report Predicts U.S. Electricity Demand Could Rise 32% by 2030 | University of Houston",
+      "url": "https://www.uh.edu/news-events/stories/2026/august/08202026-electricity-demand-increase.php",
+      "university": "University of Houston",
+      "published_date": "2026-08-20"
     }
   ]
 }
