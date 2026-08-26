@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-26T03:28:00",
+  "generated_at": "2026-08-26T09:17:41",
   "picks": [
     {
       "rank": 1,
       "article_id": 53735,
-      "editorial_note": "Fermilab's selection under DOE's new Genesis Mission puts a national lab-led team in charge of using AI to solve long-standing particle accelerator timing and frequency instabilities \u2014 a concrete step toward AI-accelerated scientific infrastructure with national strategic backing.",
+      "editorial_note": "Fermilab's selection under DOE's new Genesis Mission signals a major federal bet on AI-driven control of particle accelerators, with implications for national lab infrastructure and fundamental physics research capacity.",
       "impact_category": "Major Funding",
       "title": "DOE selects Fermilab-led AI initiative to advance particle accelerator performance",
       "url": "https://news.fnal.gov/2026/08/doe-selects-fermilab-led-ai-initiative-to-advance-particle-accelerator-performance/",
@@ -14,7 +14,7 @@
     {
       "rank": 2,
       "article_id": 54678,
-      "editorial_note": "Penn's implantable Smart Neurostimulation System, built on decades of computational memory modeling, moves AI-driven neurotechnology from theory to a real device that predicts and treats memory loss.",
+      "editorial_note": "Penn's implantable Smart Neurostimulation System, the product of decades of computational memory modeling, represents a genuine clinical breakthrough with direct potential to treat memory loss disorders.",
       "impact_category": "Scientific Breakthrough",
       "title": "A \u2018breakthrough\u2019 to restore memory | Penn Today",
       "url": "https://penntoday.upenn.edu/news/penn-sas-breakthrough-restore-memory",
@@ -23,38 +23,8 @@
     },
     {
       "rank": 3,
-      "article_id": 54824,
-      "editorial_note": "SLAC's new AI compression method addresses a looming bottleneck for every data-intensive scientific facility, offering a way to preserve subtle experimental detail while shrinking storage demands at scale.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "SLAC researchers develop AI-based tool to compress data without losing detail",
-      "url": "https://www6.slac.stanford.edu/news/2026-08-24-slac-researchers-develop-ai-based-tool-compress-data-without-losing-detail",
-      "university": "SLAC National Accelerator Laboratory",
-      "published_date": "2026-08-24"
-    },
-    {
-      "rank": 4,
-      "article_id": 54808,
-      "editorial_note": "A second Genesis Mission award, this one Alabama-led, extends the DOE's national push to apply AI to physics data analysis \u2014 signaling the initiative's breadth across institutions.",
-      "impact_category": "Major Funding",
-      "title": "UA Preview \u2014 Aug. 24-30, 2026",
-      "url": "https://news.ua.edu/2026/08/ua-preview-aug-24-30-2026/",
-      "university": "The University of Alabama",
-      "published_date": "2026-08-24"
-    },
-    {
-      "rank": 5,
-      "article_id": 53625,
-      "editorial_note": "The $9M NSF-funded iDLab unifies browser-based access to national HPC centers across NCSA, UCLA and partners, directly advancing the NAIRR vision of democratized AI compute access.",
-      "impact_category": "Strategic Partnership",
-      "title": "NCSA Partners with UCLA for iDLab",
-      "url": "https://www.ncsa.illinois.edu/2026/08/20/ncsa-partners-with-ucla-for-idlab/",
-      "university": "National Center for Supercomputing Applications",
-      "published_date": "2026-08-20"
-    },
-    {
-      "rank": 6,
       "article_id": 55237,
-      "editorial_note": "Weill Cornell's creation of an entire new department around Dan Landau, pioneer of AI-powered liquid biopsy for cancer detection, signals institutional commitment to computational biomedicine as a durable research pillar.",
+      "editorial_note": "Weill Cornell's creation of an entire new department around AI-powered liquid biopsy and single-cell genomics work marks a significant institutional bet on computational biomedicine as a discipline.",
       "impact_category": "Scientific Breakthrough",
       "title": "Dr. Dan Landau Named Inaugural Chair of the Department of Systems and Computational Biomedicine at Weill Cornell Medicine",
       "url": "https://news.weill.cornell.edu/news/2026/08/dr-dan-landau-named-inaugural-chair-of-the-department-of-systems-and-computational",
@@ -62,9 +32,29 @@
       "published_date": "2026-08-24"
     },
     {
-      "rank": 7,
+      "rank": 4,
+      "article_id": 53625,
+      "editorial_note": "The $9M NSF-funded iDLab partnership between NCSA and UCLA builds shared national HPC infrastructure aligned with NAIRR, directly expanding academic access to AI compute resources.",
+      "impact_category": "Major Funding",
+      "title": "NCSA Partners with UCLA for iDLab",
+      "url": "https://www.ncsa.illinois.edu/2026/08/20/ncsa-partners-with-ucla-for-idlab/",
+      "university": "National Center for Supercomputing Applications",
+      "published_date": "2026-08-20"
+    },
+    {
+      "rank": 5,
+      "article_id": 54824,
+      "editorial_note": "SLAC's new AI-based compression method tackles a looming crisis in scientific data storage without sacrificing analytical fidelity, a technical advance with broad applicability across experimental physics.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "SLAC researchers develop AI-based tool to compress data without losing detail",
+      "url": "https://www6.slac.stanford.edu/news/2026-08-24-slac-researchers-develop-ai-based-tool-compress-data-without-losing-detail",
+      "university": "SLAC National Accelerator Laboratory",
+      "published_date": "2026-08-24"
+    },
+    {
+      "rank": 6,
       "article_id": 54083,
-      "editorial_note": "FRONTEO and Science Tokyo's new industry-academia cluster pairs a commercial AI drug-discovery platform with academic biomedical research, a model for accelerating pharmaceutical R&D through formal cross-sector collaboration.",
+      "editorial_note": "The FRONTEO-Science Tokyo Collaborative Research Cluster pairs an industry AI drug-discovery platform with academic biomedical research, an industry-academia model likely to accelerate pharmaceutical AI applications.",
       "impact_category": "Strategic Partnership",
       "title": "FRONTEO and Science Tokyo establish industry-academia Collaborative Research Cluster for AI-driven drug discovery | Science Tokyo",
       "url": "https://www.isct.ac.jp/en/news/0ccf71co0dak",
@@ -72,9 +62,29 @@
       "published_date": "2026-08-21"
     },
     {
+      "rank": 7,
+      "article_id": 54034,
+      "editorial_note": "ASU's AI analysis of antibody signatures from over 4,000 people to predict vaccine response strength is a large-scale, real-world demonstration of AI's growing role in personalized immunology.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Why immune responses to vaccines vary from person to person",
+      "url": "https://news.asu.edu/20260820-science-and-technology-why-immune-responses-vaccines-vary-person-person",
+      "university": "Arizona State University Campus Immersion",
+      "published_date": "2026-08-20"
+    },
+    {
       "rank": 8,
+      "article_id": 53963,
+      "editorial_note": "University of Houston's projection of a 32% electricity demand increase by 2030, driven substantially by AI and data centers, is exactly the kind of research that should inform energy infrastructure and policy planning.",
+      "impact_category": "Policy Impact",
+      "title": "University of Houston Report Predicts U.S. Electricity Demand Could Rise 32% by 2030 | University of Houston",
+      "url": "https://www.uh.edu/news-events/stories/2026/august/08202026-electricity-demand-increase.php",
+      "university": "University of Houston",
+      "published_date": "2026-08-20"
+    },
+    {
+      "rank": 9,
       "article_id": 55120,
-      "editorial_note": "A $1.5M NSF grant backs a multi-institution effort (KU, Stony Brook University, and the Stowers Institute) to model macromolecular systems over extra-long timescales, pushing AI-driven molecular simulation capabilities forward.",
+      "editorial_note": "A $1.5M NSF grant backing a multi-institution collaboration to model macromolecular systems with AI extends the reach of machine learning into fundamental structural biology research.",
       "impact_category": "Major Funding",
       "title": "$1.5 million NSF grant will support KU research modeling molecular systems using AI",
       "url": "https://news.ku.edu/news/article/1-point-5-million-dollar-nsf-grant-will-support-ku-research-modeling-molecular-systems-using-ai",
@@ -82,24 +92,14 @@
       "published_date": "2026-08-25"
     },
     {
-      "rank": 9,
+      "rank": 10,
       "article_id": 54319,
-      "editorial_note": "Anthropic's decision to give every team in the world's toughest solar car race access to Claude marks a notable real-world deployment of frontier AI in engineering competition, expanding CSIRO's technology partnership.",
+      "editorial_note": "Anthropic's decision to provide Claude access to all teams in the World Solar Challenge, building on CSIRO's technical partnership, is a notable case of a frontier AI lab directly democratizing access within an academic/engineering competition.",
       "impact_category": "Strategic Partnership",
       "title": "World's toughest solar race unlocks AI access for all teams",
       "url": "https://www.csiro.au/en/news/All/News/2026/August/Worlds-toughest-solar-race-unlocks-AI-access-for-all-teams",
       "university": "CSIRO",
       "published_date": "2026-08-21"
-    },
-    {
-      "rank": 10,
-      "article_id": 53963,
-      "editorial_note": "University of Houston's projection of a 32% electricity demand rise by 2030, driven substantially by AI data centers, is a policy-relevant warning that could shape energy infrastructure planning nationwide.",
-      "impact_category": "Policy Impact",
-      "title": "University of Houston Report Predicts U.S. Electricity Demand Could Rise 32% by 2030 | University of Houston",
-      "url": "https://www.uh.edu/news-events/stories/2026/august/08202026-electricity-demand-increase.php",
-      "university": "University of Houston",
-      "published_date": "2026-08-20"
     }
   ]
 }
