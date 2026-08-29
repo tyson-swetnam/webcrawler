@@ -1,20 +1,10 @@
 {
-  "generated_at": "2026-08-29T09:09:12",
+  "generated_at": "2026-08-29T15:23:11",
   "picks": [
     {
       "rank": 1,
-      "article_id": 56477,
-      "editorial_note": "A $4 billion advanced packaging plant is a rare, concrete signal of AI infrastructure investment translating into physical U.S. manufacturing capacity \u2014 SK hynix's first American HBM hub directly addresses the memory bottleneck constraining AI chip production.",
-      "impact_category": "Major Funding",
-      "title": "SK hynix breaks ground on $4 billion advanced packaging production facility in Purdue Research Park",
-      "url": "https://www.purdue.edu/newsroom/2026/Q3/sk-hynix-breaks-ground-on-4-billion-advanced-packaging-production-facility-in-purdue-research-park/",
-      "university": "Purdue University-Main Campus",
-      "published_date": "2026-08-27"
-    },
-    {
-      "rank": 2,
       "article_id": 56276,
-      "editorial_note": "The first live use of AI to guide a neurosurgeon in real time during brain tumor surgery marks a genuine clinical breakthrough, moving AI from research settings directly into the operating room with immediate patient stakes.",
+      "editorial_note": "The first live use of AI to guide a neurosurgeon in real time during brain tumor surgery marks a genuine clinical breakthrough, moving AI-assisted surgery from research into actual patient care.",
       "impact_category": "Scientific Breakthrough",
       "title": "First patient in live AI-assisted sight-saving brain surgery",
       "url": "https://www.ucl.ac.uk/news/2026/aug/first-patient-live-ai-assisted-sight-saving-brain-surgery",
@@ -22,9 +12,9 @@
       "published_date": "2026-08-27"
     },
     {
-      "rank": 3,
+      "rank": 2,
       "article_id": 55672,
-      "editorial_note": "AI systems designing entirely novel viral genomes not found in nature raises serious biosecurity and dual-use concerns, forcing an urgent policy conversation about guardrails on generative AI in biology.",
+      "editorial_note": "AI's demonstrated ability to design novel viral genomes raises urgent biosecurity and dual-use policy questions that will shape how AI biology research is governed going forward.",
       "impact_category": "Policy Impact",
       "title": "AI Can Now Create Viruses. Should We Let It? - Georgetown University",
       "url": "https://www.georgetown.edu/news/ai-generated-viruses-bioengineering-ethics/",
@@ -32,19 +22,19 @@
       "published_date": "2026-08-25"
     },
     {
-      "rank": 4,
-      "article_id": 56148,
-      "editorial_note": "Recognition on TIME's list underscores an AI system that has already cleared FDA review and measurably cuts sepsis mortality by 18% \u2014 a rare example of AI research translating into deployed, life-saving clinical practice.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Hopkins engineer Suchi Saria among TIME's 100 most influential people in AI",
-      "url": "https://hub.jhu.edu/2026/08/27/suchi-saria-time-100-ai/",
-      "university": "Johns Hopkins University",
+      "rank": 3,
+      "article_id": 56477,
+      "editorial_note": "A $4 billion advanced packaging facility for AI memory chips is a major industrial investment that will directly expand the domestic supply chain underpinning AI hardware.",
+      "impact_category": "Major Funding",
+      "title": "SK hynix breaks ground on $4 billion advanced packaging production facility in Purdue Research Park",
+      "url": "https://www.purdue.edu/newsroom/2026/Q3/sk-hynix-breaks-ground-on-4-billion-advanced-packaging-production-facility-in-purdue-research-park/",
+      "university": "Purdue University-Main Campus",
       "published_date": "2026-08-27"
     },
     {
-      "rank": 5,
+      "rank": 4,
       "article_id": 56269,
-      "editorial_note": "NSF's $90 million commitment to launch three new Science and Technology Centers reflects a major federal bet on AI-adjacent fields as a long-term national research priority.",
+      "editorial_note": "NSF's $90 million commitment to three new Science and Technology Centers signals sustained federal investment in AI-adjacent fundamental research across multiple fields.",
       "impact_category": "Major Funding",
       "title": "NSF launches three new Science and Technology Centers with $90M investment in transformative research",
       "url": "https://www.nsf.gov/news/nsf-launches-three-new-science-technology-centers-90m",
@@ -52,19 +42,39 @@
       "published_date": "2026-08-26"
     },
     {
-      "rank": 6,
+      "rank": 5,
       "article_id": 56044,
-      "editorial_note": "UW's leadership role in DOE's Genesis Mission ties university research into a 300+ institution national push to accelerate scientific discovery with AI, signaling a coordinated federal strategy rather than isolated grants.",
-      "impact_category": "Major Funding",
+      "editorial_note": "DOE's Genesis Mission spans over 300 institutions to accelerate AI-for-science, and UW's leadership role reflects the scale of this national research coordination effort.",
+      "impact_category": "Strategic Partnership",
       "title": "UW researchers lead and support 3 new \u2018AI-for-Science\u2019 Genesis Mission awards | UW News",
       "url": "https://www.washington.edu/news/2026/08/27/uw-researchers-lead-and-support-3-new-ai-for-science-genesis-mission-awards/",
       "university": "University of Washington-Seattle Campus",
       "published_date": "2026-08-27"
     },
     {
+      "rank": 6,
+      "article_id": 56148,
+      "editorial_note": "Recognition on TIME's 100 most influential people in AI list underscores an FDA-cleared sepsis detection system already reducing mortality by 18% in real clinical use.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Hopkins engineer Suchi Saria among TIME's 100 most influential people in AI",
+      "url": "https://hub.jhu.edu/2026/08/27/suchi-saria-time-100-ai/",
+      "university": "Johns Hopkins University",
+      "published_date": "2026-08-27"
+    },
+    {
       "rank": 7,
+      "article_id": 55729,
+      "editorial_note": "Applying AI to search for singularities in the Navier-Stokes equations tackles a nearly 200-year-old Millennium Prize problem, illustrating AI's growing role in fundamental mathematics.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "From the Lab: How Javier G\u00f3mez-Serrano is using AI to solve the most elusive question in math",
+      "url": "https://www.brown.edu/news/2026-08-26/javier-gomez-serrano-lab",
+      "university": "Brown University",
+      "published_date": "2026-08-26"
+    },
+    {
+      "rank": 8,
       "article_id": 56139,
-      "editorial_note": "A 31-partner, 14-country Horizon Europe consortium building shared AI robotics infrastructure represents a significant coordinated European effort to keep pace in applied AI research.",
+      "editorial_note": "A 31-partner, 14-country Horizon Europe consortium building shared AI-robotics infrastructure represents a significant coordinated European push in applied AI.",
       "impact_category": "Strategic Partnership",
       "title": "In Brussels, Inria puts European robotics & AI into action with the euROBIN project!",
       "url": "https://www.inria.fr/en/brussels-inria-puts-european-robotics-ai-action-eurobin-project",
@@ -72,34 +82,24 @@
       "published_date": "2026-08-27"
     },
     {
-      "rank": 8,
-      "article_id": 55570,
-      "editorial_note": "A $24.5 million NSF effort to build a federated, AI-ready national data ecosystem addresses foundational infrastructure that many other AI research advances will depend on.",
-      "impact_category": "Major Funding",
-      "title": "Physics\u2019 Coelho Lopes de Sa Joins $24.5 Million Effort to Create Unified, AI-Ready National Ecosystem | UMass Amherst",
-      "url": "https://www.umass.edu/news/article/physics-coelho-lopes-de-sa-joins-245-million-effort-create-unified-ai-ready-national",
-      "university": "University of Massachusetts-Amherst",
+      "rank": 9,
+      "article_id": 55835,
+      "editorial_note": "A neural network that infers a semiconductor's internal defect state from a single measurement in under a millisecond could meaningfully speed up chip diagnostics and manufacturing.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Working backward from results: how can AI tell what is happening inside a semiconductor? | Science Tokyo",
+      "url": "https://www.isct.ac.jp/en/news/q6ssmx08swgh",
+      "university": "Institute of Science Tokyo",
       "published_date": "2026-08-25"
     },
     {
-      "rank": 9,
+      "rank": 10,
       "article_id": 56111,
-      "editorial_note": "UT Austin's new NSF center tackling how humans and robots adapt to each other targets a core barrier to real-world robot deployment, backed by significant national funding.",
+      "editorial_note": "UT Austin's leadership of a new NSF center dedicated to how humans and robots adapt to each other addresses a foundational challenge for deploying AI-driven robotics safely in daily life.",
       "impact_category": "Strategic Partnership",
       "title": "UT To Lead NSF Center That Will Study How Robots and People Learn To Live and Work Together - UT News",
       "url": "https://news.utexas.edu/2026/08/27/ut-to-lead-nsf-center-that-will-study-how-robots-and-people-learn-to-live-and-work-together/",
       "university": "The University of Texas at Austin",
       "published_date": "2026-08-27"
-    },
-    {
-      "rank": 10,
-      "article_id": 55729,
-      "editorial_note": "Using AI to search for singularities in the Navier-Stokes equations applies machine learning to one of mathematics' oldest and most valuable open problems, illustrating AI's growing role in fundamental theoretical research.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "From the Lab: How Javier G\u00f3mez-Serrano is using AI to solve the most elusive question in math",
-      "url": "https://www.brown.edu/news/2026-08-26/javier-gomez-serrano-lab",
-      "university": "Brown University",
-      "published_date": "2026-08-26"
     }
   ]
 }
