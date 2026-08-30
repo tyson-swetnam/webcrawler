@@ -1,30 +1,10 @@
 {
-  "generated_at": "2026-08-30T03:21:16",
+  "generated_at": "2026-08-30T09:09:29",
   "picks": [
     {
       "rank": 1,
-      "article_id": 56276,
-      "editorial_note": "The first live use of AI to assist a neurosurgeon in real time during brain tumor surgery marks a genuine clinical milestone, moving AI-assisted surgery from research into actual patient care.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "First patient in live AI-assisted sight-saving brain surgery",
-      "url": "https://www.ucl.ac.uk/news/2026/aug/first-patient-live-ai-assisted-sight-saving-brain-surgery",
-      "university": "University College London",
-      "published_date": "2026-08-27"
-    },
-    {
-      "rank": 2,
-      "article_id": 55672,
-      "editorial_note": "AI's use to design entirely novel viral genomes raises serious dual-use biosecurity questions that will likely shape how research institutions and policymakers regulate generative AI in biology.",
-      "impact_category": "Policy Impact",
-      "title": "AI Can Now Create Viruses. Should We Let It? - Georgetown University",
-      "url": "https://www.georgetown.edu/news/ai-generated-viruses-bioengineering-ethics/",
-      "university": "Georgetown University",
-      "published_date": "2026-08-25"
-    },
-    {
-      "rank": 3,
       "article_id": 56477,
-      "editorial_note": "A $4 billion advanced packaging plant for AI memory chips is a massive, concrete investment in U.S. AI hardware supply chains with major regional economic impact.",
+      "editorial_note": "A $4 billion advanced packaging plant for high-bandwidth memory is one of the largest single AI-hardware infrastructure investments tied to a university research park this year, directly expanding U.S. capacity for the memory chips that power AI training and inference.",
       "impact_category": "Major Funding",
       "title": "SK hynix breaks ground on $4 billion advanced packaging production facility in Purdue Research Park",
       "url": "https://www.purdue.edu/newsroom/2026/Q3/sk-hynix-breaks-ground-on-4-billion-advanced-packaging-production-facility-in-purdue-research-park/",
@@ -32,9 +12,9 @@
       "published_date": "2026-08-27"
     },
     {
-      "rank": 4,
+      "rank": 2,
       "article_id": 56269,
-      "editorial_note": "NSF's $90 million commitment to launch three new Science and Technology Centers signals sustained federal investment in AI and adjacent transformative research fields.",
+      "editorial_note": "NSF's $90 million launch of three new Science and Technology Centers signals sustained federal commitment to long-horizon AI-adjacent research infrastructure spanning multiple institutions and disciplines.",
       "impact_category": "Major Funding",
       "title": "NSF launches three new Science and Technology Centers with $90M investment in transformative research",
       "url": "https://www.nsf.gov/news/nsf-launches-three-new-science-technology-centers-90m",
@@ -42,19 +22,29 @@
       "published_date": "2026-08-26"
     },
     {
-      "rank": 5,
-      "article_id": 56148,
-      "editorial_note": "Recognition of an FDA-cleared AI sepsis detection system that measurably reduces mortality demonstrates AI delivering proven, life-saving clinical impact at scale.",
+      "rank": 3,
+      "article_id": 56276,
+      "editorial_note": "The first live use of real-time AI guidance during human brain tumor surgery marks a genuine clinical milestone, moving AI-assisted neurosurgery from research to actual patient care.",
       "impact_category": "Scientific Breakthrough",
-      "title": "Hopkins engineer Suchi Saria among TIME's 100 most influential people in AI",
-      "url": "https://hub.jhu.edu/2026/08/27/suchi-saria-time-100-ai/",
-      "university": "Johns Hopkins University",
+      "title": "First patient in live AI-assisted sight-saving brain surgery",
+      "url": "https://www.ucl.ac.uk/news/2026/aug/first-patient-live-ai-assisted-sight-saving-brain-surgery",
+      "university": "University College London",
       "published_date": "2026-08-27"
     },
     {
-      "rank": 6,
+      "rank": 4,
+      "article_id": 55672,
+      "editorial_note": "AI systems generating entirely novel, functional viral genomes not found in nature is a significant capability leap with immediate biosecurity implications that researchers and ethicists are only beginning to grapple with.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "AI Can Now Create Viruses. Should We Let It? - Georgetown University",
+      "url": "https://www.georgetown.edu/news/ai-generated-viruses-bioengineering-ethics/",
+      "university": "Georgetown University",
+      "published_date": "2026-08-25"
+    },
+    {
+      "rank": 5,
       "article_id": 56111,
-      "editorial_note": "A new NSF center dedicated to human-robot co-adaptation reflects growing federal investment in foundational human-AI interaction research with broad downstream applications.",
+      "editorial_note": "UT Austin's leadership of a new NSF center dedicated to human-robot co-adaptation represents a substantial, well-funded bet on making assistive robotics genuinely usable in everyday human environments.",
       "impact_category": "Major Funding",
       "title": "UT To Lead NSF Center That Will Study How Robots and People Learn To Live and Work Together - UT News",
       "url": "https://news.utexas.edu/2026/08/27/ut-to-lead-nsf-center-that-will-study-how-robots-and-people-learn-to-live-and-work-together/",
@@ -62,9 +52,9 @@
       "published_date": "2026-08-27"
     },
     {
-      "rank": 7,
+      "rank": 6,
       "article_id": 56044,
-      "editorial_note": "UW's leadership role in DOE's Genesis Mission, a 300+ institution national AI-for-science initiative, highlights a major cross-institutional push to accelerate scientific discovery with AI.",
+      "editorial_note": "DOE's Genesis Mission, spanning 300+ institutions with UW playing a leading role, is a national-scale effort to systematically apply AI across the scientific enterprise, one of the broadest science-policy initiatives of its kind.",
       "impact_category": "Strategic Partnership",
       "title": "UW researchers lead and support 3 new \u2018AI-for-Science\u2019 Genesis Mission awards | UW News",
       "url": "https://www.washington.edu/news/2026/08/27/uw-researchers-lead-and-support-3-new-ai-for-science-genesis-mission-awards/",
@@ -72,9 +62,19 @@
       "published_date": "2026-08-27"
     },
     {
+      "rank": 7,
+      "article_id": 56148,
+      "editorial_note": "Suchi Saria's TIME 100 AI recognition underscores an FDA-cleared AI system already reducing sepsis mortality by 18% in practice, a rare example of AI research translating into measurable clinical outcomes at scale.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Hopkins engineer Suchi Saria among TIME's 100 most influential people in AI",
+      "url": "https://hub.jhu.edu/2026/08/27/suchi-saria-time-100-ai/",
+      "university": "Johns Hopkins University",
+      "published_date": "2026-08-27"
+    },
+    {
       "rank": 8,
       "article_id": 56139,
-      "editorial_note": "A 31-partner, 14-country Horizon Europe consortium building shared AI robotics infrastructure represents a significant international collaboration shaping Europe's AI strategy.",
+      "editorial_note": "Inria's role in the 31-partner, 14-country euROBIN consortium reflects the scale of Europe's coordinated push to build shared AI-robotics infrastructure across industry, government, and academia.",
       "impact_category": "Strategic Partnership",
       "title": "In Brussels, Inria puts European robotics & AI into action with the euROBIN project!",
       "url": "https://www.inria.fr/en/brussels-inria-puts-european-robotics-ai-action-eurobin-project",
@@ -84,7 +84,7 @@
     {
       "rank": 9,
       "article_id": 55729,
-      "editorial_note": "Applying AI to search for singularities in the Navier-Stokes equations tackles one of mathematics' Millennium Prize problems, illustrating AI's growing role in fundamental scientific discovery.",
+      "editorial_note": "Using AI to search for singularities in the Navier-Stokes equations tackles one of mathematics' seven Millennium Prize problems, illustrating AI's growing role in fundamental theoretical research, not just applied science.",
       "impact_category": "Scientific Breakthrough",
       "title": "From the Lab: How Javier G\u00f3mez-Serrano is using AI to solve the most elusive question in math",
       "url": "https://www.brown.edu/news/2026-08-26/javier-gomez-serrano-lab",
@@ -94,7 +94,7 @@
     {
       "rank": 10,
       "article_id": 56091,
-      "editorial_note": "A new $30 million NSF center combining AI with experiment and simulation to predict and control turbulence could have wide-ranging implications for physics and engineering.",
+      "editorial_note": "The $30 million TEMPEST center's bid to predict and eventually control turbulence combines AI with experiment and theory to attack a foundational open problem in physics with wide engineering applications.",
       "impact_category": "Major Funding",
       "title": "Can scientists predict\u2014and control\u2014turbulence?",
       "url": "https://www.rochester.edu/newscenter/nsf-funded-tempest-turbulence-research-center-716372/",
