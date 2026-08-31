@@ -1,20 +1,10 @@
 {
-  "generated_at": "2026-08-30T21:08:25",
+  "generated_at": "2026-08-31T03:23:15",
   "picks": [
     {
       "rank": 1,
-      "article_id": 56269,
-      "editorial_note": "NSF's $90M investment launching three new Science and Technology Centers marks a major national policy commitment to AI alongside biotech, fusion, and robotics research over the next five years.",
-      "impact_category": "Policy Impact",
-      "title": "NSF launches three new Science and Technology Centers with $90M investment in transformative research",
-      "url": "https://www.nsf.gov/news/nsf-launches-three-new-science-technology-centers-90m",
-      "university": "National Science Foundation",
-      "published_date": "2026-08-26"
-    },
-    {
-      "rank": 2,
       "article_id": 56477,
-      "editorial_note": "SK hynix's $4 billion advanced packaging facility at Purdue is a landmark industrial investment establishing the first U.S. hub for AI-critical high bandwidth memory production.",
+      "editorial_note": "SK hynix's $4 billion advanced packaging facility is the largest single investment in this batch and marks the company's first U.S. HBM production hub, directly expanding the memory supply chain that AI data centers depend on.",
       "impact_category": "Major Funding",
       "title": "SK hynix breaks ground on $4 billion advanced packaging production facility in Purdue Research Park",
       "url": "https://www.purdue.edu/newsroom/2026/Q3/sk-hynix-breaks-ground-on-4-billion-advanced-packaging-production-facility-in-purdue-research-park/",
@@ -22,9 +12,19 @@
       "published_date": "2026-08-27"
     },
     {
+      "rank": 2,
+      "article_id": 56269,
+      "editorial_note": "NSF's $90 million launch of three new Science and Technology Centers sets a multi-year national research agenda spanning AI, biotech, fusion, and robotics, with ripple effects across dozens of participating institutions.",
+      "impact_category": "Major Funding",
+      "title": "NSF launches three new Science and Technology Centers with $90M investment in transformative research",
+      "url": "https://www.nsf.gov/news/nsf-launches-three-new-science-technology-centers-90m",
+      "university": "National Science Foundation",
+      "published_date": "2026-08-26"
+    },
+    {
       "rank": 3,
       "article_id": 56276,
-      "editorial_note": "The first live use of AI to assist a neurosurgeon in real time during brain tumor surgery is a genuine clinical breakthrough with immediate patient-safety implications.",
+      "editorial_note": "The first live use of AI to assist a neurosurgeon during real-time brain tumor surgery is a genuine clinical milestone, moving AI-assisted surgery from research to a real patient outcome.",
       "impact_category": "Scientific Breakthrough",
       "title": "First patient in live AI-assisted sight-saving brain surgery",
       "url": "https://www.ucl.ac.uk/news/2026/aug/first-patient-live-ai-assisted-sight-saving-brain-surgery",
@@ -33,28 +33,8 @@
     },
     {
       "rank": 4,
-      "article_id": 56148,
-      "editorial_note": "Suchi Saria's FDA-cleared AI sepsis early-warning system, credited with an 18% mortality reduction, is a rare example of AI research translating into deployed, life-saving clinical impact.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Hopkins engineer Suchi Saria among TIME's 100 most influential people in AI",
-      "url": "https://hub.jhu.edu/2026/08/27/suchi-saria-time-100-ai/",
-      "university": "Johns Hopkins University",
-      "published_date": "2026-08-27"
-    },
-    {
-      "rank": 5,
-      "article_id": 55672,
-      "editorial_note": "AI's use to design entirely novel viral genomes raises urgent biosecurity and dual-use policy questions that the research community is only beginning to grapple with.",
-      "impact_category": "Policy Impact",
-      "title": "AI Can Now Create Viruses. Should We Let It? - Georgetown University",
-      "url": "https://www.georgetown.edu/news/ai-generated-viruses-bioengineering-ethics/",
-      "university": "Georgetown University",
-      "published_date": "2026-08-25"
-    },
-    {
-      "rank": 6,
       "article_id": 56044,
-      "editorial_note": "UW's leadership role in three DOE Genesis Mission awards ties it to a sprawling 300+ institution national initiative to accelerate AI-driven scientific discovery.",
+      "editorial_note": "UW's leadership on three DOE Genesis Mission awards ties the university into a 300+ institution national AI-for-science initiative, signaling significant federal investment in AI-accelerated research infrastructure.",
       "impact_category": "Major Funding",
       "title": "UW researchers lead and support 3 new \u2018AI-for-Science\u2019 Genesis Mission awards | UW News",
       "url": "https://www.washington.edu/news/2026/08/27/uw-researchers-lead-and-support-3-new-ai-for-science-genesis-mission-awards/",
@@ -62,9 +42,9 @@
       "published_date": "2026-08-27"
     },
     {
-      "rank": 7,
+      "rank": 5,
       "article_id": 56111,
-      "editorial_note": "UT Austin's new NSF Center for Human and Robot Co-Adaptation represents a substantial, multi-year federal bet on foundational human-robot interaction research.",
+      "editorial_note": "UT Austin's new NSF Science and Technology Center on human-robot co-adaptation represents a major, well-funded push to study how assistive robots and people work together in real-world settings.",
       "impact_category": "Major Funding",
       "title": "UT To Lead NSF Center That Will Study How Robots and People Learn To Live and Work Together - UT News",
       "url": "https://news.utexas.edu/2026/08/27/ut-to-lead-nsf-center-that-will-study-how-robots-and-people-learn-to-live-and-work-together/",
@@ -72,9 +52,9 @@
       "published_date": "2026-08-27"
     },
     {
-      "rank": 8,
+      "rank": 6,
       "article_id": 56091,
-      "editorial_note": "The $30M NSF-funded TEMPEST center brings AI together with experiment and theory to tackle turbulence prediction, a longstanding hard problem in physics.",
+      "editorial_note": "The $30 million TEMPEST center brings together experiments, theory, and AI to tackle turbulence prediction and control, a long-standing hard problem with broad engineering and climate implications.",
       "impact_category": "Major Funding",
       "title": "Can scientists predict\u2014and control\u2014turbulence?",
       "url": "https://www.rochester.edu/newscenter/nsf-funded-tempest-turbulence-research-center-716372/",
@@ -82,19 +62,39 @@
       "published_date": "2026-08-26"
     },
     {
-      "rank": 9,
-      "article_id": 55729,
-      "editorial_note": "Applying AI to search for singularities in the Navier-Stokes equations tackles a nearly 200-year-old open problem and Millennium Prize question, illustrating AI's growing role in fundamental mathematics.",
+      "rank": 7,
+      "article_id": 56148,
+      "editorial_note": "Suchi Saria's recognition on TIME's 100 most influential people in AI highlights an FDA-cleared sepsis early-warning system already reducing patient mortality by 18%, a rare example of AI with measurable clinical impact deployed today.",
       "impact_category": "Scientific Breakthrough",
-      "title": "From the Lab: How Javier G\u00f3mez-Serrano is using AI to solve the most elusive question in math",
-      "url": "https://www.brown.edu/news/2026-08-26/javier-gomez-serrano-lab",
-      "university": "Brown University",
-      "published_date": "2026-08-26"
+      "title": "Hopkins engineer Suchi Saria among TIME's 100 most influential people in AI",
+      "url": "https://hub.jhu.edu/2026/08/27/suchi-saria-time-100-ai/",
+      "university": "Johns Hopkins University",
+      "published_date": "2026-08-27"
+    },
+    {
+      "rank": 8,
+      "article_id": 55570,
+      "editorial_note": "UMass Amherst's role in the $24.5 million National Data Platform project supports building federated, AI-ready data infrastructure that could underpin research across many federal and academic institutions.",
+      "impact_category": "Major Funding",
+      "title": "Physics\u2019 Coelho Lopes de Sa Joins $24.5 Million Effort to Create Unified, AI-Ready National Ecosystem | UMass Amherst",
+      "url": "https://www.umass.edu/news/article/physics-coelho-lopes-de-sa-joins-245-million-effort-create-unified-ai-ready-national",
+      "university": "University of Massachusetts-Amherst",
+      "published_date": "2026-08-25"
+    },
+    {
+      "rank": 9,
+      "article_id": 55672,
+      "editorial_note": "Georgetown scholars' discussion of AI-designed novel viral genomes raises serious biosecurity and governance questions that are likely to shape AI safety policy debates around dual-use biological research.",
+      "impact_category": "Policy Impact",
+      "title": "AI Can Now Create Viruses. Should We Let It? - Georgetown University",
+      "url": "https://www.georgetown.edu/news/ai-generated-viruses-bioengineering-ethics/",
+      "university": "Georgetown University",
+      "published_date": "2026-08-25"
     },
     {
       "rank": 10,
       "article_id": 56139,
-      "editorial_note": "Inria's role in the 31-partner euROBIN consortium reflects a major coordinated European push to build shared AI-robotics infrastructure across industry and academia.",
+      "editorial_note": "Inria's role in the 31-partner, 14-country euROBIN consortium reflects a major coordinated European push to build shared AI-robotics infrastructure spanning industry, academia, and government.",
       "impact_category": "Strategic Partnership",
       "title": "In Brussels, Inria puts European robotics & AI into action with the euROBIN project!",
       "url": "https://www.inria.fr/en/brussels-inria-puts-european-robotics-ai-action-eurobin-project",
