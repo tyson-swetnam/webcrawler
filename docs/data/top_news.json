@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-01T09:11:48",
+  "generated_at": "2026-09-01T15:37:57",
   "picks": [
     {
       "rank": 1,
       "article_id": 56477,
-      "editorial_note": "A $4 billion advanced packaging plant for AI memory chips is a massive, tangible investment in U.S. AI hardware supply chain capacity, anchored at a university research park.",
+      "editorial_note": "A $4 billion advanced packaging plant is one of the largest single AI-infrastructure investments in this dataset, and SK hynix's first U.S. high-bandwidth memory hub signals a strategic reshoring of critical AI hardware supply chains to a university research park.",
       "impact_category": "Major Funding",
       "title": "SK hynix breaks ground on $4 billion advanced packaging production facility in Purdue Research Park",
       "url": "https://www.purdue.edu/newsroom/2026/Q3/sk-hynix-breaks-ground-on-4-billion-advanced-packaging-production-facility-in-purdue-research-park/",
@@ -14,7 +14,7 @@
     {
       "rank": 2,
       "article_id": 56269,
-      "editorial_note": "NSF's $90M investment launching three new Science and Technology Centers signals sustained federal commitment to foundational AI-adjacent research infrastructure across multiple institutions.",
+      "editorial_note": "NSF's $90 million commitment to launch three new Science and Technology Centers marks a major federal bet on AI-adjacent fundamental research across multiple institutions, with effects that will ripple through academic funding priorities for years.",
       "impact_category": "Major Funding",
       "title": "NSF launches three new Science and Technology Centers with $90M investment in transformative research",
       "url": "https://www.nsf.gov/news/nsf-launches-three-new-science-technology-centers-90m",
@@ -24,8 +24,8 @@
     {
       "rank": 3,
       "article_id": 56044,
-      "editorial_note": "UW's leadership role in DOE's Genesis Mission connects it to a sweeping national AI-for-science initiative spanning over 300 institutions, reflecting a major federal push to accelerate scientific discovery with AI.",
-      "impact_category": "Strategic Partnership",
+      "editorial_note": "UW's leadership role in three DOE Genesis Mission awards ties a 300+ institution national AI-for-science initiative directly to university research, illustrating how federal AI strategy is being operationalized at scale.",
+      "impact_category": "Major Funding",
       "title": "UW researchers lead and support 3 new \u2018AI-for-Science\u2019 Genesis Mission awards | UW News",
       "url": "https://www.washington.edu/news/2026/08/27/uw-researchers-lead-and-support-3-new-ai-for-science-genesis-mission-awards/",
       "university": "University of Washington-Seattle Campus",
@@ -33,28 +33,8 @@
     },
     {
       "rank": 4,
-      "article_id": 56111,
-      "editorial_note": "A new NSF-funded center dedicated to human-robot co-adaptation represents a significant, well-funded scientific effort to make assistive robotics genuinely usable in everyday human environments.",
-      "impact_category": "Major Funding",
-      "title": "UT To Lead NSF Center That Will Study How Robots and People Learn To Live and Work Together - UT News",
-      "url": "https://news.utexas.edu/2026/08/27/ut-to-lead-nsf-center-that-will-study-how-robots-and-people-learn-to-live-and-work-together/",
-      "university": "The University of Texas at Austin",
-      "published_date": "2026-08-27"
-    },
-    {
-      "rank": 5,
-      "article_id": 57693,
-      "editorial_note": "Building a competitive frontier AI model for just $40 million by fine-tuning an open-source base demonstrates a technically important and economically disruptive path to sovereign AI capability.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Imperial and Thomson Reuters pioneer new technical approach that could broaden access to sovereign AI",
-      "url": "https://www.imperial.ac.uk/news/articles/2026/imperial-and-thomson-reuters-pioneer-new-technical-approach-that-could-broaden-access-to-sovereign-ai/",
-      "university": "Imperial College London",
-      "published_date": "2026-08-28"
-    },
-    {
-      "rank": 6,
       "article_id": 56276,
-      "editorial_note": "The first live use of AI to assist a neurosurgeon in real time during brain tumor surgery marks a genuine clinical breakthrough with immediate patient-safety implications.",
+      "editorial_note": "The first live use of AI to assist a neurosurgeon in real time during brain tumor surgery is a genuine clinical breakthrough, moving AI-assisted medicine from research to the operating room.",
       "impact_category": "Scientific Breakthrough",
       "title": "First patient in live AI-assisted sight-saving brain surgery",
       "url": "https://www.ucl.ac.uk/news/2026/aug/first-patient-live-ai-assisted-sight-saving-brain-surgery",
@@ -62,29 +42,39 @@
       "published_date": "2026-08-27"
     },
     {
-      "rank": 7,
-      "article_id": 56091,
-      "editorial_note": "A $30 million NSF center to predict and control turbulence combines AI with fundamental physics, tackling a problem with broad engineering and energy applications.",
-      "impact_category": "Major Funding",
-      "title": "Can scientists predict\u2014and control\u2014turbulence?",
-      "url": "https://www.rochester.edu/newscenter/nsf-funded-tempest-turbulence-research-center-716372/",
-      "university": "University of Rochester",
-      "published_date": "2026-08-26"
+      "rank": 5,
+      "article_id": 57693,
+      "editorial_note": "Imperial College London and Thomson Reuters built a $40 million frontier-scale AI model by fine-tuning an open-source base, demonstrating a lower-cost path to 'sovereign AI' that could reshape how nations and institutions build independent AI capacity.",
+      "impact_category": "Strategic Partnership",
+      "title": "Imperial and Thomson Reuters pioneer new technical approach that could broaden access to sovereign AI",
+      "url": "https://www.imperial.ac.uk/news/articles/2026/imperial-and-thomson-reuters-pioneer-new-technical-approach-that-could-broaden-access-to-sovereign-ai/",
+      "university": "Imperial College London",
+      "published_date": "2026-08-28"
     },
     {
-      "rank": 8,
-      "article_id": 56148,
-      "editorial_note": "Recognition of an FDA-cleared AI sepsis early-warning system that cuts mortality by 18% highlights AI research with proven, deployed clinical impact rather than theoretical promise.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Hopkins engineer Suchi Saria among TIME's 100 most influential people in AI",
-      "url": "https://hub.jhu.edu/2026/08/27/suchi-saria-time-100-ai/",
-      "university": "Johns Hopkins University",
+      "rank": 6,
+      "article_id": 56111,
+      "editorial_note": "UT Austin's new NSF center studying human-robot co-adaptation addresses a foundational challenge for deploying assistive robots safely and effectively in everyday settings.",
+      "impact_category": "Major Funding",
+      "title": "UT To Lead NSF Center That Will Study How Robots and People Learn To Live and Work Together - UT News",
+      "url": "https://news.utexas.edu/2026/08/27/ut-to-lead-nsf-center-that-will-study-how-robots-and-people-learn-to-live-and-work-together/",
+      "university": "The University of Texas at Austin",
       "published_date": "2026-08-27"
     },
     {
-      "rank": 9,
+      "rank": 7,
+      "article_id": 58115,
+      "editorial_note": "Publication of HydroGym in Nature gives researchers worldwide a new reinforcement-learning platform for controlling fluid dynamics, with direct applications in energy, transportation, and defense systems.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Training AI Agents that Can Actively Control Fluid Dynamics in Energy, Transportation, and Defense | RWTH Aachen University | EN",
+      "url": "https://www.rwth-aachen.de/go/id/bsojmx?lidx=1",
+      "university": "RWTH Aachen University",
+      "published_date": "2026-09-01"
+    },
+    {
+      "rank": 8,
       "article_id": 56139,
-      "editorial_note": "A 31-partner, 14-country Horizon Europe consortium building shared AI robotics infrastructure reflects a major coordinated international push to advance embodied AI at scale.",
+      "editorial_note": "Inria's role in the 31-partner, 14-country euROBIN consortium reflects a coordinated European push to build shared AI-robotics infrastructure, a notable counterweight to U.S. and Chinese efforts.",
       "impact_category": "Strategic Partnership",
       "title": "In Brussels, Inria puts European robotics & AI into action with the euROBIN project!",
       "url": "https://www.inria.fr/en/brussels-inria-puts-european-robotics-ai-action-eurobin-project",
@@ -92,14 +82,24 @@
       "published_date": "2026-08-27"
     },
     {
+      "rank": 9,
+      "article_id": 56148,
+      "editorial_note": "Johns Hopkins engineer Suchi Saria's recognition on TIME's list of the 100 most influential people in AI highlights an FDA-cleared sepsis detection system already shown to cut mortality by 18%, a rare case of AI research translating into measurable lives saved.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Hopkins engineer Suchi Saria among TIME's 100 most influential people in AI",
+      "url": "https://hub.jhu.edu/2026/08/27/suchi-saria-time-100-ai/",
+      "university": "Johns Hopkins University",
+      "published_date": "2026-08-27"
+    },
+    {
       "rank": 10,
-      "article_id": 57499,
-      "editorial_note": "A federally funded partnership using AI digital twins to inspect and protect American dams applies AI to critical infrastructure security, with direct public-safety stakes.",
-      "impact_category": "Strategic Partnership",
-      "title": "Four years later KU researchers continue their work strengthening American dams",
-      "url": "https://news.ku.edu/news/article/four-years-later-ku-researchers-continue-their-work-strengthening-american-dams",
-      "university": "University of Kansas",
-      "published_date": "2026-08-31"
+      "article_id": 58218,
+      "editorial_note": "A $2.88 million DOE award to a University of Houston-led team to use AI for discovering critical-mineral alternatives ties AI research directly to U.S. supply-chain security concerns around rare earth magnets.",
+      "impact_category": "Major Funding",
+      "title": "Department of Energy Awards UH-led Team $2.88M to Use AI to Strengthen America\u2019s Critical Mineral Supply Chain | University of Houston",
+      "url": "https://www.uh.edu/news-events/stories/2026/september/09012026-doe-grant-permanent-magnets.php",
+      "university": "University of Houston",
+      "published_date": "2026-09-01"
     }
   ]
 }
