@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-31T21:09:06",
+  "generated_at": "2026-09-01T03:23:51",
   "picks": [
     {
       "rank": 1,
       "article_id": 56477,
-      "editorial_note": "A $4 billion advanced packaging plant is a major bet on U.S. domestic capacity for the high-bandwidth memory that powers AI accelerators \u2014 the largest single financial commitment in this week's news and a strategic supply-chain win tied directly to a research university.",
+      "editorial_note": "A $4 billion advanced packaging plant for AI memory chips is a rare, concrete signal of how AI compute demand is reshaping U.S. semiconductor manufacturing investment, with Purdue as the anchor.",
       "impact_category": "Major Funding",
       "title": "SK hynix breaks ground on $4 billion advanced packaging production facility in Purdue Research Park",
       "url": "https://www.purdue.edu/newsroom/2026/Q3/sk-hynix-breaks-ground-on-4-billion-advanced-packaging-production-facility-in-purdue-research-park/",
@@ -13,18 +13,18 @@
     },
     {
       "rank": 2,
-      "article_id": 56269,
-      "editorial_note": "NSF's $90 million launch of three new Science and Technology Centers signals sustained federal commitment to AI-adjacent basic research across robotics, biotech, and fusion, setting the funding landscape for years of downstream work.",
-      "impact_category": "Major Funding",
-      "title": "NSF launches three new Science and Technology Centers with $90M investment in transformative research",
-      "url": "https://www.nsf.gov/news/nsf-launches-three-new-science-technology-centers-90m",
-      "university": "National Science Foundation",
-      "published_date": "2026-08-26"
+      "article_id": 56276,
+      "editorial_note": "The first live use of real-time AI assistance during human brain tumor surgery marks a genuine clinical breakthrough, moving AI-guided surgery from research to the operating room.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "First patient in live AI-assisted sight-saving brain surgery",
+      "url": "https://www.ucl.ac.uk/news/2026/aug/first-patient-live-ai-assisted-sight-saving-brain-surgery",
+      "university": "University College London",
+      "published_date": "2026-08-27"
     },
     {
       "rank": 3,
       "article_id": 56044,
-      "editorial_note": "UW's leadership role in three DOE Genesis Mission awards ties university AI research into a 300+ institution national initiative, reflecting the growing convergence of federal science strategy and AI-for-discovery efforts.",
+      "editorial_note": "UW's leadership role in DOE's Genesis Mission ties it to a 300+ institution national push to accelerate scientific discovery with AI, reflecting a major federal science-policy commitment.",
       "impact_category": "Major Funding",
       "title": "UW researchers lead and support 3 new \u2018AI-for-Science\u2019 Genesis Mission awards | UW News",
       "url": "https://www.washington.edu/news/2026/08/27/uw-researchers-lead-and-support-3-new-ai-for-science-genesis-mission-awards/",
@@ -33,8 +33,18 @@
     },
     {
       "rank": 4,
+      "article_id": 56111,
+      "editorial_note": "A new NSF Science and Technology Center dedicated to human-robot co-adaptation represents a substantial, sustained federal investment in a foundational area of applied AI/robotics research.",
+      "impact_category": "Major Funding",
+      "title": "UT To Lead NSF Center That Will Study How Robots and People Learn To Live and Work Together - UT News",
+      "url": "https://news.utexas.edu/2026/08/27/ut-to-lead-nsf-center-that-will-study-how-robots-and-people-learn-to-live-and-work-together/",
+      "university": "The University of Texas at Austin",
+      "published_date": "2026-08-27"
+    },
+    {
+      "rank": 5,
       "article_id": 56091,
-      "editorial_note": "The $30 million TEMPEST center brings together experiment, theory, simulation, and AI to tackle a long-standing hard physics problem \u2014 turbulence prediction and control \u2014 with clear applications from aerospace to climate.",
+      "editorial_note": "The $30M NSF-funded TEMPEST center brings AI together with experiment and simulation to tackle turbulence prediction, a long-standing hard problem with broad engineering applications.",
       "impact_category": "Major Funding",
       "title": "Can scientists predict\u2014and control\u2014turbulence?",
       "url": "https://www.rochester.edu/newscenter/nsf-funded-tempest-turbulence-research-center-716372/",
@@ -42,19 +52,9 @@
       "published_date": "2026-08-26"
     },
     {
-      "rank": 5,
-      "article_id": 56111,
-      "editorial_note": "A new NSF-backed center dedicated to human-robot co-adaptation reflects growing national investment in making assistive AI-driven robotics genuinely usable in everyday human environments.",
-      "impact_category": "Strategic Partnership",
-      "title": "UT To Lead NSF Center That Will Study How Robots and People Learn To Live and Work Together - UT News",
-      "url": "https://news.utexas.edu/2026/08/27/ut-to-lead-nsf-center-that-will-study-how-robots-and-people-learn-to-live-and-work-together/",
-      "university": "The University of Texas at Austin",
-      "published_date": "2026-08-27"
-    },
-    {
       "rank": 6,
       "article_id": 57693,
-      "editorial_note": "Imperial and Thomson Reuters' $40 million fine-tuning of an open-source model into a frontier system shows a viable, lower-cost path for organizations and nations to build sovereign AI capability without training from scratch.",
+      "editorial_note": "Building a frontier-capable AI model for $40M by fine-tuning an open-source base demonstrates a viable low-cost path to 'sovereign AI,' with real implications for nations and institutions priced out of frontier model development.",
       "impact_category": "Strategic Partnership",
       "title": "Imperial and Thomson Reuters pioneer new technical approach that could broaden access to sovereign AI",
       "url": "https://www.imperial.ac.uk/news/articles/2026/imperial-and-thomson-reuters-pioneer-new-technical-approach-that-could-broaden-access-to-sovereign-ai/",
@@ -63,18 +63,8 @@
     },
     {
       "rank": 7,
-      "article_id": 56276,
-      "editorial_note": "The first live use of AI to assist a neurosurgeon in real time during brain tumor surgery marks a genuine clinical milestone, moving AI-assisted surgical guidance from research into direct patient care.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "First patient in live AI-assisted sight-saving brain surgery",
-      "url": "https://www.ucl.ac.uk/news/2026/aug/first-patient-live-ai-assisted-sight-saving-brain-surgery",
-      "university": "University College London",
-      "published_date": "2026-08-27"
-    },
-    {
-      "rank": 8,
       "article_id": 56148,
-      "editorial_note": "Recognition of an FDA-cleared AI sepsis early-warning system that measurably cuts mortality by 18% underscores one of AI's clearest, already-deployed real-world health impacts.",
+      "editorial_note": "Recognition on TIME's 100 most influential people in AI underscores the real-world payoff of Saria's FDA-cleared sepsis early warning system, which cuts mortality by 18%.",
       "impact_category": "Scientific Breakthrough",
       "title": "Hopkins engineer Suchi Saria among TIME's 100 most influential people in AI",
       "url": "https://hub.jhu.edu/2026/08/27/suchi-saria-time-100-ai/",
@@ -82,24 +72,34 @@
       "published_date": "2026-08-27"
     },
     {
+      "rank": 8,
+      "article_id": 56139,
+      "editorial_note": "A 31-partner, 14-country Horizon Europe consortium building shared AI robotics infrastructure signals a major coordinated European push to compete in applied AI robotics.",
+      "impact_category": "Strategic Partnership",
+      "title": "In Brussels, Inria puts European robotics & AI into action with the euROBIN project!",
+      "url": "https://www.inria.fr/en/brussels-inria-puts-european-robotics-ai-action-eurobin-project",
+      "university": "INRIA",
+      "published_date": "2026-08-27"
+    },
+    {
       "rank": 9,
-      "article_id": 55672,
-      "editorial_note": "The revelation that AI can design entirely novel viral genomes raises urgent biosecurity and governance questions, making this a bellwether story for AI safety policy debates.",
-      "impact_category": "Policy Impact",
-      "title": "AI Can Now Create Viruses. Should We Let It? - Georgetown University",
-      "url": "https://www.georgetown.edu/news/ai-generated-viruses-bioengineering-ethics/",
-      "university": "Georgetown University",
-      "published_date": "2026-08-25"
+      "article_id": 57499,
+      "editorial_note": "A $7.7M federal partnership with the Army Corps of Engineers and DHS to build AI digital twins for dam inspection has direct implications for critical infrastructure safety and security.",
+      "impact_category": "Strategic Partnership",
+      "title": "Four years later KU researchers continue their work strengthening American dams",
+      "url": "https://news.ku.edu/news/article/four-years-later-ku-researchers-continue-their-work-strengthening-american-dams",
+      "university": "University of Kansas",
+      "published_date": "2026-08-31"
     },
     {
       "rank": 10,
-      "article_id": 55729,
-      "editorial_note": "Applying AI to search for singularities in the Navier-Stokes equations tackles one of mathematics' seven Millennium Prize problems, illustrating AI's expanding role in fundamental theoretical research.",
+      "article_id": 57606,
+      "editorial_note": "A record 22 R&D 100 Awards, including an AI-enhanced grid intelligence platform, highlights Oak Ridge's continued leadership translating AI research into deployable technology.",
       "impact_category": "Scientific Breakthrough",
-      "title": "From the Lab: How Javier G\u00f3mez-Serrano is using AI to solve the most elusive question in math",
-      "url": "https://www.brown.edu/news/2026-08-26/javier-gomez-serrano-lab",
-      "university": "Brown University",
-      "published_date": "2026-08-26"
+      "title": "ORNL earns record 22 R&D 100 Awards | ORNL",
+      "url": "https://www.ornl.gov/news/ornl-earns-record-22-rd-100-awards",
+      "university": "Oak Ridge National Laboratory",
+      "published_date": "2026-08-28"
     }
   ]
 }
