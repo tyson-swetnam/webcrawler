@@ -1,20 +1,10 @@
 {
-  "generated_at": "2026-09-03T09:11:47",
+  "generated_at": "2026-09-03T15:53:48",
   "picks": [
     {
       "rank": 1,
-      "article_id": 58591,
-      "editorial_note": "RWTH Aachen's HydroGym, published in Nature, is a genuine research breakthrough: an open-source reinforcement-learning platform that lets AI agents actively control fluid dynamics, with direct applications in energy, transportation, and defense systems.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Training AI Agents that Can Actively Control Fluid Dynamics in Energy, Transportation, and Defense | RWTH Aachen University | EN",
-      "url": "https://www.rwth-aachen.de/go/id/bsojmx?lidx=1",
-      "university": "RWTH Aachen University",
-      "published_date": "2026-09-01"
-    },
-    {
-      "rank": 2,
       "article_id": 57693,
-      "editorial_note": "Imperial College London and Thomson Reuters built a $40M frontier AI model by fine-tuning an open-source base, demonstrating a technically novel and far cheaper path to 'sovereign AI' that could reshape how nations and industries build independent AI capacity.",
+      "editorial_note": "A $40M fine-tuned frontier model built jointly by Imperial and Thomson Reuters demonstrates a replicable, lower-cost path to 'sovereign AI' for organizations and nations that can't build frontier models from scratch.",
       "impact_category": "Strategic Partnership",
       "title": "Imperial and Thomson Reuters pioneer new technical approach that could broaden access to sovereign AI",
       "url": "https://www.imperial.ac.uk/news/articles/2026/imperial-and-thomson-reuters-pioneer-new-technical-approach-that-could-broaden-access-to-sovereign-ai/",
@@ -22,9 +12,39 @@
       "published_date": "2026-08-28"
     },
     {
+      "rank": 2,
+      "article_id": 59122,
+      "editorial_note": "HKUST's generalist-specialist collaboration framework pairs a broad medical AI model with lightweight specialists, a promising architecture for making clinical AI both accurate and deployable.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Novel AI Framework Unites Generalist and Specialist Models for Precision Healthcare",
+      "url": "https://hkust.edu.hk/boundless/article/novel-ai-framework-unites-generalist-and-specialist-models-precision-healthcare",
+      "university": "Hong Kong Univ. of Science and Technology",
+      "published_date": "2026-09-01"
+    },
+    {
       "rank": 3,
+      "article_id": 58591,
+      "editorial_note": "An international team's open-source HydroGym platform, published in Nature, gives researchers a new tool to train AI agents to actively control fluid dynamics across energy, transportation, and defense applications.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Training AI Agents that Can Actively Control Fluid Dynamics in Energy, Transportation, and Defense | RWTH Aachen University | EN",
+      "url": "https://www.rwth-aachen.de/go/id/bsojmx?lidx=1",
+      "university": "RWTH Aachen University",
+      "published_date": "2026-09-01"
+    },
+    {
+      "rank": 4,
+      "article_id": 58949,
+      "editorial_note": "NSF's $30M Science and Technology Center for turbulence research, spanning eight institutions including Georgia Tech, marks a major long-term federal investment in predictive modeling with broad energy and aerospace payoffs.",
+      "impact_category": "Major Funding",
+      "title": "New Center Seeks to Unlock the Science of Turbulence for Energy, Flight, and Discovery",
+      "url": "https://news.gatech.edu/news/2026/09/01/new-center-seeks-unlock-science-turbulence-energy-flight-and-discovery",
+      "university": "Georgia Institute of Technology-Main Campus",
+      "published_date": "2026-09-01"
+    },
+    {
+      "rank": 5,
       "article_id": 58402,
-      "editorial_note": "EPFL's framework teaching LLMs to express calibrated uncertainty ('doubt') when proposing experiments is a meaningful methodological advance for AI-driven scientific discovery, addressing a core reliability problem in using AI as a research collaborator.",
+      "editorial_note": "EPFL's method for training LLMs to express calibrated uncertainty tackles a core reliability problem in AI-driven scientific discovery, potentially making AI-proposed experiments more trustworthy.",
       "impact_category": "Scientific Breakthrough",
       "title": "An AI capable of doubt can optimize scientific discovery",
       "url": "https://news.epfl.ch/news/an-ai-capable-of-doubt-can-optimize-scientific-dis/",
@@ -32,9 +52,9 @@
       "published_date": "2026-09-02"
     },
     {
-      "rank": 4,
+      "rank": 6,
       "article_id": 57894,
-      "editorial_note": "UT Austin's fusion seed grants tie into DOE's new Genesis Mission, a major federal initiative applying AI to accelerate fusion energy research \u2014 signaling significant government investment at the intersection of AI and energy security.",
+      "editorial_note": "UT Austin's fusion seed grants, tied to DOE's Genesis Mission, signal growing federal momentum to apply AI toward accelerating fusion energy development.",
       "impact_category": "Major Funding",
       "title": "Fusion Energy Seed Grants Launch New Interdisciplinary Collaborations at UT Austin - UT News",
       "url": "https://news.utexas.edu/2026/08/31/fusion-energy-seed-grants-launch-new-interdisciplinary-collaborations-at-ut-austin/",
@@ -42,39 +62,9 @@
       "published_date": "2026-08-31"
     },
     {
-      "rank": 5,
-      "article_id": 58218,
-      "editorial_note": "A $2.88M DOE award to a University of Houston-led coalition targets AI-driven discovery of critical-mineral alternatives, directly addressing U.S. supply-chain vulnerabilities tied to foreign-controlled rare-earth sources.",
-      "impact_category": "Major Funding",
-      "title": "Department of Energy Awards UH-led Team $2.88M to Use AI to Strengthen America\u2019s Critical Mineral Supply Chain | University of Houston",
-      "url": "https://www.uh.edu/news-events/stories/2026/september/09012026-doe-grant-permanent-magnets.php",
-      "university": "University of Houston",
-      "published_date": "2026-09-01"
-    },
-    {
-      "rank": 6,
-      "article_id": 57499,
-      "editorial_note": "A $7.7M federal partnership between University of Kansas engineers, the Army Corps of Engineers, and DHS is applying AI-integrated digital twins to inspect and strengthen aging American dams \u2014 critical infrastructure with real public-safety stakes.",
-      "impact_category": "Major Funding",
-      "title": "Four years later KU researchers continue their work strengthening American dams",
-      "url": "https://news.ku.edu/news/article/four-years-later-ku-researchers-continue-their-work-strengthening-american-dams",
-      "university": "University of Kansas",
-      "published_date": "2026-08-31"
-    },
-    {
       "rank": 7,
-      "article_id": 58772,
-      "editorial_note": "A $40M Department of Labor grant led by Jobs for the Future, with University of Cincinnati as a partner, will expand AI and semiconductor apprenticeships \u2014 a large-scale federal bet on building the AI-era skilled workforce.",
-      "impact_category": "Major Funding",
-      "title": "Major grant expands apprenticeship opportunities at UC",
-      "url": "https://www.uc.edu/news/articles/2026/08/major-grant-expands-apprenticeship-opportunities-at-uc.html",
-      "university": "University of Cincinnati-Main Campus",
-      "published_date": "2026-08-31"
-    },
-    {
-      "rank": 8,
       "article_id": 58001,
-      "editorial_note": "Kent State's DOE Genesis Mission-funded project to mine 50 years of water-chemistry data into a continental-scale AI framework shows the federal initiative's reach extending into environmental and natural-resource science.",
+      "editorial_note": "A DOE Genesis Mission-funded project at Kent State to mine 50 years of water-chemistry data illustrates how federal AI initiatives are being aimed at long-standing environmental science challenges.",
       "impact_category": "Major Funding",
       "title": "Streams Never Lie; Kent State Magazine; Fall 2026",
       "url": "https://www.kent.edu/sustainability/news/streams-never-lie-kent-state-magazine-fall-2026",
@@ -82,24 +72,34 @@
       "published_date": "2026-08-31"
     },
     {
+      "rank": 8,
+      "article_id": 57499,
+      "editorial_note": "A $7.7M federal partnership between KU, the Army Corps of Engineers, and DHS to build AI-integrated digital twins addresses critical infrastructure safety at scale.",
+      "impact_category": "Major Funding",
+      "title": "Four years later KU researchers continue their work strengthening American dams",
+      "url": "https://news.ku.edu/news/article/four-years-later-ku-researchers-continue-their-work-strengthening-american-dams",
+      "university": "University of Kansas",
+      "published_date": "2026-08-31"
+    },
+    {
       "rank": 9,
+      "article_id": 59047,
+      "editorial_note": "RWTH Aachen's nationwide permit for its autonomous research vehicle 'karl.' is a rare regulatory milestone, making it one of only three German universities authorized for such real-world testing.",
+      "impact_category": "Policy Impact",
+      "title": "RWTH Receives Nationwide Testing Permit for Autonomous Research Vehicle \u201ckarl.\u201d | RWTH Aachen University | EN",
+      "url": "https://www.rwth-aachen.de/go/id/bsolaf?lidx=1",
+      "university": "RWTH Aachen University",
+      "published_date": "2026-09-03"
+    },
+    {
+      "rank": 10,
       "article_id": 58140,
-      "editorial_note": "UNSW Canberra's new large-scale indoor robotics and drone testing arena, one of Australia's biggest, expands the country's autonomous-systems research infrastructure and deepens ties between academia and defense/industry partners.",
+      "editorial_note": "UNSW Canberra's new large-scale robotics and drone testing arena expands one of Australia's most significant pieces of shared research infrastructure for autonomous systems.",
       "impact_category": "Strategic Partnership",
       "title": "New facilities expand innovation ecosystem at UNSW Canberra City",
       "url": "https://www.unsw.edu.au/news/2026/09/new-facilities-expand-innovation-ecosystem-at-unsw-canberra-city",
       "university": "University of New South Wales",
       "published_date": "2026-09-01"
-    },
-    {
-      "rank": 10,
-      "article_id": 56604,
-      "editorial_note": "NJIT's selection as one of just 14 U.S. institutions for NSF's new CyberAI Scholarships-for-Service program reflects a federal policy push to build a pipeline of talent at the AI-cybersecurity intersection.",
-      "impact_category": "Policy Impact",
-      "title": "Federal Scholarships Now Available Where AI and Cybersecurity Meet",
-      "url": "https://news.njit.edu/federal-scholarships-now-available-where-ai-and-cybersecurity-meet",
-      "university": "New Jersey Institute of Technology",
-      "published_date": "2026-08-28"
     }
   ]
 }
