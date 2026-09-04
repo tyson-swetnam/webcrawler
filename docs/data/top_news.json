@@ -1,20 +1,10 @@
 {
-  "generated_at": "2026-09-03T21:09:32",
+  "generated_at": "2026-09-04T03:21:30",
   "picks": [
     {
       "rank": 1,
-      "article_id": 57693,
-      "editorial_note": "Imperial and Thomson Reuters built a $40M frontier-scale model by fine-tuning an open-source base rather than training from scratch, offering a lower-cost technical blueprint for nations and organizations pursuing sovereign AI capability.",
-      "impact_category": "Strategic Partnership",
-      "title": "Imperial and Thomson Reuters pioneer new technical approach that could broaden access to sovereign AI",
-      "url": "https://www.imperial.ac.uk/news/articles/2026/imperial-and-thomson-reuters-pioneer-new-technical-approach-that-could-broaden-access-to-sovereign-ai/",
-      "university": "Imperial College London",
-      "published_date": "2026-08-28"
-    },
-    {
-      "rank": 2,
       "article_id": 59122,
-      "editorial_note": "HKUST's GSCo framework pairs a generalist medical AI with lightweight specialist models, a novel architecture aimed at making precision healthcare AI both more accurate and more deployable.",
+      "editorial_note": "HKUST's GSCo framework pairs a generalist medical AI with lightweight specialists to boost diagnostic precision \u2014 a meaningful architectural advance for clinical AI with direct partnership ties to precision healthcare deployment.",
       "impact_category": "Scientific Breakthrough",
       "title": "Novel AI Framework Unites Generalist and Specialist Models for Precision Healthcare",
       "url": "https://hkust.edu.hk/boundless/article/novel-ai-framework-unites-generalist-and-specialist-models-precision-healthcare",
@@ -22,9 +12,19 @@
       "published_date": "2026-09-01"
     },
     {
+      "rank": 2,
+      "article_id": 58949,
+      "editorial_note": "A new $30M NSF Science and Technology Center spanning eight institutions will advance predictive turbulence modeling for energy and flight \u2014 a large, multi-institutional federal investment in foundational AI-driven physics.",
+      "impact_category": "Major Funding",
+      "title": "New Center Seeks to Unlock the Science of Turbulence for Energy, Flight, and Discovery",
+      "url": "https://news.gatech.edu/news/2026/09/01/new-center-seeks-unlock-science-turbulence-energy-flight-and-discovery",
+      "university": "Georgia Institute of Technology-Main Campus",
+      "published_date": "2026-09-01"
+    },
+    {
       "rank": 3,
       "article_id": 58402,
-      "editorial_note": "EPFL's method for training LLMs to express calibrated uncertainty tackles a core reliability problem in AI-driven scientific discovery, potentially making AI-proposed experiments more trustworthy.",
+      "editorial_note": "EPFL's framework teaches LLMs to express calibrated uncertainty when proposing experiments, a genuine methodological advance that could make AI-driven scientific discovery more trustworthy and efficient.",
       "impact_category": "Scientific Breakthrough",
       "title": "An AI capable of doubt can optimize scientific discovery",
       "url": "https://news.epfl.ch/news/an-ai-capable-of-doubt-can-optimize-scientific-dis/",
@@ -34,7 +34,7 @@
     {
       "rank": 4,
       "article_id": 59026,
-      "editorial_note": "RWTH Aachen's Nature-published HydroGym platform lets reinforcement-learning agents actively control fluid dynamics, opening new AI applications in energy, transportation, and defense engineering.",
+      "editorial_note": "RWTH Aachen's HydroGym, published in Nature, gives researchers a reinforcement-learning platform for AI-controlled fluid dynamics with applications spanning energy, transportation, and defense.",
       "impact_category": "Scientific Breakthrough",
       "title": "Training AI Agents that Can Actively Control Fluid Dynamics in Energy, Transportation, and Defense | RWTH Aachen University | EN",
       "url": "https://www.rwth-aachen.de/go/id/bsojmx?lidx=1",
@@ -43,28 +43,18 @@
     },
     {
       "rank": 5,
-      "article_id": 58949,
-      "editorial_note": "A new $30M NSF Science and Technology Center spanning eight institutions signals major federal investment in AI-driven turbulence modeling, with implications across energy and aerospace.",
+      "article_id": 58218,
+      "editorial_note": "A $2.88M DOE award tasks a University of Houston-led coalition with using AI to secure America's critical mineral and rare-earth magnet supply chain \u2014 a direct example of AI serving national economic security policy.",
       "impact_category": "Major Funding",
-      "title": "New Center Seeks to Unlock the Science of Turbulence for Energy, Flight, and Discovery",
-      "url": "https://news.gatech.edu/news/2026/09/01/new-center-seeks-unlock-science-turbulence-energy-flight-and-discovery",
-      "university": "Georgia Institute of Technology-Main Campus",
+      "title": "Department of Energy Awards UH-led Team $2.88M to Use AI to Strengthen America\u2019s Critical Mineral Supply Chain | University of Houston",
+      "url": "https://www.uh.edu/news-events/stories/2026/september/09012026-doe-grant-permanent-magnets.php",
+      "university": "University of Houston",
       "published_date": "2026-09-01"
     },
     {
       "rank": 6,
-      "article_id": 59200,
-      "editorial_note": "A $40M Department of Labor award will expand registered apprenticeships in AI and semiconductors, a significant workforce-development investment tying federal policy to AI industry needs.",
-      "impact_category": "Major Funding",
-      "title": "Major grant expands apprenticeship opportunities at UC",
-      "url": "https://www.uc.edu/news/articles/2026/08/major-grant-expands-apprenticeship-opportunities-at-uc.html",
-      "university": "University of Cincinnati-Main Campus",
-      "published_date": "2026-08-31"
-    },
-    {
-      "rank": 7,
       "article_id": 57894,
-      "editorial_note": "UT Austin's fusion seed grants tap into DOE's Genesis Mission, which funds AI applications to accelerate fusion energy research, reflecting a growing federal push to pair AI with the energy transition.",
+      "editorial_note": "UT Austin's new fusion energy seed grants, tied to DOE's Genesis Mission applying AI to accelerate fusion research, signal growing federal-academic investment at the intersection of AI and clean energy.",
       "impact_category": "Major Funding",
       "title": "Fusion Energy Seed Grants Launch New Interdisciplinary Collaborations at UT Austin - UT News",
       "url": "https://news.utexas.edu/2026/08/31/fusion-energy-seed-grants-launch-new-interdisciplinary-collaborations-at-ut-austin/",
@@ -72,34 +62,44 @@
       "published_date": "2026-08-31"
     },
     {
-      "rank": 8,
+      "rank": 7,
       "article_id": 57499,
-      "editorial_note": "A $7.7M federal partnership with the Army Corps of Engineers and DHS is building AI-integrated digital twins to inspect and protect America's dam infrastructure, a concrete public-safety application.",
-      "impact_category": "Major Funding",
+      "editorial_note": "A $7.7M partnership between KU, the Army Corps of Engineers, and DHS is building AI-integrated digital twins to inspect and strengthen America's dam infrastructure \u2014 critical infrastructure resilience work.",
+      "impact_category": "Strategic Partnership",
       "title": "Four years later KU researchers continue their work strengthening American dams",
       "url": "https://news.ku.edu/news/article/four-years-later-ku-researchers-continue-their-work-strengthening-american-dams",
       "university": "University of Kansas",
       "published_date": "2026-08-31"
     },
     {
-      "rank": 9,
-      "article_id": 58140,
-      "editorial_note": "UNSW Canberra's new large-scale indoor robotics and drone testing arena, with motion-capture tracking, expands Australia's research infrastructure for autonomous systems development and defense-adjacent partnerships.",
-      "impact_category": "Strategic Partnership",
-      "title": "New facilities expand innovation ecosystem at UNSW Canberra City",
-      "url": "https://www.unsw.edu.au/news/2026/09/new-facilities-expand-innovation-ecosystem-at-unsw-canberra-city",
-      "university": "University of New South Wales",
-      "published_date": "2026-09-01"
-    },
-    {
-      "rank": 10,
+      "rank": 8,
       "article_id": 58869,
-      "editorial_note": "Federal AHRQ cuts cancelled a Johns Hopkins AI project meant to speed cancer diagnosis timelines, illustrating how shifting federal research priorities are directly disrupting AI-driven healthcare work.",
+      "editorial_note": "Federal agency AHRQ's cancellation of a Johns Hopkins AI-driven diagnosis-timeline project illustrates how funding cuts are directly curtailing healthcare AI research, a consequential policy shift for the field.",
       "impact_category": "Policy Impact",
       "title": "Funding cuts hit research focused on making American healthcare safer, more efficient",
       "url": "https://hub.jhu.edu/2026/09/02/agency-for-healthcare-research-and-quality-funding-cancelations/",
       "university": "Johns Hopkins University",
       "published_date": "2026-09-02"
+    },
+    {
+      "rank": 9,
+      "article_id": 59200,
+      "editorial_note": "A $40M Department of Labor award led by Jobs for the Future, with University of Cincinnati as a partner, will expand AI and semiconductor apprenticeships \u2014 a significant workforce-development investment tied to AI economic policy.",
+      "impact_category": "Major Funding",
+      "title": "Major grant expands apprenticeship opportunities at UC",
+      "url": "https://www.uc.edu/news/articles/2026/08/major-grant-expands-apprenticeship-opportunities-at-uc.html",
+      "university": "University of Cincinnati-Main Campus",
+      "published_date": "2026-08-31"
+    },
+    {
+      "rank": 10,
+      "article_id": 58140,
+      "editorial_note": "UNSW Canberra's new large-scale indoor robotics and drone testing arena expands Australia's research infrastructure and strengthens ties between academia and industry/defense robotics partners.",
+      "impact_category": "Strategic Partnership",
+      "title": "New facilities expand innovation ecosystem at UNSW Canberra City",
+      "url": "https://www.unsw.edu.au/news/2026/09/new-facilities-expand-innovation-ecosystem-at-unsw-canberra-city",
+      "university": "University of New South Wales",
+      "published_date": "2026-09-01"
     }
   ]
 }
