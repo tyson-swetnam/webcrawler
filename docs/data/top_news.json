@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-04T15:30:07",
+  "generated_at": "2026-09-04T21:08:38",
   "picks": [
     {
       "rank": 1,
       "article_id": 59600,
-      "editorial_note": "AI systems that design better physics experiments than human researchers, published in Nature, represent a genuine shift in how the scientific method itself can be augmented by AI.",
+      "editorial_note": "An international team led by TU Wien's Mario Krenn showed in Nature that AI can autonomously propose novel physics experiments that outperform human-designed setups, a striking demonstration of AI as a genuine scientific discovery partner rather than just a tool.",
       "impact_category": "Scientific Breakthrough",
       "title": "Artificial Intelligence Suggests New Physics Experiments",
       "url": "https://www.tuwien.at/en/tu-wien/news/news-articles/news/kuenstliche-intelligenz-schlaegt-neue-physik-experimente-vor",
@@ -14,7 +14,7 @@
     {
       "rank": 2,
       "article_id": 59486,
-      "editorial_note": "HydroGym, published in Nature by an international team led by RWTH Aachen, gives AI agents real-time control over fluid dynamics with direct applications spanning energy, transportation, and defense.",
+      "editorial_note": "RWTH Aachen's 'HydroGym' reinforcement-learning platform, published in Nature, gives AI agents active control over fluid dynamics with direct applications to energy, transportation, and defense systems.",
       "impact_category": "Scientific Breakthrough",
       "title": "Training AI Agents that Can Actively Control Fluid Dynamics in Energy, Transportation, and Defense | RWTH Aachen University | EN",
       "url": "https://www.rwth-aachen.de/go/id/bsojmx?lidx=1",
@@ -23,18 +23,8 @@
     },
     {
       "rank": 3,
-      "article_id": 58402,
-      "editorial_note": "EPFL's framework for AI that expresses calibrated 'doubt' addresses a core reliability gap in AI-driven scientific discovery, improving how models guide experimental decisions.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "An AI capable of doubt can optimize scientific discovery",
-      "url": "https://news.epfl.ch/news/an-ai-capable-of-doubt-can-optimize-scientific-dis/",
-      "university": "EPFL",
-      "published_date": "2026-09-02"
-    },
-    {
-      "rank": 4,
       "article_id": 59122,
-      "editorial_note": "HKUST's GSCo framework pairs a generalist medical AI with specialist models for precision healthcare, a scalable architecture with high scientific and translational significance.",
+      "editorial_note": "HKUST's GSCo framework pairs a generalist medical AI with lightweight specialist models to improve precision healthcare, a scalable architecture that could reshape how clinical AI systems are built.",
       "impact_category": "Scientific Breakthrough",
       "title": "Novel AI Framework Unites Generalist and Specialist Models for Precision Healthcare",
       "url": "https://hkust.edu.hk/boundless/article/novel-ai-framework-unites-generalist-and-specialist-models-precision-healthcare",
@@ -42,9 +32,19 @@
       "published_date": "2026-09-01"
     },
     {
+      "rank": 4,
+      "article_id": 58402,
+      "editorial_note": "EPFL researchers trained LLMs to express calibrated 'doubt' when proposing experiments, a step toward AI systems that know the limits of their own scientific reasoning and can better guide discovery.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "An AI capable of doubt can optimize scientific discovery",
+      "url": "https://news.epfl.ch/news/an-ai-capable-of-doubt-can-optimize-scientific-dis/",
+      "university": "EPFL",
+      "published_date": "2026-09-02"
+    },
+    {
       "rank": 5,
       "article_id": 58949,
-      "editorial_note": "A new $30 million NSF Science and Technology Center, with Georgia Tech among eight institutions, marks a major federal investment in AI-driven turbulence modeling for energy and flight.",
+      "editorial_note": "NSF's $30 million Science and Technology Center, led by Michigan State with Georgia Tech among eight partner institutions, marks a major federal investment in AI-driven turbulence modeling with implications for energy and flight.",
       "impact_category": "Major Funding",
       "title": "New Center Seeks to Unlock the Science of Turbulence for Energy, Flight, and Discovery",
       "url": "https://news.gatech.edu/news/2026/09/01/new-center-seeks-unlock-science-turbulence-energy-flight-and-discovery",
@@ -53,18 +53,18 @@
     },
     {
       "rank": 6,
-      "article_id": 57894,
-      "editorial_note": "UT Austin's fusion seed grants tie into DOE's Genesis Mission, a national push to use AI to accelerate fusion energy research amid a broader investment boom.",
+      "article_id": 59663,
+      "editorial_note": "A $40 million Department of Labor apprenticeship grant, with University of Cincinnati as a partner, signals serious federal investment in building the skilled workforce pipeline AI, semiconductor, and nuclear industries will need.",
       "impact_category": "Major Funding",
-      "title": "Fusion Energy Seed Grants Launch New Interdisciplinary Collaborations at UT Austin - UT News",
-      "url": "https://news.utexas.edu/2026/08/31/fusion-energy-seed-grants-launch-new-interdisciplinary-collaborations-at-ut-austin/",
-      "university": "The University of Texas at Austin",
+      "title": "Major grant expands apprenticeship opportunities at UC",
+      "url": "https://www.uc.edu/news/articles/2026/08/major-grant-expands-apprenticeship-opportunities-at-uc.html",
+      "university": "University of Cincinnati-Main Campus",
       "published_date": "2026-08-31"
     },
     {
       "rank": 7,
       "article_id": 58218,
-      "editorial_note": "A $2.88M DOE award to a University of Houston-led team uses AI to strengthen domestic critical mineral supply chains, addressing a strategic national security priority.",
+      "editorial_note": "A $2.88 million DOE award to a University of Houston-led coalition applies AI to a strategic national security problem: reducing reliance on foreign-controlled critical mineral and rare-earth magnet supply chains.",
       "impact_category": "Major Funding",
       "title": "Department of Energy Awards UH-led Team $2.88M to Use AI to Strengthen America\u2019s Critical Mineral Supply Chain | University of Houston",
       "url": "https://www.uh.edu/news-events/stories/2026/september/09012026-doe-grant-permanent-magnets.php",
@@ -74,7 +74,7 @@
     {
       "rank": 8,
       "article_id": 57499,
-      "editorial_note": "A $7.7 million partnership between KU, the Army Corps of Engineers, and DHS applies AI-integrated digital twins to inspecting American dams, a critical infrastructure safety application.",
+      "editorial_note": "A $7.7 million partnership between University of Kansas engineers, the Army Corps of Engineers, and DHS is deploying AI-integrated digital twins to improve inspection of aging American dams, a direct application of AI to critical infrastructure safety.",
       "impact_category": "Strategic Partnership",
       "title": "Four years later KU researchers continue their work strengthening American dams",
       "url": "https://news.ku.edu/news/article/four-years-later-ku-researchers-continue-their-work-strengthening-american-dams",
@@ -83,23 +83,23 @@
     },
     {
       "rank": 9,
-      "article_id": 59200,
-      "editorial_note": "A $40 million Department of Labor grant led by Jobs for the Future, with University of Cincinnati as a partner, expands AI and semiconductor apprenticeship pathways at national scale.",
-      "impact_category": "Major Funding",
-      "title": "Major grant expands apprenticeship opportunities at UC",
-      "url": "https://www.uc.edu/news/articles/2026/08/major-grant-expands-apprenticeship-opportunities-at-uc.html",
-      "university": "University of Cincinnati-Main Campus",
+      "article_id": 57894,
+      "editorial_note": "UT Austin's new fusion energy seed grants tie into DOE's Genesis Mission, which funds using AI to accelerate fusion research, reflecting growing federal-academic coordination around AI for energy breakthroughs.",
+      "impact_category": "Strategic Partnership",
+      "title": "Fusion Energy Seed Grants Launch New Interdisciplinary Collaborations at UT Austin - UT News",
+      "url": "https://news.utexas.edu/2026/08/31/fusion-energy-seed-grants-launch-new-interdisciplinary-collaborations-at-ut-austin/",
+      "university": "The University of Texas at Austin",
       "published_date": "2026-08-31"
     },
     {
       "rank": 10,
-      "article_id": 59106,
-      "editorial_note": "Helmholtz researchers' public argument for European-built open frontier AI models reflects a growing policy debate over AI sovereignty and dependence on US and Chinese models.",
+      "article_id": 58869,
+      "editorial_note": "Federal agency AHRQ's cancellation of dozens of healthcare research grants, including a Johns Hopkins AI project aimed at speeding lung cancer diagnosis, illustrates how shifting federal funding priorities are directly disrupting AI-driven medical research.",
       "impact_category": "Policy Impact",
-      "title": "Why we in Germany and Europe need to build our own open frontier models",
-      "url": "https://www.helmholtz.de/en/newsroom/article/why-we-in-germany-and-europe-need-to-build-our-own-open-frontier-models/",
-      "university": "Helmholtz Association",
-      "published_date": "2026-09-03"
+      "title": "Funding cuts hit research focused on making American healthcare safer, more efficient",
+      "url": "https://hub.jhu.edu/2026/09/02/agency-for-healthcare-research-and-quality-funding-cancelations/",
+      "university": "Johns Hopkins University",
+      "published_date": "2026-09-02"
     }
   ]
 }
