@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-05T03:20:22",
+  "generated_at": "2026-09-05T09:09:35",
   "picks": [
     {
       "rank": 1,
       "article_id": 59600,
-      "editorial_note": "An international team led by TU Wien physicist Mario Krenn showed in Nature that AI can design novel physics experiments that outperform human-designed setups, a striking demonstration of AI accelerating fundamental science rather than just analyzing its outputs.",
+      "editorial_note": "AI that autonomously proposes novel physics experiments outperforming human-designed setups, published in Nature, points toward AI as a genuine partner in scientific discovery rather than just a data-analysis tool.",
       "impact_category": "Scientific Breakthrough",
       "title": "Artificial Intelligence Suggests New Physics Experiments",
       "url": "https://www.tuwien.at/en/tu-wien/news/news-articles/news/kuenstliche-intelligenz-schlaegt-neue-physik-experimente-vor",
@@ -14,7 +14,7 @@
     {
       "rank": 2,
       "article_id": 59486,
-      "editorial_note": "RWTH Aachen's Nature-published 'HydroGym' platform trains reinforcement-learning agents to actively control fluid dynamics, opening a path to AI control systems for energy, transportation, and defense applications far beyond the lab.",
+      "editorial_note": "HydroGym, an international RL platform for actively controlling fluid dynamics published in Nature, opens a path to AI-optimized energy, transportation, and defense systems where flow control is a major engineering bottleneck.",
       "impact_category": "Scientific Breakthrough",
       "title": "Training AI Agents that Can Actively Control Fluid Dynamics in Energy, Transportation, and Defense | RWTH Aachen University | EN",
       "url": "https://www.rwth-aachen.de/go/id/bsojmx?lidx=1",
@@ -23,18 +23,8 @@
     },
     {
       "rank": 3,
-      "article_id": 58402,
-      "editorial_note": "EPFL's framework for training AI to express calibrated 'doubt' addresses a core reliability problem in AI-driven science, letting models flag uncertainty rather than confidently propose bad experiments.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "An AI capable of doubt can optimize scientific discovery",
-      "url": "https://news.epfl.ch/news/an-ai-capable-of-doubt-can-optimize-scientific-dis/",
-      "university": "EPFL",
-      "published_date": "2026-09-02"
-    },
-    {
-      "rank": 4,
       "article_id": 59122,
-      "editorial_note": "HKUST's GSCo framework, pairing a generalist medical AI with lightweight specialists, tackles the accuracy-versus-efficiency tradeoff that has limited clinical deployment of large medical AI models.",
+      "editorial_note": "HKUST's generalist-specialist AI framework for precision healthcare represents a novel architecture for combining broad medical reasoning with targeted diagnostic accuracy, with clear clinical translation potential.",
       "impact_category": "Scientific Breakthrough",
       "title": "Novel AI Framework Unites Generalist and Specialist Models for Precision Healthcare",
       "url": "https://hkust.edu.hk/boundless/article/novel-ai-framework-unites-generalist-and-specialist-models-precision-healthcare",
@@ -42,9 +32,9 @@
       "published_date": "2026-09-01"
     },
     {
-      "rank": 5,
+      "rank": 4,
       "article_id": 58949,
-      "editorial_note": "A new $30 million NSF Science and Technology Center spanning eight institutions signals sustained federal investment in AI-driven turbulence modeling, with implications for energy efficiency and flight design.",
+      "editorial_note": "A $30 million NSF Science and Technology Center dedicated to turbulence modeling signals sustained federal investment in foundational AI-driven physics research with payoffs across energy and aviation.",
       "impact_category": "Major Funding",
       "title": "New Center Seeks to Unlock the Science of Turbulence for Energy, Flight, and Discovery",
       "url": "https://news.gatech.edu/news/2026/09/01/new-center-seeks-unlock-science-turbulence-energy-flight-and-discovery",
@@ -52,19 +42,29 @@
       "published_date": "2026-09-01"
     },
     {
-      "rank": 6,
+      "rank": 5,
       "article_id": 57894,
-      "editorial_note": "UT Austin's fusion seed grants ride a wave of investment tied to DOE's Genesis Mission, which is explicitly funding AI to accelerate fusion research \u2014 a notable case of federal policy directing AI toward energy goals.",
-      "impact_category": "Major Funding",
+      "editorial_note": "UT Austin's fusion seed grants, tied to DOE's new Genesis Mission applying AI to accelerate fusion research, reflect a significant federal policy push linking AI directly to the energy transition.",
+      "impact_category": "Policy Impact",
       "title": "Fusion Energy Seed Grants Launch New Interdisciplinary Collaborations at UT Austin - UT News",
       "url": "https://news.utexas.edu/2026/08/31/fusion-energy-seed-grants-launch-new-interdisciplinary-collaborations-at-ut-austin/",
       "university": "The University of Texas at Austin",
       "published_date": "2026-08-31"
     },
     {
+      "rank": 6,
+      "article_id": 57499,
+      "editorial_note": "A $7.7 million partnership between Kansas engineers, the Army Corps of Engineers, and DHS to build AI digital twins for dam inspection addresses critical infrastructure safety with direct national security stakes.",
+      "impact_category": "Strategic Partnership",
+      "title": "Four years later KU researchers continue their work strengthening American dams",
+      "url": "https://news.ku.edu/news/article/four-years-later-ku-researchers-continue-their-work-strengthening-american-dams",
+      "university": "University of Kansas",
+      "published_date": "2026-08-31"
+    },
+    {
       "rank": 7,
       "article_id": 58218,
-      "editorial_note": "A $2.88 million DOE award to a University of Houston-led team applies AI to reduce U.S. reliance on foreign-controlled rare-earth supply chains, tying AI research directly to critical national economic security priorities.",
+      "editorial_note": "DOE's $2.88 million award for AI-driven discovery of critical-mineral-free magnets tackles a strategic supply-chain vulnerability tied to foreign-controlled rare earth sources.",
       "impact_category": "Major Funding",
       "title": "Department of Energy Awards UH-led Team $2.88M to Use AI to Strengthen America\u2019s Critical Mineral Supply Chain | University of Houston",
       "url": "https://www.uh.edu/news-events/stories/2026/september/09012026-doe-grant-permanent-magnets.php",
@@ -73,33 +73,33 @@
     },
     {
       "rank": 8,
-      "article_id": 57499,
-      "editorial_note": "A four-year, $7.7 million partnership between Kansas engineers, the Army Corps of Engineers, and DHS to build AI-integrated digital twins of dams shows sustained cross-agency collaboration on critical infrastructure safety.",
-      "impact_category": "Strategic Partnership",
-      "title": "Four years later KU researchers continue their work strengthening American dams",
-      "url": "https://news.ku.edu/news/article/four-years-later-ku-researchers-continue-their-work-strengthening-american-dams",
-      "university": "University of Kansas",
-      "published_date": "2026-08-31"
+      "article_id": 58402,
+      "editorial_note": "EPFL's framework for AI that expresses calibrated 'doubt' when proposing experiments is a meaningful methodological advance for making AI-assisted science more trustworthy and efficient.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "An AI capable of doubt can optimize scientific discovery",
+      "url": "https://news.epfl.ch/news/an-ai-capable-of-doubt-can-optimize-scientific-dis/",
+      "university": "EPFL",
+      "published_date": "2026-09-02"
     },
     {
       "rank": 9,
+      "article_id": 58140,
+      "editorial_note": "UNSW Canberra's new large-scale robotics and drone testing arena, built with industry and government partners, expands critical infrastructure for autonomous systems research in the Asia-Pacific region.",
+      "impact_category": "Strategic Partnership",
+      "title": "New facilities expand innovation ecosystem at UNSW Canberra City",
+      "url": "https://www.unsw.edu.au/news/2026/09/new-facilities-expand-innovation-ecosystem-at-unsw-canberra-city",
+      "university": "University of New South Wales",
+      "published_date": "2026-09-01"
+    },
+    {
+      "rank": 10,
       "article_id": 58001,
-      "editorial_note": "Kent State's DOE Genesis Mission-funded project to mine 50 years of water-chemistry data into a continental-scale AI framework illustrates how federal AI initiatives are being extended to environmental monitoring.",
-      "impact_category": "Major Funding",
+      "editorial_note": "A DOE Genesis Mission-funded project mining 50 years of water-chemistry data illustrates how the federal government's flagship AI-for-science initiative is being applied to long-standing environmental monitoring challenges.",
+      "impact_category": "Policy Impact",
       "title": "Streams Never Lie; Kent State Magazine; Fall 2026",
       "url": "https://www.kent.edu/sustainability/news/streams-never-lie-kent-state-magazine-fall-2026",
       "university": "Kent State University at Kent",
       "published_date": "2026-08-31"
-    },
-    {
-      "rank": 10,
-      "article_id": 58869,
-      "editorial_note": "Federal cancellation of AHRQ healthcare research grants, including a Johns Hopkins AI project aimed at speeding cancer diagnosis, illustrates how shifting federal funding policy can abruptly halt promising applied-AI work.",
-      "impact_category": "Policy Impact",
-      "title": "Funding cuts hit research focused on making American healthcare safer, more efficient",
-      "url": "https://hub.jhu.edu/2026/09/02/agency-for-healthcare-research-and-quality-funding-cancelations/",
-      "university": "Johns Hopkins University",
-      "published_date": "2026-09-02"
     }
   ]
 }
