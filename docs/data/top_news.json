@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-07T03:23:01",
+  "generated_at": "2026-09-07T09:13:41",
   "picks": [
     {
       "rank": 1,
       "article_id": 59600,
-      "editorial_note": "AI systems proposing novel physics experiments that outperform human-designed setups \u2014 published in Nature \u2014 signals AI moving from tool to genuine scientific collaborator in fundamental research.",
+      "editorial_note": "Published in Nature, this work shows AI can autonomously propose novel physics experiments that outperform human-designed setups \u2014 a rare case of AI advancing the scientific method itself rather than just accelerating existing workflows.",
       "impact_category": "Scientific Breakthrough",
       "title": "Artificial Intelligence Suggests New Physics Experiments",
       "url": "https://www.tuwien.at/en/tu-wien/news/news-articles/news/kuenstliche-intelligenz-schlaegt-neue-physik-experimente-vor",
@@ -14,7 +14,7 @@
     {
       "rank": 2,
       "article_id": 60088,
-      "editorial_note": "HydroGym, an international reinforcement-learning platform for controlling fluid dynamics with embedded physics knowledge, published in Nature, opens a path to AI-optimized energy, transportation, and defense systems.",
+      "editorial_note": "An international team's Nature-published HydroGym platform trains physics-informed RL agents to actively control fluid dynamics, with direct applications spanning energy, transportation, and defense systems.",
       "impact_category": "Scientific Breakthrough",
       "title": "Training AI Agents that Can Actively Control Fluid Dynamics in Energy, Transportation, and Defense | RWTH Aachen University | EN",
       "url": "https://www.rwth-aachen.de/go/id/bsojmx?lidx=1",
@@ -23,18 +23,8 @@
     },
     {
       "rank": 3,
-      "article_id": 58402,
-      "editorial_note": "EPFL's framework for training AI to express calibrated 'doubt' addresses a core reliability gap in AI-driven science, improving how models guide costly experimental decisions.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "An AI capable of doubt can optimize scientific discovery",
-      "url": "https://news.epfl.ch/news/an-ai-capable-of-doubt-can-optimize-scientific-dis/",
-      "university": "EPFL",
-      "published_date": "2026-09-02"
-    },
-    {
-      "rank": 4,
       "article_id": 59122,
-      "editorial_note": "HKUST's Generalist-Specialist Collaboration framework pairs a broad medical AI model with lightweight specialists for precision diagnosis, a scalable architecture pattern with direct clinical relevance.",
+      "editorial_note": "HKUST's GSCo framework pairs a generalist medical AI with lightweight specialist models, a scalable architecture pattern for precision healthcare that also reflects strong cross-institutional collaboration.",
       "impact_category": "Scientific Breakthrough",
       "title": "Novel AI Framework Unites Generalist and Specialist Models for Precision Healthcare",
       "url": "https://hkust.edu.hk/boundless/article/novel-ai-framework-unites-generalist-and-specialist-models-precision-healthcare",
@@ -42,9 +32,9 @@
       "published_date": "2026-09-01"
     },
     {
-      "rank": 5,
+      "rank": 4,
       "article_id": 58949,
-      "editorial_note": "A new $30M NSF Science and Technology Center spanning eight institutions to advance AI-driven turbulence modeling represents a major, sustained federal investment with cross-sector applications in energy and flight.",
+      "editorial_note": "A $30 million NSF Science and Technology Center, led by Michigan State with Georgia Tech and others, represents a major sustained federal investment in predictive modeling for turbulence \u2014 foundational science with energy and aerospace payoffs.",
       "impact_category": "Major Funding",
       "title": "New Center Seeks to Unlock the Science of Turbulence for Energy, Flight, and Discovery",
       "url": "https://news.gatech.edu/news/2026/09/01/new-center-seeks-unlock-science-turbulence-energy-flight-and-discovery",
@@ -52,29 +42,19 @@
       "published_date": "2026-09-01"
     },
     {
+      "rank": 5,
+      "article_id": 58402,
+      "editorial_note": "EPFL's framework for training LLMs to express calibrated uncertainty tackles a core reliability problem in AI-driven science, potentially making automated experimental design trustworthy enough for real lab use.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "An AI capable of doubt can optimize scientific discovery",
+      "url": "https://news.epfl.ch/news/an-ai-capable-of-doubt-can-optimize-scientific-dis/",
+      "university": "EPFL",
+      "published_date": "2026-09-02"
+    },
+    {
       "rank": 6,
-      "article_id": 58218,
-      "editorial_note": "A $2.88M DOE award to a University of Houston-led team for AI-driven discovery of critical-mineral alternatives ties directly to national supply-chain security priorities.",
-      "impact_category": "Major Funding",
-      "title": "Department of Energy Awards UH-led Team $2.88M to Use AI to Strengthen America\u2019s Critical Mineral Supply Chain | University of Houston",
-      "url": "https://www.uh.edu/news-events/stories/2026/september/09012026-doe-grant-permanent-magnets.php",
-      "university": "University of Houston",
-      "published_date": "2026-09-01"
-    },
-    {
-      "rank": 7,
-      "article_id": 59106,
-      "editorial_note": "A prominent Helmholtz viewpoint arguing Germany and Europe must build sovereign open frontier AI models reflects a growing policy debate over AI independence from US and Chinese providers.",
-      "impact_category": "Policy Impact",
-      "title": "Why we in Germany and Europe need to build our own open frontier models",
-      "url": "https://www.helmholtz.de/en/newsroom/article/why-we-in-germany-and-europe-need-to-build-our-own-open-frontier-models/",
-      "university": "Helmholtz Association",
-      "published_date": "2026-09-03"
-    },
-    {
-      "rank": 8,
       "article_id": 60094,
-      "editorial_note": "RWTH Aachen's nationwide German permit for its Level 4 autonomous research vehicle marks a concrete regulatory milestone enabling real-world testing of open-source autonomous driving software.",
+      "editorial_note": "RWTH Aachen's nationwide German permit for its Level 4 autonomous research vehicle marks a concrete regulatory milestone for open-source autonomous driving platforms, signaling growing government confidence in AI-driven mobility.",
       "impact_category": "Policy Impact",
       "title": "RWTH Receives Nationwide Testing Permit for Autonomous Research Vehicle \u201ckarl.\u201d | RWTH Aachen University | EN",
       "url": "https://www.rwth-aachen.de/go/id/bsolaf?lidx=1",
@@ -82,19 +62,39 @@
       "published_date": "2026-09-03"
     },
     {
-      "rank": 9,
-      "article_id": 58140,
-      "editorial_note": "UNSW Canberra's new large-scale robotics and drone testing facilities strengthen a hub connecting university research with industry and government robotics programs.",
-      "impact_category": "Strategic Partnership",
-      "title": "New facilities expand innovation ecosystem at UNSW Canberra City",
-      "url": "https://www.unsw.edu.au/news/2026/09/new-facilities-expand-innovation-ecosystem-at-unsw-canberra-city",
-      "university": "University of New South Wales",
+      "rank": 7,
+      "article_id": 58869,
+      "editorial_note": "Federal cancellation of AHRQ healthcare research grants, including a Johns Hopkins AI project on lung cancer diagnosis timelines, illustrates how funding policy shifts are directly disrupting applied AI research with patient-safety implications.",
+      "impact_category": "Policy Impact",
+      "title": "Funding cuts hit research focused on making American healthcare safer, more efficient",
+      "url": "https://hub.jhu.edu/2026/09/02/agency-for-healthcare-research-and-quality-funding-cancelations/",
+      "university": "Johns Hopkins University",
+      "published_date": "2026-09-02"
+    },
+    {
+      "rank": 8,
+      "article_id": 58218,
+      "editorial_note": "A $2.88 million DOE award to a University of Houston-led coalition targets AI-driven discovery of critical-mineral-free magnets, tying AI research directly to U.S. supply chain security policy.",
+      "impact_category": "Major Funding",
+      "title": "Department of Energy Awards UH-led Team $2.88M to Use AI to Strengthen America\u2019s Critical Mineral Supply Chain | University of Houston",
+      "url": "https://www.uh.edu/news-events/stories/2026/september/09012026-doe-grant-permanent-magnets.php",
+      "university": "University of Houston",
       "published_date": "2026-09-01"
+    },
+    {
+      "rank": 9,
+      "article_id": 59106,
+      "editorial_note": "A pointed viewpoint from Helmholtz researchers arguing Germany and Europe must build sovereign open frontier AI models reflects a growing policy debate over AI dependence on U.S. and Chinese models.",
+      "impact_category": "Policy Impact",
+      "title": "Why we in Germany and Europe need to build our own open frontier models",
+      "url": "https://www.helmholtz.de/en/newsroom/article/why-we-in-germany-and-europe-need-to-build-our-own-open-frontier-models/",
+      "university": "Helmholtz Association",
+      "published_date": "2026-09-03"
     },
     {
       "rank": 10,
       "article_id": 59760,
-      "editorial_note": "A $1.2M NSF grant uniting USF, Purdue, and UT Dallas to build quantum-resistant, AI-enabled wireless security addresses an urgent infrastructure vulnerability as quantum computing advances.",
+      "editorial_note": "A $1.2 million NSF grant spanning USF, Purdue, and UT Dallas addresses quantum-resistant, AI-enabled security for next-generation wireless networks, pairing near-term funding with long-horizon infrastructure security relevance.",
       "impact_category": "Major Funding",
       "title": "USF faculty secure $1.2M NSF grant to advance quantum-secure, AI-enabled wireless networks",
       "url": "https://www.usf.edu/business/news/2026/09-04-usf-faculty-secure-grant-for-quantum-secure-ai-technology.aspx",
