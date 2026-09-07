@@ -1,20 +1,10 @@
 {
-  "generated_at": "2026-09-07T15:26:51",
+  "generated_at": "2026-09-07T21:09:00",
   "picks": [
     {
       "rank": 1,
-      "article_id": 59600,
-      "editorial_note": "AI system designed by Mario Krenn's team proposes novel physics experiments that outperform human-designed setups, published in Nature \u2014 a striking demonstration of AI accelerating fundamental scientific discovery itself.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Artificial Intelligence Suggests New Physics Experiments",
-      "url": "https://www.tuwien.at/en/tu-wien/news/news-articles/news/kuenstliche-intelligenz-schlaegt-neue-physik-experimente-vor",
-      "university": "TU Wien",
-      "published_date": "2026-09-02"
-    },
-    {
-      "rank": 2,
       "article_id": 60319,
-      "editorial_note": "RWTH Aachen's international team published 'HydroGym' in Nature, an RL platform that trains AI agents to control fluid dynamics across energy, transportation, and defense applications \u2014 a physics-informed breakthrough with broad engineering reach.",
+      "editorial_note": "An international team led by RWTH Aachen published in Nature a reinforcement-learning platform ('HydroGym') that trains AI agents to actively control fluid dynamics, with direct applications spanning energy, transportation, and defense engineering.",
       "impact_category": "Scientific Breakthrough",
       "title": "Training AI Agents that Can Actively Control Fluid Dynamics in Energy, Transportation, and Defense | RWTH Aachen University | EN",
       "url": "https://www.rwth-aachen.de/go/id/bsojmx?lidx=1",
@@ -22,9 +12,19 @@
       "published_date": "2026-09-01"
     },
     {
+      "rank": 2,
+      "article_id": 59600,
+      "editorial_note": "TU Wien-led research published in Nature demonstrates AI systems that can propose novel physics experiments outperforming human-designed setups, a significant step toward AI-driven scientific discovery.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Artificial Intelligence Suggests New Physics Experiments",
+      "url": "https://www.tuwien.at/en/tu-wien/news/news-articles/news/kuenstliche-intelligenz-schlaegt-neue-physik-experimente-vor",
+      "university": "TU Wien",
+      "published_date": "2026-09-02"
+    },
+    {
       "rank": 3,
       "article_id": 59122,
-      "editorial_note": "HKUST's GSCo framework pairs a generalist medical AI with lightweight specialist models to improve precision healthcare diagnostics, a meaningful architectural advance for deploying AI safely in clinical settings.",
+      "editorial_note": "HKUST's new Generalist-Specialist Collaboration framework pairs a broad medical AI model with lightweight specialist models, a notable architectural advance for precision healthcare AI with strong partnership potential.",
       "impact_category": "Scientific Breakthrough",
       "title": "Novel AI Framework Unites Generalist and Specialist Models for Precision Healthcare",
       "url": "https://hkust.edu.hk/boundless/article/novel-ai-framework-unites-generalist-and-specialist-models-precision-healthcare",
@@ -34,7 +34,7 @@
     {
       "rank": 4,
       "article_id": 58402,
-      "editorial_note": "EPFL researchers trained LLMs to express calibrated uncertainty when proposing experiments, improving automated scientific discovery pipelines \u2014 a step toward AI systems that know what they don't know.",
+      "editorial_note": "EPFL researchers trained large language models to express calibrated uncertainty when proposing experiments, a meaningful methodological advance for AI-accelerated scientific discovery.",
       "impact_category": "Scientific Breakthrough",
       "title": "An AI capable of doubt can optimize scientific discovery",
       "url": "https://news.epfl.ch/news/an-ai-capable-of-doubt-can-optimize-scientific-dis/",
@@ -44,7 +44,7 @@
     {
       "rank": 5,
       "article_id": 58949,
-      "editorial_note": "NSF is funding a new $30 million Science and Technology Center, led by Michigan State with Georgia Tech among eight partners, to advance predictive modeling of turbulence \u2014 a major multi-institution investment in foundational science.",
+      "editorial_note": "NSF is funding a new $30 million Science and Technology Center, led by Michigan State with Georgia Tech among eight partner institutions, to advance predictive modeling of turbulence \u2014 a major multi-institution investment in foundational science.",
       "impact_category": "Major Funding",
       "title": "New Center Seeks to Unlock the Science of Turbulence for Energy, Flight, and Discovery",
       "url": "https://news.gatech.edu/news/2026/09/01/new-center-seeks-unlock-science-turbulence-energy-flight-and-discovery",
@@ -54,7 +54,7 @@
     {
       "rank": 6,
       "article_id": 58218,
-      "editorial_note": "The Department of Energy awarded a University of Houston-led coalition $2.88M to use AI for discovering next-generation permanent magnets, directly targeting America's critical mineral supply chain vulnerabilities.",
+      "editorial_note": "A $2.88 million DOE award to a University of Houston-led coalition applies AI to strengthen the domestic critical minerals supply chain, tying university research directly to national economic security policy.",
       "impact_category": "Major Funding",
       "title": "Department of Energy Awards UH-led Team $2.88M to Use AI to Strengthen America\u2019s Critical Mineral Supply Chain | University of Houston",
       "url": "https://www.uh.edu/news-events/stories/2026/september/09012026-doe-grant-permanent-magnets.php",
@@ -63,28 +63,8 @@
     },
     {
       "rank": 7,
-      "article_id": 60347,
-      "editorial_note": "RWTH Aachen spin-off Black Semiconductor won a major engineering award for graphene-based chips that transmit data optically instead of electrically, a technology transfer success with real commercialization momentum.",
-      "impact_category": "Strategic Partnership",
-      "title": "Light Instead of Electricity: Aachen Engineering Award for a Technological Breakthrough | RWTH Aachen University | EN",
-      "url": "https://www.rwth-aachen.de/go/id/bsonxl?lidx=1",
-      "university": "RWTH Aachen University",
-      "published_date": "2026-09-06"
-    },
-    {
-      "rank": 8,
-      "article_id": 59106,
-      "editorial_note": "Helmholtz researchers argue Germany and Europe must build sovereign open frontier AI models rather than depend on US and Chinese systems \u2014 a policy stance with direct implications for European AI research strategy.",
-      "impact_category": "Policy Impact",
-      "title": "Why we in Germany and Europe need to build our own open frontier models",
-      "url": "https://www.helmholtz.de/en/newsroom/article/why-we-in-germany-and-europe-need-to-build-our-own-open-frontier-models/",
-      "university": "Helmholtz Association",
-      "published_date": "2026-09-03"
-    },
-    {
-      "rank": 9,
       "article_id": 60333,
-      "editorial_note": "RWTH Aachen's autonomous research vehicle 'karl.' received a nationwide German testing permit, a regulatory milestone that opens the door to broader public-road autonomous vehicle research in Europe.",
+      "editorial_note": "RWTH Aachen's autonomous research vehicle 'karl.' received a nationwide German testing permit, a regulatory milestone that signals growing government acceptance of AI-driven autonomous vehicle research on public roads.",
       "impact_category": "Policy Impact",
       "title": "RWTH Receives Nationwide Testing Permit for Autonomous Research Vehicle \u201ckarl.\u201d | RWTH Aachen University | EN",
       "url": "https://www.rwth-aachen.de/go/id/bsolaf?lidx=1",
@@ -92,14 +72,34 @@
       "published_date": "2026-09-03"
     },
     {
+      "rank": 8,
+      "article_id": 59760,
+      "editorial_note": "A $1.2 million NSF grant to USF, Purdue, and UT Dallas will develop quantum-resistant, AI-enabled security for next-generation wireless networks, addressing an emerging national infrastructure vulnerability.",
+      "impact_category": "Major Funding",
+      "title": "USF faculty secure $1.2M NSF grant to advance quantum-secure, AI-enabled wireless networks",
+      "url": "https://www.usf.edu/business/news/2026/09-04-usf-faculty-secure-grant-for-quantum-secure-ai-technology.aspx",
+      "university": "University of South Florida",
+      "published_date": "2026-09-04"
+    },
+    {
+      "rank": 9,
+      "article_id": 58140,
+      "editorial_note": "UNSW Canberra City's launch of major new robotics and drone testing facilities strengthens ties between academia, industry, and government in autonomous systems research.",
+      "impact_category": "Strategic Partnership",
+      "title": "New facilities expand innovation ecosystem at UNSW Canberra City",
+      "url": "https://www.unsw.edu.au/news/2026/09/new-facilities-expand-innovation-ecosystem-at-unsw-canberra-city",
+      "university": "University of New South Wales",
+      "published_date": "2026-09-01"
+    },
+    {
       "rank": 10,
-      "article_id": 58869,
-      "editorial_note": "Federal agency AHRQ cancelled a Johns Hopkins AI-driven healthcare research grant amid broader funding cuts, illustrating how shifting federal policy is directly disrupting AI research aimed at improving diagnosis timelines.",
+      "article_id": 59106,
+      "editorial_note": "A viewpoint from Helmholtz researchers arguing Germany and Europe must build independent open frontier AI models reflects a live policy debate over AI sovereignty with implications for research funding priorities.",
       "impact_category": "Policy Impact",
-      "title": "Funding cuts hit research focused on making American healthcare safer, more efficient",
-      "url": "https://hub.jhu.edu/2026/09/02/agency-for-healthcare-research-and-quality-funding-cancelations/",
-      "university": "Johns Hopkins University",
-      "published_date": "2026-09-02"
+      "title": "Why we in Germany and Europe need to build our own open frontier models",
+      "url": "https://www.helmholtz.de/en/newsroom/article/why-we-in-germany-and-europe-need-to-build-our-own-open-frontier-models/",
+      "university": "Helmholtz Association",
+      "published_date": "2026-09-03"
     }
   ]
 }
