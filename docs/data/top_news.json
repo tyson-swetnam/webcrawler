@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-08T03:21:56",
+  "generated_at": "2026-09-08T09:11:42",
   "picks": [
     {
       "rank": 1,
       "article_id": 59600,
-      "editorial_note": "An international team led by TU Wien physicist Mario Krenn published in Nature showing AI can autonomously propose novel physics experiments that outperform human-designed setups \u2014 a landmark demonstration of AI accelerating fundamental scientific discovery.",
+      "editorial_note": "A Nature-published study shows AI can design novel physics experiments that outperform human-designed setups \u2014 a genuine breakthrough in using AI as a scientific collaborator rather than just a tool.",
       "impact_category": "Scientific Breakthrough",
       "title": "Artificial Intelligence Suggests New Physics Experiments",
       "url": "https://www.tuwien.at/en/tu-wien/news/news-articles/news/kuenstliche-intelligenz-schlaegt-neue-physik-experimente-vor",
@@ -14,7 +14,7 @@
     {
       "rank": 2,
       "article_id": 58402,
-      "editorial_note": "EPFL researchers built a framework that trains LLMs to express calibrated uncertainty when proposing experiments, a foundational advance for making AI-guided scientific discovery more trustworthy and efficient across disciplines.",
+      "editorial_note": "EPFL's framework trains LLMs to express calibrated uncertainty when proposing experiments, a meaningful advance for making AI-driven scientific discovery more trustworthy and efficient.",
       "impact_category": "Scientific Breakthrough",
       "title": "An AI capable of doubt can optimize scientific discovery",
       "url": "https://news.epfl.ch/news/an-ai-capable-of-doubt-can-optimize-scientific-dis/",
@@ -23,58 +23,8 @@
     },
     {
       "rank": 3,
-      "article_id": 59760,
-      "editorial_note": "USF, Purdue, and UT Dallas won a $1.2M NSF grant to build quantum-resistant, AI-enabled security for next-generation wireless networks, a tri-institution collaboration tackling a critical national security and infrastructure need.",
-      "impact_category": "Strategic Partnership",
-      "title": "USF faculty secure $1.2M NSF grant to advance quantum-secure, AI-enabled wireless networks",
-      "url": "https://www.usf.edu/business/news/2026/09-04-usf-faculty-secure-grant-for-quantum-secure-ai-technology.aspx",
-      "university": "University of South Florida",
-      "published_date": "2026-09-04"
-    },
-    {
-      "rank": 4,
-      "article_id": 60347,
-      "editorial_note": "RWTH Aachen spinoff Black Semiconductor won a major engineering award for graphene-based chips that move data optically instead of electrically, a breakthrough with real implications for the energy efficiency of future AI hardware.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Light Instead of Electricity: Aachen Engineering Award for a Technological Breakthrough | RWTH Aachen University | EN",
-      "url": "https://www.rwth-aachen.de/go/id/bsonxl?lidx=1",
-      "university": "RWTH Aachen University",
-      "published_date": "2026-09-06"
-    },
-    {
-      "rank": 5,
-      "article_id": 58421,
-      "editorial_note": "Washington University in St. Louis researchers secured NSF funding to build a hybrid neuromorphic-quantum computing system that exploits thermal noise, a novel approach that could dramatically cut the energy cost of AI computing.",
-      "impact_category": "Major Funding",
-      "title": "Grant funds hybrid system that could spur vast energy improvements to computing",
-      "url": "https://source.washu.edu/2026/09/grant-funds-hybrid-system-that-could-spur-vast-energy-improvements-to-computing/",
-      "university": "Washington University in St Louis",
-      "published_date": "2026-09-02"
-    },
-    {
-      "rank": 6,
-      "article_id": 60333,
-      "editorial_note": "RWTH Aachen's autonomous research vehicle 'karl.' received a nationwide German testing permit \u2014 a rare regulatory milestone signaling growing government confidence in open-source autonomous vehicle platforms.",
-      "impact_category": "Policy Impact",
-      "title": "RWTH Receives Nationwide Testing Permit for Autonomous Research Vehicle \u201ckarl.\u201d | RWTH Aachen University | EN",
-      "url": "https://www.rwth-aachen.de/go/id/bsolaf?lidx=1",
-      "university": "RWTH Aachen University",
-      "published_date": "2026-09-03"
-    },
-    {
-      "rank": 7,
-      "article_id": 59106,
-      "editorial_note": "Helmholtz researchers made a high-profile policy argument that Germany and Europe must build sovereign open frontier AI models rather than depend on US and Chinese systems, sharpening a consequential debate over AI infrastructure independence.",
-      "impact_category": "Policy Impact",
-      "title": "Why we in Germany and Europe need to build our own open frontier models",
-      "url": "https://www.helmholtz.de/en/newsroom/article/why-we-in-germany-and-europe-need-to-build-our-own-open-frontier-models/",
-      "university": "Helmholtz Association",
-      "published_date": "2026-09-03"
-    },
-    {
-      "rank": 8,
       "article_id": 58869,
-      "editorial_note": "Federal agency AHRQ's cancellation of a Johns Hopkins AI-driven diagnostic research grant shows how funding cuts are directly curtailing promising healthcare AI research, a policy shift with real consequences for patient care.",
+      "editorial_note": "Federal cancellation of AHRQ healthcare research grants, including a Johns Hopkins AI diagnosis project, illustrates how policy shifts are directly disrupting AI-driven patient safety research.",
       "impact_category": "Policy Impact",
       "title": "Funding cuts hit research focused on making American healthcare safer, more efficient",
       "url": "https://hub.jhu.edu/2026/09/02/agency-for-healthcare-research-and-quality-funding-cancelations/",
@@ -82,19 +32,69 @@
       "published_date": "2026-09-02"
     },
     {
-      "rank": 9,
-      "article_id": 59470,
-      "editorial_note": "Three Aalto University researchers won competitive ERC Starting Grants, including funding for new mathematical foundations of safe reinforcement learning \u2014 a signal of Europe's continued investment in foundational AI research talent.",
-      "impact_category": "Major Funding",
-      "title": "Three rising Aalto University researchers secure highly sought-after EU funding | Aalto University",
-      "url": "https://www.aalto.fi/en/news/three-rising-aalto-university-researchers-secure-highly-sought-after-eu-funding",
-      "university": "Aalto University",
+      "rank": 4,
+      "article_id": 59106,
+      "editorial_note": "Helmholtz researchers make a high-stakes public case for European AI sovereignty, arguing against dependence on US and Chinese frontier models \u2014 a debate with real policy consequences for research funding priorities.",
+      "impact_category": "Policy Impact",
+      "title": "Why we in Germany and Europe need to build our own open frontier models",
+      "url": "https://www.helmholtz.de/en/newsroom/article/why-we-in-germany-and-europe-need-to-build-our-own-open-frontier-models/",
+      "university": "Helmholtz Association",
       "published_date": "2026-09-03"
+    },
+    {
+      "rank": 5,
+      "article_id": 60347,
+      "editorial_note": "An RWTH Aachen spin-off's graphene-based optical chips represent a real technological breakthrough in data transmission, validated by a major engineering award.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Light Instead of Electricity: Aachen Engineering Award for a Technological Breakthrough | RWTH Aachen University | EN",
+      "url": "https://www.rwth-aachen.de/go/id/bsonxl?lidx=1",
+      "university": "RWTH Aachen University",
+      "published_date": "2026-09-06"
+    },
+    {
+      "rank": 6,
+      "article_id": 59760,
+      "editorial_note": "A $1.2M NSF grant spanning USF, Purdue, and UT Dallas to build quantum-resistant AI-enabled wireless security shows substantial multi-institutional investment in next-generation network defense.",
+      "impact_category": "Major Funding",
+      "title": "USF faculty secure $1.2M NSF grant to advance quantum-secure, AI-enabled wireless networks",
+      "url": "https://www.usf.edu/business/news/2026/09-04-usf-faculty-secure-grant-for-quantum-secure-ai-technology.aspx",
+      "university": "University of South Florida",
+      "published_date": "2026-09-04"
+    },
+    {
+      "rank": 7,
+      "article_id": 58421,
+      "editorial_note": "WashU's NSF-funded hybrid neuromorphic-quantum computing project targets major energy efficiency gains in computing, a significant funding bet on next-generation hardware.",
+      "impact_category": "Major Funding",
+      "title": "Grant funds hybrid system that could spur vast energy improvements to computing",
+      "url": "https://source.washu.edu/2026/09/grant-funds-hybrid-system-that-could-spur-vast-energy-improvements-to-computing/",
+      "university": "Washington University in St Louis",
+      "published_date": "2026-09-02"
+    },
+    {
+      "rank": 8,
+      "article_id": 60333,
+      "editorial_note": "RWTH Aachen's nationwide German permit to test its autonomous research vehicle marks a real regulatory milestone for deploying AI-driven autonomous systems on public roads.",
+      "impact_category": "Policy Impact",
+      "title": "RWTH Receives Nationwide Testing Permit for Autonomous Research Vehicle \u201ckarl.\u201d | RWTH Aachen University | EN",
+      "url": "https://www.rwth-aachen.de/go/id/bsolaf?lidx=1",
+      "university": "RWTH Aachen University",
+      "published_date": "2026-09-03"
+    },
+    {
+      "rank": 9,
+      "article_id": 59544,
+      "editorial_note": "UNSW's university-wide robotics initiative formally links researchers, industry, and government, a structural partnership likely to accelerate applied AI and robotics translation.",
+      "impact_category": "Strategic Partnership",
+      "title": "Robotics@UNSW connects researchers, industry and government",
+      "url": "https://www.unsw.edu.au/newsroom/news/2026/09/robotics-unsw-connects-researchers-industry-and-government",
+      "university": "University of New South Wales",
+      "published_date": "2026-09-04"
     },
     {
       "rank": 10,
       "article_id": 59353,
-      "editorial_note": "UAB startup Spiromatics is commercializing AI-driven biomarkers from lung imaging to improve diagnosis of diseases like COPD, translating years of university research into real-world clinical impact.",
+      "editorial_note": "UAB's Spiromatics startup is commercializing AI-driven lung disease biomarkers, translating years of research into a real-world diagnostic tool with direct patient impact.",
       "impact_category": "Scientific Breakthrough",
       "title": "UAB startup brings decades of research to the future of lung care",
       "url": "https://www.uab.edu/news/health-medicine/uab-startup-brings-decades-of-research-to-the-future-of-lung-care",
