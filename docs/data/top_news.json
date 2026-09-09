@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-09T03:21:51",
+  "generated_at": "2026-09-09T09:11:22",
   "picks": [
     {
       "rank": 1,
       "article_id": 60676,
-      "editorial_note": "Two Purdue AI projects were selected among the first awards under the federal Genesis Mission \u2014 a marquee national AI research initiative whose inaugural funding cohort signals where US government AI research priorities are headed.",
+      "editorial_note": "Purdue AI research projects were selected among the first cohort of the federal Genesis Mission AI awards, marking direct government investment in university-led AI research at national scale.",
       "impact_category": "Major Funding",
       "title": "Category: Research",
       "url": "https://www.purdue.edu/newsroom/category/research-excellence/?view=9412",
@@ -13,18 +13,8 @@
     },
     {
       "rank": 2,
-      "article_id": 59760,
-      "editorial_note": "A three-way $1.2M NSF award teams USF, Purdue, and UT Dallas to fuse quantum-resistant cryptography with AI-enabled network defense, addressing a security gap that will matter as quantum computing threatens current encryption standards.",
-      "impact_category": "Strategic Partnership",
-      "title": "USF faculty secure $1.2M NSF grant to advance quantum-secure, AI-enabled wireless networks",
-      "url": "https://www.usf.edu/business/news/2026/09-04-usf-faculty-secure-grant-for-quantum-secure-ai-technology.aspx",
-      "university": "University of South Florida",
-      "published_date": "2026-09-04"
-    },
-    {
-      "rank": 3,
       "article_id": 60688,
-      "editorial_note": "RWTH Aachen's nationwide German permit for its Level-4 autonomous research vehicle, built on an open-source driving stack, is a concrete regulatory milestone that could accelerate real-world autonomous vehicle deployment across the country.",
+      "editorial_note": "RWTH Aachen's nationwide German permit to test its Level 4 autonomous vehicle on an open-source driving stack is a concrete regulatory milestone that could accelerate real-world autonomous vehicle deployment in Europe.",
       "impact_category": "Policy Impact",
       "title": "RWTH Receives Nationwide Testing Permit for Autonomous Research Vehicle \u201ckarl.\u201d | RWTH Aachen University | EN",
       "url": "https://www.rwth-aachen.de/go/id/bsolaf?lidx=1",
@@ -32,29 +22,9 @@
       "published_date": "2026-09-03"
     },
     {
-      "rank": 4,
-      "article_id": 60608,
-      "editorial_note": "SRI's use of mechanistic interpretability to diagnose and correct generative model behavior tackles one of AI safety's hardest open problems \u2014 understanding what's actually happening inside frontier models rather than just their outputs.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Responsible AI: Inside SRI's race to make generative models safe - SRI",
-      "url": "https://www.sri.com/press/story/responsible-ai-inside-sris-race-to-make-generative-models-safe/",
-      "university": "SRI International",
-      "published_date": "2026-09-08"
-    },
-    {
-      "rank": 5,
-      "article_id": 59106,
-      "editorial_note": "A prominent call from Helmholtz researchers for Europe to build sovereign open frontier AI models reflects a growing geopolitical debate over AI dependence on US and Chinese systems, with real implications for research funding and policy in the EU.",
-      "impact_category": "Policy Impact",
-      "title": "Why we in Germany and Europe need to build our own open frontier models",
-      "url": "https://www.helmholtz.de/en/newsroom/article/why-we-in-germany-and-europe-need-to-build-our-own-open-frontier-models/",
-      "university": "Helmholtz Association",
-      "published_date": "2026-09-03"
-    },
-    {
-      "rank": 6,
+      "rank": 3,
       "article_id": 60547,
-      "editorial_note": "Princeton's finding that AI models misread key details in police bodycam footage roughly 1 in 4 times has direct consequences for how courts and departments should (or shouldn't) trust automated video analysis in accountability cases.",
+      "editorial_note": "Princeton's finding that AI models misread basic police bodycam actions in roughly 1 in 4 cases raises serious concerns about deploying AI in high-stakes law enforcement accountability contexts.",
       "impact_category": "Policy Impact",
       "title": "AI tools can miss the mark on police bodycam footage",
       "url": "https://www.cs.princeton.edu/news/ai-tools-can-miss-mark-police-bodycam-footage",
@@ -62,9 +32,29 @@
       "published_date": "2026-09-08"
     },
     {
-      "rank": 7,
+      "rank": 4,
+      "article_id": 59106,
+      "editorial_note": "A prominent Helmholtz viewpoint arguing Europe must build sovereign open frontier AI models reflects a growing geopolitical debate over AI independence from US and Chinese model providers.",
+      "impact_category": "Policy Impact",
+      "title": "Why we in Germany and Europe need to build our own open frontier models",
+      "url": "https://www.helmholtz.de/en/newsroom/article/why-we-in-germany-and-europe-need-to-build-our-own-open-frontier-models/",
+      "university": "Helmholtz Association",
+      "published_date": "2026-09-03"
+    },
+    {
+      "rank": 5,
+      "article_id": 60608,
+      "editorial_note": "SRI International's use of mechanistic interpretability to make generative AI models more trustworthy addresses one of the field's most pressing safety challenges as models are deployed more widely.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Responsible AI: Inside SRI's race to make generative models safe - SRI",
+      "url": "https://www.sri.com/press/story/responsible-ai-inside-sris-race-to-make-generative-models-safe/",
+      "university": "SRI International",
+      "published_date": "2026-09-08"
+    },
+    {
+      "rank": 6,
       "article_id": 60643,
-      "editorial_note": "A University of Toledo AI model that flags osteoporosis risk from CT scans already ordered for other purposes could enable years-earlier diagnosis at essentially no added cost, a rare case of near-term deployable clinical AI.",
+      "editorial_note": "University of Toledo researchers built an AI tool that predicts osteoporosis risk years in advance using existing CT scans, a low-cost approach that could enable earlier intervention for a widely underdiagnosed condition.",
       "impact_category": "Scientific Breakthrough",
       "title": "UToledo Researchers Develop AI Tool to Detect Osteoporosis Risk Using Existing CT Scans | UToledo News",
       "url": "https://news.utoledo.edu/index.php/09_08_2026/utoledo-researchers-develop-ai-tool-to-detect-osteoporosis-risk-using-existing-ct-scans",
@@ -72,10 +62,20 @@
       "published_date": "2026-09-08"
     },
     {
+      "rank": 7,
+      "article_id": 59760,
+      "editorial_note": "A $1.2M NSF grant brings USF, Purdue, and UT Dallas together to build quantum-resistant, AI-enabled security for next-generation wireless networks, addressing a critical infrastructure vulnerability as quantum computing advances.",
+      "impact_category": "Major Funding",
+      "title": "USF faculty secure $1.2M NSF grant to advance quantum-secure, AI-enabled wireless networks",
+      "url": "https://www.usf.edu/business/news/2026/09-04-usf-faculty-secure-grant-for-quantum-secure-ai-technology.aspx",
+      "university": "University of South Florida",
+      "published_date": "2026-09-04"
+    },
+    {
       "rank": 8,
       "article_id": 59353,
-      "editorial_note": "UAB's Spiromatics startup is commercializing AI-derived lung imaging biomarkers for COPD, translating years of academic research into a real diagnostic product \u2014 a concrete example of university science reaching patients.",
-      "impact_category": "Strategic Partnership",
+      "editorial_note": "UAB spinout Spiromatics is commercializing AI-driven lung imaging biomarkers to improve diagnosis of COPD and other obstructive lung diseases, translating years of academic research into clinical practice.",
+      "impact_category": "Scientific Breakthrough",
       "title": "UAB startup brings decades of research to the future of lung care",
       "url": "https://www.uab.edu/news/health-medicine/uab-startup-brings-decades-of-research-to-the-future-of-lung-care",
       "university": "University of Alabama at Birmingham",
@@ -84,7 +84,7 @@
     {
       "rank": 9,
       "article_id": 59470,
-      "editorial_note": "Aalto University researchers, including one building new mathematical foundations for safe continual reinforcement learning, won competitive ERC Starting Grants, reflecting strong European investment in foundational AI safety research.",
+      "editorial_note": "Three Aalto University researchers won highly competitive ERC Starting Grants, including funding for new mathematical foundations for safe reinforcement learning, a significant vote of confidence from Europe's top research funder.",
       "impact_category": "Major Funding",
       "title": "Three rising Aalto University researchers secure highly sought-after EU funding | Aalto University",
       "url": "https://www.aalto.fi/en/news/three-rising-aalto-university-researchers-secure-highly-sought-after-eu-funding",
@@ -93,13 +93,13 @@
     },
     {
       "rank": 10,
-      "article_id": 59604,
-      "editorial_note": "A TU Wien robot automating tens of thousands of materials science measurements a year could dramatically accelerate the data pipeline feeding AI-driven catalyst discovery, addressing a key bottleneck in computational materials science.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "A Robot Teaching Computers to Find Better Catalysts",
-      "url": "https://www.tuwien.at/en/tu-wien/news/news-articles/news/ein-roboter-bringt-computern-bei-bessere-katalysatoren-zu-finden",
-      "university": "TU Wien",
-      "published_date": "2026-09-03"
+      "article_id": 59337,
+      "editorial_note": "Three Institut Polytechnique de Paris researchers secured ERC Starting Grants spanning generative AI and quantum computing, underscoring sustained European investment in frontier AI-adjacent research.",
+      "impact_category": "Major Funding",
+      "title": "Three IP Paris researchers awarded ERC Starting Grants",
+      "url": "https://www.ip-paris.fr/en/news/three-ip-paris-researchers-awarded-erc-starting-grants-0",
+      "university": "Institut Polytechnique de Paris",
+      "published_date": "2026-09-04"
     }
   ]
 }
