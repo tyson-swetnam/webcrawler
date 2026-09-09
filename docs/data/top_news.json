@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-09T15:31:48",
+  "generated_at": "2026-09-09T21:08:41",
   "picks": [
     {
       "rank": 1,
       "article_id": 60879,
-      "editorial_note": "UW's leadership role in DOE's Genesis Mission \u2014 a national AI-for-science initiative spanning 300+ institutions \u2014 signals a major federal bet on AI-accelerated scientific discovery, with UW anchoring four separate funded projects.",
-      "impact_category": "Major Funding",
+      "editorial_note": "UW is leading multiple projects in DOE's new Genesis Mission, a national AI-for-science initiative spanning 300+ institutions \u2014 signaling a major federal push to accelerate scientific discovery via AI at unprecedented scale.",
+      "impact_category": "Strategic Partnership",
       "title": "UW researchers lead and support new \u2018AI-for-Science\u2019 Genesis Mission awards | UW News",
       "url": "https://www.washington.edu/news/2026/09/08/uw-researchers-lead-and-support-new-ai-for-science-genesis-mission-awards/",
       "university": "University of Washington-Seattle Campus",
@@ -14,7 +14,7 @@
     {
       "rank": 2,
       "article_id": 61246,
-      "editorial_note": "A $20 million gift establishing an entire dedicated College of Artificial Intelligence and Advanced Analytics at UNT is a rare institutional-scale bet on AI education and research infrastructure.",
+      "editorial_note": "A $20 million gift is creating a dedicated AI college at UNT, one of the largest single donations to build out AI-focused higher education infrastructure this year.",
       "impact_category": "Major Funding",
       "title": "UNT receives $20 million gift to advance artificial intelligence, advanced analytics",
       "url": "https://news.unt.edu/news/2026/unt-receives-20-million-gift-to-advance-artificial-intelligence-advanced-analytics.html",
@@ -24,7 +24,7 @@
     {
       "rank": 3,
       "article_id": 61168,
-      "editorial_note": "UNSW's rollout of ChatGPT Edu to 80,000+ students and staff is one of the largest AI-in-education deployments in the Asia-Pacific region, marking a significant industry-academia partnership shaping how a generation learns with AI.",
+      "editorial_note": "UNSW's rollout of ChatGPT Edu to over 80,000 students and staff is one of the largest AI-in-education deployments in the Asia-Pacific region, marking a significant industry-academia commitment to AI-native higher ed.",
       "impact_category": "Strategic Partnership",
       "title": "UNSW partners with OpenAI to support the first generation of AI natives in the workforce",
       "url": "https://www.unsw.edu.au/newsroom/news/2026/09/unsw-partners-with-openai-to-support-the-first-generation-of-ai-",
@@ -33,18 +33,8 @@
     },
     {
       "rank": 4,
-      "article_id": 60915,
-      "editorial_note": "Sandia's ETCRAM analog memory technology, achieving 100x efficiency gains for AI hardware, represents a genuine materials-science breakthrough with direct implications for the energy footprint of future AI systems.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "New analog memory may make smart devices even smarter",
-      "url": "https://newsreleases.sandia.gov/etcram/",
-      "university": "Sandia National Laboratories",
-      "published_date": "2026-09-09"
-    },
-    {
-      "rank": 5,
       "article_id": 59760,
-      "editorial_note": "A $1.2M NSF grant spanning USF, Purdue, and UT Dallas to build quantum-resistant, AI-enabled network security addresses a critical and timely infrastructure vulnerability as quantum computing matures.",
+      "editorial_note": "A three-university NSF-funded effort to build quantum-resistant, AI-enabled wireless security addresses a critical looming vulnerability as quantum computing threatens current encryption standards.",
       "impact_category": "Major Funding",
       "title": "USF faculty secure $1.2M NSF grant to advance quantum-secure, AI-enabled wireless networks",
       "url": "https://www.usf.edu/business/news/2026/09-04-usf-faculty-secure-grant-for-quantum-secure-ai-technology.aspx",
@@ -52,19 +42,9 @@
       "published_date": "2026-09-04"
     },
     {
-      "rank": 6,
-      "article_id": 61050,
-      "editorial_note": "RWTH Aachen's nationwide German permit to test its autonomous 'karl.' vehicle \u2014 one of only three universities so authorized \u2014 marks a concrete regulatory milestone for real-world autonomous AI systems.",
-      "impact_category": "Policy Impact",
-      "title": "RWTH Receives Nationwide Testing Permit for Autonomous Research Vehicle \u201ckarl.\u201d | RWTH Aachen University | EN",
-      "url": "https://www.rwth-aachen.de/go/id/bsolaf?lidx=1",
-      "university": "RWTH Aachen University",
-      "published_date": "2026-09-03"
-    },
-    {
-      "rank": 7,
+      "rank": 5,
       "article_id": 61116,
-      "editorial_note": "Black Semiconductor's graphene-based photonic chips, which transmit data via light instead of electricity, represent a potentially transformative hardware advance for the energy and speed demands of AI compute.",
+      "editorial_note": "RWTH Aachen-honored graphene photonic chips that move data via light instead of electricity represent a genuine hardware breakthrough with major implications for AI compute efficiency and speed.",
       "impact_category": "Scientific Breakthrough",
       "title": "Light Instead of Electricity: Aachen Engineering Award for a Technological Breakthrough | RWTH Aachen University | EN",
       "url": "https://www.rwth-aachen.de/go/id/bsonxl?lidx=1",
@@ -72,34 +52,54 @@
       "published_date": "2026-09-06"
     },
     {
-      "rank": 8,
-      "article_id": 60643,
-      "editorial_note": "UToledo's AI model for predicting osteoporosis risk from routine CT scans could enable years-earlier diagnosis using data hospitals already collect, a practical and scalable clinical AI application.",
+      "rank": 6,
+      "article_id": 60915,
+      "editorial_note": "Sandia's ETCRAM analog memory achieves a 100x density improvement over binary storage, a hardware advance that could meaningfully improve efficiency of AI systems in smart devices.",
       "impact_category": "Scientific Breakthrough",
-      "title": "UToledo Researchers Develop AI Tool to Detect Osteoporosis Risk Using Existing CT Scans | UToledo News",
-      "url": "https://news.utoledo.edu/index.php/09_08_2026/utoledo-researchers-develop-ai-tool-to-detect-osteoporosis-risk-using-existing-ct-scans",
-      "university": "University of Toledo",
-      "published_date": "2026-09-08"
+      "title": "New analog memory may make smart devices even smarter",
+      "url": "https://newsreleases.sandia.gov/etcram/",
+      "university": "Sandia National Laboratories",
+      "published_date": "2026-09-09"
+    },
+    {
+      "rank": 7,
+      "article_id": 59106,
+      "editorial_note": "A prominent Helmholtz viewpoint arguing Europe must build sovereign open frontier AI models reflects a growing policy debate over AI independence from US and Chinese tech dominance.",
+      "impact_category": "Policy Impact",
+      "title": "Why we in Germany and Europe need to build our own open frontier models",
+      "url": "https://www.helmholtz.de/en/newsroom/article/why-we-in-germany-and-europe-need-to-build-our-own-open-frontier-models/",
+      "university": "Helmholtz Association",
+      "published_date": "2026-09-03"
+    },
+    {
+      "rank": 8,
+      "article_id": 61045,
+      "editorial_note": "Louisiana's state health department directing AI development funding to UL Lafayette shows government agencies increasingly embedding AI directly into public health policy and rural care delivery.",
+      "impact_category": "Policy Impact",
+      "title": "Louisiana Department of Health taps UL Lafayette to improve rural health care",
+      "url": "https://louisiana.edu/news/louisiana-department-health-taps-ul-lafayette-improve-rural-health-care",
+      "university": "University of Louisiana at Lafayette",
+      "published_date": "2026-09-09"
     },
     {
       "rank": 9,
+      "article_id": 60547,
+      "editorial_note": "Princeton's finding that AI models misread police bodycam footage roughly 1 in 4 times is directly relevant to ongoing policy debates over deploying AI in law enforcement accountability tools.",
+      "impact_category": "Policy Impact",
+      "title": "AI tools can miss the mark on police bodycam footage",
+      "url": "https://www.cs.princeton.edu/news/ai-tools-can-miss-mark-police-bodycam-footage",
+      "university": "Princeton University",
+      "published_date": "2026-09-08"
+    },
+    {
+      "rank": 10,
       "article_id": 59353,
-      "editorial_note": "UAB spinout Spiromatics is commercializing AI-derived lung imaging biomarkers for COPD diagnosis, showing a clear path from university research to real-world medical deployment.",
+      "editorial_note": "UAB spinout Spiromatics is commercializing AI-driven lung disease biomarkers, translating years of academic research into a real-world diagnostic tool for COPD patients.",
       "impact_category": "Scientific Breakthrough",
       "title": "UAB startup brings decades of research to the future of lung care",
       "url": "https://www.uab.edu/news/health-medicine/uab-startup-brings-decades-of-research-to-the-future-of-lung-care",
       "university": "University of Alabama at Birmingham",
       "published_date": "2026-09-04"
-    },
-    {
-      "rank": 10,
-      "article_id": 61045,
-      "editorial_note": "A $2.1 million state health department award funneling AI development funds to UL Lafayette illustrates AI's growing role in addressing rural healthcare access gaps through public-academic partnership.",
-      "impact_category": "Strategic Partnership",
-      "title": "Louisiana Department of Health taps UL Lafayette to improve rural health care",
-      "url": "https://louisiana.edu/news/louisiana-department-health-taps-ul-lafayette-improve-rural-health-care",
-      "university": "University of Louisiana at Lafayette",
-      "published_date": "2026-09-09"
     }
   ]
 }
