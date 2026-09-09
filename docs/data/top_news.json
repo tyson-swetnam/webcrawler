@@ -1,50 +1,30 @@
 {
-  "generated_at": "2026-09-08T21:08:45",
+  "generated_at": "2026-09-09T03:21:51",
   "picks": [
     {
       "rank": 1,
-      "article_id": 59600,
-      "editorial_note": "A Nature-published result showing AI can design novel physics experiments that outperform human-designed setups is a genuine breakthrough in AI-accelerated scientific discovery, not just an application of AI to an existing workflow.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Artificial Intelligence Suggests New Physics Experiments",
-      "url": "https://www.tuwien.at/en/tu-wien/news/news-articles/news/kuenstliche-intelligenz-schlaegt-neue-physik-experimente-vor",
-      "university": "TU Wien",
-      "published_date": "2026-09-02"
+      "article_id": 60676,
+      "editorial_note": "Two Purdue AI projects were selected among the first awards under the federal Genesis Mission \u2014 a marquee national AI research initiative whose inaugural funding cohort signals where US government AI research priorities are headed.",
+      "impact_category": "Major Funding",
+      "title": "Category: Research",
+      "url": "https://www.purdue.edu/newsroom/category/research-excellence/?view=9412",
+      "university": "Purdue University-Main Campus",
+      "published_date": "2026-09-03"
     },
     {
       "rank": 2,
-      "article_id": 58402,
-      "editorial_note": "Training LLMs to express calibrated uncertainty when proposing experiments tackles a core reliability problem in AI-driven science, with direct implications for how much autonomy researchers can safely hand to AI in the lab.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "An AI capable of doubt can optimize scientific discovery",
-      "url": "https://news.epfl.ch/news/an-ai-capable-of-doubt-can-optimize-scientific-dis/",
-      "university": "EPFL",
-      "published_date": "2026-09-02"
-    },
-    {
-      "rank": 3,
       "article_id": 59760,
-      "editorial_note": "A $1.2M NSF grant spanning USF, Purdue, and UT Dallas to build quantum-resistant, AI-enabled security into next-generation wireless networks addresses a looming infrastructure vulnerability as quantum computing matures.",
-      "impact_category": "Major Funding",
+      "editorial_note": "A three-way $1.2M NSF award teams USF, Purdue, and UT Dallas to fuse quantum-resistant cryptography with AI-enabled network defense, addressing a security gap that will matter as quantum computing threatens current encryption standards.",
+      "impact_category": "Strategic Partnership",
       "title": "USF faculty secure $1.2M NSF grant to advance quantum-secure, AI-enabled wireless networks",
       "url": "https://www.usf.edu/business/news/2026/09-04-usf-faculty-secure-grant-for-quantum-secure-ai-technology.aspx",
       "university": "University of South Florida",
       "published_date": "2026-09-04"
     },
     {
-      "rank": 4,
-      "article_id": 58421,
-      "editorial_note": "An NSF-funded hybrid neuromorphic-quantum computing system that exploits thermal noise could meaningfully cut the energy footprint of AI computation, a pressing constraint as AI workloads scale.",
-      "impact_category": "Major Funding",
-      "title": "Grant funds hybrid system that could spur vast energy improvements to computing",
-      "url": "https://source.washu.edu/2026/09/grant-funds-hybrid-system-that-could-spur-vast-energy-improvements-to-computing/",
-      "university": "Washington University in St Louis",
-      "published_date": "2026-09-02"
-    },
-    {
-      "rank": 5,
+      "rank": 3,
       "article_id": 60688,
-      "editorial_note": "A nationwide German permit for RWTH Aachen's Level 4 autonomous research vehicle, built on an open-source driving stack, marks a concrete regulatory milestone for real-world autonomous vehicle deployment in Europe.",
+      "editorial_note": "RWTH Aachen's nationwide German permit for its Level-4 autonomous research vehicle, built on an open-source driving stack, is a concrete regulatory milestone that could accelerate real-world autonomous vehicle deployment across the country.",
       "impact_category": "Policy Impact",
       "title": "RWTH Receives Nationwide Testing Permit for Autonomous Research Vehicle \u201ckarl.\u201d | RWTH Aachen University | EN",
       "url": "https://www.rwth-aachen.de/go/id/bsolaf?lidx=1",
@@ -52,19 +32,19 @@
       "published_date": "2026-09-03"
     },
     {
-      "rank": 6,
-      "article_id": 58869,
-      "editorial_note": "Federal cancellation of AHRQ healthcare research grants, including a Johns Hopkins AI project meant to speed lung cancer diagnosis, illustrates how policy shifts can directly stall promising AI-for-health work.",
-      "impact_category": "Policy Impact",
-      "title": "Funding cuts hit research focused on making American healthcare safer, more efficient",
-      "url": "https://hub.jhu.edu/2026/09/02/agency-for-healthcare-research-and-quality-funding-cancelations/",
-      "university": "Johns Hopkins University",
-      "published_date": "2026-09-02"
+      "rank": 4,
+      "article_id": 60608,
+      "editorial_note": "SRI's use of mechanistic interpretability to diagnose and correct generative model behavior tackles one of AI safety's hardest open problems \u2014 understanding what's actually happening inside frontier models rather than just their outputs.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Responsible AI: Inside SRI's race to make generative models safe - SRI",
+      "url": "https://www.sri.com/press/story/responsible-ai-inside-sris-race-to-make-generative-models-safe/",
+      "university": "SRI International",
+      "published_date": "2026-09-08"
     },
     {
-      "rank": 7,
+      "rank": 5,
       "article_id": 59106,
-      "editorial_note": "A high-profile Helmholtz viewpoint arguing Europe must build its own open frontier AI models reflects a strategic policy debate over AI sovereignty that is increasingly shaping national and EU research funding priorities.",
+      "editorial_note": "A prominent call from Helmholtz researchers for Europe to build sovereign open frontier AI models reflects a growing geopolitical debate over AI dependence on US and Chinese systems, with real implications for research funding and policy in the EU.",
       "impact_category": "Policy Impact",
       "title": "Why we in Germany and Europe need to build our own open frontier models",
       "url": "https://www.helmholtz.de/en/newsroom/article/why-we-in-germany-and-europe-need-to-build-our-own-open-frontier-models/",
@@ -72,19 +52,29 @@
       "published_date": "2026-09-03"
     },
     {
-      "rank": 8,
-      "article_id": 59302,
-      "editorial_note": "Two major awards, including an Army Research Office grant for bio-inspired sensing hardware on unmanned systems, reflect sustained defense-sector investment in AI-enabled hardware research at UMass Amherst.",
-      "impact_category": "Major Funding",
-      "title": "ECE\u2019s Qiangfei Xia and Colleagues Receive Two Awards for Trailblazing Research : Riccio College of Engineering : UMass Amherst",
-      "url": "https://www.umass.edu/engineering/news/qiangfei-xia-two-awards",
-      "university": "University of Massachusetts-Amherst",
-      "published_date": "2026-09-04"
+      "rank": 6,
+      "article_id": 60547,
+      "editorial_note": "Princeton's finding that AI models misread key details in police bodycam footage roughly 1 in 4 times has direct consequences for how courts and departments should (or shouldn't) trust automated video analysis in accountability cases.",
+      "impact_category": "Policy Impact",
+      "title": "AI tools can miss the mark on police bodycam footage",
+      "url": "https://www.cs.princeton.edu/news/ai-tools-can-miss-mark-police-bodycam-footage",
+      "university": "Princeton University",
+      "published_date": "2026-09-08"
     },
     {
-      "rank": 9,
+      "rank": 7,
+      "article_id": 60643,
+      "editorial_note": "A University of Toledo AI model that flags osteoporosis risk from CT scans already ordered for other purposes could enable years-earlier diagnosis at essentially no added cost, a rare case of near-term deployable clinical AI.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "UToledo Researchers Develop AI Tool to Detect Osteoporosis Risk Using Existing CT Scans | UToledo News",
+      "url": "https://news.utoledo.edu/index.php/09_08_2026/utoledo-researchers-develop-ai-tool-to-detect-osteoporosis-risk-using-existing-ct-scans",
+      "university": "University of Toledo",
+      "published_date": "2026-09-08"
+    },
+    {
+      "rank": 8,
       "article_id": 59353,
-      "editorial_note": "UAB's Spiromatics startup translating years of academic research into a commercial AI diagnostic for lung disease is a concrete example of university AI research reaching patients through industry partnership.",
+      "editorial_note": "UAB's Spiromatics startup is commercializing AI-derived lung imaging biomarkers for COPD, translating years of academic research into a real diagnostic product \u2014 a concrete example of university science reaching patients.",
       "impact_category": "Strategic Partnership",
       "title": "UAB startup brings decades of research to the future of lung care",
       "url": "https://www.uab.edu/news/health-medicine/uab-startup-brings-decades-of-research-to-the-future-of-lung-care",
@@ -92,14 +82,24 @@
       "published_date": "2026-09-04"
     },
     {
+      "rank": 9,
+      "article_id": 59470,
+      "editorial_note": "Aalto University researchers, including one building new mathematical foundations for safe continual reinforcement learning, won competitive ERC Starting Grants, reflecting strong European investment in foundational AI safety research.",
+      "impact_category": "Major Funding",
+      "title": "Three rising Aalto University researchers secure highly sought-after EU funding | Aalto University",
+      "url": "https://www.aalto.fi/en/news/three-rising-aalto-university-researchers-secure-highly-sought-after-eu-funding",
+      "university": "Aalto University",
+      "published_date": "2026-09-03"
+    },
+    {
       "rank": 10,
-      "article_id": 60547,
-      "editorial_note": "Princeton's finding that AI models misread key details in roughly 1 in 4 police bodycam analyses is a consequential accuracy gap given growing law-enforcement reliance on AI video analysis, with real policy stakes.",
-      "impact_category": "Policy Impact",
-      "title": "AI tools can miss the mark on police bodycam footage",
-      "url": "https://www.cs.princeton.edu/news/ai-tools-can-miss-mark-police-bodycam-footage",
-      "university": "Princeton University",
-      "published_date": "2026-09-08"
+      "article_id": 59604,
+      "editorial_note": "A TU Wien robot automating tens of thousands of materials science measurements a year could dramatically accelerate the data pipeline feeding AI-driven catalyst discovery, addressing a key bottleneck in computational materials science.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "A Robot Teaching Computers to Find Better Catalysts",
+      "url": "https://www.tuwien.at/en/tu-wien/news/news-articles/news/ein-roboter-bringt-computern-bei-bessere-katalysatoren-zu-finden",
+      "university": "TU Wien",
+      "published_date": "2026-09-03"
     }
   ]
 }
