@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-10T21:08:31",
+  "generated_at": "2026-09-11T03:21:19",
   "picks": [
     {
       "rank": 1,
       "article_id": 60879,
-      "editorial_note": "UW is leading and supporting four projects under DOE's Genesis Mission, a national AI-for-science initiative spanning 300+ institutions \u2014 a flagship federal bet on AI-accelerated scientific discovery with broad academic reach.",
+      "editorial_note": "UW is leading/supporting four projects under DOE's Genesis Mission, a national AI-for-science initiative spanning 300+ institutions \u2014 a major federal bet on AI-accelerated scientific discovery.",
       "impact_category": "Major Funding",
       "title": "UW researchers lead and support new \u2018AI-for-Science\u2019 Genesis Mission awards | UW News",
       "url": "https://www.washington.edu/news/2026/09/08/uw-researchers-lead-and-support-new-ai-for-science-genesis-mission-awards/",
@@ -13,18 +13,8 @@
     },
     {
       "rank": 2,
-      "article_id": 61246,
-      "editorial_note": "A $20 million gift is founding an entirely new College of Artificial Intelligence and Advanced Analytics at UNT, funding endowed positions and signaling growing private investment in dedicated AI higher-ed infrastructure.",
-      "impact_category": "Major Funding",
-      "title": "UNT receives $20 million gift to advance artificial intelligence, advanced analytics",
-      "url": "https://news.unt.edu/news/2026/unt-receives-20-million-gift-to-advance-artificial-intelligence-advanced-analytics.html",
-      "university": "University of North Texas",
-      "published_date": "2026-09-08"
-    },
-    {
-      "rank": 3,
       "article_id": 61168,
-      "editorial_note": "UNSW's rollout of ChatGPT Edu to over 80,000 students and staff is one of the largest AI-in-education deployments in the Asia-Pacific region, marking a major industry-academia bet on preparing an 'AI native' workforce.",
+      "editorial_note": "UNSW's strategic partnership with OpenAI to deploy ChatGPT Edu to 80,000+ students and staff is one of the largest AI-in-education rollouts in the Asia-Pacific region.",
       "impact_category": "Strategic Partnership",
       "title": "UNSW partners with OpenAI to support the first generation of AI natives in the workforce",
       "url": "https://www.unsw.edu.au/newsroom/news/2026/09/unsw-partners-with-openai-to-support-the-first-generation-of-ai-",
@@ -32,29 +22,19 @@
       "published_date": "2026-09-09"
     },
     {
-      "rank": 4,
-      "article_id": 59760,
-      "editorial_note": "A $1.2M NSF grant unites USF, Purdue, and UT Dallas to build quantum-resistant, AI-enabled security for next-generation wireless networks \u2014 federally backed research addressing a critical infrastructure vulnerability.",
+      "rank": 3,
+      "article_id": 61246,
+      "editorial_note": "A $20 million gift establishing a dedicated AI college at UNT reflects growing private investment in building out institutional AI research and education capacity.",
       "impact_category": "Major Funding",
-      "title": "USF faculty secure $1.2M NSF grant to advance quantum-secure, AI-enabled wireless networks",
-      "url": "https://www.usf.edu/business/news/2026/09-04-usf-faculty-secure-grant-for-quantum-secure-ai-technology.aspx",
-      "university": "University of South Florida",
-      "published_date": "2026-09-04"
+      "title": "UNT receives $20 million gift to advance artificial intelligence, advanced analytics",
+      "url": "https://news.unt.edu/news/2026/unt-receives-20-million-gift-to-advance-artificial-intelligence-advanced-analytics.html",
+      "university": "University of North Texas",
+      "published_date": "2026-09-08"
     },
     {
-      "rank": 5,
-      "article_id": 60915,
-      "editorial_note": "Sandia's ETCRAM analog memory technology achieves 100x efficiency gains over conventional approaches, a hardware advance that could meaningfully change how smart devices process AI workloads at the edge.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "New analog memory may make smart devices even smarter",
-      "url": "https://newsreleases.sandia.gov/etcram/",
-      "university": "Sandia National Laboratories",
-      "published_date": "2026-09-09"
-    },
-    {
-      "rank": 6,
+      "rank": 4,
       "article_id": 61457,
-      "editorial_note": "USF unveiled the location and design for its new $40 million Bellini College of Artificial Intelligence, Cybersecurity and Computing building, a concrete signal of sustained institutional investment in AI education infrastructure.",
+      "editorial_note": "USF's unveiling of its new $40 million Bellini College of AI, Cybersecurity and Computing building marks a significant institutional commitment to AI infrastructure.",
       "impact_category": "Major Funding",
       "title": "USF President Limayem announces location, unveils plans for new Bellini College building",
       "url": "https://www.usf.edu/news/2026/usf-president-limayem-announces-location-unveils-plans-for-new-bellini-college-building.aspx",
@@ -62,9 +42,9 @@
       "published_date": "2026-09-09"
     },
     {
-      "rank": 7,
+      "rank": 5,
       "article_id": 61514,
-      "editorial_note": "MIT CSAIL's InstructMesh, developed with Google and Northeastern, lets users repair and fabricate AI-generated 3D models \u2014 a practical step toward making generative design tools usable for real manufacturing.",
+      "editorial_note": "MIT CSAIL's InstructMesh, developed with Google and Northeastern, advances practical generative design by letting users repair and fabricate AI-generated 3D models reliably.",
       "impact_category": "Scientific Breakthrough",
       "title": "New tool lets users repair AI-generated 3D models, then fabricate them just the way they want",
       "url": "https://www.csail.mit.edu/news/new-tool-lets-users-repair-ai-generated-3d-models-then-fabricate-them-just-way-they-want",
@@ -72,9 +52,19 @@
       "published_date": "2026-09-09"
     },
     {
-      "rank": 8,
+      "rank": 6,
+      "article_id": 60915,
+      "editorial_note": "Sandia's ETCRAM analog memory technology achieves 100x density gains over conventional approaches, a meaningful hardware advance for future AI edge devices.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "New analog memory may make smart devices even smarter",
+      "url": "https://newsreleases.sandia.gov/etcram/",
+      "university": "Sandia National Laboratories",
+      "published_date": "2026-09-09"
+    },
+    {
+      "rank": 7,
       "article_id": 61721,
-      "editorial_note": "An Australia-first pilot involving CSIRO, the University of Queensland, and industry partner ResetData aims to make data centre AI workloads dynamically grid-aware, directly targeting AI's growing energy strain on power grids.",
+      "editorial_note": "An Australia-first pilot with CSIRO, ResetData, and University of Queensland to make AI data centre loads grid-responsive addresses a pressing energy-infrastructure challenge from AI growth.",
       "impact_category": "Strategic Partnership",
       "title": "Australia-first pilot to transform data centres from static loads into dynamic grid aware assets",
       "url": "https://www.csiro.au/en/news/All/News/2026/September/Australia-first-pilot-to-transform-data-centres-from-static-loads-into-dynamic-grid-aware-assets",
@@ -82,23 +72,33 @@
       "published_date": "2026-09-10"
     },
     {
+      "rank": 8,
+      "article_id": 61605,
+      "editorial_note": "An Aachen-based startup's award-winning graphene chip transmitting data via light instead of electricity could meaningfully improve energy efficiency for AI compute.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Light Instead of Electricity: Aachen Engineering Award for a Technological Breakthrough | RWTH Aachen University | EN",
+      "url": "https://www.rwth-aachen.de/go/id/bsonxl?lidx=1",
+      "university": "RWTH Aachen University",
+      "published_date": "2026-09-06"
+    },
+    {
       "rank": 9,
+      "article_id": 60547,
+      "editorial_note": "Princeton's finding that AI tools misread key details in police bodycam footage roughly 1 in 4 times has direct implications for AI deployment in high-stakes law enforcement and policy settings.",
+      "impact_category": "Policy Impact",
+      "title": "AI tools can miss the mark on police bodycam footage",
+      "url": "https://www.cs.princeton.edu/news/ai-tools-can-miss-mark-police-bodycam-footage",
+      "university": "Princeton University",
+      "published_date": "2026-09-08"
+    },
+    {
+      "rank": 10,
       "article_id": 61592,
-      "editorial_note": "OpenAI's claim to have solved a Millennium Prize math problem drew public skepticism from UCLA's Terence Tao, a high-profile dispute over how to evaluate frontier AI reasoning claims that matters for the field's credibility.",
+      "editorial_note": "OpenAI's contested claim of solving a Millennium Prize math problem \u2014 challenged publicly by UCLA's Terence Tao \u2014 is a high-profile flashpoint in debates over AI reasoning capability claims.",
       "impact_category": "Scientific Breakthrough",
       "title": "OpenAI says it has solved one of math\u2019s 'Millennium Problems' \u2014 and more UCLA media",
       "url": "https://newsroom.ucla.edu/in-the-news/openai-says-it-has-solved-one-of-maths-millennium-problems-and-more-ucla-media",
       "university": "University of California-Los Angeles",
-      "published_date": "2026-09-09"
-    },
-    {
-      "rank": 10,
-      "article_id": 61045,
-      "editorial_note": "Louisiana's Department of Health directed nearly $2.1 million to UL Lafayette, including dedicated funding for its Center for Applied Artificial Intelligence, showing state government actively channeling AI research toward rural healthcare policy needs.",
-      "impact_category": "Policy Impact",
-      "title": "Louisiana Department of Health taps UL Lafayette to improve rural health care",
-      "url": "https://louisiana.edu/news/louisiana-department-health-taps-ul-lafayette-improve-rural-health-care",
-      "university": "University of Louisiana at Lafayette",
       "published_date": "2026-09-09"
     }
   ]
