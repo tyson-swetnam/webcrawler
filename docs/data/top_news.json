@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-13T03:21:31",
+  "generated_at": "2026-09-13T09:30:32",
   "picks": [
     {
       "rank": 1,
       "article_id": 60879,
-      "editorial_note": "UW is leading or supporting four projects under DOE's new Genesis Mission, a 300+ institution national initiative to accelerate scientific discovery with AI \u2014 signaling a major federal bet on AI-for-science research infrastructure.",
+      "editorial_note": "UW leads/supports four projects under DOE's Genesis Mission, a 300+ institution national AI-for-science initiative \u2014 signals a major federal bet on AI accelerating scientific discovery across the research ecosystem.",
       "impact_category": "Major Funding",
       "title": "UW researchers lead and support new \u2018AI-for-Science\u2019 Genesis Mission awards | UW News",
       "url": "https://www.washington.edu/news/2026/09/08/uw-researchers-lead-and-support-new-ai-for-science-genesis-mission-awards/",
@@ -14,7 +14,7 @@
     {
       "rank": 2,
       "article_id": 62563,
-      "editorial_note": "A $14.2M DOE Genesis Mission award tasks Brookhaven and Stony Brook with building a next-generation AI foundation model for the U.S. electric grid, a concrete application with national infrastructure stakes.",
+      "editorial_note": "A $14.2M DOE-funded project to build a foundation model for the U.S. electric grid shows AI research directly targeting critical national infrastructure resilience.",
       "impact_category": "Major Funding",
       "title": "BNL to Lead $14M AI Project for Nation's Electric Grid Through Genesis Mission",
       "url": "https://news.stonybrook.edu/university/brookhaven-lab-to-lead-14m-ai-project-for-nations-electric-grid-through-genesis-mission/",
@@ -24,7 +24,7 @@
     {
       "rank": 3,
       "article_id": 61927,
-      "editorial_note": "University of Kentucky's selection for DOE's 'Mine of the Future' initiative shows AI research expanding into critical minerals and industrial modernization, a growing federal priority.",
+      "editorial_note": "University of Kentucky's selection for DOE's 'Mine of the Future' initiative extends the Genesis Mission's reach into critical minerals extraction, pairing academia, industry, and government on strategic resource security.",
       "impact_category": "Strategic Partnership",
       "title": "UK selected to help advance DOE \u2018Mine of the Future\u2019 initiative",
       "url": "https://uknow.uky.edu/research/uk-selected-help-advance-doe-mine-future-initiative",
@@ -33,18 +33,8 @@
     },
     {
       "rank": 4,
-      "article_id": 61246,
-      "editorial_note": "A $20 million naming gift establishing a new AI college at UNT reflects continued heavy private investment in dedicated AI academic infrastructure.",
-      "impact_category": "Major Funding",
-      "title": "UNT receives $20 million gift to advance artificial intelligence, advanced analytics",
-      "url": "https://news.unt.edu/news/2026/unt-receives-20-million-gift-to-advance-artificial-intelligence-advanced-analytics.html",
-      "university": "University of North Texas",
-      "published_date": "2026-09-08"
-    },
-    {
-      "rank": 5,
       "article_id": 61922,
-      "editorial_note": "Notre Dame's $10M OpenAI Foundation grant to bring AI-powered weather and crop-disease forecasting to millions of farmers is a rare example of AI research with immediate, large-scale humanitarian impact.",
+      "editorial_note": "A $10M OpenAI Foundation grant to Notre Dame will bring AI weather and crop-disease forecasting to millions of farmers worldwide, a concrete real-world deployment of AI for global food security.",
       "impact_category": "Major Funding",
       "title": "AIM for Scale receives $10 million to bring AI-powered weather services to millions of farmers",
       "url": "https://news.nd.edu/news/aim-for-scale-receives-10-million-to-bring-ai-powered-weather-services-to-millions-of-farmers/",
@@ -52,9 +42,9 @@
       "published_date": "2026-09-10"
     },
     {
-      "rank": 6,
+      "rank": 5,
       "article_id": 61168,
-      "editorial_note": "UNSW's rollout of ChatGPT Edu to over 80,000 students and staff is one of the largest AI-in-education deployments in the Asia-Pacific region, illustrating how quickly industry-academia AI partnerships are scaling.",
+      "editorial_note": "UNSW's rollout of ChatGPT Edu to over 80,000 students and staff is one of the largest AI-in-education deployments in the Asia-Pacific region, signaling how quickly major universities are institutionalizing generative AI.",
       "impact_category": "Strategic Partnership",
       "title": "UNSW partners with OpenAI to support the first generation of AI natives in the workforce",
       "url": "https://www.unsw.edu.au/newsroom/news/2026/09/unsw-partners-with-openai-to-support-the-first-generation-of-ai-",
@@ -62,19 +52,29 @@
       "published_date": "2026-09-09"
     },
     {
-      "rank": 7,
-      "article_id": 61457,
-      "editorial_note": "USF's unveiling of its new Bellini College of AI, Cybersecurity and Computing building, backed by a $40 million gift, marks continued institutional commitment to building dedicated AI education infrastructure.",
+      "rank": 6,
+      "article_id": 61246,
+      "editorial_note": "A $20 million naming gift establishing a dedicated AI and analytics college at UNT reflects growing philanthropic investment in building out AI-focused academic infrastructure.",
       "impact_category": "Major Funding",
-      "title": "USF President Limayem announces location, unveils plans for new Bellini College building",
-      "url": "https://www.usf.edu/news/2026/usf-president-limayem-announces-location-unveils-plans-for-new-bellini-college-building.aspx",
-      "university": "University of South Florida",
+      "title": "UNT receives $20 million gift to advance artificial intelligence, advanced analytics",
+      "url": "https://news.unt.edu/news/2026/unt-receives-20-million-gift-to-advance-artificial-intelligence-advanced-analytics.html",
+      "university": "University of North Texas",
+      "published_date": "2026-09-08"
+    },
+    {
+      "rank": 7,
+      "article_id": 61514,
+      "editorial_note": "MIT CSAIL's InstructMesh lets users repair and fabricate AI-generated 3D models with precision, a meaningful step toward making generative design tools practically usable for manufacturing.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "New tool lets users repair AI-generated 3D models, then fabricate them just the way they want",
+      "url": "https://www.csail.mit.edu/news/new-tool-lets-users-repair-ai-generated-3d-models-then-fabricate-them-just-way-they-want",
+      "university": "MIT",
       "published_date": "2026-09-09"
     },
     {
       "rank": 8,
       "article_id": 60915,
-      "editorial_note": "Sandia's ETCRAM analog memory technology achieves a 100x improvement in storing continuous values rather than binary states, a hardware advance that could meaningfully improve efficiency for AI-capable smart devices.",
+      "editorial_note": "Sandia's ETCRAM analog memory technology achieves 100x efficiency gains for edge AI hardware, a hardware-level breakthrough that could reshape how AI runs on smart devices.",
       "impact_category": "Scientific Breakthrough",
       "title": "New analog memory may make smart devices even smarter",
       "url": "https://newsreleases.sandia.gov/etcram/",
@@ -83,23 +83,23 @@
     },
     {
       "rank": 9,
-      "article_id": 61514,
-      "editorial_note": "MIT CSAIL's InstructMesh, developed with Google and Northeastern, lets users repair and fabricate AI-generated 3D models accurately, addressing a real usability gap in generative 3D design tools.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "New tool lets users repair AI-generated 3D models, then fabricate them just the way they want",
-      "url": "https://www.csail.mit.edu/news/new-tool-lets-users-repair-ai-generated-3d-models-then-fabricate-them-just-way-they-want",
-      "university": "MIT",
-      "published_date": "2026-09-09"
-    },
-    {
-      "rank": 10,
       "article_id": 61721,
-      "editorial_note": "An Australia-first pilot with CSIRO, ResetData, and the University of Queensland to make AI data-center GPU loads dynamically grid-aware tackles a pressing problem: AI's rapidly growing energy footprint.",
+      "editorial_note": "An Australia-first pilot making data-centre AI workloads dynamically grid-aware tackles the mounting energy strain from AI infrastructure growth, a pressing systemic issue for the field.",
       "impact_category": "Strategic Partnership",
       "title": "Australia-first pilot to transform data centres from static loads into dynamic grid aware assets",
       "url": "https://www.csiro.au/en/news/All/News/2026/September/Australia-first-pilot-to-transform-data-centres-from-static-loads-into-dynamic-grid-aware-assets",
       "university": "CSIRO",
       "published_date": "2026-09-10"
+    },
+    {
+      "rank": 10,
+      "article_id": 61457,
+      "editorial_note": "USF's unveiling of its new Bellini College of AI, Cybersecurity and Computing building marks tangible progress on a major $40 million-backed academic AI investment.",
+      "impact_category": "Major Funding",
+      "title": "USF President Limayem announces location, unveils plans for new Bellini College building",
+      "url": "https://www.usf.edu/news/2026/usf-president-limayem-announces-location-unveils-plans-for-new-bellini-college-building.aspx",
+      "university": "University of South Florida",
+      "published_date": "2026-09-09"
     }
   ]
 }
