@@ -1,20 +1,10 @@
 {
-  "generated_at": "2026-09-14T21:09:10",
+  "generated_at": "2026-09-15T03:21:59",
   "picks": [
     {
       "rank": 1,
-      "article_id": 60879,
-      "editorial_note": "UW leads four projects within DOE's Genesis Mission, a 300+ institution national initiative to accelerate scientific discovery with AI \u2014 a landmark public investment spanning multiple research domains.",
-      "impact_category": "Major Funding",
-      "title": "UW researchers lead and support new \u2018AI-for-Science\u2019 Genesis Mission awards | UW News",
-      "url": "https://www.washington.edu/news/2026/09/08/uw-researchers-lead-and-support-new-ai-for-science-genesis-mission-awards/",
-      "university": "University of Washington-Seattle Campus",
-      "published_date": "2026-09-08"
-    },
-    {
-      "rank": 2,
       "article_id": 62563,
-      "editorial_note": "Brookhaven National Lab's $14.2M DOE-funded project to build an AI foundation model for the U.S. electric grid tackles a critical infrastructure challenge as AI itself drives surging power demand.",
+      "editorial_note": "A $14.2M DOE Genesis Mission award to build a national AI foundation model for the electric grid is a flagship federal investment tying a national lab and university directly to critical infrastructure modernization.",
       "impact_category": "Major Funding",
       "title": "BNL to Lead $14M AI Project for Nation's Electric Grid Through Genesis Mission",
       "url": "https://news.stonybrook.edu/university/brookhaven-lab-to-lead-14m-ai-project-for-nations-electric-grid-through-genesis-mission/",
@@ -22,19 +12,9 @@
       "published_date": "2026-09-11"
     },
     {
-      "rank": 3,
-      "article_id": 61246,
-      "editorial_note": "A $20 million gift establishing a dedicated AI college at UNT signals growing private investment in institutionalizing AI education and research at scale.",
-      "impact_category": "Major Funding",
-      "title": "UNT receives $20 million gift to advance artificial intelligence, advanced analytics",
-      "url": "https://news.unt.edu/news/2026/unt-receives-20-million-gift-to-advance-artificial-intelligence-advanced-analytics.html",
-      "university": "University of North Texas",
-      "published_date": "2026-09-08"
-    },
-    {
-      "rank": 4,
+      "rank": 2,
       "article_id": 61922,
-      "editorial_note": "A $10M OpenAI Foundation grant to Notre Dame's AIM for Scale will bring AI-powered weather and crop-disease forecasting to millions of smallholder farmers \u2014 a concrete real-world deployment with humanitarian reach.",
+      "editorial_note": "A $10M OpenAI Foundation grant (part of $60M) to bring AI weather and crop-disease forecasting to millions of farmers is a rare case of AI research translating directly into large-scale humanitarian and agricultural impact.",
       "impact_category": "Major Funding",
       "title": "AIM for Scale receives $10 million to bring AI-powered weather services to millions of farmers",
       "url": "https://news.nd.edu/news/aim-for-scale-receives-10-million-to-bring-ai-powered-weather-services-to-millions-of-farmers/",
@@ -42,9 +22,9 @@
       "published_date": "2026-09-10"
     },
     {
-      "rank": 5,
+      "rank": 3,
       "article_id": 61168,
-      "editorial_note": "UNSW's partnership with OpenAI to deploy ChatGPT Edu to over 80,000 students and staff is one of the largest AI-in-education rollouts in the Asia-Pacific region, with broad implications for how universities adopt generative AI.",
+      "editorial_note": "UNSW's rollout of ChatGPT Edu to over 80,000 students and staff is one of the largest AI-in-education deployments in the Asia-Pacific region, signaling how deeply industry partnerships are reshaping higher education at scale.",
       "impact_category": "Strategic Partnership",
       "title": "UNSW partners with OpenAI to support the first generation of AI natives in the workforce",
       "url": "https://www.unsw.edu.au/newsroom/news/2026/09/unsw-partners-with-openai-to-support-the-first-generation-of-ai-",
@@ -52,29 +32,39 @@
       "published_date": "2026-09-09"
     },
     {
-      "rank": 6,
+      "rank": 4,
       "article_id": 61927,
-      "editorial_note": "University of Kentucky's role in DOE's 'Mine of the Future' initiative extends federal AI investment into critical minerals extraction, a strategically important and underexplored application area.",
-      "impact_category": "Strategic Partnership",
+      "editorial_note": "University of Kentucky's selection for a DOE-backed national team on mine safety and automation shows AI's expanding role in federal industrial modernization initiatives.",
+      "impact_category": "Major Funding",
       "title": "UK selected to help advance DOE \u2018Mine of the Future\u2019 initiative",
       "url": "https://uknow.uky.edu/research/uk-selected-help-advance-doe-mine-future-initiative",
       "university": "University of Kentucky",
       "published_date": "2026-09-11"
     },
     {
-      "rank": 7,
-      "article_id": 61514,
-      "editorial_note": "MIT CSAIL's InstructMesh tool, developed with Google and Northeastern, advances AI-driven 3D design and fabrication \u2014 a tangible step toward more reliable generative design tools.",
+      "rank": 5,
+      "article_id": 61592,
+      "editorial_note": "OpenAI's claim of solving a Millennium Prize math problem, met with public skepticism from UCLA's Terence Tao, is a significant flashpoint in the debate over how AI capability claims are verified and reported.",
       "impact_category": "Scientific Breakthrough",
-      "title": "New tool lets users repair AI-generated 3D models, then fabricate them just the way they want",
-      "url": "https://www.csail.mit.edu/news/new-tool-lets-users-repair-ai-generated-3d-models-then-fabricate-them-just-way-they-want",
-      "university": "MIT",
+      "title": "OpenAI says it has solved one of math\u2019s 'Millennium Problems' \u2014 and more UCLA media",
+      "url": "https://newsroom.ucla.edu/in-the-news/openai-says-it-has-solved-one-of-maths-millennium-problems-and-more-ucla-media",
+      "university": "University of California-Los Angeles",
       "published_date": "2026-09-09"
     },
     {
-      "rank": 8,
+      "rank": 6,
+      "article_id": 60915,
+      "editorial_note": "Sandia's ETCRAM analog memory technology, achieving 100x density gains over conventional binary storage, is a hardware breakthrough with direct implications for more efficient on-device AI.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "New analog memory may make smart devices even smarter",
+      "url": "https://newsreleases.sandia.gov/etcram/",
+      "university": "Sandia National Laboratories",
+      "published_date": "2026-09-09"
+    },
+    {
+      "rank": 7,
       "article_id": 61721,
-      "editorial_note": "An Australia-first pilot making data centre AI workloads grid-aware and dynamically shiftable addresses the energy strain from AI growth, a pressing policy and infrastructure concern globally.",
+      "editorial_note": "An Australia-first pilot making AI data-center workloads dynamically shiftable addresses one of the industry's most pressing problems \u2014 the strain AI compute places on power grids \u2014 through a multi-institution partnership.",
       "impact_category": "Strategic Partnership",
       "title": "Australia-first pilot to transform data centres from static loads into dynamic grid aware assets",
       "url": "https://www.csiro.au/en/news/All/News/2026/September/Australia-first-pilot-to-transform-data-centres-from-static-loads-into-dynamic-grid-aware-assets",
@@ -82,9 +72,19 @@
       "published_date": "2026-09-10"
     },
     {
+      "rank": 8,
+      "article_id": 61514,
+      "editorial_note": "MIT CSAIL's InstructMesh tool for repairing and fabricating AI-generated 3D models, developed with Google and Northeastern, advances practical human-AI co-design workflows in manufacturing.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "New tool lets users repair AI-generated 3D models, then fabricate them just the way they want",
+      "url": "https://www.csail.mit.edu/news/new-tool-lets-users-repair-ai-generated-3d-models-then-fabricate-them-just-way-they-want",
+      "university": "MIT",
+      "published_date": "2026-09-09"
+    },
+    {
       "rank": 9,
       "article_id": 61457,
-      "editorial_note": "USF's unveiling of its new $40M-backed Bellini College of AI, Cybersecurity and Computing building marks continued major institutional investment in dedicated AI education infrastructure.",
+      "editorial_note": "USF's $40 million Bellini College of Artificial Intelligence, Cybersecurity and Computing building reflects a major institutional bet on AI education infrastructure.",
       "impact_category": "Major Funding",
       "title": "USF President Limayem announces location, unveils plans for new Bellini College building",
       "url": "https://www.usf.edu/news/2026/usf-president-limayem-announces-location-unveils-plans-for-new-bellini-college-building.aspx",
@@ -93,13 +93,13 @@
     },
     {
       "rank": 10,
-      "article_id": 61969,
-      "editorial_note": "UAB's work combining electronic health records and RNA sequencing in foundation models to predict cancer treatment response points toward more personalized, AI-driven precision oncology.",
+      "article_id": 60939,
+      "editorial_note": "EPFL's new AI technique for detecting microplastics down to five micrometers is a concrete scientific advance with direct environmental-monitoring applications.",
       "impact_category": "Scientific Breakthrough",
-      "title": "How one researcher is working toward AI use for cancer patient treatment",
-      "url": "https://www.uab.edu/news/research-innovation/how-one-researcher-is-working-toward-ai-use-for-cancer-patient-treatment",
-      "university": "University of Alabama at Birmingham",
-      "published_date": "2026-09-10"
+      "title": "Hidden microplastic pollution in Swiss waters uncovered",
+      "url": "https://news.epfl.ch/news/hidden-microplastic-pollution-in-swiss-waters-unco/",
+      "university": "EPFL",
+      "published_date": "2026-09-09"
     }
   ]
 }
