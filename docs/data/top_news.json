@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-15T09:10:55",
+  "generated_at": "2026-09-15T15:28:49",
   "picks": [
     {
       "rank": 1,
       "article_id": 62563,
-      "editorial_note": "A $14.2M DOE Genesis Mission award tasks Brookhaven National Lab and Stony Brook with building a foundation model for the national electric grid \u2014 a flagship example of AI infrastructure being applied directly to critical national infrastructure.",
+      "editorial_note": "A $14.2M DOE Genesis Mission award tasking a national lab with building a foundation model for the U.S. electric grid is a major federal bet on AI infrastructure for critical energy systems, with real financial and partnership weight.",
       "impact_category": "Major Funding",
       "title": "BNL to Lead $14M AI Project for Nation's Electric Grid Through Genesis Mission",
       "url": "https://news.stonybrook.edu/university/brookhaven-lab-to-lead-14m-ai-project-for-nations-electric-grid-through-genesis-mission/",
@@ -13,18 +13,8 @@
     },
     {
       "rank": 2,
-      "article_id": 61922,
-      "editorial_note": "A $10M OpenAI Foundation grant (part of a $60M investment) will bring AI-powered weather and crop-disease forecasting to millions of farmers, one of the largest real-world deployments of AI for global food security.",
-      "impact_category": "Major Funding",
-      "title": "AIM for Scale receives $10 million to bring AI-powered weather services to millions of farmers",
-      "url": "https://news.nd.edu/news/aim-for-scale-receives-10-million-to-bring-ai-powered-weather-services-to-millions-of-farmers/",
-      "university": "University of Notre Dame",
-      "published_date": "2026-09-10"
-    },
-    {
-      "rank": 3,
       "article_id": 61168,
-      "editorial_note": "UNSW's rollout of ChatGPT Edu to over 80,000 students and staff is among the largest AI-in-education deployments in the Asia-Pacific region, signaling how deeply commercial AI partnerships are reshaping higher education at scale.",
+      "editorial_note": "Rolling ChatGPT Edu out to over 80,000 students and staff is one of the largest AI-in-education deployments in the Asia-Pacific region, signaling how deeply industry partnerships are reshaping campus-wide AI access.",
       "impact_category": "Strategic Partnership",
       "title": "UNSW partners with OpenAI to support the first generation of AI natives in the workforce",
       "url": "https://www.unsw.edu.au/newsroom/news/2026/09/unsw-partners-with-openai-to-support-the-first-generation-of-ai-",
@@ -32,19 +22,39 @@
       "published_date": "2026-09-09"
     },
     {
+      "rank": 3,
+      "article_id": 61922,
+      "editorial_note": "A $10M grant as part of a $60M OpenAI Foundation investment to bring AI weather and crop-disease forecasting to millions of farmers shows philanthropic AI funding translating directly into real-world humanitarian impact.",
+      "impact_category": "Major Funding",
+      "title": "AIM for Scale receives $10 million to bring AI-powered weather services to millions of farmers",
+      "url": "https://news.nd.edu/news/aim-for-scale-receives-10-million-to-bring-ai-powered-weather-services-to-millions-of-farmers/",
+      "university": "University of Notre Dame",
+      "published_date": "2026-09-10"
+    },
+    {
       "rank": 4,
+      "article_id": 63348,
+      "editorial_note": "Multiple DOE Genesis Mission awards to develop AI-enabled scientific workflows reflect the federal government's expanding push to embed AI directly into national research infrastructure.",
+      "impact_category": "Major Funding",
+      "title": "USC researchers land major AI-driven grants from Department of Energy",
+      "url": "https://www.sc.edu/uofsc/posts/2026/09/usc-doe-grant-sourav-banerjee-david-tedeschi-ai-nuclear.php",
+      "university": "University of South Carolina-Columbia",
+      "published_date": "2026-09-09"
+    },
+    {
+      "rank": 5,
       "article_id": 61927,
-      "editorial_note": "University of Kentucky's selection for DOE's 'Mine of the Future' initiative shows federal policy directing AI investment toward domestic critical-minerals extraction, tying academic research to national resource-security priorities.",
-      "impact_category": "Policy Impact",
+      "editorial_note": "Selection for a DOE 'Mine of the Future' award pairs AI research with critical minerals strategy, an emerging priority area linking academia, industry, and national energy policy.",
+      "impact_category": "Strategic Partnership",
       "title": "UK selected to help advance DOE \u2018Mine of the Future\u2019 initiative",
       "url": "https://uknow.uky.edu/research/uk-selected-help-advance-doe-mine-future-initiative",
       "university": "University of Kentucky",
       "published_date": "2026-09-11"
     },
     {
-      "rank": 5,
+      "rank": 6,
       "article_id": 61592,
-      "editorial_note": "OpenAI's claim to have solved a Millennium Prize math problem \u2014 met with public skepticism from UCLA's Terence Tao \u2014 is a high-stakes test case for how AI-generated proofs should be verified and trusted by the scientific community.",
+      "editorial_note": "OpenAI's claim to have solved a Millennium Prize math problem is a high-stakes scientific claim, made more newsworthy by public skepticism from a leading mathematician, underscoring the ongoing debate over AI's real reasoning capabilities.",
       "impact_category": "Scientific Breakthrough",
       "title": "OpenAI says it has solved one of math\u2019s 'Millennium Problems' \u2014 and more UCLA media",
       "url": "https://newsroom.ucla.edu/in-the-news/openai-says-it-has-solved-one-of-maths-millennium-problems-and-more-ucla-media",
@@ -52,9 +62,9 @@
       "published_date": "2026-09-09"
     },
     {
-      "rank": 6,
+      "rank": 7,
       "article_id": 60915,
-      "editorial_note": "Sandia's ETCRAM analog memory achieves 100x efficiency gains for AI hardware, a materials-science advance that could meaningfully reduce the energy footprint of edge AI devices.",
+      "editorial_note": "Sandia's ETCRAM analog memory technology achieving 100x efficiency gains represents a genuine hardware breakthrough that could reshape how AI systems are built at the chip level.",
       "impact_category": "Scientific Breakthrough",
       "title": "New analog memory may make smart devices even smarter",
       "url": "https://newsreleases.sandia.gov/etcram/",
@@ -62,39 +72,29 @@
       "published_date": "2026-09-09"
     },
     {
-      "rank": 7,
-      "article_id": 61514,
-      "editorial_note": "MIT CSAIL's InstructMesh, developed with Google and Northeastern, lets users repair and fabricate AI-generated 3D models reliably \u2014 closing a key gap between generative design and real-world manufacturing.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "New tool lets users repair AI-generated 3D models, then fabricate them just the way they want",
-      "url": "https://www.csail.mit.edu/news/new-tool-lets-users-repair-ai-generated-3d-models-then-fabricate-them-just-way-they-want",
-      "university": "MIT",
-      "published_date": "2026-09-09"
-    },
-    {
       "rank": 8,
-      "article_id": 61457,
-      "editorial_note": "USF's new Bellini College of AI, Cybersecurity and Computing, backed by a $40M gift, reflects the scale of institutional investment universities are making to build dedicated AI-focused academic infrastructure.",
-      "impact_category": "Major Funding",
-      "title": "USF President Limayem announces location, unveils plans for new Bellini College building",
-      "url": "https://www.usf.edu/news/2026/usf-president-limayem-announces-location-unveils-plans-for-new-bellini-college-building.aspx",
-      "university": "University of South Florida",
-      "published_date": "2026-09-09"
+      "article_id": 63454,
+      "editorial_note": "Using AI to mine 'dark genome' viral signatures to predict chemotherapy response is a novel scientific approach with direct potential to improve cancer treatment outcomes.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Ancient viral remnants in our genome may help predict response to chemotherapy | King's College London",
+      "url": "https://www.kcl.ac.uk/news/ancient-viral-remnants-in-our-genome-may-help-predict-response-to-chemotherapy",
+      "university": "King's College London",
+      "published_date": "2026-09-10"
     },
     {
       "rank": 9,
-      "article_id": 61721,
-      "editorial_note": "An Australia-first pilot with CSIRO, University of Queensland, and industry partners to make AI data-centre workloads dynamically grid-aware tackles a growing tension between AI's power demands and grid stability.",
-      "impact_category": "Strategic Partnership",
-      "title": "Australia-first pilot to transform data centres from static loads into dynamic grid aware assets",
-      "url": "https://www.csiro.au/en/news/All/News/2026/September/Australia-first-pilot-to-transform-data-centres-from-static-loads-into-dynamic-grid-aware-assets",
-      "university": "CSIRO",
-      "published_date": "2026-09-10"
+      "article_id": 63717,
+      "editorial_note": "Combining AlphaFold AI screening with quantum sensing to fight antibiotic-resistant superbugs is a notable cross-disciplinary application of AI to a major public health threat, backed by a $1.26M NIH grant.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "University of Houston Awarded $1.26M NIH Grant to Outsmart Superbugs | University of Houston",
+      "url": "https://www.uh.edu/news-events/stories/2026/september/09152026-nih-grant-targets-mrsa.php",
+      "university": "University of Houston",
+      "published_date": "2026-09-15"
     },
     {
       "rank": 10,
       "article_id": 60939,
-      "editorial_note": "EPFL's new AI technique for detecting microplastics down to five micrometers uncovered previously hidden pollution levels in Swiss lakes, demonstrating AI's growing role as a precision instrument in environmental science.",
+      "editorial_note": "A new AI technique capable of detecting microplastics as small as five micrometers gives researchers a powerful new tool for environmental monitoring with broad applicability beyond this one study.",
       "impact_category": "Scientific Breakthrough",
       "title": "Hidden microplastic pollution in Swiss waters uncovered",
       "url": "https://news.epfl.ch/news/hidden-microplastic-pollution-in-swiss-waters-unco/",
