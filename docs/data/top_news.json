@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-16T09:10:38",
+  "generated_at": "2026-09-16T15:30:40",
   "picks": [
     {
       "rank": 1,
       "article_id": 62563,
-      "editorial_note": "A $14.2M DOE Genesis Mission award puts Brookhaven National Laboratory at the center of building a national AI foundation model for the electric grid \u2014 a flagship example of federal AI investment in critical infrastructure, with Stony Brook as academic partner.",
+      "editorial_note": "A $14.2M DOE Genesis Mission award to build a foundation model for the national electric grid is a major federal bet on AI infrastructure resilience, with Brookhaven National Lab leading and Stony Brook collaborating.",
       "impact_category": "Major Funding",
       "title": "BNL to Lead $14M AI Project for Nation's Electric Grid Through Genesis Mission",
       "url": "https://news.stonybrook.edu/university/brookhaven-lab-to-lead-14m-ai-project-for-nations-electric-grid-through-genesis-mission/",
@@ -13,18 +13,8 @@
     },
     {
       "rank": 2,
-      "article_id": 61922,
-      "editorial_note": "A $10M OpenAI Foundation grant (part of a $60M package) to bring AI-powered weather and crop-disease forecasting to millions of farmers is a concrete, large-scale example of AI delivering real-world humanitarian and economic impact.",
-      "impact_category": "Major Funding",
-      "title": "AIM for Scale receives $10 million to bring AI-powered weather services to millions of farmers",
-      "url": "https://news.nd.edu/news/aim-for-scale-receives-10-million-to-bring-ai-powered-weather-services-to-millions-of-farmers/",
-      "university": "University of Notre Dame",
-      "published_date": "2026-09-10"
-    },
-    {
-      "rank": 3,
       "article_id": 61927,
-      "editorial_note": "University of Kentucky's selection for a DOE-negotiated 'Mine of the Future' award signals growing federal interest in applying AI to domestic critical-minerals and mining infrastructure, a strategic national priority.",
+      "editorial_note": "University of Kentucky's selection for DOE's 'Mine of the Future' initiative marks a significant academic-government partnership applying AI to critical minerals and energy infrastructure.",
       "impact_category": "Strategic Partnership",
       "title": "UK selected to help advance DOE \u2018Mine of the Future\u2019 initiative",
       "url": "https://uknow.uky.edu/research/uk-selected-help-advance-doe-mine-future-initiative",
@@ -32,19 +22,39 @@
       "published_date": "2026-09-11"
     },
     {
+      "rank": 3,
+      "article_id": 61922,
+      "editorial_note": "A $10M OpenAI Foundation grant to Notre Dame's AIM for Scale initiative will bring AI-powered weather and crop-disease forecasting to millions of farmers, a rare case of a leading AI company directly funding real-world agricultural impact.",
+      "impact_category": "Major Funding",
+      "title": "AIM for Scale receives $10 million to bring AI-powered weather services to millions of farmers",
+      "url": "https://news.nd.edu/news/aim-for-scale-receives-10-million-to-bring-ai-powered-weather-services-to-millions-of-farmers/",
+      "university": "University of Notre Dame",
+      "published_date": "2026-09-10"
+    },
+    {
       "rank": 4,
-      "article_id": 63721,
-      "editorial_note": "Purdue's laser-based 'biodynamic imaging' system uses AI to personalize chemotherapy drug selection by directly assessing individual tumor response \u2014 a genuine precision-oncology breakthrough with direct clinical translation potential.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Lasers, Doppler effect personalize chemotherapy drug selection for cancer tumors",
-      "url": "https://www.purdue.edu/newsroom/2026/Q3/lasers-doppler-effect-personalize-chemotherapy-drug-selection-for-cancer-tumors/",
-      "university": "Purdue University-Main Campus",
+      "article_id": 63939,
+      "editorial_note": "Rutgers and RWJBarnabas Health's new AWS-powered Innovation Hub represents a substantial academic-industry-healthcare partnership positioned to accelerate AI in medical education and clinical care.",
+      "impact_category": "Strategic Partnership",
+      "title": "Rutgers and RWJBarnabas Health to Launch Innovation Hub, Powered by Amazon Web Services",
+      "url": "https://www.rutgers.edu/news/rutgers-and-rwjbarnabas-health-launch-innovation-hub-powered-amazon-web-services",
+      "university": "Rutgers University-New Brunswick",
       "published_date": "2026-09-15"
     },
     {
       "rank": 5,
+      "article_id": 63963,
+      "editorial_note": "NIST's $30M-plus award to 12 Manufacturing Extension Partnership centers will help small and mid-sized manufacturers across 11 states adopt AI and robotics, a broad-reach federal investment in industrial AI adoption.",
+      "impact_category": "Major Funding",
+      "title": "NIST Awards More Than $30 Million for MEP Centers in 11 States and Puerto Rico",
+      "url": "https://www.nist.gov/news-events/news/2026/09/nist-awards-more-30-million-mep-centers-11-states-and-puerto-rico",
+      "university": "NIST",
+      "published_date": "2026-09-15"
+    },
+    {
+      "rank": 6,
       "article_id": 63454,
-      "editorial_note": "King's College London researchers found that AI trained on 'dark genome' viral remnant signatures can improve prediction of chemotherapy response, opening a novel genomic avenue for personalized cancer treatment.",
+      "editorial_note": "King's College London researchers used AI on genomic 'dark genome' signatures to improve prediction of chemotherapy response, a genuinely novel scientific approach with direct clinical treatment implications.",
       "impact_category": "Scientific Breakthrough",
       "title": "Ancient viral remnants in our genome may help predict response to chemotherapy | King's College London",
       "url": "https://www.kcl.ac.uk/news/ancient-viral-remnants-in-our-genome-may-help-predict-response-to-chemotherapy",
@@ -52,9 +62,9 @@
       "published_date": "2026-09-10"
     },
     {
-      "rank": 6,
+      "rank": 7,
       "article_id": 61969,
-      "editorial_note": "UAB's foundation-model approach combining electronic health records and RNA sequencing to predict cancer treatment response represents meaningful progress toward AI-driven precision oncology.",
+      "editorial_note": "UAB's work combining electronic medical records and RNA sequencing in AI foundation models to predict cancer treatment response could meaningfully improve personalized oncology care.",
       "impact_category": "Scientific Breakthrough",
       "title": "How one researcher is working toward AI use for cancer patient treatment",
       "url": "https://www.uab.edu/news/research-innovation/how-one-researcher-is-working-toward-ai-use-for-cancer-patient-treatment",
@@ -62,9 +72,9 @@
       "published_date": "2026-09-10"
     },
     {
-      "rank": 7,
+      "rank": 8,
       "article_id": 63717,
-      "editorial_note": "A $1.26M NIH grant funds University of Houston chemists combining AlphaFold AI screening with quantum sensing to fight antibiotic-resistant superbugs \u2014 a novel fusion of AI and physical sensing tackling a major public health threat.",
+      "editorial_note": "University of Houston's combination of AlphaFold AI screening with quantum sensing to fight antibiotic-resistant superbugs like MRSA tackles a major public health threat with a novel interdisciplinary method.",
       "impact_category": "Scientific Breakthrough",
       "title": "University of Houston Awarded $1.26M NIH Grant to Outsmart Superbugs | University of Houston",
       "url": "https://www.uh.edu/news-events/stories/2026/september/09152026-nih-grant-targets-mrsa.php",
@@ -72,34 +82,24 @@
       "published_date": "2026-09-15"
     },
     {
-      "rank": 8,
-      "article_id": 63388,
-      "editorial_note": "Texas A&M's AI 'digital human' avatar for early dementia detection won a national design award, demonstrating a deployable clinical tool with real diagnostic impact for an aging population.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "AI-powered early dementia-detection tool earns Texas A&M a Fast Company Innovation by Design Award \u2013 Texas A&M Stories",
-      "url": "https://stories.tamu.edu/stories/ai-powered-early-dementia-detection-tool-earns-texas-am-a-fast-company-innovation-by-design-award/",
-      "university": "Texas A & M University-College Station",
-      "published_date": "2026-09-14"
-    },
-    {
       "rank": 9,
-      "article_id": 63484,
-      "editorial_note": "Chulalongkorn's DeepGI AI system for colonoscopy-based colorectal cancer screening earned a national public-sector excellence award, evidencing real clinical adoption of AI diagnostic tools in Southeast Asia.",
+      "article_id": 64008,
+      "editorial_note": "A Virginia Tech alum's startup MorphLabs is developing noninvasive AI-powered brain-computer bridges to let amputees control prosthetics, a striking real-world application of foundation models in assistive medical technology.",
       "impact_category": "Scientific Breakthrough",
-      "title": "Chula Medical Innovation Receives Excellence Award 2026 - Chulalongkorn University",
-      "url": "https://www.chula.ac.th/en/news/425742/",
-      "university": "Chulalongkorn University",
+      "title": "Engineering alum's medical startup aims to empower amputees with AI-linked prosthetics",
+      "url": "https://news.vt.edu/articles/2026/09/soham-mehra-spotlight.html",
+      "university": "Virginia Polytechnic Institute and State University",
       "published_date": "2026-09-15"
     },
     {
       "rank": 10,
-      "article_id": 61721,
-      "editorial_note": "An Australia-first pilot making AI data center GPU workloads dynamically shiftable to ease grid strain directly addresses one of the biggest emerging tensions around AI infrastructure \u2014 its ballooning energy demand.",
-      "impact_category": "Strategic Partnership",
-      "title": "Australia-first pilot to transform data centres from static loads into dynamic grid aware assets",
-      "url": "https://www.csiro.au/en/news/All/News/2026/September/Australia-first-pilot-to-transform-data-centres-from-static-loads-into-dynamic-grid-aware-assets",
-      "university": "CSIRO",
-      "published_date": "2026-09-10"
+      "article_id": 63343,
+      "editorial_note": "A UMass Amherst national poll finding only 11% of Americans support local AI data center construction, with 65% opposed across party lines, signals a growing political headwind that could shape AI infrastructure policy nationwide.",
+      "impact_category": "Policy Impact",
+      "title": "Just 1 in 9 Americans Support AI Data Center Construction in their Local Communities, According to New UMass Amherst Poll | UMass Amherst",
+      "url": "https://www.umass.edu/news/article/just-1-9-americans-support-ai-data-center-construction-their-local-communities",
+      "university": "University of Massachusetts-Amherst",
+      "published_date": "2026-09-14"
     }
   ]
 }
