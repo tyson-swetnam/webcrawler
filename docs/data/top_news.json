@@ -1,30 +1,10 @@
 {
-  "generated_at": "2026-09-18T03:21:02",
+  "generated_at": "2026-09-18T09:10:47",
   "picks": [
     {
       "rank": 1,
-      "article_id": 64013,
-      "editorial_note": "A $1.96M NIH Director's New Innovator Award \u2014 one of the most competitive federal grants for early-career investigators \u2014 will fund a generative AI mental-health intervention, signaling strong federal confidence in AI's clinical potential.",
-      "impact_category": "Major Funding",
-      "title": "FSU College of Nursing receives $1.9 million award to advance AI-powered behavioral healthcare",
-      "url": "https://news.fsu.edu/news/health-medicine/2026/09/15/fsu-college-of-nursing-receives-1-9-million-award-to-advance-ai-powered-behavioral-healthcare/",
-      "university": "Florida State University",
-      "published_date": "2026-09-15"
-    },
-    {
-      "rank": 2,
-      "article_id": 63717,
-      "editorial_note": "Combining AlphaFold's AI structure prediction with quantum sensing to fight antibiotic-resistant superbugs like MRSA is a genuinely novel cross-disciplinary approach that could open new paths to antibiotics.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "University of Houston Awarded $1.26M NIH Grant to Outsmart Superbugs | University of Houston",
-      "url": "https://www.uh.edu/news-events/stories/2026/september/09152026-nih-grant-targets-mrsa.php",
-      "university": "University of Houston",
-      "published_date": "2026-09-15"
-    },
-    {
-      "rank": 3,
       "article_id": 63939,
-      "editorial_note": "A major academic medical center partnering directly with AWS to build an AI-powered clinical and educational innovation hub illustrates the deepening pipeline between cloud providers and health systems.",
+      "editorial_note": "A major cloud-and-health-system partnership pairs Rutgers' academic and clinical expertise with AWS's AI infrastructure, positioning the university at the center of a new medical-AI innovation pipeline.",
       "impact_category": "Strategic Partnership",
       "title": "Rutgers and RWJBarnabas Health to Launch Innovation Hub, Powered by Amazon Web Services",
       "url": "https://www.rutgers.edu/news/rutgers-and-rwjbarnabas-health-launch-innovation-hub-powered-amazon-web-services",
@@ -32,29 +12,9 @@
       "published_date": "2026-09-15"
     },
     {
-      "rank": 4,
-      "article_id": 63388,
-      "editorial_note": "National recognition for an AI 'digital human' avatar aiding early dementia detection shows real clinical deployment potential for AI diagnostics, not just research promise.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "AI-powered early dementia-detection tool earns Texas A&M a Fast Company Innovation by Design Award \u2013 Texas A&M Stories",
-      "url": "https://stories.tamu.edu/stories/ai-powered-early-dementia-detection-tool-earns-texas-am-a-fast-company-innovation-by-design-award/",
-      "university": "Texas A & M University-College Station",
-      "published_date": "2026-09-14"
-    },
-    {
-      "rank": 5,
-      "article_id": 64008,
-      "editorial_note": "A noninvasive AI brain-computer bridge for prosthetic control, spun out of university research into a startup, represents a tangible step toward real-world neurotechnology impact for amputees.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Engineering alum's medical startup aims to empower amputees with AI-linked prosthetics",
-      "url": "https://news.vt.edu/articles/2026/09/soham-mehra-spotlight.html",
-      "university": "Virginia Polytechnic Institute and State University",
-      "published_date": "2026-09-15"
-    },
-    {
-      "rank": 6,
+      "rank": 2,
       "article_id": 63963,
-      "editorial_note": "A $30M+ federal investment to help manufacturers nationwide adopt AI and robotics is a significant policy-driven push to diffuse AI capability into the industrial economy.",
+      "editorial_note": "NIST's $30M+ investment spreads AI adoption support to small and medium manufacturers across 11 states and Puerto Rico, a rare case of federal AI funding reaching directly into industrial supply chains.",
       "impact_category": "Major Funding",
       "title": "NIST Awards More Than $30 Million for MEP Centers in 11 States and Puerto Rico",
       "url": "https://www.nist.gov/news-events/news/2026/09/nist-awards-more-30-million-mep-centers-11-states-and-puerto-rico",
@@ -62,19 +22,49 @@
       "published_date": "2026-09-15"
     },
     {
-      "rank": 7,
-      "article_id": 63569,
-      "editorial_note": "A university-industry agreement with Western Digital to co-develop next-generation magnetic storage technology and train engineers reflects growing global academic-corporate AI hardware collaboration.",
-      "impact_category": "Strategic Partnership",
-      "title": "\u0e08\u0e38\u0e2c\u0e32\u0e2f \u0e25\u0e07\u0e19\u0e32\u0e21\u0e04\u0e27\u0e32\u0e21\u0e23\u0e48\u0e27\u0e21\u0e21\u0e37\u0e2d\u0e01\u0e31\u0e1a WD",
-      "url": "https://www.chula.ac.th/news/425814/",
-      "university": "Chulalongkorn University",
+      "rank": 3,
+      "article_id": 64013,
+      "editorial_note": "A prestigious NIH Director's New Innovator Award backs a generative AI tool for personalized behavioral healthcare, signaling strong federal confidence in AI-driven mental health interventions.",
+      "impact_category": "Major Funding",
+      "title": "FSU College of Nursing receives $1.9 million award to advance AI-powered behavioral healthcare",
+      "url": "https://news.fsu.edu/news/health-medicine/2026/09/15/fsu-college-of-nursing-receives-1-9-million-award-to-advance-ai-powered-behavioral-healthcare/",
+      "university": "Florida State University",
       "published_date": "2026-09-15"
     },
     {
-      "rank": 8,
+      "rank": 4,
+      "article_id": 64008,
+      "editorial_note": "A Virginia Tech-founded startup's noninvasive brain-computer bridge for prosthetic control represents a genuine translational leap from academic engineering to real-world assistive technology.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Engineering alum's medical startup aims to empower amputees with AI-linked prosthetics",
+      "url": "https://news.vt.edu/articles/2026/09/soham-mehra-spotlight.html",
+      "university": "Virginia Polytechnic Institute and State University",
+      "published_date": "2026-09-15"
+    },
+    {
+      "rank": 5,
+      "article_id": 63717,
+      "editorial_note": "Combining AlphaFold AI screening with quantum sensing to fight antibiotic-resistant superbugs is a novel cross-disciplinary approach with direct public-health stakes.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "University of Houston Awarded $1.26M NIH Grant to Outsmart Superbugs | University of Houston",
+      "url": "https://www.uh.edu/news-events/stories/2026/september/09152026-nih-grant-targets-mrsa.php",
+      "university": "University of Houston",
+      "published_date": "2026-09-15"
+    },
+    {
+      "rank": 6,
+      "article_id": 64181,
+      "editorial_note": "A university-government-industry collaboration with Fujifilm uses AI-driven 3D MRI analysis to catch joint disease before symptoms appear, a preventive-medicine application with broad clinical potential.",
+      "impact_category": "Strategic Partnership",
+      "title": "\u75db\u307f\u304c\u51fa\u308b\u524d\u306e\u819d\u306e\u5909\u5316\u3092MRI\u3067\u6349\u3048\u308b | Science Tokyo - \u6771\u4eac\u79d1\u5b66\u5927\u5b66",
+      "url": "https://www.isct.ac.jp/ja/news/rqj5aq8ubjvg",
+      "university": "Institute of Science Tokyo",
+      "published_date": "2026-09-15"
+    },
+    {
+      "rank": 7,
       "article_id": 63689,
-      "editorial_note": "A $20M NSF program funding student-led AI wildfire detection research demonstrates sustained federal investment in applying AI to climate and disaster resilience.",
+      "editorial_note": "A $20M NSF EPSCoR program funding student-led AI wildfire detection research illustrates how major federal science funding is training the next generation of AI-equipped researchers.",
       "impact_category": "Major Funding",
       "title": "NSF fire science research grant supports student research",
       "url": "https://www.unr.edu/nevada-today/news/2026/hdrfs-student-research-awards",
@@ -82,9 +72,9 @@
       "published_date": "2026-09-14"
     },
     {
-      "rank": 9,
+      "rank": 8,
       "article_id": 63484,
-      "editorial_note": "An AI colonoscopy-screening system earning a national public-sector excellence award shows measurable clinical adoption of AI diagnostics in cancer detection.",
+      "editorial_note": "Chulalongkorn's award-winning DeepGI system, already assisting real colonoscopy screenings for colorectal cancer, shows AI diagnostics moving from research into deployed clinical practice.",
       "impact_category": "Scientific Breakthrough",
       "title": "Chula Medical Innovation Receives Excellence Award 2026 - Chulalongkorn University",
       "url": "https://www.chula.ac.th/en/news/425742/",
@@ -92,9 +82,19 @@
       "published_date": "2026-09-15"
     },
     {
+      "rank": 9,
+      "article_id": 63388,
+      "editorial_note": "An AI-powered 'digital human' avatar for early dementia detection earned national design recognition, highlighting practical AI tools reaching clinicians for a high-stakes diagnostic challenge.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "AI-powered early dementia-detection tool earns Texas A&M a Fast Company Innovation by Design Award \u2013 Texas A&M Stories",
+      "url": "https://stories.tamu.edu/stories/ai-powered-early-dementia-detection-tool-earns-texas-am-a-fast-company-innovation-by-design-award/",
+      "university": "Texas A & M University-College Station",
+      "published_date": "2026-09-14"
+    },
+    {
       "rank": 10,
       "article_id": 63343,
-      "editorial_note": "A national poll showing only 11% public support for local AI data centers, with bipartisan opposition, signals a looming policy and siting challenge for the AI infrastructure buildout.",
+      "editorial_note": "A national poll showing overwhelming, bipartisan public opposition to local AI data center construction surfaces a growing political constraint on AI infrastructure expansion nationwide.",
       "impact_category": "Policy Impact",
       "title": "Just 1 in 9 Americans Support AI Data Center Construction in their Local Communities, According to New UMass Amherst Poll | UMass Amherst",
       "url": "https://www.umass.edu/news/article/just-1-9-americans-support-ai-data-center-construction-their-local-communities",
