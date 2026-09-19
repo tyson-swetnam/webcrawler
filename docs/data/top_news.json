@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-19T09:09:34",
+  "generated_at": "2026-09-19T15:24:07",
   "picks": [
     {
       "rank": 1,
       "article_id": 64727,
-      "editorial_note": "NSF's $1.5B X-Labs initiative adds a dedicated funding call for AI for Physical Systems, signaling a major national push to bankroll generational AI-driven breakthroughs.",
+      "editorial_note": "A $1.5 billion NSF initiative adding a dedicated AI-for-physical-systems funding track signals a major, sustained federal bet on AI research infrastructure at national scale.",
       "impact_category": "Major Funding",
       "title": "NSF announces 3 additional topics as part of the NSF X-Labs initiative to pursue generational breakthrough science and technology efforts",
       "url": "https://www.nsf.gov/news/nsf-announces-3-additional-topics-part-nsf-x-labs-initiative",
@@ -13,28 +13,28 @@
     },
     {
       "rank": 2,
-      "article_id": 64719,
-      "editorial_note": "NSF's new ELEGANT program aims to translate low-dimensional semiconductor research into U.S. manufacturing, directly targeting the chip supply chain that underpins AI compute.",
-      "impact_category": "Major Funding",
-      "title": "NSF invests in translating low-dimensional semiconductor technologies to establish U.S. leadership in microelectronics",
-      "url": "https://www.nsf.gov/news/nsf-invests-translating-low-dimensional-semiconductor",
-      "university": "National Science Foundation",
-      "published_date": "2026-09-17"
-    },
-    {
-      "rank": 3,
       "article_id": 64819,
-      "editorial_note": "A $15M gift from the OpenAI Foundation to UCSF's OpenADMET Consortium will build open pharmacokinetic datasets specifically to train better drug-behavior AI models, a rare industry-to-academia science philanthropy play.",
-      "impact_category": "Major Funding",
+      "editorial_note": "A $15 million gift from the OpenAI Foundation to build open pharmacokinetic datasets could meaningfully accelerate AI-driven drug development across the whole field, not just one lab.",
+      "impact_category": "Strategic Partnership",
       "title": "A Gift to Help Scientists Predict How Drugs Behave in the Body",
       "url": "https://www.ucsf.edu/news/2026/09/432621/gift-help-scientists-predict-how-drugs-behave-body",
       "university": "University of California-San Francisco",
       "published_date": "2026-09-15"
     },
     {
+      "rank": 3,
+      "article_id": 64719,
+      "editorial_note": "NSF's ELEGANT program ties AI-relevant semiconductor research directly to U.S. manufacturing competitiveness, reflecting a deliberate policy push to secure the domestic microelectronics supply chain underpinning AI hardware.",
+      "impact_category": "Policy Impact",
+      "title": "NSF invests in translating low-dimensional semiconductor technologies to establish U.S. leadership in microelectronics",
+      "url": "https://www.nsf.gov/news/nsf-invests-translating-low-dimensional-semiconductor",
+      "university": "National Science Foundation",
+      "published_date": "2026-09-17"
+    },
+    {
       "rank": 4,
       "article_id": 64558,
-      "editorial_note": "SRI's $26.5M ARPA-H award funds an AI 'co-pilot' to bring specialist-level guidance to rural medical care, a concrete real-world deployment of AI addressing a healthcare access gap.",
+      "editorial_note": "A $26.5 million ARPA-H award for an AI 'co-pilot' aimed at rural medical care is a concrete example of AI addressing a real healthcare access gap, with national reach via Reuters coverage.",
       "impact_category": "Major Funding",
       "title": "Reuters covers SRI's work in the ARPA-H-funded PARADIGM program - SRI",
       "url": "https://www.sri.com/press/story/reuters-covers-sris-work-in-the-arpa-h-funded-paradigm-program/",
@@ -44,7 +44,7 @@
     {
       "rank": 5,
       "article_id": 64520,
-      "editorial_note": "An international team's protein language model unifying sequence and 3D structure data represents a genuine scientific advance in mapping protein evolution, the highest-rated scientific breakthrough this week.",
+      "editorial_note": "Unifying protein sequence and structure into a single language model is a genuine scientific advance that could reshape how researchers map evolutionary and functional relationships across the protein universe.",
       "impact_category": "Scientific Breakthrough",
       "title": "Uniting sequence and structure to map the protein universe | Science Tokyo",
       "url": "https://www.isct.ac.jp/en/news/710omgmrx88a",
@@ -53,8 +53,18 @@
     },
     {
       "rank": 6,
+      "article_id": 65176,
+      "editorial_note": "UCLA's hardware-as-neural-network approach to 'physical AI' points toward fundamentally more energy-efficient computing architectures, a breakthrough direction rather than an incremental application.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Toward physical AI: When the hardware becomes the neural network",
+      "url": "https://newsroom.ucla.edu/releases/toward-physical-ai-when-hardware-becomes-neural-network",
+      "university": "University of California-Los Angeles",
+      "published_date": "2026-09-18"
+    },
+    {
+      "rank": 7,
       "article_id": 64464,
-      "editorial_note": "EPFL/ETH Zurich's open-source Apertus model being embedded in Proton's Lumo assistant exposes academic AI research to tens of millions of privacy-focused users, a significant academia-industry bridge.",
+      "editorial_note": "Integrating EPFL's open-source Apertus model into Proton's Lumo assistant puts academically-developed AI in front of tens of millions of privacy-conscious users, a rare case of university research reaching mass consumer scale.",
       "impact_category": "Strategic Partnership",
       "title": "Apertus partners with Proton's Lumo AI assistant",
       "url": "https://news.epfl.ch/news/apertus-partners-with-proton-s-lumo-ai-assistant/",
@@ -62,9 +72,9 @@
       "published_date": "2026-09-17"
     },
     {
-      "rank": 7,
+      "rank": 8,
       "article_id": 63939,
-      "editorial_note": "Rutgers and RWJBarnabas Health's AWS-powered Innovation Hub unites a major cloud provider, a health system, and a university to advance AI in medical education and care delivery.",
+      "editorial_note": "Rutgers' Innovation Hub with RWJBarnabas Health and AWS pairs a major cloud provider with an academic medical system, the kind of industry-clinical alliance likely to shape how AI reaches patient care.",
       "impact_category": "Strategic Partnership",
       "title": "Rutgers and RWJBarnabas Health to Launch Innovation Hub, Powered by Amazon Web Services",
       "url": "https://www.rutgers.edu/news/rutgers-and-rwjbarnabas-health-launch-innovation-hub-powered-amazon-web-services",
@@ -72,34 +82,24 @@
       "published_date": "2026-09-15"
     },
     {
-      "rank": 8,
+      "rank": 9,
+      "article_id": 65121,
+      "editorial_note": "DARPA's new prize competition for autonomous trauma surgical robotics pushes AI toward high-stakes, life-or-death clinical autonomy, a notable expansion of real-world AI applications in medicine.",
+      "impact_category": "Major Funding",
+      "title": "$3.5M to advance autonomous trauma robotics",
+      "url": "https://www.darpa.mil/news/2026/darpa-competition-surgical",
+      "university": "DARPA",
+      "published_date": "2026-09-15"
+    },
+    {
+      "rank": 10,
       "article_id": 64898,
-      "editorial_note": "A DOE Genesis Mission-funded project using AI to reason over decades of nuclear waste safety data could materially speed up regulatory review in a historically slow-moving policy domain.",
+      "editorial_note": "Applying AI to reason over decades of nuclear waste safety data, backed by DOE's Genesis Mission, shows AI being trusted with a high-consequence regulatory and public-safety task.",
       "impact_category": "Policy Impact",
       "title": "AI project reviews nuclear waste safety-case evidence",
       "url": "https://www.unr.edu/nevada-today/news/2026/ankita-shukla-genesis-mission-project",
       "university": "University of Nevada-Reno",
       "published_date": "2026-09-17"
-    },
-    {
-      "rank": 9,
-      "article_id": 63963,
-      "editorial_note": "NIST's $30M+ investment across 12 Manufacturing Extension Partnership centers will help small and mid-size manufacturers nationwide adopt AI and robotics, a broad policy-driven technology diffusion effort.",
-      "impact_category": "Policy Impact",
-      "title": "NIST Awards More Than $30 Million for MEP Centers in 11 States and Puerto Rico",
-      "url": "https://www.nist.gov/news-events/news/2026/09/nist-awards-more-30-million-mep-centers-11-states-and-puerto-rico",
-      "university": "NIST",
-      "published_date": "2026-09-15"
-    },
-    {
-      "rank": 10,
-      "article_id": 64923,
-      "editorial_note": "FAU's 'Hovering Owls' team was one of only two university teams to clear a 2:1 payload-to-weight ratio at DARPA's Lift Challenge, a notable applied-AI/robotics engineering achievement with defense relevance.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "FAU CA-AI Hovering Owls Excel at DARPA Lift Challenge",
-      "url": "https://www.fau.edu/newsdesk/articles/ca-ai-hovering-owls-darpa-lift-challenge.php",
-      "university": "Florida Atlantic University",
-      "published_date": "2026-09-18"
     }
   ]
 }
