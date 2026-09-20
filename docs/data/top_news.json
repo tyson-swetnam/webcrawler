@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-19T21:08:31",
+  "generated_at": "2026-09-20T03:21:53",
   "picks": [
     {
       "rank": 1,
       "article_id": 64727,
-      "editorial_note": "NSF's $1.5B X-Labs initiative adding a dedicated AI-for-Physical-Systems funding call signals a major federal bet on AI-driven scientific infrastructure, with ripple effects across the entire university research funding landscape.",
+      "editorial_note": "A $1.5 billion NSF initiative expanding into AI for Physical Systems signals a major federal funding commitment that will shape the national AI research agenda for years.",
       "impact_category": "Major Funding",
       "title": "NSF announces 3 additional topics as part of the NSF X-Labs initiative to pursue generational breakthrough science and technology efforts",
       "url": "https://www.nsf.gov/news/nsf-announces-3-additional-topics-part-nsf-x-labs-initiative",
@@ -14,8 +14,8 @@
     {
       "rank": 2,
       "article_id": 64819,
-      "editorial_note": "A $15M gift from the OpenAI Foundation to build an open-source pharmacokinetic data platform is a notable industry-academia partnership that could accelerate AI-driven drug development broadly, not just at UCSF.",
-      "impact_category": "Strategic Partnership",
+      "editorial_note": "A $15 million gift from the OpenAI Foundation to build open pharmacokinetic datasets marks a notable industry-academia bet on using AI to accelerate drug development.",
+      "impact_category": "Major Funding",
       "title": "A Gift to Help Scientists Predict How Drugs Behave in the Body",
       "url": "https://www.ucsf.edu/news/2026/09/432621/gift-help-scientists-predict-how-drugs-behave-body",
       "university": "University of California-San Francisco",
@@ -23,18 +23,8 @@
     },
     {
       "rank": 3,
-      "article_id": 64719,
-      "editorial_note": "NSF's new ELEGANT program ties AI hardware progress directly to U.S. semiconductor manufacturing competitiveness, reflecting a policy-level push to secure domestic chip supply chains for next-gen AI compute.",
-      "impact_category": "Policy Impact",
-      "title": "NSF invests in translating low-dimensional semiconductor technologies to establish U.S. leadership in microelectronics",
-      "url": "https://www.nsf.gov/news/nsf-invests-translating-low-dimensional-semiconductor",
-      "university": "National Science Foundation",
-      "published_date": "2026-09-17"
-    },
-    {
-      "rank": 4,
       "article_id": 64558,
-      "editorial_note": "A $26.5M ARPA-H award for an AI 'co-pilot' aimed at rural medical care represents a significant government investment in using AI to address real healthcare access gaps.",
+      "editorial_note": "SRI's $26.5 million ARPA-H-funded AI co-pilot for rural medical care demonstrates real-world deployment potential for AI in addressing healthcare access gaps.",
       "impact_category": "Major Funding",
       "title": "Reuters covers SRI's work in the ARPA-H-funded PARADIGM program - SRI",
       "url": "https://www.sri.com/press/story/reuters-covers-sris-work-in-the-arpa-h-funded-paradigm-program/",
@@ -42,9 +32,19 @@
       "published_date": "2026-09-17"
     },
     {
+      "rank": 4,
+      "article_id": 64719,
+      "editorial_note": "NSF's ELEGANT program ties AI infrastructure directly to U.S. semiconductor manufacturing strategy, a policy-relevant move to secure the microelectronics supply chain underpinning AI hardware.",
+      "impact_category": "Policy Impact",
+      "title": "NSF invests in translating low-dimensional semiconductor technologies to establish U.S. leadership in microelectronics",
+      "url": "https://www.nsf.gov/news/nsf-invests-translating-low-dimensional-semiconductor",
+      "university": "National Science Foundation",
+      "published_date": "2026-09-17"
+    },
+    {
       "rank": 5,
       "article_id": 64520,
-      "editorial_note": "Unifying protein sequence and 3D structure in a single language model is a genuine scientific advance that could reshape how researchers map evolutionary and functional relationships across the proteome.",
+      "editorial_note": "A protein language model unifying sequence and 3D structure data represents a genuine scientific advance in mapping evolutionary relationships, with high potential downstream impact on biology and drug design.",
       "impact_category": "Scientific Breakthrough",
       "title": "Uniting sequence and structure to map the protein universe | Science Tokyo",
       "url": "https://www.isct.ac.jp/en/news/710omgmrx88a",
@@ -54,7 +54,7 @@
     {
       "rank": 6,
       "article_id": 65176,
-      "editorial_note": "UCLA's hardware-as-neural-network approach to 'physical AI' points toward fundamentally more energy-efficient computing architectures, a breakthrough direction as AI's power demands become a bottleneck.",
+      "editorial_note": "UCLA's hardware-based neural network approach, where the physical substrate itself computes, is a novel direction for energy-efficient AI that could reduce reliance on traditional digital compute.",
       "impact_category": "Scientific Breakthrough",
       "title": "Toward physical AI: When the hardware becomes the neural network",
       "url": "https://newsroom.ucla.edu/releases/toward-physical-ai-when-hardware-becomes-neural-network",
@@ -63,18 +63,8 @@
     },
     {
       "rank": 7,
-      "article_id": 63939,
-      "editorial_note": "Rutgers and RWJBarnabas Health's AWS-powered Innovation Hub is a substantial academic-industry-clinical partnership that could serve as a model for embedding cloud AI directly into medical education and care delivery.",
-      "impact_category": "Strategic Partnership",
-      "title": "Rutgers and RWJBarnabas Health to Launch Innovation Hub, Powered by Amazon Web Services",
-      "url": "https://www.rutgers.edu/news/rutgers-and-rwjbarnabas-health-launch-innovation-hub-powered-amazon-web-services",
-      "university": "Rutgers University-New Brunswick",
-      "published_date": "2026-09-15"
-    },
-    {
-      "rank": 8,
       "article_id": 64464,
-      "editorial_note": "Integrating the open-source Apertus model into Proton's Lumo assistant exposes European academic AI research to tens of millions of users, a rare case of university-built AI reaching mainstream consumer scale.",
+      "editorial_note": "Integrating the open-source Apertus model into Proton's Lumo assistant exposes academic AI research to tens of millions of users, a rare case of university research reaching mass-market deployment.",
       "impact_category": "Strategic Partnership",
       "title": "Apertus partners with Proton's Lumo AI assistant",
       "url": "https://news.epfl.ch/news/apertus-partners-with-proton-s-lumo-ai-assistant/",
@@ -82,9 +72,19 @@
       "published_date": "2026-09-17"
     },
     {
+      "rank": 8,
+      "article_id": 63939,
+      "editorial_note": "Rutgers' new AWS-powered Innovation Hub with a major health system exemplifies the growing convergence of cloud providers, academia, and clinical care in applied AI.",
+      "impact_category": "Strategic Partnership",
+      "title": "Rutgers and RWJBarnabas Health to Launch Innovation Hub, Powered by Amazon Web Services",
+      "url": "https://www.rutgers.edu/news/rutgers-and-rwjbarnabas-health-launch-innovation-hub-powered-amazon-web-services",
+      "university": "Rutgers University-New Brunswick",
+      "published_date": "2026-09-15"
+    },
+    {
       "rank": 9,
       "article_id": 65066,
-      "editorial_note": "A $5M multi-university NSF award to build national privacy-preserving data-sharing infrastructure addresses a core barrier to collaborative AI research across institutions.",
+      "editorial_note": "A $5 million multi-university NSF award to build privacy-preserving data-sharing infrastructure addresses a critical barrier to collaborative AI research at national scale.",
       "impact_category": "Major Funding",
       "title": "$5M NSF award to enhance data protections for users nationwide",
       "url": "https://news.asu.edu/20260918-science-and-technology-5m-nsf-award-enhance-data-protections-users-nationwide",
@@ -94,7 +94,7 @@
     {
       "rank": 10,
       "article_id": 65121,
-      "editorial_note": "DARPA's $3.5M prize for autonomous trauma surgical robotics pushes AI-driven autonomy in medicine toward real battlefield and emergency-care deployment.",
+      "editorial_note": "DARPA's $3.5 million prize for autonomous trauma surgical robotics pushes AI toward high-stakes, life-critical applications in battlefield and emergency medicine.",
       "impact_category": "Major Funding",
       "title": "$3.5M to advance autonomous trauma robotics",
       "url": "https://www.darpa.mil/news/2026/darpa-competition-surgical",
