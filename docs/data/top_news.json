@@ -1,10 +1,20 @@
 {
-  "generated_at": "2026-09-22T09:10:45",
+  "generated_at": "2026-09-22T15:30:39",
   "picks": [
     {
       "rank": 1,
+      "article_id": 66199,
+      "editorial_note": "A sitting government minister marking a national supercomputer milestone signals serious state-level commitment to AI infrastructure, with direct promised payoffs in drug discovery and climate research.",
+      "impact_category": "Strategic Partnership",
+      "title": "AI Minister marks milestone on Supercomputer build | News | The University of Edinburgh",
+      "url": "https://www.ed.ac.uk/news/ai-minister-marks-milestone-on-supercomputer-build",
+      "university": "University of Edinburgh",
+      "published_date": "2026-09-22"
+    },
+    {
+      "rank": 2,
       "article_id": 64727,
-      "editorial_note": "NSF's $1.5B X-Labs initiative adding a dedicated funding call for AI for Physical Systems signals a major federal bet on AI-driven engineering research, with ripple effects across dozens of university labs.",
+      "editorial_note": "NSF's $1.5B X-Labs initiative expanding to include AI for Physical Systems represents a major federal bet on foundational AI research with broad downstream funding implications for the university sector.",
       "impact_category": "Major Funding",
       "title": "NSF announces 3 additional topics as part of the NSF X-Labs initiative to pursue generational breakthrough science and technology efforts",
       "url": "https://www.nsf.gov/news/nsf-announces-3-additional-topics-part-nsf-x-labs-initiative",
@@ -12,19 +22,9 @@
       "published_date": "2026-09-16"
     },
     {
-      "rank": 2,
-      "article_id": 64558,
-      "editorial_note": "SRI's ARPA-H-funded AI 'co-pilot' for rural medical care is a concrete, deployable application addressing real healthcare access gaps, backed by $26.5M in federal funding and national press coverage.",
-      "impact_category": "Major Funding",
-      "title": "Reuters covers SRI's work in the ARPA-H-funded PARADIGM program - SRI",
-      "url": "https://www.sri.com/press/story/reuters-covers-sris-work-in-the-arpa-h-funded-paradigm-program/",
-      "university": "SRI International",
-      "published_date": "2026-09-17"
-    },
-    {
       "rank": 3,
       "article_id": 64520,
-      "editorial_note": "An international team's protein language model unifying sequence and 3D structure data represents a genuine scientific advance in computational biology, with the highest scientific-impact score of the week.",
+      "editorial_note": "A protein language model unifying sequence and structure data is a genuine scientific advance for computational biology, carrying the week's highest scientific-impact score.",
       "impact_category": "Scientific Breakthrough",
       "title": "Uniting sequence and structure to map the protein universe | Science Tokyo",
       "url": "https://www.isct.ac.jp/en/news/710omgmrx88a",
@@ -34,7 +34,7 @@
     {
       "rank": 4,
       "article_id": 65176,
-      "editorial_note": "UCLA's 'physical AI' work\u2014using self-organized nanowire networks as hardware-based neural networks\u2014points toward a fundamentally new, energy-efficient computing paradigm rather than an incremental software gain.",
+      "editorial_note": "Hardware-based neural networks that compute directly in the material itself point toward a fundamentally new, energy-efficient computing paradigm rather than an incremental software improvement.",
       "impact_category": "Scientific Breakthrough",
       "title": "Toward physical AI: When the hardware becomes the neural network",
       "url": "https://newsroom.ucla.edu/releases/toward-physical-ai-when-hardware-becomes-neural-network",
@@ -43,8 +43,18 @@
     },
     {
       "rank": 5,
+      "article_id": 64558,
+      "editorial_note": "A $26.5M ARPA-H award turning AI into a real-time clinical co-pilot for underserved rural areas demonstrates tangible, near-term real-world healthcare impact rather than lab-stage research.",
+      "impact_category": "Major Funding",
+      "title": "Reuters covers SRI's work in the ARPA-H-funded PARADIGM program - SRI",
+      "url": "https://www.sri.com/press/story/reuters-covers-sris-work-in-the-arpa-h-funded-paradigm-program/",
+      "university": "SRI International",
+      "published_date": "2026-09-17"
+    },
+    {
+      "rank": 6,
       "article_id": 64719,
-      "editorial_note": "NSF's ELEGANT program to translate low-dimensional semiconductor research into U.S. manufacturing directly targets the hardware supply chain underpinning next-generation AI and HPC systems.",
+      "editorial_note": "NSF's ELEGANT program aims to translate semiconductor research into domestic manufacturing capacity, directly addressing the hardware bottleneck underpinning U.S. AI competitiveness.",
       "impact_category": "Major Funding",
       "title": "NSF invests in translating low-dimensional semiconductor technologies to establish U.S. leadership in microelectronics",
       "url": "https://www.nsf.gov/news/nsf-invests-translating-low-dimensional-semiconductor",
@@ -52,19 +62,19 @@
       "published_date": "2026-09-17"
     },
     {
-      "rank": 6,
-      "article_id": 64464,
-      "editorial_note": "Integrating the EPFL/ETH Zurich open-source Apertus model into Proton's Lumo assistant puts European sovereign AI research directly in front of tens of millions of privacy-conscious users\u2014a rare academic-to-mass-market bridge.",
+      "rank": 7,
+      "article_id": 66181,
+      "editorial_note": "A government-backed multi-year partnership expanding AI- and robotics-driven biofoundry work shows sustained state investment in translating AI into biological research infrastructure.",
       "impact_category": "Strategic Partnership",
-      "title": "Apertus partners with Proton's Lumo AI assistant",
-      "url": "https://news.epfl.ch/news/apertus-partners-with-proton-s-lumo-ai-assistant/",
-      "university": "EPFL",
-      "published_date": "2026-09-17"
+      "title": "Funding boost transforms AI-enabled biological research | News | The University of Edinburgh",
+      "url": "https://www.ed.ac.uk/news/funding-boost-transforms-ai-enabled-biological-research",
+      "university": "University of Edinburgh",
+      "published_date": "2026-09-22"
     },
     {
-      "rank": 7,
+      "rank": 8,
       "article_id": 64898,
-      "editorial_note": "A DOE Genesis Mission-funded project using AI to reason over decades of nuclear waste safety-case evidence has direct implications for federal regulatory decision-making and nuclear policy.",
+      "editorial_note": "Applying AI to reason over decades of nuclear waste safety-case evidence under the DOE's Genesis Mission has direct implications for regulatory and national security decision-making.",
       "impact_category": "Policy Impact",
       "title": "AI project reviews nuclear waste safety-case evidence",
       "url": "https://www.unr.edu/nevada-today/news/2026/ankita-shukla-genesis-mission-project",
@@ -72,9 +82,9 @@
       "published_date": "2026-09-17"
     },
     {
-      "rank": 8,
+      "rank": 9,
       "article_id": 65066,
-      "editorial_note": "A $5M NSF-backed, three-university cyberinfrastructure (PARAPET) for privacy-preserving data sharing addresses a systemic barrier to collaborative AI research at national scale.",
+      "editorial_note": "A $5M multi-institution NSF award building shared privacy-preserving data infrastructure addresses a systemic barrier to collaborative AI research across universities.",
       "impact_category": "Major Funding",
       "title": "$5M NSF award to enhance data protections for users nationwide",
       "url": "https://news.asu.edu/20260918-science-and-technology-5m-nsf-award-enhance-data-protections-users-nationwide",
@@ -82,24 +92,14 @@
       "published_date": "2026-09-18"
     },
     {
-      "rank": 9,
-      "article_id": 65185,
-      "editorial_note": "A global AI summit hosted by King Charles, featuring Anthropic's disclosure about Claude's capabilities and UCLA's AI safety leadership commenting on CNN, reflects growing head-of-state-level attention to AI governance.",
-      "impact_category": "Policy Impact",
-      "title": "King Charles hosts AI summit \u2014 and more UCLA media",
-      "url": "https://newsroom.ucla.edu/in-the-news/king-charles-hosts-ai-summit-and-more-ucla-media",
-      "university": "University of California-Los Angeles",
-      "published_date": "2026-09-18"
-    },
-    {
       "rank": 10,
-      "article_id": 64340,
-      "editorial_note": "UW researchers publicly addressing reports that OpenAI and Anthropic agents breached security controls helps calibrate public understanding of real versus exaggerated AI risks\u2014a timely contribution to the policy debate.",
-      "impact_category": "Policy Impact",
-      "title": "Q&A: UW researchers respond to recent concerns over AI risk | UW News",
-      "url": "https://www.washington.edu/news/2026/09/16/uw-researchers-discuss-ai-risk/",
-      "university": "University of Washington-Seattle Campus",
-      "published_date": "2026-09-16"
+      "article_id": 64464,
+      "editorial_note": "Integrating an open-source academic language model into a privacy-focused consumer assistant used by tens of millions extends university AI research directly into mainstream products.",
+      "impact_category": "Strategic Partnership",
+      "title": "Apertus partners with Proton's Lumo AI assistant",
+      "url": "https://news.epfl.ch/news/apertus-partners-with-proton-s-lumo-ai-assistant/",
+      "university": "EPFL",
+      "published_date": "2026-09-17"
     }
   ]
 }
