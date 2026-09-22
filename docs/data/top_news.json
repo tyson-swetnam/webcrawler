@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-21T21:09:08",
+  "generated_at": "2026-09-22T03:22:25",
   "picks": [
     {
       "rank": 1,
       "article_id": 64727,
-      "editorial_note": "NSF's $1.5B X-Labs initiative adding a dedicated AI for Physical Systems funding call signals a major federal bet on AI research at national scale, with ripple effects across the entire university research funding landscape.",
+      "editorial_note": "NSF's $1.5B X-Labs initiative adding a dedicated AI for Physical Systems funding track signals a major federal bet on AI-driven engineering research, with ripple effects for university funding pipelines nationwide.",
       "impact_category": "Major Funding",
       "title": "NSF announces 3 additional topics as part of the NSF X-Labs initiative to pursue generational breakthrough science and technology efforts",
       "url": "https://www.nsf.gov/news/nsf-announces-3-additional-topics-part-nsf-x-labs-initiative",
@@ -13,28 +13,8 @@
     },
     {
       "rank": 2,
-      "article_id": 64558,
-      "editorial_note": "A $26.5M ARPA-H award for an AI 'co-pilot' that could bring specialist-level guidance to rural medical care is a concrete example of AI funding translating into real-world healthcare access impact.",
-      "impact_category": "Major Funding",
-      "title": "Reuters covers SRI's work in the ARPA-H-funded PARADIGM program - SRI",
-      "url": "https://www.sri.com/press/story/reuters-covers-sris-work-in-the-arpa-h-funded-paradigm-program/",
-      "university": "SRI International",
-      "published_date": "2026-09-17"
-    },
-    {
-      "rank": 3,
-      "article_id": 64819,
-      "editorial_note": "A $15M gift from the OpenAI Foundation to build open-source pharmacokinetic data infrastructure marks a notable industry-academia collaboration aimed at accelerating AI-driven drug development for the whole field, not just one lab.",
-      "impact_category": "Major Funding",
-      "title": "A Gift to Help Scientists Predict How Drugs Behave in the Body",
-      "url": "https://www.ucsf.edu/news/2026/09/432621/gift-help-scientists-predict-how-drugs-behave-body",
-      "university": "University of California-San Francisco",
-      "published_date": "2026-09-15"
-    },
-    {
-      "rank": 4,
       "article_id": 64719,
-      "editorial_note": "NSF's ELEGANT program directs federal investment toward next-generation semiconductor manufacturing specifically to support AI and high-performance computing, addressing a critical hardware bottleneck for the field.",
+      "editorial_note": "NSF's new ELEGANT program targets U.S. semiconductor manufacturing leadership specifically to support next-generation AI and high-performance computing hardware, tying directly into national tech competitiveness strategy.",
       "impact_category": "Major Funding",
       "title": "NSF invests in translating low-dimensional semiconductor technologies to establish U.S. leadership in microelectronics",
       "url": "https://www.nsf.gov/news/nsf-invests-translating-low-dimensional-semiconductor",
@@ -42,9 +22,29 @@
       "published_date": "2026-09-17"
     },
     {
+      "rank": 3,
+      "article_id": 64558,
+      "editorial_note": "SRI's $26.5M ARPA-H award to build an AI 'co-pilot' for rural medical care shows government funding translating directly into deployable technology addressing real healthcare access gaps.",
+      "impact_category": "Major Funding",
+      "title": "Reuters covers SRI's work in the ARPA-H-funded PARADIGM program - SRI",
+      "url": "https://www.sri.com/press/story/reuters-covers-sris-work-in-the-arpa-h-funded-paradigm-program/",
+      "university": "SRI International",
+      "published_date": "2026-09-17"
+    },
+    {
+      "rank": 4,
+      "article_id": 65176,
+      "editorial_note": "UCLA's 'physical AI' approach, where self-organized nanowire networks function as the neural network hardware itself, is a genuinely novel computing paradigm with implications for low-power, edge AI processing.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Toward physical AI: When the hardware becomes the neural network",
+      "url": "https://newsroom.ucla.edu/releases/toward-physical-ai-when-hardware-becomes-neural-network",
+      "university": "University of California-Los Angeles",
+      "published_date": "2026-09-18"
+    },
+    {
       "rank": 5,
       "article_id": 64520,
-      "editorial_note": "A new protein language model unifying sequence and 3D structure data represents a genuine scientific advance in mapping evolutionary relationships, building on the AlphaFold-era push to decode the 'protein universe.'",
+      "editorial_note": "An international team's protein language model unifying sequence and 3D structure data represents a significant scientific advance for mapping evolutionary relationships across the protein universe.",
       "impact_category": "Scientific Breakthrough",
       "title": "Uniting sequence and structure to map the protein universe | Science Tokyo",
       "url": "https://www.isct.ac.jp/en/news/710omgmrx88a",
@@ -53,38 +53,8 @@
     },
     {
       "rank": 6,
-      "article_id": 65176,
-      "editorial_note": "UCLA's work on hardware where nanowire networks themselves act as the neural network points toward energy-efficient 'physical AI' that could fundamentally change how AI systems are built and deployed at the edge.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Toward physical AI: When the hardware becomes the neural network",
-      "url": "https://newsroom.ucla.edu/releases/toward-physical-ai-when-hardware-becomes-neural-network",
-      "university": "University of California-Los Angeles",
-      "published_date": "2026-09-18"
-    },
-    {
-      "rank": 7,
-      "article_id": 64464,
-      "editorial_note": "Integrating EPFL/ETH Zurich's open-source Apertus model into Proton's privacy-focused Lumo assistant exposes an academically-developed LLM to tens of millions of users, a rare case of university AI research reaching mass-market deployment.",
-      "impact_category": "Strategic Partnership",
-      "title": "Apertus partners with Proton's Lumo AI assistant",
-      "url": "https://news.epfl.ch/news/apertus-partners-with-proton-s-lumo-ai-assistant/",
-      "university": "EPFL",
-      "published_date": "2026-09-17"
-    },
-    {
-      "rank": 8,
-      "article_id": 63939,
-      "editorial_note": "Rutgers and RWJBarnabas Health's AWS-powered Innovation Hub is a substantial academic-industry-clinical partnership aimed at embedding AI directly into medical education and care delivery.",
-      "impact_category": "Strategic Partnership",
-      "title": "Rutgers and RWJBarnabas Health to Launch Innovation Hub, Powered by Amazon Web Services",
-      "url": "https://www.rutgers.edu/news/rutgers-and-rwjbarnabas-health-launch-innovation-hub-powered-amazon-web-services",
-      "university": "Rutgers University-New Brunswick",
-      "published_date": "2026-09-15"
-    },
-    {
-      "rank": 9,
       "article_id": 64898,
-      "editorial_note": "A DOE Genesis Mission-funded project using AI to reason over decades of nuclear waste safety data shows AI being applied to a high-stakes regulatory and environmental policy domain with long-term national implications.",
+      "editorial_note": "A DOE Genesis Mission-funded project using AI to reason over decades of nuclear waste safety data could materially speed up and strengthen regulatory decision-making on one of the highest-stakes issues in energy policy.",
       "impact_category": "Policy Impact",
       "title": "AI project reviews nuclear waste safety-case evidence",
       "url": "https://www.unr.edu/nevada-today/news/2026/ankita-shukla-genesis-mission-project",
@@ -92,14 +62,44 @@
       "published_date": "2026-09-17"
     },
     {
+      "rank": 7,
+      "article_id": 65066,
+      "editorial_note": "A $5M multi-university NSF award to build PARAPET, a national privacy-preserving data-sharing infrastructure, establishes technical groundwork institutions will rely on for secure AI research collaboration.",
+      "impact_category": "Strategic Partnership",
+      "title": "$5M NSF award to enhance data protections for users nationwide",
+      "url": "https://news.asu.edu/20260918-science-and-technology-5m-nsf-award-enhance-data-protections-users-nationwide",
+      "university": "Arizona State University Campus Immersion",
+      "published_date": "2026-09-18"
+    },
+    {
+      "rank": 8,
+      "article_id": 64464,
+      "editorial_note": "EPFL/ETH Zurich's open-source Apertus model being integrated into Proton's privacy-focused Lumo assistant exposes academic AI research to tens of millions of users, a rare bridge from lab to mass consumer product.",
+      "impact_category": "Strategic Partnership",
+      "title": "Apertus partners with Proton's Lumo AI assistant",
+      "url": "https://news.epfl.ch/news/apertus-partners-with-proton-s-lumo-ai-assistant/",
+      "university": "EPFL",
+      "published_date": "2026-09-17"
+    },
+    {
+      "rank": 9,
+      "article_id": 65185,
+      "editorial_note": "UCLA's AI officer discussing AI safety on CNN as King Charles convenes a global AI summit reflects growing high-level political attention to AI governance, with Anthropic's own safety disclosures cited.",
+      "impact_category": "Policy Impact",
+      "title": "King Charles hosts AI summit \u2014 and more UCLA media",
+      "url": "https://newsroom.ucla.edu/in-the-news/king-charles-hosts-ai-summit-and-more-ucla-media",
+      "university": "University of California-Los Angeles",
+      "published_date": "2026-09-18"
+    },
+    {
       "rank": 10,
-      "article_id": 65121,
-      "editorial_note": "DARPA's $3.5M prize competition for autonomous trauma surgical robotics pushes AI toward life-critical battlefield and emergency medicine applications, backed by a federal agency with a track record of fielding real technology.",
-      "impact_category": "Major Funding",
-      "title": "$3.5M to advance autonomous trauma robotics",
-      "url": "https://www.darpa.mil/news/2026/darpa-competition-surgical",
-      "university": "DARPA",
-      "published_date": "2026-09-15"
+      "article_id": 64340,
+      "editorial_note": "University of Washington researchers publicly addressing reports of OpenAI and Anthropic AI agents breaching security controls tackles one of the most consequential emerging AI safety and policy debates.",
+      "impact_category": "Policy Impact",
+      "title": "Q&A: UW researchers respond to recent concerns over AI risk | UW News",
+      "url": "https://www.washington.edu/news/2026/09/16/uw-researchers-discuss-ai-risk/",
+      "university": "University of Washington-Seattle Campus",
+      "published_date": "2026-09-16"
     }
   ]
 }
