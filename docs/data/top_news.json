@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-22T21:09:04",
+  "generated_at": "2026-09-23T03:22:58",
   "picks": [
     {
       "rank": 1,
       "article_id": 66199,
-      "editorial_note": "A sitting UK cabinet minister marked a construction milestone on what will be Britain's most powerful supercomputer, a government-university partnership meant to power drug discovery and climate modeling \u2014 a rare case of AI infrastructure investment reaching head-of-government visibility.",
-      "impact_category": "Policy Impact",
+      "editorial_note": "A government minister marking a physical construction milestone on the UK's most powerful supercomputer signals serious national commitment to AI infrastructure, with direct applications to drug discovery and climate modeling.",
+      "impact_category": "Strategic Partnership",
       "title": "AI Minister marks milestone on Supercomputer build | News | The University of Edinburgh",
       "url": "https://www.ed.ac.uk/news/ai-minister-marks-milestone-on-supercomputer-build",
       "university": "University of Edinburgh",
@@ -13,38 +13,8 @@
     },
     {
       "rank": 2,
-      "article_id": 64727,
-      "editorial_note": "NSF added new topics to its $1.5 billion X-Labs initiative, including a dedicated funding call for AI applied to physical systems, signaling sustained federal commitment to AI-adjacent science at national scale.",
-      "impact_category": "Major Funding",
-      "title": "NSF announces 3 additional topics as part of the NSF X-Labs initiative to pursue generational breakthrough science and technology efforts",
-      "url": "https://www.nsf.gov/news/nsf-announces-3-additional-topics-part-nsf-x-labs-initiative",
-      "university": "National Science Foundation",
-      "published_date": "2026-09-16"
-    },
-    {
-      "rank": 3,
-      "article_id": 64520,
-      "editorial_note": "An international team unified protein sequence and 3D structure into a single language model, a foundational advance for mapping evolutionary relationships that could accelerate structural biology and drug design broadly.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Uniting sequence and structure to map the protein universe | Science Tokyo",
-      "url": "https://www.isct.ac.jp/en/news/710omgmrx88a",
-      "university": "Institute of Science Tokyo",
-      "published_date": "2026-09-18"
-    },
-    {
-      "rank": 4,
-      "article_id": 65176,
-      "editorial_note": "UCLA researchers demonstrated hardware where the physical material itself computes as a neural network, a step toward energy-efficient 'physical AI' that could reshape how edge and sensor devices process data locally.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Toward physical AI: When the hardware becomes the neural network",
-      "url": "https://newsroom.ucla.edu/releases/toward-physical-ai-when-hardware-becomes-neural-network",
-      "university": "University of California-Los Angeles",
-      "published_date": "2026-09-18"
-    },
-    {
-      "rank": 5,
       "article_id": 64558,
-      "editorial_note": "A $26.5 million ARPA-H award is funding an AI 'co-pilot' to guide non-specialists through medical procedures in rural care settings, a concrete example of AI addressing real healthcare-access gaps, now drawing national press coverage.",
+      "editorial_note": "A $26.5M federal award turning AI into a practical 'co-pilot' for underserved rural medical care shows how AI research can translate into tangible healthcare access gains, not just lab results.",
       "impact_category": "Major Funding",
       "title": "Reuters covers SRI's work in the ARPA-H-funded PARADIGM program - SRI",
       "url": "https://www.sri.com/press/story/reuters-covers-sris-work-in-the-arpa-h-funded-paradigm-program/",
@@ -52,9 +22,39 @@
       "published_date": "2026-09-17"
     },
     {
+      "rank": 3,
+      "article_id": 64719,
+      "editorial_note": "NSF's ELEGANT program targets a strategic bottleneck \u2014 translating semiconductor research into U.S. manufacturing \u2014 that underpins long-term national competitiveness in AI hardware.",
+      "impact_category": "Policy Impact",
+      "title": "NSF invests in translating low-dimensional semiconductor technologies to establish U.S. leadership in microelectronics",
+      "url": "https://www.nsf.gov/news/nsf-invests-translating-low-dimensional-semiconductor",
+      "university": "National Science Foundation",
+      "published_date": "2026-09-17"
+    },
+    {
+      "rank": 4,
+      "article_id": 64520,
+      "editorial_note": "An international team's protein language model unifying sequence and structure data represents a genuine scientific advance for mapping evolutionary relationships, with broad implications for biology and drug design.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Uniting sequence and structure to map the protein universe | Science Tokyo",
+      "url": "https://www.isct.ac.jp/en/news/710omgmrx88a",
+      "university": "Institute of Science Tokyo",
+      "published_date": "2026-09-18"
+    },
+    {
+      "rank": 5,
+      "article_id": 65176,
+      "editorial_note": "UCLA's 'physical AI' approach, where nanowire networks act as the neural network hardware itself, points toward a fundamentally different and more energy-efficient computing paradigm.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Toward physical AI: When the hardware becomes the neural network",
+      "url": "https://newsroom.ucla.edu/releases/toward-physical-ai-when-hardware-becomes-neural-network",
+      "university": "University of California-Los Angeles",
+      "published_date": "2026-09-18"
+    },
+    {
       "rank": 6,
       "article_id": 66181,
-      "editorial_note": "A three-year government-backed partnership with the UK's ARIA will expand an AI- and robotics-driven biofoundry at Edinburgh, tying advanced funding agency backing directly to AI-accelerated biological research infrastructure.",
+      "editorial_note": "A government-backed, multi-year partnership with ARIA to scale an AI- and robotics-driven biofoundry marks a significant bet on automating biological research at institutional scale.",
       "impact_category": "Strategic Partnership",
       "title": "Funding boost transforms AI-enabled biological research | News | The University of Edinburgh",
       "url": "https://www.ed.ac.uk/news/funding-boost-transforms-ai-enabled-biological-research",
@@ -63,18 +63,18 @@
     },
     {
       "rank": 7,
-      "article_id": 64719,
-      "editorial_note": "NSF's new ELEGANT program aims to translate lab-scale semiconductor research into domestic manufacturing platforms for next-generation AI and computing hardware, directly targeting U.S. supply-chain leadership in microelectronics.",
-      "impact_category": "Major Funding",
-      "title": "NSF invests in translating low-dimensional semiconductor technologies to establish U.S. leadership in microelectronics",
-      "url": "https://www.nsf.gov/news/nsf-invests-translating-low-dimensional-semiconductor",
-      "university": "National Science Foundation",
+      "article_id": 64898,
+      "editorial_note": "Applying AI to reason over decades of nuclear waste safety-case evidence under DOE's Genesis Mission could materially speed up a notoriously slow regulatory and safety review process.",
+      "impact_category": "Policy Impact",
+      "title": "AI project reviews nuclear waste safety-case evidence",
+      "url": "https://www.unr.edu/nevada-today/news/2026/ankita-shukla-genesis-mission-project",
+      "university": "University of Nevada-Reno",
       "published_date": "2026-09-17"
     },
     {
       "rank": 8,
       "article_id": 64464,
-      "editorial_note": "Integrating the academically-developed, open-source Apertus language model into Proton's privacy-focused Lumo assistant puts a university-built model in front of tens of millions of users, a notable academia-to-industry deployment.",
+      "editorial_note": "Integrating the open-source Apertus model into Proton's privacy-focused Lumo assistant instantly exposes academic AI research to tens of millions of real-world users.",
       "impact_category": "Strategic Partnership",
       "title": "Apertus partners with Proton's Lumo AI assistant",
       "url": "https://news.epfl.ch/news/apertus-partners-with-proton-s-lumo-ai-assistant/",
@@ -83,23 +83,23 @@
     },
     {
       "rank": 9,
+      "article_id": 66067,
+      "editorial_note": "Texas A&M's suite of agentic healthcare assistants \u2014 spanning multilingual reception to dementia screening \u2014 demonstrates a concrete, deployable path for AI to address systemic gaps in healthcare delivery.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "How agentic AI is working to fix a broken healthcare system \u2013 Texas A&M Stories",
+      "url": "https://stories.tamu.edu/news/2026/09/21/how-agentic-ai-is-working-to-fix-a-broken-healthcare-system/",
+      "university": "Texas A & M University-College Station",
+      "published_date": "2026-09-21"
+    },
+    {
+      "rank": 10,
       "article_id": 65066,
-      "editorial_note": "A $5 million NSF award backs a three-university effort to build national cyberinfrastructure for privacy-preserving data sharing, addressing a structural bottleneck that limits collaborative AI research across institutions.",
+      "editorial_note": "A $5M NSF award to build national privacy-preserving data-sharing infrastructure addresses a foundational barrier to secure, cross-institution AI research.",
       "impact_category": "Major Funding",
       "title": "$5M NSF award to enhance data protections for users nationwide",
       "url": "https://news.asu.edu/20260918-science-and-technology-5m-nsf-award-enhance-data-protections-users-nationwide",
       "university": "Arizona State University Campus Immersion",
       "published_date": "2026-09-18"
-    },
-    {
-      "rank": 10,
-      "article_id": 64898,
-      "editorial_note": "Part of the DOE's Genesis Mission, this project uses AI to reason over decades of regulatory and scientific evidence for nuclear waste safety cases, an early example of AI entering high-stakes federal safety and policy review processes.",
-      "impact_category": "Policy Impact",
-      "title": "AI project reviews nuclear waste safety-case evidence",
-      "url": "https://www.unr.edu/nevada-today/news/2026/ankita-shukla-genesis-mission-project",
-      "university": "University of Nevada-Reno",
-      "published_date": "2026-09-17"
     }
   ]
 }
