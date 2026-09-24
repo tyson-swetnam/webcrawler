@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-23T21:09:53",
+  "generated_at": "2026-09-24T03:21:57",
   "picks": [
     {
       "rank": 1,
       "article_id": 66730,
-      "editorial_note": "A Stony Brook mathematician's take on OpenAI's claimed solution to the Navier-Stokes existence and smoothness problem \u2014 one of the seven Clay Millennium Prize problems \u2014 would be a landmark validation of AI's ability to do original mathematics at the highest level.",
+      "editorial_note": "Stony Brook mathematician James Glimm discusses OpenAI's reported solution to the Navier-Stokes existence and smoothness problem, one of the seven Clay Millennium Prize problems \u2014 a landmark claim that AI can crack century-old open questions in pure mathematics.",
       "impact_category": "Scientific Breakthrough",
       "title": "Solving for Tomorrow: James Glimm on Mathematics, AI and Life",
       "url": "https://news.stonybrook.edu/university/solving-for-tomorrow-james-glimm-on-mathematics-ai-and-life/",
@@ -13,8 +13,28 @@
     },
     {
       "rank": 2,
+      "article_id": 64520,
+      "editorial_note": "An international team including Science Tokyo built a protein language model unifying sequence and 3D structure data, advancing the ability to map evolutionary relationships across the entire protein universe \u2014 a foundational tool for biology and drug design.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Uniting sequence and structure to map the protein universe | Science Tokyo",
+      "url": "https://www.isct.ac.jp/en/news/710omgmrx88a",
+      "university": "Institute of Science Tokyo",
+      "published_date": "2026-09-18"
+    },
+    {
+      "rank": 3,
+      "article_id": 65176,
+      "editorial_note": "UCLA researchers' 'physical AI' approach uses self-organized nanowire/nanoparticle networks as hardware-based neural networks, pointing toward radically more energy-efficient, locally-processed AI at the edge.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Toward physical AI: When the hardware becomes the neural network",
+      "url": "https://newsroom.ucla.edu/releases/toward-physical-ai-when-hardware-becomes-neural-network",
+      "university": "University of California-Los Angeles",
+      "published_date": "2026-09-18"
+    },
+    {
+      "rank": 4,
       "article_id": 66199,
-      "editorial_note": "The UK's AI Minister marking a construction milestone on the nation's most powerful supercomputer signals major state investment in AI research infrastructure, with direct applications to drug discovery and climate science.",
+      "editorial_note": "The UK's AI Minister marked a construction milestone on the country's most powerful supercomputer at Edinburgh, a major government-university investment intended to power drug discovery and climate research.",
       "impact_category": "Strategic Partnership",
       "title": "AI Minister marks milestone on Supercomputer build | News | The University of Edinburgh",
       "url": "https://www.ed.ac.uk/news/ai-minister-marks-milestone-on-supercomputer-build",
@@ -22,9 +42,9 @@
       "published_date": "2026-09-22"
     },
     {
-      "rank": 3,
+      "rank": 5,
       "article_id": 66690,
-      "editorial_note": "France's \u20ac13.5M national AI Evaluation Program at Inria establishes a government-backed scientific roadmap for AI safety and robustness testing \u2014 a concrete policy response to AI risk at national scale.",
+      "editorial_note": "France committed \u20ac13.5 million to launch a national AI Evaluation Program at Inria, building scientific methods to assess AI safety, robustness and vulnerabilities \u2014 a concrete step toward government-backed AI safety infrastructure.",
       "impact_category": "Policy Impact",
       "title": "France 2030 | Launch of the AI Evaluation Program: a scientific roadmap for the evaluation and safety of artificial intelligence",
       "url": "https://www.inria.fr/en/france-2030-launch-ai-evaluation-program",
@@ -32,29 +52,9 @@
       "published_date": "2026-09-22"
     },
     {
-      "rank": 4,
-      "article_id": 64719,
-      "editorial_note": "NSF's ELEGANT program aims to translate lab semiconductor research into U.S. manufacturing platforms for next-generation AI and HPC hardware, a strategic bet on domestic chip leadership.",
-      "impact_category": "Major Funding",
-      "title": "NSF invests in translating low-dimensional semiconductor technologies to establish U.S. leadership in microelectronics",
-      "url": "https://www.nsf.gov/news/nsf-invests-translating-low-dimensional-semiconductor",
-      "university": "National Science Foundation",
-      "published_date": "2026-09-17"
-    },
-    {
-      "rank": 5,
-      "article_id": 64558,
-      "editorial_note": "SRI's $26.5M ARPA-H-funded AI 'co-pilot' for rural medical care, highlighted by Reuters, shows AI directly addressing healthcare access gaps with real deployment potential.",
-      "impact_category": "Major Funding",
-      "title": "Reuters covers SRI's work in the ARPA-H-funded PARADIGM program - SRI",
-      "url": "https://www.sri.com/press/story/reuters-covers-sris-work-in-the-arpa-h-funded-paradigm-program/",
-      "university": "SRI International",
-      "published_date": "2026-09-17"
-    },
-    {
       "rank": 6,
       "article_id": 66181,
-      "editorial_note": "Edinburgh's three-year partnership with the UK's Advanced Research and Invention Agency expands an AI- and robotics-driven biofoundry, deepening government-academic ties in synthetic biology.",
+      "editorial_note": "Edinburgh's Genome Foundry secured a three-year government-backed partnership with ARIA to scale up AI- and robotics-driven biofoundry capabilities, linking frontier AI to synthetic biology infrastructure.",
       "impact_category": "Strategic Partnership",
       "title": "Funding boost transforms AI-enabled biological research | News | The University of Edinburgh",
       "url": "https://www.ed.ac.uk/news/funding-boost-transforms-ai-enabled-biological-research",
@@ -63,43 +63,43 @@
     },
     {
       "rank": 7,
-      "article_id": 64520,
-      "editorial_note": "A new protein language model unifying sequence and 3D structure data to map the 'protein universe' represents a substantive scientific advance in computational biology, with the highest scientific-impact score of the week.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Uniting sequence and structure to map the protein universe | Science Tokyo",
-      "url": "https://www.isct.ac.jp/en/news/710omgmrx88a",
-      "university": "Institute of Science Tokyo",
+      "article_id": 65066,
+      "editorial_note": "A $5 million NSF award to ASU, San Diego State, and the University of Utah will build PARAPET, a national cyberinfrastructure for privacy-preserving data sharing across institutions \u2014 significant federal investment in trustworthy AI infrastructure.",
+      "impact_category": "Major Funding",
+      "title": "$5M NSF award to enhance data protections for users nationwide",
+      "url": "https://news.asu.edu/20260918-science-and-technology-5m-nsf-award-enhance-data-protections-users-nationwide",
+      "university": "Arizona State University Campus Immersion",
       "published_date": "2026-09-18"
     },
     {
       "rank": 8,
-      "article_id": 65176,
-      "editorial_note": "UCLA's 'physical AI' research \u2014 nanowire/nanoparticle networks that act as neural hardware \u2014 points toward a fundamentally different, energy-efficient approach to on-device AI computation.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Toward physical AI: When the hardware becomes the neural network",
-      "url": "https://newsroom.ucla.edu/releases/toward-physical-ai-when-hardware-becomes-neural-network",
+      "article_id": 66880,
+      "editorial_note": "Imperial College London biosecurity experts warned about AI's dual-use risks in pathogen design ahead of a UN biosecurity summit, spotlighting a policy debate with direct implications for AI governance.",
+      "impact_category": "Policy Impact",
+      "title": "AI, pandemics and food security: Imperial experts discuss the future of biosecurity",
+      "url": "https://www.imperial.ac.uk/news/articles/2026/ai-pandemics-and-food-security-imperial-experts-discuss-the-future-of-biosecurity-/",
+      "university": "Imperial College London",
+      "published_date": "2026-09-23"
+    },
+    {
+      "rank": 9,
+      "article_id": 65185,
+      "editorial_note": "UCLA's chief AI officer joined global discussion of AI safety as King Charles hosted an international AI summit with tech leaders, underscoring growing head-of-state engagement in AI governance.",
+      "impact_category": "Policy Impact",
+      "title": "King Charles hosts AI summit \u2014 and more UCLA media",
+      "url": "https://newsroom.ucla.edu/in-the-news/king-charles-hosts-ai-summit-and-more-ucla-media",
       "university": "University of California-Los Angeles",
       "published_date": "2026-09-18"
     },
     {
-      "rank": 9,
-      "article_id": 64898,
-      "editorial_note": "A DOE Genesis Mission-funded project using AI to reason over decades of nuclear waste safety data shows AI being applied to a high-stakes, long-neglected national infrastructure problem.",
-      "impact_category": "Major Funding",
-      "title": "AI project reviews nuclear waste safety-case evidence",
-      "url": "https://www.unr.edu/nevada-today/news/2026/ankita-shukla-genesis-mission-project",
-      "university": "University of Nevada-Reno",
-      "published_date": "2026-09-17"
-    },
-    {
       "rank": 10,
-      "article_id": 64464,
-      "editorial_note": "Integrating EPFL/ETH Zurich's open-source Apertus model into Proton's Lumo assistant puts a fully transparent European LLM in front of tens of millions of privacy-focused users, a notable strategic win for open-source AI.",
+      "article_id": 66677,
+      "editorial_note": "SRI International won a role in a U.S.-Korea defense collaboration to build an autonomous Space Domain Awareness payload, extending AI-driven autonomy into allied space defense infrastructure.",
       "impact_category": "Strategic Partnership",
-      "title": "Apertus partners with Proton's Lumo AI assistant",
-      "url": "https://news.epfl.ch/news/apertus-partners-with-proton-s-lumo-ai-assistant/",
-      "university": "EPFL",
-      "published_date": "2026-09-17"
+      "title": "SRI wins autonomous Space Domain Awareness role in U.S.\u2013Korea collaboration - SRI",
+      "url": "https://www.sri.com/press/story/sri-wins-autonomous-space-domain-awareness-role-in-u-s-korea-collaboration/",
+      "university": "SRI International",
+      "published_date": "2026-09-22"
     }
   ]
 }
