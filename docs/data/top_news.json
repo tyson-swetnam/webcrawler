@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-24T09:10:26",
+  "generated_at": "2026-09-24T15:29:51",
   "picks": [
     {
       "rank": 1,
       "article_id": 66730,
-      "editorial_note": "OpenAI's reported solution to the Navier-Stokes existence and smoothness problem \u2014 one of the seven Clay Millennium Prize problems \u2014 would be a landmark demonstration of AI contributing to unsolved core mathematics, not just applied science.",
+      "editorial_note": "OpenAI's claimed solution to the Navier-Stokes existence and smoothness problem \u2014 one of the seven Clay Millennium Prize problems \u2014 would be a landmark event for both mathematics and AI, and Stony Brook's Glimm offers rare expert context on its implications.",
       "impact_category": "Scientific Breakthrough",
       "title": "Solving for Tomorrow: James Glimm on Mathematics, AI and Life",
       "url": "https://news.stonybrook.edu/university/solving-for-tomorrow-james-glimm-on-mathematics-ai-and-life/",
@@ -13,18 +13,8 @@
     },
     {
       "rank": 2,
-      "article_id": 64520,
-      "editorial_note": "A protein language model unifying sequence and 3D structure data to map evolutionary relationships advances a foundational tool for biology, with downstream implications across drug discovery and synthetic biology.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Uniting sequence and structure to map the protein universe | Science Tokyo",
-      "url": "https://www.isct.ac.jp/en/news/710omgmrx88a",
-      "university": "Institute of Science Tokyo",
-      "published_date": "2026-09-18"
-    },
-    {
-      "rank": 3,
       "article_id": 66199,
-      "editorial_note": "A sitting government minister marking a construction milestone on the UK's most powerful supercomputer signals serious national investment in AI-driven scientific infrastructure for drug discovery and climate research.",
+      "editorial_note": "A sitting government minister's visit to mark construction progress on the UK's most powerful supercomputer signals serious national investment in AI infrastructure for drug discovery and climate research.",
       "impact_category": "Major Funding",
       "title": "AI Minister marks milestone on Supercomputer build | News | The University of Edinburgh",
       "url": "https://www.ed.ac.uk/news/ai-minister-marks-milestone-on-supercomputer-build",
@@ -32,9 +22,9 @@
       "published_date": "2026-09-22"
     },
     {
-      "rank": 4,
+      "rank": 3,
       "article_id": 66690,
-      "editorial_note": "France's \u20ac13.5M national program to build scientific methods for evaluating AI safety and robustness is a concrete policy response to AI risk, backed by state investment rather than voluntary industry commitments.",
+      "editorial_note": "France's \u20ac13.5M national program to build scientific methods for evaluating AI safety and robustness reflects growing state-level investment in AI governance and risk assessment infrastructure.",
       "impact_category": "Policy Impact",
       "title": "France 2030 | Launch of the AI Evaluation Program: a scientific roadmap for the evaluation and safety of artificial intelligence",
       "url": "https://www.inria.fr/en/france-2030-launch-ai-evaluation-program",
@@ -42,19 +32,29 @@
       "published_date": "2026-09-22"
     },
     {
+      "rank": 4,
+      "article_id": 67196,
+      "editorial_note": "A $19M, five-year NSF-funded national research center combining electron microscopy and AI to map neural ultrastructure represents a major federal bet on AI-accelerated neuroscience infrastructure.",
+      "impact_category": "Major Funding",
+      "title": "UVM Launches $19 Million National Research Center to\u2026",
+      "url": "https://www.uvm.edu/uvmnews/news/uvm-launches-19-million-national-research-center-unlock-secrets-neurobiology",
+      "university": "University of Vermont",
+      "published_date": "2026-09-24"
+    },
+    {
       "rank": 5,
-      "article_id": 65176,
-      "editorial_note": "UCLA's hardware-based neural networks using self-organized nanowire/nanoparticle networks point toward a fundamentally different, more energy-efficient computing paradigm than today's digital AI accelerators.",
+      "article_id": 64520,
+      "editorial_note": "An international team's protein language model unifying sequence and structure data could meaningfully advance how researchers map evolutionary and functional relationships across the protein universe.",
       "impact_category": "Scientific Breakthrough",
-      "title": "Toward physical AI: When the hardware becomes the neural network",
-      "url": "https://newsroom.ucla.edu/releases/toward-physical-ai-when-hardware-becomes-neural-network",
-      "university": "University of California-Los Angeles",
+      "title": "Uniting sequence and structure to map the protein universe | Science Tokyo",
+      "url": "https://www.isct.ac.jp/en/news/710omgmrx88a",
+      "university": "Institute of Science Tokyo",
       "published_date": "2026-09-18"
     },
     {
       "rank": 6,
       "article_id": 66181,
-      "editorial_note": "A government-backed multi-year partnership expanding an AI- and robotics-driven biofoundry shows public agencies making sustained bets on AI-accelerated biological research infrastructure.",
+      "editorial_note": "A government-backed partnership with ARIA to scale an AI- and robotics-driven biofoundry shows deepening ties between national funding agencies and university biotech infrastructure.",
       "impact_category": "Strategic Partnership",
       "title": "Funding boost transforms AI-enabled biological research | News | The University of Edinburgh",
       "url": "https://www.ed.ac.uk/news/funding-boost-transforms-ai-enabled-biological-research",
@@ -63,28 +63,28 @@
     },
     {
       "rank": 7,
-      "article_id": 66677,
-      "editorial_note": "SRI's role in a U.S.-Korea defense collaboration on autonomous Space Domain Awareness reflects deepening international, government-backed integration of AI into strategic defense systems.",
-      "impact_category": "Strategic Partnership",
-      "title": "SRI wins autonomous Space Domain Awareness role in U.S.\u2013Korea collaboration - SRI",
-      "url": "https://www.sri.com/press/story/sri-wins-autonomous-space-domain-awareness-role-in-u-s-korea-collaboration/",
-      "university": "SRI International",
-      "published_date": "2026-09-22"
+      "article_id": 65176,
+      "editorial_note": "UCLA's 'physical AI' approach, where nanowire networks themselves function as neural hardware, points toward a genuinely novel computing paradigm for energy-efficient, local AI processing.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Toward physical AI: When the hardware becomes the neural network",
+      "url": "https://newsroom.ucla.edu/releases/toward-physical-ai-when-hardware-becomes-neural-network",
+      "university": "University of California-Los Angeles",
+      "published_date": "2026-09-18"
     },
     {
       "rank": 8,
-      "article_id": 65066,
-      "editorial_note": "A $5M NSF award across three universities to build national privacy-preserving data-sharing infrastructure addresses a key barrier to responsible AI research at scale.",
-      "impact_category": "Major Funding",
-      "title": "$5M NSF award to enhance data protections for users nationwide",
-      "url": "https://news.asu.edu/20260918-science-and-technology-5m-nsf-award-enhance-data-protections-users-nationwide",
-      "university": "Arizona State University Campus Immersion",
-      "published_date": "2026-09-18"
+      "article_id": 67116,
+      "editorial_note": "A decade-long Berkeley Lab-NASA partnership using AI-enhanced X-ray imaging to study spacecraft heat shields in real time demonstrates high-value AI application in aerospace safety research.",
+      "impact_category": "Strategic Partnership",
+      "title": "Scientists Get Real-Time Look Inside Spacecraft Heat Shields During Extreme Heat Conditions",
+      "url": "https://newscenter.lbl.gov/2026/09/24/scientists-get-real-time-look-inside-spacecraft-heat-shields-during-extreme-heat-conditions/",
+      "university": "Lawrence Berkeley National Laboratory",
+      "published_date": "2026-09-24"
     },
     {
       "rank": 9,
       "article_id": 66880,
-      "editorial_note": "Biosecurity experts flagging AI's dual-use potential to help design pathogens, raised ahead of UN discussions, underscores a policy risk area gaining international attention.",
+      "editorial_note": "Imperial College experts' warnings about AI's dual-use potential to help bad actors design pathogens raise a substantive biosecurity policy concern ahead of UN deliberations.",
       "impact_category": "Policy Impact",
       "title": "AI, pandemics and food security: Imperial experts discuss the future of biosecurity",
       "url": "https://www.imperial.ac.uk/news/articles/2026/ai-pandemics-and-food-security-imperial-experts-discuss-the-future-of-biosecurity-/",
@@ -93,12 +93,12 @@
     },
     {
       "rank": 10,
-      "article_id": 65185,
-      "editorial_note": "A global AI summit convened by a head of state, featuring direct discussion of AI safety disclosures from a leading lab, highlights growing high-level political engagement with frontier AI risk.",
-      "impact_category": "Policy Impact",
-      "title": "King Charles hosts AI summit \u2014 and more UCLA media",
-      "url": "https://newsroom.ucla.edu/in-the-news/king-charles-hosts-ai-summit-and-more-ucla-media",
-      "university": "University of California-Los Angeles",
+      "article_id": 65066,
+      "editorial_note": "A $5M NSF-funded, multi-institution effort to build national privacy-preserving data-sharing infrastructure addresses a critical enabling need for responsible AI research collaboration.",
+      "impact_category": "Major Funding",
+      "title": "$5M NSF award to enhance data protections for users nationwide",
+      "url": "https://news.asu.edu/20260918-science-and-technology-5m-nsf-award-enhance-data-protections-users-nationwide",
+      "university": "Arizona State University Campus Immersion",
       "published_date": "2026-09-18"
     }
   ]
