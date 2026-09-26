@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-26T03:20:49",
+  "generated_at": "2026-09-26T09:10:18",
   "picks": [
     {
       "rank": 1,
       "article_id": 66730,
-      "editorial_note": "OpenAI's reported solution to Navier-Stokes existence and smoothness \u2014 one of the seven Clay Millennium Prize problems \u2014 would be a landmark demonstration of AI tackling open problems at the frontier of pure mathematics, discussed here by a Stony Brook mathematician.",
+      "editorial_note": "A Stony Brook mathematician's account of OpenAI's claimed solution to the Navier-Stokes existence and smoothness problem \u2014 one of the seven Clay Millennium Prize problems \u2014 would be one of the most significant AI-for-mathematics results to date, if it holds up to scrutiny.",
       "impact_category": "Scientific Breakthrough",
       "title": "Solving for Tomorrow: James Glimm on Mathematics, AI and Life",
       "url": "https://news.stonybrook.edu/university/solving-for-tomorrow-james-glimm-on-mathematics-ai-and-life/",
@@ -14,7 +14,7 @@
     {
       "rank": 2,
       "article_id": 66199,
-      "editorial_note": "A cabinet-level visit to mark construction progress on the UK's most powerful supercomputer underscores a major government-university investment aimed at drug discovery and climate research.",
+      "editorial_note": "A UK government minister marking a construction milestone on the nation's most powerful supercomputer signals serious public investment in AI-enabled research infrastructure for drug discovery and climate science.",
       "impact_category": "Major Funding",
       "title": "AI Minister marks milestone on Supercomputer build | News | The University of Edinburgh",
       "url": "https://www.ed.ac.uk/news/ai-minister-marks-milestone-on-supercomputer-build",
@@ -24,7 +24,7 @@
     {
       "rank": 3,
       "article_id": 66690,
-      "editorial_note": "France's \u20ac13.5 million national program to build rigorous scientific methods for evaluating AI safety and robustness is a significant government-backed investment in AI governance infrastructure.",
+      "editorial_note": "France's \u20ac13.5 million national program to build scientific methods for evaluating AI safety and robustness is a concrete state-level bet on AI governance infrastructure, not just research funding.",
       "impact_category": "Policy Impact",
       "title": "France 2030 | Launch of the AI Evaluation Program: a scientific roadmap for the evaluation and safety of artificial intelligence",
       "url": "https://www.inria.fr/en/france-2030-launch-ai-evaluation-program",
@@ -34,7 +34,7 @@
     {
       "rank": 4,
       "article_id": 67196,
-      "editorial_note": "A $19 million NSF-funded national research center combining electron microscopy and AI to map neural ultrastructure represents a major federal investment in AI-enabled basic science infrastructure.",
+      "editorial_note": "A $19 million NSF-funded national center combining electron microscopy and AI to map brain ultrastructure represents a major new piece of national research infrastructure led by a mid-sized public university.",
       "impact_category": "Major Funding",
       "title": "UVM Launches $19 Million National Research Center to\u2026",
       "url": "https://www.uvm.edu/uvmnews/news/uvm-launches-19-million-national-research-center-unlock-secrets-neurobiology",
@@ -43,28 +43,8 @@
     },
     {
       "rank": 5,
-      "article_id": 66181,
-      "editorial_note": "A government-backed partnership with the UK's ARIA agency to scale an AI- and robotics-driven biofoundry signals growing state investment in automating biological research.",
-      "impact_category": "Strategic Partnership",
-      "title": "Funding boost transforms AI-enabled biological research | News | The University of Edinburgh",
-      "url": "https://www.ed.ac.uk/news/funding-boost-transforms-ai-enabled-biological-research",
-      "university": "University of Edinburgh",
-      "published_date": "2026-09-22"
-    },
-    {
-      "rank": 6,
-      "article_id": 67116,
-      "editorial_note": "A decade-long Berkeley Lab\u2013NASA collaboration combining synchrotron X-ray imaging with AI modeling to observe spacecraft heat shields in real time could directly improve the safety of future space missions.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Scientists Get Real-Time Look Inside Spacecraft Heat Shields During Extreme Heat Conditions",
-      "url": "https://newscenter.lbl.gov/2026/09/24/scientists-get-real-time-look-inside-spacecraft-heat-shields-during-extreme-heat-conditions/",
-      "university": "Lawrence Berkeley National Laboratory",
-      "published_date": "2026-09-24"
-    },
-    {
-      "rank": 7,
       "article_id": 66677,
-      "editorial_note": "SRI's role in a U.S.\u2013Korea defense collaboration building autonomous Space Domain Awareness technology highlights AI's expanding role in international security partnerships.",
+      "editorial_note": "SRI's role in a US-Korea defense collaboration on autonomous Space Domain Awareness underscores how AI-driven edge autonomy is becoming central to allied space security programs.",
       "impact_category": "Strategic Partnership",
       "title": "SRI wins autonomous Space Domain Awareness role in U.S.\u2013Korea collaboration - SRI",
       "url": "https://www.sri.com/press/story/sri-wins-autonomous-space-domain-awareness-role-in-u-s-korea-collaboration/",
@@ -72,33 +52,53 @@
       "published_date": "2026-09-22"
     },
     {
-      "rank": 8,
-      "article_id": 67094,
-      "editorial_note": "Syracuse's new cross-school Institute for Artificial Intelligence reflects the continued institutionalization of AI research with an explicit mandate for industry and government partnerships.",
+      "rank": 6,
+      "article_id": 66181,
+      "editorial_note": "Edinburgh's expanded partnership with the UK's ARIA agency to scale an AI- and robotics-driven biofoundry shows government agencies directly betting on AI-accelerated biological research.",
       "impact_category": "Strategic Partnership",
-      "title": "Syracuse University Launches Institute for Artificial Intelligence",
-      "url": "https://news.syr.edu/2026/09/23/syracuse-university-launches-institute-for-artificial-intelligence/",
-      "university": "Syracuse University",
+      "title": "Funding boost transforms AI-enabled biological research | News | The University of Edinburgh",
+      "url": "https://www.ed.ac.uk/news/funding-boost-transforms-ai-enabled-biological-research",
+      "university": "University of Edinburgh",
+      "published_date": "2026-09-22"
+    },
+    {
+      "rank": 7,
+      "article_id": 67116,
+      "editorial_note": "A decade-long Berkeley Lab-NASA collaboration combining real-time X-ray imaging with AI-trained models to observe spacecraft heat shield behavior could meaningfully improve the safety of future crewed and robotic missions.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Scientists Get Real-Time Look Inside Spacecraft Heat Shields During Extreme Heat Conditions",
+      "url": "https://newscenter.lbl.gov/2026/09/24/scientists-get-real-time-look-inside-spacecraft-heat-shields-during-extreme-heat-conditions/",
+      "university": "Lawrence Berkeley National Laboratory",
+      "published_date": "2026-09-24"
+    },
+    {
+      "rank": 8,
+      "article_id": 66880,
+      "editorial_note": "Imperial biosecurity experts raising the dual-use risk of AI in pathogen design ahead of UN biosecurity talks puts a concrete policy question \u2014 how to govern AI's misuse potential in bioscience \u2014 on the international agenda.",
+      "impact_category": "Policy Impact",
+      "title": "AI, pandemics and food security: Imperial experts discuss the future of biosecurity",
+      "url": "https://www.imperial.ac.uk/news/articles/2026/ai-pandemics-and-food-security-imperial-experts-discuss-the-future-of-biosecurity-/",
+      "university": "Imperial College London",
       "published_date": "2026-09-23"
     },
     {
       "rank": 9,
-      "article_id": 66067,
-      "editorial_note": "Texas A&M's suite of agentic healthcare AI assistants \u2014 spanning multilingual reception, dementia screening, and pediatric care \u2014 is a concrete example of AI aimed at systemic healthcare access problems.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "How agentic AI is working to fix a broken healthcare system \u2013 Texas A&M Stories",
-      "url": "https://stories.tamu.edu/news/2026/09/21/how-agentic-ai-is-working-to-fix-a-broken-healthcare-system/",
-      "university": "Texas A & M University-College Station",
-      "published_date": "2026-09-21"
+      "article_id": 67037,
+      "editorial_note": "Documented evidence that ChatGPT spread false information about the 2024 US election adds concrete data to the ongoing policy debate over AI chatbots' role in electoral misinformation.",
+      "impact_category": "Policy Impact",
+      "title": "How ChatGPT Served Up False Information Before the 2024 Election | UMass Amherst",
+      "url": "https://www.umass.edu/news/article/how-chatgpt-served-false-information-2024-election",
+      "university": "University of Massachusetts-Amherst",
+      "published_date": "2026-09-23"
     },
     {
       "rank": 10,
-      "article_id": 66664,
-      "editorial_note": "AI-driven drug repurposing screening that narrowed 200 FDA-approved compounds down to promising candidates for a rare pediatric nerve tumor shows real translational potential for underserved patient populations.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "UCF Researcher Identifies 10 Potential Treatments for Rare Nerve Tumor in Children",
-      "url": "https://www.ucf.edu/news/ucf-researcher-identifies-10-potential-treatments-for-rare-nerve-tumor-in-children/",
-      "university": "University of Central Florida",
+      "article_id": 67094,
+      "editorial_note": "Syracuse's new cross-school Institute for Artificial Intelligence, built explicitly around industry and government partnerships, marks a significant institutional bet on AI as a strategic research priority.",
+      "impact_category": "Strategic Partnership",
+      "title": "Syracuse University Launches Institute for Artificial Intelligence",
+      "url": "https://news.syr.edu/2026/09/23/syracuse-university-launches-institute-for-artificial-intelligence/",
+      "university": "Syracuse University",
       "published_date": "2026-09-23"
     }
   ]
