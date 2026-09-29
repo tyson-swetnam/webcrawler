@@ -1,50 +1,10 @@
 {
-  "generated_at": "2026-09-28T21:09:41",
+  "generated_at": "2026-09-29T03:23:23",
   "picks": [
     {
       "rank": 1,
-      "article_id": 66199,
-      "editorial_note": "A government minister marking a build milestone on the UK's most powerful supercomputer signals serious national investment in AI-driven science, with direct applications to drug discovery and climate research once online.",
-      "impact_category": "Major Funding",
-      "title": "AI Minister marks milestone on Supercomputer build | News | The University of Edinburgh",
-      "url": "https://www.ed.ac.uk/news/ai-minister-marks-milestone-on-supercomputer-build",
-      "university": "University of Edinburgh",
-      "published_date": "2026-09-22"
-    },
-    {
-      "rank": 2,
-      "article_id": 66690,
-      "editorial_note": "France's \u20ac13.5M national program to scientifically evaluate AI safety and robustness is a concrete government response to AI risk, potentially shaping how safety testing is standardized across Europe.",
-      "impact_category": "Policy Impact",
-      "title": "France 2030 | Launch of the AI Evaluation Program: a scientific roadmap for the evaluation and safety of artificial intelligence",
-      "url": "https://www.inria.fr/en/france-2030-launch-ai-evaluation-program",
-      "university": "INRIA",
-      "published_date": "2026-09-22"
-    },
-    {
-      "rank": 3,
-      "article_id": 67196,
-      "editorial_note": "A $19M NSF-funded national center combining electron microscopy and AI to map neural ultrastructure represents a major federal bet on AI-accelerated neuroscience infrastructure.",
-      "impact_category": "Major Funding",
-      "title": "UVM Launches $19 Million National Research Center to\u2026",
-      "url": "https://www.uvm.edu/uvmnews/news/uvm-launches-19-million-national-research-center-unlock-secrets-neurobiology",
-      "university": "University of Vermont",
-      "published_date": "2026-09-24"
-    },
-    {
-      "rank": 4,
-      "article_id": 66181,
-      "editorial_note": "A government agency (ARIA) backing an AI- and robotics-driven biofoundry shows deepening state investment in automating biological research, with implications for how fast new biotech can be discovered and manufactured.",
-      "impact_category": "Strategic Partnership",
-      "title": "Funding boost transforms AI-enabled biological research | News | The University of Edinburgh",
-      "url": "https://www.ed.ac.uk/news/funding-boost-transforms-ai-enabled-biological-research",
-      "university": "University of Edinburgh",
-      "published_date": "2026-09-22"
-    },
-    {
-      "rank": 5,
       "article_id": 67116,
-      "editorial_note": "A decade-long Berkeley Lab-NASA collaboration using AI-trained X-ray imaging to study spacecraft heat shields in real time is a genuine scientific advance with direct relevance to spacecraft safety.",
+      "editorial_note": "A decade-long Berkeley Lab-NASA collaboration used AI-trained models with real-time X-ray imaging to observe spacecraft heat shield ablation as it happens \u2014 a significant advance for spacecraft safety with direct implications for future crewed missions.",
       "impact_category": "Scientific Breakthrough",
       "title": "Scientists Get Real-Time Look Inside Spacecraft Heat Shields During Extreme Heat Conditions",
       "url": "https://newscenter.lbl.gov/2026/09/24/scientists-get-real-time-look-inside-spacecraft-heat-shields-during-extreme-heat-conditions/",
@@ -52,9 +12,19 @@
       "published_date": "2026-09-24"
     },
     {
-      "rank": 6,
+      "rank": 2,
+      "article_id": 67196,
+      "editorial_note": "A $19M, five-year NSF award establishes UVM as the coordinating hub for a national connectomics observatory combining electron microscopy and AI \u2014 a major federal investment in AI-enabled neuroscience infrastructure.",
+      "impact_category": "Major Funding",
+      "title": "UVM Launches $19 Million National Research Center to\u2026",
+      "url": "https://www.uvm.edu/uvmnews/news/uvm-launches-19-million-national-research-center-unlock-secrets-neurobiology",
+      "university": "University of Vermont",
+      "published_date": "2026-09-24"
+    },
+    {
+      "rank": 3,
       "article_id": 67094,
-      "editorial_note": "Syracuse's new cross-disciplinary Institute for AI, uniting four schools for research and industry/government partnerships, marks a significant institutional commitment likely to shape its research agenda for years.",
+      "editorial_note": "Syracuse's new cross-school AI Institute signals a significant institutional bet on AI research and industry/government partnerships, consolidating efforts across four schools and colleges.",
       "impact_category": "Strategic Partnership",
       "title": "Syracuse University Launches Institute for Artificial Intelligence",
       "url": "https://news.syr.edu/2026/09/23/syracuse-university-launches-institute-for-artificial-intelligence/",
@@ -62,19 +32,9 @@
       "published_date": "2026-09-23"
     },
     {
-      "rank": 7,
-      "article_id": 66677,
-      "editorial_note": "SRI's role in a U.S.-Korea defense collaboration on autonomous space domain awareness underscores AI's growing role in international security partnerships and space defense infrastructure.",
-      "impact_category": "Strategic Partnership",
-      "title": "SRI wins autonomous Space Domain Awareness role in U.S.\u2013Korea collaboration - SRI",
-      "url": "https://www.sri.com/press/story/sri-wins-autonomous-space-domain-awareness-role-in-u-s-korea-collaboration/",
-      "university": "SRI International",
-      "published_date": "2026-09-22"
-    },
-    {
-      "rank": 8,
+      "rank": 4,
       "article_id": 66664,
-      "editorial_note": "Using AI to screen FDA-approved drugs down to promising candidates for a rare pediatric nerve tumor is a tangible example of AI accelerating drug repurposing with direct patient impact.",
+      "editorial_note": "UCF and Sage Bionetworks used AI to screen 200 FDA-approved drugs down to 10 repurposing candidates for a rare pediatric nerve tumor, a concrete example of AI accelerating real-world drug discovery.",
       "impact_category": "Scientific Breakthrough",
       "title": "UCF Researcher Identifies 10 Potential Treatments for Rare Nerve Tumor in Children",
       "url": "https://www.ucf.edu/news/ucf-researcher-identifies-10-potential-treatments-for-rare-nerve-tumor-in-children/",
@@ -82,9 +42,19 @@
       "published_date": "2026-09-23"
     },
     {
-      "rank": 9,
+      "rank": 5,
+      "article_id": 67245,
+      "editorial_note": "A prestigious NSF CAREER Award funds new reinforcement-learning-based distributed systems research at Stony Brook, recognizing early-career work with broad applicability to adaptive computing infrastructure.",
+      "impact_category": "Major Funding",
+      "title": "Mohammad Javad Amiri Receives NSF CAREER Award to Advance Adaptive Distributed Systems - SBU News",
+      "url": "https://news.stonybrook.edu/computer-science/mohammad-javad-amiri-receives-nsf-career-award-to-advance-adaptive-distributed-systems/",
+      "university": "Stony Brook University",
+      "published_date": "2026-09-24"
+    },
+    {
+      "rank": 6,
       "article_id": 67093,
-      "editorial_note": "Findings that an LLM's stated confidence and its actual correctness stem from distinct internal features challenge a widespread assumption in AI deployment and have real implications for how models are trusted in high-stakes settings.",
+      "editorial_note": "UC Riverside researchers found that an LLM's stated confidence and its actual correctness stem from distinct internal features, undermining a widespread assumption in AI trustworthiness research with implications for how confidence signals are used in deployed systems.",
       "impact_category": "Scientific Breakthrough",
       "title": "Making AI more trustworthy",
       "url": "https://news.ucr.edu/articles/2026/09/23/making-ai-more-trustworthy",
@@ -92,14 +62,44 @@
       "published_date": "2026-09-23"
     },
     {
-      "rank": 10,
-      "article_id": 66791,
-      "editorial_note": "A major multi-institutional physics collaboration spanning several national labs and CERN on the Deep Underground Neutrino Experiment highlights the scale of cross-border scientific partnership AI-era research increasingly depends on.",
+      "rank": 7,
+      "article_id": 66880,
+      "editorial_note": "Imperial College biosecurity experts raised concrete concerns about AI's dual-use potential in pathogen design ahead of UN biosecurity talks, directly relevant to emerging AI governance and biosafety policy.",
+      "impact_category": "Policy Impact",
+      "title": "AI, pandemics and food security: Imperial experts discuss the future of biosecurity",
+      "url": "https://www.imperial.ac.uk/news/articles/2026/ai-pandemics-and-food-security-imperial-experts-discuss-the-future-of-biosecurity-/",
+      "university": "Imperial College London",
+      "published_date": "2026-09-23"
+    },
+    {
+      "rank": 8,
+      "article_id": 67231,
+      "editorial_note": "RWTH Aachen and Transdev formed a technology-transfer partnership spanning autonomous driving and connected mobility, an industry-academia tie-up with direct commercialization pathways.",
       "impact_category": "Strategic Partnership",
-      "title": "Projeto Dune tem dia de avalia\u00e7\u00e3o e espera por atra\u00e7\u00f5es culturais - Jornal da Unicamp",
-      "url": "https://jornal.unicamp.br/noticias/2026/09/22/projeto-dune-tem-dia-de-avaliacao-e-espera-por-atracoes-culturais/",
-      "university": "UNICAMP",
-      "published_date": "2026-09-22"
+      "title": "Transdev Group and RWTH Aachen University Form Innovation Partnership for Technology Transfer in Mob... | RWTH Aachen University | EN",
+      "url": "https://www.rwth-aachen.de/go/id/bspmnv?lidx=1",
+      "university": "RWTH Aachen University",
+      "published_date": "2026-09-23"
+    },
+    {
+      "rank": 9,
+      "article_id": 67092,
+      "editorial_note": "Northeastern's new AI Makerspace, built in partnership with Microsoft, gives the university community hands-on access to AI tools \u2014 notable for the scale of the corporate partner and campus-wide reach.",
+      "impact_category": "Strategic Partnership",
+      "title": "Query, create or be curious at new AI Makerspace in Boston",
+      "url": "https://news.northeastern.edu/2026/09/23/ai-makerspace-boston-campus/",
+      "university": "Northeastern University",
+      "published_date": "2026-09-23"
+    },
+    {
+      "rank": 10,
+      "article_id": 67049,
+      "editorial_note": "SIU researchers are building an AI-equipped robot to detect soybean diseases before visible symptoms appear, a practical application with potential to reduce crop losses at scale.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "SIU researchers build robot, AI to detect soybean diseases before symptoms appear",
+      "url": "https://news.siu.edu/2026/09/092426-siu-researchers-build-robot-ai-to-detect-soybean-diseases-before-symptoms-appear.php",
+      "university": "Southern Illinois University-Carbondale",
+      "published_date": "2026-09-24"
     }
   ]
 }
