@@ -1,20 +1,10 @@
 {
-  "generated_at": "2026-09-29T09:11:58",
+  "generated_at": "2026-09-29T21:10:01",
   "picks": [
     {
       "rank": 1,
-      "article_id": 67196,
-      "editorial_note": "A $19M NSF-funded five-year national research center coordinated by UVM pairs advanced electron microscopy with AI to map neural ultrastructure at scale \u2014 a rare case of major federal funding building shared AI-driven infrastructure for the entire neuroscience field.",
-      "impact_category": "Major Funding",
-      "title": "UVM Launches $19 Million National Research Center to\u2026",
-      "url": "https://www.uvm.edu/uvmnews/news/uvm-launches-19-million-national-research-center-unlock-secrets-neurobiology",
-      "university": "University of Vermont",
-      "published_date": "2026-09-24"
-    },
-    {
-      "rank": 2,
       "article_id": 67116,
-      "editorial_note": "A decade-long Berkeley Lab/NASA collaboration achieved real-time X-ray imaging of spacecraft heat shields ablating under extreme heat, fused with AI-trained models \u2014 a genuine scientific advance with direct implications for spacecraft safety.",
+      "editorial_note": "A decade-long Berkeley Lab-NASA collaboration used AI-trained models with real-time X-ray imaging to observe spacecraft heat shield ablation as it happens \u2014 a genuine scientific advance with direct implications for spacecraft safety design.",
       "impact_category": "Scientific Breakthrough",
       "title": "Scientists Get Real-Time Look Inside Spacecraft Heat Shields During Extreme Heat Conditions",
       "url": "https://newscenter.lbl.gov/2026/09/24/scientists-get-real-time-look-inside-spacecraft-heat-shields-during-extreme-heat-conditions/",
@@ -22,9 +12,19 @@
       "published_date": "2026-09-24"
     },
     {
+      "rank": 2,
+      "article_id": 67196,
+      "editorial_note": "A $19 million, five-year NSF award establishes UVM as the hub of a national connectomics observatory combining electron microscopy and AI \u2014 a major infrastructure investment that will shape neuroscience research capacity for years.",
+      "impact_category": "Major Funding",
+      "title": "UVM Launches $19 Million National Research Center to\u2026",
+      "url": "https://www.uvm.edu/uvmnews/news/uvm-launches-19-million-national-research-center-unlock-secrets-neurobiology",
+      "university": "University of Vermont",
+      "published_date": "2026-09-24"
+    },
+    {
       "rank": 3,
       "article_id": 67094,
-      "editorial_note": "Syracuse's new cross-school Institute for Artificial Intelligence signals a major institutional bet on AI, uniting four schools for research and industry/government partnerships rather than a single lab or grant.",
+      "editorial_note": "Syracuse's new cross-school Institute for Artificial Intelligence signals a significant institutional bet on AI, consolidating research and setting up future industry and government partnerships.",
       "impact_category": "Strategic Partnership",
       "title": "Syracuse University Launches Institute for Artificial Intelligence",
       "url": "https://news.syr.edu/2026/09/23/syracuse-university-launches-institute-for-artificial-intelligence/",
@@ -34,7 +34,7 @@
     {
       "rank": 4,
       "article_id": 66664,
-      "editorial_note": "UCF and Sage Bionetworks used AI to screen 200 FDA-approved drugs down to 10 (three especially promising) repurposing candidates for a rare pediatric nerve tumor \u2014 a concrete step toward real-world treatment options for a hard-to-treat condition.",
+      "editorial_note": "AI-driven screening of FDA-approved drugs narrowed 200 candidates to 10 promising repurposing options for a rare pediatric nerve tumor, a concrete example of AI accelerating real-world medical translation.",
       "impact_category": "Scientific Breakthrough",
       "title": "UCF Researcher Identifies 10 Potential Treatments for Rare Nerve Tumor in Children",
       "url": "https://www.ucf.edu/news/ucf-researcher-identifies-10-potential-treatments-for-rare-nerve-tumor-in-children/",
@@ -43,8 +43,18 @@
     },
     {
       "rank": 5,
+      "article_id": 67093,
+      "editorial_note": "UC Riverside's finding that an LLM's confidence and correctness arise from distinct internal mechanisms challenges a widely held assumption in AI safety and interpretability work, with implications for how model outputs should be trusted.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Making AI more trustworthy",
+      "url": "https://news.ucr.edu/articles/2026/09/23/making-ai-more-trustworthy",
+      "university": "University of California-Riverside",
+      "published_date": "2026-09-23"
+    },
+    {
+      "rank": 6,
       "article_id": 67245,
-      "editorial_note": "A five-year, $631,659 NSF CAREER Award will fund reinforcement-learning-driven distributed transaction systems \u2014 prestigious early-career federal recognition that seeds a new research direction in adaptive infrastructure.",
+      "editorial_note": "A five-year NSF CAREER Award funds new reinforcement-learning-based distributed transaction systems, recognizing foundational systems research at the intersection of AI and infrastructure.",
       "impact_category": "Major Funding",
       "title": "Mohammad Javad Amiri Receives NSF CAREER Award to Advance Adaptive Distributed Systems - SBU News",
       "url": "https://news.stonybrook.edu/computer-science/mohammad-javad-amiri-receives-nsf-career-award-to-advance-adaptive-distributed-systems/",
@@ -52,39 +62,9 @@
       "published_date": "2026-09-24"
     },
     {
-      "rank": 6,
-      "article_id": 67231,
-      "editorial_note": "RWTH Aachen's new innovation partnership with global transit operator Transdev targets technology transfer in autonomous driving and connected mobility, linking academic research directly to industry deployment.",
-      "impact_category": "Strategic Partnership",
-      "title": "Transdev Group and RWTH Aachen University Form Innovation Partnership for Technology Transfer in Mob... | RWTH Aachen University | EN",
-      "url": "https://www.rwth-aachen.de/go/id/bspmnv?lidx=1",
-      "university": "RWTH Aachen University",
-      "published_date": "2026-09-23"
-    },
-    {
       "rank": 7,
-      "article_id": 67092,
-      "editorial_note": "Northeastern's Microsoft-backed AI Makerspace gives its whole campus community hands-on access to AI tools, reflecting how major tech partnerships are reshaping everyday research and teaching infrastructure.",
-      "impact_category": "Strategic Partnership",
-      "title": "Query, create or be curious at new AI Makerspace in Boston",
-      "url": "https://news.northeastern.edu/2026/09/23/ai-makerspace-boston-campus/",
-      "university": "Northeastern University",
-      "published_date": "2026-09-23"
-    },
-    {
-      "rank": 8,
-      "article_id": 67049,
-      "editorial_note": "SIU Carbondale's camera-equipped robot uses AI to catch soybean diseases before symptoms appear, a practical application that could meaningfully reduce crop losses for agriculture.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "SIU researchers build robot, AI to detect soybean diseases before symptoms appear",
-      "url": "https://news.siu.edu/2026/09/092426-siu-researchers-build-robot-ai-to-detect-soybean-diseases-before-symptoms-appear.php",
-      "university": "Southern Illinois University-Carbondale",
-      "published_date": "2026-09-24"
-    },
-    {
-      "rank": 9,
       "article_id": 67210,
-      "editorial_note": "Brown University's brain-computer interface findings on mirror-neuron-like activity advance basic understanding of how the brain represents observed action, with future implications for neuroprosthetics.",
+      "editorial_note": "Brown's brain-computer interface findings on how mirror-neuron-like responses scale with human-likeness advance basic understanding of observational motor processing, with potential downstream relevance to prosthetics and human-robot interaction.",
       "impact_category": "Scientific Breakthrough",
       "title": "Brain-computer interface study sheds light on neural activity during observation, or 'mirror neurons'",
       "url": "https://www.brown.edu/news/2026-09-23/braingate-mirror-neurons",
@@ -92,13 +72,33 @@
       "published_date": "2026-09-23"
     },
     {
+      "rank": 8,
+      "article_id": 66880,
+      "editorial_note": "Imperial biosecurity experts' warnings about AI's dual-use potential in pathogen design land ahead of UN biosecurity discussions, directly bearing on how AI research and biosecurity policy should be governed.",
+      "impact_category": "Policy Impact",
+      "title": "AI, pandemics and food security: Imperial experts discuss the future of biosecurity",
+      "url": "https://www.imperial.ac.uk/news/articles/2026/ai-pandemics-and-food-security-imperial-experts-discuss-the-future-of-biosecurity-/",
+      "university": "Imperial College London",
+      "published_date": "2026-09-23"
+    },
+    {
+      "rank": 9,
+      "article_id": 67099,
+      "editorial_note": "AI-supported analysis of LiDAR scans mapped over six million individual trees in a major Scottish rewilding effort, demonstrating AI's growing role in large-scale conservation monitoring.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Successful woodland expansion in Scotland\u2019s Cairngorms revealed in aerial maps",
+      "url": "https://www.cam.ac.uk/research/news/successful-woodland-expansion-in-scotlands-cairngorms-revealed-in-aerial-maps",
+      "university": "University of Cambridge",
+      "published_date": "2026-09-24"
+    },
+    {
       "rank": 10,
-      "article_id": 66672,
-      "editorial_note": "An IMLS grant will let Syracuse train 110 academic librarians nationwide in AI literacy in partnership with UVA and Colorado, seeding AI fluency across the library profession at national scale.",
-      "impact_category": "Major Funding",
-      "title": "Professor Wins Grant to Train Academic Librarians Nationwide on AI Literacy",
-      "url": "https://news.syr.edu/2026/09/23/professor-wins-grant-to-train-academic-librarians-nationwide-on-ai-literacy/",
-      "university": "Syracuse University",
+      "article_id": 67231,
+      "editorial_note": "A new innovation partnership between RWTH Aachen and Transdev Group for autonomous driving and connected mobility technology transfer links academic AI research directly to industrial deployment in transportation.",
+      "impact_category": "Strategic Partnership",
+      "title": "Transdev Group and RWTH Aachen University Form Innovation Partnership for Technology Transfer in Mob... | RWTH Aachen University | EN",
+      "url": "https://www.rwth-aachen.de/go/id/bspmnv?lidx=1",
+      "university": "RWTH Aachen University",
       "published_date": "2026-09-23"
     }
   ]
