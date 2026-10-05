@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-05T15:31:09",
+  "generated_at": "2026-10-05T21:11:25",
   "picks": [
     {
       "rank": 1,
       "article_id": 68240,
-      "editorial_note": "A $38M ARPA-H contract to build AI 'digital twins' of critically ill patients is the largest research award in UVM's history, signaling major federal investment in AI-driven personalized critical care.",
+      "editorial_note": "At up to $38M, this ARPA-H award is the largest research grant in UVM history and funds AI 'digital twins' aimed at personalizing critical care for sepsis and trauma patients \u2014 a high-stakes clinical application with real lives at stake.",
       "impact_category": "Major Funding",
       "title": "Your AI Twin Could Save Your Life: UVM Awarded up to $38M\u2026",
       "url": "https://www.uvm.edu/uvmnews/news/your-ai-twin-could-save-your-life-uvm-awarded-38m-build-digital-twins-treating",
@@ -14,7 +14,7 @@
     {
       "rank": 2,
       "article_id": 68248,
-      "editorial_note": "Georgia Tech and Amazon's new Science Hub formalizes a decade of collaboration into a dedicated academic-industry research program, the kind of durable corporate-university partnership that shapes AI research agendas for years.",
+      "editorial_note": "The Georgia Tech\u2013Amazon Science Hub formalizes a decade-long academic-industry relationship into a dedicated research engine, exemplifying how big tech is embedding itself directly into university AI research pipelines.",
       "impact_category": "Strategic Partnership",
       "title": "Georgia Tech and Amazon Launch Joint Science Hub",
       "url": "https://news.gatech.edu/news/2026/10/02/georgia-tech-and-amazon-launch-joint-science-hub",
@@ -23,8 +23,18 @@
     },
     {
       "rank": 3,
+      "article_id": 68007,
+      "editorial_note": "NIH-funded work combining AI with brain mapping to predict surgical risk to language ability shows how machine learning is moving into high-precision, patient-specific neurosurgical planning.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "UF researchers combine AI and brain mapping to advance personalized epilepsy surgery",
+      "url": "https://news.ufl.edu/2026/09/ai-epilepsy-surgery/",
+      "university": "University of Florida",
+      "published_date": "2026-09-30"
+    },
+    {
+      "rank": 4,
       "article_id": 67878,
-      "editorial_note": "Cambridge's open-source Tessera model outperforming existing crop-mapping methods with far less compute in Senegal shows AI delivering tangible benefit to smallholder farmers in the developing world.",
+      "editorial_note": "Cambridge's open-source Tessera model mapping smallholder crops in Senegal with far less compute than existing methods demonstrates AI's potential to deliver real development impact in resource-constrained settings.",
       "impact_category": "Scientific Breakthrough",
       "title": "AI tool for mapping smallholder crops proves itself in Senegal",
       "url": "https://www.cam.ac.uk/research/news/ai-tool-for-mapping-smallholder-crops-proves-itself-in-senegal",
@@ -32,9 +42,9 @@
       "published_date": "2026-09-29"
     },
     {
-      "rank": 4,
+      "rank": 5,
       "article_id": 68086,
-      "editorial_note": "A $4.25M DARPA grant to a WashU-led team fusing AI with physics-based simulation for fuel injector design shows significant defense-sector investment in AI-accelerated engineering.",
+      "editorial_note": "A $4.25M DARPA grant to a WashU-led multi-institutional team fuses AI with physics-based simulation for fuel injector design, pairing substantial defense funding with cross-institutional collaboration.",
       "impact_category": "Major Funding",
       "title": "WashU-led team wins $4M DARPA grant to improve fuel injector design",
       "url": "https://source.washu.edu/2026/10/washu-led-team-wins-4m-darpa-grant-to-improve-fuel-injector-design/",
@@ -42,39 +52,9 @@
       "published_date": "2026-10-01"
     },
     {
-      "rank": 5,
-      "article_id": 67741,
-      "editorial_note": "A MacArthur Fellowship recognizing AI-driven agricultural science that fuses satellite data, process models, and supercomputing is a prestigious national validation of AI's role in food security research.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "U. of I. researcher and alumnus both named 2026 MacArthur Fellows",
-      "url": "https://news.illinois.edu/u-of-i-researcher-and-alumus-both-named-2026-macarthur-fellows/",
-      "university": "University of Illinois Urbana-Champaign",
-      "published_date": "2026-09-29"
-    },
-    {
       "rank": 6,
-      "article_id": 67745,
-      "editorial_note": "Clemson's push to understand and safeguard against AI-generated harmful content targeting young people addresses an urgent child-safety gap in generative AI policy and oversight.",
-      "impact_category": "Policy Impact",
-      "title": "New safeguards could help protect young people from unsafe content generated by artificial intelligence",
-      "url": "https://news.clemson.edu/new-safeguards-could-help-protect-young-people-from-unsafe-content-generated-by-artificial-intelligence/?utm_source=rss&utm_medium=rss&utm_campaign=new-safeguards-could-help-protect-young-people-from-unsafe-content-generated-by-artificial-intelligence",
-      "university": "Clemson University",
-      "published_date": "2026-10-01"
-    },
-    {
-      "rank": 7,
-      "article_id": 68312,
-      "editorial_note": "UW-Madison's individualized AI-driven 'brain roadmaps' linking cellular and genetic changes to Alzheimer's progression represent a meaningful advance toward precision neurodegeneration medicine.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "\u2018We built a brain roadmap for each person\u2019: New AI-driven tools help decode Alzheimer\u2019s disease at the cellular level",
-      "url": "https://news.wisc.edu/we-built-a-brain-roadmap-for-each-person-new-ai-driven-tools-help-researchers-decode-alzheimers-disease-at-the-cellular-level/",
-      "university": "University of Wisconsin-Madison",
-      "published_date": "2026-09-30"
-    },
-    {
-      "rank": 8,
       "article_id": 68466,
-      "editorial_note": "A low-power implantable AI chip for real-time brain-signal analysis could meaningfully advance detection of neurological conditions via accessible, long-term monitoring hardware.",
+      "editorial_note": "A low-power implantable chip that uses machine learning to analyze brain signals in real time could meaningfully advance detection of neurological disorders, pushing AI hardware toward the clinic.",
       "impact_category": "Scientific Breakthrough",
       "title": "This AI-powered chip can offer a deeper look at faulty brain activity",
       "url": "https://news.northeastern.edu/2026/09/30/ai-eeg-device-epilepsy/",
@@ -82,9 +62,9 @@
       "published_date": "2026-09-30"
     },
     {
-      "rank": 9,
+      "rank": 7,
       "article_id": 68156,
-      "editorial_note": "Brown engineers' brain-inspired imaging system that sees through fog by mimicking retinal response is a novel sensing breakthrough with clear applications in autonomous vehicles and defense.",
+      "editorial_note": "Brown's brain-inspired imaging system that sees through fog by mimicking retinal response is a genuinely novel sensing approach with clear applications in autonomous navigation and defense.",
       "impact_category": "Scientific Breakthrough",
       "title": "Brown University engineers build brain-inspired imaging system that can \u2018see\u2019 through fog",
       "url": "https://www.brown.edu/news/2026-10-01/fog-imaging",
@@ -92,14 +72,34 @@
       "published_date": "2026-10-01"
     },
     {
-      "rank": 10,
-      "article_id": 68364,
-      "editorial_note": "A UNSW-led, government-funded investigation into AI-facilitated coercive control tackles an emerging and serious misuse of generative AI with direct implications for safety policy.",
-      "impact_category": "Policy Impact",
-      "title": "UNSW-led project to investigate AI-facilitated coercive control",
-      "url": "https://www.unsw.edu.au/newsroom/news/2026/09/unsw-led-project-to-investigate-ai-facilitated-coercive-control",
-      "university": "University of New South Wales",
+      "rank": 8,
+      "article_id": 68312,
+      "editorial_note": "UW-Madison's individualized 'brain roadmaps' linking cellular and genetic data to Alzheimer's progression represent a significant step toward precision medicine for neurodegenerative disease.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "\u2018We built a brain roadmap for each person\u2019: New AI-driven tools help decode Alzheimer\u2019s disease at the cellular level",
+      "url": "https://news.wisc.edu/we-built-a-brain-roadmap-for-each-person-new-ai-driven-tools-help-researchers-decode-alzheimers-disease-at-the-cellular-level/",
+      "university": "University of Wisconsin-Madison",
       "published_date": "2026-09-30"
+    },
+    {
+      "rank": 9,
+      "article_id": 67741,
+      "editorial_note": "A MacArthur Fellowship for building AI-driven predictive agricultural science recognizes work with direct implications for global food security, one of the highest-profile individual honors in US research.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "U. of I. researcher and alumnus both named 2026 MacArthur Fellows",
+      "url": "https://news.illinois.edu/u-of-i-researcher-and-alumus-both-named-2026-macarthur-fellows/",
+      "university": "University of Illinois Urbana-Champaign",
+      "published_date": "2026-09-29"
+    },
+    {
+      "rank": 10,
+      "article_id": 68282,
+      "editorial_note": "International recognition of CERN's federated learning platform highlights how privacy-preserving, cross-institutional AI architectures are gaining traction as a policy-relevant model for collaborative science.",
+      "impact_category": "Policy Impact",
+      "title": "CERN\u2019s AI innovation recognised at Digital@UNGA Awards 2026 \u2013 Home",
+      "url": "https://home.cern/cerns-ai-innovation-recognised-at-digitalunga-awards-2026/",
+      "university": "CERN",
+      "published_date": "2026-10-01"
     }
   ]
 }
