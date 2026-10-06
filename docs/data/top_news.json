@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-05T21:11:25",
+  "generated_at": "2026-10-06T03:23:08",
   "picks": [
     {
       "rank": 1,
       "article_id": 68240,
-      "editorial_note": "At up to $38M, this ARPA-H award is the largest research grant in UVM history and funds AI 'digital twins' aimed at personalizing critical care for sepsis and trauma patients \u2014 a high-stakes clinical application with real lives at stake.",
+      "editorial_note": "At up to $38M, this is the largest research award in UVM history, and it funds AI 'digital twins' that could directly personalize critical-care treatment for ICU patients \u2014 a rare case where a funding milestone and a concrete clinical application coincide.",
       "impact_category": "Major Funding",
       "title": "Your AI Twin Could Save Your Life: UVM Awarded up to $38M\u2026",
       "url": "https://www.uvm.edu/uvmnews/news/your-ai-twin-could-save-your-life-uvm-awarded-38m-build-digital-twins-treating",
@@ -14,7 +14,7 @@
     {
       "rank": 2,
       "article_id": 68248,
-      "editorial_note": "The Georgia Tech\u2013Amazon Science Hub formalizes a decade-long academic-industry relationship into a dedicated research engine, exemplifying how big tech is embedding itself directly into university AI research pipelines.",
+      "editorial_note": "Georgia Tech and Amazon's new Science Hub formalizes a decade-long partnership into a dedicated joint research vehicle, signaling deepening academic-industry integration on core AI infrastructure topics.",
       "impact_category": "Strategic Partnership",
       "title": "Georgia Tech and Amazon Launch Joint Science Hub",
       "url": "https://news.gatech.edu/news/2026/10/02/georgia-tech-and-amazon-launch-joint-science-hub",
@@ -23,28 +23,8 @@
     },
     {
       "rank": 3,
-      "article_id": 68007,
-      "editorial_note": "NIH-funded work combining AI with brain mapping to predict surgical risk to language ability shows how machine learning is moving into high-precision, patient-specific neurosurgical planning.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "UF researchers combine AI and brain mapping to advance personalized epilepsy surgery",
-      "url": "https://news.ufl.edu/2026/09/ai-epilepsy-surgery/",
-      "university": "University of Florida",
-      "published_date": "2026-09-30"
-    },
-    {
-      "rank": 4,
-      "article_id": 67878,
-      "editorial_note": "Cambridge's open-source Tessera model mapping smallholder crops in Senegal with far less compute than existing methods demonstrates AI's potential to deliver real development impact in resource-constrained settings.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "AI tool for mapping smallholder crops proves itself in Senegal",
-      "url": "https://www.cam.ac.uk/research/news/ai-tool-for-mapping-smallholder-crops-proves-itself-in-senegal",
-      "university": "University of Cambridge",
-      "published_date": "2026-09-29"
-    },
-    {
-      "rank": 5,
       "article_id": 68086,
-      "editorial_note": "A $4.25M DARPA grant to a WashU-led multi-institutional team fuses AI with physics-based simulation for fuel injector design, pairing substantial defense funding with cross-institutional collaboration.",
+      "editorial_note": "A $4.25M DARPA grant to a WashU-led multi-institutional team shows defense funding continuing to flow into AI-physics hybrid modeling for practical engineering problems like fuel injector design.",
       "impact_category": "Major Funding",
       "title": "WashU-led team wins $4M DARPA grant to improve fuel injector design",
       "url": "https://source.washu.edu/2026/10/washu-led-team-wins-4m-darpa-grant-to-improve-fuel-injector-design/",
@@ -52,19 +32,59 @@
       "published_date": "2026-10-01"
     },
     {
-      "rank": 6,
-      "article_id": 68466,
-      "editorial_note": "A low-power implantable chip that uses machine learning to analyze brain signals in real time could meaningfully advance detection of neurological disorders, pushing AI hardware toward the clinic.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "This AI-powered chip can offer a deeper look at faulty brain activity",
-      "url": "https://news.northeastern.edu/2026/09/30/ai-eeg-device-epilepsy/",
-      "university": "Northeastern University",
+      "rank": 4,
+      "article_id": 68007,
+      "editorial_note": "UF's $2.32M NIH award for AI-guided epilepsy surgery planning exemplifies federal investment translating AI research directly into improved patient outcomes in neurosurgery.",
+      "impact_category": "Major Funding",
+      "title": "UF researchers combine AI and brain mapping to advance personalized epilepsy surgery",
+      "url": "https://news.ufl.edu/2026/09/ai-epilepsy-surgery/",
+      "university": "University of Florida",
       "published_date": "2026-09-30"
     },
     {
+      "rank": 5,
+      "article_id": 69277,
+      "editorial_note": "An NSF CAREER Award \u2014 one of the most competitive early-career honors in US science \u2014 will fund new LLM-based methods for large-scale numeric data analysis with healthcare applications.",
+      "impact_category": "Major Funding",
+      "title": "FSU data scientist receives NSF CAREER Award to develop AI model to analyze complex numerical data at scale",
+      "url": "https://news.fsu.edu/news/science-technology/2026/10/05/fsu-data-scientist-receives-nsf-career-award-to-develop-ai-model-to-analyze-complex-numerical-data-at-scale/",
+      "university": "Florida State University",
+      "published_date": "2026-10-05"
+    },
+    {
+      "rank": 6,
+      "article_id": 68570,
+      "editorial_note": "UNSW students partnering with a major bank to prototype fraud detection targets a problem costing Australians $2.18 billion annually, illustrating how academia-industry pipelines are being used to tackle costly real-world fraud.",
+      "impact_category": "Strategic Partnership",
+      "title": "The CBA partnership giving students the chance to solve a $2.18 billion problem",
+      "url": "https://www.unsw.edu.au/news/2026/10/the-cba-partnership-giving-students-the-chance-to-solve-a-2-billion-problem",
+      "university": "University of New South Wales",
+      "published_date": "2026-10-01"
+    },
+    {
       "rank": 7,
+      "article_id": 68041,
+      "editorial_note": "HKUST's new Guangzhou robotics institute, backed by major philanthropic funding, extends a long-running partnership and expands AI-robotics research capacity in the region.",
+      "impact_category": "Strategic Partnership",
+      "title": "Cheng Kar-Shun Robotics Institute (GZ) Unveiled\u2014An Enduring Partnership Flourishes",
+      "url": "https://hkust.edu.hk/news/cheng-kar-shun-robotics-institute-gz-unveiled-enduring-partnership-flourishes",
+      "university": "Hong Kong Univ. of Science and Technology",
+      "published_date": "2026-10-02"
+    },
+    {
+      "rank": 8,
+      "article_id": 68282,
+      "editorial_note": "CERN's federated-learning platform CAFEIN being recognized at a UN digital awards event highlights growing international institutional interest in privacy-preserving, cross-border AI collaboration models.",
+      "impact_category": "Policy Impact",
+      "title": "CERN\u2019s AI innovation recognised at Digital@UNGA Awards 2026 \u2013 Home",
+      "url": "https://home.cern/cerns-ai-innovation-recognised-at-digitalunga-awards-2026/",
+      "university": "CERN",
+      "published_date": "2026-10-01"
+    },
+    {
+      "rank": 9,
       "article_id": 68156,
-      "editorial_note": "Brown's brain-inspired imaging system that sees through fog by mimicking retinal response is a genuinely novel sensing approach with clear applications in autonomous navigation and defense.",
+      "editorial_note": "Brown engineers' brain-inspired imaging system that can see through fog represents a genuine sensing breakthrough with clear applications in autonomous vehicles and defense imaging.",
       "impact_category": "Scientific Breakthrough",
       "title": "Brown University engineers build brain-inspired imaging system that can \u2018see\u2019 through fog",
       "url": "https://www.brown.edu/news/2026-10-01/fog-imaging",
@@ -72,34 +92,14 @@
       "published_date": "2026-10-01"
     },
     {
-      "rank": 8,
+      "rank": 10,
       "article_id": 68312,
-      "editorial_note": "UW-Madison's individualized 'brain roadmaps' linking cellular and genetic data to Alzheimer's progression represent a significant step toward precision medicine for neurodegenerative disease.",
+      "editorial_note": "UW-Madison's individualized 'brain roadmap' tools linking cellular and genetic data to Alzheimer's progression push personalized neurodegenerative disease research forward with AI-driven bioinformatics.",
       "impact_category": "Scientific Breakthrough",
       "title": "\u2018We built a brain roadmap for each person\u2019: New AI-driven tools help decode Alzheimer\u2019s disease at the cellular level",
       "url": "https://news.wisc.edu/we-built-a-brain-roadmap-for-each-person-new-ai-driven-tools-help-researchers-decode-alzheimers-disease-at-the-cellular-level/",
       "university": "University of Wisconsin-Madison",
       "published_date": "2026-09-30"
-    },
-    {
-      "rank": 9,
-      "article_id": 67741,
-      "editorial_note": "A MacArthur Fellowship for building AI-driven predictive agricultural science recognizes work with direct implications for global food security, one of the highest-profile individual honors in US research.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "U. of I. researcher and alumnus both named 2026 MacArthur Fellows",
-      "url": "https://news.illinois.edu/u-of-i-researcher-and-alumus-both-named-2026-macarthur-fellows/",
-      "university": "University of Illinois Urbana-Champaign",
-      "published_date": "2026-09-29"
-    },
-    {
-      "rank": 10,
-      "article_id": 68282,
-      "editorial_note": "International recognition of CERN's federated learning platform highlights how privacy-preserving, cross-institutional AI architectures are gaining traction as a policy-relevant model for collaborative science.",
-      "impact_category": "Policy Impact",
-      "title": "CERN\u2019s AI innovation recognised at Digital@UNGA Awards 2026 \u2013 Home",
-      "url": "https://home.cern/cerns-ai-innovation-recognised-at-digitalunga-awards-2026/",
-      "university": "CERN",
-      "published_date": "2026-10-01"
     }
   ]
 }
