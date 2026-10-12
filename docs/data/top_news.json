@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-12T03:34:38",
+  "generated_at": "2026-10-12T09:23:13",
   "picks": [
     {
       "rank": 1,
       "article_id": 70655,
-      "editorial_note": "A combined $1.175B commitment from Georgia Tech and Emory is one of the largest university AI investments to date, positioning the state as a national AI hub and signaling how seriously research universities are betting on AI infrastructure.",
+      "editorial_note": "A combined $1.1B+ commitment from Georgia Tech and Emory is one of the largest university AI investments announced this year, positioning Georgia as a national AI hub and signaling how much capital research universities are now willing to deploy on AI infrastructure and talent.",
       "impact_category": "Major Funding",
       "title": "Georgia Tech and Emory Invest More Than $1B in AI to Drive State\u2019s Jobs, Economic Growth",
       "url": "https://news.gatech.edu/news/2026/10/08/georgia-tech-and-emory-invest-more-1b-ai-drive-states-jobs-economic-growth",
@@ -14,8 +14,8 @@
     {
       "rank": 2,
       "article_id": 71095,
-      "editorial_note": "A White House-announced, 15-university regional supercomputing consortium marks a significant federal push to coordinate AI compute capacity across academia, with implications for national AI research strategy.",
-      "impact_category": "Policy Impact",
+      "editorial_note": "A White House-announced 15-university, 10-state computing consortium marks a significant federal push to regionalize AI supercomputing capacity, reflecting a deliberate policy strategy to broaden access beyond a handful of elite AI hubs.",
+      "impact_category": "Strategic Partnership",
       "title": "UK partners with regional universities in super intelligence computing consortium",
       "url": "https://uknow.uky.edu/research/uk-partners-regional-universities-super-intelligence-computing-consortium",
       "university": "University of Kentucky",
@@ -24,7 +24,7 @@
     {
       "rank": 3,
       "article_id": 71123,
-      "editorial_note": "SLAC's DOE Genesis Mission award applies autonomous AI-driven discovery to catalysis research, a concrete step toward AI systems that can independently design and run scientific experiments.",
+      "editorial_note": "SLAC leading a DOE Genesis Mission project to apply autonomous AI-driven discovery to catalysis research could accelerate breakthroughs in energy-relevant chemistry, exemplifying the federal government's flagship strategy for AI-accelerated science.",
       "impact_category": "Scientific Breakthrough",
       "title": "SLAC to lead a Department of Energy Genesis Mission project for Super Intelligence (SI)-driven autonomous discovery in catalysis",
       "url": "https://www6.slac.stanford.edu/news/2026-10-08-slac-lead-department-energy-genesis-mission-project-ai-driven-autonomous-discovery",
@@ -33,8 +33,18 @@
     },
     {
       "rank": 4,
+      "article_id": 71707,
+      "editorial_note": "Georgia Tech's $20M NSF-funded Nexus supercomputer, opened to researchers nationwide in partnership with UIUC, expands shared national AI compute infrastructure at a time when GPU access is a major bottleneck for academic research.",
+      "impact_category": "Major Funding",
+      "title": "Georgia Tech Opens Supercomputer to Researchers Nationwide",
+      "url": "https://news.gatech.edu/features/2026/10/georgia-tech-opens-supercomputer-researchers-nationwide",
+      "university": "Georgia Institute of Technology-Main Campus",
+      "published_date": "2026-10-09"
+    },
+    {
+      "rank": 5,
       "article_id": 71153,
-      "editorial_note": "Phase II DOE funding for Berkeley Lab's MOAT-Core project shows sustained federal investment in applying AI to particle accelerator design, advancing a key tool for fundamental physics research.",
+      "editorial_note": "Phase II DOE Genesis Mission funding for Berkeley Lab's MOAT-Core project applies AI to particle accelerator design and operation, advancing a key tool for fundamental physics research with direct federal backing.",
       "impact_category": "Major Funding",
       "title": "Super Intelligence for Particle Accelerators Gets Another Boost",
       "url": "https://newscenter.lbl.gov/2026/10/08/super-intelligence-for-particle-accelerators-gets-another-boost/",
@@ -42,19 +52,9 @@
       "published_date": "2026-10-08"
     },
     {
-      "rank": 5,
-      "article_id": 71707,
-      "editorial_note": "Georgia Tech's Nexus supercomputer, backed by $20M in NSF funding and built with University of Illinois Urbana-Champaign, opens major AI compute capacity to researchers nationwide \u2014 expanding access beyond well-resourced institutions.",
-      "impact_category": "Strategic Partnership",
-      "title": "Georgia Tech Opens Supercomputer to Researchers Nationwide",
-      "url": "https://news.gatech.edu/features/2026/10/georgia-tech-opens-supercomputer-researchers-nationwide",
-      "university": "Georgia Institute of Technology-Main Campus",
-      "published_date": "2026-10-09"
-    },
-    {
       "rank": 6,
       "article_id": 71142,
-      "editorial_note": "SLAC's SPIRE project aims to build fully autonomous self-driving laboratories where AI agents and robots run photon-science experiments independently, a notable step toward automating the scientific method itself.",
+      "editorial_note": "SLAC's SPIRE project to build fully autonomous 'self-driving laboratories' using AI agents and robots represents a notable step toward automating experimental science itself, not just data analysis.",
       "impact_category": "Scientific Breakthrough",
       "title": "SLAC leads new project to build the self-driving laboratory of the future",
       "url": "https://www6.slac.stanford.edu/news/2026-10-08-slac-leads-new-project-build-self-driving-laboratory-future",
@@ -64,7 +64,7 @@
     {
       "rank": 7,
       "article_id": 70628,
-      "editorial_note": "Fermilab's two Genesis Mission awards apply AI to microelectronics and quantum information science design, pairing national lab expertise with cutting-edge chip and quantum research.",
+      "editorial_note": "Fermilab's two new Genesis Mission awards apply AI to microelectronics and quantum information science, areas critical to both future computing hardware and national competitiveness in strategic technologies.",
       "impact_category": "Major Funding",
       "title": "Fermilab to lead two new Genesis Mission awards to accelerate development of microelectronics and quantum",
       "url": "https://news.fnal.gov/2026/10/fermilab-to-lead-two-new-genesis-mission-awards-to-accelerate-development-of-microelectronics-and-quantum/",
@@ -74,7 +74,7 @@
     {
       "rank": 8,
       "article_id": 70355,
-      "editorial_note": "A CWRU alumnus's optical computing chips, which use light instead of electricity to run AI workloads, target one of AI's most pressing constraints \u2014 energy consumption \u2014 with real commercial backing via his startup Neurophos.",
+      "editorial_note": "A CWRU-linked startup's optical computing chips, which use light instead of electronic circuits, target one of AI's biggest looming constraints \u2014 runaway energy consumption \u2014 with a credible technical approach rather than incremental efficiency tweaks.",
       "impact_category": "Scientific Breakthrough",
       "title": "A CWRU entrepreneur studied invisibility cloaks. Now he\u2019s working to cut AI\u2019s energy use | CWRU Newsroom | Case Western Reserve University",
       "url": "https://case.edu/news/cwru-entrepreneur-studied-invisibility-cloaks-now-hes-working-cut-ais-energy-use",
@@ -83,22 +83,22 @@
     },
     {
       "rank": 9,
-      "article_id": 71629,
-      "editorial_note": "An NIH Director's Pioneer Award of roughly $6 million will fund an AI-human discovery engine using LLM agents to generate and test cancer hypotheses, a prestigious recognition of AI's growing role in biomedical research.",
-      "impact_category": "Major Funding",
-      "title": "Dr. Olivier Elemento Wins NIH Director\u2019s Pioneer Award",
-      "url": "https://news.weill.cornell.edu/news/2026/10/dr-olivier-elemento-wins-nih-director%E2%80%99s-pioneer-award",
-      "university": "Weill Medical College of Cornell University",
-      "published_date": "2026-10-06"
-    },
-    {
-      "rank": 10,
       "article_id": 70223,
-      "editorial_note": "TUM spinout RobCo reaching unicorn status with plug-and-play industrial robotics demonstrates strong commercial validation of university-born AI/robotics research reaching billion-euro market scale.",
+      "editorial_note": "TUM spinout RobCo reaching unicorn status with a robotics platform for industrial automation shows academic AI/robotics research translating directly into major commercial value and job-creating enterprise.",
       "impact_category": "Major Funding",
       "title": "RobCo: TUM\u2019s 24th unicorn",
       "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/robco-is-tums-24th-unicorn",
       "university": "Technical University of Munich",
+      "published_date": "2026-10-07"
+    },
+    {
+      "rank": 10,
+      "article_id": 70653,
+      "editorial_note": "An R&D 100 Award for the multi-lab Persistent DynAMICS project recognizes a working AI-enhanced facility-monitoring system now in real-world national-security use, a rare case of lab AI research reaching deployed, award-winning maturity.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "NNSS collaborates on LANL's R&D 100 Award-winning Persistent DynAMICS project - Nevada National Security Site",
+      "url": "https://nnss.gov/news/article/nnss-collaborates-on-lanls-rd-100-award-winning-persistent-dynamics-project/",
+      "university": "Nevada National Security Site",
       "published_date": "2026-10-07"
     }
   ]
