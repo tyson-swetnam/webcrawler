@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-13T21:09:20",
+  "generated_at": "2026-10-14T03:21:08",
   "picks": [
     {
       "rank": 1,
       "article_id": 70655,
-      "editorial_note": "A combined $1.1B+ commitment from Georgia Tech and Emory is one of the largest university AI investments on record, positioning the Atlanta region as a national AI hub and signaling how deeply institutions are now betting on AI infrastructure and talent.",
+      "editorial_note": "A combined $1.1B commitment from Georgia Tech and Emory is one of the largest university AI investments to date, positioning Georgia as a national AI research and economic-development hub.",
       "impact_category": "Major Funding",
       "title": "Georgia Tech and Emory Invest More Than $1B in AI to Drive State\u2019s Jobs, Economic Growth",
       "url": "https://news.gatech.edu/news/2026/10/08/georgia-tech-and-emory-invest-more-1b-ai-drive-states-jobs-economic-growth",
@@ -14,8 +14,8 @@
     {
       "rank": 2,
       "article_id": 71095,
-      "editorial_note": "A White House-brokered consortium of 15 universities across 10 states to pool supercomputing resources marks a significant federal push to democratize AI compute access and reflects a new model of regional academic collaboration on national AI strategy.",
-      "impact_category": "Policy Impact",
+      "editorial_note": "A White House-backed consortium of 15 universities across 10 states pooling high-performance computing resources signals a major federal push toward regional AI research infrastructure.",
+      "impact_category": "Strategic Partnership",
       "title": "UK partners with regional universities in super intelligence computing consortium",
       "url": "https://uknow.uky.edu/research/uk-partners-regional-universities-super-intelligence-computing-consortium",
       "university": "University of Kentucky",
@@ -24,7 +24,7 @@
     {
       "rank": 3,
       "article_id": 71123,
-      "editorial_note": "SLAC's leadership of a DOE Genesis Mission award applying autonomous AI discovery to catalysis research shows the federal government's flagship AI science initiative translating into concrete lab-level work with real energy and chemistry implications.",
+      "editorial_note": "SLAC's DOE Genesis Mission award applies AI-driven autonomous discovery to catalysis research, a concrete step toward AI systems that design and run their own scientific experiments.",
       "impact_category": "Scientific Breakthrough",
       "title": "SLAC to lead a Department of Energy Genesis Mission project for Super Intelligence (SI)-driven autonomous discovery in catalysis",
       "url": "https://www6.slac.stanford.edu/news/2026-10-08-slac-lead-department-energy-genesis-mission-project-ai-driven-autonomous-discovery",
@@ -33,28 +33,8 @@
     },
     {
       "rank": 4,
-      "article_id": 71153,
-      "editorial_note": "Phase II Genesis Mission funding for Berkeley Lab's accelerator-design AI project shows sustained federal investment in using AI to optimize core physics infrastructure, a rare case of 'AI for AI's enabling tools' at a national lab.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Super Intelligence for Particle Accelerators Gets Another Boost",
-      "url": "https://newscenter.lbl.gov/2026/10/08/super-intelligence-for-particle-accelerators-gets-another-boost/",
-      "university": "Lawrence Berkeley National Laboratory",
-      "published_date": "2026-10-08"
-    },
-    {
-      "rank": 5,
-      "article_id": 71707,
-      "editorial_note": "Georgia Tech's Nexus supercomputer, built with a $20M NSF award and University of Illinois partnership, opens next-generation AI compute to researchers nationwide, directly expanding the research community's access to scarce high-performance infrastructure.",
-      "impact_category": "Strategic Partnership",
-      "title": "Georgia Tech Opens Supercomputer to Researchers Nationwide",
-      "url": "https://news.gatech.edu/features/2026/10/georgia-tech-opens-supercomputer-researchers-nationwide",
-      "university": "Georgia Institute of Technology-Main Campus",
-      "published_date": "2026-10-09"
-    },
-    {
-      "rank": 6,
       "article_id": 71142,
-      "editorial_note": "SLAC's DOE-backed SPIRE project to build autonomous 'self-driving laboratories' represents a genuine shift toward AI agents independently running photon-science experiments, a notable step for scientific-discovery automation.",
+      "editorial_note": "SLAC's SPIRE project aims to build fully self-driving laboratories where AI agents and robots autonomously run photon-science experiments, a notable step toward automated scientific discovery.",
       "impact_category": "Scientific Breakthrough",
       "title": "SLAC leads new project to build the self-driving laboratory of the future",
       "url": "https://www6.slac.stanford.edu/news/2026-10-08-slac-leads-new-project-build-self-driving-laboratory-future",
@@ -62,9 +42,19 @@
       "published_date": "2026-10-08"
     },
     {
-      "rank": 7,
+      "rank": 5,
+      "article_id": 71153,
+      "editorial_note": "Phase II DOE funding for Berkeley Lab's MOAT-Core project shows sustained federal commitment to applying AI to particle accelerator design and operation, with implications for energy and physics research.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Super Intelligence for Particle Accelerators Gets Another Boost",
+      "url": "https://newscenter.lbl.gov/2026/10/08/super-intelligence-for-particle-accelerators-gets-another-boost/",
+      "university": "Lawrence Berkeley National Laboratory",
+      "published_date": "2026-10-08"
+    },
+    {
+      "rank": 6,
       "article_id": 70628,
-      "editorial_note": "Fermilab's two Genesis Mission awards applying AI to microelectronics and quantum information science extend the DOE's national AI-for-science push into chip design and quantum research, areas with direct national competitiveness implications.",
+      "editorial_note": "Fermilab's two new Genesis Mission awards extend AI-driven discovery into microelectronics and quantum information science, broadening the federal AI-for-science portfolio across national labs.",
       "impact_category": "Scientific Breakthrough",
       "title": "Fermilab to lead two new Genesis Mission awards to accelerate development of microelectronics and quantum",
       "url": "https://news.fnal.gov/2026/10/fermilab-to-lead-two-new-genesis-mission-awards-to-accelerate-development-of-microelectronics-and-quantum/",
@@ -72,9 +62,29 @@
       "published_date": "2026-10-08"
     },
     {
+      "rank": 7,
+      "article_id": 71707,
+      "editorial_note": "Georgia Tech's $20M NSF-funded Nexus supercomputer, opened to researchers nationwide in partnership with UIUC, expands shared AI computing infrastructure beyond a single institution.",
+      "impact_category": "Major Funding",
+      "title": "Georgia Tech Opens Supercomputer to Researchers Nationwide",
+      "url": "https://news.gatech.edu/features/2026/10/georgia-tech-opens-supercomputer-researchers-nationwide",
+      "university": "Georgia Institute of Technology-Main Campus",
+      "published_date": "2026-10-09"
+    },
+    {
       "rank": 8,
+      "article_id": 71122,
+      "editorial_note": "CMU's Ataraxos system beating top human players at Stratego, published in Nature, is a genuine research advance in AI decision-making under hidden information.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "CMU Researchers Develop AI That Tackles Hidden Information in Stratego",
+      "url": "https://www.cs.cmu.edu/news/2026/ai-tackles-stratego",
+      "university": "Carnegie Mellon University",
+      "published_date": "2026-10-08"
+    },
+    {
+      "rank": 9,
       "article_id": 71127,
-      "editorial_note": "Google.org's $5M, three-year commitment to Georgia Tech for democratizing AI access in scientific research is a notable industry-to-academia funding flow aimed at broadening who can use advanced AI tools for discovery.",
+      "editorial_note": "Google.org's $5M, three-year commitment to Georgia Tech broadens access to AI tools and compute for scientific discovery, reflecting continued industry investment in academic AI research capacity.",
       "impact_category": "Major Funding",
       "title": "Georgia Tech Receives $5 Million From Google.org to Expand Access to AI for Scientific Discovery",
       "url": "https://news.gatech.edu/news/2026/10/09/georgia-tech-receives-5-million-googleorg-expand-access-ai-scientific-discovery",
@@ -82,23 +92,13 @@
       "published_date": "2026-10-09"
     },
     {
-      "rank": 9,
-      "article_id": 70653,
-      "editorial_note": "An R&D 100 Award \u2014 one of the most prestigious innovation prizes in applied science \u2014 for a multi-lab AI-driven facility monitoring system validates a real-world deployed AI safety technology with cross-laboratory impact.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "NNSS collaborates on LANL's R&D 100 Award-winning Persistent DynAMICS project - Nevada National Security Site",
-      "url": "https://nnss.gov/news/article/nnss-collaborates-on-lanls-rd-100-award-winning-persistent-dynamics-project/",
-      "university": "Nevada National Security Site",
-      "published_date": "2026-10-07"
-    },
-    {
       "rank": 10,
-      "article_id": 71122,
-      "editorial_note": "CMU's Nature-published Ataraxos system beating top humans at Stratego, a game defined by hidden information, pushes the frontier of AI decision-making under uncertainty, a capability with broad implications beyond gaming.",
+      "article_id": 71276,
+      "editorial_note": "NASA's SSPICY mission demonstrates autonomous, computer-vision-based satellite inspection with minimal ground control, a real-world application of AI navigation in space operations.",
       "impact_category": "Scientific Breakthrough",
-      "title": "CMU Researchers Develop AI That Tackles Hidden Information in Stratego",
-      "url": "https://www.cs.cmu.edu/news/2026/ai-tackles-stratego",
-      "university": "Carnegie Mellon University",
+      "title": "NASA\u2019s SSPICY Mission to Demonstrate In-Space Inspection Technologies - NASA",
+      "url": "https://www.nasa.gov/centers-and-facilities/ames/nasas-sspicy-mission-to-demonstrate-in-space-inspection-technologies/",
+      "university": "NASA Glenn Research Center",
       "published_date": "2026-10-08"
     }
   ]
