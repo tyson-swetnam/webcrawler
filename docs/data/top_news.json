@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-14T15:43:20",
+  "generated_at": "2026-10-14T21:09:55",
   "picks": [
     {
       "rank": 1,
       "article_id": 70655,
-      "editorial_note": "A combined $1B+ commitment from Georgia Tech and Emory is one of the largest university AI investments on record, positioning Georgia as a national AI hub and signaling how deeply institutional budgets are now being restructured around AI infrastructure.",
+      "editorial_note": "A combined $1B+ commitment from Georgia Tech and Emory is one of the largest university AI investments of the year, aiming to position Georgia as a national AI hub and signaling how deeply institutions are now willing to bet on AI infrastructure and talent.",
       "impact_category": "Major Funding",
       "title": "Georgia Tech and Emory Invest More Than $1B in AI to Drive State\u2019s Jobs, Economic Growth",
       "url": "https://news.gatech.edu/news/2026/10/08/georgia-tech-and-emory-invest-more-1b-ai-drive-states-jobs-economic-growth",
@@ -14,7 +14,7 @@
     {
       "rank": 2,
       "article_id": 71095,
-      "editorial_note": "A White House-announced consortium of 15 universities across 10 states pooling AI supercomputing resources represents a significant federal-academic alignment on 'super intelligence' infrastructure, with implications for how regional research capacity scales nationally.",
+      "editorial_note": "A White House-backed consortium uniting 15 universities across 10 states to pool supercomputing resources marks a significant federal push to decentralize AI research infrastructure beyond a handful of elite institutions.",
       "impact_category": "Strategic Partnership",
       "title": "UK partners with regional universities in super intelligence computing consortium",
       "url": "https://uknow.uky.edu/research/uk-partners-regional-universities-super-intelligence-computing-consortium",
@@ -24,7 +24,7 @@
     {
       "rank": 3,
       "article_id": 71123,
-      "editorial_note": "SLAC leading a DOE Genesis Mission project to apply autonomous AI-driven discovery to catalysis research could meaningfully accelerate breakthroughs in energy and chemical science, a flagship example of AI reshaping the scientific method itself.",
+      "editorial_note": "DOE's selection of SLAC to lead a Genesis Mission project applying autonomous AI-driven discovery to catalysis research shows the federal government betting on AI to directly accelerate fundamental energy science, not just support it.",
       "impact_category": "Scientific Breakthrough",
       "title": "SLAC to lead a Department of Energy Genesis Mission project for Super Intelligence (SI)-driven autonomous discovery in catalysis",
       "url": "https://www6.slac.stanford.edu/news/2026-10-08-slac-lead-department-energy-genesis-mission-project-ai-driven-autonomous-discovery",
@@ -33,18 +33,18 @@
     },
     {
       "rank": 4,
-      "article_id": 71707,
-      "editorial_note": "Georgia Tech's $20M NSF-funded Nexus supercomputer, opened to researchers nationwide in partnership with UIUC, expands shared national AI compute capacity at a moment when access to large-scale infrastructure is a key bottleneck for academic AI research.",
-      "impact_category": "Major Funding",
-      "title": "Georgia Tech Opens Supercomputer to Researchers Nationwide",
-      "url": "https://news.gatech.edu/features/2026/10/georgia-tech-opens-supercomputer-researchers-nationwide",
-      "university": "Georgia Institute of Technology-Main Campus",
-      "published_date": "2026-10-09"
+      "article_id": 71153,
+      "editorial_note": "Phase II Genesis Mission funding for Berkeley Lab's MOAT-Core project extends DOE's AI-for-science push into particle accelerator design, a sign that 'Super Intelligence' initiatives are scaling from pilot to sustained national investment.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Super Intelligence for Particle Accelerators Gets Another Boost",
+      "url": "https://newscenter.lbl.gov/2026/10/08/super-intelligence-for-particle-accelerators-gets-another-boost/",
+      "university": "Lawrence Berkeley National Laboratory",
+      "published_date": "2026-10-08"
     },
     {
       "rank": 5,
       "article_id": 71142,
-      "editorial_note": "SLAC's SPIRE project to build fully autonomous self-driving laboratories, where AI agents and robots run photon-science experiments independently, is a concrete step toward a new paradigm of unattended scientific discovery.",
+      "editorial_note": "SLAC's SPIRE project aims to build fully autonomous, AI-run laboratories for photon science experiments, a concrete step toward self-driving labs that could reshape the pace of experimental discovery.",
       "impact_category": "Scientific Breakthrough",
       "title": "SLAC leads new project to build the self-driving laboratory of the future",
       "url": "https://www6.slac.stanford.edu/news/2026-10-08-slac-leads-new-project-build-self-driving-laboratory-future",
@@ -53,18 +53,28 @@
     },
     {
       "rank": 6,
-      "article_id": 71153,
-      "editorial_note": "DOE's Phase II funding for Lawrence Berkeley's MOAT-Core project shows sustained federal commitment to applying AI in particle accelerator design, with potential downstream benefits for energy, medicine, and fundamental physics facilities.",
-      "impact_category": "Major Funding",
-      "title": "Super Intelligence for Particle Accelerators Gets Another Boost",
-      "url": "https://newscenter.lbl.gov/2026/10/08/super-intelligence-for-particle-accelerators-gets-another-boost/",
-      "university": "Lawrence Berkeley National Laboratory",
+      "article_id": 70628,
+      "editorial_note": "Fermilab's two Genesis Mission awards apply AI to chip design and quantum information science, underscoring how national labs are using AI not just to analyze data but to directly engineer next-generation hardware.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Fermilab to lead two new Genesis Mission awards to accelerate development of microelectronics and quantum",
+      "url": "https://news.fnal.gov/2026/10/fermilab-to-lead-two-new-genesis-mission-awards-to-accelerate-development-of-microelectronics-and-quantum/",
+      "university": "Fermi National Accelerator Laboratory",
       "published_date": "2026-10-08"
     },
     {
       "rank": 7,
+      "article_id": 71707,
+      "editorial_note": "Georgia Tech's $20M NSF-funded Nexus supercomputer, opened to researchers nationwide in partnership with UIUC, broadens access to high-end AI compute beyond well-resourced institutions.",
+      "impact_category": "Strategic Partnership",
+      "title": "Georgia Tech Opens Supercomputer to Researchers Nationwide",
+      "url": "https://news.gatech.edu/features/2026/10/georgia-tech-opens-supercomputer-researchers-nationwide",
+      "university": "Georgia Institute of Technology-Main Campus",
+      "published_date": "2026-10-09"
+    },
+    {
+      "rank": 8,
       "article_id": 72731,
-      "editorial_note": "The University of Arkansas's AURORA robot-controlled AI laboratory, backed by a $20M NSF-led project, exemplifies how autonomous experimentation platforms are accelerating materials discovery timelines that once took years.",
+      "editorial_note": "The University of Arkansas's AURORA robotic cloud laboratory, part of a $20M NSF project, demonstrates how AI-driven automation is beginning to speed up materials discovery for quantum technologies.",
       "impact_category": "Scientific Breakthrough",
       "title": "Robots and AI Could Speed Search for Quantum Materials",
       "url": "https://news.uark.edu/articles/83006/robots-and-ai-could-speed-search-for-quantum-materials",
@@ -72,34 +82,24 @@
       "published_date": "2026-10-13"
     },
     {
-      "rank": 8,
-      "article_id": 72495,
-      "editorial_note": "UK AI Minister Kanishka Narayan's announcement of new government measures to guard against AI risks, delivered at Imperial College London, reflects growing regulatory momentum in the UK as AI capabilities advance.",
-      "impact_category": "Policy Impact",
-      "title": "AI minister announces measures to protect against AI risks in speech at Imperial",
-      "url": "https://www.imperial.ac.uk/news/articles/2026/ai-minister-announces-measures-to-protect-against-ai-risks-in-speech-at-imperial/",
-      "university": "Imperial College London",
-      "published_date": "2026-10-12"
-    },
-    {
       "rank": 9,
-      "article_id": 72235,
-      "editorial_note": "ASU's new AI Research Acceleration Platform, backed by an Intel donation, broadens equitable access to AI supercomputing for all students and researchers, a model other universities may look to replicate.",
-      "impact_category": "Strategic Partnership",
-      "title": "ASU provides access to AI-supercomputing for all",
-      "url": "https://news.asu.edu/20261013-science-and-technology-asu-provides-access-aisupercomputing-all",
-      "university": "Arizona State University Campus Immersion",
-      "published_date": "2026-10-13"
+      "article_id": 72042,
+      "editorial_note": "Louisiana's bid to become an energy hub, anchored by up to $250B in planned investment including a SpaceX spaceport and Meta's massive data-center buildout, illustrates the scale of capital now flowing into AI-adjacent infrastructure at the state level.",
+      "impact_category": "Major Funding",
+      "title": "Large tech firms, small startups and universities are fueling Louisiana\u2019s bid to become the energy hub of tomorrow",
+      "url": "https://news.tulane.edu/news/large-tech-firms-small-startups-and-universities-are-fueling-louisianas-bid-become-energy-hub",
+      "university": "Tulane University of Louisiana",
+      "published_date": "2026-10-12"
     },
     {
       "rank": 10,
-      "article_id": 72032,
-      "editorial_note": "NJIT spinout OppyAI's commercialization of 'Neural Crypto,' a privacy-preserving hybrid AI technology, shows university research translating directly into deployable enterprise technology addressing real data-privacy concerns.",
-      "impact_category": "Strategic Partnership",
-      "title": "NJIT Spinout OppyAI Takes Private Hybrid AI to the Global Stage",
-      "url": "https://news.njit.edu/njit-spinout-oppyai-takes-private-hybrid-ai-global-stage",
-      "university": "New Jersey Institute of Technology",
-      "published_date": "2026-10-12"
+      "article_id": 72184,
+      "editorial_note": "A $19.2M, five-year Army Research Office award to a UCF-led team to study light propagation for sensing and imaging shows continued Department of Defense investment in AI-adjacent foundational research.",
+      "impact_category": "Major Funding",
+      "title": "UCF-Led Team Receives $19.2 Million Army Research Office Award to Advance the Science of Light",
+      "url": "https://www.ucf.edu/news/ucf-led-team-receives-19-2-million-army-research-office-award-to-advance-the-science-of-light/",
+      "university": "University of Central Florida",
+      "published_date": "2026-10-13"
     }
   ]
 }
