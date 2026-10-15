@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-15T03:21:30",
+  "generated_at": "2026-10-15T09:10:49",
   "picks": [
     {
       "rank": 1,
       "article_id": 71095,
-      "editorial_note": "A White House-backed consortium uniting 15 universities across 10 states to share leadership-class AI computing infrastructure signals a major federal push to decentralize supercomputing access for AI research in the Southeast.",
+      "editorial_note": "A White House-announced 15-university, 10-state consortium to build and share leadership-class AI computing is a rare federal-academic mobilization at national scale, signaling AI infrastructure is becoming a coordinated public priority rather than a per-campus effort.",
       "impact_category": "Strategic Partnership",
       "title": "UK partners with regional universities in super intelligence computing consortium",
       "url": "https://uknow.uky.edu/research/uk-partners-regional-universities-super-intelligence-computing-consortium",
@@ -14,7 +14,7 @@
     {
       "rank": 2,
       "article_id": 71707,
-      "editorial_note": "Georgia Tech's $20M NSF-funded Nexus supercomputer, built with UIUC and opened to researchers nationwide, meaningfully expands shared compute capacity for AI research beyond a single institution.",
+      "editorial_note": "Georgia Tech's $20M NSF-funded Nexus supercomputer, built with UIUC and opened to researchers nationwide, meaningfully expands the national AI research computing base beyond elite labs.",
       "impact_category": "Major Funding",
       "title": "Georgia Tech Opens Supercomputer to Researchers Nationwide",
       "url": "https://news.gatech.edu/features/2026/10/georgia-tech-opens-supercomputer-researchers-nationwide",
@@ -23,8 +23,18 @@
     },
     {
       "rank": 3,
+      "article_id": 72042,
+      "editorial_note": "Up to $250 billion in planned investment\u2014including a SpaceX spaceport and Meta's $50B+ data center buildout\u2014tied to university and industry collaboration marks a massive, real-world bet on AI-driven infrastructure.",
+      "impact_category": "Major Funding",
+      "title": "Large tech firms, small startups and universities are fueling Louisiana\u2019s bid to become the energy hub of tomorrow",
+      "url": "https://news.tulane.edu/news/large-tech-firms-small-startups-and-universities-are-fueling-louisianas-bid-become-energy-hub",
+      "university": "Tulane University of Louisiana",
+      "published_date": "2026-10-12"
+    },
+    {
+      "rank": 4,
       "article_id": 72184,
-      "editorial_note": "A $19.2M, five-year Army Research Office award to a UCF-led team to advance AI-enhanced optical sensing and imaging represents a substantial federal defense research investment with real downstream applications.",
+      "editorial_note": "A $19.2 million, five-year Army Research Office award to a UCF-led team to advance light-based sensing and imaging science shows deep, sustained defense investment in AI-adjacent fundamental research.",
       "impact_category": "Major Funding",
       "title": "UCF-Led Team Receives $19.2 Million Army Research Office Award to Advance the Science of Light",
       "url": "https://www.ucf.edu/news/ucf-led-team-receives-19-2-million-army-research-office-award-to-advance-the-science-of-light/",
@@ -32,19 +42,9 @@
       "published_date": "2026-10-13"
     },
     {
-      "rank": 4,
-      "article_id": 72731,
-      "editorial_note": "The AURORA robot-controlled, AI-enhanced cloud lab at Arkansas, part of a $20M NSF-led effort, could substantially accelerate the discovery of quantum materials by automating experimentation at scale.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Robots and AI Could Speed Search for Quantum Materials",
-      "url": "https://news.uark.edu/articles/83006/robots-and-ai-could-speed-search-for-quantum-materials",
-      "university": "University of Arkansas",
-      "published_date": "2026-10-13"
-    },
-    {
       "rank": 5,
       "article_id": 72235,
-      "editorial_note": "ASU's AIR Platform, backed by an Intel donation, democratizes access to AI supercomputing for all students and researchers, a notable model for broadening AI research participation.",
+      "editorial_note": "ASU's Intel-backed AI Research Acceleration Platform democratizes supercomputing access for its entire student and researcher population, a notable model for broadening who can do AI-scale research.",
       "impact_category": "Strategic Partnership",
       "title": "ASU provides access to AI-supercomputing for all",
       "url": "https://news.asu.edu/20261013-science-and-technology-asu-provides-access-aisupercomputing-all",
@@ -53,28 +53,18 @@
     },
     {
       "rank": 6,
-      "article_id": 72178,
-      "editorial_note": "Rico Sennrich's ACL Test of Time Award recognizes subword tokenization (BPE), a foundational technique underpinning nearly every modern large language model \u2014 a rare case of a decade-old university innovation now central to the entire field.",
+      "article_id": 72731,
+      "editorial_note": "AURORA, a robot-controlled AI cloud lab funded by a $20M NSF project, represents a genuine methodological advance in accelerating materials discovery through autonomous experimentation.",
       "impact_category": "Scientific Breakthrough",
-      "title": "A Smart Computer",
-      "url": "https://www.news.uzh.ch/en/articles/news/2026/rico-sennrich.html",
-      "university": "University of Zurich",
+      "title": "Robots and AI Could Speed Search for Quantum Materials",
+      "url": "https://news.uark.edu/articles/83006/robots-and-ai-could-speed-search-for-quantum-materials",
+      "university": "University of Arkansas",
       "published_date": "2026-10-13"
     },
     {
       "rank": 7,
-      "article_id": 72153,
-      "editorial_note": "Georgia Tech researchers developing probes to detect internal warning signs of unsafe LLM behavior address a pressing AI safety concern directly motivated by a real 2026 incident.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Can We Detect Harmful AI Before It\u2019s Too Late? Researchers Search for Warning Signs",
-      "url": "https://news.gatech.edu/news/2026/10/13/can-we-detect-harmful-ai-its-too-late-researchers-search-warning-signs",
-      "university": "Georgia Institute of Technology-Main Campus",
-      "published_date": "2026-10-13"
-    },
-    {
-      "rank": 8,
       "article_id": 71127,
-      "editorial_note": "Google.org's $5M, three-year commitment to Georgia Tech to broaden researcher access to AI tools for scientific discovery marks a significant industry-academia funding partnership.",
+      "editorial_note": "Google.org's $5 million, three-year commitment to Georgia Tech for AI-for-science tools and compute access reflects growing industry philanthropy aimed at broadening scientific AI infrastructure.",
       "impact_category": "Major Funding",
       "title": "Georgia Tech Receives $5 Million From Google.org to Expand Access to AI for Scientific Discovery",
       "url": "https://news.gatech.edu/news/2026/10/09/georgia-tech-receives-5-million-googleorg-expand-access-ai-scientific-discovery",
@@ -82,9 +72,19 @@
       "published_date": "2026-10-09"
     },
     {
+      "rank": 8,
+      "article_id": 72032,
+      "editorial_note": "NJIT spinout OppyAI's 'Neural Crypto' hybrid-AI privacy technology moving to global commercialization is a concrete example of university research translating into market-ready AI products.",
+      "impact_category": "Strategic Partnership",
+      "title": "NJIT Spinout OppyAI Takes Private Hybrid AI to the Global Stage",
+      "url": "https://news.njit.edu/njit-spinout-oppyai-takes-private-hybrid-ai-global-stage",
+      "university": "New Jersey Institute of Technology",
+      "published_date": "2026-10-12"
+    },
+    {
       "rank": 9,
       "article_id": 72495,
-      "editorial_note": "The UK AI minister's announcement of new government measures to guard against AI risks, delivered at Imperial College London, reflects growing policy urgency around AI safety regulation.",
+      "editorial_note": "The UK AI minister's announcement of new government measures to guard against AI risks, delivered at Imperial College London, signals concrete regulatory momentum rather than just rhetoric on AI safety.",
       "impact_category": "Policy Impact",
       "title": "AI minister announces measures to protect against AI risks in speech at Imperial",
       "url": "https://www.imperial.ac.uk/news/articles/2026/ai-minister-announces-measures-to-protect-against-ai-risks-in-speech-at-imperial/",
@@ -93,13 +93,13 @@
     },
     {
       "rank": 10,
-      "article_id": 72092,
-      "editorial_note": "Three Carnegie Mellon faculty joining the $16M Schmidt Sciences AI2050 Early Career Fellows cohort highlights significant philanthropic investment in the next generation of AI researchers.",
-      "impact_category": "Major Funding",
-      "title": "Three SCS Faculty Members Named 2026 AI2050 Early Career Fellows",
-      "url": "https://www.cs.cmu.edu/news/2026/ai2050-fellows",
-      "university": "Carnegie Mellon University",
-      "published_date": "2026-10-14"
+      "article_id": 72153,
+      "editorial_note": "Georgia Tech's work probing LLM internals for warning signs of unsafe or misaligned behavior, motivated by a real 2026 incident, addresses one of the most consequential open problems in AI safety research.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Can We Detect Harmful AI Before It\u2019s Too Late? Researchers Search for Warning Signs",
+      "url": "https://news.gatech.edu/news/2026/10/13/can-we-detect-harmful-ai-its-too-late-researchers-search-warning-signs",
+      "university": "Georgia Institute of Technology-Main Campus",
+      "published_date": "2026-10-13"
     }
   ]
 }
