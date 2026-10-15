@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-15T09:10:49",
+  "generated_at": "2026-10-15T15:33:02",
   "picks": [
     {
       "rank": 1,
       "article_id": 71095,
-      "editorial_note": "A White House-announced 15-university, 10-state consortium to build and share leadership-class AI computing is a rare federal-academic mobilization at national scale, signaling AI infrastructure is becoming a coordinated public priority rather than a per-campus effort.",
-      "impact_category": "Strategic Partnership",
+      "editorial_note": "A White House-backed, 15-university, 10-state supercomputing consortium marks a major federal push to build shared 'superintelligence' compute infrastructure \u2014 a policy-level signal of how seriously the government is investing in regional AI research capacity.",
+      "impact_category": "Policy Impact",
       "title": "UK partners with regional universities in super intelligence computing consortium",
       "url": "https://uknow.uky.edu/research/uk-partners-regional-universities-super-intelligence-computing-consortium",
       "university": "University of Kentucky",
@@ -13,8 +13,18 @@
     },
     {
       "rank": 2,
+      "article_id": 72918,
+      "editorial_note": "DOE's Genesis Mission, linking national supercomputers, datasets, and experimental facilities for AI-accelerated discovery, represents a flagship national science initiative with implications for how federal research infrastructure is organized around AI.",
+      "impact_category": "Policy Impact",
+      "title": "NAE Annual Meeting Spotlights DOE\u2019s New Genesis Project and Other AI Initiatives Aimed at Advancing Discovery",
+      "url": "https://www.nationalacademies.org/news/nae-annual-meeting-spotlights-doe-s-new-genesis-project-and-other-ai-initiatives-aimed-at-advancing-discovery",
+      "university": "National Academies",
+      "published_date": "2026-10-15"
+    },
+    {
+      "rank": 3,
       "article_id": 71707,
-      "editorial_note": "Georgia Tech's $20M NSF-funded Nexus supercomputer, built with UIUC and opened to researchers nationwide, meaningfully expands the national AI research computing base beyond elite labs.",
+      "editorial_note": "Georgia Tech's $20M NSF-funded Nexus supercomputer, opened to researchers nationwide in partnership with UIUC, substantially expands shared AI compute access for the broader academic research community.",
       "impact_category": "Major Funding",
       "title": "Georgia Tech Opens Supercomputer to Researchers Nationwide",
       "url": "https://news.gatech.edu/features/2026/10/georgia-tech-opens-supercomputer-researchers-nationwide",
@@ -22,19 +32,9 @@
       "published_date": "2026-10-09"
     },
     {
-      "rank": 3,
-      "article_id": 72042,
-      "editorial_note": "Up to $250 billion in planned investment\u2014including a SpaceX spaceport and Meta's $50B+ data center buildout\u2014tied to university and industry collaboration marks a massive, real-world bet on AI-driven infrastructure.",
-      "impact_category": "Major Funding",
-      "title": "Large tech firms, small startups and universities are fueling Louisiana\u2019s bid to become the energy hub of tomorrow",
-      "url": "https://news.tulane.edu/news/large-tech-firms-small-startups-and-universities-are-fueling-louisianas-bid-become-energy-hub",
-      "university": "Tulane University of Louisiana",
-      "published_date": "2026-10-12"
-    },
-    {
       "rank": 4,
       "article_id": 72184,
-      "editorial_note": "A $19.2 million, five-year Army Research Office award to a UCF-led team to advance light-based sensing and imaging science shows deep, sustained defense investment in AI-adjacent fundamental research.",
+      "editorial_note": "A $19.2 million, five-year Army Research Office award to a UCF-led team to study light propagation via AI-driven computational imaging is a major defense-research investment with broad sensing and imaging applications.",
       "impact_category": "Major Funding",
       "title": "UCF-Led Team Receives $19.2 Million Army Research Office Award to Advance the Science of Light",
       "url": "https://www.ucf.edu/news/ucf-led-team-receives-19-2-million-army-research-office-award-to-advance-the-science-of-light/",
@@ -44,7 +44,7 @@
     {
       "rank": 5,
       "article_id": 72235,
-      "editorial_note": "ASU's Intel-backed AI Research Acceleration Platform democratizes supercomputing access for its entire student and researcher population, a notable model for broadening who can do AI-scale research.",
+      "editorial_note": "ASU's Intel-backed AI Research Acceleration Platform democratizes supercomputing access for all students and researchers, an important model for broadening participation in AI-enabled research.",
       "impact_category": "Strategic Partnership",
       "title": "ASU provides access to AI-supercomputing for all",
       "url": "https://news.asu.edu/20261013-science-and-technology-asu-provides-access-aisupercomputing-all",
@@ -53,8 +53,28 @@
     },
     {
       "rank": 6,
+      "article_id": 71127,
+      "editorial_note": "Google.org's $5 million commitment to Georgia Tech for AI-for-science infrastructure reflects deepening industry investment in academic scientific discovery tools.",
+      "impact_category": "Strategic Partnership",
+      "title": "Georgia Tech Receives $5 Million From Google.org to Expand Access to AI for Scientific Discovery",
+      "url": "https://news.gatech.edu/news/2026/10/09/georgia-tech-receives-5-million-googleorg-expand-access-ai-scientific-discovery",
+      "university": "Georgia Institute of Technology-Main Campus",
+      "published_date": "2026-10-09"
+    },
+    {
+      "rank": 7,
+      "article_id": 72865,
+      "editorial_note": "UIUC's ESMDynamic model dramatically speeds up prediction of protein motion compared to traditional molecular dynamics simulations, a genuine scientific advance with major implications for structural biology and drug discovery.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "AI model offers a faster way to explore how proteins move, study finds",
+      "url": "https://news.illinois.edu/ai-model-offers-a-faster-way-to-explore-how-proteins-move-study-finds/",
+      "university": "University of Illinois Urbana-Champaign",
+      "published_date": "2026-10-14"
+    },
+    {
+      "rank": 8,
       "article_id": 72731,
-      "editorial_note": "AURORA, a robot-controlled AI cloud lab funded by a $20M NSF project, represents a genuine methodological advance in accelerating materials discovery through autonomous experimentation.",
+      "editorial_note": "University of Arkansas's AURORA robotic, AI-enhanced cloud laboratory for discovering quantum materials showcases a novel 'self-driving lab' approach that could accelerate materials science broadly.",
       "impact_category": "Scientific Breakthrough",
       "title": "Robots and AI Could Speed Search for Quantum Materials",
       "url": "https://news.uark.edu/articles/83006/robots-and-ai-could-speed-search-for-quantum-materials",
@@ -62,19 +82,9 @@
       "published_date": "2026-10-13"
     },
     {
-      "rank": 7,
-      "article_id": 71127,
-      "editorial_note": "Google.org's $5 million, three-year commitment to Georgia Tech for AI-for-science tools and compute access reflects growing industry philanthropy aimed at broadening scientific AI infrastructure.",
-      "impact_category": "Major Funding",
-      "title": "Georgia Tech Receives $5 Million From Google.org to Expand Access to AI for Scientific Discovery",
-      "url": "https://news.gatech.edu/news/2026/10/09/georgia-tech-receives-5-million-googleorg-expand-access-ai-scientific-discovery",
-      "university": "Georgia Institute of Technology-Main Campus",
-      "published_date": "2026-10-09"
-    },
-    {
-      "rank": 8,
+      "rank": 9,
       "article_id": 72032,
-      "editorial_note": "NJIT spinout OppyAI's 'Neural Crypto' hybrid-AI privacy technology moving to global commercialization is a concrete example of university research translating into market-ready AI products.",
+      "editorial_note": "NJIT spinout OppyAI's 'Neural Crypto' hybrid AI, which lets organizations use cloud-scale AI while keeping data private, tackles a real commercial pain point and shows academic research translating into a globally viable product.",
       "impact_category": "Strategic Partnership",
       "title": "NJIT Spinout OppyAI Takes Private Hybrid AI to the Global Stage",
       "url": "https://news.njit.edu/njit-spinout-oppyai-takes-private-hybrid-ai-global-stage",
@@ -82,19 +92,9 @@
       "published_date": "2026-10-12"
     },
     {
-      "rank": 9,
-      "article_id": 72495,
-      "editorial_note": "The UK AI minister's announcement of new government measures to guard against AI risks, delivered at Imperial College London, signals concrete regulatory momentum rather than just rhetoric on AI safety.",
-      "impact_category": "Policy Impact",
-      "title": "AI minister announces measures to protect against AI risks in speech at Imperial",
-      "url": "https://www.imperial.ac.uk/news/articles/2026/ai-minister-announces-measures-to-protect-against-ai-risks-in-speech-at-imperial/",
-      "university": "Imperial College London",
-      "published_date": "2026-10-12"
-    },
-    {
       "rank": 10,
       "article_id": 72153,
-      "editorial_note": "Georgia Tech's work probing LLM internals for warning signs of unsafe or misaligned behavior, motivated by a real 2026 incident, addresses one of the most consequential open problems in AI safety research.",
+      "editorial_note": "Georgia Tech researchers' work detecting internal warning signs of unsafe LLM behavior, motivated by a real 2026 incident, addresses a pressing AI-safety research gap with direct policy relevance.",
       "impact_category": "Scientific Breakthrough",
       "title": "Can We Detect Harmful AI Before It\u2019s Too Late? Researchers Search for Warning Signs",
       "url": "https://news.gatech.edu/news/2026/10/13/can-we-detect-harmful-ai-its-too-late-researchers-search-warning-signs",
