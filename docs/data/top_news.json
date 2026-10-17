@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-17T03:19:40",
+  "generated_at": "2026-10-17T09:09:44",
   "picks": [
     {
       "rank": 1,
       "article_id": 73450,
-      "editorial_note": "CERN's strategic partnership with Mistral to build a foundation model trained on billions of simulated particle collisions is a landmark fusion of frontier AI and fundamental physics, with potential to reshape how discovery-scale science is done.",
+      "editorial_note": "A major AI lab partnering directly with CERN to build a foundation model trained on billions of particle-collision simulations signals a new tier of industry-science collaboration that could reshape how fundamental physics is done.",
       "impact_category": "Strategic Partnership",
       "title": "CERN and Mistral join forces to accelerate AI for science \u2013 Home",
       "url": "https://home.cern/cern-and-mistral-join-forces-to-accelerate-ai-for-science/",
@@ -14,8 +14,8 @@
     {
       "rank": 2,
       "article_id": 72918,
-      "editorial_note": "DOE's Genesis Mission, unveiled at the National Academy of Engineering meeting, links national supercomputers, datasets, and experimental facilities into a coordinated AI-for-science infrastructure, a major federal bet on accelerating discovery.",
-      "impact_category": "Major Funding",
+      "editorial_note": "DOE's Genesis Mission connects national supercomputers, datasets, and experimental facilities into a unified AI-for-discovery infrastructure \u2014 a flagship federal push that could accelerate research timelines across every national lab and partner university.",
+      "impact_category": "Policy Impact",
       "title": "NAE Annual Meeting Spotlights DOE\u2019s New Genesis Project and Other AI Initiatives Aimed at Advancing Discovery",
       "url": "https://www.nationalacademies.org/news/nae-annual-meeting-spotlights-doe-s-new-genesis-project-and-other-ai-initiatives-aimed-at-advancing-discovery",
       "university": "National Academies",
@@ -24,7 +24,7 @@
     {
       "rank": 3,
       "article_id": 73424,
-      "editorial_note": "A White House-announced, 14-plus-university Southeast Regional Computing Consortium signals a coordinated regional push to build shared advanced-computing infrastructure for AI research, with Vanderbilt among the founding members.",
+      "editorial_note": "A White House-announced consortium of 14+ universities pooling advanced computing resources marks a significant regional response to the national AI compute race, with implications for how mid-tier research institutions access capacity typically reserved for elite labs.",
       "impact_category": "Strategic Partnership",
       "title": "Vanderbilt among founding members of Southeast Regional SI Computing Consortium",
       "url": "https://news.vanderbilt.edu/2026/10/15/vanderbilt-among-founding-members-of-southeast-regional-si-computing-consortium/",
@@ -33,48 +33,28 @@
     },
     {
       "rank": 4,
+      "article_id": 73519,
+      "editorial_note": "A $28.6 million federally funded multi-institution effort applying machine learning to protein misfolding could meaningfully advance understanding of neurodegenerative disease, one of medicine's most intractable problem areas.",
+      "impact_category": "Major Funding",
+      "title": "Brown scholar to play key role in federally funded project to prevent neurodegenerative disease",
+      "url": "https://www.brown.edu/news/2026-10-15/protein-dysfunction-neurodegeneration",
+      "university": "Brown University",
+      "published_date": "2026-10-15"
+    },
+    {
+      "rank": 5,
       "article_id": 72731,
-      "editorial_note": "A $20M NSF-backed robot-controlled AI cloud lab (AURORA) at Arkansas could dramatically speed the discovery of new quantum materials by automating experimentation at scale.",
-      "impact_category": "Scientific Breakthrough",
+      "editorial_note": "A $20 million NSF-backed robotic cloud laboratory that pairs AI with automated experimentation could dramatically speed the discovery of new quantum materials, a bottleneck field for next-generation computing and electronics.",
+      "impact_category": "Major Funding",
       "title": "Robots and AI Could Speed Search for Quantum Materials",
       "url": "https://news.uark.edu/articles/83006/robots-and-ai-could-speed-search-for-quantum-materials",
       "university": "University of Arkansas",
       "published_date": "2026-10-13"
     },
     {
-      "rank": 5,
-      "article_id": 73388,
-      "editorial_note": "ACL's Test of Time Award to Rico Sennrich for subword tokenization (BPE) recognizes a decade-old technique that quietly became foundational infrastructure underpinning how virtually all modern large language models process text.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "A Smart Computer",
-      "url": "https://www.news.uzh.ch/en/articles/news/2026/rico-sennrich.html",
-      "university": "University of Zurich",
-      "published_date": "2026-10-13"
-    },
-    {
       "rank": 6,
-      "article_id": 72865,
-      "editorial_note": "UIUC's ESMDynamic model predicts protein motion dramatically faster than traditional molecular dynamics simulations, opening the door to studying biomolecular behavior at scales previously computationally out of reach.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "AI model offers a faster way to explore how proteins move, study finds",
-      "url": "https://news.illinois.edu/ai-model-offers-a-faster-way-to-explore-how-proteins-move-study-finds/",
-      "university": "University of Illinois Urbana-Champaign",
-      "published_date": "2026-10-14"
-    },
-    {
-      "rank": 7,
-      "article_id": 72153,
-      "editorial_note": "Georgia Tech's work probing internal LLM activity for early warning signs of unsafe or misaligned behavior directly addresses a core AI-safety concern raised by real incidents, making it relevant to emerging AI oversight policy.",
-      "impact_category": "Policy Impact",
-      "title": "Can We Detect Harmful AI Before It\u2019s Too Late? Researchers Search for Warning Signs",
-      "url": "https://news.gatech.edu/news/2026/10/13/can-we-detect-harmful-ai-its-too-late-researchers-search-warning-signs",
-      "university": "Georgia Institute of Technology-Main Campus",
-      "published_date": "2026-10-13"
-    },
-    {
-      "rank": 8,
       "article_id": 72184,
-      "editorial_note": "A $19.2 million, five-year Army Research Office award to a UCF-led team to study light propagation through complex environments represents a substantial federal investment in optical sensing and computational imaging research.",
+      "editorial_note": "A $19.2 million, five-year Army Research Office award for AI-driven optical sensing and imaging reflects deepening defense-sector investment in computational photonics with both military and civilian applications.",
       "impact_category": "Major Funding",
       "title": "UCF-Led Team Receives $19.2 Million Army Research Office Award to Advance the Science of Light",
       "url": "https://www.ucf.edu/news/ucf-led-team-receives-19-2-million-army-research-office-award-to-advance-the-science-of-light/",
@@ -82,24 +62,44 @@
       "published_date": "2026-10-13"
     },
     {
+      "rank": 7,
+      "article_id": 72235,
+      "editorial_note": "ASU's Intel-backed move to open advanced AI supercomputing to its entire student and researcher population is a notable experiment in democratizing compute access that other universities will likely watch closely.",
+      "impact_category": "Strategic Partnership",
+      "title": "ASU provides access to AI-supercomputing for all",
+      "url": "https://news.asu.edu/20261013-science-and-technology-asu-provides-access-aisupercomputing-all",
+      "university": "Arizona State University Campus Immersion",
+      "published_date": "2026-10-13"
+    },
+    {
+      "rank": 8,
+      "article_id": 73388,
+      "editorial_note": "Rico Sennrich's ACL Test of Time Award for inventing subword tokenization (BPE) recognizes a foundational technique now embedded in virtually every modern large language model \u2014 a rare case of a decade-old academic paper proving to be genuinely field-defining.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "A Smart Computer",
+      "url": "https://www.news.uzh.ch/en/articles/news/2026/rico-sennrich.html",
+      "university": "University of Zurich",
+      "published_date": "2026-10-13"
+    },
+    {
       "rank": 9,
+      "article_id": 72153,
+      "editorial_note": "Georgia Tech's work probing internal model activity for warning signs of unsafe behavior, prompted by a real 2026 incident, addresses one of the most pressing open problems in AI safety ahead of further frontier model deployment.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Can We Detect Harmful AI Before It\u2019s Too Late? Researchers Search for Warning Signs",
+      "url": "https://news.gatech.edu/news/2026/10/13/can-we-detect-harmful-ai-its-too-late-researchers-search-warning-signs",
+      "university": "Georgia Institute of Technology-Main Campus",
+      "published_date": "2026-10-13"
+    },
+    {
+      "rank": 10,
       "article_id": 72880,
-      "editorial_note": "A $1.6 million Google.org grant lets UCT build an AI platform mapping genetic variants affecting drug metabolism in African patients, a concrete step toward more equitable, population-specific precision medicine.",
+      "editorial_note": "Google.org funding for an AI platform mapping genetic variants affecting drug metabolism in African patients tackles a long-standing gap in pharmacogenomic research for underrepresented populations, with direct potential to improve treatment outcomes.",
       "impact_category": "Major Funding",
       "title": "Google grant boosts UCT's AI-driven scientific breakthroughs",
       "url": "https://www.news.uct.ac.za/article/-2026-10-15-uct-receives-funding-from-google-to-accelerate-scientific-breakthroughs-using-ai",
       "university": "University of Cape Town",
       "published_date": "2026-10-15"
-    },
-    {
-      "rank": 10,
-      "article_id": 72032,
-      "editorial_note": "NJIT spinout OppyAI is commercializing 'Neural Crypto,' a hybrid AI approach letting organizations use cloud-scale AI while keeping prompts and data private, a novel answer to enterprise AI privacy concerns.",
-      "impact_category": "Strategic Partnership",
-      "title": "NJIT Spinout OppyAI Takes Private Hybrid AI to the Global Stage",
-      "url": "https://news.njit.edu/njit-spinout-oppyai-takes-private-hybrid-ai-global-stage",
-      "university": "New Jersey Institute of Technology",
-      "published_date": "2026-10-12"
     }
   ]
 }
