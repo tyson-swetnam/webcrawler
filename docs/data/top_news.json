@@ -1,20 +1,10 @@
 {
-  "generated_at": "2026-10-18T09:09:33",
+  "generated_at": "2026-10-18T15:22:15",
   "picks": [
     {
       "rank": 1,
-      "article_id": 73827,
-      "editorial_note": "OpenAI's claim of an AI-generated analytic proof addressing part of the Navier-Stokes Millennium Prize Problem, produced by roughly 10,000 autonomous agents, would be one of the most significant AI-for-math results to date if it holds up to peer scrutiny.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Solu\u00e7\u00e3o de problema matem\u00e1tico: como a IA est\u00e1 impactando a ci\u00eancia? - Jornal da Unicamp",
-      "url": "https://jornal.unicamp.br/audio/2026/10/16/solucao-de-problema-matematico-como-a-ia-esta-impactando-a-ciencia/",
-      "university": "UNICAMP",
-      "published_date": "2026-10-16"
-    },
-    {
-      "rank": 2,
       "article_id": 73450,
-      "editorial_note": "CERN's strategic partnership with Mistral to build a foundation model trained on billions of simulated particle collisions signals a major convergence of frontier AI labs and big science, with potential to accelerate discovery across high-energy physics.",
+      "editorial_note": "A major physics institution partnering directly with a frontier AI lab to build a domain-specific foundation model trained on billions of simulated collisions signals a new model for how AI companies and 'big science' infrastructure collaborate.",
       "impact_category": "Strategic Partnership",
       "title": "CERN and Mistral join forces to accelerate AI for science \u2013 Home",
       "url": "https://home.cern/cern-and-mistral-join-forces-to-accelerate-ai-for-science/",
@@ -22,20 +12,30 @@
       "published_date": "2026-10-15"
     },
     {
-      "rank": 3,
+      "rank": 2,
       "article_id": 72918,
-      "editorial_note": "DOE's Genesis Mission, unveiled at the NAE annual meeting, aims to link national supercomputers, datasets, and experimental facilities into a unified AI-for-science infrastructure \u2014 a flagship federal bet on accelerating discovery.",
-      "impact_category": "Major Funding",
+      "editorial_note": "DOE's Genesis Mission is a national-scale effort to network supercomputers, datasets, and experimental facilities for AI-accelerated discovery \u2014 a policy and infrastructure commitment with implications well beyond any single lab.",
+      "impact_category": "Policy Impact",
       "title": "NAE Annual Meeting Spotlights DOE\u2019s New Genesis Project and Other AI Initiatives Aimed at Advancing Discovery",
       "url": "https://www.nationalacademies.org/news/nae-annual-meeting-spotlights-doe-s-new-genesis-project-and-other-ai-initiatives-aimed-at-advancing-discovery",
       "university": "National Academies",
       "published_date": "2026-10-15"
     },
     {
+      "rank": 3,
+      "article_id": 74092,
+      "editorial_note": "An AI system producing a formally verified analytic proof touching a Millennium Prize Problem, using a swarm of autonomous agents, is a landmark demonstration of AI contributing to open mathematical research.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Solu\u00e7\u00e3o de problema matem\u00e1tico: como a IA est\u00e1 impactando a ci\u00eancia? - Jornal da Unicamp",
+      "url": "https://jornal.unicamp.br/audio/2026/10/16/solucao-de-problema-matematico-como-a-ia-esta-impactando-a-ciencia/",
+      "university": "UNICAMP",
+      "published_date": "2026-10-16"
+    },
+    {
       "rank": 4,
       "article_id": 73424,
-      "editorial_note": "A White House-announced consortium of 14+ Southeastern universities to build shared AI supercomputing infrastructure marks a notable federal push to expand regional AI research capacity beyond traditional tech hubs.",
-      "impact_category": "Policy Impact",
+      "editorial_note": "A White House-announced, 14+ university computing consortium represents a significant regional coordination of shared AI infrastructure, reshaping how mid-tier research universities access advanced compute.",
+      "impact_category": "Strategic Partnership",
       "title": "Vanderbilt among founding members of Southeast Regional SI Computing Consortium",
       "url": "https://news.vanderbilt.edu/2026/10/15/vanderbilt-among-founding-members-of-southeast-regional-si-computing-consortium/",
       "university": "Vanderbilt University",
@@ -43,18 +43,8 @@
     },
     {
       "rank": 5,
-      "article_id": 73519,
-      "editorial_note": "A $28.6 million multi-institution federal award anchored at Brown will develop machine learning tools to study protein misfolding in neurodegenerative disease, a substantial bet on AI-driven biomedical research.",
-      "impact_category": "Major Funding",
-      "title": "Brown scholar to play key role in federally funded project to prevent neurodegenerative disease",
-      "url": "https://www.brown.edu/news/2026-10-15/protein-dysfunction-neurodegeneration",
-      "university": "Brown University",
-      "published_date": "2026-10-15"
-    },
-    {
-      "rank": 6,
       "article_id": 72731,
-      "editorial_note": "Arkansas's AURORA project \u2014 a robot-controlled, AI-enhanced 'self-driving lab' backed by $20 million in NSF funding \u2014 represents a concrete, novel application of AI to speed up physical materials discovery.",
+      "editorial_note": "A $20M NSF-backed robotic, AI-driven cloud laboratory for discovering quantum materials shows how automation and AI are compressing experimental science timelines.",
       "impact_category": "Scientific Breakthrough",
       "title": "Robots and AI Could Speed Search for Quantum Materials",
       "url": "https://news.uark.edu/articles/83006/robots-and-ai-could-speed-search-for-quantum-materials",
@@ -62,9 +52,19 @@
       "published_date": "2026-10-13"
     },
     {
+      "rank": 6,
+      "article_id": 73519,
+      "editorial_note": "A $28.6 million federally funded multi-institution effort to apply machine learning to neurodegenerative disease mechanisms represents a substantial bet on AI-driven biomedical research.",
+      "impact_category": "Major Funding",
+      "title": "Brown scholar to play key role in federally funded project to prevent neurodegenerative disease",
+      "url": "https://www.brown.edu/news/2026-10-15/protein-dysfunction-neurodegeneration",
+      "university": "Brown University",
+      "published_date": "2026-10-15"
+    },
+    {
       "rank": 7,
       "article_id": 72184,
-      "editorial_note": "A $19.2 million, five-year Army Research Office award to a UCF-led team to advance optical sensing and computational imaging shows sustained defense investment in AI-enabled physical science.",
+      "editorial_note": "A $19.2 million, five-year Army Research Office award for AI-enhanced optical sensing and imaging is a notable defense-research investment with broad scientific-imaging applications.",
       "impact_category": "Major Funding",
       "title": "UCF-Led Team Receives $19.2 Million Army Research Office Award to Advance the Science of Light",
       "url": "https://www.ucf.edu/news/ucf-led-team-receives-19-2-million-army-research-office-award-to-advance-the-science-of-light/",
@@ -73,28 +73,28 @@
     },
     {
       "rank": 8,
-      "article_id": 72235,
-      "editorial_note": "ASU's new AI Research Acceleration Platform, enabled by an Intel donation, broadens access to advanced AI supercomputing for all students and researchers, a meaningful step toward democratizing AI research infrastructure.",
-      "impact_category": "Strategic Partnership",
-      "title": "ASU provides access to AI-supercomputing for all",
-      "url": "https://news.asu.edu/20261013-science-and-technology-asu-provides-access-aisupercomputing-all",
-      "university": "Arizona State University Campus Immersion",
-      "published_date": "2026-10-13"
+      "article_id": 72865,
+      "editorial_note": "A deep learning model that dramatically speeds up prediction of protein motion could meaningfully accelerate structural biology and drug discovery pipelines that currently depend on costly molecular dynamics simulations.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "AI model offers a faster way to explore how proteins move, study finds",
+      "url": "https://news.illinois.edu/ai-model-offers-a-faster-way-to-explore-how-proteins-move-study-finds/",
+      "university": "University of Illinois Urbana-Champaign",
+      "published_date": "2026-10-14"
     },
     {
       "rank": 9,
-      "article_id": 73504,
-      "editorial_note": "A $2.2 million Google.org grant to ANU for a two-tiered AI engine mapping chemotherapy resistance mechanisms illustrates how targeted AI-for-science funding is translating into concrete cancer research tools.",
+      "article_id": 74104,
+      "editorial_note": "A record $222.6 million in research funding, including the university's largest-ever research contract and a new neuroscience observatory, marks a major institutional inflection point for UVM's research capacity.",
       "impact_category": "Major Funding",
-      "title": "AI for science: Google.org funding to support ANU-led chemotherapy resistance cancer research",
-      "url": "https://www.anu.edu.au/news/all-news/ai-for-science-googleorg-funding-to-support-anu-led-chemotherapy-resistance-cancer-research",
-      "university": "Australian National University",
+      "title": "UVM Board of Trustees\u2019 Fall Meeting Highlights Research\u2026",
+      "url": "https://www.uvm.edu/uvmnews/news/uvm-board-trustees-fall-meeting-highlights-research-excellence-tuition-setting-and",
+      "university": "University of Vermont",
       "published_date": "2026-10-16"
     },
     {
       "rank": 10,
       "article_id": 72153,
-      "editorial_note": "Georgia Tech's research into detecting internal warning signs of unsafe or misaligned AI behavior, prompted by a real 2026 incident, addresses a pressing AI-safety gap with direct relevance to future AI policy and oversight.",
+      "editorial_note": "Research aimed at detecting internal warning signs of unsafe or misaligned model behavior addresses a growing AI-safety policy concern, directly motivated by a real-world incident with frontier models.",
       "impact_category": "Policy Impact",
       "title": "Can We Detect Harmful AI Before It\u2019s Too Late? Researchers Search for Warning Signs",
       "url": "https://news.gatech.edu/news/2026/10/13/can-we-detect-harmful-ai-its-too-late-researchers-search-warning-signs",
