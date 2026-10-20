@@ -1,20 +1,10 @@
 {
-  "generated_at": "2026-10-20T09:10:42",
+  "generated_at": "2026-10-20T15:32:46",
   "picks": [
     {
       "rank": 1,
-      "article_id": 73450,
-      "editorial_note": "A strategic partnership between CERN and Mistral to build a foundation model trained on billions of simulated particle collisions marks one of the most ambitious applications of AI to fundamental physics research to date.",
-      "impact_category": "Strategic Partnership",
-      "title": "CERN and Mistral join forces to accelerate AI for science \u2013 Home",
-      "url": "https://home.cern/cern-and-mistral-join-forces-to-accelerate-ai-for-science/",
-      "university": "CERN",
-      "published_date": "2026-10-15"
-    },
-    {
-      "rank": 2,
       "article_id": 72918,
-      "editorial_note": "DOE's Genesis Mission, discussed at the National Academy of Engineering's annual meeting, represents a national-scale effort to link supercomputers, datasets, and experimental facilities for AI-accelerated discovery \u2014 a significant policy and infrastructure commitment.",
+      "editorial_note": "DOE's Genesis Mission, unveiled at the National Academy of Engineering meeting, aims to link the department's supercomputers, scientific datasets, and experimental facilities into a unified national AI-for-discovery infrastructure \u2014 a rare federal-level bet on AI accelerating basic science.",
       "impact_category": "Policy Impact",
       "title": "NAE Annual Meeting Spotlights DOE\u2019s New Genesis Project and Other AI Initiatives Aimed at Advancing Discovery",
       "url": "https://www.nationalacademies.org/news/nae-annual-meeting-spotlights-doe-s-new-genesis-project-and-other-ai-initiatives-aimed-at-advancing-discovery",
@@ -22,10 +12,20 @@
       "published_date": "2026-10-15"
     },
     {
+      "rank": 2,
+      "article_id": 73450,
+      "editorial_note": "CERN's strategic alliance with Mistral to build a foundation model trained on billions of simulated particle collisions is a landmark fusion of frontier AI and fundamental physics, with potential to reshape how collider data is analyzed worldwide.",
+      "impact_category": "Strategic Partnership",
+      "title": "CERN and Mistral join forces to accelerate AI for science \u2013 Home",
+      "url": "https://home.cern/cern-and-mistral-join-forces-to-accelerate-ai-for-science/",
+      "university": "CERN",
+      "published_date": "2026-10-15"
+    },
+    {
       "rank": 3,
       "article_id": 73424,
-      "editorial_note": "A White House-announced consortium of 14+ universities building shared advanced computing infrastructure signals a coordinated federal push on AI/supercomputing capacity at regional scale.",
-      "impact_category": "Strategic Partnership",
+      "editorial_note": "A White House-announced consortium of 14+ universities, including Vanderbilt, to build shared advanced computing infrastructure signals growing federal coordination of academic AI compute capacity \u2014 a significant policy move with long-term research implications.",
+      "impact_category": "Policy Impact",
       "title": "Vanderbilt among founding members of Southeast Regional SI Computing Consortium",
       "url": "https://news.vanderbilt.edu/2026/10/15/vanderbilt-among-founding-members-of-southeast-regional-si-computing-consortium/",
       "university": "Vanderbilt University",
@@ -34,7 +34,7 @@
     {
       "rank": 4,
       "article_id": 74372,
-      "editorial_note": "A claimed AI-generated analytic proof and formalization addressing part of the Navier-Stokes singularity problem would be a landmark result, demonstrating AI systems contributing to open problems in mathematical physics.",
+      "editorial_note": "OpenAI's claimed analytic proof of a finite-time singularity for the Navier-Stokes equations, if validated, would be a historic AI-assisted contribution toward one of math's seven Millennium Prize Problems.",
       "impact_category": "Scientific Breakthrough",
       "title": "Solu\u00e7\u00e3o de problema matem\u00e1tico: como a IA est\u00e1 impactando a ci\u00eancia? - Jornal da Unicamp",
       "url": "https://jornal.unicamp.br/audio/2026/10/16/solucao-de-problema-matematico-como-a-ia-esta-impactando-a-ciencia/",
@@ -43,18 +43,8 @@
     },
     {
       "rank": 5,
-      "article_id": 72865,
-      "editorial_note": "UIUC's ESMDynamic model dramatically speeds up prediction of protein motion compared to traditional molecular dynamics simulations, a meaningful advance for structural biology and drug discovery pipelines.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "AI model offers a faster way to explore how proteins move, study finds",
-      "url": "https://news.illinois.edu/ai-model-offers-a-faster-way-to-explore-how-proteins-move-study-finds/",
-      "university": "University of Illinois Urbana-Champaign",
-      "published_date": "2026-10-14"
-    },
-    {
-      "rank": 6,
       "article_id": 73519,
-      "editorial_note": "A $28.6 million federally funded multi-institution project including Brown University applies machine learning to protein misfolding research, targeting neurodegenerative disease \u2014 a substantial investment with direct clinical relevance.",
+      "editorial_note": "A $28.6 million federally funded, multi-institution project centered at Brown to study protein misfolding in neurodegenerative disease, incorporating machine learning, represents a substantial public investment in AI-driven biomedical research.",
       "impact_category": "Major Funding",
       "title": "Brown scholar to play key role in federally funded project to prevent neurodegenerative disease",
       "url": "https://www.brown.edu/news/2026-10-15/protein-dysfunction-neurodegeneration",
@@ -62,29 +52,39 @@
       "published_date": "2026-10-15"
     },
     {
+      "rank": 6,
+      "article_id": 74584,
+      "editorial_note": "A nearly $24.5 million NIA renewal for UMass Amherst and Mass General Brigham's MassAITC sustains a major center applying AI to connected care for aging and Alzheimer's disease, underscoring continued federal commitment to health AI.",
+      "impact_category": "Major Funding",
+      "title": "UMass Amherst and Mass General Brigham Awarded Nearly $24.5M for 5-year Continuation of MassAITC | UMass Amherst",
+      "url": "https://www.umass.edu/news/article/umass-amherst-and-mass-general-brigham-awarded-nearly-245m-5-year-continuation",
+      "university": "University of Massachusetts-Amherst",
+      "published_date": "2026-10-20"
+    },
+    {
       "rank": 7,
-      "article_id": 73406,
-      "editorial_note": "HKUST's EmArm, an embodied robotic arm with human-like whole-arm tactile sensing, is a notable advance in physical AI and robotics with real-world manipulation applications.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "HKUST Develops Embodied Robotic Arm \u201cEmArm\u201d with Human-Like Touch Sensing",
-      "url": "https://hkust.edu.hk/news/hkust-develops-embodied-robotic-arm-emarm-human-touch-sensing",
-      "university": "Hong Kong Univ. of Science and Technology",
-      "published_date": "2026-10-16"
+      "article_id": 73214,
+      "editorial_note": "Purdue and Google Public Sector's summit on physical AI in manufacturing builds on a deepening multiyear industry-academia partnership spanning cloud infrastructure and workforce development, illustrating how AI is being pushed into industrial production.",
+      "impact_category": "Strategic Partnership",
+      "title": "Purdue-Google summit advances physical AI, manufacturing and workforce readiness",
+      "url": "https://www.purdue.edu/newsroom/2026/Q4/purdue-google-summit-advances-physical-ai-manufacturing-and-workforce-readiness/",
+      "university": "Purdue University-Main Campus",
+      "published_date": "2026-10-15"
     },
     {
       "rank": 8,
-      "article_id": 74337,
-      "editorial_note": "Berkeley Lab's machine learning tool for estimating radiation exposure from routine blood tests offers a practical, scalable alternative to specialized biodosimetry \u2014 valuable for both medical and emergency-response contexts.",
+      "article_id": 72865,
+      "editorial_note": "UIUC's ESMDynamic model, which predicts protein motion dramatically faster than traditional molecular dynamics simulations, could meaningfully accelerate structural biology and drug discovery research.",
       "impact_category": "Scientific Breakthrough",
-      "title": "A Simple Blood Test Could Reveal Hidden Radiation Exposure",
-      "url": "https://newscenter.lbl.gov/2026/10/19/a-simple-blood-test-could-reveal-hidden-radiation-exposure/",
-      "university": "Lawrence Berkeley National Laboratory",
-      "published_date": "2026-10-19"
+      "title": "AI model offers a faster way to explore how proteins move, study finds",
+      "url": "https://news.illinois.edu/ai-model-offers-a-faster-way-to-explore-how-proteins-move-study-finds/",
+      "university": "University of Illinois Urbana-Champaign",
+      "published_date": "2026-10-14"
     },
     {
       "rank": 9,
       "article_id": 72880,
-      "editorial_note": "A $1.6 million Google.org grant to the University of Cape Town for an AI platform mapping genetic variants in drug metabolism addresses a real health equity gap for African patient populations.",
+      "editorial_note": "Google.org's $1.6 million award to the University of Cape Town for AI-driven mapping of genetic variants affecting drug metabolism in African patients is a notable example of AI-for-science funding targeting underrepresented global health research.",
       "impact_category": "Major Funding",
       "title": "Google grant boosts UCT's AI-driven scientific breakthroughs",
       "url": "https://www.news.uct.ac.za/article/-2026-10-15-uct-receives-funding-from-google-to-accelerate-scientific-breakthroughs-using-ai",
@@ -93,13 +93,13 @@
     },
     {
       "rank": 10,
-      "article_id": 73214,
-      "editorial_note": "The Purdue-Google summit builds on a multiyear partnership spanning cloud infrastructure and research to advance physical AI in manufacturing, reflecting growing industry-academia alignment on workforce-ready AI deployment.",
-      "impact_category": "Strategic Partnership",
-      "title": "Purdue-Google summit advances physical AI, manufacturing and workforce readiness",
-      "url": "https://www.purdue.edu/newsroom/2026/Q4/purdue-google-summit-advances-physical-ai-manufacturing-and-workforce-readiness/",
-      "university": "Purdue University-Main Campus",
-      "published_date": "2026-10-15"
+      "article_id": 74705,
+      "editorial_note": "A joint MIT, CMU, NYU, and Stanford team built an AI system that beat top human players at Stratego, a landmark result in imperfect-information game AI with implications for strategic reasoning under uncertainty.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "This game-playing AI is the new champ at Stratego",
+      "url": "https://www.eecs.mit.edu/this-game-playing-ai-is-the-new-champ-at-stratego/",
+      "university": "MIT",
+      "published_date": "2026-10-19"
     }
   ]
 }
