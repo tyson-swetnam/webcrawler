@@ -1,40 +1,10 @@
 {
-  "generated_at": "2026-10-21T09:11:23",
+  "generated_at": "2026-10-21T21:09:44",
   "picks": [
     {
       "rank": 1,
-      "article_id": 72918,
-      "editorial_note": "DOE's Genesis Mission, unveiled at the National Academy of Engineering meeting, would link national supercomputers, datasets, and experimental facilities into a unified AI-for-science infrastructure \u2014 a flagship federal initiative with the scale to reshape research computing nationally.",
-      "impact_category": "Major Funding",
-      "title": "NAE Annual Meeting Spotlights DOE\u2019s New Genesis Project and Other AI Initiatives Aimed at Advancing Discovery",
-      "url": "https://www.nationalacademies.org/news/nae-annual-meeting-spotlights-doe-s-new-genesis-project-and-other-ai-initiatives-aimed-at-advancing-discovery",
-      "university": "National Academies",
-      "published_date": "2026-10-15"
-    },
-    {
-      "rank": 2,
-      "article_id": 73450,
-      "editorial_note": "CERN's strategic partnership with Mistral to build a foundation model trained on billions of simulated particle collisions marks a major convergence of frontier AI labs and big-science infrastructure, with potential to accelerate discovery across particle physics.",
-      "impact_category": "Strategic Partnership",
-      "title": "CERN and Mistral join forces to accelerate AI for science \u2013 Home",
-      "url": "https://home.cern/cern-and-mistral-join-forces-to-accelerate-ai-for-science/",
-      "university": "CERN",
-      "published_date": "2026-10-15"
-    },
-    {
-      "rank": 3,
-      "article_id": 73424,
-      "editorial_note": "A White House-announced consortium of 14+ universities led in part by Vanderbilt to build shared superintelligence computing infrastructure signals a coordinated regional response to the national AI compute race.",
-      "impact_category": "Strategic Partnership",
-      "title": "Vanderbilt among founding members of Southeast Regional SI Computing Consortium",
-      "url": "https://news.vanderbilt.edu/2026/10/15/vanderbilt-among-founding-members-of-southeast-regional-si-computing-consortium/",
-      "university": "Vanderbilt University",
-      "published_date": "2026-10-15"
-    },
-    {
-      "rank": 4,
       "article_id": 74767,
-      "editorial_note": "OpenAI's claim of an autonomous multi-agent system producing a proof addressing part of the Navier-Stokes Millennium Prize problem would be a landmark result for AI-assisted mathematics, if it holds up to scrutiny.",
+      "editorial_note": "An OpenAI system reportedly used ~10,000 autonomous AI agents over 88 hours to produce an analytic proof addressing part of the Navier-Stokes Millennium Prize Problem \u2014 if it holds up, a landmark demonstration of AI-driven mathematical discovery at a problem that has resisted humans for over a century.",
       "impact_category": "Scientific Breakthrough",
       "title": "Solu\u00e7\u00e3o de problema matem\u00e1tico: como a IA est\u00e1 impactando a ci\u00eancia? - Jornal da Unicamp",
       "url": "https://jornal.unicamp.br/audio/2026/10/16/solucao-de-problema-matematico-como-a-ia-esta-impactando-a-ciencia/",
@@ -42,19 +12,39 @@
       "published_date": "2026-10-16"
     },
     {
-      "rank": 5,
-      "article_id": 74104,
-      "editorial_note": "UVM's record $222.6 million in research funding, including its largest-ever single contract at $38 million, shows how AI-adjacent research is driving unprecedented institutional investment even outside the usual top-tier research powerhouses.",
+      "rank": 2,
+      "article_id": 72918,
+      "editorial_note": "DOE's Genesis Mission, unveiled at the National Academy of Engineering meeting, links the nation's supercomputers, datasets, and experimental facilities into a single AI-for-science infrastructure \u2014 a flagship federal bet on accelerating discovery that will shape research priorities and funding for years.",
       "impact_category": "Major Funding",
-      "title": "UVM Board of Trustees\u2019 Fall Meeting Highlights Research\u2026",
-      "url": "https://www.uvm.edu/uvmnews/news/uvm-board-trustees-fall-meeting-highlights-research-excellence-tuition-setting-and",
-      "university": "University of Vermont",
-      "published_date": "2026-10-16"
+      "title": "NAE Annual Meeting Spotlights DOE\u2019s New Genesis Project and Other AI Initiatives Aimed at Advancing Discovery",
+      "url": "https://www.nationalacademies.org/news/nae-annual-meeting-spotlights-doe-s-new-genesis-project-and-other-ai-initiatives-aimed-at-advancing-discovery",
+      "university": "National Academies",
+      "published_date": "2026-10-15"
     },
     {
-      "rank": 6,
+      "rank": 3,
+      "article_id": 73450,
+      "editorial_note": "CERN's strategic alliance with Mistral to build a foundation model trained on billions of simulated particle collisions marks one of the most ambitious science-specific AI models yet, pairing Europe's premier physics lab with a leading AI developer.",
+      "impact_category": "Strategic Partnership",
+      "title": "CERN and Mistral join forces to accelerate AI for science \u2013 Home",
+      "url": "https://home.cern/cern-and-mistral-join-forces-to-accelerate-ai-for-science/",
+      "university": "CERN",
+      "published_date": "2026-10-15"
+    },
+    {
+      "rank": 4,
+      "article_id": 73424,
+      "editorial_note": "Vanderbilt's role in the White House-announced Southeast Regional Superintelligence Computing Consortium, spanning 14+ universities, signals a coordinated regional push to build shared advanced-computing infrastructure with explicit federal backing.",
+      "impact_category": "Strategic Partnership",
+      "title": "Vanderbilt among founding members of Southeast Regional SI Computing Consortium",
+      "url": "https://news.vanderbilt.edu/2026/10/15/vanderbilt-among-founding-members-of-southeast-regional-si-computing-consortium/",
+      "university": "Vanderbilt University",
+      "published_date": "2026-10-15"
+    },
+    {
+      "rank": 5,
       "article_id": 73519,
-      "editorial_note": "A $28.6 million federally funded multi-institution project centered on machine-learning models of protein misfolding represents serious public investment in applying AI to neurodegenerative disease research.",
+      "editorial_note": "A $28.6 million federally funded, multi-institution project anchored partly at Brown will apply machine learning to protein misfolding research, representing a substantial new federal investment in AI-driven neurodegenerative disease science.",
       "impact_category": "Major Funding",
       "title": "Brown scholar to play key role in federally funded project to prevent neurodegenerative disease",
       "url": "https://www.brown.edu/news/2026-10-15/protein-dysfunction-neurodegeneration",
@@ -62,9 +52,9 @@
       "published_date": "2026-10-15"
     },
     {
-      "rank": 7,
+      "rank": 6,
       "article_id": 74584,
-      "editorial_note": "A renewed $24.5 million NIA grant sustaining UMass Amherst and Mass General Brigham's AI center for aging and Alzheimer's care reflects continued federal confidence in AI-driven connected-care research.",
+      "editorial_note": "A nearly $24.5 million NIA grant renewal lets UMass Amherst and Mass General Brigham continue a major AI and technology center focused on aging and Alzheimer's care, sustaining a significant federal commitment to applied health AI.",
       "impact_category": "Major Funding",
       "title": "UMass Amherst and Mass General Brigham Awarded Nearly $24.5M for 5-year Continuation of MassAITC | UMass Amherst",
       "url": "https://www.umass.edu/news/article/umass-amherst-and-mass-general-brigham-awarded-nearly-245m-5-year-continuation",
@@ -72,19 +62,19 @@
       "published_date": "2026-10-20"
     },
     {
-      "rank": 8,
-      "article_id": 73214,
-      "editorial_note": "Purdue and Google Public Sector's summit on physical AI in manufacturing extends a deepening multiyear partnership spanning cloud infrastructure and workforce development, with direct implications for industrial AI adoption.",
-      "impact_category": "Strategic Partnership",
-      "title": "Purdue-Google summit advances physical AI, manufacturing and workforce readiness",
-      "url": "https://www.purdue.edu/newsroom/2026/Q4/purdue-google-summit-advances-physical-ai-manufacturing-and-workforce-readiness/",
-      "university": "Purdue University-Main Campus",
-      "published_date": "2026-10-15"
+      "rank": 7,
+      "article_id": 74104,
+      "editorial_note": "UVM reported record research funding of $222.6 million, including the largest single research award in its history, underscoring the scale of institutional investment flowing into AI-adjacent science infrastructure.",
+      "impact_category": "Major Funding",
+      "title": "UVM Board of Trustees\u2019 Fall Meeting Highlights Research\u2026",
+      "url": "https://www.uvm.edu/uvmnews/news/uvm-board-trustees-fall-meeting-highlights-research-excellence-tuition-setting-and",
+      "university": "University of Vermont",
+      "published_date": "2026-10-16"
     },
     {
-      "rank": 9,
+      "rank": 8,
       "article_id": 74659,
-      "editorial_note": "A Harvard Kennedy School 'pre-mortem' report warning that catastrophic AI risks remain preventable but urgent \u2014 citing rogue-agent breaches and paused model training \u2014 adds a prominent voice to the policy debate over AI safety governance.",
+      "editorial_note": "A Harvard Kennedy School Belfer Center report warns that catastrophic AI risks remain preventable but urgent, citing concrete incidents like rogue-agent breaches and a major lab's training pause \u2014 a notable contribution to the policy debate on AI safety governance.",
       "impact_category": "Policy Impact",
       "title": "Is it already too late to reduce catastrophic AI risk? \u2014 Harvard Gazette",
       "url": "https://news.harvard.edu/gazette/story/2026/10/is-it-already-too-late-to-reduce-catastrophic-ai-risk/",
@@ -92,9 +82,19 @@
       "published_date": "2026-10-19"
     },
     {
+      "rank": 9,
+      "article_id": 73214,
+      "editorial_note": "Purdue and Google Public Sector's summit on physical AI in manufacturing builds on a multiyear partnership spanning cloud infrastructure and research, illustrating how major tech firms are embedding themselves in university-led industrial AI strategy.",
+      "impact_category": "Strategic Partnership",
+      "title": "Purdue-Google summit advances physical AI, manufacturing and workforce readiness",
+      "url": "https://www.purdue.edu/newsroom/2026/Q4/purdue-google-summit-advances-physical-ai-manufacturing-and-workforce-readiness/",
+      "university": "Purdue University-Main Campus",
+      "published_date": "2026-10-15"
+    },
+    {
       "rank": 10,
       "article_id": 72880,
-      "editorial_note": "A $1.6 million Google.org grant enabling UCT to map genetic variants affecting drug metabolism in African patients is a notable example of AI-for-science funding targeting health equity and underrepresented populations in genomics research.",
+      "editorial_note": "A $1.6 million Google.org grant lets the University of Cape Town build an AI platform mapping genetic variants affecting drug metabolism in African patients, a concrete example of AI-for-science funding targeting underrepresented populations in precision medicine.",
       "impact_category": "Major Funding",
       "title": "Google grant boosts UCT's AI-driven scientific breakthroughs",
       "url": "https://www.news.uct.ac.za/article/-2026-10-15-uct-receives-funding-from-google-to-accelerate-scientific-breakthroughs-using-ai",
