@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-23T09:11:03",
+  "generated_at": "2026-10-23T21:09:28",
   "picks": [
     {
       "rank": 1,
       "article_id": 74584,
-      "editorial_note": "A nearly $24.5M NIA grant renewing UMass Amherst and Mass General Brigham's MassAITC for five more years is a major vote of confidence in AI-driven aging and Alzheimer's care research, backed by serious federal funding and a strong academic-clinical partnership.",
+      "editorial_note": "A nearly $24.5M NIA grant renewal for MassAITC is one of the largest funding commitments in this batch, backing a multi-year academic-hospital partnership to apply AI to aging and Alzheimer's care at scale.",
       "impact_category": "Major Funding",
       "title": "UMass Amherst and Mass General Brigham Awarded Nearly $24.5M for 5-year Continuation of MassAITC | UMass Amherst",
       "url": "https://www.umass.edu/news/article/umass-amherst-and-mass-general-brigham-awarded-nearly-245m-5-year-continuation",
@@ -13,18 +13,8 @@
     },
     {
       "rank": 2,
-      "article_id": 74659,
-      "editorial_note": "Harvard's Belfer Center 'pre-mortem' on catastrophic AI risk, citing rogue-agent breaches and a major lab's training pause, is a timely policy intervention that could shape how governments and labs approach AI safety governance.",
-      "impact_category": "Policy Impact",
-      "title": "Is it already too late to reduce catastrophic AI risk? \u2014 Harvard Gazette",
-      "url": "https://news.harvard.edu/gazette/story/2026/10/is-it-already-too-late-to-reduce-catastrophic-ai-risk/",
-      "university": "Harvard University",
-      "published_date": "2026-10-19"
-    },
-    {
-      "rank": 3,
       "article_id": 74705,
-      "editorial_note": "A joint MIT/CMU/NYU/Stanford team built an AI that beat top human players at Stratego, a landmark for imperfect-information game AI with algorithmic implications beyond games, into negotiation and strategic decision-making.",
+      "editorial_note": "A cross-institution team (MIT, CMU, NYU, Stanford) built an AI that beat top human players at Stratego, a landmark for imperfect-information game AI with techniques that generalize to real-world strategic decision-making.",
       "impact_category": "Scientific Breakthrough",
       "title": "This game-playing AI is the new champ at Stratego",
       "url": "https://www.eecs.mit.edu/this-game-playing-ai-is-the-new-champ-at-stratego/",
@@ -32,9 +22,19 @@
       "published_date": "2026-10-19"
     },
     {
+      "rank": 3,
+      "article_id": 74659,
+      "editorial_note": "Harvard's Belfer Center 'pre-mortem' report on catastrophic AI risk, citing real incidents like rogue-agent breaches and OpenAI's training pause, is a timely policy intervention in the AI safety debate.",
+      "impact_category": "Policy Impact",
+      "title": "Is it already too late to reduce catastrophic AI risk? \u2014 Harvard Gazette",
+      "url": "https://news.harvard.edu/gazette/story/2026/10/is-it-already-too-late-to-reduce-catastrophic-ai-risk/",
+      "university": "Harvard University",
+      "published_date": "2026-10-19"
+    },
+    {
       "rank": 4,
       "article_id": 74727,
-      "editorial_note": "An AI-enabled biochip from the American University in Cairo that cheaply screens for cancer and other diseases from biological fluids could meaningfully expand access to early diagnostics in low-resource settings.",
+      "editorial_note": "An AI-enabled biochip offering rapid, low-cost screening for leukemia and liver disease could meaningfully expand diagnostic access in resource-limited settings.",
       "impact_category": "Scientific Breakthrough",
       "title": "AI-enabled biochip for rapid cancer, disease detection | The American University in Cairo",
       "url": "https://www.aucegypt.edu/news/ai-enabled-biochip-rapid-cancer-disease-detection",
@@ -43,28 +43,8 @@
     },
     {
       "rank": 5,
-      "article_id": 74337,
-      "editorial_note": "Berkeley Lab's machine-learning tool for estimating radiation exposure from a routine blood test offers a fast, accessible alternative to specialized testing, with clear real-world value for nuclear incident response and medical triage.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "A Simple Blood Test Could Reveal Hidden Radiation Exposure",
-      "url": "https://newscenter.lbl.gov/2026/10/19/a-simple-blood-test-could-reveal-hidden-radiation-exposure/",
-      "university": "Lawrence Berkeley National Laboratory",
-      "published_date": "2026-10-19"
-    },
-    {
-      "rank": 6,
-      "article_id": 74843,
-      "editorial_note": "Inria's Samu-Voice project, which analyzes emergency call voice patterns to detect heart attacks in real time, points toward a practical, life-saving AI application in emergency medicine.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Samu-Voice: Analyzing voice and speech to detect acute transmural myocardial infarctions",
-      "url": "https://www.inria.fr/en/samu-voice-analyse-voice-speech-detect-myocardial-infarction",
-      "university": "INRIA",
-      "published_date": "2026-10-20"
-    },
-    {
-      "rank": 7,
       "article_id": 74689,
-      "editorial_note": "MIT CSAIL's 'InstructMesh,' developed with Google and Northeastern, lets users fix AI-generated 3D models before fabrication, addressing a key reliability gap in generative design workflows.",
+      "editorial_note": "MIT CSAIL's 'InstructMesh,' developed with Google and Northeastern, solves a practical gap in generative 3D modeling by letting users repair AI-generated meshes before fabrication.",
       "impact_category": "Scientific Breakthrough",
       "title": "New tool lets users repair AI-generated 3D models, then fabricate them just the way they want",
       "url": "https://www.eecs.mit.edu/new-tool-lets-users-repair-ai-generated-3d-models-then-fabricate-them-just-the-way-they-want/",
@@ -72,9 +52,19 @@
       "published_date": "2026-10-19"
     },
     {
-      "rank": 8,
+      "rank": 6,
+      "article_id": 74337,
+      "editorial_note": "Berkeley Lab's machine learning tool to estimate radiation exposure from routine blood tests offers a faster, more accessible alternative to specialized biodosimetry, with clear public-health emergency-response applications.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "A Simple Blood Test Could Reveal Hidden Radiation Exposure",
+      "url": "https://newscenter.lbl.gov/2026/10/19/a-simple-blood-test-could-reveal-hidden-radiation-exposure/",
+      "university": "Lawrence Berkeley National Laboratory",
+      "published_date": "2026-10-19"
+    },
+    {
+      "rank": 7,
       "article_id": 74661,
-      "editorial_note": "Northeastern researchers showed AI models can spot hard-to-detect precancerous colon lesions, a concrete step toward AI-assisted pathology that could catch cancers earlier.",
+      "editorial_note": "Northeastern's AI models help pathologists spot precancerous colon lesions the human eye tends to miss, a direct improvement to cancer-screening accuracy.",
       "impact_category": "Scientific Breakthrough",
       "title": "AI is helping pathologists find harmful lesions the eye can\u2019t see",
       "url": "https://news.northeastern.edu/2026/10/19/precancerous-colon-polyps-ai-detection/",
@@ -82,9 +72,19 @@
       "published_date": "2026-10-19"
     },
     {
+      "rank": 8,
+      "article_id": 74642,
+      "editorial_note": "UC Riverside's $8M in federal Strengthening Institutions Program grants will expand AI education and workforce training, broadening access to AI skills development.",
+      "impact_category": "Major Funding",
+      "title": "UCR receives $8 million in federal grants",
+      "url": "https://news.ucr.edu/articles/2026/10/19/ucr-receives-8-million-federal-grants",
+      "university": "University of California-Riverside",
+      "published_date": "2026-10-19"
+    },
+    {
       "rank": 9,
       "article_id": 74662,
-      "editorial_note": "A new CRADA between Sophia Space and MIT Lincoln Laboratory to pursue space-based AI-inference computing for weather modeling signals growing convergence between orbital infrastructure and AI research.",
+      "editorial_note": "A new CRADA between Sophia Space and MIT Lincoln Laboratory pairs space-based computing with AI-driven weather modeling, an industry-government-academia partnership with dual-use research potential.",
       "impact_category": "Strategic Partnership",
       "title": "Sophia Space and MIT Lincoln Laboratory announce research collaboration on space-based weather modeling",
       "url": "https://www.ll.mit.edu/news/sophia-space-and-mit-lincoln-laboratory-announce-research-collaboration-space-based-weather",
@@ -93,13 +93,13 @@
     },
     {
       "rank": 10,
-      "article_id": 74638,
-      "editorial_note": "SDSU's binational shipbuilding research collaboration with Samsung Heavy Industries and South Korea's KEIT reflects deepening academic-industry-government ties around AI-driven manufacturing and maritime workforce development.",
-      "impact_category": "Strategic Partnership",
-      "title": "SDSU launches shipbuilding research projects with South Korea, Samsung Heavy Industries | News | SDSU",
-      "url": "https://www.sdsu.edu/news/2026/10/sdsu-launches-shipbuilding-research-projects-with-south-korea-samsung-heavy-industries",
-      "university": "San Diego State University",
-      "published_date": "2026-10-19"
+      "article_id": 74843,
+      "editorial_note": "Inria and a French emergency department are building an AI tool that analyzes voice and speech during emergency calls to detect heart attacks, a novel application with potential to speed life-saving triage.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Samu-Voice: Analyzing voice and speech to detect acute transmural myocardial infarctions",
+      "url": "https://www.inria.fr/en/samu-voice-analyse-voice-speech-detect-myocardial-infarction",
+      "university": "INRIA",
+      "published_date": "2026-10-20"
     }
   ]
 }
