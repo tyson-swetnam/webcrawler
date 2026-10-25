@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-25T09:09:37",
+  "generated_at": "2026-10-25T21:08:34",
   "picks": [
     {
       "rank": 1,
       "article_id": 74584,
-      "editorial_note": "A nearly $24.5M NIA grant renewal to sustain MassAITC signals strong federal commitment to AI-driven aging and Alzheimer's care research, pairing a major university with a leading health system.",
+      "editorial_note": "A nearly $24.5M NIA grant renewal to sustain a major AI-and-aging-care research center jointly run by UMass Amherst and Mass General Brigham signals strong, sustained federal confidence in AI applications for Alzheimer's and connected care.",
       "impact_category": "Major Funding",
       "title": "UMass Amherst and Mass General Brigham Awarded Nearly $24.5M for 5-year Continuation of MassAITC | UMass Amherst",
       "url": "https://www.umass.edu/news/article/umass-amherst-and-mass-general-brigham-awarded-nearly-245m-5-year-continuation",
@@ -13,18 +13,18 @@
     },
     {
       "rank": 2,
-      "article_id": 74689,
-      "editorial_note": "MIT CSAIL, Google, and Northeastern's 'InstructMesh' tool solves a real bottleneck in AI-generated 3D fabrication by letting users repair structurally broken models, a practical step toward trustworthy generative design.",
+      "article_id": 74727,
+      "editorial_note": "An AI-enabled biochip that cheaply screens for cancer and other diseases from biological fluids could meaningfully expand access to early diagnostics, especially in resource-limited settings.",
       "impact_category": "Scientific Breakthrough",
-      "title": "New tool lets users repair AI-generated 3D models, then fabricate them just the way they want",
-      "url": "https://www.eecs.mit.edu/new-tool-lets-users-repair-ai-generated-3d-models-then-fabricate-them-just-the-way-they-want/",
-      "university": "MIT",
+      "title": "AI-enabled biochip for rapid cancer, disease detection | The American University in Cairo",
+      "url": "https://www.aucegypt.edu/news/ai-enabled-biochip-rapid-cancer-disease-detection",
+      "university": "American University in Cairo",
       "published_date": "2026-10-19"
     },
     {
       "rank": 3,
       "article_id": 74705,
-      "editorial_note": "A cross-institutional team from MIT, CMU, NYU, and Stanford built an AI that beat top humans at Stratego, a landmark for imperfect-information game AI with implications beyond games, such as negotiation and strategic planning under uncertainty.",
+      "editorial_note": "A multi-institution team (MIT, CMU, NYU, Stanford) built an AI that beat top human players at Stratego, a landmark result for imperfect-information game AI with implications for strategic decision-making under uncertainty.",
       "impact_category": "Scientific Breakthrough",
       "title": "This game-playing AI is the new champ at Stratego",
       "url": "https://www.eecs.mit.edu/this-game-playing-ai-is-the-new-champ-at-stratego/",
@@ -33,28 +33,18 @@
     },
     {
       "rank": 4,
-      "article_id": 74727,
-      "editorial_note": "An AI-enabled biochip from AUC offers rapid, low-cost disease pre-screening for conditions like leukemia and hepatitis, a promising step toward accessible diagnostics in resource-limited settings.",
+      "article_id": 74689,
+      "editorial_note": "MIT CSAIL, Google, and Northeastern's 'InstructMesh' tool lets users repair AI-generated 3D models before fabrication, closing a key gap between generative AI design and real-world manufacturing.",
       "impact_category": "Scientific Breakthrough",
-      "title": "AI-enabled biochip for rapid cancer, disease detection | The American University in Cairo",
-      "url": "https://www.aucegypt.edu/news/ai-enabled-biochip-rapid-cancer-disease-detection",
-      "university": "American University in Cairo",
+      "title": "New tool lets users repair AI-generated 3D models, then fabricate them just the way they want",
+      "url": "https://www.eecs.mit.edu/new-tool-lets-users-repair-ai-generated-3d-models-then-fabricate-them-just-the-way-they-want/",
+      "university": "MIT",
       "published_date": "2026-10-19"
     },
     {
       "rank": 5,
-      "article_id": 74642,
-      "editorial_note": "UC Riverside's $8M in federal Strengthening Institutions grants will expand AI education and workforce training, broadening access to AI skills development.",
-      "impact_category": "Major Funding",
-      "title": "UCR receives $8 million in federal grants",
-      "url": "https://news.ucr.edu/articles/2026/10/19/ucr-receives-8-million-federal-grants",
-      "university": "University of California-Riverside",
-      "published_date": "2026-10-19"
-    },
-    {
-      "rank": 6,
       "article_id": 74337,
-      "editorial_note": "Berkeley Lab's machine learning tool estimates past radiation exposure from a routine blood test, offering a faster and more accessible alternative to specialized bioassays with clear public-health and emergency-response value.",
+      "editorial_note": "Berkeley Lab's machine learning tool estimates past radiation exposure from routine blood tests, offering a faster, more accessible alternative to specialized diagnostics with direct public-health and emergency-response value.",
       "impact_category": "Scientific Breakthrough",
       "title": "A Simple Blood Test Could Reveal Hidden Radiation Exposure",
       "url": "https://newscenter.lbl.gov/2026/10/19/a-simple-blood-test-could-reveal-hidden-radiation-exposure/",
@@ -62,29 +52,29 @@
       "published_date": "2026-10-19"
     },
     {
+      "rank": 6,
+      "article_id": 74642,
+      "editorial_note": "An $8M federal Strengthening Institutions award to UC Riverside will expand AI education and workforce training, reflecting continued government investment in building AI talent pipelines.",
+      "impact_category": "Major Funding",
+      "title": "UCR receives $8 million in federal grants",
+      "url": "https://news.ucr.edu/articles/2026/10/19/ucr-receives-8-million-federal-grants",
+      "university": "University of California-Riverside",
+      "published_date": "2026-10-19"
+    },
+    {
       "rank": 7,
-      "article_id": 74843,
-      "editorial_note": "Inria's voice-analysis decision-support tool for detecting heart attacks during emergency calls could meaningfully speed up triage and treatment in time-critical cardiac events.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Samu-Voice: Analyzing voice and speech to detect acute transmural myocardial infarctions",
-      "url": "https://www.inria.fr/en/samu-voice-analyse-voice-speech-detect-myocardial-infarction",
-      "university": "INRIA",
+      "article_id": 74662,
+      "editorial_note": "A new CRADA between Sophia Space and MIT Lincoln Laboratory pairs space-based AI-inference computing with weather-modeling expertise, a notable industry-government-academia collaboration with potential defense and climate applications.",
+      "impact_category": "Strategic Partnership",
+      "title": "Sophia Space and MIT Lincoln Laboratory announce research collaboration on space-based weather modeling",
+      "url": "https://www.ll.mit.edu/news/sophia-space-and-mit-lincoln-laboratory-announce-research-collaboration-space-based-weather",
+      "university": "MIT Lincoln Laboratory",
       "published_date": "2026-10-20"
     },
     {
       "rank": 8,
-      "article_id": 74661,
-      "editorial_note": "Northeastern's AI models help pathologists spot precancerous colon lesions that are hard to detect by eye, a concrete example of AI improving diagnostic accuracy in cancer screening.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "AI is helping pathologists find harmful lesions the eye can\u2019t see",
-      "url": "https://news.northeastern.edu/2026/10/19/precancerous-colon-polyps-ai-detection/",
-      "university": "Northeastern University",
-      "published_date": "2026-10-19"
-    },
-    {
-      "rank": 9,
       "article_id": 74659,
-      "editorial_note": "Harvard's Belfer Center 'pre-mortem' report warns that catastrophic AI risks remain preventable but urgent, citing concrete incidents like rogue-agent breaches, a notable contribution to the AI safety policy debate.",
+      "editorial_note": "A Harvard Kennedy School Belfer Center report warns that catastrophic AI risks remain preventable but urgent, citing concrete incidents like rogue-agent breaches and model-training pauses \u2014 a timely contribution to AI safety policy debate.",
       "impact_category": "Policy Impact",
       "title": "Is it already too late to reduce catastrophic AI risk? \u2014 Harvard Gazette",
       "url": "https://news.harvard.edu/gazette/story/2026/10/is-it-already-too-late-to-reduce-catastrophic-ai-risk/",
@@ -92,14 +82,24 @@
       "published_date": "2026-10-19"
     },
     {
-      "rank": 10,
-      "article_id": 74662,
-      "editorial_note": "A new CRADA between Sophia Space and MIT Lincoln Laboratory to research space-based AI-inference computing for weather modeling pairs defense-lab expertise with commercial space infrastructure in a novel application area.",
-      "impact_category": "Strategic Partnership",
-      "title": "Sophia Space and MIT Lincoln Laboratory announce research collaboration on space-based weather modeling",
-      "url": "https://www.ll.mit.edu/news/sophia-space-and-mit-lincoln-laboratory-announce-research-collaboration-space-based-weather",
-      "university": "MIT Lincoln Laboratory",
+      "rank": 9,
+      "article_id": 74843,
+      "editorial_note": "Inria researchers are developing a voice-analysis AI tool to help emergency dispatchers detect heart attacks over the phone, a potentially life-saving application of AI in time-critical medical triage.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Samu-Voice: Analyzing voice and speech to detect acute transmural myocardial infarctions",
+      "url": "https://www.inria.fr/en/samu-voice-analyse-voice-speech-detect-myocardial-infarction",
+      "university": "INRIA",
       "published_date": "2026-10-20"
+    },
+    {
+      "rank": 10,
+      "article_id": 74371,
+      "editorial_note": "Two Australian Research Council grants totaling $8.1M will fund ANU work on sustainable materials and critical resource exploration, supporting the technology pipeline that underpins AI hardware and infrastructure.",
+      "impact_category": "Major Funding",
+      "title": "ANU receives $8.1 million to unlock new materials, critical resources",
+      "url": "https://www.anu.edu.au/news/all-news/anu-receives-81-million-to-unlock-new-materials-critical-resources",
+      "university": "Australian National University",
+      "published_date": "2026-10-19"
     }
   ]
 }
