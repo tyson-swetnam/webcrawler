@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-05T21:06:45",
+  "generated_at": "2026-11-06T03:14:24",
   "picks": [
     {
       "rank": 1,
       "article_id": 77564,
-      "editorial_note": "MIT's Regina Barzilay and James Collins won the 2026 Pritzker Prize for AI in Science Research Excellence, the field's top honor, for pioneering AI-enabled antibiotic discovery that has already yielded new drug candidates.",
+      "editorial_note": "MIT's Regina Barzilay and Jim Collins won the 2026 Pritzker Prize for AI in Science, the field's top honor, for pioneering AI-driven antibiotic discovery that has already identified novel compounds \u2014 a landmark validation of AI's power to accelerate drug discovery against rising antimicrobial resistance.",
       "impact_category": "Scientific Breakthrough",
       "title": "Regina Barzilay and Jim Collins win Pritzker Prize for AI and Science Research Excellence for work in AI-enabled antibiotic discovery",
       "url": "https://www.eecs.mit.edu/regina-barzilay-and-jim-collins-win-pritzker-prize-for-ai-and-science-research-excellence-for-work-in-ai-enabled-antibiotic-discovery/",
@@ -13,18 +13,8 @@
     },
     {
       "rank": 2,
-      "article_id": 76865,
-      "editorial_note": "A $39.5 million ARPA-H-funded consortium spanning Boston University, Philips, Johns Hopkins, and Weill Cornell will develop AI-enabled robotic catheter technology for remote stroke intervention, a major federal bet on AI-driven medical robotics.",
-      "impact_category": "Major Funding",
-      "title": "Brink Bites: Robotic Stroke Surgery, Curbing Junk Food Sales, and American Attitudes On Data Center Construction",
-      "url": "https://www.bu.edu/articles/2026/robotic-surgery-junk-food-data-center/",
-      "university": "Boston University",
-      "published_date": "2026-11-02"
-    },
-    {
-      "rank": 3,
       "article_id": 77496,
-      "editorial_note": "Nebraska will lead cybersecurity for FabAID, a five-year, $24.5 million NSF national infrastructure project to secure AI-driven scientific computing across institutions.",
+      "editorial_note": "Nebraska will lead cybersecurity for FabAID, a five-year $24.5M NSF national infrastructure project, underscoring growing federal investment in securing the computing fabric that underpins AI-driven scientific research nationwide.",
       "impact_category": "Major Funding",
       "title": "University to lead cybersecurity for national Fabric for AI-Driven Science project",
       "url": "https://news.unl.edu/article/university-to-lead-cybersecurity-for-national-fabric-for-ai-driven-science-project",
@@ -32,19 +22,29 @@
       "published_date": "2026-11-02"
     },
     {
+      "rank": 3,
+      "article_id": 76865,
+      "editorial_note": "Boston University joined a $39.5M ARPA-H consortium with Philips, Johns Hopkins, and Weill Cornell to build AI-enabled robotic catheters for remote stroke treatment, a major cross-sector bet on AI closing care gaps in time-critical medicine.",
+      "impact_category": "Strategic Partnership",
+      "title": "Brink Bites: Robotic Stroke Surgery, Curbing Junk Food Sales, and American Attitudes On Data Center Construction",
+      "url": "https://www.bu.edu/articles/2026/robotic-surgery-junk-food-data-center/",
+      "university": "Boston University",
+      "published_date": "2026-11-02"
+    },
+    {
       "rank": 4,
-      "article_id": 75385,
-      "editorial_note": "Michigan State's trustees approved a $30 million capital request for TEMPEST, a new center fusing physics, computation, and AI for turbulence research \u2014 a significant state-backed investment in AI-enabled science infrastructure.",
+      "article_id": 75804,
+      "editorial_note": "Anthropic's pledge of up to 5% of its equity (potentially $100 billion) alongside SpaceX's giveaways raises major questions about who benefits from AI windfalls \u2014 a scale of wealth redistribution with real policy implications that academics are now publicly scrutinizing.",
       "impact_category": "Major Funding",
-      "title": "MSU trustees receive presentation on new turbulence research center, approve state capital outlay request",
-      "url": "https://msutoday.msu.edu/news/2026/10/oct-30-bot-news-release",
-      "university": "Michigan State University",
-      "published_date": "2026-10-30"
+      "title": "Billions in SpaceX, Anthropic Stock Pledged to the Public. Who Benefits? - Georgetown University",
+      "url": "https://www.georgetown.edu/news/spacex-anthropic-stock-giveaway-economic-impact-ask-a-professor/",
+      "university": "Georgetown University",
+      "published_date": "2026-11-04"
     },
     {
       "rank": 5,
       "article_id": 77587,
-      "editorial_note": "HKUST and HSBC signed a strategic framework agreement anchored by HSBC's new AI & Emerging Technology Institute, deepening a near-decade academic-financial industry partnership around AI commercialization.",
+      "editorial_note": "HKUST and HSBC signed a strategic framework to advance AI and financial innovation through a new joint institute, deepening a near-three-decade relationship and signaling how major banks are formalizing ties with universities to shape applied AI research.",
       "impact_category": "Strategic Partnership",
       "title": "HKUST and HSBC Forge Strategic Partnership to Advance AI, Emerging Technologies and Financial Innovation",
       "url": "https://hkust.edu.hk/news/hkust-and-hsbc-forge-strategic-partnership-advance-ai-emerging-technologies-and-financial",
@@ -53,18 +53,8 @@
     },
     {
       "rank": 6,
-      "article_id": 75804,
-      "editorial_note": "A Georgetown economist's analysis of SpaceX and Anthropic's massive equity giveaways \u2014 including Anthropic's pledge of up to $100 billion in shares \u2014 highlights unprecedented wealth distribution tied to AI company valuations, with major policy and economic implications.",
-      "impact_category": "Major Funding",
-      "title": "Billions in SpaceX, Anthropic Stock Pledged to the Public. Who Benefits? - Georgetown University",
-      "url": "https://www.georgetown.edu/news/spacex-anthropic-stock-giveaway-economic-impact-ask-a-professor/",
-      "university": "Georgetown University",
-      "published_date": "2026-11-04"
-    },
-    {
-      "rank": 7,
       "article_id": 77460,
-      "editorial_note": "Tel Aviv University and Stanford researchers showed AI models can learn general predictive skills from purely self-generated synthetic data rather than real-world data, a notable step toward reducing AI's dependence on scraped training data.",
+      "editorial_note": "Tel Aviv University and Stanford researchers showed AI models can learn general predictive skills purely from self-generated synthetic data, a potentially significant breakthrough for reducing AI's dependence on scarce real-world training data.",
       "impact_category": "Scientific Breakthrough",
       "title": "AI Learns to Predict the World Without Ever Seeing It",
       "url": "https://english.tau.ac.il/research/ai-learns-to-predict",
@@ -72,10 +62,20 @@
       "published_date": "2026-11-05"
     },
     {
+      "rank": 7,
+      "article_id": 78001,
+      "editorial_note": "HKUST launched a HK$100 million RAISe+ fund for research commercialization alongside new robotics work, reflecting a substantial institutional bet on turning AI research into deployable technology and startups.",
+      "impact_category": "Major Funding",
+      "title": "October Research & Innovation Roundup",
+      "url": "https://hkust.edu.hk/boundless/article/october-research-innovation-roundup",
+      "university": "Hong Kong Univ. of Science and Technology",
+      "published_date": "2026-10-31"
+    },
+    {
       "rank": 8,
       "article_id": 76171,
-      "editorial_note": "ASU's $3.2 million NIH-funded project uses deep learning on retinal images plus blood biomarkers to screen for preclinical Alzheimer's disease, a potentially low-cost, scalable early-detection approach.",
-      "impact_category": "Scientific Breakthrough",
+      "editorial_note": "A $3.2M NIH-funded ASU project combining deep learning with retinal imaging and blood biomarkers could enable low-cost, early screening for preclinical Alzheimer's disease, with major implications for early intervention at scale.",
+      "impact_category": "Major Funding",
       "title": "What the eye may reveal about Alzheimer\u2019s",
       "url": "https://news.asu.edu/20261103-science-and-technology-what-eye-may-reveal-about-alzheimers",
       "university": "Arizona State University Campus Immersion",
@@ -83,22 +83,22 @@
     },
     {
       "rank": 9,
-      "article_id": 76019,
-      "editorial_note": "RPI's Quest2Dx model improves early-stage Parkinson's screening accuracy using health questionnaires, offering a low-cost diagnostic tool with real clinical potential.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "RPI Team Builds AI Model for More Effective Early Parkinson\u2019s Screening",
-      "url": "https://news.rpi.edu/2026/11/04/rpi-team-builds-ai-model-more-effective-early-parkinsons-screening",
-      "university": "Rensselaer Polytechnic Institute",
+      "article_id": 77421,
+      "editorial_note": "UW-led research found leading AI models from Google and OpenAI are biased against certain English accents in evaluating interviews and tests, a fairness finding with direct implications for AI deployment in hiring and education policy.",
+      "impact_category": "Policy Impact",
+      "title": "Leading AI models are biased against certain accents when scoring interviews, presentations and tests | UW News",
+      "url": "https://www.washington.edu/news/2026/11/04/ai-models-are-biased-against-certain-accents/",
+      "university": "University of Washington-Seattle Campus",
       "published_date": "2026-11-04"
     },
     {
       "rank": 10,
-      "article_id": 77070,
-      "editorial_note": "Weill Cornell's LabARIA agentic AI framework aims to catch clinical lab errors before they reach patients, an applied AI safety tool with direct patient-care impact.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "AI System May Help Clinical Labs Spot Problems Before They Affect Patients",
-      "url": "https://news.weill.cornell.edu/news/2026/11/ai-system-may-help-clinical-labs-spot-problems-before-they-affect-patients",
-      "university": "Weill Medical College of Cornell University",
+      "article_id": 76553,
+      "editorial_note": "Georgia State's Dong Hye Ye earned an NSF CAREER Award to develop vision-language AI combining medical imaging with clinical text, recognizing promising early-career work at the intersection of AI and diagnostic medicine.",
+      "impact_category": "Major Funding",
+      "title": "Georgia State Computer Science Professor Earns National Science Foundation Early Career Award",
+      "url": "https://news.gsu.edu/2026/11/02/georgia-state-computer-science-professor-earns-national-science-foundation-early-career-award/",
+      "university": "Georgia State University",
       "published_date": "2026-11-02"
     }
   ]
