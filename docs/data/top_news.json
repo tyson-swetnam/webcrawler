@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-07T21:06:26",
+  "generated_at": "2026-11-08T03:14:19",
   "picks": [
     {
       "rank": 1,
       "article_id": 77564,
-      "editorial_note": "MIT's Regina Barzilay and Jim Collins won the inaugural Pritzker Prize for AI in Science Research Excellence for pioneering AI-enabled antibiotic discovery, a landmark recognition validating AI's role in addressing the global antibiotic resistance crisis.",
+      "editorial_note": "MIT's Regina Barzilay and Jim Collins won the 2026 Pritzker Prize for AI in Science Research Excellence for pioneering AI-enabled antibiotic discovery \u2014 one of the field's most prestigious honors, validating years of deep-learning-driven drug discovery work.",
       "impact_category": "Scientific Breakthrough",
       "title": "Regina Barzilay and Jim Collins win Pritzker Prize for AI and Science Research Excellence for work in AI-enabled antibiotic discovery",
       "url": "https://www.eecs.mit.edu/regina-barzilay-and-jim-collins-win-pritzker-prize-for-ai-and-science-research-excellence-for-work-in-ai-enabled-antibiotic-discovery/",
@@ -13,8 +13,18 @@
     },
     {
       "rank": 2,
+      "article_id": 78249,
+      "editorial_note": "A Cambridge-led AI-guided 'plug and play' technique produced a broad-spectrum bird flu vaccine with complete protection against diverse variants in animal trials, a major step toward pandemic-ready vaccine design.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Scientists are using AI to develop superior vaccines against viruses threatening global health",
+      "url": "https://www.cam.ac.uk/stories/ai-developed-vaccines-against-viruses",
+      "university": "University of Cambridge",
+      "published_date": "2026-11-05"
+    },
+    {
+      "rank": 3,
       "article_id": 77496,
-      "editorial_note": "Nebraska will lead cybersecurity for FabAID, a five-year, $24.5M NSF-funded national infrastructure project to support AI-driven science \u2014 a major federal investment with broad cross-institutional reach.",
+      "editorial_note": "University of Nebraska-Lincoln will lead cybersecurity for FabAID, a five-year, $24.5 million NSF-funded national infrastructure project for AI-driven science led by the Morgridge Institute.",
       "impact_category": "Major Funding",
       "title": "University to lead cybersecurity for national Fabric for AI-Driven Science project",
       "url": "https://news.unl.edu/article/university-to-lead-cybersecurity-for-national-fabric-for-ai-driven-science-project",
@@ -22,19 +32,9 @@
       "published_date": "2026-11-02"
     },
     {
-      "rank": 3,
-      "article_id": 76865,
-      "editorial_note": "Boston University joined a $39.5M ARPA-H consortium with Philips, Johns Hopkins, and Weill Cornell to build AI-enabled robotic catheter technology for remote stroke treatment, pairing significant federal funding with a high-value industry-academic-clinical partnership.",
-      "impact_category": "Major Funding",
-      "title": "Brink Bites: Robotic Stroke Surgery, Curbing Junk Food Sales, and American Attitudes On Data Center Construction",
-      "url": "https://www.bu.edu/articles/2026/robotic-surgery-junk-food-data-center/",
-      "university": "Boston University",
-      "published_date": "2026-11-02"
-    },
-    {
       "rank": 4,
       "article_id": 77587,
-      "editorial_note": "HKUST and HSBC signed a strategic framework deepening a near-decade partnership to advance AI and financial innovation through HSBC's new AI & Emerging Technology Institute, a notable academia-industry alliance in financial AI.",
+      "editorial_note": "HKUST and HSBC signed a strategic framework agreement anchoring HSBC's new AI & Emerging Technology Institute, deepening a near three-decade academia-finance partnership around AI innovation.",
       "impact_category": "Strategic Partnership",
       "title": "HKUST and HSBC Forge Strategic Partnership to Advance AI, Emerging Technologies and Financial Innovation",
       "url": "https://hkust.edu.hk/news/hkust-and-hsbc-forge-strategic-partnership-advance-ai-emerging-technologies-and-financial",
@@ -43,28 +43,18 @@
     },
     {
       "rank": 5,
-      "article_id": 78566,
-      "editorial_note": "The DOE's release of 'Genesis Agent Skills,' developed with Fermilab, operationalizes agentic AI across the national Genesis Mission for scientific machine learning \u2014 a concrete step in federal AI research policy with cross-lab impact.",
-      "impact_category": "Policy Impact",
-      "title": "\u2018Genesis Agent Skills\u2019 release to support innovation across the Genesis Mission",
-      "url": "https://news.fnal.gov/2026/11/genesis-agent-skills-release-to-support-innovation-across-the-genesis-mission/",
-      "university": "Fermi National Accelerator Laboratory",
-      "published_date": "2026-11-06"
+      "article_id": 76865,
+      "editorial_note": "Boston University joined a $39.5 million ARPA-H-funded consortium with Philips, Johns Hopkins, and Weill Cornell to develop AI-enabled robotic catheter technology for remote stroke intervention.",
+      "impact_category": "Strategic Partnership",
+      "title": "Brink Bites: Robotic Stroke Surgery, Curbing Junk Food Sales, and American Attitudes On Data Center Construction",
+      "url": "https://www.bu.edu/articles/2026/robotic-surgery-junk-food-data-center/",
+      "university": "Boston University",
+      "published_date": "2026-11-02"
     },
     {
       "rank": 6,
-      "article_id": 78249,
-      "editorial_note": "Cambridge researchers used an AI-guided design technique to create a broad-spectrum bird flu vaccine achieving complete protection against diverse variants in animal trials, a significant scientific advance with real public-health stakes.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Scientists are using AI to develop superior vaccines against viruses threatening global health",
-      "url": "https://www.cam.ac.uk/stories/ai-developed-vaccines-against-viruses",
-      "university": "University of Cambridge",
-      "published_date": "2026-11-05"
-    },
-    {
-      "rank": 7,
       "article_id": 78239,
-      "editorial_note": "A Case Western-led, NIH-funded multi-institutional team will combine large-scale health data, satellite imaging, and AI to study environmental contributions to Alzheimer's and dementia, a scientifically ambitious effort with major public-health implications.",
+      "editorial_note": "A Case Western Reserve-led, NIH-funded multi-institutional team will combine large-scale health data, satellite imaging, and AI to study how environmental exposures contribute to Alzheimer's and dementia.",
       "impact_category": "Scientific Breakthrough",
       "title": "Case Western Reserve-led team to study how the environment contributes to Alzheimer\u2019s and dementia | CWRU Newsroom | Case Western Reserve University",
       "url": "https://case.edu/news/case-western-reserve-led-team-study-how-environment-contributes-alzheimers-and-dementia",
@@ -72,20 +62,30 @@
       "published_date": "2026-11-06"
     },
     {
+      "rank": 7,
+      "article_id": 78566,
+      "editorial_note": "The DOE's release of 'Genesis Agent Skills,' with Fermilab building agentic AI tools for scientific ML workflows, marks a concrete step in the national Genesis Mission's push to accelerate AI-driven research infrastructure.",
+      "impact_category": "Strategic Partnership",
+      "title": "\u2018Genesis Agent Skills\u2019 release to support innovation across the Genesis Mission",
+      "url": "https://news.fnal.gov/2026/11/genesis-agent-skills-release-to-support-innovation-across-the-genesis-mission/",
+      "university": "Fermi National Accelerator Laboratory",
+      "published_date": "2026-11-06"
+    },
+    {
       "rank": 8,
-      "article_id": 75804,
-      "editorial_note": "Anthropic's pledge of up to 5% of its equity (potentially $100 billion) alongside SpaceX's giveaways raises major policy questions about how AI windfall wealth should be distributed to the public, a story with outsized financial and governance stakes.",
-      "impact_category": "Policy Impact",
-      "title": "Billions in SpaceX, Anthropic Stock Pledged to the Public. Who Benefits? - Georgetown University",
-      "url": "https://www.georgetown.edu/news/spacex-anthropic-stock-giveaway-economic-impact-ask-a-professor/",
-      "university": "Georgetown University",
-      "published_date": "2026-11-04"
+      "article_id": 77460,
+      "editorial_note": "Tel Aviv University and Stanford researchers showed AI models can learn general predictive skills from purely self-generated synthetic data rather than real-world data, a potentially foundational shift in how models are trained.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "AI Learns to Predict the World Without Ever Seeing It",
+      "url": "https://english.tau.ac.il/research/ai-learns-to-predict",
+      "university": "Tel Aviv University",
+      "published_date": "2026-11-05"
     },
     {
       "rank": 9,
       "article_id": 78254,
-      "editorial_note": "ANU secured Google.org funding to modernize its widely-used SPEC fusion simulation tool with AI, an industry-academic partnership advancing AI applications in clean energy research.",
-      "impact_category": "Strategic Partnership",
+      "editorial_note": "ANU secured Google.org funding to modernize a widely used fusion simulation tool with AI, pairing a major tech funder with fusion energy research.",
+      "impact_category": "Major Funding",
       "title": "ANU receives Google funding to boost fusion energy research with AI",
       "url": "https://www.anu.edu.au/news/all-news/anu-receives-google-funding-to-boost-fusion-energy-research-with-ai",
       "university": "Australian National University",
@@ -93,13 +93,13 @@
     },
     {
       "rank": 10,
-      "article_id": 77460,
-      "editorial_note": "Tel Aviv University and Stanford researchers showed AI models can learn general predictive skills purely from self-generated synthetic data, a conceptually significant result for reducing AI's dependence on real-world training data.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "AI Learns to Predict the World Without Ever Seeing It",
-      "url": "https://english.tau.ac.il/research/ai-learns-to-predict",
-      "university": "Tel Aviv University",
-      "published_date": "2026-11-05"
+      "article_id": 75804,
+      "editorial_note": "A Georgetown economist's analysis of SpaceX and Anthropic's massive equity giveaways \u2014 including Anthropic's pledge of up to $100 billion in shares \u2014 raises significant questions about how AI-driven wealth will be distributed and governed.",
+      "impact_category": "Policy Impact",
+      "title": "Billions in SpaceX, Anthropic Stock Pledged to the Public. Who Benefits? - Georgetown University",
+      "url": "https://www.georgetown.edu/news/spacex-anthropic-stock-giveaway-economic-impact-ask-a-professor/",
+      "university": "Georgetown University",
+      "published_date": "2026-11-04"
     }
   ]
 }
