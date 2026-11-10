@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-10T03:14:04",
+  "generated_at": "2026-11-10T09:08:05",
   "picks": [
     {
       "rank": 1,
       "article_id": 77564,
-      "editorial_note": "MIT's Barzilay and Collins won the 2026 Pritzker Prize for pioneering AI-enabled antibiotic discovery, a top-tier scientific honor validating AI's growing role in drug discovery against the global threat of antibiotic resistance.",
+      "editorial_note": "MIT's Barzilay and Collins won the inaugural Pritzker Prize for AI in Science, global recognition that validates AI-enabled antibiotic discovery as a model for how machine learning can directly produce new medicines.",
       "impact_category": "Scientific Breakthrough",
       "title": "Regina Barzilay and Jim Collins win Pritzker Prize for AI and Science Research Excellence for work in AI-enabled antibiotic discovery",
       "url": "https://www.eecs.mit.edu/regina-barzilay-and-jim-collins-win-pritzker-prize-for-ai-and-science-research-excellence-for-work-in-ai-enabled-antibiotic-discovery/",
@@ -14,7 +14,7 @@
     {
       "rank": 2,
       "article_id": 78249,
-      "editorial_note": "Cambridge researchers used an AI-guided design technique to create a broad-spectrum bird flu vaccine achieving complete protection in animal trials, a concrete step toward pandemic-ready vaccine platforms.",
+      "editorial_note": "Cambridge's AI-guided 'plug and play' design technique produced a broad-spectrum bird flu vaccine with complete protection in animal trials, a concrete step toward faster pandemic-preparedness tools.",
       "impact_category": "Scientific Breakthrough",
       "title": "Scientists are using AI to develop superior vaccines against viruses threatening global health",
       "url": "https://www.cam.ac.uk/stories/ai-developed-vaccines-against-viruses",
@@ -24,7 +24,7 @@
     {
       "rank": 3,
       "article_id": 75804,
-      "editorial_note": "Anthropic's pledge of up to $100 billion in equity to the public, alongside SpaceX's similar move, raises major questions about how AI windfalls will be distributed and signals the scale of wealth now concentrated in frontier AI firms.",
+      "editorial_note": "Anthropic's pledge of up to 5% of its equity (potentially $100 billion) alongside SpaceX's giveaways raises major questions about how AI windfalls are distributed to the public, a financial story with outsized policy implications.",
       "impact_category": "Major Funding",
       "title": "Billions in SpaceX, Anthropic Stock Pledged to the Public. Who Benefits? - Georgetown University",
       "url": "https://www.georgetown.edu/news/spacex-anthropic-stock-giveaway-economic-impact-ask-a-professor/",
@@ -33,8 +33,18 @@
     },
     {
       "rank": 4,
+      "article_id": 77460,
+      "editorial_note": "Tel Aviv University and Stanford researchers showed AI models can learn general predictive skills purely from self-generated synthetic data, a foundational result that could reduce AI's dependence on scraped real-world data.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "AI Learns to Predict the World Without Ever Seeing It",
+      "url": "https://english.tau.ac.il/research/ai-learns-to-predict",
+      "university": "Tel Aviv University",
+      "published_date": "2026-11-05"
+    },
+    {
+      "rank": 5,
       "article_id": 79159,
-      "editorial_note": "Germany is backing TUM's new autonomous public transportation testbed with up to 20 million euros in federal funding, a significant government bet on AI-driven mobility infrastructure.",
+      "editorial_note": "Germany's new TUM-led DZM site in Munich, backed by up to \u20ac20 million in federal funding, builds concrete testbed infrastructure for AI-driven autonomous public transportation.",
       "impact_category": "Major Funding",
       "title": "Autonomous Public Transportation: TUM Opens New DZM Location in Munich",
       "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/bringing-autonomous-public-transportation-into-everyday-life-tum-leads-new-dzm-site",
@@ -42,19 +52,9 @@
       "published_date": "2026-11-06"
     },
     {
-      "rank": 5,
-      "article_id": 79198,
-      "editorial_note": "HKUST's MoU with robotics firm Unitree, building toward a joint lab, marks a notable academia-industry push to accelerate embodied AI and robotics commercialization.",
-      "impact_category": "Strategic Partnership",
-      "title": "HKUST and Unitree Sign MoU to Advance Embodied AI and Robotics Collaboration",
-      "url": "https://hkust.edu.hk/news/hkust-and-unitree-sign-mou-advance-embodied-ai-and-robotics-collaboration",
-      "university": "Hong Kong Univ. of Science and Technology",
-      "published_date": "2026-11-09"
-    },
-    {
       "rank": 6,
       "article_id": 78254,
-      "editorial_note": "Google.org funding to modernize ANU's widely-used fusion simulation code with AI illustrates how tech-industry philanthropy is directly accelerating fusion energy research.",
+      "editorial_note": "Google.org funding will let ANU modernize a widely used fusion simulation code with AI, a direct industry-academia investment in accelerating clean fusion energy research.",
       "impact_category": "Major Funding",
       "title": "ANU receives Google funding to boost fusion energy research with AI",
       "url": "https://www.anu.edu.au/news/all-news/anu-receives-google-funding-to-boost-fusion-energy-research-with-ai",
@@ -63,8 +63,18 @@
     },
     {
       "rank": 7,
+      "article_id": 79198,
+      "editorial_note": "HKUST's MoU with robotics maker Unitree, building toward a joint lab, signals deepening ties between academic AI research and commercial embodied-robotics development in a fast-moving field.",
+      "impact_category": "Strategic Partnership",
+      "title": "HKUST and Unitree Sign MoU to Advance Embodied AI and Robotics Collaboration",
+      "url": "https://hkust.edu.hk/news/hkust-and-unitree-sign-mou-advance-embodied-ai-and-robotics-collaboration",
+      "university": "Hong Kong Univ. of Science and Technology",
+      "published_date": "2026-11-09"
+    },
+    {
+      "rank": 8,
       "article_id": 78239,
-      "editorial_note": "An NIH-funded, Case Western-led multi-institutional effort will apply AI to satellite and health data to untangle environmental drivers of Alzheimer's and dementia, a large-scale application of AI to a major public health problem.",
+      "editorial_note": "An NIH-funded, Case Western-led multi-institutional effort will use AI alongside satellite imaging and health data to probe environmental drivers of Alzheimer's and dementia, a significant federal investment in AI-for-health research.",
       "impact_category": "Major Funding",
       "title": "Case Western Reserve-led team to study how the environment contributes to Alzheimer\u2019s and dementia | CWRU Newsroom | Case Western Reserve University",
       "url": "https://case.edu/news/case-western-reserve-led-team-study-how-environment-contributes-alzheimers-and-dementia",
@@ -72,19 +82,9 @@
       "published_date": "2026-11-06"
     },
     {
-      "rank": 8,
-      "article_id": 77460,
-      "editorial_note": "Tel Aviv University and Stanford researchers showed AI models can learn general predictive skills purely from self-generated synthetic data, a finding with implications for reducing AI's dependence on scarce real-world training data.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "AI Learns to Predict the World Without Ever Seeing It",
-      "url": "https://english.tau.ac.il/research/ai-learns-to-predict",
-      "university": "Tel Aviv University",
-      "published_date": "2026-11-05"
-    },
-    {
       "rank": 9,
       "article_id": 78566,
-      "editorial_note": "The DOE's release of 'Genesis Agent Skills,' developed with Fermilab, standardizes agentic AI tooling for scientific machine learning across national labs, a policy-driven infrastructure move with broad research impact.",
+      "editorial_note": "The DOE's release of 'Genesis Agent Skills,' with Fermilab building agentic tools to automate scientific ML workflows, shows a national lab system standardizing AI tooling as part of a broader federal science initiative.",
       "impact_category": "Policy Impact",
       "title": "\u2018Genesis Agent Skills\u2019 release to support innovation across the Genesis Mission",
       "url": "https://news.fnal.gov/2026/11/genesis-agent-skills-release-to-support-innovation-across-the-genesis-mission/",
@@ -93,13 +93,13 @@
     },
     {
       "rank": 10,
-      "article_id": 77843,
-      "editorial_note": "Imperial College London's engagement at NVIDIA's GTC Berlin highlights deepening academia-industry ties around compute infrastructure that underpin next-generation AI research.",
-      "impact_category": "Strategic Partnership",
-      "title": "Imperial experts explore the next generation of AI at NVIDIA GTC Berlin",
-      "url": "https://www.imperial.ac.uk/news/articles/admin-services/enterprise/2026/imperial-experts-explore-the-next-generation-of-ai-at-nvidia-gtc-berlin/",
-      "university": "Imperial College London",
-      "published_date": "2026-11-05"
+      "article_id": 75156,
+      "editorial_note": "A $1 million alumni gift, including from an NVIDIA executive, funded 96 DGX Spark systems for Purdue's compute cluster, a tangible industry-academia investment expanding AI research capacity.",
+      "impact_category": "Major Funding",
+      "title": "$1M donation from ECE alumni leads to Sc...",
+      "url": "https://www.rcac.purdue.edu/news/7940",
+      "university": "Purdue Rosen Center for Advanced Computing",
+      "published_date": "2026-11-04"
     }
   ]
 }
