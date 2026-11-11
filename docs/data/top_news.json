@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-11-10T21:06:59",
+  "generated_at": "2026-11-11T03:14:19",
   "picks": [
     {
       "rank": 1,
-      "article_id": 77564,
-      "editorial_note": "A Pritzker Prize win for MIT's Barzilay and Collins validates AI-driven antibiotic discovery as a mature, high-impact scientific field, not just a promising direction\u2014recognizing work that combines deep learning and bioengineering to fight a growing global health crisis.",
+      "article_id": 79611,
+      "editorial_note": "MIT and UBC researchers built a single deep-learning model (WorldParticle) that simulates wildly different physical phenomena\u2014from sliding sand to folding proteins\u2014with one unified approach, a potential step toward general-purpose scientific simulation.",
       "impact_category": "Scientific Breakthrough",
-      "title": "Regina Barzilay and Jim Collins win Pritzker Prize for AI and Science Research Excellence for work in AI-enabled antibiotic discovery",
-      "url": "https://www.eecs.mit.edu/regina-barzilay-and-jim-collins-win-pritzker-prize-for-ai-and-science-research-excellence-for-work-in-ai-enabled-antibiotic-discovery/",
+      "title": "A single AI model simulates the behavior of many substances, from sliding sand to folding proteins",
+      "url": "https://www.eecs.mit.edu/a-single-ai-model-simulates-the-behavior-of-many-substances-from-sliding-sand-to-folding-proteins/",
       "university": "MIT",
-      "published_date": "2026-11-04"
+      "published_date": "2026-11-09"
     },
     {
       "rank": 2,
       "article_id": 78249,
-      "editorial_note": "Cambridge's AI-guided vaccine design achieved complete protection against diverse bird flu variants in trials, a concrete demonstration that AI can produce broad-spectrum vaccines ahead of the next pandemic threat.",
+      "editorial_note": "Cambridge's AI-guided 'plug and play' vaccine design achieved complete protection against diverse bird flu variants in animal trials, outperforming conventional approaches and pointing toward faster-responding pandemic defenses.",
       "impact_category": "Scientific Breakthrough",
       "title": "Scientists are using AI to develop superior vaccines against viruses threatening global health",
       "url": "https://www.cam.ac.uk/stories/ai-developed-vaccines-against-viruses",
@@ -23,58 +23,18 @@
     },
     {
       "rank": 3,
-      "article_id": 79611,
-      "editorial_note": "MIT and UBC's WorldParticle model unifies simulation of wildly different physical phenomena\u2014from sand to proteins\u2014under one deep-learning architecture, a significant step toward general-purpose scientific AI.",
+      "article_id": 77460,
+      "editorial_note": "Tel Aviv University and Stanford showed AI models can learn general predictive skills from purely self-generated synthetic data rather than real-world observation, a result with major implications for how future models are trained.",
       "impact_category": "Scientific Breakthrough",
-      "title": "A single AI model simulates the behavior of many substances, from sliding sand to folding proteins",
-      "url": "https://www.eecs.mit.edu/a-single-ai-model-simulates-the-behavior-of-many-substances-from-sliding-sand-to-folding-proteins/",
-      "university": "MIT",
-      "published_date": "2026-11-09"
+      "title": "AI Learns to Predict the World Without Ever Seeing It",
+      "url": "https://english.tau.ac.il/research/ai-learns-to-predict",
+      "university": "Tel Aviv University",
+      "published_date": "2026-11-05"
     },
     {
       "rank": 4,
-      "article_id": 79159,
-      "editorial_note": "Germany is committing up to \u20ac20 million in federal funding to a TUM-led autonomous public transportation testbed, signaling serious national investment in real-world AI mobility deployment.",
-      "impact_category": "Major Funding",
-      "title": "Autonomous Public Transportation: TUM Opens New DZM Location in Munich",
-      "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/bringing-autonomous-public-transportation-into-everyday-life-tum-leads-new-dzm-site",
-      "university": "Technical University of Munich",
-      "published_date": "2026-11-06"
-    },
-    {
-      "rank": 5,
-      "article_id": 79643,
-      "editorial_note": "Atos and Inria's strategic partnership to commercialize sovereign AI research\u2014spanning physical AI, agentic AI, and robotics\u2014reflects Europe's push for technological independence in critical AI infrastructure.",
-      "impact_category": "Strategic Partnership",
-      "title": "Atos and Inria enter into a strategic partnership to accelerate the transfer of research into sovereign industrial applications",
-      "url": "https://www.inria.fr/en/atos-partenariat-strategique",
-      "university": "INRIA",
-      "published_date": "2026-11-10"
-    },
-    {
-      "rank": 6,
-      "article_id": 79198,
-      "editorial_note": "HKUST's MoU with robotics maker Unitree, building toward a joint lab, ties academic embodied-AI research directly to industrial robotics deployment and talent pipelines.",
-      "impact_category": "Strategic Partnership",
-      "title": "HKUST and Unitree Sign MoU to Advance Embodied AI and Robotics Collaboration",
-      "url": "https://hkust.edu.hk/news/hkust-and-unitree-sign-mou-advance-embodied-ai-and-robotics-collaboration",
-      "university": "Hong Kong Univ. of Science and Technology",
-      "published_date": "2026-11-09"
-    },
-    {
-      "rank": 7,
-      "article_id": 78254,
-      "editorial_note": "Google.org funding for ANU to modernize fusion simulation software with AI shows industry capital accelerating clean-energy science, a notable crossover between big tech and fusion research.",
-      "impact_category": "Major Funding",
-      "title": "ANU receives Google funding to boost fusion energy research with AI",
-      "url": "https://www.anu.edu.au/news/all-news/anu-receives-google-funding-to-boost-fusion-energy-research-with-ai",
-      "university": "Australian National University",
-      "published_date": "2026-11-06"
-    },
-    {
-      "rank": 8,
       "article_id": 78239,
-      "editorial_note": "An NIH-funded, Case Western-led consortium is applying AI to massive environmental and health datasets to untangle causes of Alzheimer's and dementia, a scientifically ambitious use of AI for a disease affecting millions.",
+      "editorial_note": "An NIH-funded, Case Western-led multi-institutional team will combine satellite imagery, animal models, and AI to untangle how environmental exposures like air pollution contribute to Alzheimer's and dementia risk.",
       "impact_category": "Scientific Breakthrough",
       "title": "Case Western Reserve-led team to study how the environment contributes to Alzheimer\u2019s and dementia | CWRU Newsroom | Case Western Reserve University",
       "url": "https://case.edu/news/case-western-reserve-led-team-study-how-environment-contributes-alzheimers-and-dementia",
@@ -82,10 +42,50 @@
       "published_date": "2026-11-06"
     },
     {
+      "rank": 5,
+      "article_id": 79159,
+      "editorial_note": "TUM's new German Center for Future Mobility site in Munich, backed by up to \u20ac20 million in federal funding, will pilot AI-driven autonomous public transportation at scale\u2014a significant government bet on real-world AI deployment.",
+      "impact_category": "Major Funding",
+      "title": "Autonomous Public Transportation: TUM Opens New DZM Location in Munich",
+      "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/bringing-autonomous-public-transportation-into-everyday-life-tum-leads-new-dzm-site",
+      "university": "Technical University of Munich",
+      "published_date": "2026-11-06"
+    },
+    {
+      "rank": 6,
+      "article_id": 79819,
+      "editorial_note": "SMU's $4.2 million NIST award funds a Digital Twin Technology Lab pairing AI, robotics, and HPC to advance semiconductor manufacturing and train the workforce behind it\u2014directly tied to national chip-manufacturing priorities.",
+      "impact_category": "Major Funding",
+      "title": "SMU awarded $4.2 million to advance AI-driven manufacturing and workforce training",
+      "url": "https://www.smu.edu/news/research/advancing-ai-driven-manufacturing-and-workforce-training",
+      "university": "Southern Methodist University",
+      "published_date": "2026-11-09"
+    },
+    {
+      "rank": 7,
+      "article_id": 79198,
+      "editorial_note": "HKUST's MoU with robotics maker Unitree, building toward a joint laboratory, signals deepening academic-industry integration in embodied AI and robotics\u2014an increasingly strategic frontier for both research and commercialization.",
+      "impact_category": "Strategic Partnership",
+      "title": "HKUST and Unitree Sign MoU to Advance Embodied AI and Robotics Collaboration",
+      "url": "https://hkust.edu.hk/news/hkust-and-unitree-sign-mou-advance-embodied-ai-and-robotics-collaboration",
+      "university": "Hong Kong Univ. of Science and Technology",
+      "published_date": "2026-11-09"
+    },
+    {
+      "rank": 8,
+      "article_id": 79643,
+      "editorial_note": "Atos and Inria's strategic partnership to commercialize sovereign industrial AI\u2014spanning physical AI, agentic AI, robotics, and cybersecurity\u2014reflects Europe's push to translate public research into domestically-controlled industrial capability.",
+      "impact_category": "Strategic Partnership",
+      "title": "Atos and Inria enter into a strategic partnership to accelerate the transfer of research into sovereign industrial applications",
+      "url": "https://www.inria.fr/en/atos-partenariat-strategique",
+      "university": "INRIA",
+      "published_date": "2026-11-10"
+    },
+    {
       "rank": 9,
       "article_id": 78566,
-      "editorial_note": "The DOE's release of 'Genesis Agent Skills,' developed with Fermilab, standardizes agentic AI tooling for scientific ML projects across national labs\u2014an infrastructure move with ripple effects across federally funded research.",
-      "impact_category": "Policy Impact",
+      "editorial_note": "DOE's release of 'Genesis Agent Skills,' with Fermilab building agentic tools that automate documentation, code review, and benchmarking for scientific ML, marks a concrete step in federal infrastructure for AI-accelerated science under the Genesis Mission.",
+      "impact_category": "Strategic Partnership",
       "title": "\u2018Genesis Agent Skills\u2019 release to support innovation across the Genesis Mission",
       "url": "https://news.fnal.gov/2026/11/genesis-agent-skills-release-to-support-innovation-across-the-genesis-mission/",
       "university": "Fermi National Accelerator Laboratory",
@@ -93,12 +93,12 @@
     },
     {
       "rank": 10,
-      "article_id": 79819,
-      "editorial_note": "A $4.2 million NIST award lets SMU build a Digital Twin Technology Lab combining AI, robotics, and HPC for semiconductor manufacturing, directly tying federal funding to workforce development in a strategic industry.",
-      "impact_category": "Major Funding",
-      "title": "SMU awarded $4.2 million to advance AI-driven manufacturing and workforce training",
-      "url": "https://www.smu.edu/news/research/advancing-ai-driven-manufacturing-and-workforce-training",
-      "university": "Southern Methodist University",
+      "article_id": 79616,
+      "editorial_note": "Reporting on Nvidia CEO Jensen Huang's reported ties to a figure linked to a suspected Chinese espionage case raises national-security questions that could shape scrutiny of the AI hardware supply chain at the center of the field.",
+      "impact_category": "Policy Impact",
+      "title": "Nvidia CEO\u2019s scandal raises questions about US national security",
+      "url": "https://news.northeastern.edu/2026/11/09/nvidia-ceo-scandal-national-security/",
+      "university": "Northeastern University",
       "published_date": "2026-11-09"
     }
   ]
