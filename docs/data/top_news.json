@@ -1,10 +1,20 @@
 {
-  "generated_at": "2026-11-11T09:07:59",
+  "generated_at": "2026-11-11T15:25:06",
   "picks": [
     {
       "rank": 1,
+      "article_id": 80073,
+      "editorial_note": "A $53M ARPA-H award for an MIT-led team to develop safer, AI-designed herbicide alternatives is a major federal investment in generative AI for agricultural chemistry with direct real-world impact.",
+      "impact_category": "Major Funding",
+      "title": "MIT-led team receives funding to develop next-generation alternatives to modern weed killers",
+      "url": "https://www.eecs.mit.edu/mit-led-team-receives-funding-to-develop-next-generation-alternatives-to-modern-weed-killers/",
+      "university": "MIT",
+      "published_date": "2026-11-10"
+    },
+    {
+      "rank": 2,
       "article_id": 79611,
-      "editorial_note": "MIT and UBC researchers built a single deep-learning model that simulates wildly different physical phenomena\u2014from sand to folding proteins\u2014suggesting a unifying approach to physics simulation that could accelerate materials science, biology, and engineering simulation alike.",
+      "editorial_note": "MIT and UBC's WorldParticle is a rare example of a single AI model generalizing across wildly different physical phenomena, from granular flow to protein folding, a notable step toward general-purpose physics simulators.",
       "impact_category": "Scientific Breakthrough",
       "title": "A single AI model simulates the behavior of many substances, from sliding sand to folding proteins",
       "url": "https://www.eecs.mit.edu/a-single-ai-model-simulates-the-behavior-of-many-substances-from-sliding-sand-to-folding-proteins/",
@@ -12,9 +22,9 @@
       "published_date": "2026-11-09"
     },
     {
-      "rank": 2,
+      "rank": 3,
       "article_id": 78249,
-      "editorial_note": "Cambridge's AI-guided vaccine design technique achieved complete protection against diverse circulating bird flu variants in animal trials, pointing toward a faster, more resilient path for pandemic preparedness.",
+      "editorial_note": "Cambridge's AI-guided vaccine design technique achieved complete protection against diverse bird flu variants in animal trials, demonstrating real translational potential for pandemic preparedness.",
       "impact_category": "Scientific Breakthrough",
       "title": "Scientists are using AI to develop superior vaccines against viruses threatening global health",
       "url": "https://www.cam.ac.uk/stories/ai-developed-vaccines-against-viruses",
@@ -22,29 +32,9 @@
       "published_date": "2026-11-05"
     },
     {
-      "rank": 3,
-      "article_id": 77460,
-      "editorial_note": "Tel Aviv and Stanford researchers showed AI models can learn general predictive skills from purely synthetic, self-generated data rather than real-world observation\u2014a fundamental finding that could reshape how future AI systems are trained.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "AI Learns to Predict the World Without Ever Seeing It",
-      "url": "https://english.tau.ac.il/research/ai-learns-to-predict",
-      "university": "Tel Aviv University",
-      "published_date": "2026-11-05"
-    },
-    {
       "rank": 4,
-      "article_id": 78239,
-      "editorial_note": "An NIH-funded, Case Western-led multi-institutional team will combine satellite imaging, health records, and AI to probe how environmental exposures drive Alzheimer's and dementia\u2014a large-scale federal investment at the intersection of AI and public health.",
-      "impact_category": "Major Funding",
-      "title": "Case Western Reserve-led team to study how the environment contributes to Alzheimer\u2019s and dementia | CWRU Newsroom | Case Western Reserve University",
-      "url": "https://case.edu/news/case-western-reserve-led-team-study-how-environment-contributes-alzheimers-and-dementia",
-      "university": "Case Western Reserve University",
-      "published_date": "2026-11-06"
-    },
-    {
-      "rank": 5,
       "article_id": 79159,
-      "editorial_note": "TUM's new Munich site for Germany's Center for Future Mobility, backed by up to \u20ac20 million in federal funding, will pilot autonomous public transportation at scale\u2014a major government bet on AI-driven mobility infrastructure.",
+      "editorial_note": "Up to 20 million euros in German federal funding for TUM's new mobility center signals serious government commitment to AI-driven autonomous public transportation infrastructure.",
       "impact_category": "Major Funding",
       "title": "Autonomous Public Transportation: TUM Opens New DZM Location in Munich",
       "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/bringing-autonomous-public-transportation-into-everyday-life-tum-leads-new-dzm-site",
@@ -52,9 +42,19 @@
       "published_date": "2026-11-06"
     },
     {
+      "rank": 5,
+      "article_id": 80095,
+      "editorial_note": "MIT CSAIL and CMU's 'Workspace Models' solve a key bottleneck in robot learning, letting robots recall relevant past observations without expensive re-exploration, with broad applicability to real-world robotics.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "A new form of memory helps robots learn complex skills",
+      "url": "https://www.csail.mit.edu/news/new-form-memory-helps-robots-learn-complex-skills",
+      "university": "MIT",
+      "published_date": "2026-11-10"
+    },
+    {
       "rank": 6,
       "article_id": 79198,
-      "editorial_note": "HKUST's MoU with robotics maker Unitree, anchored around a planned joint laboratory, signals deepening academia-industry convergence on embodied AI and robotics commercialization in a highly competitive field.",
+      "editorial_note": "A formal MoU and planned joint lab between HKUST and robotics firm Unitree ties leading academic AI research directly to a commercial embodied-AI and humanoid robotics pipeline.",
       "impact_category": "Strategic Partnership",
       "title": "HKUST and Unitree Sign MoU to Advance Embodied AI and Robotics Collaboration",
       "url": "https://hkust.edu.hk/news/hkust-and-unitree-sign-mou-advance-embodied-ai-and-robotics-collaboration",
@@ -64,7 +64,7 @@
     {
       "rank": 7,
       "article_id": 79643,
-      "editorial_note": "Atos and Inria's strategic partnership to push research into sovereign industrial AI applications\u2014spanning physical AI, agentic AI, and cybersecurity\u2014reflects Europe's push for technological independence in critical AI infrastructure.",
+      "editorial_note": "Atos and Inria's strategic partnership aims to industrialize sovereign AI and robotics research, a notable academia-industry bridge for European AI sovereignty efforts.",
       "impact_category": "Strategic Partnership",
       "title": "Atos and Inria enter into a strategic partnership to accelerate the transfer of research into sovereign industrial applications",
       "url": "https://www.inria.fr/en/atos-partenariat-strategique",
@@ -73,8 +73,18 @@
     },
     {
       "rank": 8,
+      "article_id": 79616,
+      "editorial_note": "A Northeastern analysis linking Nvidia's CEO to a suspected espionage-related relationship raises direct national-security policy questions for the AI chip industry's most consequential company.",
+      "impact_category": "Policy Impact",
+      "title": "Nvidia CEO\u2019s scandal raises questions about US national security",
+      "url": "https://news.northeastern.edu/2026/11/09/nvidia-ceo-scandal-national-security/",
+      "university": "Northeastern University",
+      "published_date": "2026-11-09"
+    },
+    {
+      "rank": 9,
       "article_id": 79819,
-      "editorial_note": "A $4.2 million NIST award will let SMU build a Digital Twin Technology Lab applying AI and robotics to semiconductor manufacturing and workforce training, directly supporting US chip-sector competitiveness goals.",
+      "editorial_note": "A $4.2M NIST award for SMU's Digital Twin Technology Lab links AI and HPC to semiconductor manufacturing and workforce training, a concrete federal investment in AI-enabled domestic chip capacity.",
       "impact_category": "Major Funding",
       "title": "SMU awarded $4.2 million to advance AI-driven manufacturing and workforce training",
       "url": "https://www.smu.edu/news/research/advancing-ai-driven-manufacturing-and-workforce-training",
@@ -82,24 +92,14 @@
       "published_date": "2026-11-09"
     },
     {
-      "rank": 9,
-      "article_id": 78254,
-      "editorial_note": "Google.org funding will let ANU modernize a widely used fusion simulation tool with AI, a concrete example of industry philanthropy accelerating clean-energy science.",
-      "impact_category": "Major Funding",
-      "title": "ANU receives Google funding to boost fusion energy research with AI",
-      "url": "https://www.anu.edu.au/news/all-news/anu-receives-google-funding-to-boost-fusion-energy-research-with-ai",
-      "university": "Australian National University",
-      "published_date": "2026-11-06"
-    },
-    {
       "rank": 10,
-      "article_id": 79790,
-      "editorial_note": "A TU Wien/ICREA study of a real recidivism-risk algorithm used in Catalonia's justice system found that equally accurate models can yield very different predictions for the same individuals\u2014a cautionary finding for any government deploying AI in high-stakes decisions.",
-      "impact_category": "Policy Impact",
-      "title": "In case of doubt, opt for the lower risk",
-      "url": "https://www.tuwien.at/en/tu-wien/news/news-articles/news/im-zweifel-fuer-das-geringere-risiko",
-      "university": "TU Wien",
-      "published_date": "2026-11-10"
+      "article_id": 78239,
+      "editorial_note": "An NIH-funded, Case Western-led effort combining satellite imagery, health data, and AI to probe environmental drivers of Alzheimer's and dementia represents a significant application of AI to a major public-health challenge.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Case Western Reserve-led team to study how the environment contributes to Alzheimer\u2019s and dementia | CWRU Newsroom | Case Western Reserve University",
+      "url": "https://case.edu/news/case-western-reserve-led-team-study-how-environment-contributes-alzheimers-and-dementia",
+      "university": "Case Western Reserve University",
+      "published_date": "2026-11-06"
     }
   ]
 }
