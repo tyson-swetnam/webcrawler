@@ -1,10 +1,20 @@
 {
-  "generated_at": "2026-11-12T09:08:13",
+  "generated_at": "2026-11-12T15:24:37",
   "picks": [
     {
       "rank": 1,
+      "article_id": 80612,
+      "editorial_note": "CSIRO researchers used an independent machine-learning imaging technique to validate the iconic 2019 Event Horizon Telescope image of the M87 black hole, publishing in Nature \u2014 a rare case of AI providing rigorous cross-validation of a landmark astrophysics result.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "New CSIRO technique confirms iconic black hole image",
+      "url": "https://www.csiro.au/en/news/All/News/2026/November/confirm-black-hole",
+      "university": "CSIRO",
+      "published_date": "2026-11-12"
+    },
+    {
+      "rank": 2,
       "article_id": 79611,
-      "editorial_note": "MIT and UBC's WorldParticle model unifies simulation of wildly different physical phenomena\u2014from granular sand to protein folding\u2014in a single deep-learning architecture, a genuine step toward general-purpose scientific simulators.",
+      "editorial_note": "MIT and UBC researchers built WorldParticle, a single deep-learning model that simulates wildly different physical phenomena \u2014 from sand to folding proteins \u2014 suggesting a path toward general-purpose physics simulation rather than bespoke models per domain.",
       "impact_category": "Scientific Breakthrough",
       "title": "A single AI model simulates the behavior of many substances, from sliding sand to folding proteins",
       "url": "https://www.eecs.mit.edu/a-single-ai-model-simulates-the-behavior-of-many-substances-from-sliding-sand-to-folding-proteins/",
@@ -12,9 +22,9 @@
       "published_date": "2026-11-09"
     },
     {
-      "rank": 2,
+      "rank": 3,
       "article_id": 80095,
-      "editorial_note": "MIT CSAIL and CMU's 'Workspace Models' give robots a new form of memory that lets them recall relevant past observations without exhaustive replay, a meaningful advance for practical robot learning.",
+      "editorial_note": "MIT CSAIL and Carnegie Mellon developed 'Workspace Models,' giving robots a new memory mechanism to recall past observations without expensive re-computation \u2014 a meaningful step toward more capable, efficient embodied AI.",
       "impact_category": "Scientific Breakthrough",
       "title": "A new form of memory helps robots learn complex skills",
       "url": "https://www.csail.mit.edu/news/new-form-memory-helps-robots-learn-complex-skills",
@@ -22,9 +32,9 @@
       "published_date": "2026-11-10"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "article_id": 80073,
-      "editorial_note": "An MIT-led team secured up to $53 million from ARPA-H to use generative AI for discovering safer herbicide alternatives, one of the largest funding awards of the week and a notable application of generative chemistry.",
+      "editorial_note": "An MIT-led team secured up to $53 million from ARPA-H to use generative AI for discovering safer next-generation herbicide alternatives, a major federal bet on AI-driven chemistry with direct agricultural and health impact.",
       "impact_category": "Major Funding",
       "title": "MIT-led team receives funding to develop next-generation alternatives to modern weed killers",
       "url": "https://www.eecs.mit.edu/mit-led-team-receives-funding-to-develop-next-generation-alternatives-to-modern-weed-killers/",
@@ -32,9 +42,9 @@
       "published_date": "2026-11-10"
     },
     {
-      "rank": 4,
+      "rank": 5,
       "article_id": 79159,
-      "editorial_note": "TUM's new Munich site for the German Center for Future Mobility, backed by up to 20 million euros in federal funding, anchors a national push to test autonomous public transit at scale.",
+      "editorial_note": "TUM's new DZM site in Munich, backed by up to \u20ac20 million in German federal funding, positions the university at the center of a national push to test AI-driven autonomous public transportation at scale.",
       "impact_category": "Major Funding",
       "title": "Autonomous Public Transportation: TUM Opens New DZM Location in Munich",
       "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/bringing-autonomous-public-transportation-into-everyday-life-tum-leads-new-dzm-site",
@@ -42,9 +52,9 @@
       "published_date": "2026-11-06"
     },
     {
-      "rank": 5,
+      "rank": 6,
       "article_id": 78239,
-      "editorial_note": "A Case Western-led, NIH-funded multi-institutional effort will combine satellite imaging, animal models, and AI to probe how environmental exposures drive Alzheimer's and dementia risk\u2014a scientifically ambitious cross-disciplinary study.",
+      "editorial_note": "A Case Western-led, NIH-funded multi-institutional team is combining satellite imaging, animal models, and AI to probe environmental contributions to Alzheimer's and dementia \u2014 a significant application of AI to a major public health question.",
       "impact_category": "Scientific Breakthrough",
       "title": "Case Western Reserve-led team to study how the environment contributes to Alzheimer\u2019s and dementia | CWRU Newsroom | Case Western Reserve University",
       "url": "https://case.edu/news/case-western-reserve-led-team-study-how-environment-contributes-alzheimers-and-dementia",
@@ -52,9 +62,9 @@
       "published_date": "2026-11-06"
     },
     {
-      "rank": 6,
+      "rank": 7,
       "article_id": 79643,
-      "editorial_note": "Atos and Inria's strategic partnership to commercialize sovereign AI, robotics, and cybersecurity research signals a significant academia-industry push toward European technological sovereignty.",
+      "editorial_note": "Atos and Inria's strategic partnership to commercialize sovereign AI research \u2014 spanning physical AI, agentic AI, and cybersecurity \u2014 signals a notable industry-academia push toward European technological sovereignty.",
       "impact_category": "Strategic Partnership",
       "title": "Atos and Inria enter into a strategic partnership to accelerate the transfer of research into sovereign industrial applications",
       "url": "https://www.inria.fr/en/atos-partenariat-strategique",
@@ -62,9 +72,9 @@
       "published_date": "2026-11-10"
     },
     {
-      "rank": 7,
+      "rank": 8,
       "article_id": 79198,
-      "editorial_note": "HKUST's MoU with robotics maker Unitree, building toward a joint laboratory, is a concrete industry-academia bet on embodied AI and robotics talent development.",
+      "editorial_note": "HKUST's MoU with robotics firm Unitree to build a joint lab on embodied AI and robotics marks a substantial academia-industry collaboration in a fast-moving and strategically important field.",
       "impact_category": "Strategic Partnership",
       "title": "HKUST and Unitree Sign MoU to Advance Embodied AI and Robotics Collaboration",
       "url": "https://hkust.edu.hk/news/hkust-and-unitree-sign-mou-advance-embodied-ai-and-robotics-collaboration",
@@ -72,9 +82,9 @@
       "published_date": "2026-11-09"
     },
     {
-      "rank": 8,
+      "rank": 9,
       "article_id": 78566,
-      "editorial_note": "The DOE's release of 'Genesis Agent Skills,' developed with Fermilab, shows a major federal science agency operationalizing agentic AI to automate scientific ML workflows\u2014a notable policy and infrastructure move for national labs.",
+      "editorial_note": "The DOE's release of 'Genesis Agent Skills,' developed with Fermilab, operationalizes agentic AI for scientific workflows across the national lab system under the federal Genesis Mission \u2014 a concrete step in government AI policy for science.",
       "impact_category": "Policy Impact",
       "title": "\u2018Genesis Agent Skills\u2019 release to support innovation across the Genesis Mission",
       "url": "https://news.fnal.gov/2026/11/genesis-agent-skills-release-to-support-innovation-across-the-genesis-mission/",
@@ -82,24 +92,14 @@
       "published_date": "2026-11-06"
     },
     {
-      "rank": 9,
-      "article_id": 79616,
-      "editorial_note": "Northeastern's examination of Nvidia CEO Jensen Huang's alleged ties to a suspected espionage case raises real national-security policy questions about the AI chip supply chain.",
-      "impact_category": "Policy Impact",
-      "title": "Nvidia CEO\u2019s scandal raises questions about US national security",
-      "url": "https://news.northeastern.edu/2026/11/09/nvidia-ceo-scandal-national-security/",
-      "university": "Northeastern University",
-      "published_date": "2026-11-09"
-    },
-    {
       "rank": 10,
-      "article_id": 78254,
-      "editorial_note": "Google.org funding to help ANU modernize a widely used fusion simulation tool with AI illustrates how major tech philanthropy is accelerating AI-assisted fusion energy research.",
-      "impact_category": "Strategic Partnership",
-      "title": "ANU receives Google funding to boost fusion energy research with AI",
-      "url": "https://www.anu.edu.au/news/all-news/anu-receives-google-funding-to-boost-fusion-energy-research-with-ai",
-      "university": "Australian National University",
-      "published_date": "2026-11-06"
+      "article_id": 79819,
+      "editorial_note": "SMU's $4.2 million NIST award to build a Digital Twin Technology Lab ties AI and high-performance computing directly to semiconductor manufacturing workforce needs, reflecting federal investment in AI-enabled industrial capacity.",
+      "impact_category": "Major Funding",
+      "title": "SMU awarded $4.2 million to advance AI-driven manufacturing and workforce training",
+      "url": "https://www.smu.edu/news/research/advancing-ai-driven-manufacturing-and-workforce-training",
+      "university": "Southern Methodist University",
+      "published_date": "2026-11-09"
     }
   ]
 }
