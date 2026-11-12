@@ -1,20 +1,10 @@
 {
-  "generated_at": "2026-11-11T21:13:39",
+  "generated_at": "2026-11-12T03:14:01",
   "picks": [
     {
       "rank": 1,
-      "article_id": 78249,
-      "editorial_note": "A Cambridge team's AI-guided vaccine design achieved complete protection against diverse bird flu variants in trials, demonstrating AI's potential to accelerate defenses against pandemic-threat pathogens.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Scientists are using AI to develop superior vaccines against viruses threatening global health",
-      "url": "https://www.cam.ac.uk/stories/ai-developed-vaccines-against-viruses",
-      "university": "University of Cambridge",
-      "published_date": "2026-11-05"
-    },
-    {
-      "rank": 2,
       "article_id": 80073,
-      "editorial_note": "MIT's $53 million ARPA-H award to use generative AI for discovering safer herbicide alternatives is a major federal investment pairing AI discovery tools with pressing agricultural and environmental needs.",
+      "editorial_note": "An MIT-led team secured up to $53 million from ARPA-H to use generative AI for discovering safer herbicide alternatives \u2014 a large federal bet on AI-driven chemistry with direct agricultural and environmental impact.",
       "impact_category": "Major Funding",
       "title": "MIT-led team receives funding to develop next-generation alternatives to modern weed killers",
       "url": "https://www.eecs.mit.edu/mit-led-team-receives-funding-to-develop-next-generation-alternatives-to-modern-weed-killers/",
@@ -22,9 +12,19 @@
       "published_date": "2026-11-10"
     },
     {
+      "rank": 2,
+      "article_id": 78239,
+      "editorial_note": "A Case Western-led, NIH-funded multi-institutional team is combining satellite imaging, health data, and AI to probe environmental drivers of Alzheimer's and dementia, applying AI to a major unresolved public health question.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Case Western Reserve-led team to study how the environment contributes to Alzheimer\u2019s and dementia | CWRU Newsroom | Case Western Reserve University",
+      "url": "https://case.edu/news/case-western-reserve-led-team-study-how-environment-contributes-alzheimers-and-dementia",
+      "university": "Case Western Reserve University",
+      "published_date": "2026-11-06"
+    },
+    {
       "rank": 3,
       "article_id": 79611,
-      "editorial_note": "MIT and UBC's WorldParticle model unifies simulation of wildly different physical phenomena\u2014from sand to proteins\u2014in a single AI system, a notable step toward general-purpose scientific simulation.",
+      "editorial_note": "MIT and UBC researchers built WorldParticle, a single deep-learning model that simulates wildly different physical phenomena \u2014 from sand to protein folding \u2014 a genuinely novel unifying approach to physics simulation.",
       "impact_category": "Scientific Breakthrough",
       "title": "A single AI model simulates the behavior of many substances, from sliding sand to folding proteins",
       "url": "https://www.eecs.mit.edu/a-single-ai-model-simulates-the-behavior-of-many-substances-from-sliding-sand-to-folding-proteins/",
@@ -33,18 +33,18 @@
     },
     {
       "rank": 4,
-      "article_id": 78566,
-      "editorial_note": "The DOE's release of 'Genesis Agent Skills,' developed with Fermilab, signals a coordinated national push to embed agentic AI tooling across the government's scientific research infrastructure.",
-      "impact_category": "Policy Impact",
-      "title": "\u2018Genesis Agent Skills\u2019 release to support innovation across the Genesis Mission",
-      "url": "https://news.fnal.gov/2026/11/genesis-agent-skills-release-to-support-innovation-across-the-genesis-mission/",
-      "university": "Fermi National Accelerator Laboratory",
-      "published_date": "2026-11-06"
+      "article_id": 80095,
+      "editorial_note": "MIT CSAIL and CMU developed 'Workspace Models,' a new memory mechanism letting robots recall relevant past observations cheaply, addressing a core bottleneck in long-horizon robot learning.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "A new form of memory helps robots learn complex skills",
+      "url": "https://www.csail.mit.edu/news/new-form-memory-helps-robots-learn-complex-skills",
+      "university": "MIT",
+      "published_date": "2026-11-10"
     },
     {
       "rank": 5,
       "article_id": 79159,
-      "editorial_note": "Germany is backing TUM's new autonomous public transportation center with up to 20 million euros in federal funding, a significant bet on AI-driven mobility infrastructure.",
+      "editorial_note": "TUM is anchoring a new German national mobility research center with up to \u20ac20 million in federal funding to test autonomous public transit, marking a significant government investment in applied AI/robotics infrastructure.",
       "impact_category": "Major Funding",
       "title": "Autonomous Public Transportation: TUM Opens New DZM Location in Munich",
       "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/bringing-autonomous-public-transportation-into-everyday-life-tum-leads-new-dzm-site",
@@ -54,7 +54,7 @@
     {
       "rank": 6,
       "article_id": 79643,
-      "editorial_note": "Atos and Inria's strategic partnership to commercialize sovereign AI research\u2014spanning physical AI, agentic AI, and robotics\u2014reflects Europe's push for industrial AI independence.",
+      "editorial_note": "Atos and Inria's strategic partnership to commercialize sovereign AI research \u2014 spanning physical AI, agentic AI, and cybersecurity \u2014 reflects a national push to translate academic AI work into industrial and security applications.",
       "impact_category": "Strategic Partnership",
       "title": "Atos and Inria enter into a strategic partnership to accelerate the transfer of research into sovereign industrial applications",
       "url": "https://www.inria.fr/en/atos-partenariat-strategique",
@@ -64,7 +64,7 @@
     {
       "rank": 7,
       "article_id": 79198,
-      "editorial_note": "HKUST's MoU with robotics firm Unitree, building toward a joint lab, marks a significant academia-industry alliance advancing embodied AI and robotics research and training.",
+      "editorial_note": "HKUST's MoU with robotics firm Unitree, building toward a joint lab, signals deepening academia-industry integration in embodied AI, a fast-moving and strategically important subfield.",
       "impact_category": "Strategic Partnership",
       "title": "HKUST and Unitree Sign MoU to Advance Embodied AI and Robotics Collaboration",
       "url": "https://hkust.edu.hk/news/hkust-and-unitree-sign-mou-advance-embodied-ai-and-robotics-collaboration",
@@ -74,7 +74,7 @@
     {
       "rank": 8,
       "article_id": 78254,
-      "editorial_note": "Google.org's funding for ANU to modernize fusion simulation tools with AI shows industry capital accelerating progress toward practical fusion energy.",
+      "editorial_note": "Google.org funding for ANU to modernize fusion simulation software with AI pairs a major tech company's resources with fusion energy research, a high-stakes application area for AI-accelerated science.",
       "impact_category": "Strategic Partnership",
       "title": "ANU receives Google funding to boost fusion energy research with AI",
       "url": "https://www.anu.edu.au/news/all-news/anu-receives-google-funding-to-boost-fusion-energy-research-with-ai",
@@ -83,23 +83,23 @@
     },
     {
       "rank": 9,
-      "article_id": 80095,
-      "editorial_note": "MIT and Carnegie Mellon researchers' new 'Workspace Models' memory approach lets robots recall past observations cheaply, addressing a key bottleneck in robot learning.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "A new form of memory helps robots learn complex skills",
-      "url": "https://www.csail.mit.edu/news/new-form-memory-helps-robots-learn-complex-skills",
-      "university": "MIT",
-      "published_date": "2026-11-10"
+      "article_id": 79819,
+      "editorial_note": "A $4.2 million NIST award lets SMU build a Digital Twin lab combining AI, robotics, and HPC for semiconductor manufacturing and workforce training, tying federal funding directly to chip-industry workforce needs.",
+      "impact_category": "Major Funding",
+      "title": "SMU awarded $4.2 million to advance AI-driven manufacturing and workforce training",
+      "url": "https://www.smu.edu/news/research/advancing-ai-driven-manufacturing-and-workforce-training",
+      "university": "Southern Methodist University",
+      "published_date": "2026-11-09"
     },
     {
       "rank": 10,
-      "article_id": 77460,
-      "editorial_note": "Tel Aviv University and Stanford researchers showed AI models can learn general predictive skills from purely synthetic self-generated data, a finding with broad implications for reducing AI's dependence on real-world data.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "AI Learns to Predict the World Without Ever Seeing It",
-      "url": "https://english.tau.ac.il/research/ai-learns-to-predict",
-      "university": "Tel Aviv University",
-      "published_date": "2026-11-05"
+      "article_id": 78566,
+      "editorial_note": "The DOE's 'Genesis Agent Skills' release, developed with Fermilab, automates documentation and benchmarking for scientific ML projects \u2014 a concrete step in the federal Genesis Mission's push to scale AI across national labs.",
+      "impact_category": "Strategic Partnership",
+      "title": "\u2018Genesis Agent Skills\u2019 release to support innovation across the Genesis Mission",
+      "url": "https://news.fnal.gov/2026/11/genesis-agent-skills-release-to-support-innovation-across-the-genesis-mission/",
+      "university": "Fermi National Accelerator Laboratory",
+      "published_date": "2026-11-06"
     }
   ]
 }
