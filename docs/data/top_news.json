@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-12T21:07:00",
+  "generated_at": "2026-11-13T03:13:58",
   "picks": [
     {
       "rank": 1,
       "article_id": 80073,
-      "editorial_note": "A rare large-dollar federal bet on AI-driven chemistry: ARPA-H's up to $53M award lets an MIT-led team use generative AI to design safer herbicide alternatives, pairing major funding with a concrete real-world application.",
+      "editorial_note": "An ARPA-H award of up to $53 million is one of the largest funding commitments in this batch, and pairs generative AI compound discovery with a concrete agricultural/safety goal \u2014 a strong signal of federal investment in AI-driven chemistry.",
       "impact_category": "Major Funding",
       "title": "MIT-led team receives funding to develop next-generation alternatives to modern weed killers",
       "url": "https://www.eecs.mit.edu/mit-led-team-receives-funding-to-develop-next-generation-alternatives-to-modern-weed-killers/",
@@ -14,7 +14,7 @@
     {
       "rank": 2,
       "article_id": 79611,
-      "editorial_note": "MIT and UBC's WorldParticle model unifies simulation of wildly different physical phenomena\u2014sand, fluids, proteins\u2014under one deep-learning architecture, a genuine advance toward general-purpose scientific AI.",
+      "editorial_note": "WorldParticle, from MIT and UBC, is a single model that simulates wildly different physical phenomena (granular flow to protein folding) within one framework \u2014 a genuine step toward general-purpose physical simulation via AI.",
       "impact_category": "Scientific Breakthrough",
       "title": "A single AI model simulates the behavior of many substances, from sliding sand to folding proteins",
       "url": "https://www.eecs.mit.edu/a-single-ai-model-simulates-the-behavior-of-many-substances-from-sliding-sand-to-folding-proteins/",
@@ -24,7 +24,7 @@
     {
       "rank": 3,
       "article_id": 80612,
-      "editorial_note": "CSIRO's AI-based imaging technique independently validated the iconic Event Horizon Telescope black hole image and was published in Nature, lending AI-driven methods new credibility in fundamental physics.",
+      "editorial_note": "CSIRO's machine-learning imaging technique independently confirmed the landmark Event Horizon Telescope image of the M87 black hole and was published in Nature, lending AI-based methods new credibility in fundamental astrophysics.",
       "impact_category": "Scientific Breakthrough",
       "title": "New CSIRO technique confirms iconic black hole image",
       "url": "https://www.csiro.au/en/news/All/News/2026/November/confirm-black-hole",
@@ -33,18 +33,18 @@
     },
     {
       "rank": 4,
-      "article_id": 78566,
-      "editorial_note": "The DOE's release of 'Genesis Agent Skills,' with Fermilab building agentic tools to automate scientific ML workflows, signals a national push to standardize AI practices across the government lab system.",
-      "impact_category": "Policy Impact",
-      "title": "\u2018Genesis Agent Skills\u2019 release to support innovation across the Genesis Mission",
-      "url": "https://news.fnal.gov/2026/11/genesis-agent-skills-release-to-support-innovation-across-the-genesis-mission/",
-      "university": "Fermi National Accelerator Laboratory",
-      "published_date": "2026-11-06"
+      "article_id": 80095,
+      "editorial_note": "MIT CSAIL and CMU's 'Workspace Models' give robots a new memory mechanism to recall past observations cheaply, addressing a core bottleneck in robot learning for complex, multi-step skills.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "A new form of memory helps robots learn complex skills",
+      "url": "https://www.csail.mit.edu/news/new-form-memory-helps-robots-learn-complex-skills",
+      "university": "MIT",
+      "published_date": "2026-11-10"
     },
     {
       "rank": 5,
       "article_id": 79198,
-      "editorial_note": "HKUST's MoU with robotics maker Unitree, anchored by a planned joint laboratory, is a significant academia-industry bet on embodied AI and advanced robotics talent pipelines.",
+      "editorial_note": "HKUST's MoU with robotics maker Unitree, anchored to a planned joint laboratory, is a notable academia-industry tie-up in embodied AI that could shape talent pipelines and product development in the field.",
       "impact_category": "Strategic Partnership",
       "title": "HKUST and Unitree Sign MoU to Advance Embodied AI and Robotics Collaboration",
       "url": "https://hkust.edu.hk/news/hkust-and-unitree-sign-mou-advance-embodied-ai-and-robotics-collaboration",
@@ -54,7 +54,7 @@
     {
       "rank": 6,
       "article_id": 79643,
-      "editorial_note": "Atos and Inria's strategic alliance to commercialize sovereign AI research\u2014spanning physical AI, agentic AI, robotics, and cybersecurity\u2014reflects Europe's push for technological sovereignty in AI.",
+      "editorial_note": "Atos and Inria's strategic partnership to commercialize sovereign AI research (physical AI, agentic AI, cybersecurity) reflects a broader European push to convert academic AI research into national industrial capability.",
       "impact_category": "Strategic Partnership",
       "title": "Atos and Inria enter into a strategic partnership to accelerate the transfer of research into sovereign industrial applications",
       "url": "https://www.inria.fr/en/atos-partenariat-strategique",
@@ -63,43 +63,43 @@
     },
     {
       "rank": 7,
-      "article_id": 79159,
-      "editorial_note": "TUM's new Munich mobility hub, backed by up to \u20ac20M in German federal funding, pairs substantial public investment with a concrete autonomous-transport testbed.",
-      "impact_category": "Major Funding",
-      "title": "Autonomous Public Transportation: TUM Opens New DZM Location in Munich",
-      "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/bringing-autonomous-public-transportation-into-everyday-life-tum-leads-new-dzm-site",
-      "university": "Technical University of Munich",
-      "published_date": "2026-11-06"
-    },
-    {
-      "rank": 8,
-      "article_id": 80095,
-      "editorial_note": "MIT CSAIL and CMU's new 'Workspace Models' memory approach lets robots recall past observations cheaply, addressing a core bottleneck in long-horizon robot learning.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "A new form of memory helps robots learn complex skills",
-      "url": "https://www.csail.mit.edu/news/new-form-memory-helps-robots-learn-complex-skills",
-      "university": "MIT",
-      "published_date": "2026-11-10"
-    },
-    {
-      "rank": 9,
-      "article_id": 78239,
-      "editorial_note": "A Case Western-led, NIH-funded multi-institutional effort to combine satellite imaging, health data, and AI for studying Alzheimer's environmental risk factors pairs significant funding with translational health science.",
-      "impact_category": "Major Funding",
-      "title": "Case Western Reserve-led team to study how the environment contributes to Alzheimer\u2019s and dementia | CWRU Newsroom | Case Western Reserve University",
-      "url": "https://case.edu/news/case-western-reserve-led-team-study-how-environment-contributes-alzheimers-and-dementia",
-      "university": "Case Western Reserve University",
-      "published_date": "2026-11-06"
-    },
-    {
-      "rank": 10,
       "article_id": 79819,
-      "editorial_note": "SMU's $4.2M NIST award to build a Digital Twin Technology Lab ties AI and HPC directly to semiconductor manufacturing workforce development, a priority area for US industrial policy.",
+      "editorial_note": "SMU's $4.2 million NIST-backed Digital Twin Technology Lab links AI, robotics, and HPC directly to semiconductor manufacturing workforce needs, a priority area for U.S. industrial policy.",
       "impact_category": "Major Funding",
       "title": "SMU awarded $4.2 million to advance AI-driven manufacturing and workforce training",
       "url": "https://www.smu.edu/news/research/advancing-ai-driven-manufacturing-and-workforce-training",
       "university": "Southern Methodist University",
       "published_date": "2026-11-09"
+    },
+    {
+      "rank": 8,
+      "article_id": 79616,
+      "editorial_note": "Allegations tying Nvidia's CEO to a suspected espionage case raise national-security questions about the AI hardware supply chain at a moment when chip access is central to AI policy debates.",
+      "impact_category": "Policy Impact",
+      "title": "Nvidia CEO\u2019s scandal raises questions about US national security",
+      "url": "https://news.northeastern.edu/2026/11/09/nvidia-ceo-scandal-national-security/",
+      "university": "Northeastern University",
+      "published_date": "2026-11-09"
+    },
+    {
+      "rank": 9,
+      "article_id": 79961,
+      "editorial_note": "A proposed $1 billion, 15-year AI investment for frontline social-service workers prompted experts to weigh real risks to vulnerable populations \u2014 a concrete case of AI policy intersecting with social welfare systems.",
+      "impact_category": "Policy Impact",
+      "title": "Experts Explore How AI Could Affect Vulnerable Communities, Social Service Providers - UConn Today",
+      "url": "https://today.uconn.edu/2026/11/socialwork_ai_symposium/",
+      "university": "University of Connecticut",
+      "published_date": "2026-11-10"
+    },
+    {
+      "rank": 10,
+      "article_id": 79790,
+      "editorial_note": "TU Wien's analysis of a 15-year-old recidivism-risk algorithm used in Catalonia shows that equally 'accurate' models can produce very different risk judgments, a finding with direct implications for AI use in criminal justice policy.",
+      "impact_category": "Policy Impact",
+      "title": "In case of doubt, opt for the lower risk",
+      "url": "https://www.tuwien.at/en/tu-wien/news/news-articles/news/im-zweifel-fuer-das-geringere-risiko",
+      "university": "TU Wien",
+      "published_date": "2026-11-10"
     }
   ]
 }
