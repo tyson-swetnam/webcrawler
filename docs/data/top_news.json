@@ -1,20 +1,30 @@
 {
-  "generated_at": "2026-11-14T09:07:06",
+  "generated_at": "2026-11-14T15:27:45",
   "picks": [
     {
       "rank": 1,
-      "article_id": 80073,
-      "editorial_note": "A $53M ARPA-H award is one of the largest single grants in this week's pool, and pairs federal funding with generative AI drug/compound-discovery methods aimed at a concrete agricultural problem.",
+      "article_id": 81081,
+      "editorial_note": "An AI model (Omnii) designed a bacteriophage used in the first-ever treatment of a patient with an antibiotic-resistant infection \u2014 a landmark proof that generative AI can produce functional biological therapeutics, not just predict them.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "This time, the virus is on the patient\u2019s side. AI helped design it",
+      "url": "https://news.northeastern.edu/2026/11/13/phage-therapy-ai-designed-virus/",
+      "university": "Northeastern University",
+      "published_date": "2026-11-13"
+    },
+    {
+      "rank": 2,
+      "article_id": 81137,
+      "editorial_note": "ARPA-H's up to $53 million award to an MIT-led team to use generative AI for discovering safer herbicide alternatives is a substantial federal bet on AI-driven chemistry solving a major agricultural and public-health problem.",
       "impact_category": "Major Funding",
       "title": "MIT-led team receives funding to develop next-generation alternatives to modern weed killers",
-      "url": "https://www.eecs.mit.edu/mit-led-team-receives-funding-to-develop-next-generation-alternatives-to-modern-weed-killers/",
+      "url": "https://www.csail.mit.edu/news/mit-led-team-receives-funding-develop-next-generation-alternatives-modern-weed-killers",
       "university": "MIT",
       "published_date": "2026-11-10"
     },
     {
-      "rank": 2,
+      "rank": 3,
       "article_id": 79611,
-      "editorial_note": "MIT and UBC's WorldParticle model unifying simulation of wildly different physical phenomena (sand, proteins) in one architecture is a genuine methodological breakthrough with broad downstream applications in materials science and biology.",
+      "editorial_note": "MIT and UBC's WorldParticle model unifies simulation of wildly different physical phenomena \u2014 from granular flow to protein folding \u2014 under one deep-learning architecture, a significant step toward general-purpose physical world models.",
       "impact_category": "Scientific Breakthrough",
       "title": "A single AI model simulates the behavior of many substances, from sliding sand to folding proteins",
       "url": "https://www.eecs.mit.edu/a-single-ai-model-simulates-the-behavior-of-many-substances-from-sliding-sand-to-folding-proteins/",
@@ -22,9 +32,9 @@
       "published_date": "2026-11-09"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "article_id": 80612,
-      "editorial_note": "An independent AI-based confirmation of the iconic Event Horizon Telescope black hole image, published in Nature, strengthens one of the most consequential results in modern astrophysics using a novel machine-learning validation technique.",
+      "editorial_note": "CSIRO's machine-learning imaging technique independently confirmed the iconic Event Horizon Telescope image of the M87 black hole in a Nature publication, giving AI methods a validated role in fundamental astrophysics.",
       "impact_category": "Scientific Breakthrough",
       "title": "New CSIRO technique confirms iconic black hole image",
       "url": "https://www.csiro.au/en/news/All/News/2026/November/confirm-black-hole",
@@ -32,29 +42,19 @@
       "published_date": "2026-11-12"
     },
     {
-      "rank": 4,
-      "article_id": 80095,
-      "editorial_note": "MIT CSAIL and Carnegie Mellon's new 'Workspace Models' memory approach addresses a core bottleneck in robot learning \u2014 letting robots recall past observations cheaply \u2014 with direct implications for practical embodied AI.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "A new form of memory helps robots learn complex skills",
-      "url": "https://www.csail.mit.edu/news/new-form-memory-helps-robots-learn-complex-skills",
-      "university": "MIT",
-      "published_date": "2026-11-10"
-    },
-    {
       "rank": 5,
-      "article_id": 80652,
-      "editorial_note": "A multi-institution Japanese collaboration's lightweight language-model approach to predicting material properties could meaningfully speed up materials discovery pipelines that are normally computationally expensive.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "\u8a00\u8a9e\u30e2\u30c7\u30eb\u3092\u7528\u3044\u305f\u6750\u6599\u7269\u6027\u306e\u4e88\u6e2c\u3092\u8efd\u91cf\u5316 | Science Tokyo - \u6771\u4eac\u79d1\u5b66\u5927\u5b66",
-      "url": "https://www.isct.ac.jp/ja/news/ps2kccai8nk0",
-      "university": "Institute of Science Tokyo",
-      "published_date": "2026-11-11"
+      "article_id": 81006,
+      "editorial_note": "Nvidia CEO Jensen Huang's resignation amid a national-security-linked scandal destabilizes leadership at the company most central to the global AI buildout, with ripple effects for AI research funding and hardware supply chains.",
+      "impact_category": "Policy Impact",
+      "title": "Nvidia seeks successor after Jensen Huang's exit wobbles AI industry",
+      "url": "https://news.northeastern.edu/2026/11/12/jensen-huang-resigns-nvidia-successor/",
+      "university": "Northeastern University",
+      "published_date": "2026-11-12"
     },
     {
       "rank": 6,
       "article_id": 79198,
-      "editorial_note": "HKUST's MoU with robotics maker Unitree, anchored to a planned joint lab, exemplifies the deepening academia-industry pipeline in embodied AI and signals significant Hong Kong investment in robotics talent and infrastructure.",
+      "editorial_note": "HKUST's MoU with robotics maker Unitree, building toward a joint lab, pairs a major research university with a leading embodied-AI hardware company \u2014 a concrete step toward commercializing academic robotics research.",
       "impact_category": "Strategic Partnership",
       "title": "HKUST and Unitree Sign MoU to Advance Embodied AI and Robotics Collaboration",
       "url": "https://hkust.edu.hk/news/hkust-and-unitree-sign-mou-advance-embodied-ai-and-robotics-collaboration",
@@ -64,7 +64,7 @@
     {
       "rank": 7,
       "article_id": 79643,
-      "editorial_note": "Atos and Inria's strategic partnership to commercialize sovereign AI research (physical AI, agentic AI, cybersecurity) reflects a national push for European AI industrial independence.",
+      "editorial_note": "Atos and Inria's strategic partnership to transfer AI and robotics research into sovereign industrial applications reflects Europe's push to build independent AI industrial capacity, spanning physical AI, agentic AI, and cybersecurity.",
       "impact_category": "Strategic Partnership",
       "title": "Atos and Inria enter into a strategic partnership to accelerate the transfer of research into sovereign industrial applications",
       "url": "https://www.inria.fr/en/atos-partenariat-strategique",
@@ -73,8 +73,18 @@
     },
     {
       "rank": 8,
+      "article_id": 80898,
+      "editorial_note": "Texas Tech's additional $19 million from the state's Semiconductor Innovation Fund will build an AI-integrated computing cluster for chip R&D, reinforcing a state-level strategy to tie AI infrastructure to domestic semiconductor manufacturing.",
+      "impact_category": "Major Funding",
+      "title": "Texas Tech Receives $19 Million Grant to Further Semiconductor Innovation | Texas Tech Now",
+      "url": "https://www.ttu.edu/now/posts/2026/11/texas-tech-receives-19-million-grant-to-further-semiconductor-innovation.php",
+      "university": "Texas Tech University",
+      "published_date": "2026-11-13"
+    },
+    {
+      "rank": 9,
       "article_id": 79819,
-      "editorial_note": "SMU's $4.2M NIST award to build a Digital Twin Technology Lab ties AI and HPC directly to semiconductor manufacturing workforce development, a strategically important industrial sector.",
+      "editorial_note": "SMU's $4.2 million NIST award to build a Digital Twin Technology Lab combining AI, robotics, and HPC for semiconductor manufacturing supports both industrial capacity and workforce training in a strategically critical sector.",
       "impact_category": "Major Funding",
       "title": "SMU awarded $4.2 million to advance AI-driven manufacturing and workforce training",
       "url": "https://www.smu.edu/news/research/advancing-ai-driven-manufacturing-and-workforce-training",
@@ -82,24 +92,14 @@
       "published_date": "2026-11-09"
     },
     {
-      "rank": 9,
-      "article_id": 79994,
-      "editorial_note": "A $5M NSF multi-institutional grant led by the University of Georgia to build an open experimental wireless network for extended reality shows sustained federal investment in AI-adjacent next-generation infrastructure.",
-      "impact_category": "Major Funding",
-      "title": "$5M NSF grant to grow extended reality technologies",
-      "url": "https://news.uga.edu/extended-reality-grant/",
-      "university": "University of Georgia",
-      "published_date": "2026-11-10"
-    },
-    {
       "rank": 10,
-      "article_id": 79616,
-      "editorial_note": "Northeastern's analysis of the Nvidia CEO espionage-linked scandal raises serious national security questions about the leadership of the company at the center of the global AI hardware supply chain.",
-      "impact_category": "Policy Impact",
-      "title": "Nvidia CEO\u2019s scandal raises questions about US national security",
-      "url": "https://news.northeastern.edu/2026/11/09/nvidia-ceo-scandal-national-security/",
-      "university": "Northeastern University",
-      "published_date": "2026-11-09"
+      "article_id": 80095,
+      "editorial_note": "MIT CSAIL and Carnegie Mellon's 'Workspace Models' give robots a new memory mechanism to recall past observations without costly re-sensing, a practical advance toward more capable and efficient autonomous robots.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "A new form of memory helps robots learn complex skills",
+      "url": "https://www.csail.mit.edu/news/new-form-memory-helps-robots-learn-complex-skills",
+      "university": "MIT",
+      "published_date": "2026-11-10"
     }
   ]
 }
