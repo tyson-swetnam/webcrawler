@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-15T09:07:14",
+  "generated_at": "2026-11-15T15:19:08",
   "picks": [
     {
       "rank": 1,
       "article_id": 81081,
-      "editorial_note": "An AI model (Omnii) designed a bacteriophage used in the first-ever treatment of a patient with an antibiotic-resistant infection \u2014 a genuine proof point that generative AI can produce real therapeutics, not just predictions.",
+      "editorial_note": "An AI model designed a bacteriophage used in the first-ever treatment of a patient with an antibiotic-resistant infection \u2014 a striking real-world demonstration of AI accelerating therapeutic design.",
       "impact_category": "Scientific Breakthrough",
       "title": "This time, the virus is on the patient\u2019s side. AI helped design it",
       "url": "https://news.northeastern.edu/2026/11/13/phage-therapy-ai-designed-virus/",
@@ -13,18 +13,8 @@
     },
     {
       "rank": 2,
-      "article_id": 80612,
-      "editorial_note": "CSIRO's AI-based imaging technique independently confirmed the iconic 2019 Event Horizon Telescope black hole image in a Nature publication, validating one of astrophysics' most famous results through an entirely new method.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "New CSIRO technique confirms iconic black hole image",
-      "url": "https://www.csiro.au/en/news/All/News/2026/November/confirm-black-hole",
-      "university": "CSIRO",
-      "published_date": "2026-11-12"
-    },
-    {
-      "rank": 3,
       "article_id": 79611,
-      "editorial_note": "MIT and UBC researchers built WorldParticle, a single deep-learning model that unifies simulation of wildly different physical phenomena \u2014 from sand to protein folding \u2014 a notable step toward general-purpose physics AI.",
+      "editorial_note": "MIT and UBC's WorldParticle model unifies simulation of wildly different physical phenomena, from sand to proteins, in a single deep-learning framework \u2014 a significant step toward general-purpose physics AI.",
       "impact_category": "Scientific Breakthrough",
       "title": "A single AI model simulates the behavior of many substances, from sliding sand to folding proteins",
       "url": "https://www.eecs.mit.edu/a-single-ai-model-simulates-the-behavior-of-many-substances-from-sliding-sand-to-folding-proteins/",
@@ -32,39 +22,39 @@
       "published_date": "2026-11-09"
     },
     {
+      "rank": 3,
+      "article_id": 80612,
+      "editorial_note": "CSIRO's AI imaging technique independently confirmed the landmark Event Horizon Telescope black hole image in a Nature publication, validating a cornerstone result in astrophysics.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "New CSIRO technique confirms iconic black hole image",
+      "url": "https://www.csiro.au/en/news/All/News/2026/November/confirm-black-hole",
+      "university": "CSIRO",
+      "published_date": "2026-11-12"
+    },
+    {
       "rank": 4,
-      "article_id": 79616,
-      "editorial_note": "Nvidia CEO Jensen Huang's scandal and its national-security implications touch the company at the center of the global AI compute supply chain, raising real policy and export-control concerns.",
-      "impact_category": "Policy Impact",
-      "title": "Nvidia CEO\u2019s scandal raises questions about US national security",
-      "url": "https://news.northeastern.edu/2026/11/09/nvidia-ceo-scandal-national-security/",
-      "university": "Northeastern University",
-      "published_date": "2026-11-09"
+      "article_id": 80073,
+      "editorial_note": "A $53M ARPA-H award lets an MIT-led team use generative AI to design safer herbicide alternatives, pairing major federal funding with a concrete public-health and agricultural application.",
+      "impact_category": "Major Funding",
+      "title": "MIT-led team receives funding to develop next-generation alternatives to modern weed killers",
+      "url": "https://www.eecs.mit.edu/mit-led-team-receives-funding-to-develop-next-generation-alternatives-to-modern-weed-killers/",
+      "university": "MIT",
+      "published_date": "2026-11-10"
     },
     {
       "rank": 5,
-      "article_id": 81137,
-      "editorial_note": "A $53M ARPA-H award to an MIT-led team to use generative AI for discovering safer herbicide alternatives is a substantial federal bet on AI-driven chemistry with direct agricultural and public-health stakes.",
-      "impact_category": "Major Funding",
-      "title": "MIT-led team receives funding to develop next-generation alternatives to modern weed killers",
-      "url": "https://www.csail.mit.edu/news/mit-led-team-receives-funding-develop-next-generation-alternatives-modern-weed-killers",
+      "article_id": 80095,
+      "editorial_note": "MIT CSAIL and CMU's 'Workspace Models' give robots a new memory mechanism to recall past observations cheaply, addressing a key bottleneck in robot learning.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "A new form of memory helps robots learn complex skills",
+      "url": "https://www.csail.mit.edu/news/new-form-memory-helps-robots-learn-complex-skills",
       "university": "MIT",
       "published_date": "2026-11-10"
     },
     {
       "rank": 6,
-      "article_id": 79643,
-      "editorial_note": "Atos and Inria's strategic partnership to commercialize sovereign AI, robotics, and cybersecurity research reflects a growing push by European governments and industry to reduce dependence on non-domestic AI infrastructure.",
-      "impact_category": "Strategic Partnership",
-      "title": "Atos and Inria enter into a strategic partnership to accelerate the transfer of research into sovereign industrial applications",
-      "url": "https://www.inria.fr/en/atos-partenariat-strategique",
-      "university": "INRIA",
-      "published_date": "2026-11-10"
-    },
-    {
-      "rank": 7,
       "article_id": 79198,
-      "editorial_note": "HKUST's MoU with robotics maker Unitree, building toward a joint lab, signals deepening academia-industry integration in embodied AI, a fast-growing and strategically important robotics subfield.",
+      "editorial_note": "HKUST's MoU with robotics maker Unitree, anchored by a planned joint lab, signals deepening academia-industry integration in embodied AI and robotics.",
       "impact_category": "Strategic Partnership",
       "title": "HKUST and Unitree Sign MoU to Advance Embodied AI and Robotics Collaboration",
       "url": "https://hkust.edu.hk/news/hkust-and-unitree-sign-mou-advance-embodied-ai-and-robotics-collaboration",
@@ -72,9 +62,19 @@
       "published_date": "2026-11-09"
     },
     {
+      "rank": 7,
+      "article_id": 79643,
+      "editorial_note": "Atos and Inria's strategic partnership aims to move sovereign AI research \u2014 spanning agentic AI, robotics, and cybersecurity \u2014 into industrial deployment, a notable academia-industry alignment with national strategic stakes.",
+      "impact_category": "Strategic Partnership",
+      "title": "Atos and Inria enter into a strategic partnership to accelerate the transfer of research into sovereign industrial applications",
+      "url": "https://www.inria.fr/en/atos-partenariat-strategique",
+      "university": "INRIA",
+      "published_date": "2026-11-10"
+    },
+    {
       "rank": 8,
       "article_id": 80898,
-      "editorial_note": "A $19M state grant to Texas Tech for an AI-integrated computing cluster for semiconductor R&D underscores how AI and advanced chip manufacturing are becoming inseparable strategic priorities.",
+      "editorial_note": "A $19M state grant lets Texas Tech build an AI-integrated computing cluster for semiconductor research, reinforcing public investment in AI-driven chip innovation.",
       "impact_category": "Major Funding",
       "title": "Texas Tech Receives $19 Million Grant to Further Semiconductor Innovation | Texas Tech Now",
       "url": "https://www.ttu.edu/now/posts/2026/11/texas-tech-receives-19-million-grant-to-further-semiconductor-innovation.php",
@@ -83,23 +83,23 @@
     },
     {
       "rank": 9,
-      "article_id": 80095,
-      "editorial_note": "MIT CSAIL and Carnegie Mellon researchers' new 'Workspace Models' memory architecture lets robots recall past observations cheaply, addressing a core bottleneck in making robots practically capable over time.",
+      "article_id": 80652,
+      "editorial_note": "Science Tokyo's ZEBRA-Prop lightens the computational cost of predicting material properties from language models, a practical advance for AI-driven materials discovery.",
       "impact_category": "Scientific Breakthrough",
-      "title": "A new form of memory helps robots learn complex skills",
-      "url": "https://www.csail.mit.edu/news/new-form-memory-helps-robots-learn-complex-skills",
-      "university": "MIT",
-      "published_date": "2026-11-10"
+      "title": "\u8a00\u8a9e\u30e2\u30c7\u30eb\u3092\u7528\u3044\u305f\u6750\u6599\u7269\u6027\u306e\u4e88\u6e2c\u3092\u8efd\u91cf\u5316 | Science Tokyo - \u6771\u4eac\u79d1\u5b66\u5927\u5b66",
+      "url": "https://www.isct.ac.jp/ja/news/ps2kccai8nk0",
+      "university": "Institute of Science Tokyo",
+      "published_date": "2026-11-11"
     },
     {
       "rank": 10,
-      "article_id": 79994,
-      "editorial_note": "A $5M NSF grant led by the University of Georgia to build an open radio access network for AI-optimized extended reality shows continued federal investment in AI-driven next-generation wireless infrastructure.",
-      "impact_category": "Major Funding",
-      "title": "$5M NSF grant to grow extended reality technologies",
-      "url": "https://news.uga.edu/extended-reality-grant/",
-      "university": "University of Georgia",
-      "published_date": "2026-11-10"
+      "article_id": 79616,
+      "editorial_note": "A Northeastern analysis ties Nvidia's leadership controversy to national-security concerns over AI hardware supply chains, highlighting the policy stakes surrounding AI's critical infrastructure.",
+      "impact_category": "Policy Impact",
+      "title": "Nvidia CEO\u2019s scandal raises questions about US national security",
+      "url": "https://news.northeastern.edu/2026/11/09/nvidia-ceo-scandal-national-security/",
+      "university": "Northeastern University",
+      "published_date": "2026-11-09"
     }
   ]
 }
