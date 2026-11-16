@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-16T09:10:37",
+  "generated_at": "2026-11-16T15:29:48",
   "picks": [
     {
       "rank": 1,
       "article_id": 81081,
-      "editorial_note": "An AI model designed a bacteriophage used in the first-ever treatment of a patient with an antibiotic-resistant infection, demonstrating a genuine life-saving application of generative AI in medicine.",
+      "editorial_note": "Biotech firms used an AI model to design bacteriophages for the first-ever treatment of a patient with an antibiotic-resistant infection \u2014 a genuine clinical breakthrough showing AI-designed therapeutics moving from concept to bedside.",
       "impact_category": "Scientific Breakthrough",
       "title": "This time, the virus is on the patient\u2019s side. AI helped design it",
       "url": "https://news.northeastern.edu/2026/11/13/phage-therapy-ai-designed-virus/",
@@ -14,7 +14,7 @@
     {
       "rank": 2,
       "article_id": 80612,
-      "editorial_note": "CSIRO's AI-based imaging technique independently validated the landmark Event Horizon Telescope image of the M87 black hole, with results published in Nature \u2014 a rare cross-confirmation of a major astrophysics discovery.",
+      "editorial_note": "CSIRO's ML-based imaging technique independently validated the iconic Event Horizon Telescope black hole image in Nature, demonstrating AI's growing role in confirming fundamental physics results.",
       "impact_category": "Scientific Breakthrough",
       "title": "New CSIRO technique confirms iconic black hole image",
       "url": "https://www.csiro.au/en/news/All/News/2026/November/confirm-black-hole",
@@ -24,7 +24,7 @@
     {
       "rank": 3,
       "article_id": 81137,
-      "editorial_note": "An MIT-led team secured up to $53 million from ARPA-H to use generative AI for discovering safer next-generation herbicides, one of the largest single funding awards of the week.",
+      "editorial_note": "A $53 million ARPA-H award to an MIT-led team to use generative AI for discovering safer herbicide alternatives is a substantial federal bet on AI-driven chemical discovery with direct agricultural and health implications.",
       "impact_category": "Major Funding",
       "title": "MIT-led team receives funding to develop next-generation alternatives to modern weed killers",
       "url": "https://www.csail.mit.edu/news/mit-led-team-receives-funding-develop-next-generation-alternatives-modern-weed-killers",
@@ -33,18 +33,18 @@
     },
     {
       "rank": 4,
-      "article_id": 80898,
-      "editorial_note": "Texas Tech's additional $19 million state grant will build an AI-integrated computing cluster for semiconductor research, reinforcing a strategic state investment in chip innovation.",
-      "impact_category": "Major Funding",
-      "title": "Texas Tech Receives $19 Million Grant to Further Semiconductor Innovation | Texas Tech Now",
-      "url": "https://www.ttu.edu/now/posts/2026/11/texas-tech-receives-19-million-grant-to-further-semiconductor-innovation.php",
-      "university": "Texas Tech University",
-      "published_date": "2026-11-13"
+      "article_id": 80095,
+      "editorial_note": "MIT CSAIL and CMU researchers' new 'Workspace Models' memory approach lets robots recall past observations cheaply, a meaningful technical advance for practical robot learning.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "A new form of memory helps robots learn complex skills",
+      "url": "https://www.csail.mit.edu/news/new-form-memory-helps-robots-learn-complex-skills",
+      "university": "MIT",
+      "published_date": "2026-11-10"
     },
     {
       "rank": 5,
       "article_id": 79643,
-      "editorial_note": "Atos and Inria's strategic partnership aims to transfer AI, robotics, and cybersecurity research into sovereign industrial applications, a notable academia-industry alignment with national strategic stakes.",
+      "editorial_note": "Atos and Inria's strategic partnership to commercialize sovereign AI, robotics, and cybersecurity research signals deepening industry-academia ties around European AI sovereignty.",
       "impact_category": "Strategic Partnership",
       "title": "Atos and Inria enter into a strategic partnership to accelerate the transfer of research into sovereign industrial applications",
       "url": "https://www.inria.fr/en/atos-partenariat-strategique",
@@ -53,28 +53,28 @@
     },
     {
       "rank": 6,
-      "article_id": 80095,
-      "editorial_note": "MIT and Carnegie Mellon researchers developed 'Workspace Models,' a new memory mechanism letting robots recall past observations efficiently \u2014 a meaningful advance for practical robot autonomy.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "A new form of memory helps robots learn complex skills",
-      "url": "https://www.csail.mit.edu/news/new-form-memory-helps-robots-learn-complex-skills",
-      "university": "MIT",
-      "published_date": "2026-11-10"
+      "article_id": 80898,
+      "editorial_note": "A $19 million grant lets Texas Tech build a next-generation computing cluster integrating AI with simulation, strengthening the US semiconductor research pipeline.",
+      "impact_category": "Major Funding",
+      "title": "Texas Tech Receives $19 Million Grant to Further Semiconductor Innovation | Texas Tech Now",
+      "url": "https://www.ttu.edu/now/posts/2026/11/texas-tech-receives-19-million-grant-to-further-semiconductor-innovation.php",
+      "university": "Texas Tech University",
+      "published_date": "2026-11-13"
     },
     {
       "rank": 7,
-      "article_id": 81006,
-      "editorial_note": "Nvidia CEO Jensen Huang's resignation amid a national-security-linked scandal triggered a government investigation and rattled the broader AI industry, with implications for AI hardware supply and policy.",
-      "impact_category": "Policy Impact",
-      "title": "Nvidia seeks successor after Jensen Huang's exit wobbles AI industry",
-      "url": "https://news.northeastern.edu/2026/11/12/jensen-huang-resigns-nvidia-successor/",
-      "university": "Northeastern University",
-      "published_date": "2026-11-12"
+      "article_id": 81903,
+      "editorial_note": "Michigan Tech and UCLA's finding that materials-property AI models need far less training data than assumed could significantly lower the cost of AI-driven materials discovery.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Less Data, Faster Discovery: Researchers Rethink AI\u2019s Role in Developing New Materials",
+      "url": "https://www.mtu.edu/news/2026/11/less-data-faster-discovery-researchers-rethink-ais-role-in-developing-new-materials.html",
+      "university": "Michigan Technological University",
+      "published_date": "2026-11-16"
     },
     {
       "rank": 8,
       "article_id": 80652,
-      "editorial_note": "Researchers at Science Tokyo, Yokohama City University, and Tohoku University built ZEBRA-Prop, a lightweight language-model method for predicting material properties, lowering the computational barrier to AI-driven materials science.",
+      "editorial_note": "Science Tokyo's ZEBRA-Prop method lightens the computational cost of predicting material properties from language-based descriptions, a useful efficiency gain for AI-assisted materials science.",
       "impact_category": "Scientific Breakthrough",
       "title": "\u8a00\u8a9e\u30e2\u30c7\u30eb\u3092\u7528\u3044\u305f\u6750\u6599\u7269\u6027\u306e\u4e88\u6e2c\u3092\u8efd\u91cf\u5316 | Science Tokyo - \u6771\u4eac\u79d1\u5b66\u5927\u5b66",
       "url": "https://www.isct.ac.jp/ja/news/ps2kccai8nk0",
@@ -84,7 +84,7 @@
     {
       "rank": 9,
       "article_id": 81169,
-      "editorial_note": "MIT's new quantization method addresses the KV cache memory bottleneck in large language models, promising faster and cheaper inference \u2014 work set to be presented at NeurIPS.",
+      "editorial_note": "MIT's new quantization method tackling the KV cache memory bottleneck in large language models, headed to NeurIPS, addresses a core efficiency problem in LLM deployment.",
       "impact_category": "Scientific Breakthrough",
       "title": "Faster data compression through quantization",
       "url": "https://www.csail.mit.edu/news/faster-data-compression-through-quantization",
@@ -93,13 +93,13 @@
     },
     {
       "rank": 10,
-      "article_id": 81140,
-      "editorial_note": "Nokia's 1.5 million euro donation and expanded annual R&D commitment to Aalto University strengthens industry-academic ties in energy-efficient network research tied to AI infrastructure.",
-      "impact_category": "Strategic Partnership",
-      "title": "Nokia donates 1.5 million euros to Aalto University and strengthens R&D collaboration | Aalto University",
-      "url": "https://www.aalto.fi/en/news/nokia-donates-15-million-euros-to-aalto-university-and-strengthens-rd-collaboration",
-      "university": "Aalto University",
-      "published_date": "2026-11-12"
+      "article_id": 79961,
+      "editorial_note": "A UConn symposium scrutinizing a planned $1 billion, 15-year AI investment in social services highlights real policy stakes for how AI affects vulnerable populations.",
+      "impact_category": "Policy Impact",
+      "title": "Experts Explore How AI Could Affect Vulnerable Communities, Social Service Providers - UConn Today",
+      "url": "https://today.uconn.edu/2026/11/socialwork_ai_symposium/",
+      "university": "University of Connecticut",
+      "published_date": "2026-11-10"
     }
   ]
 }
