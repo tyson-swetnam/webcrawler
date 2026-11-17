@@ -1,10 +1,20 @@
 {
-  "generated_at": "2026-11-17T09:07:53",
+  "generated_at": "2026-11-17T15:25:25",
   "picks": [
     {
       "rank": 1,
+      "article_id": 82189,
+      "editorial_note": "A $334 million grant to build a new national supercomputing system is one of the largest single AI-infrastructure investments of the year, dramatically expanding shared access to advanced computing for scientific discovery.",
+      "impact_category": "Major Funding",
+      "title": "NCSA Joins the Schmidt Science Computing Network to Expand Advanced Computing for Scientific Discovery",
+      "url": "https://www.ncsa.illinois.edu/2026/11/16/ncsa-joins-the-schmidt-science-computing-network-to-expand-advanced-computing-for-scientific-discovery/",
+      "university": "National Center for Supercomputing Applications",
+      "published_date": "2026-11-16"
+    },
+    {
+      "rank": 2,
       "article_id": 81081,
-      "editorial_note": "An AI model designed a custom bacteriophage used in the first-ever treatment of a patient with an antibiotic-resistant infection \u2014 a striking proof that generative AI can produce functional biological therapeutics, not just predictions.",
+      "editorial_note": "AI-designed bacteriophages were used in the first-ever treatment of a patient with an antibiotic-resistant infection, a genuine breakthrough demonstrating AI's ability to design functional biological therapies with immediate clinical stakes.",
       "impact_category": "Scientific Breakthrough",
       "title": "This time, the virus is on the patient\u2019s side. AI helped design it",
       "url": "https://news.northeastern.edu/2026/11/13/phage-therapy-ai-designed-virus/",
@@ -12,19 +22,19 @@
       "published_date": "2026-11-13"
     },
     {
-      "rank": 2,
-      "article_id": 81006,
-      "editorial_note": "Nvidia's CEO exit amid a national-security investigation threatens to destabilize the company at the center of the global AI compute supply chain, with ripple effects for every lab and university depending on its hardware.",
-      "impact_category": "Policy Impact",
-      "title": "Nvidia seeks successor after Jensen Huang's exit wobbles AI industry",
-      "url": "https://news.northeastern.edu/2026/11/12/jensen-huang-resigns-nvidia-successor/",
-      "university": "Northeastern University",
-      "published_date": "2026-11-12"
+      "rank": 3,
+      "article_id": 82298,
+      "editorial_note": "UC Berkeley and Berkeley Lab's entry into the Schmidt Science Computing Network, anchored by a major grant establishing the Berkeley Science AI Platform at NERSC, signals a coordinated national push to pair elite AI compute with frontier science.",
+      "impact_category": "Major Funding",
+      "title": "UC Berkeley, Berkeley Lab collaboration with Schmidt Science Computing Network will Provide High Performance Computing for Cutting-Edge Research - NERSC: National Energy Research Scientific Computing Center",
+      "url": "https://www.nersc.gov/news-and-events/news/uc-berkeley-berkeley-lab-collaboration-with-schmidt-science-computing-network-will-provide-high-performance-computing-for-cutting-edge-research",
+      "university": "NERSC",
+      "published_date": "2026-11-16"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "article_id": 80612,
-      "editorial_note": "An independent machine-learning technique confirmed the iconic Event Horizon Telescope image of the M87 black hole in Nature, showing AI can rigorously validate \u2014 not just generate \u2014 landmark scientific findings.",
+      "editorial_note": "An independent machine-learning technique that confirmed the iconic Event Horizon Telescope image of the M87 black hole, published in Nature, is a notable validation of AI's growing role in fundamental physics.",
       "impact_category": "Scientific Breakthrough",
       "title": "New CSIRO technique confirms iconic black hole image",
       "url": "https://www.csiro.au/en/news/All/News/2026/November/confirm-black-hole",
@@ -32,29 +42,19 @@
       "published_date": "2026-11-12"
     },
     {
-      "rank": 4,
-      "article_id": 81903,
-      "editorial_note": "Michigan Tech and UCLA researchers overturned assumptions about how much training data AI needs for materials-science prediction, a finding that could sharply cut the cost of AI-driven materials discovery.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Less Data, Faster Discovery: Researchers Rethink AI\u2019s Role in Developing New Materials",
-      "url": "https://www.mtu.edu/news/2026/11/less-data-faster-discovery-researchers-rethink-ais-role-in-developing-new-materials.html",
-      "university": "Michigan Technological University",
-      "published_date": "2026-11-16"
-    },
-    {
       "rank": 5,
-      "article_id": 80652,
-      "editorial_note": "Science Tokyo's ZEBRA-Prop offers a lightweight, language-model-based approach to predicting material properties, broadening access to AI-accelerated materials research beyond groups with heavy compute budgets.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "\u8a00\u8a9e\u30e2\u30c7\u30eb\u3092\u7528\u3044\u305f\u6750\u6599\u7269\u6027\u306e\u4e88\u6e2c\u3092\u8efd\u91cf\u5316 | Science Tokyo - \u6771\u4eac\u79d1\u5b66\u5927\u5b66",
-      "url": "https://www.isct.ac.jp/ja/news/ps2kccai8nk0",
-      "university": "Institute of Science Tokyo",
-      "published_date": "2026-11-11"
+      "article_id": 81006,
+      "editorial_note": "Nvidia CEO Jensen Huang's resignation amid a national-security scandal is a seismic event for the AI industry, triggering a government investigation and leadership uncertainty at the company whose chips underpin nearly all frontier AI research.",
+      "impact_category": "Policy Impact",
+      "title": "Nvidia seeks successor after Jensen Huang's exit wobbles AI industry",
+      "url": "https://news.northeastern.edu/2026/11/12/jensen-huang-resigns-nvidia-successor/",
+      "university": "Northeastern University",
+      "published_date": "2026-11-12"
     },
     {
       "rank": 6,
       "article_id": 80898,
-      "editorial_note": "A $19 million state grant lets Texas Tech build a next-generation computing cluster fusing AI with high-fidelity simulation, a concrete investment in regional semiconductor R&D infrastructure.",
+      "editorial_note": "A further $19 million state grant to Texas Tech for a semiconductor-AI computing cluster reflects the growing state-level investment race in domestic chip and compute capacity tied to AI research.",
       "impact_category": "Major Funding",
       "title": "Texas Tech Receives $19 Million Grant to Further Semiconductor Innovation | Texas Tech Now",
       "url": "https://www.ttu.edu/now/posts/2026/11/texas-tech-receives-19-million-grant-to-further-semiconductor-innovation.php",
@@ -63,8 +63,28 @@
     },
     {
       "rank": 7,
+      "article_id": 81903,
+      "editorial_note": "Research showing AI models can predict materials' electronic structures with far less training data than assumed could substantially lower the cost and barrier to AI-accelerated materials discovery across the field.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Less Data, Faster Discovery: Researchers Rethink AI\u2019s Role in Developing New Materials",
+      "url": "https://www.mtu.edu/news/2026/11/less-data-faster-discovery-researchers-rethink-ais-role-in-developing-new-materials.html",
+      "university": "Michigan Technological University",
+      "published_date": "2026-11-16"
+    },
+    {
+      "rank": 8,
+      "article_id": 82557,
+      "editorial_note": "Imperial College London and France's CNRS launching a joint international laboratory applying AI to metabolic disease research marks a significant cross-border academic-government partnership with direct global-health applications.",
+      "impact_category": "Strategic Partnership",
+      "title": "Metabolism, AI and global health: Imperial and France's CNRS celebrate launch of joint laboratory",
+      "url": "https://www.imperial.ac.uk/news/articles/2026/metabolism-ai-and-global-health-imperial-and-frances-cnrs-celebrate-launch-of-joint-laboratory/",
+      "university": "Imperial College London",
+      "published_date": "2026-11-16"
+    },
+    {
+      "rank": 9,
       "article_id": 81169,
-      "editorial_note": "MIT's new quantization method tackles the KV-cache memory bottleneck in large language models, a NeurIPS-bound advance that could meaningfully cut the cost of running LLMs at scale.",
+      "editorial_note": "A new MIT quantization method addressing the KV cache memory bottleneck in large language models, headed for presentation at NeurIPS, tackles a core efficiency constraint limiting how AI systems can be deployed at scale.",
       "impact_category": "Scientific Breakthrough",
       "title": "Faster data compression through quantization",
       "url": "https://www.csail.mit.edu/news/faster-data-compression-through-quantization",
@@ -72,34 +92,14 @@
       "published_date": "2026-11-12"
     },
     {
-      "rank": 8,
-      "article_id": 81845,
-      "editorial_note": "Indiana University's new Applied Research Center formalizes university-wide ties with government and industry on AI-related national security priorities, signaling deeper academia-government integration.",
-      "impact_category": "Strategic Partnership",
-      "title": "Indiana University expands national security research partnerships through Applied Research Center",
-      "url": "https://news.iu.edu/live/news/54545-indiana-university-expands-national-security",
-      "university": "Indiana University Pervasive Technology Institute",
-      "published_date": "2026-11-16"
-    },
-    {
-      "rank": 9,
-      "article_id": 81088,
-      "editorial_note": "A $1 million NSF award backs a Syracuse-Notre Dame-UT San Antonio effort to build implantable medical devices that adapt to individual patients, pairing AI with direct clinical application.",
-      "impact_category": "Major Funding",
-      "title": "New Research Explores Medical Devices That Adapt to Each Patient",
-      "url": "https://news.syr.edu/2026/11/13/new-research-explores-medical-devices-that-adapt-to-each-patient/",
-      "university": "Syracuse University",
-      "published_date": "2026-11-13"
-    },
-    {
       "rank": 10,
-      "article_id": 81012,
-      "editorial_note": "UC Riverside's role in the $4.8 million AERONET project applies AI-coordinated networking to aviation safety communications, a tangible infrastructure payoff from federally funded AI research.",
-      "impact_category": "Major Funding",
-      "title": "UCR joins $4.8 million aviation safety endeavor",
-      "url": "https://news.ucr.edu/articles/2026/11/13/ucr-joins-48-million-aviation-safety-endeavor",
-      "university": "University of California-Riverside",
-      "published_date": "2026-11-13"
+      "article_id": 82470,
+      "editorial_note": "A pointed critique from University of Amsterdam legal scholars that the EU's proposed Cloud and AI Development Act doesn't go far enough highlights an active, consequential policy debate over Europe's digital sovereignty from US cloud and AI providers.",
+      "impact_category": "Policy Impact",
+      "title": "'EU plan for cloud and AI falls short on digital autonomy'",
+      "url": "https://www.uva.nl/en/news/2026/eu-plan-for-cloud-and-ai-falls-short-on-digital-autonomy",
+      "university": "University of Amsterdam",
+      "published_date": "2026-11-12"
     }
   ]
 }
