@@ -4,7 +4,7 @@ Automated daily news aggregator tracking AI research and developments from 380+ 
 
 **Live Site:** https://tyson-swetnam.github.io/webcrawler
 
-**Last Updated:** 2026-11-17 16:15 UTC
+**Last Updated:** 2026-11-18 16:35 UTC
 
 ## About
 
