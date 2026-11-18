@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-17T21:06:41",
+  "generated_at": "2026-11-18T03:15:10",
   "picks": [
     {
       "rank": 1,
       "article_id": 82189,
-      "editorial_note": "A $334 million grant from Schmidt Sciences to build a new national supercomputing system is one of the largest single investments in AI research infrastructure this year, dramatically expanding capacity for scientific discovery nationwide.",
+      "editorial_note": "A $334 million grant to acquire and operate a new supercomputer is one of the largest single AI-infrastructure investments of the year, dramatically expanding national research computing capacity.",
       "impact_category": "Major Funding",
       "title": "NCSA Joins the Schmidt Science Computing Network to Expand Advanced Computing for Scientific Discovery",
       "url": "https://www.ncsa.illinois.edu/2026/11/16/ncsa-joins-the-schmidt-science-computing-network-to-expand-advanced-computing-for-scientific-discovery/",
@@ -14,7 +14,7 @@
     {
       "rank": 2,
       "article_id": 82298,
-      "editorial_note": "UC Berkeley and Berkeley Lab's entry into the same Schmidt Science Computing Network, establishing the Berkeley Science AI Platform at NERSC, shows the initiative is building a coordinated national HPC backbone rather than a single isolated grant.",
+      "editorial_note": "UC Berkeley and Berkeley Lab's entry into the same Schmidt Science Computing Network establishes the Berkeley Science AI Platform at NERSC, pairing a major philanthropic investment with a flagship DOE facility to accelerate AI-driven science.",
       "impact_category": "Major Funding",
       "title": "UC Berkeley, Berkeley Lab collaboration with Schmidt Science Computing Network will Provide High Performance Computing for Cutting-Edge Research - NERSC: National Energy Research Scientific Computing Center",
       "url": "https://www.nersc.gov/news-and-events/news/uc-berkeley-berkeley-lab-collaboration-with-schmidt-science-computing-network-will-provide-high-performance-computing-for-cutting-edge-research",
@@ -24,7 +24,7 @@
     {
       "rank": 3,
       "article_id": 81081,
-      "editorial_note": "An AI model designed a bacteriophage used in the first-ever treatment of a patient with an antibiotic-resistant infection, a landmark proof that generative AI can produce functional biological therapeutics with direct clinical impact.",
+      "editorial_note": "An AI model designed a bacteriophage used in the first-ever treatment of a patient with an antibiotic-resistant infection, a genuine real-world clinical application of generative AI in medicine.",
       "impact_category": "Scientific Breakthrough",
       "title": "This time, the virus is on the patient\u2019s side. AI helped design it",
       "url": "https://news.northeastern.edu/2026/11/13/phage-therapy-ai-designed-virus/",
@@ -34,7 +34,7 @@
     {
       "rank": 4,
       "article_id": 80612,
-      "editorial_note": "An independent machine-learning technique confirmed the iconic Event Horizon Telescope image of the M87 black hole in a Nature publication, a significant validation of one of astrophysics' most famous results using AI methods.",
+      "editorial_note": "An independent AI-based imaging technique confirmed the landmark Event Horizon Telescope black hole image in Nature, validating one of astrophysics' most iconic results with machine learning.",
       "impact_category": "Scientific Breakthrough",
       "title": "New CSIRO technique confirms iconic black hole image",
       "url": "https://www.csiro.au/en/news/All/News/2026/November/confirm-black-hole",
@@ -43,8 +43,18 @@
     },
     {
       "rank": 5,
+      "article_id": 81006,
+      "editorial_note": "Nvidia's CEO resignation amid a national-security investigation is a shock to the AI industry's leadership and supply chain, with implications far beyond any single company.",
+      "impact_category": "Policy Impact",
+      "title": "Nvidia seeks successor after Jensen Huang's exit wobbles AI industry",
+      "url": "https://news.northeastern.edu/2026/11/12/jensen-huang-resigns-nvidia-successor/",
+      "university": "Northeastern University",
+      "published_date": "2026-11-12"
+    },
+    {
+      "rank": 6,
       "article_id": 80898,
-      "editorial_note": "A fresh $19 million state grant to Texas Tech for a next-generation AI-and-simulation computing cluster signals growing state-level investment in building regional semiconductor and AI research capacity.",
+      "editorial_note": "A $19 million state grant to build an AI-integrated computing cluster for semiconductor research strengthens the link between AI and domestic chip manufacturing capacity.",
       "impact_category": "Major Funding",
       "title": "Texas Tech Receives $19 Million Grant to Further Semiconductor Innovation | Texas Tech Now",
       "url": "https://www.ttu.edu/now/posts/2026/11/texas-tech-receives-19-million-grant-to-further-semiconductor-innovation.php",
@@ -52,9 +62,9 @@
       "published_date": "2026-11-13"
     },
     {
-      "rank": 6,
+      "rank": 7,
       "article_id": 82557,
-      "editorial_note": "Imperial College London and France's CNRS launched a joint international laboratory applying AI to multiscale metabolism research, an example of deepening transatlantic academic collaboration aimed at global health challenges.",
+      "editorial_note": "A new Imperial College London-CNRS joint laboratory applying AI to metabolic disease research exemplifies substantive transatlantic academic partnership with real scientific ambition.",
       "impact_category": "Strategic Partnership",
       "title": "Metabolism, AI and global health: Imperial and France's CNRS celebrate launch of joint laboratory",
       "url": "https://www.imperial.ac.uk/news/articles/2026/metabolism-ai-and-global-health-imperial-and-frances-cnrs-celebrate-launch-of-joint-laboratory/",
@@ -62,19 +72,9 @@
       "published_date": "2026-11-16"
     },
     {
-      "rank": 7,
-      "article_id": 82470,
-      "editorial_note": "University of Amsterdam legal scholars' critique that the EU's proposed Cloud and AI Development Act doesn't go far enough to reduce dependence on US cloud providers highlights a live policy fight over European digital sovereignty.",
-      "impact_category": "Policy Impact",
-      "title": "'EU plan for cloud and AI falls short on digital autonomy'",
-      "url": "https://www.uva.nl/en/news/2026/eu-plan-for-cloud-and-ai-falls-short-on-digital-autonomy",
-      "university": "University of Amsterdam",
-      "published_date": "2026-11-12"
-    },
-    {
       "rank": 8,
       "article_id": 81903,
-      "editorial_note": "A Michigan Tech-UCLA study showing AI models need far less training data than assumed to predict materials' electronic structures could substantially lower the cost and speed of AI-driven materials discovery.",
+      "editorial_note": "Findings that AI models need far less training data than assumed to predict materials' electronic structures could meaningfully lower the cost and barrier to AI-driven materials discovery.",
       "impact_category": "Scientific Breakthrough",
       "title": "Less Data, Faster Discovery: Researchers Rethink AI\u2019s Role in Developing New Materials",
       "url": "https://www.mtu.edu/news/2026/11/less-data-faster-discovery-researchers-rethink-ais-role-in-developing-new-materials.html",
@@ -83,23 +83,23 @@
     },
     {
       "rank": 9,
-      "article_id": 82198,
-      "editorial_note": "The University of Kansas's new master research agreement with cybersecurity firm SOFTwarfare reflects a growing pattern of universities formalizing direct industry partnerships around trustworthy and secure AI systems.",
-      "impact_category": "Strategic Partnership",
-      "title": "KU establishes partnership with Kansas-based AI and cybersecurity company",
-      "url": "https://news.ku.edu/news/article/ku-establishes-research-partnership-with-kansas-based-ai-and-cybersecurity-company",
-      "university": "University of Kansas",
-      "published_date": "2026-11-17"
+      "article_id": 82470,
+      "editorial_note": "A pointed academic critique of the EU's Cloud and AI Development Act highlights ongoing policy debate over Europe's digital sovereignty and dependence on US AI infrastructure.",
+      "impact_category": "Policy Impact",
+      "title": "'EU plan for cloud and AI falls short on digital autonomy'",
+      "url": "https://www.uva.nl/en/news/2026/eu-plan-for-cloud-and-ai-falls-short-on-digital-autonomy",
+      "university": "University of Amsterdam",
+      "published_date": "2026-11-12"
     },
     {
       "rank": 10,
-      "article_id": 81845,
-      "editorial_note": "Indiana University's new Applied Research Center coordinates university-wide AI expertise for government and industry national security work, illustrating academia's expanding role in AI-driven security priorities.",
-      "impact_category": "Strategic Partnership",
-      "title": "Indiana University expands national security research partnerships through Applied Research Center",
-      "url": "https://news.iu.edu/live/news/54545-indiana-university-expands-national-security",
-      "university": "Indiana University Pervasive Technology Institute",
-      "published_date": "2026-11-16"
+      "article_id": 81169,
+      "editorial_note": "A new quantization method addressing the KV cache memory bottleneck in large language models, headed for presentation at NeurIPS, offers a practical efficiency gain for AI inference at scale.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Faster data compression through quantization",
+      "url": "https://www.csail.mit.edu/news/faster-data-compression-through-quantization",
+      "university": "MIT",
+      "published_date": "2026-11-12"
     }
   ]
 }
