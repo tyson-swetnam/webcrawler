@@ -1,30 +1,10 @@
 {
-  "generated_at": "2026-11-18T15:26:35",
+  "generated_at": "2026-11-18T21:07:06",
   "picks": [
     {
       "rank": 1,
-      "article_id": 82189,
-      "editorial_note": "A $334 million grant is one of the largest single AI-computing investments in this dataset, giving NCSA a new supercomputing system and anchoring the broader Schmidt Science Computing Network that other institutions are now joining.",
-      "impact_category": "Major Funding",
-      "title": "NCSA Joins the Schmidt Science Computing Network to Expand Advanced Computing for Scientific Discovery",
-      "url": "https://www.ncsa.illinois.edu/2026/11/16/ncsa-joins-the-schmidt-science-computing-network-to-expand-advanced-computing-for-scientific-discovery/",
-      "university": "National Center for Supercomputing Applications",
-      "published_date": "2026-11-16"
-    },
-    {
-      "rank": 2,
-      "article_id": 82298,
-      "editorial_note": "UC Berkeley and Berkeley Lab's entry into the same Schmidt Science Computing Network establishes the Berkeley Science AI Platform at NERSC, showing the initiative is building a coordinated national HPC backbone for AI-driven science rather than a one-off gift.",
-      "impact_category": "Major Funding",
-      "title": "UC Berkeley, Berkeley Lab collaboration with Schmidt Science Computing Network will Provide High Performance Computing for Cutting-Edge Research - NERSC: National Energy Research Scientific Computing Center",
-      "url": "https://www.nersc.gov/news-and-events/news/uc-berkeley-berkeley-lab-collaboration-with-schmidt-science-computing-network-will-provide-high-performance-computing-for-cutting-edge-research",
-      "university": "NERSC",
-      "published_date": "2026-11-16"
-    },
-    {
-      "rank": 3,
       "article_id": 81081,
-      "editorial_note": "An AI model designed a bacteriophage used in the first-ever treatment of a patient with an antibiotic-resistant infection \u2014 a striking proof point that generative AI can produce therapeutics that work in real patients, not just in silico.",
+      "editorial_note": "The first-ever use of AI-designed bacteriophages to treat a patient with an antibiotic-resistant infection marks a landmark translation of generative AI from the lab bench to a real clinical intervention.",
       "impact_category": "Scientific Breakthrough",
       "title": "This time, the virus is on the patient\u2019s side. AI helped design it",
       "url": "https://news.northeastern.edu/2026/11/13/phage-therapy-ai-designed-virus/",
@@ -32,9 +12,29 @@
       "published_date": "2026-11-13"
     },
     {
+      "rank": 2,
+      "article_id": 82189,
+      "editorial_note": "A $334 million Schmidt Sciences grant to NCSA for a new supercomputing system is one of the largest single AI-infrastructure investments of the year, dramatically expanding national research computing capacity.",
+      "impact_category": "Major Funding",
+      "title": "NCSA Joins the Schmidt Science Computing Network to Expand Advanced Computing for Scientific Discovery",
+      "url": "https://www.ncsa.illinois.edu/2026/11/16/ncsa-joins-the-schmidt-science-computing-network-to-expand-advanced-computing-for-scientific-discovery/",
+      "university": "National Center for Supercomputing Applications",
+      "published_date": "2026-11-16"
+    },
+    {
+      "rank": 3,
+      "article_id": 82298,
+      "editorial_note": "UC Berkeley and Berkeley Lab's parallel entry into the Schmidt Science Computing Network, establishing the Berkeley Science AI Platform at NERSC, shows the same mega-initiative building out multi-institution, government-lab-scale AI compute capacity.",
+      "impact_category": "Strategic Partnership",
+      "title": "UC Berkeley, Berkeley Lab collaboration with Schmidt Science Computing Network will Provide High Performance Computing for Cutting-Edge Research - NERSC: National Energy Research Scientific Computing Center",
+      "url": "https://www.nersc.gov/news-and-events/news/uc-berkeley-berkeley-lab-collaboration-with-schmidt-science-computing-network-will-provide-high-performance-computing-for-cutting-edge-research",
+      "university": "NERSC",
+      "published_date": "2026-11-16"
+    },
+    {
       "rank": 4,
       "article_id": 82803,
-      "editorial_note": "A \u00a339 million UKRI investment funding 20 Turing AI Fellows is a significant national-scale commitment to building out the UK's AI research capacity across diverse fields.",
+      "editorial_note": "A \u00a339 million UKRI investment funding 20 Turing AI Fellows at Edinburgh represents a major national-scale bet on AI research talent and capability in the UK.",
       "impact_category": "Major Funding",
       "title": "Turing AI Fellows set to strengthen UK\u2019s AI capability | News | The University of Edinburgh",
       "url": "https://www.ed.ac.uk/news/turing-ai-fellows-set-to-strengthen-uks-ai-capability",
@@ -43,8 +43,28 @@
     },
     {
       "rank": 5,
+      "article_id": 83012,
+      "editorial_note": "The acquisition of Imperial spinout Cogitat by Indivi for its brain-wave foundation model is a concrete market validation of university AI research converting into commercial neurotech value.",
+      "impact_category": "Major Funding",
+      "title": "Imperial spinout Cogitat acquired by Swiss startup Indivi for its brain foundation model",
+      "url": "https://www.imperial.ac.uk/news/articles/2026/imperial-spinout-cogitat-acquired-by-swiss-startup-indivi-for-its-brain-foundation-model/",
+      "university": "Imperial College London",
+      "published_date": "2026-11-18"
+    },
+    {
+      "rank": 6,
+      "article_id": 82767,
+      "editorial_note": "HKUST's new Center for Marine Intelligence and its AI4Coral partnership with KAUST pairs AI and robotics with marine science for automated coral reef monitoring, a cross-border, cross-disciplinary research partnership with direct environmental stakes.",
+      "impact_category": "Strategic Partnership",
+      "title": "HKUST Establishes Center for Marine Intelligence and Partners with KAUST to Launch Inaugural AI4Coral Research Project",
+      "url": "https://hkust.edu.hk/news/hkust-establishes-center-marine-intelligence-and-partners-kaust-launch-inaugural-ai4coral",
+      "university": "Hong Kong Univ. of Science and Technology",
+      "published_date": "2026-11-18"
+    },
+    {
+      "rank": 7,
       "article_id": 82737,
-      "editorial_note": "Fermilab's FemtoMind project brings agentic AI into lattice QCD calculations as part of the multi-lab Genesis Mission, signaling a serious push to use frontier AI methods in fundamental particle physics.",
+      "editorial_note": "Fermilab's FemtoMind project applying agentic AI to lattice QCD calculations is a notable push to accelerate fundamental particle physics research using novel AI methods under the national Genesis Mission effort.",
       "impact_category": "Scientific Breakthrough",
       "title": "FemtoMind advances Genesis Mission at the proton scale",
       "url": "https://news.fnal.gov/2026/11/femtomind-advances-genesis-mission-at-the-proton-scale/",
@@ -52,29 +72,19 @@
       "published_date": "2026-11-17"
     },
     {
-      "rank": 6,
-      "article_id": 83012,
-      "editorial_note": "A Swiss neurotech company's acquisition of Imperial spinout Cogitat for its brain-decoding foundation model shows university AI research translating directly into commercial, deployable neurotechnology.",
-      "impact_category": "Strategic Partnership",
-      "title": "Imperial spinout Cogitat acquired by Swiss startup Indivi for its brain foundation model",
-      "url": "https://www.imperial.ac.uk/news/articles/2026/imperial-spinout-cogitat-acquired-by-swiss-startup-indivi-for-its-brain-foundation-model/",
-      "university": "Imperial College London",
-      "published_date": "2026-11-18"
-    },
-    {
-      "rank": 7,
-      "article_id": 80898,
-      "editorial_note": "A fresh $19 million state grant for Texas Tech's semiconductor computing cluster reflects continued public investment in AI-enabled chip research infrastructure amid the broader semiconductor race.",
-      "impact_category": "Major Funding",
-      "title": "Texas Tech Receives $19 Million Grant to Further Semiconductor Innovation | Texas Tech Now",
-      "url": "https://www.ttu.edu/now/posts/2026/11/texas-tech-receives-19-million-grant-to-further-semiconductor-innovation.php",
-      "university": "Texas Tech University",
-      "published_date": "2026-11-13"
-    },
-    {
       "rank": 8,
+      "article_id": 82795,
+      "editorial_note": "A systematic review by MIT CSAIL and 15+ institutions cataloguing 95 scenarios for AI-driven catastrophic risk is a significant contribution to the policy conversation on AI safety governance.",
+      "impact_category": "Policy Impact",
+      "title": "Researchers find eight ways AI could lead to our downfall",
+      "url": "https://www.csail.mit.edu/news/researchers-find-eight-ways-ai-could-lead-our-downfall",
+      "university": "MIT",
+      "published_date": "2026-11-17"
+    },
+    {
+      "rank": 9,
       "article_id": 82743,
-      "editorial_note": "A Cambridge-led analysis finding that a third of the global AI supply chain is invisible to government oversight has direct implications for export controls, national security policy, and AI governance debates worldwide.",
+      "editorial_note": "A Cambridge-led analysis finding a third of the global AI supply chain is invisible to government oversight has direct implications for AI export controls and national security policy.",
       "impact_category": "Policy Impact",
       "title": "A third of the global AI supply chain is \u2018invisible\u2019 to governments",
       "url": "https://www.cam.ac.uk/stories/ai-supply-chain-invisible",
@@ -82,24 +92,14 @@
       "published_date": "2026-11-18"
     },
     {
-      "rank": 9,
-      "article_id": 82944,
-      "editorial_note": "The completion of DARPA's Triage Challenge Finals demonstrates autonomous systems and human-machine teams successfully handling disaster-response triage in realistic simulated scenarios, a concrete step toward real-world deployment.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "DARPA Triage Challenge completes Finals event",
-      "url": "https://www.darpa.mil/news/2026/triage-finals-winners",
-      "university": "DARPA",
-      "published_date": "2026-11-16"
-    },
-    {
       "rank": 10,
-      "article_id": 82795,
-      "editorial_note": "A systematic review by MIT CSAIL and 15+ partner institutions cataloguing 95 distinct scenarios for AI-related catastrophic risk is a notable contribution to the policy conversation on AI safety governance.",
-      "impact_category": "Policy Impact",
-      "title": "Researchers find eight ways AI could lead to our downfall",
-      "url": "https://www.csail.mit.edu/news/researchers-find-eight-ways-ai-could-lead-our-downfall",
-      "university": "MIT",
-      "published_date": "2026-11-17"
+      "article_id": 80898,
+      "editorial_note": "A further $19 million Texas Semiconductor Innovation Fund grant to Texas Tech for an AI-integrated computing cluster strengthens the state-level push to build domestic semiconductor and AI research infrastructure.",
+      "impact_category": "Major Funding",
+      "title": "Texas Tech Receives $19 Million Grant to Further Semiconductor Innovation | Texas Tech Now",
+      "url": "https://www.ttu.edu/now/posts/2026/11/texas-tech-receives-19-million-grant-to-further-semiconductor-innovation.php",
+      "university": "Texas Tech University",
+      "published_date": "2026-11-13"
     }
   ]
 }
