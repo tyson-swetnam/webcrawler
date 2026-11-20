@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-20T09:07:48",
+  "generated_at": "2026-11-20T21:06:25",
   "picks": [
     {
       "rank": 1,
       "article_id": 82189,
-      "editorial_note": "A $334 million grant to NCSA from Schmidt Sciences is one of the largest single AI-computing investments in this dataset, materially expanding national supercomputing capacity for scientific discovery.",
+      "editorial_note": "A $334 million grant to build new supercomputing infrastructure is one of the largest single AI-research funding commitments of the year, dramatically expanding national scientific computing capacity.",
       "impact_category": "Major Funding",
       "title": "NCSA Joins the Schmidt Science Computing Network to Expand Advanced Computing for Scientific Discovery",
       "url": "https://www.ncsa.illinois.edu/2026/11/16/ncsa-joins-the-schmidt-science-computing-network-to-expand-advanced-computing-for-scientific-discovery/",
@@ -14,7 +14,7 @@
     {
       "rank": 2,
       "article_id": 82298,
-      "editorial_note": "UC Berkeley and Berkeley Lab's parallel entry into the Schmidt Science Computing Network establishes the Berkeley Science AI Platform at NERSC, pairing major new funding with a high-value cross-institutional computing partnership.",
+      "editorial_note": "UC Berkeley and Berkeley Lab's entry into the same Schmidt Science Computing Network establishes the Berkeley Science AI Platform at NERSC, pairing major funding with a strategic multi-institution computing partnership.",
       "impact_category": "Major Funding",
       "title": "UC Berkeley, Berkeley Lab collaboration with Schmidt Science Computing Network will Provide High Performance Computing for Cutting-Edge Research - NERSC: National Energy Research Scientific Computing Center",
       "url": "https://www.nersc.gov/news-and-events/news/uc-berkeley-berkeley-lab-collaboration-with-schmidt-science-computing-network-will-provide-high-performance-computing-for-cutting-edge-research",
@@ -24,7 +24,7 @@
     {
       "rank": 3,
       "article_id": 82803,
-      "editorial_note": "A \u00a339 million UKRI investment backing 20 Turing AI Fellows is a substantial national commitment to AI research capacity in the UK, spanning fields from turbulence modeling to human-AI interaction.",
+      "editorial_note": "A \u00a339 million UKRI investment funding 20 Turing AI Fellows is a substantial national-level bet on building UK AI research capability across multiple disciplines.",
       "impact_category": "Major Funding",
       "title": "Turing AI Fellows set to strengthen UK\u2019s AI capability | News | The University of Edinburgh",
       "url": "https://www.ed.ac.uk/news/turing-ai-fellows-set-to-strengthen-uks-ai-capability",
@@ -33,48 +33,8 @@
     },
     {
       "rank": 4,
-      "article_id": 82737,
-      "editorial_note": "Fermilab's FemtoMind project applies agentic AI to lattice QCD calculations as part of the multi-laboratory Genesis Mission, representing a genuine methodological advance in using AI for fundamental physics.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "FemtoMind advances Genesis Mission at the proton scale",
-      "url": "https://news.fnal.gov/2026/11/femtomind-advances-genesis-mission-at-the-proton-scale/",
-      "university": "Fermi National Accelerator Laboratory",
-      "published_date": "2026-11-17"
-    },
-    {
-      "rank": 5,
-      "article_id": 82767,
-      "editorial_note": "HKUST's new Center for Marine Intelligence and its AI4Coral partnership with KAUST pairs AI and robotics for automated coral reef monitoring, a notable cross-border academic collaboration with real environmental application.",
-      "impact_category": "Strategic Partnership",
-      "title": "HKUST Establishes Center for Marine Intelligence and Partners with KAUST to Launch Inaugural AI4Coral Research Project",
-      "url": "https://hkust.edu.hk/news/hkust-establishes-center-marine-intelligence-and-partners-kaust-launch-inaugural-ai4coral",
-      "university": "Hong Kong Univ. of Science and Technology",
-      "published_date": "2026-11-18"
-    },
-    {
-      "rank": 6,
-      "article_id": 83012,
-      "editorial_note": "The acquisition of Imperial College spinout Cogitat by Swiss neurotech firm Indivi validates the commercial viability of its brain foundation model, marking a concrete translation of academic AI research into industry.",
-      "impact_category": "Strategic Partnership",
-      "title": "Imperial spinout Cogitat acquired by Swiss startup Indivi for its brain foundation model",
-      "url": "https://www.imperial.ac.uk/news/articles/2026/imperial-spinout-cogitat-acquired-by-swiss-startup-indivi-for-its-brain-foundation-model/",
-      "university": "Imperial College London",
-      "published_date": "2026-11-18"
-    },
-    {
-      "rank": 7,
-      "article_id": 82795,
-      "editorial_note": "A systematic review by MIT CSAIL and 17 other institutions cataloging 95 ways advanced AI could lead to catastrophic outcomes is a significant contribution to the AI safety discourse shaping future policy and governance debates.",
-      "impact_category": "Policy Impact",
-      "title": "Researchers find eight ways AI could lead to our downfall",
-      "url": "https://www.csail.mit.edu/news/researchers-find-eight-ways-ai-could-lead-our-downfall",
-      "university": "MIT",
-      "published_date": "2026-11-17"
-    },
-    {
-      "rank": 8,
       "article_id": 82743,
-      "editorial_note": "A Cambridge-led analysis finding a third of the global AI supply chain invisible to government oversight highlights a critical gap in AI governance with direct implications for regulatory policy.",
+      "editorial_note": "A Cambridge-led analysis finding a third of the global AI supply chain is invisible to regulators has direct implications for AI governance and national security policy worldwide.",
       "impact_category": "Policy Impact",
       "title": "A third of the global AI supply chain is \u2018invisible\u2019 to governments",
       "url": "https://www.cam.ac.uk/stories/ai-supply-chain-invisible",
@@ -82,23 +42,63 @@
       "published_date": "2026-11-18"
     },
     {
-      "rank": 9,
-      "article_id": 82557,
-      "editorial_note": "Imperial College London and CNRS's new joint International Research Laboratory on AI-driven metabolism research formalizes a significant transatlantic academic partnership targeting global health challenges.",
+      "rank": 5,
+      "article_id": 82795,
+      "editorial_note": "A systematic review by MIT CSAIL and 17 other institutions cataloguing 95 concrete AI catastrophic-risk scenarios is a significant contribution to the AI safety policy conversation.",
+      "impact_category": "Policy Impact",
+      "title": "Researchers find eight ways AI could lead to our downfall",
+      "url": "https://www.csail.mit.edu/news/researchers-find-eight-ways-ai-could-lead-our-downfall",
+      "university": "MIT",
+      "published_date": "2026-11-17"
+    },
+    {
+      "rank": 6,
+      "article_id": 82767,
+      "editorial_note": "HKUST's new Center for Marine Intelligence and its AI4Coral partnership with KAUST represents a novel cross-border application of AI to environmental science with real conservation stakes.",
       "impact_category": "Strategic Partnership",
-      "title": "Metabolism, AI and global health: Imperial and France's CNRS celebrate launch of joint laboratory",
-      "url": "https://www.imperial.ac.uk/news/articles/2026/metabolism-ai-and-global-health-imperial-and-frances-cnrs-celebrate-launch-of-joint-laboratory/",
+      "title": "HKUST Establishes Center for Marine Intelligence and Partners with KAUST to Launch Inaugural AI4Coral Research Project",
+      "url": "https://hkust.edu.hk/news/hkust-establishes-center-marine-intelligence-and-partners-kaust-launch-inaugural-ai4coral",
+      "university": "Hong Kong Univ. of Science and Technology",
+      "published_date": "2026-11-18"
+    },
+    {
+      "rank": 7,
+      "article_id": 82737,
+      "editorial_note": "Fermilab's FemtoMind project brings agentic AI into lattice QCD calculations, a genuine scientific advance in using AI to accelerate fundamental particle physics research.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "FemtoMind advances Genesis Mission at the proton scale",
+      "url": "https://news.fnal.gov/2026/11/femtomind-advances-genesis-mission-at-the-proton-scale/",
+      "university": "Fermi National Accelerator Laboratory",
+      "published_date": "2026-11-17"
+    },
+    {
+      "rank": 8,
+      "article_id": 83012,
+      "editorial_note": "The acquisition of Imperial College spinout Cogitat for its brain-signal foundation model shows real commercial validation of university-born neurotechnology AI research.",
+      "impact_category": "Strategic Partnership",
+      "title": "Imperial spinout Cogitat acquired by Swiss startup Indivi for its brain foundation model",
+      "url": "https://www.imperial.ac.uk/news/articles/2026/imperial-spinout-cogitat-acquired-by-swiss-startup-indivi-for-its-brain-foundation-model/",
       "university": "Imperial College London",
+      "published_date": "2026-11-18"
+    },
+    {
+      "rank": 9,
+      "article_id": 81903,
+      "editorial_note": "Michigan Tech and UCLA's finding that materials-science AI models need far less training data than assumed could meaningfully lower the cost and barrier to AI-driven materials discovery.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Less Data, Faster Discovery: Researchers Rethink AI\u2019s Role in Developing New Materials",
+      "url": "https://www.mtu.edu/news/2026/11/less-data-faster-discovery-researchers-rethink-ais-role-in-developing-new-materials.html",
+      "university": "Michigan Technological University",
       "published_date": "2026-11-16"
     },
     {
       "rank": 10,
-      "article_id": 81845,
-      "editorial_note": "Indiana University's new Applied Research Center coordinates university-wide expertise to expand government and industry partnerships on national security priorities, reflecting growing university-government AI collaboration.",
-      "impact_category": "Strategic Partnership",
-      "title": "Indiana University expands national security research partnerships through Applied Research Center",
-      "url": "https://news.iu.edu/live/news/54545-indiana-university-expands-national-security",
-      "university": "Indiana University Pervasive Technology Institute",
+      "article_id": 82944,
+      "editorial_note": "DARPA's Triage Challenge Finals demonstrated autonomous systems successfully performing disaster-response triage, a concrete real-world test of AI in life-safety applications.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "DARPA Triage Challenge completes Finals event",
+      "url": "https://www.darpa.mil/news/2026/triage-finals-winners",
+      "university": "DARPA",
       "published_date": "2026-11-16"
     }
   ]
