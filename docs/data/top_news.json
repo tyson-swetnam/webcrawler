@@ -1,50 +1,10 @@
 {
-  "generated_at": "2026-11-22T21:07:03",
+  "generated_at": "2026-11-23T03:16:25",
   "picks": [
     {
       "rank": 1,
-      "article_id": 82189,
-      "editorial_note": "A $334 million grant from Schmidt Sciences to NCSA is one of the largest single investments in academic AI computing infrastructure this year, materially expanding the national supercomputing capacity available to scientific researchers.",
-      "impact_category": "Major Funding",
-      "title": "NCSA Joins the Schmidt Science Computing Network to Expand Advanced Computing for Scientific Discovery",
-      "url": "https://www.ncsa.illinois.edu/2026/11/16/ncsa-joins-the-schmidt-science-computing-network-to-expand-advanced-computing-for-scientific-discovery/",
-      "university": "National Center for Supercomputing Applications",
-      "published_date": "2026-11-16"
-    },
-    {
-      "rank": 2,
-      "article_id": 82298,
-      "editorial_note": "UC Berkeley and Berkeley Lab's parallel Schmidt Sciences award establishing the Berkeley Science AI Platform shows the same network scaling across multiple flagship institutions, pairing major funding with a concrete HPC partnership for AI-driven science.",
-      "impact_category": "Major Funding",
-      "title": "UC Berkeley, Berkeley Lab collaboration with Schmidt Science Computing Network will Provide High Performance Computing for Cutting-Edge Research - NERSC: National Energy Research Scientific Computing Center",
-      "url": "https://www.nersc.gov/news-and-events/news/uc-berkeley-berkeley-lab-collaboration-with-schmidt-science-computing-network-will-provide-high-performance-computing-for-cutting-edge-research",
-      "university": "NERSC",
-      "published_date": "2026-11-16"
-    },
-    {
-      "rank": 3,
-      "article_id": 82803,
-      "editorial_note": "A \u00a339 million UKRI investment backing 20 Turing AI Fellows at Edinburgh represents a significant national-scale bet on UK AI research capacity, spanning fields from turbulence modeling to human-centered AI.",
-      "impact_category": "Major Funding",
-      "title": "Turing AI Fellows set to strengthen UK\u2019s AI capability | News | The University of Edinburgh",
-      "url": "https://www.ed.ac.uk/news/turing-ai-fellows-set-to-strengthen-uks-ai-capability",
-      "university": "University of Edinburgh",
-      "published_date": "2026-11-17"
-    },
-    {
-      "rank": 4,
-      "article_id": 82795,
-      "editorial_note": "A systematic review by MIT CSAIL and 17 other institutions cataloguing 95 concrete scenarios for catastrophic AI risk is a rare, broadly collaborative attempt to move AI safety discourse from speculation to taxonomy, with direct relevance to policy and governance debates.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Researchers find eight ways AI could lead to our downfall",
-      "url": "https://www.csail.mit.edu/news/researchers-find-eight-ways-ai-could-lead-our-downfall",
-      "university": "MIT",
-      "published_date": "2026-11-17"
-    },
-    {
-      "rank": 5,
       "article_id": 82737,
-      "editorial_note": "Fermilab's FemtoMind project applying agentic AI to lattice QCD calculations marks a notable use of frontier AI techniques in fundamental particle physics, part of a multi-laboratory Genesis Mission effort to accelerate scientific discovery.",
+      "editorial_note": "A multi-laboratory DOE effort under the Genesis Mission is bringing agentic AI directly into lattice QCD calculations at Fermilab, a concrete step toward AI accelerating fundamental physics discovery rather than just data analysis.",
       "impact_category": "Scientific Breakthrough",
       "title": "FemtoMind advances Genesis Mission at the proton scale",
       "url": "https://news.fnal.gov/2026/11/femtomind-advances-genesis-mission-at-the-proton-scale/",
@@ -52,9 +12,49 @@
       "published_date": "2026-11-17"
     },
     {
+      "rank": 2,
+      "article_id": 82803,
+      "editorial_note": "UKRI's \u00a339 million investment in 20 Turing AI Fellows at Edinburgh represents a major national-scale funding commitment aimed at cementing the UK's AI research competitiveness.",
+      "impact_category": "Major Funding",
+      "title": "Turing AI Fellows set to strengthen UK\u2019s AI capability | News | The University of Edinburgh",
+      "url": "https://www.ed.ac.uk/news/turing-ai-fellows-set-to-strengthen-uks-ai-capability",
+      "university": "University of Edinburgh",
+      "published_date": "2026-11-17"
+    },
+    {
+      "rank": 3,
+      "article_id": 82795,
+      "editorial_note": "A systematic review by MIT CSAIL and 17 other institutions cataloguing 95 concrete AI catastrophic-risk scenarios is the kind of broad, cross-institutional safety research that shapes policy and funding priorities industry-wide.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Researchers find eight ways AI could lead to our downfall",
+      "url": "https://www.csail.mit.edu/news/researchers-find-eight-ways-ai-could-lead-our-downfall",
+      "university": "MIT",
+      "published_date": "2026-11-17"
+    },
+    {
+      "rank": 4,
+      "article_id": 82767,
+      "editorial_note": "HKUST's new Center for Marine Intelligence and its AI4Coral partnership with KAUST shows AI-robotics integration moving into large-scale environmental science with real conservation stakes.",
+      "impact_category": "Strategic Partnership",
+      "title": "HKUST Establishes Center for Marine Intelligence and Partners with KAUST to Launch Inaugural AI4Coral Research Project",
+      "url": "https://hkust.edu.hk/news/hkust-establishes-center-marine-intelligence-and-partners-kaust-launch-inaugural-ai4coral",
+      "university": "Hong Kong Univ. of Science and Technology",
+      "published_date": "2026-11-18"
+    },
+    {
+      "rank": 5,
+      "article_id": 83012,
+      "editorial_note": "A Swiss neurotech firm's acquisition of Imperial spinout Cogitat for its brain-signal foundation model is a concrete commercial validation of university AI research translating into acquired, deployable technology.",
+      "impact_category": "Strategic Partnership",
+      "title": "Imperial spinout Cogitat acquired by Swiss startup Indivi for its brain foundation model",
+      "url": "https://www.imperial.ac.uk/news/articles/2026/imperial-spinout-cogitat-acquired-by-swiss-startup-indivi-for-its-brain-foundation-model/",
+      "university": "Imperial College London",
+      "published_date": "2026-11-18"
+    },
+    {
       "rank": 6,
       "article_id": 82743,
-      "editorial_note": "A Cambridge-led analysis finding a third of the global AI supply chain is invisible to government oversight exposes a significant gap in AI governance with direct implications for national security and regulatory policy worldwide.",
+      "editorial_note": "A Cambridge-led analysis finding a third of the global AI chip supply chain invisible to governments surfaces a significant policy and national-security gap just as AI hardware becomes geopolitically critical.",
       "impact_category": "Policy Impact",
       "title": "A third of the global AI supply chain is \u2018invisible\u2019 to governments",
       "url": "https://www.cam.ac.uk/stories/ai-supply-chain-invisible",
@@ -63,43 +63,43 @@
     },
     {
       "rank": 7,
-      "article_id": 82767,
-      "editorial_note": "HKUST's new Center for Marine Intelligence and its AI4Coral partnership with KAUST pairs AI and robotics for automated coral reef monitoring, an internationally coordinated effort tackling climate-driven ecological loss.",
-      "impact_category": "Strategic Partnership",
-      "title": "HKUST Establishes Center for Marine Intelligence and Partners with KAUST to Launch Inaugural AI4Coral Research Project",
-      "url": "https://hkust.edu.hk/news/hkust-establishes-center-marine-intelligence-and-partners-kaust-launch-inaugural-ai4coral",
-      "university": "Hong Kong Univ. of Science and Technology",
-      "published_date": "2026-11-18"
+      "article_id": 82778,
+      "editorial_note": "MIT's work on getting deep learning models to explain their own reasoning in human-understandable language tackles the interpretability problem central to trustworthy, deployable AI systems.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Learning the language of machine learning",
+      "url": "https://www.eecs.mit.edu/learning-the-language-of-machine-learning/",
+      "university": "MIT",
+      "published_date": "2026-11-17"
     },
     {
       "rank": 8,
-      "article_id": 83012,
-      "editorial_note": "Swiss neurotech firm Indivi's acquisition of Imperial College spinout Cogitat for its brain-to-language foundation model is a concrete signal of commercial validation for academic AI research translating into real-world neurotechnology products.",
-      "impact_category": "Strategic Partnership",
-      "title": "Imperial spinout Cogitat acquired by Swiss startup Indivi for its brain foundation model",
-      "url": "https://www.imperial.ac.uk/news/articles/2026/imperial-spinout-cogitat-acquired-by-swiss-startup-indivi-for-its-brain-foundation-model/",
-      "university": "Imperial College London",
+      "article_id": 82711,
+      "editorial_note": "Sandia's machine-learning approach to predicting advanced alloy performance could produce a universal materials design guide, accelerating engineering work far beyond any single lab.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Before the forge",
+      "url": "https://newsreleases.sandia.gov/before-the-forge/",
+      "university": "Sandia National Laboratories",
       "published_date": "2026-11-18"
     },
     {
       "rank": 9,
-      "article_id": 82944,
-      "editorial_note": "The completion of DARPA's Triage Challenge Finals, testing autonomous systems and human-machine teams in disaster-response scenarios, demonstrates tangible government investment in AI systems intended for life-saving real-world deployment.",
-      "impact_category": "Policy Impact",
-      "title": "DARPA Triage Challenge completes Finals event",
-      "url": "https://www.darpa.mil/news/2026/triage-finals-winners",
-      "university": "DARPA",
-      "published_date": "2026-11-16"
+      "article_id": 82198,
+      "editorial_note": "Kansas's master research agreement with SOFTwarfare pairs a university directly with industry on trustworthy computing and secure AI data analysis, an example of academia-industry AI partnerships with cybersecurity stakes.",
+      "impact_category": "Strategic Partnership",
+      "title": "KU establishes partnership with Kansas-based AI and cybersecurity company",
+      "url": "https://news.ku.edu/news/article/ku-establishes-research-partnership-with-kansas-based-ai-and-cybersecurity-company",
+      "university": "University of Kansas",
+      "published_date": "2026-11-17"
     },
     {
       "rank": 10,
-      "article_id": 81903,
-      "editorial_note": "Michigan Tech and UCLA's finding that AI models for predicting materials' electronic structures need far less training data than assumed could meaningfully lower the cost and speed up the pace of computational materials discovery.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Less Data, Faster Discovery: Researchers Rethink AI\u2019s Role in Developing New Materials",
-      "url": "https://www.mtu.edu/news/2026/11/less-data-faster-discovery-researchers-rethink-ais-role-in-developing-new-materials.html",
-      "university": "Michigan Technological University",
-      "published_date": "2026-11-16"
+      "article_id": 83053,
+      "editorial_note": "A six-figure NIH grant to apply AI toward tracking speech deterioration in Parkinson's disease illustrates targeted federal funding translating AI methods into clinical diagnostic tools.",
+      "impact_category": "Major Funding",
+      "title": "UW\u2019s Kriegel Receives NIH Grant to Advance Speech Research in Parkinson\u2019s Disease",
+      "url": "https://www.uwyo.edu/news/2026/11/uws-kriegel-receives-nih-grant-to-advance-speech-research-in-parkinsons-disease.html",
+      "university": "University of Wyoming",
+      "published_date": "2026-11-17"
     }
   ]
 }
