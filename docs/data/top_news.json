@@ -1,20 +1,10 @@
 {
-  "generated_at": "2026-11-23T03:16:25",
+  "generated_at": "2026-11-23T21:06:38",
   "picks": [
     {
       "rank": 1,
-      "article_id": 82737,
-      "editorial_note": "A multi-laboratory DOE effort under the Genesis Mission is bringing agentic AI directly into lattice QCD calculations at Fermilab, a concrete step toward AI accelerating fundamental physics discovery rather than just data analysis.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "FemtoMind advances Genesis Mission at the proton scale",
-      "url": "https://news.fnal.gov/2026/11/femtomind-advances-genesis-mission-at-the-proton-scale/",
-      "university": "Fermi National Accelerator Laboratory",
-      "published_date": "2026-11-17"
-    },
-    {
-      "rank": 2,
       "article_id": 82803,
-      "editorial_note": "UKRI's \u00a339 million investment in 20 Turing AI Fellows at Edinburgh represents a major national-scale funding commitment aimed at cementing the UK's AI research competitiveness.",
+      "editorial_note": "A \u00a339 million UKRI investment creating 20 Turing AI Fellows is a substantial national-scale funding commitment aimed at building long-term UK AI research capacity across diverse domains.",
       "impact_category": "Major Funding",
       "title": "Turing AI Fellows set to strengthen UK\u2019s AI capability | News | The University of Edinburgh",
       "url": "https://www.ed.ac.uk/news/turing-ai-fellows-set-to-strengthen-uks-ai-capability",
@@ -22,9 +12,9 @@
       "published_date": "2026-11-17"
     },
     {
-      "rank": 3,
+      "rank": 2,
       "article_id": 82795,
-      "editorial_note": "A systematic review by MIT CSAIL and 17 other institutions cataloguing 95 concrete AI catastrophic-risk scenarios is the kind of broad, cross-institutional safety research that shapes policy and funding priorities industry-wide.",
+      "editorial_note": "A systematic review by MIT CSAIL and 17 other institutions cataloguing 95 concrete scenarios for AI-driven catastrophic risk is a significant contribution to AI safety scholarship with broad policy relevance.",
       "impact_category": "Scientific Breakthrough",
       "title": "Researchers find eight ways AI could lead to our downfall",
       "url": "https://www.csail.mit.edu/news/researchers-find-eight-ways-ai-could-lead-our-downfall",
@@ -32,9 +22,29 @@
       "published_date": "2026-11-17"
     },
     {
+      "rank": 3,
+      "article_id": 82737,
+      "editorial_note": "Fermilab's multi-laboratory FemtoMind project applying agentic AI to lattice QCD calculations represents a notable advance in using AI to accelerate fundamental physics research under the national Genesis Mission initiative.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "FemtoMind advances Genesis Mission at the proton scale",
+      "url": "https://news.fnal.gov/2026/11/femtomind-advances-genesis-mission-at-the-proton-scale/",
+      "university": "Fermi National Accelerator Laboratory",
+      "published_date": "2026-11-17"
+    },
+    {
       "rank": 4,
+      "article_id": 83012,
+      "editorial_note": "The acquisition of Imperial College London spinout Cogitat by Swiss neurotech firm Indivi demonstrates real commercial validation of an academic AI foundation model for decoding brain activity.",
+      "impact_category": "Major Funding",
+      "title": "Imperial spinout Cogitat acquired by Swiss startup Indivi for its brain foundation model",
+      "url": "https://www.imperial.ac.uk/news/articles/2026/imperial-spinout-cogitat-acquired-by-swiss-startup-indivi-for-its-brain-foundation-model/",
+      "university": "Imperial College London",
+      "published_date": "2026-11-18"
+    },
+    {
+      "rank": 5,
       "article_id": 82767,
-      "editorial_note": "HKUST's new Center for Marine Intelligence and its AI4Coral partnership with KAUST shows AI-robotics integration moving into large-scale environmental science with real conservation stakes.",
+      "editorial_note": "HKUST's new Center for Marine Intelligence and its AI4Coral partnership with KAUST pairs two major research institutions to apply AI and robotics to coral reef conservation at scale.",
       "impact_category": "Strategic Partnership",
       "title": "HKUST Establishes Center for Marine Intelligence and Partners with KAUST to Launch Inaugural AI4Coral Research Project",
       "url": "https://hkust.edu.hk/news/hkust-establishes-center-marine-intelligence-and-partners-kaust-launch-inaugural-ai4coral",
@@ -42,19 +52,9 @@
       "published_date": "2026-11-18"
     },
     {
-      "rank": 5,
-      "article_id": 83012,
-      "editorial_note": "A Swiss neurotech firm's acquisition of Imperial spinout Cogitat for its brain-signal foundation model is a concrete commercial validation of university AI research translating into acquired, deployable technology.",
-      "impact_category": "Strategic Partnership",
-      "title": "Imperial spinout Cogitat acquired by Swiss startup Indivi for its brain foundation model",
-      "url": "https://www.imperial.ac.uk/news/articles/2026/imperial-spinout-cogitat-acquired-by-swiss-startup-indivi-for-its-brain-foundation-model/",
-      "university": "Imperial College London",
-      "published_date": "2026-11-18"
-    },
-    {
       "rank": 6,
       "article_id": 82743,
-      "editorial_note": "A Cambridge-led analysis finding a third of the global AI chip supply chain invisible to governments surfaces a significant policy and national-security gap just as AI hardware becomes geopolitically critical.",
+      "editorial_note": "A Cambridge-led analysis finding a third of the global AI supply chain invisible to government oversight highlights a major gap with direct implications for AI governance and national security policy.",
       "impact_category": "Policy Impact",
       "title": "A third of the global AI supply chain is \u2018invisible\u2019 to governments",
       "url": "https://www.cam.ac.uk/stories/ai-supply-chain-invisible",
@@ -63,18 +63,8 @@
     },
     {
       "rank": 7,
-      "article_id": 82778,
-      "editorial_note": "MIT's work on getting deep learning models to explain their own reasoning in human-understandable language tackles the interpretability problem central to trustworthy, deployable AI systems.",
-      "impact_category": "Scientific Breakthrough",
-      "title": "Learning the language of machine learning",
-      "url": "https://www.eecs.mit.edu/learning-the-language-of-machine-learning/",
-      "university": "MIT",
-      "published_date": "2026-11-17"
-    },
-    {
-      "rank": 8,
       "article_id": 82711,
-      "editorial_note": "Sandia's machine-learning approach to predicting advanced alloy performance could produce a universal materials design guide, accelerating engineering work far beyond any single lab.",
+      "editorial_note": "Sandia National Laboratories' machine-learning approach to predicting metal alloy performance could produce a universal design guide with concrete industrial and defense engineering applications.",
       "impact_category": "Scientific Breakthrough",
       "title": "Before the forge",
       "url": "https://newsreleases.sandia.gov/before-the-forge/",
@@ -82,23 +72,33 @@
       "published_date": "2026-11-18"
     },
     {
+      "rank": 8,
+      "article_id": 82778,
+      "editorial_note": "MIT research toward making deep learning models explain their own reasoning in human-understandable language addresses one of AI's most consequential open problems: interpretability.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Learning the language of machine learning",
+      "url": "https://www.eecs.mit.edu/learning-the-language-of-machine-learning/",
+      "university": "MIT",
+      "published_date": "2026-11-17"
+    },
+    {
       "rank": 9,
-      "article_id": 82198,
-      "editorial_note": "Kansas's master research agreement with SOFTwarfare pairs a university directly with industry on trustworthy computing and secure AI data analysis, an example of academia-industry AI partnerships with cybersecurity stakes.",
-      "impact_category": "Strategic Partnership",
-      "title": "KU establishes partnership with Kansas-based AI and cybersecurity company",
-      "url": "https://news.ku.edu/news/article/ku-establishes-research-partnership-with-kansas-based-ai-and-cybersecurity-company",
-      "university": "University of Kansas",
+      "article_id": 82583,
+      "editorial_note": "Purdue's use of Indiana's new FAA-designated Midwest UAS Test Site to advance beyond-visual-line-of-sight drone flight ties academic research directly to regulatory progress on autonomous aviation.",
+      "impact_category": "Policy Impact",
+      "title": "Purdue drone research advances frontiers of autonomous aviation",
+      "url": "https://www.purdue.edu/newsroom/2026/Q4/purdue-drone-research-advances-frontiers-of-autonomous-aviation/",
+      "university": "Purdue University-Main Campus",
       "published_date": "2026-11-17"
     },
     {
       "rank": 10,
-      "article_id": 83053,
-      "editorial_note": "A six-figure NIH grant to apply AI toward tracking speech deterioration in Parkinson's disease illustrates targeted federal funding translating AI methods into clinical diagnostic tools.",
-      "impact_category": "Major Funding",
-      "title": "UW\u2019s Kriegel Receives NIH Grant to Advance Speech Research in Parkinson\u2019s Disease",
-      "url": "https://www.uwyo.edu/news/2026/11/uws-kriegel-receives-nih-grant-to-advance-speech-research-in-parkinsons-disease.html",
-      "university": "University of Wyoming",
+      "article_id": 82198,
+      "editorial_note": "A master research agreement between the University of Kansas and SOFTwarfare on trustworthy, AI-driven secure computing is a concrete academia-industry partnership with cybersecurity applications.",
+      "impact_category": "Strategic Partnership",
+      "title": "KU establishes partnership with Kansas-based AI and cybersecurity company",
+      "url": "https://news.ku.edu/news/article/ku-establishes-research-partnership-with-kansas-based-ai-and-cybersecurity-company",
+      "university": "University of Kansas",
       "published_date": "2026-11-17"
     }
   ]
