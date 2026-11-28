@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-28T09:07:09",
+  "generated_at": "2026-11-28T15:19:06",
   "picks": [
     {
       "rank": 1,
       "article_id": 83558,
-      "editorial_note": "Anthropic's Claude reportedly produced a verified proof of the Riemann Hypothesis working with a Tel Aviv University mathematician \u2014 one of math's deepest open problems \u2014 marking a landmark moment for AI-assisted mathematical discovery.",
+      "editorial_note": "A Claude-assisted proof of the Riemann Hypothesis, if it holds up under scrutiny, would be one of the most significant mathematical breakthroughs in history and a landmark demonstration of AI as a genuine research collaborator in pure mathematics.",
       "impact_category": "Scientific Breakthrough",
       "title": "AI Takes on the Riemann Hypothesis: What Does It Mean for the Future of Mathematics?",
       "url": "https://english.tau.ac.il/news/ai-the-riemann-hypothesis",
@@ -14,7 +14,7 @@
     {
       "rank": 2,
       "article_id": 84666,
-      "editorial_note": "DOE's Genesis Mission, convening Fermilab leadership and a DOE Under Secretary to fuse AI/superintelligence with high-performance computing, signals a national-level government strategy to accelerate American science via AI.",
+      "editorial_note": "DOE's Genesis Mission event at SC26, bringing together Fermilab leadership and the Under Secretary for Science, signals a coordinated national push to fuse AI/superintelligence with high-performance computing across the federal science enterprise.",
       "impact_category": "Policy Impact",
       "title": "Genesis Mission assembles Avengers to accelerate American science",
       "url": "https://news.fnal.gov/2026/11/energy-genesis-assembles-avengers-to-accelerate-american-science/",
@@ -24,8 +24,8 @@
     {
       "rank": 3,
       "article_id": 83516,
-      "editorial_note": "Cambridge's \u00a310M, NIHR-funded EDITH trial is the world's largest test of AI-assisted mammography, enrolling nearly 700,000 women \u2014 a scale that could reshape national breast cancer screening if successful.",
-      "impact_category": "Major Funding",
+      "editorial_note": "Cambridge's co-leadership of the world's largest AI breast-cancer screening trial, enrolling nearly 700,000 women with \u00a310M in NIHR funding, is a major step toward validating AI diagnostics at population scale.",
+      "impact_category": "Scientific Breakthrough",
       "title": "Cambridge co-leading world\u2019s largest trial to use AI to help detect breast cancers earlier",
       "url": "https://www.cam.ac.uk/research/news/cambridge-co-leading-worlds-largest-trial-to-use-ai-to-help-detect-breast-cancers-earlier",
       "university": "University of Cambridge",
@@ -34,7 +34,7 @@
     {
       "rank": 4,
       "article_id": 84769,
-      "editorial_note": "A $22.95 million NSF grant is standing up Kitsune, a new shared supercomputer between Stony Brook and Buffalo that will expand AI and research-computing access across the region.",
+      "editorial_note": "A $22.95M NSF-funded supercomputer shared by Stony Brook and Buffalo substantially expands AI and research-computing capacity for a major public university system.",
       "impact_category": "Major Funding",
       "title": "Stony Brook University Receives Hardware for NSF-Funded Supercomputer, Kitsune - SBU News",
       "url": "https://news.stonybrook.edu/newsroom/press-release/general/stony-brook-university-receives-hardware-for-nsf-funded-supercomputer-kitsune/",
@@ -44,7 +44,7 @@
     {
       "rank": 5,
       "article_id": 83301,
-      "editorial_note": "A $25 million Lilly Endowment gift to Indiana University's Human + AI Learning Ecosystem is a major philanthropic bet on reshaping AI integration across higher education.",
+      "editorial_note": "A $25M Lilly Endowment grant to Indiana University for its Human + AI Learning Ecosystem represents one of the largest single philanthropic investments in AI-integrated higher education this week.",
       "impact_category": "Major Funding",
       "title": "Indiana University receives $25M from Lilly Endowment to drive AI innovation",
       "url": "https://news.iu.edu/live/news/54665-indiana-university-receives-25m-from-lilly-endowment-t",
@@ -54,8 +54,8 @@
     {
       "rank": 6,
       "article_id": 84122,
-      "editorial_note": "Aalto University's coordination of Finland's new FCAI-X national AI flagship \u2014 one of six selected centers \u2014 reflects significant government-backed strategic investment in AI research infrastructure.",
-      "impact_category": "Policy Impact",
+      "editorial_note": "Aalto's coordination of Finland's new national AI flagship center, alongside involvement in four others, reflects a significant government-backed consolidation of AI research strategy.",
+      "impact_category": "Strategic Partnership",
       "title": "Aalto coordinates new AI research flagship and is involved in four others | Aalto University",
       "url": "https://www.aalto.fi/en/news/aalto-coordinates-new-ai-research-flagship-and-is-involved-in-four-others",
       "university": "Aalto University",
@@ -63,8 +63,18 @@
     },
     {
       "rank": 7,
+      "article_id": 84960,
+      "editorial_note": "A formal research partnership between Stony Brook's AI Innovation Institute and OpenAI, with compute credits and study-design support, exemplifies deepening industry-academia ties in AI research.",
+      "impact_category": "Strategic Partnership",
+      "title": "AI Innovation Institute, OpenAI Delve into Human-AI Creativity",
+      "url": "https://news.stonybrook.edu/university/ai-innovation-institute-partners-with-openai-to-delve-into-the-science-of-human-ai-creativity/",
+      "university": "Stony Brook University",
+      "published_date": "2026-11-24"
+    },
+    {
+      "rank": 8,
       "article_id": 83658,
-      "editorial_note": "A three-way collaboration between Vanderbilt, Nashville's transportation department, and Oak Ridge National Lab is field-testing AI traffic control \u2014 a concrete academia-government partnership with direct public benefit.",
+      "editorial_note": "A three-way field experiment between Vanderbilt, a city transportation department, and Oak Ridge National Laboratory applies AI traffic control to real infrastructure, bridging academic, government, and national-lab expertise.",
       "impact_category": "Strategic Partnership",
       "title": "Vanderbilt, NDOT, Oak Ridge National Laboratory team up to ease traffic with AI",
       "url": "https://news.vanderbilt.edu/2026/11/23/vanderbilt-ndot-oak-ridge-national-laboratory-team-up-to-ease-traffic-with-ai/",
@@ -72,9 +82,9 @@
       "published_date": "2026-11-23"
     },
     {
-      "rank": 8,
+      "rank": 9,
       "article_id": 84153,
-      "editorial_note": "A UCLA-co-authored Nature Sustainability study quantifying AI data centers' outsized power consumption supplies hard evidence likely to shape energy policy debates around AI's infrastructure footprint.",
+      "editorial_note": "A UCLA-co-authored Nature Sustainability study quantifying AI data centers' massive electricity draw adds hard evidence to the policy debate over AI's energy footprint and infrastructure planning.",
       "impact_category": "Policy Impact",
       "title": "These U.S. data centers use four times the power used in LA",
       "url": "https://newsroom.ucla.edu/stories/these-u-s-data-centers-use-four-times-the-power-used-in-la",
@@ -82,24 +92,14 @@
       "published_date": "2026-11-24"
     },
     {
-      "rank": 9,
-      "article_id": 83919,
-      "editorial_note": "Texas A&M's CLARKE disaster-response AI earned national recognition and is now expanding across real emergency-responder agencies, demonstrating rare AI research that has moved into operational, life-saving use.",
-      "impact_category": "Strategic Partnership",
-      "title": "Texas A&M disaster-response AI gains national recognition, expanded use among emergency responders \u2013 Texas A&M Stories",
-      "url": "https://stories.tamu.edu/news/2026/11/24/texas-am-disaster-response-ai-gains-national-recognition-expanded-use-among-emergency-responders/",
-      "university": "Texas A & M University-College Station",
-      "published_date": "2026-11-24"
-    },
-    {
       "rank": 10,
-      "article_id": 84960,
-      "editorial_note": "Stony Brook's AI Innovation Institute teaming directly with OpenAI \u2014 which is contributing study design, compute credits, and resources \u2014 is a notable industry-academia alliance probing how AI reshapes human creativity.",
-      "impact_category": "Strategic Partnership",
-      "title": "AI Innovation Institute, OpenAI Delve into Human-AI Creativity",
-      "url": "https://news.stonybrook.edu/university/ai-innovation-institute-partners-with-openai-to-delve-into-the-science-of-human-ai-creativity/",
-      "university": "Stony Brook University",
-      "published_date": "2026-11-24"
+      "article_id": 85206,
+      "editorial_note": "Institute of Science Tokyo's push toward a fully autonomous AI-driven life-science lab, pairing hypothesis generation with robotic experimentation, points toward a genuinely new model for scientific discovery.",
+      "impact_category": "Scientific Breakthrough",
+      "title": "Science by AI: Toward a fully autonomous life science laboratory | Science Tokyo",
+      "url": "https://www.isct.ac.jp/en/news/ftg3zugrdbt7",
+      "university": "Institute of Science Tokyo",
+      "published_date": "2026-11-27"
     }
   ]
 }
